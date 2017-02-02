@@ -12,5 +12,18 @@ npm start
 
 To start a react project
 ```
+npm install
 npm start
+```
+
+
+create package.json
+```
+npm init -y
+```
+
+Must use libraries
+```
+npm install jquery --save
+npm install webpack --save-dev
 ```
