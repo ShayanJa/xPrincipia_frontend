@@ -2,6 +2,7 @@
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 body {
+    background: url("day1.jpg") no-repeat center center fixed;
     color: #ff0000;
     font-family: Verdana, sans-serif;
     border: 1px solid #ff0000;
