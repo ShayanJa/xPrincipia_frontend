@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import './assets/App.css';
+import './assets/Create.css';
 import Header from './components/Header.jsx'
 import Solution from './components/Solution.jsx'
 import Problem from './components/Problem.jsx'
+import Create from './components/Create.jsx'
 
 class App extends Component {
   render() {
@@ -10,10 +12,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div id ="main">
-        <Problem />
-        <div id = "solutions">
-        <Solution />
-        </ div>
+        	<Create />
         </ div>
       </div>
     );
