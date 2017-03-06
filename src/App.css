@@ -1,0 +1,115 @@
+* {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+body {
+    background: url("day1.jpg") no-repeat center center fixed;
+    color: #ff0000;
+    font-family: Verdana, sans-serif;
+    border: 1px solid #ff0000;
+    wdth: 90%;
+    margin: 0 auto;
+}
+#main {overflow: auto;}
+#header, #problem, #solutions {
+    border: 1px solid #ff0000;
+    background-color: #ffffff;
+    opacity: .85;
+}
+#header {
+    border: 1px solid #ff0000;
+    border-width: 1px 0px;
+    font-weight: 100;
+    letter-spacing: .15em;
+    text-align: center;
+    margin: 5px 10px 10px 10px;
+}
+#problem, #solutions {
+    border-width: 0px 2px;
+    border-radius: 25px 25px 25px 25px;
+    color: #0f131c;
+    float: left;
+    width: 43%;
+    padding: 20px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: scroll;
+    margin: 5px 10px 10px 10px;
+}
+#problem {
+    margin-left: 30px;
+}
+h1 {
+    border: 1px solid #ff0000;
+    border-width: 1px 0px;
+    text-align: center;
+    font-weight: 100;
+}
+p {
+    font-family: 'Alegreya Sans';
+    color: #ff0000;
+    text-align: justify;
+    font-size: 125%;
+    line-height: 1.3em;
+}
+#solutionsLabel, #problemLabel {
+    border: 1px solid #ff0000;
+    border-width: 1px 0px;
+    font-size: 240%;
+    padding: 12px;
+    letter-spacing: 12px;
+}
+#solutionSummaryLabel {
+    font-size: 120%;
+    text-align: center;}
+#problemSummary {
+    font-size: 180%;
+    font-weight: 100;
+}
+.solutionSummary {
+    border: 1px solid #ff0000;
+    border-width: 1px 0px 1px 0px;
+    text-align: justify;}
+#problemRequirements {
+    line-height: 1.5em;
+}
+ol {
+    pdding: 0px 30px;
+    mrgin: 20px 30px 35px 30px;}
+ol li {
+    mrgin: 15px 0px;}
+#header ul li {
+    display: inline;
+    padding: 0.5em 0;
+    font-size: 225%;
+    font-weight: 100;}
+li#explore {
+    text-align: left;
+    color: #ff0000;
+    line-height: 0.8em;
+    letter-spacing: 16px;
+}
+li#logo {
+    color: #ff0000;
+    text-align: center;
+    margin: 0px 180px;
+    line-height: 0.8em;
+    letter-spacing: 16px;
+}
+li#create {
+    text-align: right;
+    color: #ff0000;
+    line-height: 0.8em;
+    letter-spacing: 16px;
+}
+#tags {
+    font-size: 100%;
+    display: block;
+}
+ul li {
+}
+#solution1, #solution2 {
+    border-top: 2px solid #ff0000;
+}
+li {
+    clor: white;
+}
