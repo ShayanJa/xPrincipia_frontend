@@ -1,0 +1,517 @@
+/*GENERAL*/
+
+* {
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+body {
+	/*background: url("day1.jpg") no-repeat center center fixed;*/
+	color: #dddddd;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	/*border: 1px solid #ff0000;*/
+	/*width: 90%;*/
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+
+	background-color: #1c1c1c;
+
+}
+
+body img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	margin: 0px;
+	padding: 0px;
+
+	display: hidden;
+}
+
+#main {overflow: auto;}
+
+#header, #problem, #solutions {
+	border: 1px solid #00dcff;
+	background-color: #0f131c;
+	position: relative;
+	z-index: 2;
+}
+
+#header {
+	background-color: #0f131c;
+
+	border: 1px solid #00dcff;
+	border-width: 1px 0px;
+	font-weight: 100;
+	text-align: center;
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+/*#header * {
+	display: inline-block;
+}*/
+
+#problem, #solutions {
+	border-width: 0px 2px;
+	border-radius: 23px;
+	color: #dddddd;
+	float: left;
+	width: 61%;
+	padding: 0px 10px 20px 10px;
+	min-height: 520px;
+	max-height: 520px;
+	overflow: scroll;
+	margin: 5px 5px 10px 5px;
+}
+
+#problem {
+	margin-left: 7px;
+	border-width: 2px 0px;
+	border-radius: 0px;
+}
+
+#solutions {
+	width: 32%;
+	border-radius: 0px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 100;
+}
+
+p {
+	font-family: 'Alegreya Sans';
+	color: #dddddd;
+	text-align: justify;
+	font-size: 80%;
+	/*line-height: 1.2em;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PROBLEM*/
+
+
+
+#problemLabel {
+	border: 1px solid #ff0000;
+	border-width: 0px 0px 0px 0px;
+	border-radius: 0px;
+	font-size: 90%;
+	padding: 5px;
+	margin: 0px 0px;
+	letter-spacing: 12px;
+}
+
+
+.problemIntro {
+	border: 1px solid #00dcff;
+	border-width: 1px 0px 1px 0px;
+	border-radius: 0px;
+	margin: 0px 40px;
+	padding: 10px 0px;
+}
+
+#problemTitle {
+	border-width: 0px;
+	font-size: 190%;
+}
+
+#problemSummary {
+	margin: 5px 25px;
+	line-height: 125%;
+	font-size: 100%;
+}
+
+/*#problemRequirementsLabel, #relevantfieldsLabel {
+	text-align: center;
+	font-weight: 100;
+}*/
+
+/*#problemRequirements {
+	line-height: 1.5em;
+}*/
+
+.problemDescription {
+	border: 1px solid #00dcff;
+	border-width: 0px 0px;
+	border-radius: 0px;
+	padding: 5px;
+	margin-top: 10px 30px;
+	text-align: center;
+	font-size: 120%;
+	line-height: 120%;
+	padding: 20px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SOLUTIONS*/
+
+
+
+#solutionsLabel {
+	border: 1px solid #ff0000;
+	border-width: 0px 0px 0px 0px;
+	font-size: 80%;
+	padding: 5px;
+	margin: 5px 12px 0px 12px;
+	letter-spacing: 12px;
+}
+
+#solutionUnit {
+
+	padding: 5px;
+	padding-left: 0px;
+	margin: 2px;
+	margin-left: 0px;
+
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+	border: 2px solid #00dcff;
+	border-width: 1px 0px 0px 0px;
+	border-radius: 0px;
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+
+}
+
+.percent {
+	float: left;
+	width: 30%;
+	color: #00dcff;
+	font-size: 300%;
+	padding: 0px 0px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	height: auto;
+	text-align: left;
+
+}
+
+.percent p {
+	color: #00dcff;
+	text-align: center;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+
+.title {
+	float: left;
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	font-size: 110%;
+	font-weight: 300;
+	color: #dddddd;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	
+	width: 66%;
+
+	letter-spacing: 1px;
+}
+
+/*solutionTitle doesn't work at all, otherwise text would be red*/
+
+#solutionSummaryLabel {
+	font-size: 120%;
+	text-align: center;}
+
+.solutionSummary {
+	clear: left;
+	border: 1px solid #dddddd;
+	border-width: 0px 0px 0px 0px;
+	text-align: justify;
+	padding: 8px 2px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+
+}
+
+
+.solutionDescription {
+	font-weight: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
+
+
+
+#header * {
+	display: inline;
+	padding: 0.5em 0;
+	font-size: 125%;
+	font-weight: 100;
+	color: #ffffff;
+	line-height: 0.8em;
+	font-size: 100%;
+	line-height: 14px;
+}
+
+#explore, #logo, #createButton {
+	width: 30%;
+	overflow: hidden;
+	padding: 0px 0px;
+	margin: 10px 0px;
+}
+
+#explore {
+	color: #0f131c;
+	text-align: left;
+	letter-spacing: 8px;
+	font-size: 100%;
+}
+
+#exploreInput {
+	color: #0f131c;
+	height: 40px;
+	width: 200px;
+	letter-spacing: 6px;
+	font-size: 100%;
+	padding: 0px 0px;
+	font-family: 'Alegreya Sans', sans-serif;
+	text-align: center;
+
+}
+
+#submit {
+	display: none;
+}
+
+#logo {
+	margin: 0px 140px;
+	font-size: 260%;
+	font-weight: 100;
+	width: auto;
+	letter-spacing: 16px;
+
+	margin-bottom: 25px;
+}
+
+ul li {
+
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+	padding-top: 0px;
+	margin-bottom: 0px;
+
+}
+
+
+#createButton {
+	background-color: #1c1c1c;
+	color: #00dcff;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 220%;
+	font-weight: 100;
+	border: 1px solid #00dcff;
+	border-width: 1px 0px;
+	border-radius: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 22px;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	width: 18%;
+	vertical-align: middle;
+	margin-bottom: 10px;
+	padding: 10px 10px;
+
+
+	letter-spacing: 16px;
+}
+
+#createButton:hover {
+	background-color: #ffffff;
+	color: #0f131c;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*GRAVEYARD*/
+
+
+
+
+
+
+
+
+
+/*Vote Button disabled for now*/
+
+				/*#voteButton {
+					background-color: rgba(255, 255, 255, 0.9);
+					color: #ff0000;
+					font-family: 'Alegreya Sans SC', sans-serif;
+					border: 1px solid #ff0000;
+					border-width: 1px 0px;
+					border-radius: 4px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 120%;
+					padding: 8px 22px;
+					-webkit-transition-duration: 0.4s;
+					transition-duration: 0.4s;
+					box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+					vertical-align: middle;
+					width: 100%;
+				}
+
+				#voteButton span {
+					cursor: pointer;
+					display: inline-block;
+					position: relative;
+					transition: 0.4s;
+				}
+
+				#voteButton span:after{
+					content: '\00bb';
+					position: absolute;
+					opacity: 0;
+					top: 0;
+					right:-20px;
+					transition: 0.4s;
+				}
+
+				#voteButton:hover span {
+					padding-right: 25px;
+				}
+
+				#voteButton:hover span:after {
+					opacity: 1;
+					right:0;
+				}
+
+				#voteButton:hover {
+					background-color: rgba(255, 0, 0, 0.9);
+					color: white;
+					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+					cursor: pointer;
+				}*/
+
+
+
+
+
+
+
+
+
+/*Vote Buttons*/
+
+				/*.voteContainer {
+					margin-bottom: 50px;
+				}
+
+				.voteButton {
+					display: inline-block;
+					width: 47%;
+					color: #ff0000;
+					font-size: 100%;
+					padding: 0px;
+					margin: 0px 0px 5px 0px;
+				}*/
+
+
+
+
+
+
+
+
+
+
+/*Solution Container 2*/
+
+
+				/*Solution Container 2 hidden until put back in*/
+
+				/*.solutionContainer2 {
+					overflow: scroll;
+					display: inline-block;
+					width: 54%;
+					padding: 5px;
+					margin: 2px 0px 2px 2px;
+					border: 1px solid #ff0000;
+					border-width: 0px 1px;
+					border-radius: 25px;
+					min-height: 280px;
+					max-height: 280px;
+					font-size: 80%;
+				}*/
