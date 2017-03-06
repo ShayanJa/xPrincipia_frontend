@@ -13,6 +13,7 @@ class App extends Component {
         <Header />
         <div id ="main">
         	<Problem />
+          <Solution />
         </ div>
       </div>
     );
