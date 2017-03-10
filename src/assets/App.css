@@ -4,6 +4,10 @@
 	font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 body {
 	/*background: url("day1.jpg") no-repeat center center fixed;*/
 	color: #dddddd;
