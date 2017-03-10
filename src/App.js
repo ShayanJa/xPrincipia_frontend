@@ -15,10 +15,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <div id ="main">
-        	<Problem />
-          <Solution />
+        	
         </ div>
-
+        <Problem />
         {this.props.children}
 
       </div>
