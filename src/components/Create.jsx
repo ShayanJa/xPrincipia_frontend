@@ -39,10 +39,10 @@ export default class Create extends React.Component {
             }),
             success: function(result){
                 console.log(result)
-                alert("You are logged in")
+                alert("Solution Posted")
             },
             error : function(result){
-                alert('failed to loggin')
+                alert('Unable to post SOlution :()')
             }
         });
     }
