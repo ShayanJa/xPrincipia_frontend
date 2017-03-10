@@ -5,16 +5,27 @@ import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 export default class Header extends React.Component {
    render() {
       return (
-		    <div id="header">
-                <form action="http://www.xprincipia.com/search.php" method="get" id="explore">
-                    <input type="search" name="search" 
-                        placeholder="Explore" />
-                    <input type="submit" value="Go" />
-                </form>
-            <div id="logo">XPrincipia</div>
-            <button type="button" id="createButton"><Link to="/create">Create</Link></button>
-        </div>
+      <div id="headerSection">
+              <ul id="header">
+                  <li id="explore">
+                      <form action="http://www.xprincipia.com/search.php" method="get" id="exploreForm">
+                          <input type="search" name="search"
+                              placeholder="Explore" id="exploreInput" autofocus/>
+                          <input type="submit" value="Go" id="submitExplore" />
+                      </form>
+                  </li>
+
+                  <li id="logo">
+                    <a href="./home.html"><div>XPrincipia</div></a>
+                  </li>
+
+                  <li id="create">
+                    <a href="http://www.xprincipia.com/create">
+                        <button type="button" id="createButton">Create</button></a>
+                  </li>
+              </ul>
+
+      </div>
       );
    }
 }
-

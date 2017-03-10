@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Login extends React.Component {
+export default class Register extends React.Component {
    render() {
       return (
 
-
-<div id="loginComponent">
+<div id="registerComponent">
 
     <div id="logoBanner">
         <div id="bannerTitle">XPrincipia</div>
@@ -15,20 +14,24 @@ export default class Login extends React.Component {
     </div>
 
 
-    <form action="http://www.xprincipia.com/login.php" method="post" id="loginForm">
+    <form action="http://www.xprincipia.com/register.php" method="post" id="registerForm">
+
+        <input type="text" name="firstname" required="required" maxlength="30" placeholder="First Name" autofocus/> <br />
+
+		<input type="text" name="lastname" required="required" maxlength="30" placeholder="Last Name"/> <br />
 
         <input type="email" name="email" required="required" maxlength="30" placeholder="Email"/> <br />
 
         <input type="password" name="password" required="required" maxlength="30" placeholder="Password"/>
 
-        <input type="submit" value="Login" id="submit"/>
+        <input type="submit" value="Register" id="submit"/>
     </form>
 
 
     <div id="otherOptions">
 
-        <a href="./register.html">
-            <button type="button" id="registerButton">Login</button>
+        <a href="./login.html">
+            <button type="button" id="loginButton">Login</button>
             </a>
 
         <a href="./learnmore.html">
@@ -37,6 +40,5 @@ export default class Login extends React.Component {
     </div>
 
 </div>
-      );
    }
 }
