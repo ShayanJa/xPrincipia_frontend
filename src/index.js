@@ -11,6 +11,7 @@ ReactDOM.render(
     <Route path = "/" component = {App}>
       <IndexRoute component = {Solution} />
       <Route path = "/create" component = {Create} />
+      <Route path = "/solution" component = {Solution} />
     </Route>
    </Router>,
   document.getElementById('root')
