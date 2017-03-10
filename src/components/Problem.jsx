@@ -5,7 +5,7 @@ import { Link  } from 'react-router';
 export default class Problem extends React.Component {
    render() {
       return (
-		<div id="problem">
+		
         <Link to="/solution">
         <div id="problem">
             <h1 id="problemLabel">Problem</h1>
@@ -27,15 +27,6 @@ The Amazon rainforest (Portuguese: Floresta Amazônica or Amazônia; Spanish: Se
 
         </div>
         </Link>
-
-</div>
-
-
-
-
-
-
-
       );
    }
 }
