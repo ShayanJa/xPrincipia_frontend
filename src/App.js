@@ -18,6 +18,9 @@ class App extends Component {
         	<Problem />
           <Solution />
         </ div>
+
+        {this.props.children}
+
       </div>
     );
   }
@@ -25,14 +28,3 @@ class App extends Component {
 
 export default App;
 
-//Routing
-ReactDOM.render((
-   <Router history = {browserHistory}>
-      <Route>
-         <IndexRoute component = {App} />
-         {/*<Route path = "/home" component = {Home} />*/}
-      </Route>
-      
-   </Router>
-	
-), document.getElementById('root'))
