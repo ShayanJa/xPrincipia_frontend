@@ -18,7 +18,8 @@ export default class Solution extends React.Component {
                     </div>
 
                         <p class="solutionSummary">
-                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind. 
+                           Based on Orch OR model. Quantum computation occurs between entangled
+													 states in Tryptophan. Model offers experimentation with this in mind. 
                         </p>
 
 
@@ -35,7 +36,7 @@ export default class Solution extends React.Component {
                     </div>
 
                         <p class="solutionSummary">
-                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind. 
+                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind.
                         </p>
 
 
@@ -67,7 +68,7 @@ export default class Solution extends React.Component {
                     </div>
 
                         <p class="solutionSummary">
-                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind. 
+                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind.
                         </p>
 
 
@@ -91,7 +92,7 @@ export default class Solution extends React.Component {
                     </div>
 
                         <p class="solutionSummary">
-                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind. 
+                           Based on Orch OR model. Quantum computation occurs between entangled states in Tryptophan. Model offers experimentation with this in mind.
                         </p>
 
 

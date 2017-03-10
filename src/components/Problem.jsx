@@ -22,18 +22,6 @@ export default class Problem extends React.Component {
                 The name Amazon is said to arise from a war Francisco de Orellana fought with the Tapuyas and other tribes. The women of the tribe fought alongside the men, as was their custom.[3] Orellana derived the name Amazonas from the Amazons of Greek mythology, described by Herodotus and Diodorus.[3]
             </p>
 
-<!--                 <div class="problemButtons">
-
-            <a href="What to put here?">
-                    <button type="button" id="joinProblem">Join</button>
-                </a>
-
-                <a href="./subProblems.html">
-                    <button type="button" id="subProblems">Sub-Problems</button>
-                </a>
-
-            </div>    -->
-
         </div>
 
 
@@ -62,7 +50,7 @@ export default class Problem extends React.Component {
         <form action="http://www.xprincipia.com/comment.php" method="post" id="commentProblem">
             <fieldset>
                 <legend>Comment</legend>
-                     <textarea name="commentproblem" required="required"/></textarea>
+                     <textarea name="commentproblem" required="required"></textarea>
                      <br />
                      <input type="submit" value="Add" id="addComment"/>
             </fieldset>
@@ -78,7 +66,21 @@ export default class Problem extends React.Component {
 
 
                 <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
+
+            </div>
+
+
+
+
+            <div class="commentUnit">
+
+                <div class="commentContent">
+                    <div class="commenter">Ben Francis</div>
+                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
+                </div>
+
+
+                <button type="button" id="commentVote">Vote</button>
 
 
             </div>
@@ -95,25 +97,6 @@ export default class Problem extends React.Component {
 
 
                 <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
-
-
-            </div>
-
-
-
-<!-- Other Comments here -->
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
 
 
             </div>
@@ -127,7 +110,6 @@ export default class Problem extends React.Component {
 
 
                 <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
 
 
             </div>
@@ -141,7 +123,7 @@ export default class Problem extends React.Component {
 
 
                 <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
+
 
 
             </div>
@@ -155,21 +137,10 @@ export default class Problem extends React.Component {
 
 
                 <button type="button" id="commentVote">Vote</button>
-                <!-- Should this be an a href or a form, to add its funcitonality? -->
-
-
-
-
-
-
-
-
-
 
 
             </div>
         </div>
-
 
 
 </div>
