@@ -11,7 +11,6 @@ ReactDOM.render(
       <IndexRoute component = {App} />
       <Route path = "/create" component = {Create} />
     </Route>
-      
    </Router>,
   document.getElementById('root')
 );

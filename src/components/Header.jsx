@@ -12,7 +12,6 @@ export default class Header extends React.Component {
                     <input type="submit" value="Go" />
                 </form>
             <div id="logo">XPrincipia</div>
-            <Link to="">now</Link>
             <button type="button" id="createButton"><Link to="/create">Create</Link></button>
         </div>
       );
