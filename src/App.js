@@ -15,8 +15,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <div id ="main">
-        	
-        </ div>
+
+        </div>
         <Problem />
         {this.props.children}
 

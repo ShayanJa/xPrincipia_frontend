@@ -7,7 +7,7 @@ export default class Header extends React.Component {
       return (
 		    <div id="header">
                 <form action="http://www.xprincipia.com/search.php" method="get" id="explore">
-                    <input type="search" name="search" 
+                    <input type="search" name="search"
                         placeholder="Explore" />
                     <input type="submit" value="Go" />
                 </form>
@@ -17,4 +17,3 @@ export default class Header extends React.Component {
       );
    }
 }
-
