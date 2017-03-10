@@ -20,8 +20,8 @@ export default class Header extends React.Component {
                   </li>
 
                   <li id="create">
-                    <a href="http://www.xprincipia.com/create">
-                        <button type="button" id="createButton">Create</button></a>
+
+                        <Link to='/create'><button type="button" id="createButton">Create</button></Link>
                   </li>
               </ul>
 

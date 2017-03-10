@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import Create from './Create.jsx';
+import SolutionContainer from './SolutionContainer.jsx';
+import SuggestionContainer from './SuggestionContainer.jsx';
+import CommentContainer from './CommentContainer.jsx';
+
+
+export default class SideBar extends React.Component {
+   render() {
+      return (
+          <div>
+          {this.props.children}
+          </div>
+      );
+   }
+}

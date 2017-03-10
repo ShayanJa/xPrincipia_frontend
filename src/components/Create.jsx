@@ -6,7 +6,7 @@ export default class Create extends React.Component {
    render() {
       return (
 		    <div id="createBox">
-          <form action="http://www.xprincipia.com/create.php" method="post" id="createForm">
+
           <fieldset>
               <legend>Create: Solution</legend>
                 <label for="solutiontitle">Title<br />
@@ -21,7 +21,7 @@ export default class Create extends React.Component {
                 </label><br />
                  <input type="submit" value="Create" />
         </fieldset>
-    </form>
+
 </div>
       );
    }

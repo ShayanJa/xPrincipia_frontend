@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 
 export default class Problem extends React.Component {
    render() {
       return (
+<Link to="/solve">
 <div id="problem">
 
         <div id="problemHeader">
@@ -55,95 +57,16 @@ export default class Problem extends React.Component {
                      <input type="submit" value="Add" id="addComment"/>
             </fieldset>
         </form>
-
-        <div id="commentSection">
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-            </div>
-
-
-
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-
-            </div>
-
-
-
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-
-            </div>
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-
-            </div>
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-
-
-            </div>
-
-            <div class="commentUnit">
-
-                <div class="commentContent">
-                    <div class="commenter">Ben Francis</div>
-                    <div class="commentText">Do you think a theory that details mathematically the connection between natural selection in abiogenesis and entropy would sufficiently solve this problem, with the given requirements?</div>
-                </div>
-
-
-                <button type="button" id="commentVote">Vote</button>
-
-
-            </div>
-        </div>
-
-
+        <form action="http://www.xprincipia.com/comment.php" method="post" id="commentProblem">
+            <fieldset>
+                <legend>Suggestions</legend>
+                     <textarea name="commentproblem" required="required"></textarea>
+                     <br />
+                     <input type="submit" value="Add" id="addComment"/>
+            </fieldset>
+        </form>
 </div>
+</Link>
       );
    }
 }
