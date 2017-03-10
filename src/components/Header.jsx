@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import { Link } from 'react-router';
 
 export default class Header extends React.Component {
    render() {
