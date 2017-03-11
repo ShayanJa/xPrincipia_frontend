@@ -62,11 +62,12 @@ body {
     flex-direction: row;
 }
 
-#header, #problem, #sidebar {
+#header, #problem, # {
     border: 1px solid #00dcff;
     background-color: #0f131c;
     position: relative;
-    z-index: 2;
+    flex-direction: row;
+    z-index: inherit;
 
 }
 
@@ -478,6 +479,7 @@ p {
 
     border-radius: 0px;
     outline-width: 1px 0px;
+    z-index: auto;
 }
 
 
@@ -501,6 +503,7 @@ p {
     border-radius: 3px;
 
     margin-bottom: 20px;
+    z-index: inherit;
 }
 
         #solveMenu, #developMenu {
@@ -903,9 +906,7 @@ p {
 /*Popup Boxes*/
 
 
-        * {
-            z-index: -1;
-        }
+
 
 
         #popupBox {

@@ -5,17 +5,17 @@ import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 export default class Problem extends React.Component {
    render() {
       return (
-<Link to="/solve">
+
 <div id="problem">
 
-        <div id="problemHeader">
+        <div class="problemHeader">
 
-            <button class="parentButton">Parent</button>
+            <Link to="home/sidebar/suggest"><button>Parent</button></Link>
 
             <h1 id="elementLabel">Problem</h1>
 
         </div>
-
+        <Link to="home/sidebar/solve">
         <div class="problemIntro">
 
             <h1 class="problemTitle">What causes the emergent phenomena of     consciousness?</h1>
@@ -48,7 +48,7 @@ export default class Problem extends React.Component {
                 <li>Provide one future experiment idea for falsification and one for predictive verification</li>
             </ol>
         </div>
-
+</Link>
         <form action="http://www.xprincipia.com/comment.php" method="post" id="commentProblem">
             <fieldset>
                 <legend>Comment</legend>
@@ -66,7 +66,7 @@ export default class Problem extends React.Component {
             </fieldset>
         </form>
 </div>
-</Link>
+
       );
    }
 }

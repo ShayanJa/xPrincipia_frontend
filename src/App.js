@@ -19,21 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Problem />
-      <div>
-        <SideBarMenu />
-        <Router history={hashHistory}>
-          <Route path='/' component={SideBar}>
-            <IndexRoute component={SolutionContainer} />
-              <Route path='/create' component={Create} />
-              <Route path='/solve' component={SolutionContainer} />
-              <Route path='/comments' component={CommentContainer} />
-              <Route path='/subproblems' component={SubProblemContainer} />
-              <Route path='/suggestions' component={SuggestionContainer} />
-          </Route>
-        </Router>
-        </div>
+        {this.props.children}
       </div>
     );
   }

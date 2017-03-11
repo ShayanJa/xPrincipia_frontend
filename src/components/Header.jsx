@@ -19,10 +19,6 @@ export default class Header extends React.Component {
                     <a href="./home.html"><div>XPrincipia</div></a>
                   </li>
 
-                  <li id="create">
-
-                        <Link to='/create'><button type="button" id="createButton">Create</button></Link>
-                  </li>
               </ul>
 
       </div>
