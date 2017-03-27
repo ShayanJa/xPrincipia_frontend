@@ -1318,3 +1318,106 @@ z-index: 2;
 
 
   /*END OF LOGIN*/
+
+
+
+
+
+
+	/*Welcome*/
+
+	#welcomeBox {
+		margin: 7% 20% 0% 20%;
+		border: 1px solid #00dcff;
+	}
+	#welcomePrompt {
+		margin: 15px 0px 10px 0px;
+		font-size: 220%;
+	}
+	#selectProblemPrompt{
+		padding: 5px 5px 0px 5px;
+		font-size: 130%;
+		border: 1px solid #00dcff;
+		border-width: 1px 0px 0px 0px;
+		text-align: center;
+		color: #00dcff;
+	}
+	#exploreForm{
+		overflow: hidden;
+		padding: 5px 0px 5px 0px;
+		margin: 0px;
+		text-align: center;
+		color: #dddddd;
+		letter-spacing: 8px;
+		font-size: 100%;
+		padding-top: 10px;
+		}
+	#exploreInput {
+		color: #dddddd;
+		background-color: #0f131c;
+		border: 1px solid #dddddd;
+		height: 35px;
+		width: 80%;
+		letter-spacing: 6px;
+		font-size: 120%;
+		padding: auto;
+		font-family: 'Alegreya Sans SC', sans-serif;
+		text-align: center;
+	}
+	#submitExplore {
+		display: none;
+	}
+	#welcomeProblemsElements {
+		margin: 2px 15px 5px 5px;
+		padding: 5px;
+	}
+	#welcomeProblemsUnit {
+		border: 1px solid #00dcff;
+		border-width: 1px 0px 0px 0px;
+	}
+	#welcomeProblemsUnit:hover * {
+		color: #ffffff;
+		cursor: pointer;
+	}
+	#welcomeProblemsHeader{
+		display: inline-flex;
+		flex-direction: row;
+	}
+	#welcomeProblemsTag {
+		flex: 1 1 auto;
+		display: inline-block;
+		color: #00ffdc !important;
+		border: 1px solid #00ffdc;
+		border-width: 0px 1px 1px 0px;
+		font-size: 120%;
+		padding: 2px 5px 2px 5px;
+		margin-bottom: 35px;
+	}
+	#welcomeProblemsTitle {
+		flex: 1 1 auto;
+		padding: 5px 10px 5px 10px;
+		font-size: 150%;
+		color: #dddddd;
+	}
+	#welcomeProblemsSummary {
+		font-family: 'Alegreya Sans', sans-serf;
+		padding: 0px 5px 5px 5px;
+		font-size: 90%;
+	}
+	#moreButton {
+		margin: auto;
+		text-align: center;
+
+		font-size: 120%;
+		padding: 5px;
+		color: #00ffdc;
+		border: 1px solid #00dcff;
+		border-width: 1px 0px 0px 0px;
+	}
+	#moreButton:hover {
+		color: #0f131c;
+		background-color: #00ffdc;
+		cursor: pointer;
+	}
+
+/*End Welcome*/
