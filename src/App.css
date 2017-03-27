@@ -1,0 +1,1778 @@
+/*Global*/
+
+    * {
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-weight: 100;
+    }
+    body {
+    	color: #dddddd;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	margin: 0 auto;
+    	position: relative;
+    	background-color: #16161c;
+    }
+    h1 {
+    	text-align: center;
+    	font-weight: 100;
+    }
+    p {
+    	font-family: 'Alegreya Sans';
+    	color: #dddddd;
+    	text-align: justify;
+    	font-size: 80%;
+    }
+    #logo a {
+    	text-decoration: none;
+    	color: #ffffff;
+    }
+    a:link {
+    	text-decoration: none;
+    }
+
+/*End Global*/
+
+
+
+
+
+/*Answer*/
+
+    #sidebarElements {
+      border: 1px solid #00dcff;
+      border-width: 0px 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #questionForm textarea {
+    	width: 99%;
+    	text-align: left;
+    	font-family: 'Alegreya Sans', sans-serif;
+    	font-weight: 300;
+    	padding: 5px;
+    	color: #ffffff;
+    	background-color: #0f131c;
+    	border: 1px solid #ffffff;
+    	resize: none;
+    }
+    #questionProblem fieldset {
+    	border: 1px solid #00dcff;
+    }
+    #questionProblem legend {
+    	padding: 0.2em 0.5em;
+    	border: 1px solid #00dcff;
+    	font-size: 90%;
+    	text-align: justify;
+    	color: ;
+    }
+    #questionUnit {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: inline-flex;
+    	flex-direction: row;
+    	font-family: 'Alegreya Sans';
+    	padding-top: 10px;
+    	width: 100%;
+    }
+    #questionContent {
+    	flex: 3 3 auto;
+    	font-family: 'Alegreya Sans';
+
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 0px 0px 0px;
+
+    	width: 80%;
+    	padding: 10px;
+    }
+    #questionAdder {
+      font-size: 90%;
+      color: #00ffdc;
+    }
+    #questionText {
+      font-family: 'Alegreya Sans';
+    }
+    #askquestion {
+      color: #00ffdc;
+      background-color: #0f131c;
+      border: 1px solid #00ffdc;
+      border-radius: 2px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    #askquestion:hover {
+      color: #0f131c;
+      background-color: #00dcff;
+    }
+    #askquestion:active {
+      color: #00dcff;
+      background-color: #0f131c;
+    }
+    #questionAnswers {
+      flex: 1 1 auto;
+      color: #00dcff;
+      background-color: #0f131c;
+      border: 1px solid #00dcff;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    #questionAnswers:hover {
+      color: #0f131c;
+      background-color: #00dcff;
+    }
+    #questionAnswers:active {
+      color: #00ffdc;
+      background-color: #0f131c;
+    }
+    #questionVote {
+      flex: 1 1 auto;
+      color: #00ffdc;
+      background-color: #0f131c;
+      border: 1px solid #00ffdc;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    #questionVote:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+    }
+    #questionVote:active {
+      color: #00ffdc;
+      background-color: #0f131c;
+    }
+    #answerForm textarea {
+      width: 99%;
+      text-align: left;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 300;
+      padding: 5px;
+      color: #ffffff;
+      background-color: #0f131c;
+      border: 1px solid #ffffff;
+      resize: none;
+    }
+    #answerProblem fieldset {
+      border: 1px solid #00dcff;
+    }
+    #answerProblem legend {
+      padding: 0.2em 0.5em;
+      border: 1px solid #00dcff;
+      font-size: 90%;
+      text-align: justify;
+      color: ;
+    }
+    #answerUnit {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: inline-flex;
+      flex-direction: row;
+      font-family: 'Alegreya Sans';
+      padding-top: 10px;
+      width: 100%;
+    }
+    #answerContent {
+    	flex: 3 3 auto;
+    	font-family: 'Alegreya Sans';
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    	width: 80%;
+    	padding: 10px;
+    	margin-left: 8%;
+    }
+    #answerAdder {
+      font-size: 90%;
+      color: #00dcff;
+    }
+    #answerText {
+      font-family: 'Alegreya Sans';
+    }
+    #addAnswer {
+      color: #00dcff;
+      background-color: #0f131c;
+      border: 1px solid #00dcff;
+      border-radius: 2px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    #addAnswer:hover {
+      color: #0f131c;
+      background-color: #00dcff;
+    }
+    #addAnswer:active {
+      color: #00dcff;
+      background-color: #0f131c;
+    }
+    #answerVote {
+      flex: 1 1 auto;
+      color: #00dcff;
+      background-color: #0f131c;
+      border: 1px solid #00dcff;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    #answerVote:hover {
+      color: #0f131c;
+      background-color: #00dcff;
+    }
+    #answerVote:active {
+      color: #00dcff;
+      background-color: #0f131c;
+    }
+    #moreAnswerButton {
+      margin: auto;
+      text-align: center;
+
+      font-size: 100%;
+      padding: 5px;
+      color: #00ffdc;
+      border: 1px solid #00dcff;
+      border-width: 1px 1px 1px 1px;
+      border-radius: 3px;
+      margin-left: 8%;
+    }
+    #moreAnswerButton:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+    }
+
+/*End Answer*/
+
+
+
+ /*Create Problem*/
+
+    #createForm {
+      background-color: #0f131c;
+      color: #00dcff;
+      width: 50%;
+      height: auto;
+      border: 2px solid #00dcff;
+      border-width: 0px 0px 1px 0px;
+      border-radius: 3px;
+      padding: 5px 5px 5px 5px;
+     }
+    input, textarea {
+     	font-family: 'Alegreya Sans SC', sans-serif;
+     	font-size: 100%;
+     	color: #ffffff;
+     	background-color: #0f131c;
+     	text-align: center;
+     	border: 1px solid #ffffff;
+     	border-radius: 5px;
+     	padding: 3px 8px 3px 8px;
+     	display: block;
+     	float: left;
+     	margin-bottom: 10px;
+     	margin-left: 7%;
+     	width: 82%;
+      resize: none;
+    }
+    #solutionSummaryForm {
+    	font-family: 'Alegreya Sans';
+    	text-align: left;
+    	height: 5em;
+    }
+    fieldset {
+    	border: 1px solid #00dcff;
+    }
+    textarea {
+    	text-align: left;
+    	font-family: 'Alegreya Sans', sans-serif;
+    	font-weight: 100;
+    	height: 10em;
+    }
+    #solutionReferencesForm {
+    	height: 5em;
+    }
+    input:focus {
+    	border-color: #00dcff;
+    }
+    textarea:focus {
+    	border-color: #00dcff;
+    }
+    input#submit {
+    	display: block;
+    	color: #0f131c;
+    	border: 1px solid #0f131c;
+    	background-color: #00dcff;
+    	width: 85%;
+    	margin-left: 7%;
+    }
+    input#submit:hover {
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	cursor: pointer;
+    }
+    label {
+    	display: block;
+    	float: center;
+    	font-weight: 100;
+    	text-align: center;
+    	width: 100%;
+    	font-size: 120%;
+    }
+
+/*End Create Problem*/
+
+
+
+/*Create Solution*/
+
+    #createForm {
+      background-color: #0f131c;
+      color: #00dcff;
+      width: 50%;
+      height: auto;
+      border: 2px solid #00dcff;
+      border-width: 0px 0px 1px 0px;
+      border-radius: 3px;
+      padding: 5px 5px 5px 5px;
+    }
+    input, textarea {
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 100%;
+    	color: #ffffff;
+    	background-color: #0f131c;
+    	text-align: center;
+    	border: 1px solid #ffffff;
+    	border-radius: 5px;
+    	padding: 3px 8px 3px 8px;
+    	display: block;
+    	float: left;
+    	margin-bottom: 10px;
+    	margin-left: 7%;
+    	width: 82%;
+    	resize: none;
+    }
+    #solutionSummaryForm {
+    	font-family: 'Alegreya Sans';
+    	text-align: left;
+    	height: 5em;
+    }
+    fieldset {
+    	border: 1px solid #00dcff;
+    }
+    textarea {
+    	text-align: left;
+    	font-family: 'Alegreya Sans', sans-serif;
+    	font-weight: 100;
+    	height: 10em;
+    }
+    #solutionReferencesForm {
+    	height: 5em;
+    }
+    input:focus {
+    	border-color: #00dcff;
+    }
+    textarea:focus {
+    	border-color: #00dcff;
+    }
+    input#submit {
+    	display: block;
+    	color: #0f131c;
+    	border: 1px solid #0f131c;
+    	background-color: #00dcff;
+    	width: 85%;
+    	margin-left: 7%;
+    }
+    input#submit:hover {
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	cursor: pointer;
+    }
+    label {
+    	display: block;
+    	float: center;
+    	font-weight: 100;
+    	text-align: center;
+    	width: 100%;
+    	font-size: 120%;
+    }
+
+/*End Create Solution*/
+
+
+
+/*Created Solution*/
+
+    #solution{
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	position: relative;
+    	border-width: 0px 2px;
+    	border-radius: 23px;
+    	color: #dddddd;
+    	padding: 0px 10px 20px 10px;
+    	overflow: scroll !important;
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	outline: 1px solid #131b2b;
+    	outline-width: 0px 1px;
+    	flex-grow: 2;
+    	flex-shrink: 1;
+    	margin-left: 7px;
+    	border-width: 2px 0px;
+    	border-radius: 0px;
+    }
+    #solutionHeader {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: inline-flex;
+    	justify-content: space-between;
+    	align-items: flex-start;
+    	align-content: space-between;
+    	width: 100%;
+    }
+    #parentButton {
+    	flex: 0 1 auto;
+    	margin-right: auto;
+    	margin-top: 1px;
+    	width: 23%;
+    	padding: 4px;
+    	color: #00ffdc;
+    	font-size: 85%;
+    	letter-spacing: 12px;
+    	background-color: #0f131c;
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 1px 0px;
+    	text-align: right;
+    }
+    #parentButton a {
+    	width: 100%;
+    	padding: 0px;
+    	margin: 0px;
+    }
+    #parentButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    	border-color: #0f131c;
+    	cursor: pointer;
+    }
+    #elementLabel {
+    	flex: 0 1 auto;
+    	margin: 1px 5% 0% 0%;
+    	width: 26%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	border-radius: 0px;
+    	font-size: 85%;
+    	padding: 4px;
+    	letter-spacing: 12px;
+    	color: #00dcff;
+    	text-align: center;
+    }
+    #solutionIntro {
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 0px 0px;
+    	border-radius: 0px;
+    	margin: 0px 40px;
+    	padding: 10px 0px;
+    }
+    #solutionTitle {
+    	border-width: 0px;
+    	font-size: 260%;
+    }
+    #solutionSummary {
+    	margin: 5px 25px;
+    	line-height: 150%;
+    	font-size: 120%;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 0px;
+    	padding: 5px;
+    	margin-top: 20px;
+    }
+    #solutionSummaryLabel {
+    	color: #00ffdc;
+    }
+    #contributor, #createDate {
+    	width: 100%;
+    	text-align: center;
+    }
+    #createDate {
+    	margin-bottom: 10px;
+    }
+    #followSolution {
+    	width: 30%;
+    	margin-left: 35%;
+    	padding-left: 0.5%;
+    	background-color: #0f131c;
+    	color: #00ffdc;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 120%;
+    	font-weight: 100;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin-bottom: 10px;
+    	letter-spacing: 16px;
+    }
+    #followSolution:hover {
+      background-color: #00ffdc;
+      color: #0f131c;
+      cursor: pointer;
+    		}
+    #editSolution {
+    	width: 14%;
+    	margin-left: 42.5%;
+    	padding-left: 1%;
+    	background-color: #0f131c;
+    	color: #00dcff;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 100%;
+    	font-weight: 100;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin-bottom: 10px;
+    	letter-spacing: 16px;
+    }
+    #editSolution:hover {
+    	background-color: #00dcff;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #solutionDescription {
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 0px 1px;
+    	padding: 0px 5px 10px 5px;
+    	margin-bottom: 0px;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	font-size: 120%;
+    	line-height: 150%;
+    }
+    #solutionDescriptionLabel {
+    	color: #00ffdc;
+    }
+    #solutionEvidence {
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 0px 1px;
+    	padding: 0px 5px 10px 5px;
+    	margin-bottom: 0px;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	font-size: 120%;
+    	line-height: 150%;
+    }
+    #evidenceLabel {
+    	color: #00ffdc;
+    }
+    #solutionFutureExperiments {
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 0px 1px;
+    	padding: 0px 5px 10px 5px;
+    	margin-bottom: 0px;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	font-size: 120%;
+    	line-height: 150%;
+    }
+    #futureExperimentsLabel {
+    	color: #00ffdc;
+    }
+    #solutionReferences {
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 0px 1px;
+    	padding: 0px 5px 10px 5px;
+    	margin-bottom: 0px;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    	font-size: 120%;
+    	line-height: 150%;
+    }
+    #solutionReferencesLabel {
+      color: #00ffdc;
+    }
+
+/*End Created Solution*/
+
+
+
+
+
+/*What is this?: PROJECT PAGE*/
+
+#logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#main {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    overflow: auto;
+    display: inline-flex;
+    align-items: stretch;
+
+    flex-direction: row;
+}
+
+#header, #problem, #sidebar {
+    border: 1px solid #00dcff;
+    background-color: #0f131c;
+    position: relative;
+    z-index: 2;
+
+}
+
+
+#problem, #sidebar {
+    border-width: 0px 2px;
+    border-radius: 23px;
+    color: #dddddd;
+    padding: 0px 10px 20px 10px;
+    overflow: scroll !important;
+    margin: 5px 5px 10px 5px;
+
+    flex: 1 1 auto;
+
+    outline: 1px solid #131b2b;
+    outline-width: 0px 1px;
+}
+
+/*End What is this?*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*PROBLEM*/
+
+#problem {
+	border: 1px solid #00dcff;
+	background-color: #0f131c;
+	position: relative;
+	border-width: 0px 2px;
+	border-radius: 23px;
+	color: #dddddd;
+	padding: 0px 10px 20px 10px;
+	overflow: scroll !important;
+	margin: 5px 5px 10px 5px;
+	flex: 1 1 auto;
+	outline: 1px solid #131b2b;
+	outline-width: 0px 1px;
+	flex-grow: 2;
+	flex-shrink: 1;
+	margin-left: 7px;
+	border-width: 2px 0px;
+	border-radius: 0px;
+}
+#problemHeader {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: space-between;
+	width: 100%;
+}
+#parentButton {
+	flex: 0 1 auto;
+	margin-right: auto;
+	margin-top: 1px;
+	width: 23%;
+	padding: 4px;
+	color: #00ffdc;
+	font-size: 85%;
+	letter-spacing: 12px;
+	background-color: #0f131c;
+	border: 1px solid #00ffdc;
+	border-width: 0px 1px 1px 0px;
+	text-align: right;
+}
+#parentButton a {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+#parentButton:hover {
+	color: #0f131c;
+	background-color: #00ffdc;
+	border-color: #0f131c;
+	cursor: pointer;
+}
+#elementLabel {
+	flex: 0 1 auto;
+	margin: 1px 5% 0% 0%;
+	width: 26%;
+	border: 1px solid #00dcff;
+	border-width: 0px 0px 1px 0px;
+	border-radius: 0px;
+	font-size: 85%;
+	padding: 4px;
+	letter-spacing: 12px;
+	color: #00dcff;
+	text-align: center;
+}
+#problemIntro {
+	border: 1px solid #00dcff;
+	border-width: 0px 0px 0px 0px;
+	border-radius: 0px;
+	margin: 0px 40px;
+	padding: 10px 0px;
+}
+#problemTitle {
+	border-width: 0px;
+	font-size: 260%;
+}
+#problemSummary {
+	margin: 5px 25px;
+	line-height: 135%;
+	font-size: 100%;
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	border-width: 1px 0px;
+	padding: 5px;
+	margin-top: 20px;
+}
+#contributor, #createDate {
+	width: 100%;
+	text-align: center;
+}
+#followProblem {
+	width: 100%;
+	background-color: #0f131c;
+	color: #00ffdc;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 120%;
+	font-weight: 100;
+	border: 1px solid #00ffdc;
+	border-width: 1px 1px;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 10px;
+	letter-spacing: 16px;
+}
+#followProblem:hover {
+			background-color: #00ffdc;
+			color: #0f131c;
+			cursor: pointer;
+}
+#problemDescription {
+	flex: 1 1 auto;
+	border: 1px solid #ffffff;
+	border-width: 0px 1px;
+	border-radius: 0px;
+	padding: 5px;
+	margin: 0% 5%;
+	text-align: center;
+	font-size: 120%;
+	line-height: 120%;
+	padding: 20px 20px;
+}
+#problemRequirements {
+	border: 1px solid #00ffdc;
+	border-width: 0px 1px 0px 1px;
+	padding: 0px 5px 10px 5px;
+	margin-bottom: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+#requirementsLabel {
+	color: #00ffdc;
+}
+
+/*End Problem*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*sidebar*/
+
+
+#sidebar {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    border-radius: 0px;
+    outline-width: 1px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#sidebarMenu {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+
+    border: 1px solid #00dcff;
+    border-width: 1px 1px;
+    border-radius: 3px;
+
+    margin-bottom: 20px;
+}
+
+        #solveMenu, #developMenu {
+            flex: 1 1 auto;
+            text-align: center;
+
+            border: 1px solid #00dcff;
+            border-width: 0px 1px 0px 0px;
+
+            display: flex;
+            flex-direction: column;
+            justify-conent: center;
+            width: 100%;
+
+        }
+
+        #developMenu {
+            border-width: 0px 0px 0px 1px;
+        }
+
+                #solveTitle, #developTitle {
+                    flex: 1 1 auto;
+                    color: #00dcff;
+
+                    border: 1px solid #00dcff;
+                    border-width: 0px 0px 1px 0px;
+                    font-size: 80%;
+                    padding: 3px 5px 3px 10px;
+                    margin: 0px 0px;
+                    letter-spacing: 12px;
+                }
+
+
+
+
+                        #solutionsButton, #subproblemButton, #commentsButton, #suggestionsButton {
+                            flex: 1 1 auto;
+
+
+                            color: #00ffdc;
+/*                          font-family: 'Alegreya Sans SC', sans-serif;*/
+                            font-size: 130%;
+/*                          font-weight: 100;*/
+                            border: 1px solid #00ffdc;
+                            border-width: 1px 1px;
+                            border-radius: 3px;
+                            text-align: center;
+                            text-decoration: none;
+
+/*                          -webkit-transition-duration: 0s;
+                            transition-duration: 0s;*/
+/*                          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+
+/*                          letter-spacing: 16px;*/
+
+                            margin: 6px 20px;
+                        }
+
+                                #solutionsButton:hover {
+                                    background-color: #193338;
+                                    color: #00ffdc;
+/*                                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+                                    cursor: pointer;
+
+/*                                  border: 1px solid #00ffdc;
+                                    border-width: 1px 1px;*/
+                                }
+
+                                #solutionsButton {
+                                    background-color: #00ffdc;
+                                    color: #0f131c;
+                                }
+
+                                #solutionsButton a {
+                                    text-decoration: none !important;
+                                }
+
+
+
+
+
+
+
+        #solutionUnit {
+
+            padding: 5px;
+            padding-left: 0px;
+            margin: 2px;
+            margin-left: 0px;
+
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+
+            border: 2px solid #00dcff;
+            border-width: 0px 0px 1px 0px;
+            border-radius: 0px;
+            margin: 0px 0px 10px 0px;
+            padding: 10px;
+            padding-left: 3px;
+            padding-bottom: 0px;
+
+            text-decoration: none;
+        }
+
+        #solutionUnit:hover .percent {
+            color: #00ffdc;
+            cursor: pointer;
+        }
+
+
+                .solutionTitle {
+                    background-color: red;
+                    color: red;
+                }
+
+                        .percent {
+                            float: left;
+                            width: 20%;
+                            color: #00dcff;
+                            font-size: 200%;
+                            padding: 0px 0px 0px 0px;
+                            margin: 0px 0px 0px 0px;
+                            height: auto;
+                            text-align: left;
+
+                            color: #00dcff;
+                            font-family: 'Raleway', sans-serif;
+
+                            text-align: center;
+
+
+                        }
+
+                        .title {
+                            float: left;
+                            text-align: left;
+                            padding: 0px;
+                            margin: 0px;
+                            font-size: 110%;
+                            font-weight: 300;
+                            color: #dddddd;
+                            margin-bottom: 0px;
+                            margin-left: 0px;
+
+                            width: 66%;
+
+                            letter-spacing: 1px;
+                        }
+
+        /*solutionTitle doesn't work at all, otherwise text would be red*/
+
+                #solutionSummaryLabel {
+                    font-size: 120%;
+                    text-align: center;}
+
+                .solutionSummary {
+                    clear: left;
+                    border: 1px solid #dddddd;
+                    border-width: 0px 0px 0px 0px;
+                    text-align: justify;
+                    padding: 8px 2px;
+                    margin-bottom: 0px;
+                    margin-top: 0px;
+
+                }
+
+
+                .solutionDescription {
+                    font-weight: 100px;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER*/
+
+
+#header {
+    background-color: #0f131c;
+
+    border: 1px solid #00dcff;
+    border-width: 1px 0px;
+    font-weight: 100;
+    text-align: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    flex-wrap: nowrap;
+    align-items: strech;
+}
+
+        #explore, #logo, #create {
+
+            overflow: hidden;
+            padding: 5px 0px 5px 0px;
+            margin: 0px;
+
+            flex: 1 1 auto;
+
+            text-align: center;
+        }
+
+        #explore {
+            color: #dddddd;
+
+            letter-spacing: 8px;
+            font-size: 100%;
+
+            padding-top: 10px;
+        }
+
+                #exploreInput {
+                    color: #dddddd;
+                    background-color: #0f131c;
+
+                    border: 1px solid #dddddd;
+
+                    height: 35px;
+                    width: 200px;
+                    letter-spacing: 6px;
+                    font-size: 80%;
+                    padding: auto;
+                    font-family: 'Alegreya Sans', sans-serif;
+                    text-align: center;
+
+                }
+
+
+                #submitExplore {
+                    display: none;
+                }
+
+        #logo {
+        /*  margin: 0px 140px;*/
+            font-size: 200%;
+            font-weight: 100;
+        /*  width: auto;*/
+            letter-spacing: 16px;
+
+        /*  margin-bottom: 25px;
+        */
+            flex: 1 2 auto;
+
+
+        }
+
+
+        #create {
+        }
+
+                #createButton {
+                    background-color: #0f131c;
+                    color: #00dcff;
+                    font-family: 'Alegreya Sans SC', sans-serif;
+                    font-size: 150%;
+                    font-weight: 100;
+                    border: 1px solid #00dcff;
+                    border-width: 1px 1px;
+                    border-radius: 3px;
+                    text-align: center;
+                    text-decoration: none;
+
+                    display: inline-block;
+                    -webkit-transition-duration: 0s;
+                    transition-duration: 0s;
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+                    letter-spacing: 16px;
+                }
+
+                #createButton:hover {
+                    background-color: #00dcff;
+                    color: #0f131c;
+                    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
+                    cursor: pointer;
+                }
+
+
+
+
+
+
+
+
+#header2 {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+
+    width: 100%;
+
+}
+
+        #nameLabel {
+            flex: 1 1 auto;
+            margin-right: auto;
+            margin-top: 1px;
+
+            width: 100%;
+/*          padding: 4px;*/
+
+            color: #dddddd;
+            font-size: 85%;
+            letter-spacing: 12px;
+/*          background-color: #0f131c;*/
+/*          border: 1px solid #00ffdc;
+            border-width: 0px 1px 1px 0px;*/
+
+/*          text-align: right;*/
+        }
+
+        #updatesLabel {
+            flex: 1 1 auto;
+            margin-right: auto;
+/*          margin-top: 1px;*/
+
+            width: 100%;
+/*          padding: 4px;*/
+
+            color: #dddddd;
+            font-size: 85%;
+            letter-spacing: 12px;
+/*          background-color: #0f131c;*/
+/*          border: 1px solid #00ffdc;
+            border-width: 0px 1px 1px 0px;*/
+
+/*          text-align: right;*/
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Other elements of page*/
+
+
+
+/*Popup Boxes*/
+
+
+        * {
+            z-index: -1;
+        }
+
+
+        #popupBox {
+
+            position: fixed;
+/*          width: 40%;*/
+            background-color: #0f131c;
+            border: 1px solid #00ffdc;
+            border-width: 2px 0px;
+
+            letter-spacing: .15em;
+            font-size: 100%;
+            text-align: center;
+
+            margin-top: 190px;
+            padding: 5px 0px 5px 13px;
+            margin-right: 500px;
+
+            z-index: 3;
+
+            color: #dddddd;
+
+            opacity: none;
+
+        }
+
+                #popupBox h1 {
+                    padding: 0px 0px 0px 0px;
+                    margin: 0px 0px 0px 0px;
+
+                }
+
+
+                #spHeader {
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+
+                    display: -webkit-box;
+                    display: -moz-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    align-content: space-between;
+
+                    width: 100%;
+                }
+
+
+
+/*END OF PROBLEM PAGE*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CREATE SOLUTION*/
+
+
+
+                #createBanner {
+                	position: absolute;
+                	width: 100%;
+                	background-color: #0f131c;
+                	border: 1px solid #00dcff;
+                	border-width: 1px 0px;
+
+                	letter-spacing: .15em;
+                	font-size: 200%;
+                	text-align: center;
+
+                	margin-top: 30px;
+
+                	padding: 5px 0px 5px 13px;
+                }
+
+                #createBanner h1 {
+                	padding: 0px 0px 0px 0px;
+                	margin: 0px 0px 0px 0px;
+                }
+
+
+
+
+
+
+
+
+                #createForm {
+                background-color: #0f131c;
+                color: #00dcff;
+
+                position: absolute;
+                width: 50%;
+                height: auto;
+                top: 50%;
+                left: 50%;
+                margin-left: -315px;
+                margin-top: -190px;
+
+                border: 2px solid #00dcff;
+                border-width: 0px 0px 1px 0px;
+                border-radius: 1px;
+                padding: 10px 10px 10px 10px;
+
+                z-index: 2;
+
+                }
+
+
+
+
+
+
+
+
+                input, textarea {
+                	font-family: 'Alegreya Sans SC', sans-serif;
+                	font-size: 120%;
+                	color: #0f131c;
+                	text-align: center;
+
+                	border: 1px solid #00dcff;
+                	border-radius: 5px;
+                	padding: 3px 8px 3px 8px;
+
+                /*	background-repeat: no-repeat;
+                	background-position: 8px 9px;*/
+                	display: block;
+                	margin-bottom: 10px;
+
+                	margin-left: 50px;
+
+                	width: 80%;
+
+                }
+
+                #solutionSummaryForm {
+                	font-family: 'Alegreya Sans';
+                	text-align: left;
+
+                }
+
+                textarea {
+                	text-align: left;
+                	font-family: 'Alegreya Sans', sans-serif;
+                	font-weight: 300;
+                }
+
+
+
+                input:focus, input:hover {
+                	background-color: #ffffff;
+                /*	border: 1px solid #ff0000;*/
+                }
+
+                input#submit {
+                	color: #0f131c;
+                /*	text-shadow: 0px 1px 1px #ffffff;*/
+                	border: 1px solid #0f131c;
+                	background-color: #00dcff;
+                	/*background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
+                	background: -moz-linear-gradient(top, #ff0000, #ff4000);
+                	background: -o-linear-gradient(top, #ff0000, #ff4000);
+                	background: -ms-linear-gradient(top, #ff0000, #ff4000);*/
+
+                	-webkit-transition-duration: 0s;
+                	transition-duration: 0s;
+
+                	margin-left: 85px;
+                }
+
+                input#submit:hover {
+                	color: #00dcff;
+                	border: 1px solid #00dcff;
+                /*	border-top: 2px solid #b2b2b2;*/
+                	background-color: #0f131c;
+                	/*background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
+                	background: -moz-linear-gradient(top, #ff0000, #ff4000);
+                	background: -o-linear-gradient(top, #ff0000, #ff4000);
+                	background: -ms-linear-gradient(top, #ff0000, #ff4000);*/
+
+                	cursor: pointer;
+                }
+
+
+                label {
+                	font-weight: 100;
+                }
+
+/*END OF CREATE SOLUTION*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOGIN PAGE*/
+
+body {
+/*	background: url("day2.jpg") no-repeat center center fixed;
+	background-size: cover;*/
+	color: #ff0000;
+	font-family: 'Alegreya Sans SC', Arial, sans-serif;
+	/*border: 1px solid #ff0000;*/
+	/*width: 90%;*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+body img {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: .9;
+	margin: 0px;
+	padding: 0px;
+
+	z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+#logoBanner {
+	position: absolute;
+	width: 100%;
+	background-color: #ffffff;
+	border: 1px solid #ff0000;
+	border-width: 2px 0px;
+
+	letter-spacing: .15em;
+	font-size: 200%;
+	text-align: center;
+
+	margin-top: 190px;
+
+	padding: 5px 0px 5px 13px;
+
+}
+
+#logoBanner h1 {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#loginForm {
+background-color: rgba(255, 255, 255, 0.93);
+
+position: absolute;
+width: 270px;
+height: 100px;
+top: 50%;
+left: 50%;
+margin-left: -135px;
+margin-top: 0px;
+
+border: 2px solid #ff0000;
+border-width: 2px 0px 3px 0px;
+border-radius: 10px;
+padding: 20px 0px 55px 30px;
+
+z-index: 2;
+
+}
+
+
+
+
+
+#registerLearnmore {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+	margin-left: -135px;
+	margin-top: 250px;
+
+}
+
+
+		#registerForm {
+
+		background-color: rgba(255, 255, 255, 0.93);
+
+		position: absolute;
+		width: 270px;
+		height: 100px;
+		top: 50%;
+		left: 50%;
+		margin-left: -135px;
+		margin-top: 0px;
+
+		border: 2px solid #ff0000;
+		border-width: 2px 0px 3px 0px;
+		border-radius: 10px;
+		padding: 20px 0px 55px 30px;
+
+		z-index: 2;
+
+		}
+
+
+				input {
+					font-family: 'Alegreya Sans SC', sans-serif;
+					font-size: 120%;
+					color: #515151;
+					text-align: center;
+
+
+					border: 1px solid #ff0000;
+					border-radius: 5px;
+					padding: 3px 8px 3px 8px;
+
+				/*	background-repeat: no-repeat;
+					background-position: 8px 9px;*/
+					display: block;
+					margin-bottom: 10px;
+				}
+
+						input:focus, input:hover {
+							background-color: #ffffff;
+							border: 1px solid #ff0000;
+						}
+
+				input#submit {
+					color: #ffffff;
+					text-shadow: 0px 1px 1px #ffffff;
+					border-bottom: 1px solid #dddddd;
+					background-color: #ffffff;
+					background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
+					background: -moz-linear-gradient(top, #ff0000, #ff4000);
+					background: -o-linear-gradient(top, #ff0000, #ff4000);
+					background: -ms-linear-gradient(top, #ff0000, #ff4000);
+
+					-webkit-transition-duration: 0.1s;
+					transition-duration: 0.1s;
+
+					margin-left: 85px;
+				}
+
+						input#submit:hover {
+							color: #ff0000;
+							border: 1px solid #a4a4a4;
+							border-top: 2px solid #b2b2b2;
+							background-color: #ffffff;
+							background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
+							background: -moz-linear-gradient(top, #ff0000, #ff4000);
+							background: -o-linear-gradient(top, #ff0000, #ff4000);
+							background: -ms-linear-gradient(top, #ff0000, #ff4000);
+
+							cursor: pointer;
+						}
+  /*END OF LOGIN*/
+
+
+
+/*Welcome*/
+
+    #welcomeBox {
+    	margin: 7% 20% 0% 20%;
+    	border: 1px solid #00dcff;
+    }
+    #welcomePrompt {
+    	margin: 15px 0px 10px 0px;
+    	font-size: 220%;
+    }
+    #selectProblemPrompt{
+    	padding: 5px 5px 0px 5px;
+    	font-size: 130%;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    	text-align: center;
+    	color: #00dcff;
+    }
+    #exploreForm{
+    	overflow: hidden;
+    	padding: 5px 0px 5px 0px;
+    	margin: 0px;
+    	text-align: center;
+    	color: #dddddd;
+    	letter-spacing: 8px;
+    	font-size: 100%;
+    	padding-top: 10px;
+    	}
+    #exploreInput {
+    	color: #dddddd;
+    	background-color: #0f131c;
+    	border: 1px solid #dddddd;
+    	height: 35px;
+    	width: 80%;
+    	letter-spacing: 6px;
+    	font-size: 120%;
+    	padding: auto;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	text-align: center;
+    }
+    #submitExplore {
+    	display: none;
+    }
+    #welcomeProblemsElements {
+    	margin: 2px 15px 5px 5px;
+    	padding: 5px;
+    }
+    #welcomeProblemsUnit {
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    }
+    #welcomeProblemsUnit:hover * {
+    	color: #ffffff;
+    	cursor: pointer;
+    }
+    #welcomeProblemsHeader{
+    	display: inline-flex;
+    	flex-direction: row;
+    }
+    #welcomeProblemsTag {
+    	flex: 1 1 auto;
+    	display: inline-block;
+    	color: #00ffdc !important;
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 1px 0px;
+    	font-size: 120%;
+    	padding: 2px 5px 2px 5px;
+    	margin-bottom: 35px;
+    }
+    #welcomeProblemsTitle {
+    	flex: 1 1 auto;
+    	padding: 5px 10px 5px 10px;
+    	font-size: 150%;
+    	color: #dddddd;
+    }
+    #welcomeProblemsSummary {
+    	font-family: 'Alegreya Sans', sans-serf;
+    	padding: 0px 5px 5px 5px;
+    	font-size: 90%;
+    }
+    #moreButton {
+    	margin: auto;
+    	text-align: center;
+
+    	font-size: 120%;
+    	padding: 5px;
+    	color: #00ffdc;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    }
+    #moreButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    	cursor: pointer;
+    }
+
+/*End Welcome*/
