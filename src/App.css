@@ -1170,150 +1170,318 @@
 
 /*PROBLEM*/
 
-#problem {
-	border: 1px solid #00dcff;
-	background-color: #0f131c;
-	position: relative;
-	border-width: 0px 2px;
-	border-radius: 23px;
-	color: #dddddd;
-	padding: 0px 10px 20px 10px;
-	overflow: scroll !important;
-	margin: 5px 5px 10px 5px;
-	flex: 1 1 auto;
-	outline: 1px solid #131b2b;
-	outline-width: 0px 1px;
-	flex-grow: 2;
-	flex-shrink: 1;
-	margin-left: 7px;
-	border-width: 2px 0px;
-	border-radius: 0px;
-}
-#problemHeader {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: inline-flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	align-content: space-between;
-	width: 100%;
-}
-#parentButton {
-	flex: 0 1 auto;
-	margin-right: auto;
-	margin-top: 1px;
-	width: 23%;
-	padding: 4px;
-	color: #00ffdc;
-	font-size: 85%;
-	letter-spacing: 12px;
-	background-color: #0f131c;
-	border: 1px solid #00ffdc;
-	border-width: 0px 1px 1px 0px;
-	text-align: right;
-}
-#parentButton a {
-	width: 100%;
-	padding: 0px;
-	margin: 0px;
-}
-#parentButton:hover {
-	color: #0f131c;
-	background-color: #00ffdc;
-	border-color: #0f131c;
-	cursor: pointer;
-}
-#elementLabel {
-	flex: 0 1 auto;
-	margin: 1px 5% 0% 0%;
-	width: 26%;
-	border: 1px solid #00dcff;
-	border-width: 0px 0px 1px 0px;
-	border-radius: 0px;
-	font-size: 85%;
-	padding: 4px;
-	letter-spacing: 12px;
-	color: #00dcff;
-	text-align: center;
-}
-#problemIntro {
-	border: 1px solid #00dcff;
-	border-width: 0px 0px 0px 0px;
-	border-radius: 0px;
-	margin: 0px 40px;
-	padding: 10px 0px;
-}
-#problemTitle {
-	border-width: 0px;
-	font-size: 260%;
-}
-#problemSummary {
-	margin: 5px 25px;
-	line-height: 135%;
-	font-size: 100%;
-	border: 1px solid #ffffff;
-	border-radius: 3px;
-	border-width: 1px 0px;
-	padding: 5px;
-	margin-top: 20px;
-}
-#contributor, #createDate {
-	width: 100%;
-	text-align: center;
-}
-#followProblem {
-	width: 100%;
-	background-color: #0f131c;
-	color: #00ffdc;
-	font-family: 'Alegreya Sans SC', sans-serif;
-	font-size: 120%;
-	font-weight: 100;
-	border: 1px solid #00ffdc;
-	border-width: 1px 1px;
-	border-radius: 3px;
-	text-align: center;
-	text-decoration: none;
-	margin-bottom: 10px;
-	letter-spacing: 16px;
-}
-#followProblem:hover {
-			background-color: #00ffdc;
-			color: #0f131c;
-			cursor: pointer;
-}
-#problemDescription {
-	flex: 1 1 auto;
-	border: 1px solid #ffffff;
-	border-width: 0px 1px;
-	border-radius: 0px;
-	padding: 5px;
-	margin: 0% 5%;
-	text-align: center;
-	font-size: 120%;
-	line-height: 120%;
-	padding: 20px 20px;
-}
-#problemRequirements {
-	border: 1px solid #00ffdc;
-	border-width: 0px 1px 0px 1px;
-	padding: 0px 5px 10px 5px;
-	margin-bottom: 50px;
-	padding-left: 5%;
-	padding-right: 5%;
-}
-#requirementsLabel {
-	color: #00ffdc;
-}
+    #problem {
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	position: relative;
+    	border-width: 0px 2px;
+    	border-radius: 23px;
+    	color: #dddddd;
+    	padding: 0px 10px 20px 10px;
+    	overflow: scroll !important;
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	outline: 1px solid #131b2b;
+    	outline-width: 0px 1px;
+    	flex-grow: 2;
+    	flex-shrink: 1;
+    	margin-left: 7px;
+    	border-width: 2px 0px;
+    	border-radius: 0px;
+    }
+    #problemHeader {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: inline-flex;
+    	justify-content: space-between;
+    	align-items: flex-start;
+    	align-content: space-between;
+    	width: 100%;
+    }
+    #parentButton {
+    	flex: 0 1 auto;
+    	margin-right: auto;
+    	margin-top: 1px;
+    	width: 23%;
+    	padding: 4px;
+    	color: #00ffdc;
+    	font-size: 85%;
+    	letter-spacing: 12px;
+    	background-color: #0f131c;
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 1px 0px;
+    	text-align: right;
+    }
+    #parentButton a {
+    	width: 100%;
+    	padding: 0px;
+    	margin: 0px;
+    }
+    #parentButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    	border-color: #0f131c;
+    	cursor: pointer;
+    }
+    #elementLabel {
+    	flex: 0 1 auto;
+    	margin: 1px 5% 0% 0%;
+    	width: 26%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	border-radius: 0px;
+    	font-size: 85%;
+    	padding: 4px;
+    	letter-spacing: 12px;
+    	color: #00dcff;
+    	text-align: center;
+    }
+    #problemIntro {
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 0px 0px;
+    	border-radius: 0px;
+    	margin: 0px 40px;
+    	padding: 10px 0px;
+    }
+    #problemTitle {
+    	border-width: 0px;
+    	font-size: 260%;
+    }
+    #problemSummary {
+    	margin: 5px 25px;
+    	line-height: 135%;
+    	font-size: 100%;
+    	border: 1px solid #ffffff;
+    	border-radius: 3px;
+    	border-width: 1px 0px;
+    	padding: 5px;
+    	margin-top: 20px;
+    }
+    #contributor, #createDate {
+    	width: 100%;
+    	text-align: center;
+    }
+    #followProblem {
+    	width: 100%;
+    	background-color: #0f131c;
+    	color: #00ffdc;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 120%;
+    	font-weight: 100;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin-bottom: 10px;
+    	letter-spacing: 16px;
+    }
+    #followProblem:hover {
+    	background-color: #00ffdc;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #problemDescription {
+    	flex: 1 1 auto;
+    	border: 1px solid #ffffff;
+    	border-width: 0px 1px;
+    	border-radius: 0px;
+    	padding: 5px;
+    	margin: 0% 5%;
+    	text-align: center;
+    	font-size: 120%;
+    	line-height: 120%;
+    	padding: 20px 20px;
+    }
+    #problemRequirements {
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 0px 1px;
+    	padding: 0px 5px 10px 5px;
+    	margin-bottom: 50px;
+    	padding-left: 5%;
+    	padding-right: 5%;
+    }
+    #requirementsLabel {
+    	color: #00ffdc;
+    }
 
 /*End Problem*/
 
 
 
+/*SearchBox*/
+
+    #searchBox {
+    	margin: 7% 25% 0% 25%;
+    	border: 1px solid #00dcff;
+    }
+    #exploreForm{
+    	overflow: hidden;
+    	padding: 5px 0px 5px 0px;
+    	margin: 0px;
+    	text-align: center;
+    	color: #dddddd;
+    	letter-spacing: 8px;
+    	font-size: 100%;
+    	padding-top: 10px;
+    	}
+    #exploreInput {
+    	color: #dddddd;
+    	background-color: #0f131c;
+    	border: 1px solid #dddddd;
+    	height: 35px;
+    	width: 80%;
+    	letter-spacing: 6px;
+    	font-size: 120%;
+    	padding: auto;
+    	font-family: 'Alegreya Sans', sans-serif;
+    	text-align: center;
+    }
+    #submitExplore {
+    	display: none;
+    }
+    #searchElements {
+    	margin: 2px 15px 5px 5px;
+    	padding: 5px;
+    }
+    #searchUnit {
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    }
+    #searchTitle {
+    	padding: 0px 5px 0px 5px;
+    	font-size: 115%;
+    	color: #00dcff;
+    }
+    #searchSummary {
+    	font-family: 'Alegreya Sans', sans-serf;
+    	padding: 0px 5px 5px 5px;
+    	font-size: 90%;
+    }
+    #moreSearchButton {
+    	margin: auto;
+    	text-align: center;
+
+    	font-size: 150%;
+    	padding: 5px;
+    	color: #00ffdc;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    }
+    #moreSearchButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    }
+
+
+/*End SearchBox*/
 
 
 
+/*Suggestions*/
+
+    #sidebarElements {
+      border: 1px solid #00dcff;
+      border-width: 0px 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #suggestionForm textarea {
+      width: 99%;
+      text-align: left;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 300;
+      padding: 5px;
+      color: #ffffff;
+      background-color: #0f131c;
+      border: 1px solid #ffffff;
+      resize: none;
+    }
+    #suggestionProblem fieldset {
+      border: 1px solid #00dcff;
+    }
+    #suggestionProblem legend {
+      padding: 0.2em 0.5em;
+      border: 1px solid #00dcff;
+      font-size: 90%;
+      text-align: justify;
+      color: ;
+    }
+    #suggestionUnit {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: inline-flex;
+      flex-direction: row;
+      font-family: 'Alegreya Sans';
+      padding-top: 10px;
+    }
+    #suggestionContent {
+      flex: 3 3 auto;
+      font-family: 'Alegreya Sans';
+      border: 1px solid #00ffdc;
+      border-width: 1px 0px 0px 0px;
+      width: 80%;
+      padding: 10px;
+    }
+    #suggestionAdder {
+      font-size: 90%;
+      color: #00ffdc;
+    }
+    #suggestionText {
+      font-family: 'Alegreya Sans';
+    }
+    #addSuggestion {
+      color: #00ffdc;
+      background-color: #0f131c;
+      border: 1px solid #00ffdc;
+      border-radius: 2px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    #addSuggestion:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+    }
+    #addSuggestion:active {
+      color: #00ffdc;
+      background-color: #0f131c;
+    }
+    #suggestionVote {
+      flex: 1 1 auto;
+      color: #00ffdc;
+      background-color: #0f131c;
+      border: 1px solid #00ffdc;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    #suggestionVote:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+    }
+    #suggestionVote:active {
+      color: #00ffdc;
+      background-color: #0f131c;
+    }
+    #moreButton {
+      margin: auto;
+      text-align: center;
+      font-size: 130%;
+      padding: 5px;
+      color: #00ffdc;
+      border: 1px solid #00dcff;
+      border-width: 1px 1px 1px 1px;
+      border-radius: 3px;
+    }
+    #moreButton:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+    }
+
+/*End Suggestion*/
 
 
 
