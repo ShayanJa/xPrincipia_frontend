@@ -519,7 +519,7 @@
       background-color: #00ffdc;
       color: #0f131c;
       cursor: pointer;
-    		}
+    }
     #editSolution {
     	width: 14%;
     	margin-left: 42.5%;
@@ -597,8 +597,333 @@
 
 /*End Created Solution*/
 
+/*Header*/
+
+#header, #problem, #sidebar {
+	border: 1px solid #00dcff;
+	background-color: #0f131c;
+	position: relative;
+}
+
+#header {
+	background-color: #0f131c;
+	border: 1px solid #00dcff;
+	border-width: 1px 0px;
+	font-weight: 100;
+	text-align: center;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style: none;
+	flex-wrap: nowrap;
+	align-items: strech;
+}
+#explore, #logo, #avatarHeader {
+	overflow: hidden;
+	padding: 4px 0px 0px 0px;
+	margin: 0px;
+	flex: 1 1 auto;
+	text-align: center;
+}
+#explore {
+	color: #dddddd;
+	letter-spacing: 8px;
+	font-size: 100%;
+	margin-top: 1px;
+}
+#exploreInput {
+	color: #dddddd;
+	background-color: #0f131c;
+	border: 1px solid #dddddd;
+	height: 35px;
+	width: 200px;
+	letter-spacing: 6px;
+	font-size: 80%;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+#submitExplore {
+	display: none;
+}
+#logo {
+	font-size: 200%;
+	font-weight: 100;
+	letter-spacing: 16px;
+	flex: 1 2 auto;
+	padding-right: 8%;
+}
+#avatarHeader {
+}
+#avatarButton {
+	border: 1px solid #00dcff;
+	border-radius: 50%;
+}
+
+/*End Header*/
 
 
+
+/*Login*/
+
+    #loginComponent {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	overflow: hidden;
+    	display: inline-flex;
+    	align-items: stretch;
+    	flex-direction: row;
+    	width: 99%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px;
+    	min-height: 99%;
+    }
+    #explanation, #signup {
+    	border-width: 0px 2px;
+    	color: #dddddd;
+    	padding: 0px 10px 20px 10px;
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	width: 60%;
+    }
+    #explanation {
+    	/*border: 1px solid #00dcff;
+    	border-width: 0px 1px;*/
+    }
+    #signup {
+    	width: 40%;
+    }
+    #banner {
+    	color: #ffffff;
+    	width: 100%;
+    	letter-spacing: .15em;
+    	font-size: 200%;
+    	text-align: center;
+    	margin-top: 90px;
+    	padding: 5px 0px 5px 13px;
+    }
+    #bannerTitle {
+    	font-size: 200%;
+    	letter-spacing: 16px;
+    	border: 1px solid #00dcff;
+    	border-width: 2px 0px;
+    }
+    #bannerSlogan {
+    	letter-spacing: 12px;
+    }
+    #learnMore {
+    	color: #00dcff;
+    	padding: -10% 10% 0% 10%;
+    	font-size: 120%;
+    }
+    #welcome, #introduction {
+    	text-align: center;
+    	font-size: 100%;
+    	line-height: 150%;
+    	letter-spacing: 4px;
+    }
+    #welcome {
+    	text-align: center;
+    }
+    #introduction {
+    	margin: 0% 10%;
+    	border:
+    }
+    #signup {
+    }
+    #loginForm {
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px 1px 1px;
+    	border-radius: 3px;
+    	margin: 30% 15% 5% 15%;
+    	text-align: center;
+    }
+    #enter {
+    	color: #00dcff;
+    	font-size: 200%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	margin-bottom: 5px;
+    }
+    #loginEmail {
+    	margin-top: 15px;
+    }
+    #loginPassword {
+    }
+    input {
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 140%;
+    	color: #ffffff;
+    	text-align: center;
+    	background-color: #0f131c;
+    	border: 1px solid #00dcff;
+    	border-radius: 3px;
+    	padding: 3px 0px 3px 0px;
+    	display: block;
+    	margin-left: 9%;
+    	width: 82%;
+    }
+    input#submit {
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    	width: 100%;
+    	padding: 0px;
+    	margin: 0px;
+    }
+    input#submit:hover {
+    	color: #0f131c;
+    	background-color: #00dcff;
+    	border: 1px solid #0f131c;
+    	cursor: pointer;
+    }
+    #registerButton {
+    	text-align: center;
+    	color: #00ffdc;
+    	border: 1px solid #00ffdc;
+    	margin: 0% 19%;
+    	font-size: 150%;
+    }
+    #registerButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    	cursor: pointer;
+    }
+
+/*End Login*/
+
+
+
+/*Question*/
+
+    #sidebarElements {
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    }
+    #questionForm textarea {
+    	width: 99%;
+    	text-align: left;
+    	font-family: 'Alegreya Sans', sans-serif;
+    	font-weight: 300;
+    	padding: 5px;
+    	color: #ffffff;
+    	background-color: #0f131c;
+    	border: 1px solid #ffffff;
+    	resize: none;
+    }
+    #questionProblem fieldset {
+    	border: 1px solid #00dcff;
+    }
+    #questionProblem legend {
+    	padding: 0.2em 0.5em;
+    	border: 1px solid #00dcff;
+    	font-size: 90%;
+    	text-align: justify;
+    	color: ;
+    }
+    #questionUnit {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: inline-flex;
+    	flex-direction: row;
+    	font-family: 'Alegreya Sans';
+    	padding-top: 10px;
+      width: 100%;
+    }
+    #questionContent {
+    	flex: 3 3 auto;
+    	font-family: 'Alegreya Sans';
+
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 0px 0px 0px;
+
+    	width: 80%;
+    	padding: 10px;
+    }
+    #questionAdder {
+    	font-size: 90%;
+    	color: #00ffdc;
+    }
+    #questionText {
+    	font-family: 'Alegreya Sans';
+    }
+    #askquestion {
+    	color: #00ffdc;
+    	background-color: #0f131c;
+    	border: 1px solid #00ffdc;
+    	border-radius: 2px;
+    	margin-top: 5px;
+    	cursor: pointer;
+    }
+    #askquestion:hover {
+    	color: #0f131c;
+    	background-color: #00dcff;
+    }
+    #askquestion:active {
+    	color: #00dcff;
+    	background-color: #0f131c;
+    }
+    #questionAnswers {
+    	flex: 1 1 auto;
+    	color: #00dcff;
+    	background-color: #0f131c;
+    	border: 1px solid #00dcff;
+    	border-radius: 2px;
+    	cursor: pointer;
+    }
+    #questionAnswers:hover {
+    	color: #0f131c;
+    	background-color: #00dcff;
+    }
+    #questionAnswers:active {
+    	color: #00ffdc;
+    	background-color: #0f131c;
+    }
+    #questionVote {
+    	flex: 1 1 auto;
+    	color: #00ffdc;
+    	background-color: #0f131c;
+    	border: 1px solid #00ffdc;
+    	border-radius: 2px;
+    	cursor: pointer;
+    }
+    #questionVote:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    }
+    #questionVote:active {
+    	color: #00ffdc;
+    	background-color: #0f131c;
+    }
+    #moreButton {
+    	margin: auto;
+    	text-align: center;
+    	font-size: 130%;
+    	padding: 5px;
+    	color: #00ffdc;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px 1px 1px;
+    	border-radius: 3px;
+    }
+    #moreButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    }
+
+/*End Question*/
 
 
 /*What is this?: PROJECT PAGE*/
@@ -1035,210 +1360,6 @@
                 .solutionDescription {
                     font-weight: 100px;
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*HEADER*/
-
-
-#header {
-    background-color: #0f131c;
-
-    border: 1px solid #00dcff;
-    border-width: 1px 0px;
-    font-weight: 100;
-    text-align: center;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    flex-wrap: nowrap;
-    align-items: strech;
-}
-
-        #explore, #logo, #create {
-
-            overflow: hidden;
-            padding: 5px 0px 5px 0px;
-            margin: 0px;
-
-            flex: 1 1 auto;
-
-            text-align: center;
-        }
-
-        #explore {
-            color: #dddddd;
-
-            letter-spacing: 8px;
-            font-size: 100%;
-
-            padding-top: 10px;
-        }
-
-                #exploreInput {
-                    color: #dddddd;
-                    background-color: #0f131c;
-
-                    border: 1px solid #dddddd;
-
-                    height: 35px;
-                    width: 200px;
-                    letter-spacing: 6px;
-                    font-size: 80%;
-                    padding: auto;
-                    font-family: 'Alegreya Sans', sans-serif;
-                    text-align: center;
-
-                }
-
-
-                #submitExplore {
-                    display: none;
-                }
-
-        #logo {
-        /*  margin: 0px 140px;*/
-            font-size: 200%;
-            font-weight: 100;
-        /*  width: auto;*/
-            letter-spacing: 16px;
-
-        /*  margin-bottom: 25px;
-        */
-            flex: 1 2 auto;
-
-
-        }
-
-
-        #create {
-        }
-
-                #createButton {
-                    background-color: #0f131c;
-                    color: #00dcff;
-                    font-family: 'Alegreya Sans SC', sans-serif;
-                    font-size: 150%;
-                    font-weight: 100;
-                    border: 1px solid #00dcff;
-                    border-width: 1px 1px;
-                    border-radius: 3px;
-                    text-align: center;
-                    text-decoration: none;
-
-                    display: inline-block;
-                    -webkit-transition-duration: 0s;
-                    transition-duration: 0s;
-                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
-                    letter-spacing: 16px;
-                }
-
-                #createButton:hover {
-                    background-color: #00dcff;
-                    color: #0f131c;
-                    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
-                    cursor: pointer;
-                }
-
-
-
-
-
-
-
-
-#header2 {
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: space-between;
-
-    width: 100%;
-
-}
-
-        #nameLabel {
-            flex: 1 1 auto;
-            margin-right: auto;
-            margin-top: 1px;
-
-            width: 100%;
-/*          padding: 4px;*/
-
-            color: #dddddd;
-            font-size: 85%;
-            letter-spacing: 12px;
-/*          background-color: #0f131c;*/
-/*          border: 1px solid #00ffdc;
-            border-width: 0px 1px 1px 0px;*/
-
-/*          text-align: right;*/
-        }
-
-        #updatesLabel {
-            flex: 1 1 auto;
-            margin-right: auto;
-/*          margin-top: 1px;*/
-
-            width: 100%;
-/*          padding: 4px;*/
-
-            color: #dddddd;
-            font-size: 85%;
-            letter-spacing: 12px;
-/*          background-color: #0f131c;*/
-/*          border: 1px solid #00ffdc;
-            border-width: 0px 1px 1px 0px;*/
-
-/*          text-align: right;*/
-        }
-
-
-
-
 
 
 

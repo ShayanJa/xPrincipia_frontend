@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Comment from './Comment.jsx';
+import Comment from './Question.jsx';
 
 export default class CommentContainer extends React.Component {
    render() {
