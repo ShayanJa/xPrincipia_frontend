@@ -6,7 +6,7 @@ import SideBar from './components/SideBar';
 import Layout from './components/Layout.jsx';
 import SolutionContainer from './components/SolutionContainer.jsx';
 import Create from './components/Create.jsx';
-import CommentContainer from './components/CommentContainer.jsx';
+import QuestionContainer from './components/QuestionContainer.jsx';
 import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
 import './assets/index.css';
@@ -21,7 +21,7 @@ ReactDOM.render(
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='create' component={Create} />
           <Route path='solve' component={SolutionContainer} />
-          <Route path='comment' component={CommentContainer} />
+          <Route path='question' component={QuestionContainer} />
           <Route path='suggest' component={SuggestionContainer} />
           <Route path='subproblems' component={SubProblemContainer} />
         </Route>

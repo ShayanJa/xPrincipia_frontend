@@ -26,7 +26,7 @@ export default class Question extends React.Component {
 
                   </div>
               </div>
-              <div id="moreButton">
+              <div id="sideBarMore">
                     More
               </div>
             </div>

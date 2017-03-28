@@ -80,10 +80,8 @@
     #questionContent {
     	flex: 3 3 auto;
     	font-family: 'Alegreya Sans';
-
     	border: 1px solid #00ffdc;
     	border-width: 1px 0px 0px 0px;
-
     	width: 80%;
     	padding: 10px;
     }
@@ -221,22 +219,6 @@
     #answerVote:active {
       color: #00dcff;
       background-color: #0f131c;
-    }
-    #moreAnswerButton {
-      margin: auto;
-      text-align: center;
-
-      font-size: 100%;
-      padding: 5px;
-      color: #00ffdc;
-      border: 1px solid #00dcff;
-      border-width: 1px 1px 1px 1px;
-      border-radius: 3px;
-      margin-left: 8%;
-    }
-    #moreAnswerButton:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
     }
 
 /*End Answer*/
@@ -598,75 +580,77 @@
 
 /*End Created Solution*/
 
+
+
 /*Header*/
 
-#header, #problem, #sidebar {
-	border: 1px solid #00dcff;
-	background-color: #0f131c;
-	position: relative;
-}
+    #header, #problem, #sidebar {
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	position: relative;
+    }
 
-#header {
-	background-color: #0f131c;
-	border: 1px solid #00dcff;
-	border-width: 1px 0px;
-	font-weight: 100;
-	text-align: center;
-	overflow: hidden;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: space-between;
-	list-style: none;
-	flex-wrap: nowrap;
-	align-items: strech;
-}
-#explore, #logo, #avatarHeader {
-	overflow: hidden;
-	padding: 4px 0px 0px 0px;
-	margin: 0px;
-	flex: 1 1 auto;
-	text-align: center;
-}
-#explore {
-	color: #dddddd;
-	letter-spacing: 8px;
-	font-size: 100%;
-	margin-top: 1px;
-}
-#exploreInput {
-	color: #dddddd;
-	background-color: #0f131c;
-	border: 1px solid #dddddd;
-	height: 35px;
-	width: 200px;
-	letter-spacing: 6px;
-	font-size: 80%;
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
-}
-#submitExplore {
-	display: none;
-}
-#logo {
-	font-size: 200%;
-	font-weight: 100;
-	letter-spacing: 16px;
-	flex: 1 2 auto;
-	padding-right: 8%;
-}
-#avatarHeader {
-}
-#avatarButton {
-	border: 1px solid #00dcff;
-	border-radius: 50%;
-}
+    #header {
+    	background-color: #0f131c;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px;
+    	font-weight: 100;
+    	text-align: center;
+    	overflow: hidden;
+    	padding: 0;
+    	margin: 0;
+    	width: 100%;
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	display: inline-flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    	list-style: none;
+    	flex-wrap: nowrap;
+    	align-items: strech;
+    }
+    #explore, #logo, #avatarHeader {
+    	overflow: hidden;
+    	padding: 4px 0px 0px 0px;
+    	margin: 0px;
+    	flex: 1 1 auto;
+    	text-align: center;
+    }
+    #explore {
+    	color: #dddddd;
+    	letter-spacing: 8px;
+    	font-size: 100%;
+    	margin-top: 1px;
+    }
+    #exploreInput {
+    	color: #dddddd;
+    	background-color: #0f131c;
+    	border: 1px solid #dddddd;
+    	height: 35px;
+    	width: 200px;
+    	letter-spacing: 6px;
+    	font-size: 80%;
+    	font-family: 'Raleway', sans-serif;
+    	text-align: center;
+    }
+    #submitExplore {
+    	display: none;
+    }
+    #logo {
+    	font-size: 200%;
+    	font-weight: 100;
+    	letter-spacing: 16px;
+    	flex: 1 2 auto;
+    	padding-right: 8%;
+    }
+    #avatarHeader {
+    }
+    #avatarButton {
+    	border: 1px solid #00dcff;
+    	border-radius: 50%;
+    }
 
 /*End Header*/
 
@@ -732,7 +716,7 @@
     	line-height: 150%;
     	letter-spacing: 4px;
     }
-    #welcome {
+    #welcomeLogin {
     	text-align: center;
     }
     #introduction {
@@ -972,18 +956,12 @@
     	text-align: center;
     	margin-left: 0px;
     	margin-right: 0px;
-
     	font-size: 100%;
     	padding: 5px 0px 5px 0px;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
     	border-width: 1px 1px 0px 1px;
     }
-    #moreButton:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-    }
-
 
 /*End Profile*/
 
@@ -1032,10 +1010,8 @@
     #questionContent {
     	flex: 3 3 auto;
     	font-family: 'Alegreya Sans';
-
     	border: 1px solid #00ffdc;
     	border-width: 1px 0px 0px 0px;
-
     	width: 80%;
     	padding: 10px;
     }
@@ -1103,10 +1079,6 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    }
-    #moreButton:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
     }
 
 /*End Question*/
@@ -1319,7 +1291,6 @@
     	background-color: #00ffdc;
     }
 
-
 /*End SearchBox*/
 
 
@@ -1410,20 +1381,6 @@
       color: #00ffdc;
       background-color: #0f131c;
     }
-    #moreButton {
-      margin: auto;
-      text-align: center;
-      font-size: 130%;
-      padding: 5px;
-      color: #00ffdc;
-      border: 1px solid #00dcff;
-      border-width: 1px 1px 1px 1px;
-      border-radius: 3px;
-    }
-    #moreButton:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
-    }
 
 /*End Suggestion*/
 
@@ -1512,25 +1469,14 @@
     #moreButton {
     	margin: auto;
     	text-align: center;
-
     	font-size: 120%;
     	padding: 5px;
     	color: #00ffdc;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     }
-    #moreButton:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-    	cursor: pointer;
-    }
 
 /*End Welcome*/
-
-
-
-
-
 
 
 
@@ -1554,43 +1500,43 @@
 
 /*Layout*/
 
-#main {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	overflow: auto;
-	display: inline-flex;
-	align-items: stretch;
-	flex-direction: row;
-}
-#header, #problem, #sidebar {
-	border: 1px solid #00dcff;
-	background-color: #0f131c;
-	position: relative;
-}
-#problem, #sidebar {
-	border-width: 0px 2px;
-	border-radius: 23px;
-	color: #dddddd;
-	padding: 0px 10px 20px 10px;
-	overflow: scroll !important;
-	margin: 5px 5px 10px 5px;
-	flex: 1 1 auto;
-	outline: 1px solid #131b2b;
-	outline-width: 0px 1px;
-}
-#sidebar {
-	outline-width: 0px 0px;
-	padding-left: 0px;
-}
-#problem {
-	flex-grow: 2;
-	flex-shrink: 1;
-	margin-left: 7px;
-	border-width: 2px 0px;
-	border-radius: 0px;
-}
+    #main {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	overflow: auto;
+    	display: inline-flex;
+    	align-items: stretch;
+    	flex-direction: row;
+    }
+    #header, #problem, #sidebar {
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	position: relative;
+    }
+    #problem, #sidebar {
+    	border-width: 0px 2px;
+    	border-radius: 23px;
+    	color: #dddddd;
+    	padding: 0px 10px 20px 10px;
+    	overflow: scroll !important;
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	outline: 1px solid #131b2b;
+    	outline-width: 0px 1px;
+    }
+    #sidebar {
+    	outline-width: 0px 0px;
+    	padding-left: 0px;
+    }
+    #problem {
+    	flex-grow: 2;
+    	flex-shrink: 1;
+    	margin-left: 7px;
+    	border-width: 2px 0px;
+    	border-radius: 0px;
+    }
 
 /*End Layout*/
 
@@ -1769,6 +1715,23 @@
     #moreButton:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
+      cursor: pointer;
+    }
+    #sideBarMore {
+      margin: auto;
+      text-align: center;
+
+      font-size: 100%;
+      padding: 5px;
+      color: #00ffdc;
+      border: 1px solid #00dcff;
+      border-width: 1px 1px 1px 1px;
+      border-radius: 3px;
+      margin-left: 8%;
+    }
+    #sideBarMore:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
     }
 
 /*More Sidebar*/

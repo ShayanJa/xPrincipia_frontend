@@ -34,7 +34,7 @@ export default class Answer extends React.Component {
                         <button type="button" id="answerVote">Vote</button>
                     </div>
                 </div>
-                <div id="moreAnswerButton">
+                <div id="sideBarMore">
                       More
                 </div>
               </div>
