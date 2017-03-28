@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
-import Create from './Create.jsx';
+import CreateSolution from './CreateSolution.jsx';
+import CreateProblem from './CreateProblem.jsx';
 import SolutionContainer from './SolutionContainer.jsx';
 import SuggestionContainer from './SuggestionContainer.jsx';
-import CommentContainer from './CommentContainer.jsx';
+import QuestionContainer from './QuestionContainer.jsx';
 
 
 export default class SideBarMenu extends React.Component {

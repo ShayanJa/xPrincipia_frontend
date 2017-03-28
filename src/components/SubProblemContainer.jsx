@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SubProblem from './SubProblem.jsx';
+import SubProblemUnit from './SubProblemUnit.jsx';
 
 export default class SubProblemContainer extends React.Component {
    render() {
       return (
         <div>
-          <SubProblem />
-          <SubProblem />
-          <SubProblem />
-          <SubProblem />
-          <SubProblem />
+          <SubProblemUnit />
+          <SubProblemUnit />
+          <SubProblemUnit />
+          <SubProblemUnit />
+          <SubProblemUnit />
         </div>
       );
    }

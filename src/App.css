@@ -1295,6 +1295,54 @@
 
 
 
+/*SubProblemUnit*/
+
+#subProblemUnit {
+  padding: 5px;
+  padding-left: 0px;
+  margin: 2px;
+  margin-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border: 2px solid #00dcff;
+  border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  padding-left: 3px;
+  padding-bottom: 0px;
+  text-decoration: none;
+}
+#subProblemUnit:hover #percent {
+  color: #00ffdc;
+  cursor: pointer;
+}
+#subProblemTitle {
+  float: left;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 140%;
+  color: #dddddd;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  width: 66%;
+  letter-spacing: 1px;
+}
+#subProblemSummary {
+  clear: left;
+  border: 1px solid #dddddd;
+  border-width: 0px 0px 0px 0px;
+  text-align: justify;
+  padding: 8px 2px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/*End SubProblemUnit*/
+
+
+
 /*Suggestions*/
 
     #sidebarElements {
@@ -1649,10 +1697,6 @@
     #solutionUnit:hover #percent {
     	color: #00ffdc;
     	cursor: pointer;
-    }
-    #solutionTitle {
-    	background-color: red;
-    	color: red;
     }
     #percent {
     	float: left;

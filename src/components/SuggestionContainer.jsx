@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Suggestion from './Suggestion.jsx';
+import SuggestionUnit from './SuggestionUnit.jsx';
 
 export default class SuggestionContainer extends React.Component {
    render() {
       return (
-        <div id="commentSection">
-            <Suggestion />
-            <Suggestion />
-            <Suggestion />
-            <Suggestion />
-            <Suggestion />
+        <div id="suggestionContainer">
+            <SuggestionUnit />
+            <SuggestionUnit />
+            <SuggestionUnit />
+            <SuggestionUnit />
+            <SuggestionUnit />
         </div>
       );
    }

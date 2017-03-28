@@ -1,20 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Suggestion extends React.Component {
+export default class SuggestionUnit extends React.Component {
    render() {
       return (
-        <div class="commentUnit">
-
-            <div class="commentContent">
-                <div class="commenter">Ben Francis</div>
-                <div class="commentText"> Do you think this is a suggestion or a comment?</div>
-            </div>
-
-
-            <button type="button" id="commentVote">Vote</button>
-
-        </div>
+      <div id="suggestionUnit">
+          <div id="suggestionContent">
+              <div id="suggestionAdder">Ben Francis</div>
+              <div id="suggestionText">You could add the fact that entropy is actually increased through abiogenesis through some sort of teleology. Also it could be noted the history of complexity increase in the universe is the dependent variable of a parabolic curve where entropy always increases as the independent variable.</div>
+          </div>
+          <button type="button" id="suggestionVote">Vote</button>
+      </div>
       );
    }
 }

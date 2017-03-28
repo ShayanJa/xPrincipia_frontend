@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class SubProblem extends React.Component {
-   render() {
-      return (
+export default class SubProblemUnit extends React.Component {
+  render() {
+    return (
+
         <div id="subProblemUnit">
             <div class="subProblemTitle">
                 <span class="percent">70%</span>
