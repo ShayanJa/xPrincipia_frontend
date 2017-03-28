@@ -100,7 +100,6 @@
       margin-top: 5px;
       cursor: pointer;
     }
-
     #askquestion:hover {
       color: #0f131c;
       background-color: #00dcff;
@@ -933,7 +932,6 @@
     	text-decoration: none;
     	margin: 3px 10px 0px 10px;
     }
-
     #followedProblemsButton:hover, #createdProblemsButton:hover,
     #votedSolutionsButton:hover, #createdSolutionsButton:hover {
     	background-color: #00ffdc;
@@ -1112,6 +1110,7 @@
 /*End Question*/
 
 
+
 /*What is this?: PROJECT PAGE*/
 
 #logo a {
@@ -1156,15 +1155,6 @@
 }
 
 /*End What is this?*/
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1363,7 +1353,6 @@
     #moreSearchButton {
     	margin: auto;
     	text-align: center;
-
     	font-size: 150%;
     	padding: 5px;
     	color: #00ffdc;
@@ -1507,650 +1496,186 @@
 
 
 
-
-
-
-
-
-/*sidebar*/
-
-
-#sidebar {
-    flex-grow: 1;
-    flex-shrink: 1;
-
-    border-radius: 0px;
-    outline-width: 1px 0px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-#sidebarMenu {
-    display: inline-flex;
-    flex-direction: row;
-    width: 100%;
-
-    border: 1px solid #00dcff;
-    border-width: 1px 1px;
-    border-radius: 3px;
-
-    margin-bottom: 20px;
-}
-
-        #solveMenu, #developMenu {
-            flex: 1 1 auto;
-            text-align: center;
-
-            border: 1px solid #00dcff;
-            border-width: 0px 1px 0px 0px;
-
-            display: flex;
-            flex-direction: column;
-            justify-conent: center;
-            width: 100%;
-
-        }
-
-        #developMenu {
-            border-width: 0px 0px 0px 1px;
-        }
-
-                #solveTitle, #developTitle {
-                    flex: 1 1 auto;
-                    color: #00dcff;
-
-                    border: 1px solid #00dcff;
-                    border-width: 0px 0px 1px 0px;
-                    font-size: 80%;
-                    padding: 3px 5px 3px 10px;
-                    margin: 0px 0px;
-                    letter-spacing: 12px;
-                }
-
-
-
-
-                        #solutionsButton, #subproblemButton, #commentsButton, #suggestionsButton {
-                            flex: 1 1 auto;
-
-
-                            color: #00ffdc;
-/*                          font-family: 'Alegreya Sans SC', sans-serif;*/
-                            font-size: 130%;
-/*                          font-weight: 100;*/
-                            border: 1px solid #00ffdc;
-                            border-width: 1px 1px;
-                            border-radius: 3px;
-                            text-align: center;
-                            text-decoration: none;
-
-/*                          -webkit-transition-duration: 0s;
-                            transition-duration: 0s;*/
-/*                          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
-
-/*                          letter-spacing: 16px;*/
-
-                            margin: 6px 20px;
-                        }
-
-                                #solutionsButton:hover {
-                                    background-color: #193338;
-                                    color: #00ffdc;
-/*                                  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);*/
-                                    cursor: pointer;
-
-/*                                  border: 1px solid #00ffdc;
-                                    border-width: 1px 1px;*/
-                                }
-
-                                #solutionsButton {
-                                    background-color: #00ffdc;
-                                    color: #0f131c;
-                                }
-
-                                #solutionsButton a {
-                                    text-decoration: none !important;
-                                }
-
-
-
-
-
-
-
-        #solutionUnit {
-
-            padding: 5px;
-            padding-left: 0px;
-            margin: 2px;
-            margin-left: 0px;
-
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-
-            border: 2px solid #00dcff;
-            border-width: 0px 0px 1px 0px;
-            border-radius: 0px;
-            margin: 0px 0px 10px 0px;
-            padding: 10px;
-            padding-left: 3px;
-            padding-bottom: 0px;
-
-            text-decoration: none;
-        }
-
-        #solutionUnit:hover .percent {
-            color: #00ffdc;
-            cursor: pointer;
-        }
-
-
-                .solutionTitle {
-                    background-color: red;
-                    color: red;
-                }
-
-                        .percent {
-                            float: left;
-                            width: 20%;
-                            color: #00dcff;
-                            font-size: 200%;
-                            padding: 0px 0px 0px 0px;
-                            margin: 0px 0px 0px 0px;
-                            height: auto;
-                            text-align: left;
-
-                            color: #00dcff;
-                            font-family: 'Raleway', sans-serif;
-
-                            text-align: center;
-
-
-                        }
-
-                        .title {
-                            float: left;
-                            text-align: left;
-                            padding: 0px;
-                            margin: 0px;
-                            font-size: 110%;
-                            font-weight: 300;
-                            color: #dddddd;
-                            margin-bottom: 0px;
-                            margin-left: 0px;
-
-                            width: 66%;
-
-                            letter-spacing: 1px;
-                        }
-
-        /*solutionTitle doesn't work at all, otherwise text would be red*/
-
-                #solutionSummaryLabel {
-                    font-size: 120%;
-                    text-align: center;}
-
-                .solutionSummary {
-                    clear: left;
-                    border: 1px solid #dddddd;
-                    border-width: 0px 0px 0px 0px;
-                    text-align: justify;
-                    padding: 8px 2px;
-                    margin-bottom: 0px;
-                    margin-top: 0px;
-
-                }
-
-
-                .solutionDescription {
-                    font-weight: 100px;
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Other elements of page*/
-
-
-
-/*Popup Boxes*/
-
-
-        * {
-            z-index: -1;
-        }
-
-
-        #popupBox {
-
-            position: fixed;
-/*          width: 40%;*/
-            background-color: #0f131c;
-            border: 1px solid #00ffdc;
-            border-width: 2px 0px;
-
-            letter-spacing: .15em;
-            font-size: 100%;
-            text-align: center;
-
-            margin-top: 190px;
-            padding: 5px 0px 5px 13px;
-            margin-right: 500px;
-
-            z-index: 3;
-
-            color: #dddddd;
-
-            opacity: none;
-
-        }
-
-                #popupBox h1 {
-                    padding: 0px 0px 0px 0px;
-                    margin: 0px 0px 0px 0px;
-
-                }
-
-
-                #spHeader {
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-
-                    display: -webkit-box;
-                    display: -moz-box;
-                    display: -ms-flexbox;
-                    display: -webkit-flex;
-
-                    display: inline-flex;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    align-content: space-between;
-
-                    width: 100%;
-                }
-
-
-
-/*END OF PROBLEM PAGE*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*CREATE SOLUTION*/
-
-
-
-                #createBanner {
-                	position: absolute;
-                	width: 100%;
-                	background-color: #0f131c;
-                	border: 1px solid #00dcff;
-                	border-width: 1px 0px;
-
-                	letter-spacing: .15em;
-                	font-size: 200%;
-                	text-align: center;
-
-                	margin-top: 30px;
-
-                	padding: 5px 0px 5px 13px;
-                }
-
-                #createBanner h1 {
-                	padding: 0px 0px 0px 0px;
-                	margin: 0px 0px 0px 0px;
-                }
-
-
-
-
-
-
-
-
-                #createForm {
-                background-color: #0f131c;
-                color: #00dcff;
-
-                position: absolute;
-                width: 50%;
-                height: auto;
-                top: 50%;
-                left: 50%;
-                margin-left: -315px;
-                margin-top: -190px;
-
-                border: 2px solid #00dcff;
-                border-width: 0px 0px 1px 0px;
-                border-radius: 1px;
-                padding: 10px 10px 10px 10px;
-
-                z-index: 2;
-
-                }
-
-
-
-
-
-
-
-
-                input, textarea {
-                	font-family: 'Alegreya Sans SC', sans-serif;
-                	font-size: 120%;
-                	color: #0f131c;
-                	text-align: center;
-
-                	border: 1px solid #00dcff;
-                	border-radius: 5px;
-                	padding: 3px 8px 3px 8px;
-
-                /*	background-repeat: no-repeat;
-                	background-position: 8px 9px;*/
-                	display: block;
-                	margin-bottom: 10px;
-
-                	margin-left: 50px;
-
-                	width: 80%;
-
-                }
-
-                #solutionSummaryForm {
-                	font-family: 'Alegreya Sans';
-                	text-align: left;
-
-                }
-
-                textarea {
-                	text-align: left;
-                	font-family: 'Alegreya Sans', sans-serif;
-                	font-weight: 300;
-                }
-
-
-
-                input:focus, input:hover {
-                	background-color: #ffffff;
-                /*	border: 1px solid #ff0000;*/
-                }
-
-                input#submit {
-                	color: #0f131c;
-                /*	text-shadow: 0px 1px 1px #ffffff;*/
-                	border: 1px solid #0f131c;
-                	background-color: #00dcff;
-                	/*background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
-                	background: -moz-linear-gradient(top, #ff0000, #ff4000);
-                	background: -o-linear-gradient(top, #ff0000, #ff4000);
-                	background: -ms-linear-gradient(top, #ff0000, #ff4000);*/
-
-                	-webkit-transition-duration: 0s;
-                	transition-duration: 0s;
-
-                	margin-left: 85px;
-                }
-
-                input#submit:hover {
-                	color: #00dcff;
-                	border: 1px solid #00dcff;
-                /*	border-top: 2px solid #b2b2b2;*/
-                	background-color: #0f131c;
-                	/*background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
-                	background: -moz-linear-gradient(top, #ff0000, #ff4000);
-                	background: -o-linear-gradient(top, #ff0000, #ff4000);
-                	background: -ms-linear-gradient(top, #ff0000, #ff4000);*/
-
-                	cursor: pointer;
-                }
-
-
-                label {
-                	font-weight: 100;
-                }
-
-/*END OF CREATE SOLUTION*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*LOGIN PAGE*/
-
-body {
-/*	background: url("day2.jpg") no-repeat center center fixed;
-	background-size: cover;*/
-	color: #ff0000;
-	font-family: 'Alegreya Sans SC', Arial, sans-serif;
-	/*border: 1px solid #ff0000;*/
-	/*width: 90%;*/
-	margin: 0 auto;
-	text-align: center;
-}
-
-body img {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: auto;
-	opacity: .9;
-	margin: 0px;
-	padding: 0px;
-
-	z-index: -1;
-}
-
-
-
-
-
-
-
-
-
-
-#logoBanner {
-	position: absolute;
-	width: 100%;
-	background-color: #ffffff;
-	border: 1px solid #ff0000;
-	border-width: 2px 0px;
-
-	letter-spacing: .15em;
-	font-size: 200%;
-	text-align: center;
-
-	margin-top: 190px;
-
-	padding: 5px 0px 5px 13px;
-
-}
-
-#logoBanner h1 {
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
-}
-
-
-
-
-
-
-
-
-
-
-
-#loginForm {
-background-color: rgba(255, 255, 255, 0.93);
-
-position: absolute;
-width: 270px;
-height: 100px;
-top: 50%;
-left: 50%;
-margin-left: -135px;
-margin-top: 0px;
-
-border: 2px solid #ff0000;
-border-width: 2px 0px 3px 0px;
-border-radius: 10px;
-padding: 20px 0px 55px 30px;
-
-z-index: 2;
-
-}
-
-
-
-
-
-#registerLearnmore {
-	position: absolute;
-
-	top: 50%;
-	left: 50%;
-	margin-left: -135px;
-	margin-top: 250px;
-
-}
-
-
-		#registerForm {
-
-		background-color: rgba(255, 255, 255, 0.93);
-
-		position: absolute;
-		width: 270px;
-		height: 100px;
-		top: 50%;
-		left: 50%;
-		margin-left: -135px;
-		margin-top: 0px;
-
-		border: 2px solid #ff0000;
-		border-width: 2px 0px 3px 0px;
-		border-radius: 10px;
-		padding: 20px 0px 55px 30px;
-
-		z-index: 2;
-
-		}
-
-
-				input {
-					font-family: 'Alegreya Sans SC', sans-serif;
-					font-size: 120%;
-					color: #515151;
-					text-align: center;
-
-
-					border: 1px solid #ff0000;
-					border-radius: 5px;
-					padding: 3px 8px 3px 8px;
-
-				/*	background-repeat: no-repeat;
-					background-position: 8px 9px;*/
-					display: block;
-					margin-bottom: 10px;
-				}
-
-						input:focus, input:hover {
-							background-color: #ffffff;
-							border: 1px solid #ff0000;
-						}
-
-				input#submit {
-					color: #ffffff;
-					text-shadow: 0px 1px 1px #ffffff;
-					border-bottom: 1px solid #dddddd;
-					background-color: #ffffff;
-					background: -webkit-gradient(linear, left top, left bottom, from(#beeae9), to(#a8cfce));
-					background: -moz-linear-gradient(top, #ff0000, #ff4000);
-					background: -o-linear-gradient(top, #ff0000, #ff4000);
-					background: -ms-linear-gradient(top, #ff0000, #ff4000);
-
-					-webkit-transition-duration: 0.1s;
-					transition-duration: 0.1s;
-
-					margin-left: 85px;
-				}
-
-						input#submit:hover {
-							color: #ff0000;
-							border: 1px solid #a4a4a4;
-							border-top: 2px solid #b2b2b2;
-							background-color: #ffffff;
-							background: -webkit-gradient(linear, left top, left bottom, from(#a8cfce), to(#beeae9));
-							background: -moz-linear-gradient(top, #ff0000, #ff4000);
-							background: -o-linear-gradient(top, #ff0000, #ff4000);
-							background: -ms-linear-gradient(top, #ff0000, #ff4000);
-
-							cursor: pointer;
-						}
-  /*END OF LOGIN*/
+/*Overall Layout*/
+
+
+
+/*SideBar*/
+
+    #sidebar {
+    	flex-grow: 1;
+    	flex-shrink: 1;
+    	border-radius: 0px;
+    	border-width: 0px 0px;
+    }
+    #sidebarMenu {
+    	display: inline-flex;
+    	flex-direction: row;
+    	width: 100%;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px 1px 1px;
+    	border-radius: 3px;
+    	margin-bottom: 10px;
+    }
+    #solveMenu, #developMenu {
+    	flex: 1 1 auto;
+    	text-align: center;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px 0px 0px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-conent: center;
+    	width: 100%;
+    }
+    #developMenu {
+    	border-width: 0px 0px 0px 1px;
+    }
+    #solveTitle, #developTitle {
+    	flex: 1 1 auto;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	font-size: 80%;
+    	padding: 3px 5px 3px 10px;
+    	margin: 0px 0px;
+    	letter-spacing: 12px;
+    }
+    #solutionsButton, #subproblemButton,
+    #questionsButton, #suggestionsButton {
+    	flex: 1 1 auto;
+    	color: #00ffdc;
+    	font-size: 130%;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 6px 20px;
+    }
+    #solutionsButton:hover, #subproblemButton:hover,
+    #questionsButton:hover, #suggestionsButton:hover {
+    	background-color: #00ffdc;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #createButton {
+    	background-color: #0f131c;
+    	color: #00dcff;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 150%;
+    	font-weight: 100;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	width: 100%;
+    	margin: 0px;
+    	padding: 0px;
+    	-webkit-transition-duration: 0s;
+    	transition-duration: 0s;
+    	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    	letter-spacing: 16px;
+    }
+    #createButton:hover {
+    	background-color: #00dcff;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #sidebarElements {
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+    }
+    #solutionUnit {
+    	padding: 5px;
+    	padding-left: 0px;
+    	margin: 2px;
+    	margin-left: 0px;
+    	padding-bottom: 0px;
+    	margin-bottom: 0px;
+    	border: 2px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	border-radius: 0px;
+    	margin: 0px 0px 10px 0px;
+    	padding: 10px;
+    	padding-left: 3px;
+    	padding-bottom: 0px;
+    	text-decoration: none;
+    }
+    #solutionUnit:hover #percent {
+    	color: #00ffdc;
+    	cursor: pointer;
+    }
+    #solutionTitle {
+    	background-color: red;
+    	color: red;
+    }
+    #percent {
+    	float: left;
+    	width: 20%;
+    	color: #00dcff;
+    	font-size: 200%;
+    	padding: 0px 0px 0px 0px;
+    	margin: 0px 0px 0px 0px;
+    	height: auto;
+    	text-align: left;
+    	color: #00dcff;
+    	font-family: 'Raleway', sans-serif;
+    	text-align: center;
+    }
+    #solutionUnitTitle {
+    	float: left;
+    	text-align: left;
+    	padding: 0px;
+    	margin: 0px;
+    	font-size: 140%;
+    	color: #dddddd;
+    	margin-bottom: 0px;
+    	margin-left: 0px;
+    	width: 66%;
+    	letter-spacing: 1px;
+    }
+    #solutionSummaryLabel {
+    	font-size: 120%;
+    	text-align: center;
+    }
+    #solutionSummary {
+    	clear: left;
+    	border: 1px solid #dddddd;
+    	border-width: 0px 0px 0px 0px;
+    	text-align: justify;
+    	padding: 8px 2px;
+    	margin-bottom: 0px;
+    	margin-top: 0px;
+    }
+    #solutionDescription {
+    	font-weight: 100px;
+    }
+
+/*End SideBar*/
+
+
+
+/*MoreButton*/
+
+    #moreButton {
+    	margin: auto;
+    	text-align: center;
+    	font-size: 130%;
+    	padding: 5px;
+    	color: #00ffdc;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px 1px 1px;
+    	border-radius: 3px;
+    }
+    #moreButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    }
+
+/*More Sidebar*/
 
 
 
