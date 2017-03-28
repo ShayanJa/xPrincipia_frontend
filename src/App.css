@@ -803,6 +803,192 @@
 
 
 
+/*Profile*/
+
+    #profileBox {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	overflow: auto;
+    	display: inline-flex;
+    	align-items: stretch;
+    	flex-direction: row;
+    	margin: 5% 15% 0% 15%;
+    	border: 1px solid #00dcff;
+    }
+    #profileLeft, #profileRight {
+    	color: #dddddd;
+    	padding: 0px 10px 0px 10px;
+    	overflow: scroll !important;
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	width: 60%;
+    	margin: 0;
+    }
+    #profileLeft {
+    	width: 40%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px 0px 0px;
+    }
+    #avatar {
+    	padding: 10px;
+    	text-align: center;
+    	border-radius: 50%;
+    	display: block;
+    	margin: 0px auto;
+    }
+    #userNameEmail {
+    	outline: 1px solid #131b2b;
+    	outline-width: 0px 1px;
+    	padding: 5px;
+    }
+    #userName {
+    	font-size: 200%;
+    	text-align: center;
+    	line-height: 100%;
+    	margin: 10px;
+    	padding: 0px;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    #userEmail {
+    	font-size: 125%;
+    	text-align: center;
+    	line-height: 100%;
+    	margin: 0px;
+    	padding: 0px;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    #userOptions {
+    }
+    #userProblemsSolutionsButton, #notificationsButton,
+    #userSettingsButton, #aboutXPButton, #logOutButton {
+    	background-color: #0f131c;
+    	color: #00dcff;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 100%;
+    	font-weight: 100;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 5px 0px;
+    	letter-spacing: 1px;
+    }
+    #userProblemsSolutionsButton:hover, #notificationsButton:hover,
+    #userSettingsButton:hover, #aboutXPButton:hover, #logOutButton:hover {
+    	background-color: #00dcff;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #userProblemsSolutionsButton {
+    	background-color: #00dcff;
+    	color: #0f131c;
+    }
+    #xp {
+    	text-align: center;
+    }
+    #profileSidebarMenu {
+    	display: inline-flex;
+    	flex-direction: row;
+    	width: 100%;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	margin-bottom: 0px;
+    }
+    #profileProblemsMenu, #profileSolutionsMenu {
+    	flex: 1 1 auto;
+    	text-align: center;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px 0px 0px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-conent: center;
+    	width: 100%;
+    	padding-bottom: 3px;
+    }
+    #developMenu {
+    	border-width: 0px 0px 0px 1px;
+    }
+    #solveTitle, #developTitle {
+    	flex: 1 1 auto;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	font-size: 80%;
+    	padding: 3px 5px 3px 10px;
+    	margin: 0px 0px;
+    	letter-spacing: 4px;
+    }
+    #followedProblemsButton, #createdProblemsButton, #votedSolutionsButton, #createdSolutionsButton {
+    	flex: 1 1 auto;
+    	color: #00ffdc;
+    	font-size: 90%;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 3px 10px 0px 10px;
+    }
+
+    #followedProblemsButton:hover, #createdProblemsButton:hover,
+    #votedSolutionsButton:hover, #createdSolutionsButton:hover {
+    	background-color: #00ffdc;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #createdSolutionsButton {
+    	background-color: #00ffdc;
+    	color: #0f131c;
+    }
+    #profileRightElements {
+    	margin: 2px 15px 0px 5px;
+    	padding: 5px;
+    }
+    #profileRightUnit {
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    	padding: 2px;
+    }
+    #unitTitle {
+    	margin: 0px;
+    	padding: 2px 5px 2px 5px;
+    	font-size: 100%;
+    	color: #00dcff;
+    	line-height: 95%;
+    }
+    #unitSummary {
+    	font-family: 'Alegreya Sans', sans-serf;
+    	padding: 0px 5px 5px 5px;
+    	font-size: 80%;
+    	margin: 0px;
+    	text-align: justify;
+    }
+    #moreButton {
+    	margin: auto;
+    	text-align: center;
+    	margin-left: 0px;
+    	margin-right: 0px;
+
+    	font-size: 100%;
+    	padding: 5px 0px 5px 0px;
+    	color: #00ffdc;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px 0px 1px;
+    }
+    #moreButton:hover {
+    	color: #0f131c;
+    	background-color: #00ffdc;
+    }
+
+
+/*End Profile*/
+
+
+
 /*Question*/
 
     #sidebarElements {
