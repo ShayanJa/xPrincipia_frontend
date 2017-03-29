@@ -10,7 +10,7 @@ export default class Main extends React.Component {
    render() {
       return (
         <div id="main">
-          <FullSolution />
+          <CreatedSolution />
           <SideBar />
           {this.props.children}
         </div>
