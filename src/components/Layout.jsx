@@ -12,7 +12,6 @@ export default class Layout extends React.Component {
         <div>
           <Header />
           <Main />
-          {this.props.children}
         </div>
       );
    }

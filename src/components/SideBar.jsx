@@ -8,6 +8,7 @@ import SuggestionContainer from './SuggestionContainer.jsx';
 import QuestionContainer from './QuestionContainer.jsx';
 import SideBarMenu from './SideBarMenu.jsx';
 import SideBarMore from './SideBarMore.jsx';
+import AnswerContainer from './AnswerContainer';
 
 
 export default class SideBar extends React.Component {
@@ -15,7 +16,7 @@ export default class SideBar extends React.Component {
       return (
           <div>
           <SideBarMenu />
-          <CreateProblem />
+          <AnswerContainer />
           <SideBarMore />
           {this.props.children}
           </div>
