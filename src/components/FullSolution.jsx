@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Problem extends React.Component {
+export default class FullSolution extends React.Component {
    render() {
       return (
 

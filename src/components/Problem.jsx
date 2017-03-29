@@ -9,7 +9,7 @@ export default class Problem extends React.Component {
   <div id="problem">
 
     <div id="problemHeader">
-      <button id="parentButton">Parent</button>
+      <div id="parentButton">Parent</div>
       <h1 id="elementLabel">Problem</h1>
     </div>
 

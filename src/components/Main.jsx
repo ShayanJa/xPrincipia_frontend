@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Problem from './Problem.jsx';
+import FullSolution from './FullSolution.jsx';
 import CreatedSolution from './CreatedSolution.jsx';
 import SideBar from './SideBar.jsx';
-import Main from './Main.jsx';
 
-export default class Layout extends React.Component {
+export default class Main extends React.Component {
    render() {
       return (
-        <div>
-          <Header />
-          <Main />
+        <div id="main">
+          <FullSolution />
+          <SideBar />
           {this.props.children}
         </div>
       );
