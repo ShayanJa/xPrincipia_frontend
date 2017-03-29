@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SolutionUnit from './SolutionUnit.jsx';
+import SideBarMore from './SideBarMore.jsx';
 
 export default class SolutionContainer extends React.Component {
    render() {
@@ -13,6 +14,7 @@ export default class SolutionContainer extends React.Component {
           <SolutionUnit />
           <SolutionUnit />
           <SolutionUnit />
+          <SideBarMore />
         </div>
       );
    }

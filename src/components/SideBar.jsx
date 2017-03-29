@@ -16,8 +16,7 @@ export default class SideBar extends React.Component {
       return (
           <div>
           <SideBarMenu />
-          <SolutionContainer />
-          <SideBarMore />
+          <AnswerContainer />
           {this.props.children}
           </div>
       );

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SubProblemUnit from './SubProblemUnit.jsx';
+import SideBarMore from './SideBarMore.jsx';
 
 export default class SubProblemContainer extends React.Component {
    render() {
@@ -12,6 +13,7 @@ export default class SubProblemContainer extends React.Component {
           <SubProblemUnit />
           <SubProblemUnit />
           <SubProblemUnit />
+          <SideBarMore />
         </div>
       );
    }

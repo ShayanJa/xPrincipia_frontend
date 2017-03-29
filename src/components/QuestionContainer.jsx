@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import QuestionUnit from './QuestionUnit.jsx';
 import QuestionForm from './QuestionForm.jsx';
+import SideBarMore from './SideBarMore.jsx';
 
 export default class QuestionContainer extends React.Component {
    render() {
@@ -13,6 +14,7 @@ export default class QuestionContainer extends React.Component {
             <QuestionUnit />
             <QuestionUnit />
             <QuestionUnit />
+            <SideBarMore />
         </div>
       );
    }

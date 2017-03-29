@@ -33,7 +33,7 @@ export default class CreateSolution extends React.Component {
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
                           </textarea></label><br />
 
-                      <input type="submit" value="Create" id="submit"/>
+                      <input type="submit" value="Create" id="submitSolution"/>
             </fieldset>
           </form>
       </div>

@@ -235,7 +235,6 @@
     #createForm {
       background-color: #0f131c;
       color: #00dcff;
-      width: 50%;
       height: auto;
       border: 2px solid #00dcff;
       border-width: 0px 0px 1px 0px;
@@ -258,7 +257,7 @@
      	width: 82%;
       resize: none;
     }
-    #problemSubjectForm, #problemSummaryForm, #problemDescriptionForm, #problemRequirementsForm, #problemReferencesForm {
+    #problemSummaryForm, #problemDescriptionForm, #problemRequirementsForm, #problemReferencesForm {
     	font-family: 'Alegreya Sans';
     	text-align: left;
     	height: 5em;
@@ -278,18 +277,18 @@
     textarea:focus {
     	border-color: #00dcff;
     }
-    input#submit {
+    input#submitProblem {
     	display: block;
-    	color: #0f131c;
-    	border: 1px solid #0f131c;
-    	background-color: #00dcff;
-    	width: 85%;
-    	margin-left: 7%;
-    }
-    input#submit:hover {
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
+    	width: 85%;
+    	margin-left: 7%;
+    }
+    input#submitProblem:hover {
+    	color: #0f131c;
+    	border: 1px solid #0f131c;
+    	background-color: #00dcff;
     	cursor: pointer;
     }
     label {
@@ -310,7 +309,6 @@
     #createForm {
       background-color: #0f131c;
       color: #00dcff;
-      width: 50%;
       height: auto;
       border: 2px solid #00dcff;
       border-width: 0px 0px 1px 0px;
@@ -356,18 +354,18 @@
     textarea:focus {
     	border-color: #00dcff;
     }
-    input#submit {
+    input#submitSolution {
     	display: block;
-    	color: #0f131c;
-    	border: 1px solid #0f131c;
-    	background-color: #00dcff;
-    	width: 85%;
-    	margin-left: 7%;
-    }
-    input#submit:hover {
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
+    	width: 85%;
+    	margin-left: 7%;
+    }
+    input#submitSolution:hover {
+    	color: #0f131c;
+    	border: 1px solid #0f131c;
+    	background-color: #00dcff;
     	cursor: pointer;
     }
     label {

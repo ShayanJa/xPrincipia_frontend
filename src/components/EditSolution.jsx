@@ -6,7 +6,7 @@ export default class EditSolution extends React.Component {
       return (
 
       <div id="editSolutionBox">
-          <form action="http://www.xprincipia.com/develop.php" method="post" id="editForm">
+          <form action="http://www.xprincipia.com/edit.php" method="post" id="editForm">
             <fieldset>
                 <legend>Solution</legend>
                       <label for="solutionTitle">Title<br />
@@ -33,7 +33,7 @@ export default class EditSolution extends React.Component {
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
                           </textarea></label><br />
 
-                      <input type="submit" value="Develop" id="submit"/>
+                      <input type="submit" value="Resubmit" id="submitSolution"/>
             </fieldset>
           </form>
       </div>

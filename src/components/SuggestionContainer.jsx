@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SuggestionUnit from './SuggestionUnit.jsx';
 import SuggestionForm from './SuggestionForm.jsx';
+import SideBarMore from './SideBarMore.jsx';
 
 export default class SuggestionContainer extends React.Component {
    render() {
@@ -13,6 +14,7 @@ export default class SuggestionContainer extends React.Component {
             <SuggestionUnit />
             <SuggestionUnit />
             <SuggestionUnit />
+            <SideBarMore />
         </div>
       );
    }
