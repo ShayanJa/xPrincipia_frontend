@@ -4,7 +4,7 @@ import { Router, Route, Link, hashHistory, IndexRoute  } from 'react-router';
 import './assets/App.css';
 import './assets/index.css';
 import Header from './components/Header.jsx';
-import Problem from './components/Problem.jsx';
+import FullProblem from './components/FullProblem.jsx';
 import SideBar from './components/SideBar.jsx';
 import CreateSolution from './components/CreateSolution.jsx';
 import SolutionContainer from './components/SolutionContainer.jsx';

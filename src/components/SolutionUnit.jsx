@@ -10,7 +10,7 @@ export default class SolutionUnit extends React.Component {
 	            <span class="percent">70%</span>
 	            <span class="title">Tryptophan Focused Orchestrated Objective Reduction</span>
 	        </div>
-	            <p class="solutionSummary">
+	            <p class="solutionUnitSummary">
 	               Based on Orch OR model. Quantum computation occurs between entangled
 								 states in Tryptophan. Model offers experimentation with this in mind.
 	            </p>

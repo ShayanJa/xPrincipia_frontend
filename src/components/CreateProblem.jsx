@@ -9,7 +9,11 @@ export default class CreateProblem extends React.Component {
               <fieldset>
                   <legend>Problem</legend>
                         <label for="problemTitle">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxlength="140" autofocus/>
+                            <input type="text" name="problemTitle" required="required" maxlength="140" id="problemTitleForm" autofocus/>
+                          </label><br />
+
+                        <label for="problemSubject">Subject<br />
+                            <input type="text" name="problemSubject" required="required" maxlength="50" placeholder="Identify the primary subject of the problem." id="problemSubjectForm"/>
                           </label><br />
 
                         <label for="problemSummary">Summary<br />
@@ -17,7 +21,7 @@ export default class CreateProblem extends React.Component {
                           </label><br />
 
                         <label for="problemDescription">Description<br />
-                            <textarea name="problemDescription" required="required" placeholder="Describe in detail here." id="problemDescriptionForm">
+                            <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
                             </textarea></label><br />
 
                         <label for="problemRequirements">Requirements<br />
