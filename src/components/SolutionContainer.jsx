@@ -6,6 +6,7 @@ export default class SolutionContainer extends React.Component {
    render() {
       return (
         <div id="solutions">
+          <div id="createButton">Create</div>
           <h1 id="solutionsLabel">Top Solutions</h1>
           <SolutionUnit />
           <SolutionUnit />
