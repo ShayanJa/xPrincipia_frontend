@@ -37,12 +37,12 @@ export default class Profile extends React.Component {
             </div>
             <div id="profileRightElements">
                 <div id="profileRightUnit">
-                    <p id="unitTitle">
+                    <div id="profileUnitTitle">
                         Global workspace model contrasting natural selection and higher consciousness
-                    </p>
-                    <p id="unitSummary">
+                    </div>
+                    <div id="unitSummary">
                         Conscious cognitive content is locally available for diverse cognitive processes including attention, evaluation, memory, and verbal report.
-                    </p>
+                    </div>
                 </div>
             </div>
             <a href="moreElementsHere"><div id="moreButton">
