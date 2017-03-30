@@ -63,7 +63,7 @@ export default class CreateSolution extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset>
-                <legend>Solution</legend>
+                <legend>Create: Solution</legend>
                       <label htmlFor="solutionTitle">Title<br />
                           <input type="text" name="solutionTitle" required="required" maxLength="140" autofocus/>
                         </label><br />

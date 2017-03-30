@@ -58,7 +58,7 @@ export default class CreateProblem extends React.Component {
         <div id="createProblemBox">
             <form id="createForm">
               <fieldset>
-                  <legend>Problem</legend>
+                  <legend>Create:Problem</legend>
                         <label htmlFor="problemTitle">Title<br />
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autofocus/>
                           </label><br />
