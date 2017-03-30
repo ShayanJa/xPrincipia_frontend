@@ -955,13 +955,13 @@
     	border-width: 1px 0px 0px 0px;
     	padding: 2px;
     }
-    #unitTitle {
+    #profileUnitTitle {
       display: block;
       margin: 0px;
-    	padding: 2px 5px 2px 5px;
-    	font-size: 100%;
-    	color: #00dcff;
-    	line-height: 95%;
+      padding: 2px 5px 2px 5px;
+      font-size: 100%;
+      color: #00dcff;
+      line-height: 95%;
       height: auto;
     }
     #unitSummary {
@@ -1358,7 +1358,6 @@
 }
 #percent {
   float: left;
-  width: 20%;
   color: #00dcff;
   font-size: 200%;
   padding: 0px 0px 0px 0px;
@@ -1369,6 +1368,15 @@
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
+#unitTitle {
+  display: block;
+  margin: 0px;
+  padding: 2px 5px 2px 5px;
+  font-size: 130%;
+  color: #00dcff;
+  line-height: 120%;
+  height: auto;
+}
 #subProblemTitle, #solutionUnitTitle {
   dispaly: inline-block;
   text-align: left;
@@ -1377,7 +1385,6 @@
   color: #dddddd;
   margin-bottom: 0px;
   margin-left: 0px;
-  width: 66%;
   letter-spacing: 1px;
 }
 #subProblemSummary, #solutionUnitSummary {
@@ -1755,16 +1762,13 @@
       cursor: pointer;
     }
     #sideBarMore {
-      margin: auto;
       text-align: center;
-
       font-size: 100%;
       padding: 5px;
       color: #00ffdc;
       border: 1px solid #00dcff;
       border-width: 1px 1px 1px 1px;
       border-radius: 3px;
-      margin-left: 8%;
     }
     #sideBarMore:hover {
       color: #0f131c;
