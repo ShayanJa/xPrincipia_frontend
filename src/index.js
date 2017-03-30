@@ -12,11 +12,13 @@ import QuestionContainer from './components/QuestionContainer.jsx';
 import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
 import FullProblem from './components/FullProblem.jsx';
+import Login from './components/Login.jsx'
 import './assets/index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
+    <Route path='/login' component={Login}></Route>
       <IndexRoute component={Layout}></IndexRoute>
       <Route path='/home' component={Layout}>
         <IndexRoute component={FullProblem}></IndexRoute>
