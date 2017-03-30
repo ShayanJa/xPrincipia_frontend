@@ -8,7 +8,7 @@ export default class SubProblemContainer extends React.Component {
    render() {
       return (
         <div>
-          <Link to="/home/problem/sidebar/createproblem"><div id="createButton">Create</div></Link>
+          <Link to="createproblem"><div id="createButton">Create</div></Link>
           <SubProblemUnit />
           <SubProblemUnit />
           <SubProblemUnit />

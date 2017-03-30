@@ -18,18 +18,18 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Layout}></IndexRoute>
-      <Route path='home' component={Layout}>
+      <Route path='/home' component={Layout}>
         <IndexRoute component={FullProblem}></IndexRoute>
-        <Route path='problem' component={FullProblem}>
+        <Route path='/problem' component={FullProblem}>
           <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='sidebar' component={SideBar}>
+          <Route path='/sidebar' component={SideBar}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='solutions' component={SolutionContainer}></Route>
-            <Route path='suggestions' component={SuggestionContainer}></Route>
-            <Route path='questions' component={QuestionContainer}></Route>
-            <Route path='subproblems' component={SubProblemContainer}></Route>
-            <Route path='createsolution' component={CreateSolution}></Route>
-            <Route path='createproblem' component={CreateProblem}></Route>
+            <Route path='/solutions' component={SolutionContainer}></Route>
+            <Route path='/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/questions' component={QuestionContainer}></Route>
+            <Route path='/subproblems' component={SubProblemContainer}></Route>
+            <Route path='/createsolution' component={CreateSolution}></Route>
+            <Route path='/createproblem' component={CreateProblem}></Route>
           </Route>
         </Route>
       </Route>
