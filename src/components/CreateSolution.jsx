@@ -27,7 +27,7 @@ export default class CreateSolution extends React.Component {
     this.state.description = document.getElementById('solutionDescriptionForm').value
     this.state.evidence = document.getElementById('solutionEvidenceForm').value
     this.state.experiments = document.getElementById('solutionExperimentsForm').value
-    // this.state.references = document.getElementById('solutionReferencesForm').value
+    this.state.references = document.getElementById('solutionReferencesForm').value
 
   //Ajax post solution request
   $.ajax({

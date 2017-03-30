@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, hashHistory, IndexRoute  } from 'react-router';
+import { Router, Route, Link, hashHistory, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 import SideBar from './components/SideBar';
 import Layout from './components/Layout.jsx';
@@ -15,7 +15,7 @@ import FullProblem from './components/FullProblem.jsx';
 import './assets/index.css';
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={browserHistory}>
     <Route path='/' component={App}>
       <IndexRoute component={Layout}></IndexRoute>
       <Route path='home' component={Layout}>
