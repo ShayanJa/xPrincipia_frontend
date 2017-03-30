@@ -2,33 +2,84 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class CreateProblem extends React.Component {
-   render() {
+
+  constructor(){
+    super();
+
+    this.state= {
+      title: '',
+      summary: '',
+      description: '',
+      requirements: '',
+      references: ''
+    }
+
+    this.postSolution = this.postSolution.bind(this);
+  };
+
+  postSolution() {
+    //Read field items into component state
+    this.state.title = document.getElementById('problemTitle').value
+    this.state.summary = document.getElementById('problemSummary').value
+    this.state.description = document.getElementById('problemDescriptionForm').value
+    this.state.requirements = document.getElementById('problemRequirementsForm').value
+    this.state.references = document.getElementById('problemReferencesForm').value
+
+  //Ajax post solution request
+  // $.ajax({
+  //   crossDomain: 'true',
+  //   type: 'POST',
+  //   headers: {'Content-Type' : 'application/json'},
+  //   url: 'http://localhost:10000/solutions/create',
+  //   processData: false,
+  //   data: JSON.stringify({
+  //     'title' : this.state.title,
+  //     'summary' : this.state.summary,
+  //     'description' : this.state.description,
+  //     'requirements' : this.state.requirements,
+  //     'references' : this.state.references
+  //   }),
+  //   success: function(result){
+  //     console.log(result)
+  //
+  //     alert('Your solution has been posted.')
+  //   },
+  //   error: function(result){
+  //     console.log(result)
+  //
+  //     alert('There was an error.')
+  //   },
+  //
+  //   });
+  }
+
+  render() {
       return (
         <div id="createProblemBox">
-            <form action="http://www.xprincipia.com/create.php" method="post" id="createForm">
+            <form id="createForm">
               <fieldset>
                   <legend>Problem</legend>
-                        <label for="problemTitle">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxlength="140" id="problemTitleForm" autofocus/>
+                        <label htmlFor="problemTitle">Title<br />
+                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autofocus/>
                           </label><br />
 
-                        <label for="problemSubject">Subject<br />
-                            <input type="text" name="problemSubject" required="required" maxlength="50" placeholder="Identify the primary subject of the problem." id="problemSubjectForm"/>
+                        <label htmlFor="problemSubject">Subject<br />
+                            <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Identify the primary subject of the problem." id="problemSubjectForm"/>
                           </label><br />
 
-                        <label for="problemSummary">Summary<br />
-                            <textarea name="problemSummary" required="required" maxlength="250" placeholder="Summarize in 140 characters here." id="problemSummaryForm"/>
+                        <label htmlFor="problemSummary">Summary<br />
+                            <textarea name="problemSummary" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="problemSummaryForm"/>
                           </label><br />
 
-                        <label for="problemDescription">Description<br />
+                        <label htmlFor="problemDescription">Description<br />
                             <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
                             </textarea></label><br />
 
-                        <label for="problemRequirements">Requirements<br />
+                        <label htmlFor="problemRequirements">Requirements<br />
                             <textarea name="problemRequirements" placeholder="List requirements that solutions need to fulfill. Please enter as a list with a space between each requirement. " id="problemRequirementsForm">
                             </textarea></label><br />
 
-                        <label for="problemReferences">References<br />
+                        <label htmlFor="problemReferences">References<br />
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 

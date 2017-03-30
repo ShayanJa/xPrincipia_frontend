@@ -6,13 +6,13 @@ export default class SubProblemUnit extends React.Component {
     return (
 
         <div id="subProblemUnit">
-            <div class="subProblemTitle">
-                <span class="percent">70%</span>
-                <span class="title">Arbitrary SubProblem</span>
+            <div id="subProblemTitle">
+                <div id="percent">70%</div>
+                <div id="unitTitle">Quantum Computation in the Microtubule Tryptophans</div>
             </div>
-                <p class="subProblemSummary">
+                <div id="subProblemSummary">
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dolor ante. Duis id pretium metus. Nunc suscipit in ipsum eu condimentum. Fusce nec egestas sapien, id mattis nisl. Curabitur venenatis dui lorem, a rutrum nibh sollicitudin id.
-                </p>
+                </div>
 
         </div>
       );

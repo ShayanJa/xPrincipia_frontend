@@ -14,7 +14,7 @@ export default class SideBarMenu extends React.Component {
       <div id="sidebarMenu">
         <div id="solveMenu">
                 <div id="solveTitle">Solve</div>
-                  <Link to='home/problem/sidebar/solutions'><div id="solutionsButton">Solutions</div></Link>
+                  <Link to='home/problem/sidebar/solutions'><div id="solutionsButton">Top Solutions</div></Link>
                   <Link to='home/problem/sidebar/subproblems'><div id="subproblemButton">Sub Problems</div></Link>
         </div>
         <div id="developMenu">

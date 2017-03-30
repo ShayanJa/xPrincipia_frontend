@@ -9,7 +9,7 @@
     	font-family: 'Alegreya Sans SC', sans-serif;
     	margin: 0 auto;
     	position: relative;
-    	background-color: #16161c;
+    	background-color: #0f131c;
     }
     h1 {
     	text-align: center;
@@ -460,7 +460,6 @@
     }
     #solutionTitle {
     	border-width: 0px;
-    	font-size: 260%;
     }
     #solutionSummary {
       margin: 5px 25px;
@@ -957,11 +956,13 @@
     	padding: 2px;
     }
     #unitTitle {
-    	margin: 0px;
+      display: block;
+      margin: 0px;
     	padding: 2px 5px 2px 5px;
     	font-size: 100%;
     	color: #00dcff;
     	line-height: 95%;
+      height: auto;
     }
     #unitSummary {
     	font-family: 'Alegreya Sans', sans-serf;
@@ -1330,9 +1331,9 @@
 
 
 
-/*SubProblemUnit*/
+/*SubProblemUnit and SolutionUnit*/
 
-#subProblemUnit {
+#subProblemUnit, #solutionUnit {
   padding: 5px;
   padding-left: 0px;
   margin: 2px;
@@ -1346,32 +1347,48 @@
   padding: 10px;
   padding-left: 3px;
   padding-bottom: 0px;
-  text-decoration: none;
 }
 #subProblemUnit:hover #percent {
   color: #00ffdc;
   cursor: pointer;
 }
-#subProblemTitle {
+#solutionUnit:hover #percent {
+  color: #00ffdc;
+  cursor: pointer;
+}
+#percent {
   float: left;
+  width: 20%;
+  color: #00dcff;
+  font-size: 200%;
+  padding: 0px 0px 0px 0px;
+  margin: 5px 10px 0px 5px;
+  height: auto;
+  text-align: left;
+  color: #00dcff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+#subProblemTitle, #solutionUnitTitle {
+  dispaly: inline-block;
   text-align: left;
   padding: 0px;
   margin: 0px;
-  font-size: 140%;
   color: #dddddd;
   margin-bottom: 0px;
   margin-left: 0px;
   width: 66%;
   letter-spacing: 1px;
 }
-#subProblemSummary {
-  clear: left;
+#subProblemSummary, #solutionUnitSummary {
+  clear: both;
   border: 1px solid #dddddd;
   border-width: 0px 0px 0px 0px;
   text-align: justify;
   padding: 8px 2px;
   margin-bottom: 0px;
   margin-top: 0px;
+  font-family: 'Alegreya Sans';
 }
 
 /*End SubProblemUnit*/
@@ -1714,63 +1731,6 @@
     	border-width: 0px 1px;
     	padding-left: 10px;
     	padding-right: 10px;
-    }
-    #solutionUnit {
-    	padding: 5px;
-    	padding-left: 0px;
-    	margin: 2px;
-    	margin-left: 0px;
-    	padding-bottom: 0px;
-    	margin-bottom: 0px;
-    	border: 2px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	border-radius: 0px;
-    	margin: 0px 0px 10px 0px;
-    	padding: 10px;
-    	padding-left: 3px;
-    	padding-bottom: 0px;
-    	text-decoration: none;
-    }
-    #solutionUnit:hover #percent {
-    	color: #00ffdc;
-    	cursor: pointer;
-    }
-    #percent {
-    	float: left;
-    	width: 20%;
-    	color: #00dcff;
-    	font-size: 200%;
-    	padding: 0px 0px 0px 0px;
-    	margin: 0px 0px 0px 0px;
-    	height: auto;
-    	text-align: left;
-    	color: #00dcff;
-    	font-family: 'Raleway', sans-serif;
-    	text-align: center;
-    }
-    #solutionUnitTitle {
-    	float: left;
-    	text-align: left;
-    	padding: 0px;
-    	margin: 0px;
-    	font-size: 140%;
-    	color: #dddddd;
-    	margin-bottom: 0px;
-    	margin-left: 0px;
-    	width: 66%;
-    	letter-spacing: 1px;
-    }
-    #solutionUnitSummary {
-    	clear: left;
-    	border: 1px solid #dddddd;
-    	border-width: 0px 0px 0px 0px;
-    	text-align: justify;
-    	padding: 8px 2px;
-    	margin-bottom: 0px;
-    	margin-top: 0px;
-    }
-    #solutionDescription {
-    	font-weight: 100px;
     }
 
 /*End SideBar*/
