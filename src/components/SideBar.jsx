@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import { Router, Route, Link, hashHistory, IndexRoute  } from 'react-router';
 import CreateSolution from './CreateSolution.jsx';
 import CreateProblem from './CreateProblem.jsx';
 import SolutionContainer from './SolutionContainer.jsx';
@@ -15,9 +15,8 @@ export default class SideBar extends React.Component {
    render() {
       return (
           <div>
-          <SideBarMenu />
-          <AnswerContainer />
-          {this.props.children}
+          	<SideBarMenu />
+          	{this.props.children}
           </div>
       );
    }

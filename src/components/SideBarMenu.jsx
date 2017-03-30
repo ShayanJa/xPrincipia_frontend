@@ -14,13 +14,13 @@ export default class SideBarMenu extends React.Component {
       <div id="sidebarMenu">
         <div id="solveMenu">
                 <div id="solveTitle">Solve</div>
-                  <Link to='home/sidebar/solve'><div id="solutionsButton">Solutions</div></Link>
-                  <Link to='home/sidebar/subproblems'><div id="subproblemButton">Sub Problems</div></Link>
+                  <Link to='home/problem/sidebar/solutions'><div id="solutionsButton">Solutions</div></Link>
+                  <Link to='home/problem/sidebar/subproblems'><div id="subproblemButton">Sub Problems</div></Link>
         </div>
         <div id="developMenu">
                 <div id="developTitle">Develop</div>
-                  <Link to='home/sidebar/question'><div id="questionsButton">Questions</div></Link>
-                  <Link to='home/sidebar/suggest'><div id="suggestionsButton">Suggestions</div></Link>
+                  <Link to='home/problem/sidebar/questions'><div id="questionsButton">Questions</div></Link>
+                  <Link to='home/problem/sidebar/suggestions'><div id="suggestionsButton">Suggestions</div></Link>
         </div>
       </div>
 
