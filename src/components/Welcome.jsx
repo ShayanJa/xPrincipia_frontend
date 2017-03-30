@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Create extends React.Component {
+export default class WelcomeBox extends React.Component {
    render() {
       return (
 
