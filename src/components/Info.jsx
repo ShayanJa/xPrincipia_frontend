@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Explanation extends React.Component {
+export default class Info extends React.Component {
    render() {
       return (
-      <div id="explanation">
+      <div id="info">
           <div id="banner">
               <div id="bannerTitle">XPrincipia</div>
               <div id="bannerSlogan">Open Source Science</div>

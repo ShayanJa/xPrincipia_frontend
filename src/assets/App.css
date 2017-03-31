@@ -690,7 +690,7 @@
     	border-width: 0px 1px;
     	min-height: 99%;
     }
-    #explanation, #signup, #register {
+    #info, #signup, #register {
     	border-width: 0px 2px;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
@@ -698,7 +698,7 @@
     	flex: 1 1 auto;
     	width: 60%;
     }
-    #explanation {
+    #info {
     	/*border: 1px solid #00dcff;
     	border-width: 0px 1px;*/
     }
