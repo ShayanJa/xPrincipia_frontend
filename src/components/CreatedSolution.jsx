@@ -57,6 +57,11 @@ export default class CreatedSolution extends React.Component {
             </div>
 
           </div>
+
+           <div id="sidebar">
+            {this.props.children}
+          </div>
+          
         </div>
 
       );

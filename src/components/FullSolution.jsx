@@ -15,7 +15,7 @@ export default class FullSolution extends React.Component {
           </div>
 
           <div id="solutionIntro">
-            <h1 id="solutionTitle">What causes the emergent phenomena of consciousness?</h1>
+            <h1 id="solutionTitle">FFFFFWhat causes the emergent phenomena of consciousness?</h1>
             <div id="followSolution">Follow</div>
             <div id="contributor">Ben Francis</div>
             <div id="createDate">3.10.2017</div>
@@ -56,7 +56,12 @@ export default class FullSolution extends React.Component {
             </p>
           </div>
 
+         
+
         </div>
+         <div id="sidebar">
+           {this.props.children}
+          </div>
       </div>
 
       );

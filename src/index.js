@@ -44,28 +44,29 @@ ReactDOM.render(
             <Route path='/problem/createproblem' component={CreateProblem}></Route>
           </Route>
         </Route>
+        <IndexRoute component={FullSolution}></IndexRoute>
         <Route path='/fullsolution' component={FullSolution}>
           <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='/sidebar' component={SideBar}>
+          <Route path='/fullsolution/sidebar' component={SideBar}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/solutions' component={SolutionContainer}></Route>
-            <Route path='/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/questions' component={QuestionContainer}></Route>
-            <Route path='/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/createsolution' component={CreateSolution}></Route>
-            <Route path='/createproblem' component={CreateProblem}></Route>
+            <Route path='/fullsolution/solutions' component={SolutionContainer}></Route>
+            <Route path='/fullsolution/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/fullsolution/questions' component={QuestionContainer}></Route>
+            <Route path='/fullsolution/subproblems' component={SubProblemContainer}></Route>
+            <Route path='/fullsolution/createsolution' component={CreateSolution}></Route>
+            <Route path='/fullsolution/createproblem' component={CreateProblem}></Route>
           </Route>
         </Route>
         <Route path='/usersolution' component={CreatedSolution}>
           <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='/sidebar' component={SideBar}>
+          <Route path='/usersolution/sidebar' component={SideBar}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/solutions' component={SolutionContainer}></Route>
-            <Route path='/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/questions' component={QuestionContainer}></Route>
-            <Route path='/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/createsolution' component={CreateSolution}></Route>
-            <Route path='/createproblem' component={CreateProblem}></Route>
+            <Route path='/usersolution/solutions' component={SolutionContainer}></Route>
+            <Route path='/usersolution/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/usersolution/questions' component={QuestionContainer}></Route>
+            <Route path='/usersolution/subproblems' component={SubProblemContainer}></Route>
+            <Route path='/usersolution/createsolution' component={CreateSolution}></Route>
+            <Route path='/usersolution/createproblem' component={CreateProblem}></Route>
           </Route>
         </Route>
       </Route>
