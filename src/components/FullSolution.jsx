@@ -5,7 +5,7 @@ export default class FullSolution extends React.Component {
    render() {
       return (
 
-      <div id="fullSolutionComponent">
+      <div id="fullSolution">
 
         <div id="solution">
 

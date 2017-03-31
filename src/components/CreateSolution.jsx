@@ -46,15 +46,15 @@ export default class CreateSolution extends React.Component {
     }),
     success: function(result){
       console.log(result)
-  
+
       alert('Your solution has been posted.')
     },
     error: function(result){
       console.log(result)
-  
+
       alert('There was an error.')
     },
-  
+
     });
   }
 

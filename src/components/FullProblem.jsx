@@ -5,20 +5,15 @@ import { Link  } from 'react-router';
 export default class FullProblem extends React.Component {
    render() {
 
-   var lstyles = {
-    width: "60%",
-    float: "left"
-   }
-
    var rstyles = {
     width: "40%",
     float: "right"
-    
+
    }
 
       return (
       <div>
-        <div id="fullProblem" style={lstyles}>
+        <div id="fullProblem">
           <div id="problemHeader">
           <div id="parentButton">Parent</div>
             <h1 id="elementLabel">Problem</h1>
@@ -47,7 +42,7 @@ export default class FullProblem extends React.Component {
             </p>
           </div>
         </div>
-        <div style={rstyles}>
+        <div id="sidebar">
           {this.props.children}
         </div>
       </div>

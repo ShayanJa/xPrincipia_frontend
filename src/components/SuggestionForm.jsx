@@ -9,7 +9,7 @@ export default class SuggestionForm extends React.Component {
             <form action="http://www.xprincipia.com/suggestion.php" method="post" id="suggestionForm">
                 <fieldset>
                     <legend>Suggestion</legend>
-                         <textarea name="suggestionText" required="required"></textarea>
+                         <textarea name="suggestionText" required="required" id="suggestionTextArea"></textarea>
                          <br />
                          <input type="submit" value="Add" id="addSuggestion"/>
                 </fieldset>
