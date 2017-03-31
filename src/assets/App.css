@@ -676,7 +676,7 @@
 
 /*Login*/
 
-    #loginComponent {
+    #loginContainer {
     	display: -webkit-box;
     	display: -moz-box;
     	display: -ms-flexbox;
@@ -690,7 +690,7 @@
     	border-width: 0px 1px;
     	min-height: 99%;
     }
-    #explanation, #signup {
+    #explanation, #signup, #register {
     	border-width: 0px 2px;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
@@ -702,7 +702,7 @@
     	/*border: 1px solid #00dcff;
     	border-width: 0px 1px;*/
     }
-    #signup {
+    #signup, #register {
     	width: 40%;
     }
     #banner {
@@ -741,9 +741,7 @@
     	margin: 0% 10%;
     	border:
     }
-    #signup {
-    }
-    #loginForm {
+    #loginForm, #registerForm {
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
@@ -757,10 +755,10 @@
     	border-width: 0px 0px 1px 0px;
     	margin-bottom: 5px;
     }
-    #loginEmail {
+    #loginEmail, #registerEmail {
     	margin-top: 15px;
     }
-    #loginPassword {
+    #loginPassword, #registerPassword {
     }
     input {
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -789,14 +787,14 @@
     	border: 1px solid #0f131c;
     	cursor: pointer;
     }
-    #registerButton {
+    #registerButton, #loginButton {
     	text-align: center;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
     	margin: 0% 19%;
     	font-size: 150%;
     }
-    #registerButton:hover {
+    #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
     	cursor: pointer;

@@ -12,15 +12,22 @@ import QuestionContainer from './components/QuestionContainer.jsx';
 import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
 import FullProblem from './components/FullProblem.jsx';
-import WelcomeBox from './components/Welcome.jsx'
-import Login from './components/Login.jsx'
+import WelcomeBox from './components/Welcome.jsx';
+import LoginContainer from './components/LoginContainer.jsx';
+import Explanation from './components/Explanation.jsx';
+import LoginUnit from './components/LoginUnit.jsx';
+import RegisterUnit from './components/RegisterUnit.jsx';
 import './assets/index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcome' component={WelcomeBox}></Route>
-    <Route path='/login' component={Login}></Route>
+    <Route path='/logincontainer' component={LoginContainer}>
+      <IndexRoute component={LoginContainer}></IndexRoute>
+      <Route path='/login' component={LoginUnit}></Route>
+      <Route path='/register' component={RegisterUnit}></Route>
+    </Route>
       <IndexRoute component={Layout}></IndexRoute>
       <Route path='/home' component={Layout}>
         <IndexRoute component={FullProblem}></IndexRoute>

@@ -5,7 +5,7 @@ export default class Login extends React.Component {
    render() {
       return (
 
-      <div id="loginComponent">
+      <div id="loginContainer">
           <div id="explanation">
               <div id="banner">
                   <div id="bannerTitle">XPrincipia</div>
