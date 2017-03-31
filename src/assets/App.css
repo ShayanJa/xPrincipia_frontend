@@ -1,3 +1,4 @@
+
 /*Global*/
 
     * {
@@ -1003,9 +1004,120 @@
 
 /*End Question*/
 
+/*GENERAL*/
+
+* {
+	font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+	/*background: url("day1.jpg") no-repeat center center fixed;*/
+	color: #dddddd;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	/*border: 1px solid #ff0000;*/
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+
+	background-color: #0f131c;
+
+}
+
+body img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	margin: 0px;
+	padding: 0px;
+
+	display: hidden;
+}
+
+#main {overflow: auto;}
+
+#header, #problem, #solutions {
+	border: 1px solid #00dcff;
+	background-color: #0f131c;
+	position: relative;
+	z-index: 2;
+}
+
+#header {
+	background-color: #0f131c;
+
+	border: 1px solid #00dcff;
+	border-width: 1px 0px;
+	font-weight: 100;
+	text-align: center;
+	overflow: hidden;
+	padding-top: 5px;
+}
+
+/*#header * {
+	display: inline-block;
+}*/
+
+#problem, #solutions {
+	border-width: 0px 2px;
+	border-radius: 23px;
+	color: #dddddd;
+	float: left;
+	width: 61%;
+	padding: 0px 10px 20px 10px;
+	min-height: 520px;
+	max-height: 520px;
+	overflow: scroll;
+	margin: 5px 5px 10px 5px;
+}
+
+#problem {
+	margin-left: 7px;
+	border-width: 2px 0px;
+	border-radius: 0px;
+}
+
+#solutions {
+	width: 32%;
+	border-radius: 0px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: 100;
+}
+
+p {
+	font-family: 'Alegreya Sans';
+	color: #dddddd;
+	text-align: justify;
+	font-size: 80%;
+	/*line-height: 1.2em;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*PROBLEM*/
+
 
     #fullProblem {
       width: 60%;
@@ -1248,6 +1360,7 @@
   padding: 10px;
   padding-left: 3px;
   padding-bottom: 0px;
+
 }
 #subProblemUnit:hover #percent {
   color: #00ffdc;
@@ -1278,6 +1391,7 @@
   line-height: 120%;
   height: auto;
 }
+
 #subProblemTitle, #solutionUnitTitle {
   dispaly: inline-block;
   text-align: left;
@@ -1626,6 +1740,7 @@
   border: 1px solid #ffffff;
   height: 4em;
   resize: none;
+
 }
 
 #askquestion, #addSuggestion, #addAnswer {

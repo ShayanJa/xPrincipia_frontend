@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
+import React from 'react';
 import './assets/App.css';
 import './assets/index.css';
 import Header from './components/Header.jsx';
@@ -15,11 +13,10 @@ import SideBarMenu from './components/SideBarMenu.jsx';
 
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
         {this.props.children}
       </div>
     );

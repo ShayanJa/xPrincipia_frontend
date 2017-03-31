@@ -19,6 +19,7 @@ import Info from './components/Info.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import Profile from './components/Profile.jsx'
+
 import './assets/index.css';
 
 ReactDOM.render(
