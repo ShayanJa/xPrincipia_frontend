@@ -14,7 +14,7 @@ import SubProblemContainer from './components/SubProblemContainer.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import WelcomeBox from './components/Welcome.jsx';
 import LoginContainer from './components/LoginContainer.jsx';
-import Explanation from './components/Explanation.jsx';
+import Info from './components/Info.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import './assets/index.css';
