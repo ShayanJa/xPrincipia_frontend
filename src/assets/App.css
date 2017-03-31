@@ -45,17 +45,6 @@
       padding-left: 10px;
       padding-right: 10px;
     }
-    #questionForm textarea {
-    	width: 99%;
-    	text-align: left;
-    	font-family: 'Alegreya Sans', sans-serif;
-    	font-weight: 300;
-    	padding: 5px;
-    	color: #ffffff;
-    	background-color: #0f131c;
-    	border: 1px solid #ffffff;
-    	resize: none;
-    }
     #questionProblem fieldset {
     	border: 1px solid #00dcff;
     }
@@ -88,9 +77,6 @@
     #questionAdder {
       font-size: 90%;
       color: #00ffdc;
-    }
-    #questionText {
-      font-family: 'Alegreya Sans';
     }
     #askquestion {
       color: #00ffdc;
@@ -172,30 +158,6 @@
     	width: 80%;
     	padding: 10px;
     	margin-left: 8%;
-    }
-    #answerAdder {
-      font-size: 90%;
-      color: #00dcff;
-    }
-    #answerText {
-      font-family: 'Alegreya Sans';
-    }
-    #addAnswer {
-      color: #00dcff;
-      background-color: #0f131c;
-      border: 1px solid #00dcff;
-      border-radius: 2px;
-      margin-top: 5px;
-      cursor: pointer;
-    }
-    #addAnswer:hover {
-      color: #0f131c;
-      background-color: #00dcff;
-      cursor: pointer;
-    }
-    #addAnswer:active {
-      color: #00dcff;
-      background-color: #0f131c;
     }
     #answerVote {
       flex: 1 1 auto;
@@ -1719,12 +1681,38 @@
 #questionTextArea, #answerTextArea, #suggestionTextArea {
   text-align: left;
   font-family: 'Alegreya Sans', sans-serif;
-  font-weight: 300;
-  padding: 5px;
+  padding: 10px;
   color: #ffffff;
   background-color: #0f131c;
   border: 1px solid #ffffff;
+  height: 4em;
   resize: none;
+}
+
+#askquestion, #addAnswer {
+  font-size: 90%;
+  width: 100%;
+  color: #00ffdc;
+  background-color: #0f131c;
+  border: 1px solid #00ffdc;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+#askquestion:hover, #addAnswer:hover  {
+  color: #0f131c;
+  background-color: #00dcff;
+  cursor: pointer;
+}
+#addAnswer:hover {
+  background-color: #00dcff;
+}
+#askquestion:active, #addAnswer:active {
+  color: #00dcff;
+  background-color: #0f131c;
+}
+#addAnswer {
+  color: #00dcff;
+  border: 1px solid #00dcff;
 }
 
 /*MoreButton*/
