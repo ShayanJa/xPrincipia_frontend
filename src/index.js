@@ -57,6 +57,7 @@ ReactDOM.render(
             <Route path='/fullsolution/createproblem' component={CreateProblem}></Route>
           </Route>
         </Route>
+        <IndexRoute component={CreatedSolution}></IndexRoute>
         <Route path='/usersolution' component={CreatedSolution}>
           <IndexRoute component={SideBar}></IndexRoute>
           <Route path='/usersolution/sidebar' component={SideBar}>
