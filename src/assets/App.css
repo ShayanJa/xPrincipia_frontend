@@ -584,8 +584,10 @@
     	align-items: strech;
     }
     #explore, #logo, #avatarHeader {
-    	overflow: hidden;
-    	padding: 4px 0px 0px 0px;
+      display: inline-block;
+      width: 33%;
+      overflow: hidden;
+    	padding: 5px;
     	margin: 0px;
     	flex: 1 1 auto;
     	text-align: center;
@@ -594,7 +596,6 @@
     	color: #dddddd;
     	letter-spacing: 8px;
     	font-size: 100%;
-    	margin-top: 1px;
     }
     #exploreInput {
     	color: #dddddd;
