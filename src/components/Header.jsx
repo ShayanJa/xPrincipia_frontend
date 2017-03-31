@@ -4,15 +4,24 @@ import { Link } from 'react-router';
 export default class Header extends React.Component {
    render() {
       return (
-		    <div id="header">
-                <form action="http://www.xprincipia.com/search.php" method="get" id="explore">
+      <div id="headerSection">
+        <div id="header">
+            <div id="explore">
+                <form action="http://www.xprincipia.com/search.php" method="get" id="exploreForm">
                     <input type="search" name="search"
-                        placeholder="Explore" />
-                    <input type="submit" value="Go" />
+                        placeholder="Explore" id="exploreInput" autofocus/>
+                    <input type="submit" value="Go" id="submitExplore" />
+
                 </form>
-            <div id="logo">XPrincipia</div>
-            <button type="button" id="createButton"><Link to="/create">Create</Link></button>
+            </div>
+            <div id="logo">
+              <Link to="/welcome"><div>XPrincipia</div></Link>
+            </div>
+            <div id="avatarHeader">
+              <Link to="/profile"><img src="../assets/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" /></Link>
+            </div>
         </div>
+      </div>
       );
    }
 }
