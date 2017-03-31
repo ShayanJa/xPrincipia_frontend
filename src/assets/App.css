@@ -561,14 +561,12 @@
       display: inline-block;
       width: 33%;
       overflow: hidden;
-    	margin: 0px;
     	flex: 1 1 auto;
     	text-align: center;
     }
     #explore {
     	color: #dddddd;
     	letter-spacing: 8px;
-    	font-size: 100%;
     }
     #exploreInput {
     	color: #dddddd;

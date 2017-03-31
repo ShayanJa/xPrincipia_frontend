@@ -5,12 +5,6 @@ import { Link  } from 'react-router';
 export default class FullProblem extends React.Component {
    render() {
 
-   var rstyles = {
-    width: "40%",
-    float: "right"
-
-   }
-
       return (
       <div>
         <div id="fullProblem">
