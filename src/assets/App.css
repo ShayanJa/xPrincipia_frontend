@@ -1390,23 +1390,6 @@
     #suggestionText {
       font-family: 'Alegreya Sans';
     }
-    #addSuggestion {
-      color: #00ffdc;
-      background-color: #0f131c;
-      border: 1px solid #00ffdc;
-      border-radius: 2px;
-      margin-top: 5px;
-      cursor: pointer;
-    }
-    #addSuggestion:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
-      cursor: pointer;
-    }
-    #addSuggestion:active {
-      color: #00ffdc;
-      background-color: #0f131c;
-    }
     #suggestionVote {
       flex: 1 1 auto;
       color: #00ffdc;
@@ -1689,31 +1672,28 @@
   resize: none;
 }
 
-#askquestion, #addAnswer {
+#askquestion, #addSuggestion, #addAnswer {
   font-size: 90%;
-  width: 100%;
   color: #00ffdc;
   background-color: #0f131c;
   border: 1px solid #00ffdc;
   border-radius: 2px;
   margin-top: 5px;
 }
-#askquestion:hover, #addAnswer:hover  {
-  color: #0f131c;
-  background-color: #00dcff;
-  cursor: pointer;
-}
-#addAnswer:hover {
-  background-color: #00dcff;
-}
-#askquestion:active, #addAnswer:active {
-  color: #00dcff;
-  background-color: #0f131c;
-}
 #addAnswer {
   color: #00dcff;
   border: 1px solid #00dcff;
 }
+#askquestion:hover, #addSuggestion:hover, #askquestion:active, #addSuggestion:active  {
+  color: #0f131c;
+  background-color: #00ffdc;
+  cursor: pointer;
+}
+#addAnswer:hover, #addAnswer:active {
+  background-color: #00dcff;
+}
+
+
 
 /*MoreButton*/
 
