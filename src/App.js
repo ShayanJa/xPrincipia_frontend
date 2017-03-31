@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Link, hashHistory, IndexRoute  } from 'react-router';
+import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import './assets/App.css';
 import './assets/index.css';
 import Header from './components/Header.jsx';
@@ -19,6 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         {this.props.children}
       </div>
     );

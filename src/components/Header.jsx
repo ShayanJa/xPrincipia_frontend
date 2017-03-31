@@ -15,7 +15,7 @@ export default class Header extends React.Component {
                 </form>
             </li>
             <li id="logo">
-              <a href="./home.html"><div>XPrincipia</div></a>
+              <a href="./welcome"><div>XPrincipia</div></a>
             </li>
             <li id="avatarHeader">
               <img src="../assets/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" />
