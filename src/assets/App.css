@@ -540,7 +540,6 @@
 /*Header*/
 
     #header {
-    	position: relative;
       background-color: #0f131c;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px;
@@ -556,10 +555,11 @@
     	justify-content: space-between;
     	flex-wrap: nowrap;
     	align-items: strech;
+      text-align: center;
     }
     #explore, #logo, #avatarHeader {
+      margin: auto;
       display: inline-block;
-      width: 33%;
       overflow: hidden;
     	flex: 1 1 auto;
     	text-align: center;
@@ -567,7 +567,18 @@
     #explore {
     	color: #dddddd;
     	letter-spacing: 8px;
+      width: 25%;
     }
+    #exploreFormHeader{
+      overflow: hidden;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      color: #dddddd;
+      letter-spacing: 8px;
+      font-size: 100%;
+      padding-top: 10px;
+      }
     #exploreInput {
     	color: #dddddd;
     	background-color: #0f131c;
@@ -587,12 +598,24 @@
     	font-weight: 100;
     	letter-spacing: 16px;
     	flex: 1 2 auto;
+      width: 50%;
     }
     #avatarHeader {
+      width: 25%;
+      text-align: center;
     }
     #avatarButton {
     	border: 1px solid #00dcff;
     	border-radius: 50%;
+    }
+    #firstName {
+      display: inline-block;
+      margin: auto;
+      font-size: 200%;
+      color: #dddddd;
+      float: center;
+      padding-left: 10%;
+      letter-spacing: 8px;
     }
 
 /*End Header*/
@@ -860,14 +883,12 @@
     	margin: 3px 10px 0px 10px;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
-    #votedSolutionsButton:hover, #createdSolutionsButton:hover {
+    #votedSolutionsButton:hover, #createdSolutionsButton:hover,
+    #followedProblemsButton:active, #createdProblemsButton:active,
+    #votedSolutionsButton:active, #createdSolutionsButton:active {
     	background-color: #00ffdc;
     	color: #0f131c;
     	cursor: pointer;
-    }
-    #createdSolutionsButton {
-    	background-color: #00ffdc;
-    	color: #0f131c;
     }
     #profileRightElements {
     	margin: 2px 15px 0px 5px;

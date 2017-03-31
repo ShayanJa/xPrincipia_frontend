@@ -8,7 +8,7 @@ export default class Header extends React.Component {
       <div id="headerSection">
         <div id="header">
             <div id="explore">
-                <form action="http://www.xprincipia.com/search.php" method="get" id="exploreForm">
+                <form action="http://www.xprincipia.com/search.php" method="get" id="exploreFormHeader">
                     <input type="search" name="search"
                         placeholder="Explore" id="exploreInput" autofocus/>
                     <input type="submit" value="Go" id="submitExplore" />
@@ -19,6 +19,7 @@ export default class Header extends React.Component {
             </div>
             <div id="avatarHeader">
               <Link to="/profile"><img src="../assets/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" /></Link>
+              <div id="firstName">Ben</div>
             </div>
         </div>
       </div>

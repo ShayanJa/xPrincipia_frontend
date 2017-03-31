@@ -18,14 +18,14 @@ import LoginContainer from './components/LoginContainer.jsx';
 import Info from './components/Info.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
-import Profile from './components/Profile.jsx'
+import ProfileContainer from './components/ProfileContainer.jsx'
 import './assets/index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcome' component={WelcomeBox}></Route>
-    <Route path='/profile' component={Profile}></Route>
+    <Route path='/profile' component={ProfileContainer}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
       <IndexRoute component={LoginContainer}></IndexRoute>
       <Route path='/login' component={LoginUnit}></Route>
