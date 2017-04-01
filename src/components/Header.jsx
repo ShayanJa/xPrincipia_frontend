@@ -19,7 +19,6 @@ export default class Header extends React.Component {
             </div>
             <div id="avatarHeader">
               <Link to="/profile"><img src="../assets/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" /></Link>
-              <div id="firstName">Ben</div>
             </div>
         </div>
       </div>

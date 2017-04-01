@@ -315,10 +315,10 @@
 
 
 
-/*CreatedSolution and FullSolution*/
+/*CreatedSolution, FullSolution, and Problem*/
 
 
-    #solution{
+    #solution, #problem {
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
     	position: relative;
@@ -339,7 +339,11 @@
       float: left;
       width: 60%;
     }
-    #solutionHeader {
+    #fullProblem {
+      width: 60%;
+      float: left;
+    }
+    #solutionHeader, #problemHeader {
     	display: -webkit-box;
     	display: -moz-box;
     	display: -ms-flexbox;
@@ -388,7 +392,7 @@
     	color: #00dcff;
     	text-align: center;
     }
-    #solutionIntro {
+    #solutionIntro, #problemIntro {
     	border: 1px solid #00dcff;
     	border-width: 0px 0px 0px 0px;
     	border-radius: 0px;
@@ -398,19 +402,19 @@
     #solutionTitle {
     	border-width: 0px;
     }
-    #solutionSummary {
+    #solutionSummary, #problemSummary {
       margin: 5px 25px;
     	line-height: 150%;
     	font-size: 120%;
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 0px;
     	padding: 5px;
     	margin-top: 20px;
       padding-top: 15px;
       padding-bottom: 20px;
     }
-    #solutionSummaryLabel {
-    	color: #00ffdc;
+    #solutionSummaryLabel, #problemSummaryLabel {
+    	color: #00dcff;
     }
     #contributor, #createDate {
     	width: 100%;
@@ -419,16 +423,16 @@
     #createDate {
     	margin-bottom: 10px;
     }
-    #followSolution {
+    #followSolution, #followProblem {
       width: 30%;
-    	margin-left: 33%;
+    	margin-left: 33.7%;
     	padding-left: 2%;
     	background-color: #0f131c;
-    	color: #00ffdc;
+    	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 120%;
     	font-weight: 100;
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 1px;
     	border-radius: 3px;
     	text-align: center;
@@ -436,8 +440,8 @@
     	margin-bottom: 10px;
     	letter-spacing: 16px;
     }
-    #followSolution:hover {
-    	background-color: #00ffdc;
+    #followSolution:hover, #followProblem:hover {
+    	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -463,7 +467,7 @@
       color: #0f131c;
       cursor: pointer;
     }
-    #solutionDescription {
+    #solutionDescription, #problemDescription {
     	border: 1px solid #00ffdc;
     	border-width: 0px 1px 0px 1px;
     	padding: 0px 5px 10px 5px;
@@ -473,7 +477,7 @@
     	font-size: 120%;
     	line-height: 150%;
     }
-    #solutionDescriptionLabel {
+    #solutionDescriptionLabel, #problemDescriptionLabel {
     	color: #00ffdc;
     }
     #solutionEvidence {
@@ -515,8 +519,38 @@
     #solutionReferencesLabel {
       color: #00ffdc;
     }
+    #elementLabel {
+      flex: 0 1 auto;
+      margin: 1px 5% 0% 0%;
+      width: 26%;
+      border: 1px solid #00dcff;
+      border-width: 0px 0px 1px 0px;
+      border-radius: 0px;
+      font-size: 85%;
+      padding: 4px;
+      letter-spacing: 12px;
+      color: #00dcff;
+      text-align: center;
+    }
+    #problemTitle {
+      border-width: 0px;
+      font-size: 260%;
+    }
+    #problemRequirements {
+      border: 1px solid #00ffdc;
+      border-width: 0px 1px 0px 1px;
+      padding: 0px 5px 10px 5px;
+      margin-bottom: 0px;
+      padding-left: 5%;
+      padding-right: 5%;
+      font-size: 120%;
+      line-height: 150%;
+    }
+    #requirementsLabel {
+      color: #00ffdc;
+    }
 
-/*End CreatedSolution*/
+/*End CreatedSolution, FullSolution, and Problem*/
 
 
 
@@ -1021,165 +1055,6 @@
     }
 
 /*End Question*/
-
-
-
-/*PROBLEM*/
-
-    #fullProblem {
-      width: 60%;
-      float: left;
-    }
-    #problem {
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	position: relative;
-    	border-width: 0px 2px;
-    	border-radius: 23px;
-    	color: #dddddd;
-    	padding: 0px 10px 20px 10px;
-    	overflow: scroll !important;
-    	margin: 5px 5px 10px 5px;
-    	flex: 1 1 auto;
-    	outline: 1px solid #131b2b;
-    	outline-width: 0px 1px;
-    	flex-grow: 2;
-    	flex-shrink: 1;
-    	margin-left: 7px;
-    	border-width: 2px 0px;
-    	border-radius: 0px;
-    }
-    #problemHeader {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
-    	display: inline-flex;
-    	justify-content: space-between;
-    	align-items: flex-start;
-    	align-content: space-between;
-    	width: 100%;
-    }
-    #parentButton {
-    	flex: 0 1 auto;
-    	margin-right: auto;
-    	margin-top: 1px;
-    	width: 23%;
-    	padding: 4px;
-    	color: #00ffdc;
-    	font-size: 85%;
-    	letter-spacing: 12px;
-    	background-color: #0f131c;
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 1px 0px;
-    	text-align: right;
-    }
-    #parentButton a {
-    	width: 100%;
-    	padding: 0px;
-    	margin: 0px;
-    }
-    #parentButton:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-    	border-color: #0f131c;
-    	cursor: pointer;
-    }
-    #elementLabel {
-    	flex: 0 1 auto;
-    	margin: 1px 5% 0% 0%;
-    	width: 26%;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	border-radius: 0px;
-    	font-size: 85%;
-    	padding: 4px;
-    	letter-spacing: 12px;
-    	color: #00dcff;
-    	text-align: center;
-    }
-    #problemIntro {
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 0px 0px;
-    	border-radius: 0px;
-    	margin: 0px 40px;
-    	padding: 10px 0px;
-    }
-    #problemTitle {
-    	border-width: 0px;
-    	font-size: 260%;
-    }
-    #problemSummary {
-      margin: 5px 25px;
-    	line-height: 150%;
-    	font-size: 120%;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 0px;
-    	padding: 5px;
-    	margin-top: 20px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-    }
-    #problemSummaryLabel {
-      color: #00ffdc;
-    }
-    #contributor, #createDate {
-    	width: 100%;
-    	text-align: center;
-    }
-    #createDate {
-      margin-bottom: 10px;
-    }
-    #followProblem {
-      width: 30%;
-    	margin-left: 34.5%;
-    	padding-left: 2%;
-    	background-color: #0f131c;
-    	color: #00ffdc;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 120%;
-    	font-weight: 100;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
-    	text-align: center;
-    	text-decoration: none;
-    	margin-bottom: 10px;
-    	letter-spacing: 16px;
-    }
-    #followProblem:hover {
-    	background-color: #00ffdc;
-    	color: #0f131c;
-    	cursor: pointer;
-    }
-    #problemDescription {
-      border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #problemDescriptionLabel {
-      color: #00ffdc;
-    }
-    #problemRequirements {
-      border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #requirementsLabel {
-    	color: #00ffdc;
-    }
-
-/*End Problem*/
 
 
 

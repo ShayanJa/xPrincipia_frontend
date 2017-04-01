@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'min-jquery'
 
 export default class SuggestionForm extends React.Component {
    render() {

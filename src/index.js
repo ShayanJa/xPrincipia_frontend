@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
+import AnswerContainer from './components/AnswerContainer.jsx';
 import SideBar from './components/SideBar';
 import Layout from './components/Layout.jsx';
 import SolutionContainer from './components/SolutionContainer.jsx';

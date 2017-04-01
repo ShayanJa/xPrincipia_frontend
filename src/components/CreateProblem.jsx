@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'min-jquery';
 
 export default class CreateProblem extends React.Component {
 
@@ -26,31 +27,31 @@ export default class CreateProblem extends React.Component {
     this.state.references = document.getElementById('problemReferencesForm').value
 
   //Ajax post solution request
-  // $.ajax({
-  //   crossDomain: 'true',
-  //   type: 'POST',
-  //   headers: {'Content-Type' : 'application/json'},
-  //   url: 'http://localhost:10000/solutions/create',
-  //   processData: false,
-  //   data: JSON.stringify({
-  //     'title' : this.state.title,
-  //     'summary' : this.state.summary,
-  //     'description' : this.state.description,
-  //     'requirements' : this.state.requirements,
-  //     'references' : this.state.references
-  //   }),
-  //   success: function(result){
-  //     console.log(result)
-  //
-  //     alert('Your solution has been posted.')
-  //   },
-  //   error: function(result){
-  //     console.log(result)
-  //
-  //     alert('There was an error.')
-  //   },
-  //
-  //   });
+  $.ajax({
+    crossDomain: 'true',
+    type: 'POST',
+    headers: {'Content-Type' : 'application/json'},
+    url: 'http://localhost:10000/solutions/create',
+    processData: false,
+    data: JSON.stringify({
+      'title' : this.state.title,
+      'summary' : this.state.summary,
+      'description' : this.state.description,
+      'requirements' : this.state.requirements,
+      'references' : this.state.references
+    }),
+    success: function(result){
+      console.log(result)
+
+      alert('Your solution has been posted.')
+    },
+    error: function(result){
+      console.log(result)
+
+      alert('There was an error.')
+    },
+
+    });
   }
 
   render() {
