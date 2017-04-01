@@ -18,7 +18,7 @@ export default class Header extends React.Component {
               <Link to="/welcome"><div>XPrincipia</div></Link>
             </div>
             <div id="avatarHeader">
-              <Link to="/profile"><img src="../assets/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" /></Link>
+              <Link to="/profile"><img src="../assets/img/dnablackinvert.png" id="img-rounded" id="avatarButton" width="33" height="33" /></Link>
             </div>
         </div>
       </div>

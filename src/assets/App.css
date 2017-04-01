@@ -399,8 +399,9 @@
     	margin: 0px 40px;
     	padding: 10px 0px;
     }
-    #solutionTitle {
+    #solutionTitle, #problemTitle {
     	border-width: 0px;
+      font-size: 260%;
     }
     #solutionSummary, #problemSummary {
       margin: 5px 25px;
@@ -531,10 +532,6 @@
       letter-spacing: 12px;
       color: #00dcff;
       text-align: center;
-    }
-    #problemTitle {
-      border-width: 0px;
-      font-size: 260%;
     }
     #problemRequirements {
       border: 1px solid #00ffdc;

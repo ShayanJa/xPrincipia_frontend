@@ -16,7 +16,7 @@ constructor(){
   this.postRegister = this.postRegister.bind(this);
 };
 
-postLogin() {
+postRegister() {
   //Read field items into component state
   this.state.email = document.getElementById('registerEmail').value
   this.state.password = document.getElementById('registerPassword').value
@@ -50,13 +50,13 @@ $.ajax({
       return (
 
         <div id="register">
-            <form action="http://www.xprincipia.com/login.php" method="post" id="registerForm">
+            <form action="http://www.xprincipia.com/register.php" method="post" id="registerForm">
                 <div id="enter">Enter</div>
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" autofocus/> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
-                <Link to='/welcome'><input type="submit" value="Register" id="submit"/></Link>
+                <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submit"/></Link>
             </form>
-            <div id="loginButton" onClick={this.postLogin}>Login</div>
+            <div id="loginButton">Login</div>
         </div>
 
       );
