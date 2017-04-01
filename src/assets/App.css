@@ -635,9 +635,11 @@
       width: 25%;
       text-align: center;
     }
-    #avatarButton {
+    #avatarImage {
     	border: 1px solid #00dcff;
     	border-radius: 50%;
+      display: block;
+      margin: 0 auto;
     }
     #firstName {
       display: inline-block;
@@ -818,11 +820,6 @@
     	display: block;
     	margin: 0px auto;
     }
-    #userNameEmail {
-    	outline: 1px solid #131b2b;
-    	outline-width: 0px 1px;
-    	padding: 5px;
-    }
     #userName {
     	font-size: 200%;
     	text-align: center;
@@ -862,9 +859,10 @@
     	color: #0f131c;
     	cursor: pointer;
     }
-    #userProblemsSolutionsButton {
-    	background-color: #00dcff;
-    	color: #0f131c;
+    #userProblemsSolutionsButton:active, #notificationsButton:active,
+    #userSettingsButton:active, #aboutXPButton:active, #logOutButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #xp {
     	text-align: center;

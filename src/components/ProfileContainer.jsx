@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import img from '../assets/dnablackinvert.png'
 import SearchUnit from './SearchUnit.jsx';
 
 export default class ProfileContainer extends React.Component {
@@ -10,7 +11,7 @@ export default class ProfileContainer extends React.Component {
         <div id="profileLeft">
             <div id="userInformation">
                 <p id="userName">Ben Francis</p>
-                <img src="dnablack.png" class="img-rounded" id="avatar" width="150" height="150" />
+                <img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="150" height="150" />
                 <p id="userEmail">franc514@umn.edu</p>
             </div>
             <div id="userOptions">
