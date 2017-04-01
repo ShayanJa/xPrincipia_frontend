@@ -37,7 +37,7 @@
 
 
 
-/*Answer*/
+/*Answer and Question*/
 
     #sidebarElements {
       border: 1px solid #00dcff;
@@ -700,23 +700,24 @@
     	letter-spacing: 16px;
     	border: 1px solid #00dcff;
     	border-width: 2px 0px;
+      text-align: center;
     }
     #bannerSlogan {
-    	letter-spacing: 12px;
+      margin-top: 15px;
+      letter-spacing: 12px;
     }
     #learnMore {
     	color: #00dcff;
     	padding: -10% 10% 0% 10%;
     	font-size: 120%;
     }
-    #welcome, #introduction {
+    #introduction {
     	text-align: center;
     	font-size: 100%;
     	line-height: 150%;
-    	letter-spacing: 4px;
-    }
-    #welcomeLogin {
-    	text-align: center;
+    	letter-spacing: 3px;
+      color: #dddddd;
+      padding-left: 15px;
     }
     #introduction {
     	margin: 0% 10%;
@@ -754,15 +755,16 @@
     	margin-left: 9%;
     	width: 82%;
     }
-    input#submit {
+    #submitLogin, #submitRegister {
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
+      text-align: center;
     }
-    input#submit:hover {
+    #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
     	background-color: #00dcff;
     	border: 1px solid #0f131c;
@@ -1018,23 +1020,6 @@
       cursor: pointer;
     }
     #questionAnswers:active {
-    	color: #00ffdc;
-    	background-color: #0f131c;
-    }
-    #questionVote {
-    	flex: 1 1 auto;
-    	color: #00ffdc;
-    	background-color: #0f131c;
-    	border: 1px solid #00ffdc;
-    	border-radius: 2px;
-    	cursor: pointer;
-    }
-    #questionVote:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-      cursor: pointer;
-    }
-    #questionVote:active {
     	color: #00ffdc;
     	background-color: #0f131c;
     }
@@ -1556,6 +1541,11 @@
       color: #00ffdc;
       border: 1px solid #00dcff;
       border-width: 1px 0px 0px 0px;
+    }
+    #welcomeMore:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+      cursor: pointer;
     }
     #sideBarMore {
       text-align: center;

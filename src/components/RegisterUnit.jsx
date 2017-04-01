@@ -54,7 +54,7 @@ $.ajax({
                 <div id="enter">Enter</div>
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" autofocus/> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
-                <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submit"/></Link>
+                <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
             </form>
             <div id="loginButton">Login</div>
         </div>
