@@ -1337,15 +1337,6 @@
     	padding: 0px 5px 5px 5px;
     	font-size: 90%;
     }
-    #moreButton {
-    	margin: auto;
-    	text-align: center;
-    	font-size: 120%;
-    	padding: 5px;
-    	color: #00ffdc;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 0px 0px 0px;
-    }
 
 /*End Welcome*/
 
@@ -1556,6 +1547,15 @@
     	color: #0f131c;
     	background-color: #00ffdc;
       cursor: pointer;
+    }
+    #welcomeMore {
+      margin: auto;
+      text-align: center;
+      font-size: 120%;
+      padding: 5px;
+      color: #00ffdc;
+      border: 1px solid #00dcff;
+      border-width: 1px 0px 0px 0px;
     }
     #sideBarMore {
       text-align: center;

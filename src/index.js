@@ -14,7 +14,7 @@ import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
-import WelcomeBox from './components/Welcome.jsx';
+import Welcome from './components/WelcomeContainer.jsx';
 import LoginContainer from './components/LoginContainer.jsx';
 import Info from './components/Info.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
@@ -25,7 +25,7 @@ import './assets/index.css';
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-    <Route path='/welcome' component={WelcomeBox}></Route>
+    <Route path='/welcome' component={Welcome}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
       <IndexRoute component={LoginContainer}></IndexRoute>
