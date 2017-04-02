@@ -58,9 +58,9 @@ $.ajax({
         <div id="register">
             <form action="http://www.xprincipia.com/register.php" method="post" id="registerForm">
                 <div id="enter">Enter</div>
-                <input type="text" name="firstname" required="required" maxLength="30" placeholder="First Name" id="registerFirstName" />
+                <input type="text" name="firstname" required="required" maxLength="30" placeholder="First Name" id="registerFirstName" autofocus />
                 <input type="text" name="lastname" required="required" maxLength="30" placeholder="Last Name" id="registerLastName" />
-                <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" autofocus/> <br />
+                <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" /> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
                 <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
             </form>

@@ -668,11 +668,10 @@
     	flex-direction: row;
     	width: 99%;
     	border: 1px solid #00dcff;
-    	border-width: 0px 1px;
+    	border-width: 0px 0px;
     	min-height: 99%;
     }
     #info, #signup, #register {
-    	border-width: 0px 2px;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
     	margin: 5px 5px 10px 5px;
@@ -692,8 +691,8 @@
     	letter-spacing: .15em;
     	font-size: 200%;
     	text-align: center;
-    	margin-top: 90px;
-    	padding: 5px 0px 5px 13px;
+    	margin-top: 14%;
+    	padding: 0px 0px 5px 13px;
     }
     #bannerTitle {
     	font-size: 200%;
@@ -727,7 +726,7 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    	margin: 30% 15% 5% 15%;
+    	margin: 20% 15% 5% 15%;
     	text-align: center;
     }
     #enter {
@@ -737,10 +736,8 @@
     	border-width: 0px 0px 1px 0px;
     	margin-bottom: 5px;
     }
-    #loginEmail, #registerEmail {
+    #loginEmail, #registerFirstName {
     	margin-top: 15px;
-    }
-    #loginPassword, #registerPassword {
     }
     input {
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -758,7 +755,7 @@
     #submitLogin, #submitRegister {
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	border-width: 1px 0px 0px 0px;
+    	border-width: 1px 0px 1px 0px;
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
@@ -771,11 +768,14 @@
     	cursor: pointer;
     }
     #registerButton, #loginButton {
-    	text-align: center;
+      text-align: center;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
-    	margin: 0% 19%;
-    	font-size: 150%;
+    	margin: 40% 19% 5% 19%;
+    	font-size: 120%;
+    }
+    #registerButton {
+      margin: 20% 19% 5% 19%;
     }
     #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
