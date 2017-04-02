@@ -56,7 +56,7 @@ export default class LoginUnit extends React.Component {
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword"/> <br />
                 <Link to='/welcome'><input type="submit" value="Login" onClick={this.postLogin} id="submitLogin"/></Link>
             </form>
-            <div id="registerButton">Register</div>
+            <Link to='/register'><div id="registerButton">Register</div></Link>
         </div>
 
       );
