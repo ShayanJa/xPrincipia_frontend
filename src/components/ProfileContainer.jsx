@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import img from '../assets/dnablackinvert.png'
 import SearchUnit from './SearchUnit.jsx';
+import ProfileUnit from './ProfileUnit.jsx';
 
 export default class ProfileContainer extends React.Component {
    render() {
@@ -38,10 +39,10 @@ export default class ProfileContainer extends React.Component {
                 </div>
             </div>
             <div id="profileRightElements">
-              <SearchUnit />
-              <SearchUnit />
-              <SearchUnit />
-              <SearchUnit />
+              <ProfileUnit />
+              <ProfileUnit />
+              <ProfileUnit />
+              <ProfileUnit />
             </div>
             <a href="moreElementsHere"><div id="moreButton">
                 More

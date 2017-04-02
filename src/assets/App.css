@@ -930,12 +930,16 @@
     	border-width: 1px 0px 0px 0px;
     	padding: 2px;
     }
+    #profileRightUnit:hover {
+      color: #ffffff;
+      cursor: pointer;
+    }
     #profileUnitTitle {
       display: block;
       margin: 0px;
       padding: 2px 5px 2px 5px;
       font-size: 100%;
-      color: #00dcff;
+      color: #00dcff !important;
       line-height: 95%;
       height: auto;
     }
@@ -1123,12 +1127,8 @@
   padding-left: 3px;
   padding-bottom: 0px;
 }
-#subProblemUnit:hover #percent {
-  color: #00ffdc;
-  cursor: pointer;
-}
-#solutionUnit:hover #percent {
-  color: #00ffdc;
+#subProblemUnit:hover #subProblemSummary, #solutionUnit:hover #solutionUnitSummary {
+  color: #ffffff;
   cursor: pointer;
 }
 #percent {
@@ -1163,6 +1163,7 @@
   letter-spacing: 1px;
 }
 #subProblemSummary, #solutionUnitSummary {
+  color: #dddddd;
   clear: both;
   border: 1px solid #dddddd;
   border-width: 0px 0px 0px 0px;

@@ -4,7 +4,7 @@ import WelcomeUnit from './WelcomeUnit.jsx';
 import WelcomeForm from './WelcomeForm.jsx';
 import WelcomeMore from './WelcomeMore.jsx';
 
-export default class SearchContainer extends React.Component {
+export default class WelcomeContainer extends React.Component {
    render() {
       return (
         <div id="welcomeBox">

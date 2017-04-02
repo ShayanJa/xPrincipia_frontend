@@ -3,29 +3,31 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 import AnswerContainer from './components/AnswerContainer.jsx';
-import SideBar from './components/SideBar';
-import Layout from './components/Layout.jsx';
-import SolutionContainer from './components/SolutionContainer.jsx';
 import CreatedSolution from './components/CreatedSolution.jsx';
 import CreateProblem from './components/CreateProblem.jsx';
 import CreateSolution from './components/CreateSolution.jsx';
-import QuestionContainer from './components/QuestionContainer.jsx';
-import SuggestionContainer from './components/SuggestionContainer.jsx';
-import SubProblemContainer from './components/SubProblemContainer.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
-import Welcome from './components/WelcomeContainer.jsx';
-import LoginContainer from './components/LoginContainer.jsx';
 import Info from './components/Info.jsx';
+import Layout from './components/Layout.jsx';
+import LoginContainer from './components/LoginContainer.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
+import ProfileContainer from './components/ProfileContainer.jsx';
+import QuestionContainer from './components/QuestionContainer.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
-import ProfileContainer from './components/ProfileContainer.jsx'
+import SearchContainer from './components/SearchContainer.jsx';
+import SideBar from './components/SideBar';
+import SolutionContainer from './components/SolutionContainer.jsx';
+import SuggestionContainer from './components/SuggestionContainer.jsx';
+import SubProblemContainer from './components/SubProblemContainer.jsx';
+import WelcomeContainer from './components/WelcomeContainer.jsx';
 import './assets/index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-    <Route path='/welcome' component={Welcome}></Route>
+    <Route path='/welcome' component={WelcomeContainer}></Route>
+    <Route path='/search' component={SearchContainer}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
       <IndexRoute component={LoginContainer}></IndexRoute>
