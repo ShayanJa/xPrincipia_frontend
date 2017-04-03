@@ -34,21 +34,21 @@ ReactDOM.render(
       <Route path='/login' component={LoginUnit}></Route>
       <Route path='/register' component={RegisterUnit}></Route>
     </Route>
-      <IndexRoute component={Layout}></IndexRoute>
-      <Route path='/home' component={Layout}>
-        <IndexRoute component={FullProblem}></IndexRoute>
-        <Route path='/problem' component={FullProblem}>
-          <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='/problem/sidebar' component={SideBar}>
-            <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/problem/solutions' component={SolutionContainer}></Route>
-            <Route path='/problem/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/problem/questions' component={QuestionContainer}></Route>
-            <Route path='/problem/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/problem/createsolution' component={CreateSolution}></Route>
-            <Route path='/problem/createproblem' component={CreateProblem}></Route>
-          </Route>
+    <IndexRoute component={Layout}></IndexRoute>
+    <Route path='/home' component={Layout}>
+      <IndexRoute component={FullProblem}></IndexRoute>
+      <Route path='/problem' component={FullProblem}>
+        <IndexRoute component={SideBar}></IndexRoute>
+        <Route path='/problem/sidebar' component={SideBar}>
+          <IndexRoute component={SolutionContainer}></IndexRoute>
+          <Route path='/problem/solutions' component={SolutionContainer}></Route>
+          <Route path='/problem/suggestions' component={SuggestionContainer}></Route>
+          <Route path='/problem/questions' component={QuestionContainer}></Route>
+          <Route path='/problem/subproblems' component={SubProblemContainer}></Route>
+          <Route path='/problem/createsolution' component={CreateSolution}></Route>
+          <Route path='/problem/createproblem' component={CreateProblem}></Route>
         </Route>
+      </Route>
         <IndexRoute component={FullSolution}></IndexRoute>
         <Route path='/fullsolution' component={FullSolution}>
           <IndexRoute component={SideBar}></IndexRoute>

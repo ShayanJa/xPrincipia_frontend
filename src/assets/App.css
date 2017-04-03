@@ -678,10 +678,6 @@
     	flex: 1 1 auto;
     	width: 60%;
     }
-    #info {
-    	/*border: 1px solid #00dcff;
-    	border-width: 0px 1px;*/
-    }
     #signup, #register {
     	width: 40%;
     }
@@ -726,8 +722,12 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    	margin: 20% 15% 5% 15%;
+    	margin: 21% 15% 0% 15%;
     	text-align: center;
+      height: 193px;
+    }
+    #registerForm {
+      height: 285px;
     }
     #enter {
     	color: #00dcff;
@@ -738,6 +738,9 @@
     }
     #loginEmail, #registerFirstName {
     	margin-top: 15px;
+    }
+    #loginPassword, #registerPassword {
+      margin-bottom: 19px;
     }
     input {
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -755,7 +758,7 @@
     #submitLogin, #submitRegister {
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	border-width: 1px 0px 1px 0px;
+    	border-width: 1px 0px 0px 0px;
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
@@ -771,12 +774,12 @@
       text-align: center;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
-    	margin: 40% 19% 5% 19%;
+      border-width: 0px 1px 1px 1px;
+      border-radius: 3px;
+    	margin: 0% 19% 5% 19%;
     	font-size: 120%;
     }
-    #registerButton {
-      margin: 20% 19% 5% 19%;
-    }
+
     #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
@@ -1248,6 +1251,7 @@
     #welcomeBox {
     	margin: 7% 20% 0% 20%;
     	border: 1px solid #00dcff;
+      border-radius: 3px;
     }
     #welcomePrompt {
     	margin: 15px 0px 10px 0px;
