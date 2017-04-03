@@ -978,13 +978,12 @@
     }
     #exploreForm{
     	overflow: hidden;
-    	padding: 5px 0px 5px 0px;
+    	padding: 15px 0px 0px 0px;
     	margin: 0px;
     	text-align: center;
     	color: #dddddd;
     	letter-spacing: 8px;
     	font-size: 100%;
-    	padding-top: 10px;
     	}
     #exploreInput {
     	color: #dddddd;
@@ -1190,7 +1189,7 @@
     	text-align: center;
     	color: #00dcff;
     }
-    #exploreForm{
+    #exploreWelcomeForm{
     	overflow: hidden;
     	padding: 5px 0px 5px 0px;
     	margin: 0px;

@@ -18,8 +18,8 @@ export default class SearchForm extends React.Component {
         <div id="searchFormComponent">
           <form action="http://www.xprincipia.com/search.php" method="get" id="exploreForm">
               <input type="search" name="search"
-                  placeholder="Explore" id="exploreInput" onkeypressautofocus/>
-              <input type="submit" value="Go" onkeypress="handle(event)" id="submitExplore" />
+                  placeholder="Explore" onkeypress="handle(event)" id="exploreInput" autofocus/>
+              <input type="submit" value="Go" id="submitExplore" />
           </form>
         </div>
 
