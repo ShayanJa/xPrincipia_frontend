@@ -1216,9 +1216,36 @@
     #submitExplore {
     	display: none;
     }
-    #welcomeProblemsElements {
+    #welcomeUnitsContainer {
     	margin: 2px 15px 5px 5px;
     	padding: 5px;
+    }
+    #createWelcomeButton {
+      background-color: #0f131c;
+      color: #00dcff;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 150%;
+      font-weight: 100;
+      border: 1px solid #00dcff;
+      border-width: 1px 0px;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      -webkit-transition-duration: 0s;
+      transition-duration: 0s;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      letter-spacing: 16px;
+    }
+    #createWelcomeButton:hover {
+      background-color: #00dcff;
+      color: #0f131c;
+      cursor: pointer;
+    }
+    #createWelcomeButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #welcomeProblemsUnit {
     	border: 1px solid #00dcff;
@@ -1401,6 +1428,10 @@
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
+    }
+    #createButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #sidebarElements {
     	border: 1px solid #00dcff;

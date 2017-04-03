@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WelcomeUnit from './WelcomeUnit.jsx';
+import { Link } from 'react-router';
+import WelcomeUnitsContainer from './WelcomeUnit.jsx';
 import WelcomeForm from './WelcomeForm.jsx';
 import WelcomeMore from './WelcomeMore.jsx';
 
@@ -10,12 +11,8 @@ export default class WelcomeContainer extends React.Component {
         <div id="welcomeBox">
             <h1 id="welcomePrompt">Welcome to Xprincipia</h1>
             <WelcomeForm />
-            <div id="welcomeProblemsElements">
-              <WelcomeUnit />
-              <WelcomeUnit />
-              <WelcomeUnit />
-              <WelcomeUnit />
-            </div>
+            <Link to="/problem/createproblem"><div id="createWelcomeButton">Create</div></Link>
+            <WelcomeUnitsContainer />
             <WelcomeMore />
         </div>
       );

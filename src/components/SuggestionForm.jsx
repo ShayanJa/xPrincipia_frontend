@@ -23,7 +23,7 @@ $.ajax({
   crossDomain: 'true',
   type: 'POST',
   headers: {'Content-Type' : 'application/json'},
-  url: 'http://localhost:10000/problem/suggestions',
+  url: 'http://localhost:10000/suggestions/create',
   processData: false,
   data: JSON.stringify({
     'suggestion' : this.state.suggestion,
