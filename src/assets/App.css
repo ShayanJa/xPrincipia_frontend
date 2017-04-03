@@ -1054,9 +1054,11 @@
   padding-left: 3px;
   padding-bottom: 0px;
 }
+#subProblemUnit:hover, #solutionUnit:hover {
+  cursor: pointer;
+}
 #subProblemUnit:hover #subProblemSummary, #solutionUnit:hover #solutionUnitSummary {
   color: #ffffff;
-  cursor: pointer;
 }
 #percent {
   float: left;

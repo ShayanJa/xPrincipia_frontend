@@ -65,7 +65,7 @@ export default class CreateSolution extends React.Component {
             <fieldset>
                 <legend>Create: Solution</legend>
                       <label htmlFor="solutionTitle">Title<br />
-                          <input type="text" name="solutionTitle" required="required" maxLength="140" placeholder="Enter title here" id="solutionTitleForm" autofocus/>
+                          <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autofocus/>
                         </label><br />
 
                       <label htmlFor="solutionSummary">Summary<br />
