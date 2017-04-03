@@ -52,7 +52,7 @@ export default class CreateProblem extends React.Component {
     },
 
     });
-  }
+  };
 
   render() {
       return (
