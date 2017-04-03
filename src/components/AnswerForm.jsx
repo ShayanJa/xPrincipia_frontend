@@ -14,11 +14,11 @@ constructor(){
   this.postAnswer = this.postAnswer.bind(this);
 };
 
-postLogin() {
+postAnswer() {
   //Read field items into component state
   this.state.answer = document.getElementById('answerTextArea').value
 
-// Ajax post solution request
+// Ajax post answer request
 $.ajax({
   crossDomain: 'true',
   type: 'POST',
@@ -46,12 +46,12 @@ $.ajax({
       return (
 
       <div id="answerFormComponent">
-        <form action="http://www.xprincipia.com/answer.php" method="post" id="answerForm">
+        <form id="answerForm">
             <fieldset>
                 <legend>Answer</legend>
                      <textarea name="answerText" required="required" id="answerTextArea"></textarea>
                      <br />
-                     <input type="submit" value="Add" id="addAnswer"/>
+                     <input type="submit" value="Add" onClick={this.postAnswer} id="addAnswer"/>
             </fieldset>
         </form>
       </div>

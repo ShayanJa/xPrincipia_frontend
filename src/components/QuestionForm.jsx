@@ -4,16 +4,54 @@ import $ from 'min-jquery'
 
 export default class QuestionForm extends React.Component {
 
+constructor(){
+  super();
+
+  this.state= {
+    question: '',
+  }
+
+  this.postQuestion = this.postQuestion.bind(this);
+};
+
+postQuestion() {
+  //Read field items into component state
+  this.state.question = document.getElementById('questionTextArea').value
+
+// Ajax post question request
+$.ajax({
+  crossDomain: 'true',
+  type: 'POST',
+  headers: {'Content-Type' : 'application/json'},
+  url: 'http://localhost:10000/problem/questions',
+  processData: false,
+  data: JSON.stringify({
+    'question' : this.state.question,
+  }),
+  success: function(result){
+    console.log(result)
+
+    alert('Your question has been asked.')
+  },
+  error: function(result){
+    console.log(result)
+
+    alert('Please try again.')
+  },
+
+  });
+}
+
    render() {
       return (
 
       <div id="questionFormComponent">
-            <form action="http://www.xprincipia.com/question.php" method="post" id="questionForm">
+            <form id="questionForm">
                 <fieldset>
                     <legend>Questions</legend>
                          <textarea name="questionText" required="required" id="questionTextArea"></textarea>
                          <br />
-                         <input type="submit" value="Ask" id="askquestion"/>
+                         <input type="submit" value="Ask" onClick={this.postQuestion} id="askquestion"/>
                 </fieldset>
             </form>
       </div>
