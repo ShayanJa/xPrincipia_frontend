@@ -164,7 +164,7 @@
 
 
 
- /*CreateProblem*/
+ /*CreateProblem and Create Solution*/
 
     #createForm {
       background-color: #0f131c;
@@ -175,35 +175,38 @@
       border-radius: 3px;
       padding: 5px 5px 5px 5px;
      }
+    #problemSummaryForm, #problemDescriptionForm,
+    #problemRequirementsForm, #problemReferencesForm,
+    #solutionSummaryForm, #solutionReferencesForm {
+    	font-family: 'Alegreya Sans';
+    	text-align: left;
+    	height: 5em;
+    }
+    fieldset {
+    	border: 1px solid #00dcff;
+    }
     input, textarea {
-     	font-family: 'Alegreya Sans SC', sans-serif;
-     	font-size: 100%;
-     	color: #ffffff;
-     	background-color: #0f131c;
-     	text-align: center;
-     	border: 1px solid #ffffff;
-     	border-radius: 5px;
-     	padding: 3px 8px 3px 8px;
-     	display: block;
-     	float: left;
-     	margin-bottom: 10px;
-     	margin-left: 7%;
-     	width: 82%;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 100%;
+      color: #ffffff;
+      background-color: #0f131c;
+      text-align: center;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 3px 8px 3px 8px;
+      display: block;
+      float: left;
+      margin-bottom: 10px;
+      margin-left: 7%;
+      width: 82%;
       resize: none;
     }
-    #problemSummaryForm, #problemDescriptionForm, #problemRequirementsForm, #problemReferencesForm {
-    	font-family: 'Alegreya Sans';
-    	text-align: left;
-    	height: 5em;
-    }
-    fieldset {
-    	border: 1px solid #00dcff;
-    }
     textarea {
     	text-align: left;
     	font-family: 'Alegreya Sans', sans-serif;
     	font-weight: 100;
     	height: 10em;
+      margin-left: 7.5%;
     }
     input:focus {
     	border-color: #00dcff;
@@ -211,92 +214,15 @@
     textarea:focus {
     	border-color: #00dcff;
     }
-    input#submitProblem {
+    input#submitProblem, input#submitSolution {
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
-    	width: 85%;
-    	margin-left: 7%;
+    	width: 86%;
+    	margin-left: 7.5%;
     }
-    input#submitProblem:hover {
-    	color: #0f131c;
-    	border: 1px solid #0f131c;
-    	background-color: #00dcff;
-    	cursor: pointer;
-    }
-    label {
-    	display: block;
-    	float: center;
-    	font-weight: 100;
-    	text-align: center;
-    	width: 100%;
-    	font-size: 120%;
-    }
-
-/*End CreateProblem*/
-
-
-
-/*CreateSolution*/
-
-    #createForm {
-      background-color: #0f131c;
-      color: #00dcff;
-      height: auto;
-      border: 2px solid #00dcff;
-      border-width: 0px 0px 1px 0px;
-      border-radius: 3px;
-      padding: 5px 5px 5px 5px;
-    }
-    input, textarea {
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 100%;
-    	color: #ffffff;
-    	background-color: #0f131c;
-    	text-align: center;
-    	border: 1px solid #ffffff;
-    	border-radius: 5px;
-    	padding: 3px 8px 3px 8px;
-    	display: block;
-    	float: left;
-    	margin-bottom: 10px;
-    	margin-left: 7%;
-    	width: 82%;
-    	resize: none;
-    }
-    #solutionSummaryForm {
-    	font-family: 'Alegreya Sans';
-    	text-align: left;
-    	height: 5em;
-    }
-    fieldset {
-    	border: 1px solid #00dcff;
-    }
-    textarea {
-    	text-align: left;
-    	font-family: 'Alegreya Sans', sans-serif;
-    	font-weight: 100;
-    	height: 10em;
-    }
-    #solutionReferencesForm {
-    	height: 5em;
-    }
-    input:focus {
-    	border-color: #00dcff;
-    }
-    textarea:focus {
-    	border-color: #00dcff;
-    }
-    input#submitSolution {
-    	display: block;
-    	color: #00dcff;
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	width: 85%;
-    	margin-left: 7%;
-    }
-    input#submitSolution:hover {
+    input#submitProblem:hover, input#submitSolution:hover {
     	color: #0f131c;
     	border: 1px solid #0f131c;
     	background-color: #00dcff;
@@ -316,7 +242,6 @@
 
 
 /*CreatedSolution, FullSolution, and Problem*/
-
 
     #solution, #problem {
     	border: 1px solid #00dcff;

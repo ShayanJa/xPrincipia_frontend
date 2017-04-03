@@ -9,7 +9,7 @@ export default class CreateProblem extends React.Component {
 
     this.state= {
       title: '',
-      summary: '',
+      field: '',
       description: '',
       requirements: '',
       references: ''
@@ -21,7 +21,7 @@ export default class CreateProblem extends React.Component {
   postSolution() {
     //Read field items into component state
     this.state.title = document.getElementById('problemTitle').value
-    this.state.summary = document.getElementById('problemSummary').value
+    this.state.field = document.getElementById('problemField').value
     this.state.description = document.getElementById('problemDescriptionForm').value
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
@@ -35,7 +35,7 @@ export default class CreateProblem extends React.Component {
     processData: false,
     data: JSON.stringify({
       'title' : this.state.title,
-      'summary' : this.state.summary,
+      'field' : this.state.field,
       'description' : this.state.description,
       'requirements' : this.state.requirements,
       'references' : this.state.references
@@ -61,15 +61,15 @@ export default class CreateProblem extends React.Component {
               <fieldset>
                   <legend>Create:Problem</legend>
                         <label htmlFor="problemTitle">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autofocus/>
+                            <input type="text" name="problemTitle" required="required" maxLength="140" placeholder="Enter title here" id="problemTitleForm" autofocus/>
                           </label><br />
 
-                        <label htmlFor="problemSubject">Subject<br />
-                            <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Identify the primary subject of the problem." id="problemSubjectForm"/>
+                        <label htmlFor="problemField">Field<br />
+                            <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
                           </label><br />
 
                         <label htmlFor="problemSummary">Summary<br />
-                            <textarea name="problemSummary" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="problemSummaryForm"/>
+                            <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="problemFieldForm"/>
                           </label><br />
 
                         <label htmlFor="problemDescription">Description<br />
