@@ -26,7 +26,7 @@ $.ajax({
   url: 'http://localhost:10000/questions/create',
   processData: false,
   data: JSON.stringify({
-    'question' : this.state.question,
+    'Description' : this.state.question,
   }),
   success: function(result){
     console.log(result)
