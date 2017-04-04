@@ -50,6 +50,7 @@ ReactDOM.render(
           <Route path='/problem/solutions' component={SolutionContainer}></Route>
           <Route path='/problem/suggestions' component={SuggestionContainer}></Route>
           <Route path='/problem/questions' component={QuestionContainer}></Route>
+          <Route path='/problem/answers' component={AnswerContainer}></Route>
           <Route path='/problem/subproblems' component={SubProblemContainer}></Route>
           <Route path='/problem/createsolution' component={CreateSolution}></Route>
           <Route path='/problem/createproblem' component={CreateProblem}></Route>
