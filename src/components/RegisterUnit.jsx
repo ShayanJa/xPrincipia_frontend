@@ -11,8 +11,8 @@ constructor(){
   this.state= {
     email: '',
     password: '',
-    firstname: '',
-    lastname: ''
+    fullname: '',
+    username: ''
   }
 
   this.postRegister = this.postRegister.bind(this);
@@ -22,8 +22,8 @@ postRegister() {
   //Read field items into component state
   this.state.email = document.getElementById('registerEmail').value
   this.state.password = document.getElementById('registerPassword').value
-  this.state.firstname = document.getElementById('registerFirstName').value
-  this.state.firstname = document.getElementById('registerLastName').value
+  this.state.fullname = document.getElementById('registerFullName').value
+  this.state.fullname = document.getElementById('registerUserName').value
 
 // Ajax post register request
 $.ajax({
@@ -35,8 +35,8 @@ $.ajax({
   data: JSON.stringify({
     'email' : this.state.email,
     'password' : this.state.password,
-    'firstname' : this.state.firstname,
-    'lastname' : this.state.lastname
+    'fullname' : this.state.fullname,
+    'username' : this.state.username
   }),
   success: function(result){
     console.log(result)
@@ -58,8 +58,8 @@ $.ajax({
         <div id="register">
             <form action="http://www.xprincipia.com/register.php" method="post" id="registerForm">
                 <div id="enter">Enter</div>
-                <input type="text" name="firstname" required="required" maxLength="30" placeholder="First Name" id="registerFirstName" autofocus />
-                <input type="text" name="lastname" required="required" maxLength="30" placeholder="Last Name" id="registerLastName" />
+                <input type="text" name="fullname" required="required" maxLength="30" placeholder="Full Name" id="registerFullName" autofocus />
+                <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" /> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
                 <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>

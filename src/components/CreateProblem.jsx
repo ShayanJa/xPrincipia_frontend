@@ -60,27 +60,27 @@ export default class CreateProblem extends React.Component {
             <form id="createForm">
               <fieldset>
                   <legend>Create:Problem</legend>
-                        <label htmlFor="problemTitle">Title<br />
+                        <label htmlFor="problemTitle" id="problemTitleLabel">Title<br />
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autofocus/>
                           </label><br />
 
-                        <label htmlFor="problemField">Field<br />
+                        <label htmlFor="problemFieldLabel" id="problemFieldLabel">Field<br />
                             <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
                           </label><br />
 
-                        <label htmlFor="problemSummary">Summary<br />
+                        <label htmlFor="problemSummary" id="problemSummaryLabel">Summary<br />
                             <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="problemFieldForm"/>
                           </label><br />
 
-                        <label htmlFor="problemDescription">Description<br />
+                        <label htmlFor="problemDescription" id="problemDescriptionLabel">Description<br />
                             <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
                             </textarea></label><br />
 
-                        <label htmlFor="problemRequirements">Requirements<br />
+                        <label htmlFor="problemRequirements" id="problemRequirementsLabel">Requirements<br />
                             <textarea name="problemRequirements" placeholder="List requirements that solutions need to fulfill. Please enter as a list with a space between each requirement. " id="problemRequirementsForm">
                             </textarea></label><br />
 
-                        <label htmlFor="problemReferences">References<br />
+                        <label htmlFor="problemReferences" id="problemReferencesLabel">References<br />
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 

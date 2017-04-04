@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import WelcomeUnit from './WelcomeUnit.jsx';
+import WelcomeMore from './WelcomeMore.jsx';
 
 export default class WelcomeUnitsContainer extends React.Component {
    render() {
@@ -11,6 +12,7 @@ export default class WelcomeUnitsContainer extends React.Component {
           <WelcomeUnit />
           <WelcomeUnit />
           <WelcomeUnit />
+          <WelcomeMore />
         </div>
       );
    }

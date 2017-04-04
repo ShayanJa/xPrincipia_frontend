@@ -21,12 +21,18 @@ import SolutionContainer from './components/SolutionContainer.jsx';
 import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
 import WelcomeContainer from './components/WelcomeContainer.jsx';
+import WelcomeCreate from './components/WelcomeCreate.jsx';
+import WelcomeUnitsContainer from './components/WelcomeUnitsContainer.jsx';
 import './assets/index.css';
 
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-    <Route path='/welcome' component={WelcomeContainer}></Route>
+    <Route path='/welcomecontainer' component={WelcomeContainer}>
+      <IndexRoute component={WelcomeUnitsContainer}></IndexRoute>
+      <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
+      <Route path='/welcome/create' component={WelcomeCreate}></Route>
+    </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
     <Route path='/logincontainer' component={LoginContainer}>

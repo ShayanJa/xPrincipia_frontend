@@ -64,27 +64,27 @@ export default class CreateSolution extends React.Component {
           <form id="createForm">
             <fieldset>
                 <legend>Create: Solution</legend>
-                      <label htmlFor="solutionTitle">Title<br />
+                      <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
                           <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autofocus/>
                         </label><br />
 
-                      <label htmlFor="solutionSummary">Summary<br />
+                      <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
                           <textarea name="solutionSummary" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="solutionSummaryForm"/>
                         </label><br />
 
-                      <label htmlFor="solutionDescription">Description<br />
+                      <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
                           <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionDescriptionForm">
                           </textarea></label><br />
 
-                      <label htmlFor="solutionEvidence">Evidence/Logic<br />
+                      <label htmlFor="solutionEvidence" id="solutionEvidenceFormLabel">Evidence/Logic<br />
                           <textarea name="solutionEvidence" placeholder="Provide your evidence and logic here." id="solutionEvidenceForm">
                           </textarea></label><br />
 
-                      <label htmlFor="futureExperiments">Future Experiments<br />
+                      <label htmlFor="futureExperiments" id="solutionExperimentsFormLabel">Future Experiments<br />
                           <textarea name="futureExperiments" placeholder="Outline future experiment ideas here." id="solutionExperimentsForm">
                           </textarea></label><br />
 
-                      <label htmlFor="solutionReferences">References<br />
+                      <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
                           </textarea></label><br />
                       <input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/>

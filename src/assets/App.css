@@ -182,6 +182,15 @@
     	text-align: left;
     	height: 5em;
     }
+    #problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
+    #problemDescriptionFormLabel, #problemRequirementsFormLabel,
+    #problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
+    #solutionDescriptionFormLabel, #solutionEvidenceFormLabel,
+    #solutionExperimentsFormLabel, #solutionReferenceFormLabel {
+      clear: both;
+      color: #00dcff;
+    }
+
     fieldset {
     	border: 1px solid #00dcff;
     }
@@ -566,7 +575,7 @@
       display: block;
       margin: 0 auto;
     }
-    #firstName {
+    #fullName {
       display: inline-block;
       margin: auto;
       font-size: 200%;
@@ -661,7 +670,7 @@
     	border-width: 0px 0px 1px 0px;
     	margin-bottom: 5px;
     }
-    #loginEmail, #registerFirstName {
+    #loginEmail, #registerFullName {
     	margin-top: 15px;
     }
     #loginPassword, #registerPassword {
