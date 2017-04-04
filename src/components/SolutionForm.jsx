@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'min-jquery';
 
 
-export default class CreateSolution extends React.Component {
+export default class SolutionForm extends React.Component {
 
   constructor(){
     super();

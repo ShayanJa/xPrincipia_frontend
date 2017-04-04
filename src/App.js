@@ -6,7 +6,7 @@ import './assets/index.css';
 import Header from './components/Header.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import SideBar from './components/SideBar.jsx';
-import CreateSolution from './components/CreateSolution.jsx';
+import SolutionForm from './components/SolutionForm.jsx';
 import SolutionContainer from './components/SolutionContainer.jsx';
 import QuestionContainer from './components/QuestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+
         {this.props.children}
       </div>
     );

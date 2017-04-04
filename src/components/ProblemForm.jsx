@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'min-jquery';
 
-export default class CreateProblem extends React.Component {
+export default class ProblemForm extends React.Component {
 
   constructor(){
     super();
@@ -31,14 +31,14 @@ export default class CreateProblem extends React.Component {
     crossDomain: 'true',
     type: 'POST',
     headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/problems/create',
+    url: 'http://localhost:10000/solutions/create',
     processData: false,
     data: JSON.stringify({
       'title' : this.state.title,
       'field' : this.state.field,
       'description' : this.state.description,
       'requirements' : this.state.requirements,
-      'references' : this.state.references,
+      'references' : this.state.references
     }),
     success: function(result){
       console.log(result)

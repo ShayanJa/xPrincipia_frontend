@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
-import CreateSolution from './CreateSolution.jsx';
-import CreateProblem from './CreateProblem.jsx';
+import SolutionForm from './SolutionForm.jsx';
+import ProblemForm from './ProblemForm.jsx';
 import SolutionContainer from './SolutionContainer.jsx';
 import SuggestionContainer from './SuggestionContainer.jsx';
 import QuestionContainer from './QuestionContainer.jsx';
