@@ -28,6 +28,11 @@
     a:link {
     	text-decoration: none;
     }
+    ul {
+      padding: 0px;
+      list-style-type: none;
+    }
+    ul li a {text-decoration: none}
 
 /*End Global*/
 

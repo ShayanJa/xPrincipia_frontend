@@ -8,7 +8,7 @@ export default class SolutionUnit extends React.Component {
 	render() {
 		return (
 
-	    <div id="solutionUnit">
+	    <div>
 	        {/*<div id="solutionUnitTitle">
 	            <div id="percent">70%</div>
 	            <div id="unitTitle">{this.props.solutions}</div>
@@ -23,7 +23,7 @@ export default class SolutionUnit extends React.Component {
 	renderItem(solution) {
   
     return (
-        <li key={solution.ID}>
+        <li key={solution.ID} id="solutionUnit">
         	<Link to={{pathname: '/solutions/'+solution.ID }} >
 				<div id="solutionUnitTitle">
 					<div id="percent">70%</div>
