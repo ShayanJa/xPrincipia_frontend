@@ -12,7 +12,7 @@ export default class SolutionContainer extends React.Component {
         this.state = {
             solutions: []
         }
-        
+
     };
         componentWillMount(){
         var self = this;
@@ -21,7 +21,7 @@ export default class SolutionContainer extends React.Component {
             self.setState({
                 solutions: response.data
             })
-        })  
+        })
     }
    render() {
       return (
@@ -30,9 +30,7 @@ export default class SolutionContainer extends React.Component {
             <SolutionUnit solutions={this.state.solutions} />
           <SideBarMore />
         </div>
-      
+
       );
    }
 }
-
-

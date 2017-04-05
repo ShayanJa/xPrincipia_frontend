@@ -60,7 +60,7 @@
     	display: -moz-box;
     	display: -ms-flexbox;
     	display: -webkit-flex;
-    	display: inline-flex;
+    	display: flex;
     	flex-direction: row;
     	font-family: 'Alegreya Sans';
     	padding-top: 10px;
@@ -132,7 +132,7 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
       font-family: 'Alegreya Sans';
       padding-top: 10px;
@@ -580,12 +580,12 @@
       display: block;
       margin: 0 auto;
     }
-    #fullName {
+    #avatarFullName {
       display: inline-block;
-      margin: auto;
+      margin: 0 auto;
       font-size: 200%;
       color: #dddddd;
-      float: center;
+      float: right;
       padding-left: 10%;
       letter-spacing: 8px;
     }
@@ -931,7 +931,7 @@
     	display: -moz-box;
     	display: -ms-flexbox;
     	display: -webkit-flex;
-    	display: inline-flex;
+    	display: flex;
     	flex-direction: row;
     	font-family: 'Alegreya Sans';
     	padding-top: 10px;
@@ -1144,7 +1144,7 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
       font-family: 'Alegreya Sans';
       padding-top: 10px;
