@@ -27,3 +27,4 @@ export default class SuggestionUnit extends React.Component {
 
   }
 }
+
