@@ -11,6 +11,7 @@ export default class ProblemForm extends React.Component {
       title: '',
       field: '',
       description: '',
+      summary: '',
       requirements: '',
       references: ''
     }
@@ -31,11 +32,12 @@ export default class ProblemForm extends React.Component {
     crossDomain: 'true',
     type: 'POST',
     headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/solutions/create',
+    url: 'http://localhost:10000/problems/create',
     processData: false,
     data: JSON.stringify({
       'title' : this.state.title,
-      'field' : this.state.field,
+      'field': this.state.field,
+      'summary': this.state.summary,
       'description' : this.state.description,
       'requirements' : this.state.requirements,
       'references' : this.state.references
