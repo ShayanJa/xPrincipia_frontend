@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import SolutionForm from './SolutionForm.jsx';
 import ProblemForm from './ProblemForm.jsx';
-import SolutionContainer from './SolutionContainer.jsx';
-import SuggestionContainer from './SuggestionContainer.jsx';
-import QuestionContainer from './QuestionContainer.jsx';
+import SolutionContainer from '../containers/SolutionContainer.jsx';
+import SuggestionContainer from '../containers/SuggestionContainer.jsx';
+import QuestionContainer from '../containers/QuestionContainer.jsx';
 
 
 export default class SideBarUserSolutionMenu extends React.Component {
