@@ -28,7 +28,6 @@ import QuestionContainer from './containers/QuestionContainer.jsx';
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
-
 import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 import './assets/index.css';
 
@@ -50,15 +49,9 @@ ReactDOM.render(
     <IndexRoute component={Layout}></IndexRoute>
     <Route path='/home' component={Layout}>
       <IndexRoute component={FullProblem}></IndexRoute>
-{/*<<<<<<< HEAD
-      <Route path='/problem' component={FullProblem}>
-        <IndexRoute component={SideBarProblem}></IndexRoute>
-        <Route path='/problem/sidebar' component={SideBarProblem}>
-=======*/}
       <Route path='/problem/:probID' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
-
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='/problem/*/answers' component={AnswerContainer}></Route>
           <Route path='/problem/:probID/create' component={ProblemForm}></Route>
