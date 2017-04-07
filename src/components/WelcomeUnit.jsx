@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import $ from 'min-jquery';
+
 
 export default class WelcomeUnit extends React.Component {
    
