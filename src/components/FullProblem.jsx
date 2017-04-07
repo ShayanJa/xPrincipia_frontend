@@ -29,7 +29,7 @@ export default class FullProblem extends React.Component {
             </p>
           </div>
           <div>
-            <h1 id="requirementsLabel">Requirements</h1>
+            <h1 id="problemRequirementsLabel">Requirements</h1>
             <p id="problemRequirements">
               Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
               Provide one future experiment idea for falsification and one for predictive verification

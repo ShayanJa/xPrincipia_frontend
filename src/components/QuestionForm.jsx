@@ -49,7 +49,7 @@ $.ajax({
             <form id="questionForm">
                 <fieldset>
                     <legend>Questions</legend>
-                         <textarea name="questionText" required="required" id="questionTextArea"></textarea>
+                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="submit" value="Ask" onClick={this.postQuestion} id="askquestion"/>
                 </fieldset>

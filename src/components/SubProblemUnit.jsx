@@ -17,18 +17,19 @@ export default class SubProblemUnit extends React.Component {
 	renderItem(problem) {
   
     return (
-        <li key={problem.ID} id="subProblemUnit">
+        <li key={problem.ID}>
+			<div id="subProblemUnit">
         	<Link to={{pathname: '/problem/'+problem.ID }} >
 				<div id="subProblemTitle">
-					<div id="percent">70%</div>
 					<div id="unitTitle">{problem.Title}</div>
+					<button type="button" id="questionVote">Vote</button>
 				</div>
 				<div id="subProblemSummary">
 					{problem.Summary}
 				</div>
 			</Link>
-
-        <br ></br> 
+			</div>
+        <br/><br/> 
         </li>)
   }
 }

@@ -8,7 +8,7 @@ import SuggestionContainer from './SuggestionContainer.jsx';
 import QuestionContainer from './QuestionContainer.jsx';
 
 
-export default class SideBarMenu extends React.Component {
+export default class SideBarProblemMenu extends React.Component {
    render() {
       return (
       <div id="sidebarMenu">

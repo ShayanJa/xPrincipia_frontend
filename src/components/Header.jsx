@@ -11,7 +11,7 @@ export default class Header extends React.Component {
             <div id="explore">
                 <form action="http://www.xprincipia.com/search.php" method="get" id="exploreFormHeader">
                     <input type="search" name="search"
-                        placeholder="Explore" id="exploreInput" autofocus/>
+                        placeholder="Explore" id="exploreInput" autoFocus/>
                     <input type="submit" value="Go" id="submitExplore" />
                 </form>
             </div>

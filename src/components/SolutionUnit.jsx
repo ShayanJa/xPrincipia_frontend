@@ -19,7 +19,8 @@ export default class SolutionUnit extends React.Component {
 
     return (
         <li key={solution.ID}>
-	    	<Link to={{pathname: '/solutions/'+solution.ID }}>
+			<div id="solutionUnit">
+			<Link to={{pathname: '/solutions/'+solution.ID }}>
 				<div id="solutionUnitTitle">
 					<div id="percent">70%</div>
 					<div id="unitTitle">{solution.Title}</div>
@@ -28,6 +29,7 @@ export default class SolutionUnit extends React.Component {
 					{solution.Summary}
 				</div>
 			</Link>
+			</div>
 		<br ></br>
         </li>);
   }

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 import AnswerContainer from './components/AnswerContainer.jsx';
-import CreatedSolution from './components/CreatedSolution.jsx';
+import UserSolution from './components/UserSolution.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
 import SolutionForm from './components/SolutionForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
@@ -16,7 +16,9 @@ import ProfileContainer from './components/ProfileContainer.jsx';
 import QuestionContainer from './components/QuestionContainer.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import SearchContainer from './components/SearchContainer.jsx';
-import SideBar from './components/SideBar';
+import SideBarProblem from './components/SideBarProblem';
+import SideBarFullSolution from './components/SideBarFullSolution';
+import SideBarUserSolution from './components/SideBarUserSolution';
 import SolutionContainer from './components/SolutionContainer.jsx';
 import SuggestionContainer from './components/SuggestionContainer.jsx';
 import SubProblemContainer from './components/SubProblemContainer.jsx';
@@ -44,8 +46,8 @@ ReactDOM.render(
     <Route path='/home' component={Layout}>
       <IndexRoute component={FullProblem}></IndexRoute>
       <Route path='/problem' component={FullProblem}>
-        <IndexRoute component={SideBar}></IndexRoute>
-        <Route path='/problem/sidebar' component={SideBar}>
+        <IndexRoute component={SideBarProblem}></IndexRoute>
+        <Route path='/problem/sidebar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='/problem/answers' component={AnswerContainer}></Route>
           <Route path='/problem/createproblem' component={ProblemForm}></Route>
@@ -58,8 +60,8 @@ ReactDOM.render(
       </Route>
         <IndexRoute component={FullSolution}></IndexRoute>
         <Route path='/fullsolution' component={FullSolution}>
-          <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='/fullsolution/sidebar' component={SideBar}>
+          <IndexRoute component={SideBarFullSolution}></IndexRoute>
+          <Route path='/fullsolution/sidebar' component={SideBarFullSolution}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
             <Route path='/fullsolution/answers' component={AnswerContainer}></Route>
             <Route path='/fullsolution/createproblem' component={ProblemForm}></Route>
@@ -70,10 +72,10 @@ ReactDOM.render(
             <Route path='/fullsolution/suggestions' component={SuggestionContainer}></Route>
           </Route>
         </Route>
-        <IndexRoute component={CreatedSolution}></IndexRoute>
-        <Route path='/usersolution' component={CreatedSolution}>
-          <IndexRoute component={SideBar}></IndexRoute>
-          <Route path='/usersolution/sidebar' component={SideBar}>
+        <IndexRoute component={UserSolution}></IndexRoute>
+        <Route path='/usersolution' component={UserSolution}>
+          <IndexRoute component={SideBarUserSolution}></IndexRoute>
+          <Route path='/usersolution/sidebar' component={SideBarUserSolution}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
             <Route path='/usersolution/answers' component={AnswerContainer}></Route>
             <Route path='/usersolution/createproblem' component={ProblemForm}></Route>
