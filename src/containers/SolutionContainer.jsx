@@ -27,7 +27,7 @@ export default class SolutionContainer extends React.Component {
    render() {
       return (
         <div id="solutions">
-           <Link to={`/solution/${this.props.params.probID}/create`}><div id="createButton">Create</div></Link>
+           <Link to={`/fullsolution/${this.props.params.probID}/create`}><div id="createButton">Create</div></Link>
             <SolutionUnit solutions={this.state.solutions} probID={this.props.params.probID}/>
           <SideBarMore />
         </div>

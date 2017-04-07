@@ -18,13 +18,13 @@ export default class SideBarFullSolutionMenu extends React.Component {
       <div id="sidebarMenu">
         <div id="solveMenu">
                 <div id="solveTitle">Solve</div>
-                  <Link to={`/problem/${this.props.probID}/problems`}><div id="solutionsButton">Top Solutions</div></Link>
-                  <Link to={`/problem/${this.props.probID}/solutions`}><div id="subproblemButton">Sub Problems</div></Link>
+                  <Link to={`/fullsolution/${this.props.probID}/solutions`}><div id="solutionsButton">Top Solutions</div></Link>
+                  <Link to={`/fullsolution/${this.props.probID}/subproblems`}><div id="subproblemButton">Sub Problems</div></Link>
         </div>
         <div id="developMenu">
                 <div id="developTitle">Develop</div>
-                  <Link to={`/problem/${this.props.probID}/questions`}><div id="questionsButton">Questions</div></Link>
-                  <Link to={`/problem/${this.props.probID}/suggestions`}><div id="suggestionsButton">Suggestions</div></Link>
+                  <Link to={`/fullsolution/${this.props.probID}/questions`}><div id="questionsButton">Questions</div></Link>
+                  <Link to={`/fullsolution/${this.props.probID}/suggestions`}><div id="suggestionsButton">Suggestions</div></Link>
         </div>
       </div>
 
