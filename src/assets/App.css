@@ -1331,10 +1331,14 @@
     	align-items: stretch;
     	flex-direction: row;
     }
-      #problem, #sidebar {
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	position: relative;
+    #container {
+      width: 100%;
+    }
+
+    #problem, #sidebar {
+    border: 1px solid #00dcff;
+    background-color: #0f131c;
+    position: relative;
     }
     #problem, #sidebar {
     	border-width: 0px 2px;

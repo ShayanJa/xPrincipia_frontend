@@ -36,7 +36,7 @@ export default class FullProblem extends React.Component {
    render() {
 
       return (
-      <div>
+      <div id='container'>
         <div id="fullProblem">
           <div id="problemHeader">
           <div id="parentButton">Parent</div>
