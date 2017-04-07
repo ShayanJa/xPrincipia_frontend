@@ -192,6 +192,10 @@
     	text-align: left;
     	height: 5em;
     }
+    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, 
+    #solutionEvidenceForm, #solutionExperimentsForm {
+      height: 10em;
+    }
     #problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
     #problemDescriptionFormLabel, #problemRequirementsFormLabel,
     #problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
@@ -1021,7 +1025,6 @@
   border: 2px solid #00dcff;
   border-width: 0px 0px 1px 0px;
   border-radius: 0px;
-  margin: 0px 0px 10px 0px;
   padding: 10px;
   padding-left: 3px;
   padding-bottom: 0px;
@@ -1072,11 +1075,7 @@
   flex-direction: row;
   font-family: 'Alegreya Sans';
   padding-top: 10px;
-}
-#subProblemTitle {
-      flex: 2 2 auto;
-      border: 1px solid #00ffdc;
-      border-width: 1px 0px 0px 0px;
+  flex: 2 2 auto;
 }
 #problemVote {
   flex: 2 2 auto;

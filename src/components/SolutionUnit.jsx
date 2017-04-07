@@ -30,7 +30,6 @@ export default class SolutionUnit extends React.Component {
 				</div>
 			</Link>
 			</div>
-		<br/><br/>
         </li>);
 
   }

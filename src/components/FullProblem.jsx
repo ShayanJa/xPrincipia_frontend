@@ -35,6 +35,13 @@ export default class FullProblem extends React.Component {
               Provide one future experiment idea for falsification and one for predictive verification
             </p>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p id="xp">XP</p>
+          <br />
         </div>
         <div id="sidebar">
           {this.props.children}

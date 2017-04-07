@@ -71,7 +71,7 @@ export default class ProblemForm extends React.Component {
                           </label><br />
 
                         <label htmlFor="problemSummary" id="problemSummaryFormLabel">Summary<br />
-                            <textarea name="problemField" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="problemFieldForm"/>
+                            <textarea name="problemField" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="problemSummaryForm"/>
                           </label><br />
 
                         <label htmlFor="problemDescription" id="problemDescriptionFormLabel">Description<br />

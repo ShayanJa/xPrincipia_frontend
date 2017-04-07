@@ -27,7 +27,6 @@ export default class SubProblemUnit extends React.Component {
 					<div id="subProblemSummary">{problem.Summary}</div>
 				</Link>
 			</div>
-        <br /><br /> 
         </li>)
   }
 }

@@ -46,7 +46,14 @@ export default class FullSolution extends React.Component {
                   Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
                   Provide one future experiment idea for falsification and one for predictive verification
               </p>
-          </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p id="xp">XP</p>
+            <br />
         </div>
         <div id="sidebar">
            {this.props.children}
