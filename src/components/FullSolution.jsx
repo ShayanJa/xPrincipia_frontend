@@ -43,7 +43,7 @@ export default class FullSolution extends React.Component {
             <div id="solutionIntro">
               <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
               <div id="voteSolution">Vote</div>
-              <div id="contributor">Ben Francis</div>
+              <div id="contributor">{this.state.solutionInfo.OriginalPosterUsername}</div>
               <div id="createDate">{this.state.solutionInfo.CreatedAt}</div>
               <h1 id="solutionSummaryLabel">Summary</h1>
               <p id="solutionSummary">
