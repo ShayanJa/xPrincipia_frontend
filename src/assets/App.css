@@ -535,12 +535,20 @@
     #avatarHeader {
       width: 25%;
       text-align: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      padding-right: 20px;
     }
     #avatarImage {
-    	border: 1px solid #00dcff;
+      border: 1px solid #00dcff;
     	border-radius: 50%;
       display: block;
       margin: 0 auto;
+      vertical-align: middle;
     }
     #avatarFullName {
       display: inline-block;
@@ -548,7 +556,6 @@
       font-size: 200%;
       color: #dddddd;
       float: right;
-      padding-left: 10%;
       letter-spacing: 8px;
     }
 
