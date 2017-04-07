@@ -1,8 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
-import FullProblem from './FullProblem.jsx';
-import FullSolution from './FullSolution.jsx';
 import CreatedSolution from './CreatedSolution.jsx';
 import SideBar from './SideBar.jsx';
 

@@ -1,10 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import $ from "min-jquery";
 import axios from "axios"
 import propTypes from 'react';
-import { apiMiddleware } from 'redux-api-middleware';
+
 
 export default class Create extends React.Component {
     constructor(){
