@@ -28,6 +28,12 @@
     a:link {
     	text-decoration: none;
     }
+    ul {
+      padding: 0px;
+      list-style-type: none;
+      margin: 0px;
+    }
+    ul li a {text-decoration: none}
 
 /*End Global*/
 
@@ -37,7 +43,7 @@
 
 
 
-/*Answer*/
+/*Answer and Question*/
 
     #sidebarElements {
       border: 1px solid #00dcff;
@@ -60,7 +66,7 @@
     	display: -moz-box;
     	display: -ms-flexbox;
     	display: -webkit-flex;
-    	display: inline-flex;
+    	display: flex;
     	flex-direction: row;
     	font-family: 'Alegreya Sans';
     	padding-top: 10px;
@@ -78,6 +84,10 @@
       font-size: 90%;
       color: #00ffdc;
     }
+    #answerAdder {
+      font-size: 90%;
+      color: #00dcff;
+    }
     #questionAnswers {
       flex: 1 1 auto;
       color: #00dcff;
@@ -85,6 +95,7 @@
       border: 1px solid #00dcff;
       border-radius: 2px;
       cursor: pointer;
+      height: 100%;
     }
     #questionAnswers:hover {
       color: #0f131c;
@@ -127,7 +138,7 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
       font-family: 'Alegreya Sans';
       padding-top: 10px;
@@ -164,7 +175,7 @@
 
 
 
- /*CreateProblem*/
+ /*CreateProblem and Create Solution*/
 
     #createForm {
       background-color: #0f131c;
@@ -175,35 +186,51 @@
       border-radius: 3px;
       padding: 5px 5px 5px 5px;
      }
+    #problemSummaryForm, #problemDescriptionForm,
+    #problemRequirementsForm, #problemReferencesForm,
+    #solutionSummaryForm, #solutionReferencesForm {
+    	font-family: 'Alegreya Sans';
+    	text-align: left;
+    	height: 5em;
+    }
+    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, 
+    #solutionEvidenceForm, #solutionExperimentsForm {
+      height: 10em;
+    }
+    #problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
+    #problemDescriptionFormLabel, #problemRequirementsFormLabel,
+    #problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
+    #solutionDescriptionFormLabel, #solutionEvidenceFormLabel,
+    #solutionExperimentsFormLabel, #solutionReferenceFormLabel {
+      clear: both;
+      color: #00dcff;
+    }
+
+    fieldset {
+    	border: 1px solid #00dcff;
+    }
     input, textarea {
-     	font-family: 'Alegreya Sans SC', sans-serif;
-     	font-size: 100%;
-     	color: #ffffff;
-     	background-color: #0f131c;
-     	text-align: center;
-     	border: 1px solid #ffffff;
-     	border-radius: 5px;
-     	padding: 3px 8px 3px 8px;
-     	display: block;
-     	float: left;
-     	margin-bottom: 10px;
-     	margin-left: 7%;
-     	width: 82%;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 100%;
+      color: #ffffff;
+      background-color: #0f131c;
+      text-align: center;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 3px 8px 3px 8px;
+      display: block;
+      float: left;
+      margin-bottom: 10px;
+      margin-left: 7%;
+      width: 82%;
       resize: none;
     }
-    #problemSummaryForm, #problemDescriptionForm, #problemRequirementsForm, #problemReferencesForm {
-    	font-family: 'Alegreya Sans';
-    	text-align: left;
-    	height: 5em;
-    }
-    fieldset {
-    	border: 1px solid #00dcff;
-    }
     textarea {
     	text-align: left;
     	font-family: 'Alegreya Sans', sans-serif;
     	font-weight: 100;
     	height: 10em;
+      margin-left: 7.5%;
     }
     input:focus {
     	border-color: #00dcff;
@@ -211,92 +238,15 @@
     textarea:focus {
     	border-color: #00dcff;
     }
-    input#submitProblem {
+    input#submitProblem, input#submitSolution {
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
-    	width: 85%;
-    	margin-left: 7%;
+    	width: 86%;
+    	margin-left: 7.5%;
     }
-    input#submitProblem:hover {
-    	color: #0f131c;
-    	border: 1px solid #0f131c;
-    	background-color: #00dcff;
-    	cursor: pointer;
-    }
-    label {
-    	display: block;
-    	float: center;
-    	font-weight: 100;
-    	text-align: center;
-    	width: 100%;
-    	font-size: 120%;
-    }
-
-/*End CreateProblem*/
-
-
-
-/*CreateSolution*/
-
-    #createForm {
-      background-color: #0f131c;
-      color: #00dcff;
-      height: auto;
-      border: 2px solid #00dcff;
-      border-width: 0px 0px 1px 0px;
-      border-radius: 3px;
-      padding: 5px 5px 5px 5px;
-    }
-    input, textarea {
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 100%;
-    	color: #ffffff;
-    	background-color: #0f131c;
-    	text-align: center;
-    	border: 1px solid #ffffff;
-    	border-radius: 5px;
-    	padding: 3px 8px 3px 8px;
-    	display: block;
-    	float: left;
-    	margin-bottom: 10px;
-    	margin-left: 7%;
-    	width: 82%;
-    	resize: none;
-    }
-    #solutionSummaryForm {
-    	font-family: 'Alegreya Sans';
-    	text-align: left;
-    	height: 5em;
-    }
-    fieldset {
-    	border: 1px solid #00dcff;
-    }
-    textarea {
-    	text-align: left;
-    	font-family: 'Alegreya Sans', sans-serif;
-    	font-weight: 100;
-    	height: 10em;
-    }
-    #solutionReferencesForm {
-    	height: 5em;
-    }
-    input:focus {
-    	border-color: #00dcff;
-    }
-    textarea:focus {
-    	border-color: #00dcff;
-    }
-    input#submitSolution {
-    	display: block;
-    	color: #00dcff;
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	width: 85%;
-    	margin-left: 7%;
-    }
-    input#submitSolution:hover {
+    input#submitProblem:hover, input#submitSolution:hover {
     	color: #0f131c;
     	border: 1px solid #0f131c;
     	background-color: #00dcff;
@@ -315,10 +265,9 @@
 
 
 
-/*CreatedSolution and FullSolution*/
+/*UserSolution, FullSolution, and Problem*/
 
-
-    #solution{
+    /*#solution, #problem {
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
     	position: relative;
@@ -338,8 +287,12 @@
     	border-radius: 0px;
       float: left;
       width: 60%;
+    }*/
+    #fullProblem, #fullSolution {
+      width: 60%;
+      float: left;
     }
-    #solutionHeader {
+    #solutionHeader, #problemHeader {
     	display: -webkit-box;
     	display: -moz-box;
     	display: -ms-flexbox;
@@ -388,29 +341,30 @@
     	color: #00dcff;
     	text-align: center;
     }
-    #solutionIntro {
+    #solutionIntro, #problemIntro {
     	border: 1px solid #00dcff;
     	border-width: 0px 0px 0px 0px;
     	border-radius: 0px;
     	margin: 0px 40px;
     	padding: 10px 0px;
     }
-    #solutionTitle {
+    #solutionTitle, #problemTitle {
     	border-width: 0px;
+      font-size: 260%;
     }
-    #solutionSummary {
+    #solutionSummary, #problemSummary {
       margin: 5px 25px;
     	line-height: 150%;
     	font-size: 120%;
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 0px;
     	padding: 5px;
     	margin-top: 20px;
       padding-top: 15px;
       padding-bottom: 20px;
     }
-    #solutionSummaryLabel {
-    	color: #00ffdc;
+    #solutionSummaryLabel, #problemSummaryLabel {
+    	color: #00dcff;
     }
     #contributor, #createDate {
     	width: 100%;
@@ -419,16 +373,16 @@
     #createDate {
     	margin-bottom: 10px;
     }
-    #followSolution {
+    #voteSolution, #followProblem {
       width: 30%;
-    	margin-left: 33%;
+    	margin-left: 33.7%;
     	padding-left: 2%;
     	background-color: #0f131c;
-    	color: #00ffdc;
+    	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 120%;
     	font-weight: 100;
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 1px;
     	border-radius: 3px;
     	text-align: center;
@@ -436,8 +390,8 @@
     	margin-bottom: 10px;
     	letter-spacing: 16px;
     }
-    #followSolution:hover {
-    	background-color: #00ffdc;
+    #voteSolution:hover, #followProblem:hover {
+    	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -463,8 +417,15 @@
       color: #0f131c;
       cursor: pointer;
     }
-    #solutionDescription {
-    	border: 1px solid #00ffdc;
+    #solutionDescriptionLabel, #problemDescriptionLabel, 
+    #evidenceLabel, #futureExperimentsLabel, 
+    #solutionReferencesLabel, #problemRequirementsLabel {
+    	color: #00dcff;
+    }
+    #solutionDescription, #problemDescription, 
+    #solutionEvidence, #solutionFutureExperiments, 
+    #solutionReferences, #problemRequirements {
+    	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 1px;
     	padding: 0px 5px 10px 5px;
     	margin-bottom: 0px;
@@ -473,50 +434,21 @@
     	font-size: 120%;
     	line-height: 150%;
     }
-    #solutionDescriptionLabel {
-    	color: #00ffdc;
-    }
-    #solutionEvidence {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #evidenceLabel {
-    	color: #00ffdc;
-    }
-    #solutionFutureExperiments {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #futureExperimentsLabel {
-    	color: #00ffdc;
-    }
-    #solutionReferences {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #solutionReferencesLabel {
-      color: #00ffdc;
+    #elementLabel {
+      flex: 0 1 auto;
+      margin: 1px 5% 0% 0%;
+      width: 26%;
+      border: 1px solid #00dcff;
+      border-width: 0px 0px 1px 0px;
+      border-radius: 0px;
+      font-size: 85%;
+      padding: 4px;
+      letter-spacing: 12px;
+      color: #00dcff;
+      text-align: center;
     }
 
-/*End CreatedSolution*/
+/*End UserSolution, FullSolution, and Problem*/
 
 
 
@@ -540,7 +472,6 @@
 /*Header*/
 
     #header {
-    	position: relative;
       background-color: #0f131c;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px;
@@ -556,22 +487,32 @@
     	justify-content: space-between;
     	flex-wrap: nowrap;
     	align-items: strech;
+      text-align: center;
     }
     #explore, #logo, #avatarHeader {
+      margin: auto;
       display: inline-block;
-      width: 33%;
       overflow: hidden;
-    	margin: 0px;
     	flex: 1 1 auto;
     	text-align: center;
     }
     #explore {
     	color: #dddddd;
     	letter-spacing: 8px;
-    	font-size: 100%;
+      width: 25%;
     }
+    #exploreFormHeader{
+      overflow: hidden;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      color: #dddddd;
+      letter-spacing: 8px;
+      font-size: 100%;
+      padding-top: 10px;
+      }
     #exploreInput {
-    	color: #dddddd;
+      color: #dddddd;
     	background-color: #0f131c;
     	border: 1px solid #dddddd;
     	height: 35px;
@@ -589,12 +530,33 @@
     	font-weight: 100;
     	letter-spacing: 16px;
     	flex: 1 2 auto;
+      width: 50%;
     }
     #avatarHeader {
+      width: 25%;
+      text-align: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      padding-right: 20px;
     }
-    #avatarButton {
-    	border: 1px solid #00dcff;
+    #avatarImage {
+      border: 1px solid #00dcff;
     	border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+    #avatarFullName {
+      display: inline-block;
+      margin: 0 auto;
+      font-size: 200%;
+      color: #dddddd;
+      float: right;
+      letter-spacing: 8px;
     }
 
 /*End Header*/
@@ -614,20 +576,15 @@
     	flex-direction: row;
     	width: 99%;
     	border: 1px solid #00dcff;
-    	border-width: 0px 1px;
+    	border-width: 0px 0px;
     	min-height: 99%;
     }
     #info, #signup, #register {
-    	border-width: 0px 2px;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
     	width: 60%;
-    }
-    #info {
-    	/*border: 1px solid #00dcff;
-    	border-width: 0px 1px;*/
     }
     #signup, #register {
     	width: 40%;
@@ -638,31 +595,32 @@
     	letter-spacing: .15em;
     	font-size: 200%;
     	text-align: center;
-    	margin-top: 90px;
-    	padding: 5px 0px 5px 13px;
+    	margin-top: 14%;
+    	padding: 0px 0px 5px 13px;
     }
     #bannerTitle {
     	font-size: 200%;
     	letter-spacing: 16px;
     	border: 1px solid #00dcff;
     	border-width: 2px 0px;
+      text-align: center;
     }
     #bannerSlogan {
-    	letter-spacing: 12px;
+      margin-top: 15px;
+      letter-spacing: 12px;
     }
     #learnMore {
     	color: #00dcff;
     	padding: -10% 10% 0% 10%;
     	font-size: 120%;
     }
-    #welcome, #introduction {
+    #introduction {
     	text-align: center;
     	font-size: 100%;
     	line-height: 150%;
-    	letter-spacing: 4px;
-    }
-    #welcomeLogin {
-    	text-align: center;
+    	letter-spacing: 3px;
+      color: #dddddd;
+      padding-left: 15px;
     }
     #introduction {
     	margin: 0% 10%;
@@ -672,8 +630,12 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    	margin: 30% 15% 5% 15%;
+    	margin: 21% 15% 0% 15%;
     	text-align: center;
+      height: 193px;
+    }
+    #registerForm {
+      height: 285px;
     }
     #enter {
     	color: #00dcff;
@@ -682,10 +644,11 @@
     	border-width: 0px 0px 1px 0px;
     	margin-bottom: 5px;
     }
-    #loginEmail, #registerEmail {
+    #loginEmail, #registerFullName {
     	margin-top: 15px;
     }
     #loginPassword, #registerPassword {
+      margin-bottom: 19px;
     }
     input {
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -700,27 +663,31 @@
     	margin-left: 9%;
     	width: 82%;
     }
-    input#submit {
+    #submitLogin, #submitRegister {
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
+      text-align: center;
     }
-    input#submit:hover {
+    #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
     	background-color: #00dcff;
     	border: 1px solid #0f131c;
     	cursor: pointer;
     }
     #registerButton, #loginButton {
-    	text-align: center;
+      text-align: center;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
-    	margin: 0% 19%;
-    	font-size: 150%;
+      border-width: 0px 1px 1px 1px;
+      border-radius: 3px;
+    	margin: 0% 19% 5% 19%;
+    	font-size: 120%;
     }
+
     #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
@@ -742,7 +709,7 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
-    	margin: 5% 15% 0% 15%;
+    	margin: 3% 15% 0% 15%;
     	border: 1px solid #00dcff;
     }
     #profileLeft, #profileRight {
@@ -766,11 +733,6 @@
     	display: block;
     	margin: 0px auto;
     }
-    #userNameEmail {
-    	outline: 1px solid #131b2b;
-    	outline-width: 0px 1px;
-    	padding: 5px;
-    }
     #userName {
     	font-size: 200%;
     	text-align: center;
@@ -784,7 +746,7 @@
     	text-align: center;
     	line-height: 100%;
     	margin: 0px;
-    	padding: 0px;
+    	padding: 10px 0px 5px 0px;
     	font-family: 'Alegreya Sans SC', sans-serif;
     }
     #userOptions {
@@ -810,9 +772,10 @@
     	color: #0f131c;
     	cursor: pointer;
     }
-    #userProblemsSolutionsButton {
-    	background-color: #00dcff;
-    	color: #0f131c;
+    #userProblemsSolutionsButton:active, #notificationsButton:active,
+    #userSettingsButton:active, #aboutXPButton:active, #logOutButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #xp {
     	text-align: center;
@@ -862,14 +825,12 @@
     	margin: 3px 10px 0px 10px;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
-    #votedSolutionsButton:hover, #createdSolutionsButton:hover {
+    #votedSolutionsButton:hover, #createdSolutionsButton:hover,
+    #followedProblemsButton:active, #createdProblemsButton:active,
+    #votedSolutionsButton:active, #createdSolutionsButton:active {
     	background-color: #00ffdc;
     	color: #0f131c;
     	cursor: pointer;
-    }
-    #createdSolutionsButton {
-    	background-color: #00ffdc;
-    	color: #0f131c;
     }
     #profileRightElements {
     	margin: 2px 15px 0px 5px;
@@ -880,12 +841,16 @@
     	border-width: 1px 0px 0px 0px;
     	padding: 2px;
     }
+    #profileRightUnit:hover {
+      color: #ffffff;
+      cursor: pointer;
+    }
     #profileUnitTitle {
       display: block;
       margin: 0px;
       padding: 2px 5px 2px 5px;
       font-size: 100%;
-      color: #00dcff;
+      color: #00dcff !important;
       line-height: 95%;
       height: auto;
     }
@@ -935,7 +900,7 @@
     	display: -moz-box;
     	display: -ms-flexbox;
     	display: -webkit-flex;
-    	display: inline-flex;
+    	display: flex;
     	flex-direction: row;
     	font-family: 'Alegreya Sans';
     	padding-top: 10px;
@@ -955,6 +920,7 @@
     }
     #questionText {
     	font-family: 'Alegreya Sans';
+      margin-top: 5px;
     }
     #questionAnswers {
     	flex: 1 1 auto;
@@ -973,23 +939,6 @@
     	color: #00ffdc;
     	background-color: #0f131c;
     }
-    #questionVote {
-    	flex: 1 1 auto;
-    	color: #00ffdc;
-    	background-color: #0f131c;
-    	border: 1px solid #00ffdc;
-    	border-radius: 2px;
-    	cursor: pointer;
-    }
-    #questionVote:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-      cursor: pointer;
-    }
-    #questionVote:active {
-    	color: #00ffdc;
-    	background-color: #0f131c;
-    }
     #moreButton {
     	margin: auto;
     	text-align: center;
@@ -1005,165 +954,6 @@
 
 
 
-/*PROBLEM*/
-
-    #fullProblem {
-      width: 60%;
-      float: left;
-    }
-    #problem {
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	position: relative;
-    	border-width: 0px 2px;
-    	border-radius: 23px;
-    	color: #dddddd;
-    	padding: 0px 10px 20px 10px;
-    	overflow: scroll !important;
-    	margin: 5px 5px 10px 5px;
-    	flex: 1 1 auto;
-    	outline: 1px solid #131b2b;
-    	outline-width: 0px 1px;
-    	flex-grow: 2;
-    	flex-shrink: 1;
-    	margin-left: 7px;
-    	border-width: 2px 0px;
-    	border-radius: 0px;
-    }
-    #problemHeader {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
-    	display: inline-flex;
-    	justify-content: space-between;
-    	align-items: flex-start;
-    	align-content: space-between;
-    	width: 100%;
-    }
-    #parentButton {
-    	flex: 0 1 auto;
-    	margin-right: auto;
-    	margin-top: 1px;
-    	width: 23%;
-    	padding: 4px;
-    	color: #00ffdc;
-    	font-size: 85%;
-    	letter-spacing: 12px;
-    	background-color: #0f131c;
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 1px 0px;
-    	text-align: right;
-    }
-    #parentButton a {
-    	width: 100%;
-    	padding: 0px;
-    	margin: 0px;
-    }
-    #parentButton:hover {
-    	color: #0f131c;
-    	background-color: #00ffdc;
-    	border-color: #0f131c;
-    	cursor: pointer;
-    }
-    #elementLabel {
-    	flex: 0 1 auto;
-    	margin: 1px 5% 0% 0%;
-    	width: 26%;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	border-radius: 0px;
-    	font-size: 85%;
-    	padding: 4px;
-    	letter-spacing: 12px;
-    	color: #00dcff;
-    	text-align: center;
-    }
-    #problemIntro {
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 0px 0px;
-    	border-radius: 0px;
-    	margin: 0px 40px;
-    	padding: 10px 0px;
-    }
-    #problemTitle {
-    	border-width: 0px;
-    	font-size: 260%;
-    }
-    #problemSummary {
-      margin: 5px 25px;
-    	line-height: 150%;
-    	font-size: 120%;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 0px;
-    	padding: 5px;
-    	margin-top: 20px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-    }
-    #problemSummaryLabel {
-      color: #00ffdc;
-    }
-    #contributor, #createDate {
-    	width: 100%;
-    	text-align: center;
-    }
-    #createDate {
-      margin-bottom: 10px;
-    }
-    #followProblem {
-      width: 30%;
-    	margin-left: 34.5%;
-    	padding-left: 2%;
-    	background-color: #0f131c;
-    	color: #00ffdc;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 120%;
-    	font-weight: 100;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
-    	text-align: center;
-    	text-decoration: none;
-    	margin-bottom: 10px;
-    	letter-spacing: 16px;
-    }
-    #followProblem:hover {
-    	background-color: #00ffdc;
-    	color: #0f131c;
-    	cursor: pointer;
-    }
-    #problemDescription {
-      border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #problemDescriptionLabel {
-      color: #00ffdc;
-    }
-    #problemRequirements {
-      border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #requirementsLabel {
-    	color: #00ffdc;
-    }
-
-/*End Problem*/
-
-
-
 /*SearchBox*/
 
     #searchBox {
@@ -1172,13 +962,12 @@
     }
     #exploreForm{
     	overflow: hidden;
-    	padding: 5px 0px 5px 0px;
+    	padding: 15px 0px 0px 0px;
     	margin: 0px;
     	text-align: center;
     	color: #dddddd;
     	letter-spacing: 8px;
     	font-size: 100%;
-    	padding-top: 10px;
     	}
     #exploreInput {
     	color: #dddddd;
@@ -1244,18 +1033,15 @@
   border: 2px solid #00dcff;
   border-width: 0px 0px 1px 0px;
   border-radius: 0px;
-  margin: 0px 0px 10px 0px;
   padding: 10px;
   padding-left: 3px;
   padding-bottom: 0px;
 }
-#subProblemUnit:hover #percent {
-  color: #00ffdc;
+#subProblemUnit:hover, #solutionUnit:hover {
   cursor: pointer;
 }
-#solutionUnit:hover #percent {
-  color: #00ffdc;
-  cursor: pointer;
+#subProblemUnit:hover #subProblemSummary, #solutionUnit:hover #solutionUnitSummary {
+  color: #ffffff;
 }
 #percent {
   float: left;
@@ -1288,7 +1074,40 @@
   margin-left: 0px;
   letter-spacing: 1px;
 }
+#subProblemTitle, #solutionUnitTitle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Alegreya Sans';
+  padding-top: 10px;
+  flex: 2 2 auto;
+}
+#problemVote {
+  flex: 2 2 auto;
+  color: #00ffdc;
+  background-color: #0f131c;
+  border: 1px solid #00ffdc;
+  border-radius: 2px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  font-size: 125%;
+}
+#problemVote:hover {
+  color: #0f131c;
+  background-color: #00ffdc;
+  cursor: pointer;
+}
+#problemVote:active {
+  color: #00ffdc;
+  background-color: #0f131c;
+}
 #subProblemSummary, #solutionUnitSummary {
+  color: #dddddd;
   clear: both;
   border: 1px solid #dddddd;
   border-width: 0px 0px 0px 0px;
@@ -1326,7 +1145,7 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
-      display: inline-flex;
+      display: flex;
       flex-direction: row;
       font-family: 'Alegreya Sans';
       padding-top: 10px;
@@ -1345,6 +1164,7 @@
     }
     #suggestionText {
       font-family: 'Alegreya Sans';
+      margin-top: 5px;
     }
     #suggestionVote {
       flex: 1 1 auto;
@@ -1373,6 +1193,7 @@
     #welcomeBox {
     	margin: 7% 20% 0% 20%;
     	border: 1px solid #00dcff;
+      border-radius: 3px;
     }
     #welcomePrompt {
     	margin: 15px 0px 10px 0px;
@@ -1386,7 +1207,7 @@
     	text-align: center;
     	color: #00dcff;
     }
-    #exploreForm{
+    #exploreWelcomeForm{
     	overflow: hidden;
     	padding: 5px 0px 5px 0px;
     	margin: 0px;
@@ -1411,9 +1232,36 @@
     #submitExplore {
     	display: none;
     }
-    #welcomeProblemsElements {
+    #welcomeUnitsContainer {
     	margin: 2px 15px 5px 5px;
     	padding: 5px;
+    }
+    #createWelcomeButton {
+      background-color: #0f131c;
+      color: #00dcff;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 150%;
+      font-weight: 100;
+      border: 1px solid #00dcff;
+      border-width: 1px 0px;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      -webkit-transition-duration: 0s;
+      transition-duration: 0s;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      letter-spacing: 16px;
+    }
+    #createWelcomeButton:hover {
+      background-color: #00dcff;
+      color: #0f131c;
+      cursor: pointer;
+    }
+    #createWelcomeButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #welcomeProblemsUnit {
     	border: 1px solid #00dcff;
@@ -1447,15 +1295,6 @@
     	font-family: 'Alegreya Sans', sans-serf;
     	padding: 0px 5px 5px 5px;
     	font-size: 90%;
-    }
-    #moreButton {
-    	margin: auto;
-    	text-align: center;
-    	font-size: 120%;
-    	padding: 5px;
-    	color: #00ffdc;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 0px 0px 0px;
     }
 
 /*End Welcome*/
@@ -1491,11 +1330,15 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
+      width: 100%;
     }
-      #problem, #sidebar {
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	position: relative;
+    #container {
+      width: 100%;
+    }
+    #problem, #sidebar {
+      border: 1px solid #00dcff;
+      background-color: #0f131c;
+      position: relative;
     }
     #problem, #sidebar {
     	border-width: 0px 2px;
@@ -1548,7 +1391,7 @@
     	border-width: 0px 1px 0px 0px;
     	display: flex;
     	flex-direction: column;
-    	justify-conent: center;
+    	justify-content: center;
     	width: 100%;
     }
     #developMenu {
@@ -1605,6 +1448,10 @@
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
+    }
+    #createButton:active {
+      background-color: #00dcff;
+      color: #0f131c;
     }
     #sidebarElements {
     	border: 1px solid #00dcff;
@@ -1666,6 +1513,20 @@
     #moreButton:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
+      cursor: pointer;
+    }
+    #welcomeMore {
+      margin: auto;
+      text-align: center;
+      font-size: 120%;
+      padding: 5px;
+      color: #00ffdc;
+      border: 1px solid #00dcff;
+      border-width: 1px 0px 0px 0px;
+    }
+    #welcomeMore:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
       cursor: pointer;
     }
     #sideBarMore {

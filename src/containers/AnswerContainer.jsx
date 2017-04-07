@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import QuestionUnit from './QuestionUnit.jsx';
-import AnswerUnit from './AnswerUnit.jsx';
-import AnswerForm from './AnswerForm.jsx';
-import SideBarMore from './SideBarMore.jsx';
+import QuestionUnit from '../components/QuestionUnit.jsx';
+import AnswerUnit from '../components/AnswerUnit.jsx';
+import AnswerForm from '../components/AnswerForm.jsx';
+import SideBarMore from '../components/SideBarMore.jsx';
 
 export default class AnswerContainer extends React.Component {
    render() {

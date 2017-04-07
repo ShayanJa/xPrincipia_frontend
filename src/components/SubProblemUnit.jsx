@@ -1,20 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
 
 export default class SubProblemUnit extends React.Component {
-  render() {
+	constructor(props){
+        super(props);
+	}
+	render() {
+		return (
+	    <div>
+			<ul> {this.props.problems.map(this.renderItem)} </ul>
+	               
+	    </div>
+		);
+	}
+	renderItem(problem) {
+  
     return (
 
-        <div id="subProblemUnit">
-            <div id="subProblemTitle">
-                <div id="percent">70%</div>
-                <div id="unitTitle">Quantum Computation in the Microtubule Tryptophans</div>
-            </div>
-                <div id="subProblemSummary">
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dolor ante. Duis id pretium metus. Nunc suscipit in ipsum eu condimentum. Fusce nec egestas sapien, id mattis nisl. Curabitur venenatis dui lorem, a rutrum nibh sollicitudin id.
-                </div>
+        <li key={problem.ID} id="subProblemUnit">
+        	<Link to={`/problem/${problem.ID}/solutions`} >
+			
+				<div id="subProblemTitle">
+					<div id="percent">70%</div>
+					<div id="unitTitle">{problem.Title}</div>
+				</div>
+				<div id="subProblemSummary">
+					{problem.Summary}
+				</div>
+			</Link>
 
-        </div>
-      );
-   }
+        <br ></br> 
+
+        </li>)
+	
+  }
 }

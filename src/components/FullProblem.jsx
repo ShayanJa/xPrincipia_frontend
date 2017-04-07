@@ -1,51 +1,85 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link  } from 'react-router';
+import axios from 'axios';
 
 export default class FullProblem extends React.Component {
+  constructor(props){
+        super(props);
+
+        this.state = {
+            problemInfo: [],
+        }
+
+    };
+    componentDidMount(){
+      var self = this;
+      return axios.get('http://localhost:10000/problems/ID?id='+this.props.params.probID).then(function (response) {
+          console.log(response.data)
+          self.setState({
+              problemInfo: response.data
+          })
+    })  
+  }
+  componentWillReceiveProps(newProps){
+    var self = this;
+      return axios.get('http://localhost:10000/problems/ID?id='+newProps.params.probID).then(function (response) {
+          console.log(response.data)
+          self.setState({
+              problemInfo: response.data,
+              probID: response.data.ID
+          })
+    })
+
+  }
+
    render() {
 
-   var rstyles = {
-    width: "40%",
-    float: "right"
-
-   }
-
       return (
-      <div>
+      <div id="container">
         <div id="fullProblem">
           <div id="problemHeader">
           <div id="parentButton">Parent</div>
             <h1 id="elementLabel">Problem</h1>
           </div>
           <div id="problemIntro">
-            <h1 id="problemTitle">What causes the emergent phenomena of consciousness?</h1>
+            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
             <div id="followProblem">Follow</div>
             <div id="contributor">Ben Francis</div>
-            <div id="createDate">3.10.2017</div>
+            <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
             <h1 id="problemSummaryLabel">Summary</h1>
             <p id="problemSummary">
-              The name Amazon is said to arise from a war Francisco de Orellana fought with the Tapuyas and other tribes. The women of the tribe fought alongside the men, as was their custom.[3] Orellana derived the name Amazonas from the Amazons of Greek mythology, described by Herodotus and Diodorus.[3] This is a sentence summarizing it.
+              {this.state.problemInfo.Summary}
             </p>
           </div>
           <div>
             <h1 id="problemDescriptionLabel">Description</h1>
             <p id="problemDescription">
-              The Amazon rainforest (Portuguese: Floresta Amazônica or Amazônia; Spanish: Selva Amazónica, Amazonía or usually Amazonia; French: Forêt amazonienne; Dutch: Amazoneregenwoud), also known in English as Amazonia or the Amazon Jungle, is a moist broadleaf forest that covers most of the Amazon basin of South America. This basin encompasses 7,000,000 square kilometres (2,700,000 sq mi), of which 5,500,000 square kilometres (2,100,000 sq mi) are covered by the rainforest. This region includes territory belonging to nine nations. The majority of the forest is contained within Brazil, with 60% of the rainforest, followed by Peru with 13%, Colombia with 10%, and with minor amounts in Venezuela, Ecuador, Bolivia, Guyana, Suriname and French Guiana. States or departments in four nations contain "Amazonas" in their names. The Amazon represents over half of the planet's remaining rainforests,[1] and comprises the largest and most biodiverse tract of tropical rainforest in the world, with an estimated 390 billion individual trees divided into 16,000 species.[2]
+              {this.state.problemInfo.Description}
             </p>
           </div>
           <div>
-            <h1 id="requirementsLabel">Requirements</h1>
+            <h1 id="problemRequirementsLabel">Requirements</h1>
             <p id="problemRequirements">
-              Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-              Provide one future experiment idea for falsification and one for predictive verification
+              {this.state.problemInfo.Requirements}
             </p>
           </div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <p id="xp">XP</p>
+          <br />
         </div>
         <div id="sidebar">
-          {this.props.children}
+          {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
       </div>
       );
    }
 }
+
+
+ 
+ 
