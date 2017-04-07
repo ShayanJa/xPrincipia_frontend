@@ -1063,6 +1063,42 @@
   margin-left: 0px;
   letter-spacing: 1px;
 }
+#subProblemTitle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Alegreya Sans';
+  padding-top: 10px;
+}
+#subProblemTitle {
+      flex: 2 2 auto;
+      border: 1px solid #00ffdc;
+      border-width: 1px 0px 0px 0px;
+}
+#problemVote {
+  flex: 2 2 auto;
+  color: #00ffdc;
+  background-color: #0f131c;
+  border: 1px solid #00ffdc;
+  border-radius: 2px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 5px;
+  font-size: 125%;
+}
+#problemVote:hover {
+  color: #0f131c;
+  background-color: #00ffdc;
+  cursor: pointer;
+}
+#problemVote:active {
+  color: #00ffdc;
+  background-color: #0f131c;
+}
 #subProblemSummary, #solutionUnitSummary {
   color: #dddddd;
   clear: both;

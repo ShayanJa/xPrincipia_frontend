@@ -6,7 +6,6 @@ import UserSolution from './UserSolution.jsx';
 import SideBarProblem from './SideBarProblem.jsx';
 import SideBarFullSolution from './SideBarFullSolution.jsx';
 import SideBarUserSolution from './SideBarUserSolution.jsx';
-import Profile from './Profile.jsx';
 
 export default class Layout extends React.Component {
    render() {

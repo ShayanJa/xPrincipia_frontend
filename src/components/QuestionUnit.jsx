@@ -20,11 +20,11 @@ export default class QuestionUnit extends React.Component {
         <li key={question.ID} id="questionUnit">
 				<div id="questionContent">
 					<div id="questionAdder">Q: {question.Username}</div>
-                <div id="questionText">{question.Description}</div>
+                	<div id="questionText">{question.Description}</div>
 				</div>
 				<button type="button" id="questionVote">Vote</button>
             <Link to="problem/answers"><button type="button" id="questionAnswers">Answers</button></Link>
-        <br ></br> 
+        <br/><br/> 
         </li>)
   }
 }

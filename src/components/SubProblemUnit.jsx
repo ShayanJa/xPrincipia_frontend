@@ -19,17 +19,15 @@ export default class SubProblemUnit extends React.Component {
     return (
         <li key={problem.ID}>
 			<div id="subProblemUnit">
-        	<Link to={{pathname: '/problem/'+problem.ID }} >
-				<div id="subProblemTitle">
-					<div id="unitTitle">{problem.Title}</div>
-					<button type="button" id="questionVote">Vote</button>
-				</div>
-				<div id="subProblemSummary">
-					{problem.Summary}
-				</div>
-			</Link>
+				<Link to={{pathname: '/problem/'+problem.ID }} >
+					<div id="subProblemTitle">
+						<div id="unitTitle">{problem.Title}</div>
+						<button type="button" id="problemVote">Vote</button>
+					</div>
+					<div id="subProblemSummary">{problem.Summary}</div>
+				</Link>
 			</div>
-        <br/><br/> 
+        <br /><br /> 
         </li>)
   }
 }
