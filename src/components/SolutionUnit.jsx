@@ -8,23 +8,17 @@ export default class SolutionUnit extends React.Component {
 	}
 	render() {
 		return (
-
 	    <div>
-	        {/*<div id="solutionUnitTitle">
-	            <div id="percent">70%</div>
-	            <div id="unitTitle">{this.props.solutions}</div>
-	        </div>
-	            <div id="solutionUnitSummary">*/}
-					<ul> {this.props.solutions.map(this.renderItem)} </ul>
+			<ul> {this.props.solutions.map(this.renderItem)} </ul>     
+	    </div>
 
-	            </div>
-	    // </div>
 		);
 	}
 
 	renderItem(solution) {
 
     return (
+<<<<<<< HEAD
 
         <li key={solution.ID}>
 	        	<Link to={{pathname: '/solutions/'+solution.ID }}>
@@ -39,6 +33,11 @@ export default class SolutionUnit extends React.Component {
 
         <li key={solution.ID} id="solutionUnit">
         	<Link to={{pathname: '/solutions/'+solution.ID }} >
+=======
+        <li key={solution.ID}>
+			<div id="solutionUnit">
+			<Link to={{pathname: '/solutions/'+solution.ID }}>
+>>>>>>> integratingAPICALLS
 				<div id="solutionUnitTitle">
 					<div id="percent">70%</div>
 					<div id="unitTitle">{solution.Title}</div>
@@ -47,10 +46,16 @@ export default class SolutionUnit extends React.Component {
 					{solution.Summary}
 				</div>
 			</Link>
+<<<<<<< HEAD
 
 
 	        <br /><br />
         </li>
 			);
+=======
+			</div>
+		<br ></br>
+        </li>);
+>>>>>>> integratingAPICALLS
   }
 }

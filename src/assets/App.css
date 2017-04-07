@@ -260,7 +260,7 @@
 
 
 
-/*CreatedSolution, FullSolution, and Problem*/
+/*UserSolution, FullSolution, and Problem*/
 
     #solution, #problem {
     	border: 1px solid #00dcff;
@@ -283,7 +283,7 @@
       float: left;
       width: 60%;
     }
-    #fullProblem {
+    #fullProblem, #fullSolution {
       width: 60%;
       float: left;
     }
@@ -368,7 +368,7 @@
     #createDate {
     	margin-bottom: 10px;
     }
-    #followSolution, #followProblem {
+    #voteSolution, #followProblem {
       width: 30%;
     	margin-left: 33.7%;
     	padding-left: 2%;
@@ -385,7 +385,7 @@
     	margin-bottom: 10px;
     	letter-spacing: 16px;
     }
-    #followSolution:hover, #followProblem:hover {
+    #voteSolution:hover, #followProblem:hover {
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
@@ -412,8 +412,15 @@
       color: #0f131c;
       cursor: pointer;
     }
-    #solutionDescription, #problemDescription {
-    	border: 1px solid #00ffdc;
+    #solutionDescriptionLabel, #problemDescriptionLabel, 
+    #evidenceLabel, #futureExperimentsLabel, 
+    #solutionReferencesLabel, #problemRequirementsLabel {
+    	color: #00dcff;
+    }
+    #solutionDescription, #problemDescription, 
+    #solutionEvidence, #solutionFutureExperiments, 
+    #solutionReferences, #problemRequirements {
+    	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 1px;
     	padding: 0px 5px 10px 5px;
     	margin-bottom: 0px;
@@ -421,48 +428,6 @@
     	padding-right: 5%;
     	font-size: 120%;
     	line-height: 150%;
-    }
-    #solutionDescriptionLabel, #problemDescriptionLabel {
-    	color: #00ffdc;
-    }
-    #solutionEvidence {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #evidenceLabel {
-    	color: #00ffdc;
-    }
-    #solutionFutureExperiments {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #futureExperimentsLabel {
-    	color: #00ffdc;
-    }
-    #solutionReferences {
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 120%;
-    	line-height: 150%;
-    }
-    #solutionReferencesLabel {
-      color: #00ffdc;
     }
     #elementLabel {
       flex: 0 1 auto;
@@ -477,21 +442,8 @@
       color: #00dcff;
       text-align: center;
     }
-    #problemRequirements {
-      border: 1px solid #00ffdc;
-      border-width: 0px 1px 0px 1px;
-      padding: 0px 5px 10px 5px;
-      margin-bottom: 0px;
-      padding-left: 5%;
-      padding-right: 5%;
-      font-size: 120%;
-      line-height: 150%;
-    }
-    #requirementsLabel {
-      color: #00ffdc;
-    }
 
-/*End CreatedSolution, FullSolution, and Problem*/
+/*End UserSolution, FullSolution, and Problem*/
 
 
 
@@ -555,7 +507,7 @@
       padding-top: 10px;
       }
     #exploreInput {
-    	color: #dddddd;
+      color: #dddddd;
     	background-color: #0f131c;
     	border: 1px solid #dddddd;
     	height: 35px;
@@ -956,6 +908,7 @@
     }
     #questionText {
     	font-family: 'Alegreya Sans';
+      margin-top: 5px;
     }
     #questionAnswers {
     	flex: 1 1 auto;
@@ -1168,6 +1121,7 @@
     }
     #suggestionText {
       font-family: 'Alegreya Sans';
+      margin-top: 5px;
     }
     #suggestionVote {
       flex: 1 1 auto;

@@ -26,7 +26,7 @@ $.ajax({
   url: 'http://localhost:10000/suggestions/create',
   processData: false,
   data: JSON.stringify({
-    'suggestion' : this.state.suggestion,
+    'description' : this.state.suggestion,
   }),
   success: function(result){
     console.log(result)
@@ -49,7 +49,7 @@ $.ajax({
             <form id="suggestionForm">
                 <fieldset>
                     <legend>Suggestion</legend>
-                         <textarea name="suggestionText" required="required" id="suggestionTextArea"></textarea>
+                         <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="submit" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
                 </fieldset>

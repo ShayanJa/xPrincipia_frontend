@@ -2,15 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class SuggestionUnit extends React.Component {
-   render() {
-      return (
-      <div id="suggestionUnit">
-          <div id="suggestionContent">
-              <div id="suggestionAdder">Ben Francis</div>
-              <div id="suggestionText">You co</div>
-          </div>
-          <button type="button" id="suggestionVote">Vote</button>
-      </div>
-      );
-   }
+	constructor(props){
+        super(props);
+	}
+	render() {
+		return (
+	    <div>
+			<ul> {this.props.suggestions.map(this.renderItem)} </ul>
+	               
+	    </div>
+		);
+	}
+	renderItem(suggestion) {
+  
+    return (
+       <li key={suggestion.ID} id="suggestionUnit">
+				<div id="suggestionContent">
+					<div id="suggestionAdder">Q: Jack Jackson</div>
+                <div id="suggestionText">{suggestion.Description}</div>
+				</div>
+				<button type="button" id="suggestionVote">Vote</button>   
+            <br ></br> 
+        </li>)
+
+  }
 }
+

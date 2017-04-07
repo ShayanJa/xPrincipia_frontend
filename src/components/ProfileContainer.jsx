@@ -34,7 +34,7 @@ export default class ProfileContainer extends React.Component {
                 </div>
                 <div id="profileSolutionsMenu">
                     <div id="developTitle">Solutions</div>
-                    <a href="./commentslist.html"><div id="votedSolutionsButton">Followed</div></a>
+                    <a href="./commentslist.html"><div id="votedSolutionsButton">Voted</div></a>
                     <a href="./suggestionslist.html"><div id="createdSolutionsButton">Created</div></a>
                 </div>
             </div>

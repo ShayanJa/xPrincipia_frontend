@@ -11,6 +11,7 @@ export default class ProblemForm extends React.Component {
       title: '',
       field: '',
       description: '',
+      summary: '',
       requirements: '',
       references: ''
     }
@@ -31,11 +32,12 @@ export default class ProblemForm extends React.Component {
     crossDomain: 'true',
     type: 'POST',
     headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/solutions/create',
+    url: 'http://localhost:10000/problems/create',
     processData: false,
     data: JSON.stringify({
       'title' : this.state.title,
-      'field' : this.state.field,
+      'field': this.state.field,
+      'summary': this.state.summary,
       'description' : this.state.description,
       'requirements' : this.state.requirements,
       'references' : this.state.references
@@ -61,7 +63,7 @@ export default class ProblemForm extends React.Component {
               <fieldset>
                   <legend>Create:Problem</legend>
                         <label htmlFor="problemTitle" id="problemTitleFormLabel">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autofocus/>
+                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
 
                         <label htmlFor="problemFieldLabel" id="problemFieldFormLabel">Field<br />
@@ -69,7 +71,7 @@ export default class ProblemForm extends React.Component {
                           </label><br />
 
                         <label htmlFor="problemSummary" id="problemSummaryFormLabel">Summary<br />
-                            <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 140 characters here." id="problemFieldForm"/>
+                            <textarea name="problemField" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="problemFieldForm"/>
                           </label><br />
 
                         <label htmlFor="problemDescription" id="problemDescriptionFormLabel">Description<br />
