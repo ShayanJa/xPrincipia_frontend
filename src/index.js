@@ -29,6 +29,8 @@ import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
 import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
+import Profile from './components/Profile.jsx'
+//Assets
 import './assets/index.css';
 
 ReactDOM.render(
