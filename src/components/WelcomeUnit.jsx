@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import $ from 'min-jquery';
+
 
 export default class WelcomeUnit extends React.Component {
    
@@ -20,11 +20,11 @@ export default class WelcomeUnit extends React.Component {
       return (
 
       <li key={problem.ID} id="welcomeProblemsUnit">
-          <Link to={{pathname: '/problem/'+problem.ID }}>
+          <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
             <div id="welcomeProblemsHeader">
-              <div id="welcomeProblemsTag">Consciousness</div>
+              <div id="welcomeProblemsTag">{problem.Field}</div>
               <div id="welcomeProblemsTitle">
-                  Global workspace model contrasting natural selection and higher consciousness
+                  {problem.Title}
               </div>
             </div>
           </Link>

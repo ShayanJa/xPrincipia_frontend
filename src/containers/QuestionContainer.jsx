@@ -17,7 +17,6 @@ export default class QuestionContainer extends React.Component {
         componentDidMount(){
         var self = this;
         return axios.get('http://localhost:10000/questions/all').then(function (response) {
-            console.log(response.data[0].Title)
             self.setState({
                 questions: response.data
             })

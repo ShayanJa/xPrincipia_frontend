@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 
 export default class SubProblemUnit extends React.Component {
@@ -19,7 +18,7 @@ export default class SubProblemUnit extends React.Component {
     return (
 
         <li key={problem.ID} id="subProblemUnit">
-        	<Link to={`/problem/${problem.ID}/solutions`} >
+        	<Link to={`/problem/${problem.ID}/subproblems`} >
 			
 				<div id="subProblemTitle">
 					<div id="percent">70%</div>

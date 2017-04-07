@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'min-jquery'
 
 export default class WelcomeForm extends React.Component {
    render() {
