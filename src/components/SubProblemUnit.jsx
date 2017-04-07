@@ -19,7 +19,7 @@ export default class SubProblemUnit extends React.Component {
     return (
 
         <li key={problem.ID} id="subProblemUnit">
-        	<Link to={`/problem/${problem.ID}/solutions`} >
+        	<Link to={`/problem/${problem.ID}/subproblems`} >
 			
 				<div id="subProblemTitle">
 					<div id="percent">70%</div>

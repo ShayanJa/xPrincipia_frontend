@@ -21,7 +21,7 @@ export default class SolutionUnit extends React.Component {
         <li key={solution.ID}>
 
 			<div id="solutionUnit">
-			<Link to={{pathname: '/solutions/'+solution.ID }}>
+			<Link to={`/problem/${solution.ID}/solutions/`}>
 
 				<div id="solutionUnitTitle">
 					<div id="percent">70%</div>

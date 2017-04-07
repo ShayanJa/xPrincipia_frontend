@@ -9,18 +9,22 @@ import QuestionContainer from '../containers/QuestionContainer.jsx';
 
 
 export default class SideBarFullSolutionMenu extends React.Component {
+  constructor(props){
+        super(props);
+
+    };
    render() {
       return (
       <div id="sidebarMenu">
         <div id="solveMenu">
                 <div id="solveTitle">Solve</div>
-                  <Link to='/fullsolution/solutions'><div id="solutionsButton">Top Solutions</div></Link>
-                  <Link to='/fullsolution/subproblems'><div id="subproblemButton">Sub Problems</div></Link>
+                  <Link to={`/problem/${this.props.probID}/problems`}><div id="solutionsButton">Top Solutions</div></Link>
+                  <Link to={`/problem/${this.props.probID}/solutions`}><div id="subproblemButton">Sub Problems</div></Link>
         </div>
         <div id="developMenu">
                 <div id="developTitle">Develop</div>
-                  <Link to='/fullsolution/questions'><div id="questionsButton">Questions</div></Link>
-                  <Link to='/fullsolution/suggestions'><div id="suggestionsButton">Suggestions</div></Link>
+                  <Link to={`/problem/${this.props.probID}/questions`}><div id="questionsButton">Questions</div></Link>
+                  <Link to={`/problem/${this.props.probID}/suggestions`}><div id="suggestionsButton">Suggestions</div></Link>
         </div>
       </div>
 
