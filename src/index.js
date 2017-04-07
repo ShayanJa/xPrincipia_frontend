@@ -2,29 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, hashHistory, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
-import AnswerContainer from './components/AnswerContainer.jsx';
+
+//Load Components
 import UserSolution from './components/UserSolution.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
 import SolutionForm from './components/SolutionForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
 import Info from './components/Info.jsx';
+import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 import Layout from './components/Layout.jsx';
-import LoginContainer from './components/LoginContainer.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
-import ProfileContainer from './components/ProfileContainer.jsx';
-import QuestionContainer from './components/QuestionContainer.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
-import SearchContainer from './components/SearchContainer.jsx';
 import SideBarProblem from './components/SideBarProblem';
 import SideBarFullSolution from './components/SideBarFullSolution';
 import SideBarUserSolution from './components/SideBarUserSolution';
-import SolutionContainer from './components/SolutionContainer.jsx';
-import SuggestionContainer from './components/SuggestionContainer.jsx';
-import SubProblemContainer from './components/SubProblemContainer.jsx';
-import WelcomeContainer from './components/WelcomeContainer.jsx';
-import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
-import WelcomeUnitsContainer from './components/WelcomeUnitsContainer.jsx';
+
+//Load Containers
+import SearchContainer from './containers/SearchContainer.jsx';
+import ProfileContainer from './containers/ProfileContainer.jsx';
+import LoginContainer from './containers/LoginContainer.jsx';
+import AnswerContainer from './containers/AnswerContainer.jsx';
+import SolutionContainer from './containers/SolutionContainer.jsx';
+import QuestionContainer from './containers/QuestionContainer.jsx';
+import SuggestionContainer from './containers/SuggestionContainer.jsx';
+import SubProblemContainer from './containers/SubProblemContainer.jsx';
+import WelcomeContainer from './containers/WelcomeContainer.jsx';
+
+import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 import './assets/index.css';
 
 ReactDOM.render(

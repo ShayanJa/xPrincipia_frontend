@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Info from './Info.jsx';
-import LoginUnit from './LoginUnit.jsx';
-import RegisterUnit from './RegisterUnit.jsx';
+import Info from '../components/Info.jsx';
+import LoginUnit from '../components/LoginUnit.jsx';
+import RegisterUnit from '../components/RegisterUnit.jsx';
 
 export default class LoginContainer extends React.Component {
    render() {

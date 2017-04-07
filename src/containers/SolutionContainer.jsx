@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
-import SolutionUnit from './SolutionUnit.jsx';
-import SideBarMore from './SideBarMore.jsx';
+import SolutionUnit from '../components/SolutionUnit.jsx';
+import SideBarMore from '../components/SideBarMore.jsx';
 import axios from 'axios'
 
 export default class SolutionContainer extends React.Component {

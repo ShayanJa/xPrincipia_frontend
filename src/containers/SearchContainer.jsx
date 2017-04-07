@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SearchForm from './SearchForm.jsx';
-import SearchUnit from './SearchUnit.jsx';
-import ProfileUnit from './ProfileUnit.jsx';
-import SearchMore from './SideBarMore.jsx';
+import SearchForm from '../components/SearchForm.jsx';
+import SearchUnit from '../components/SearchUnit.jsx';
+import ProfileUnit from '../components/ProfileUnit.jsx';
+import SearchMore from '../components/SideBarMore.jsx';
 
 export default class SearchContainer extends React.Component {
    render() {

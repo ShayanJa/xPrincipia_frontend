@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import img from '../assets/dnablackinvert.png'
-import SearchUnit from './SearchUnit.jsx';
-import ProfileUnit from './ProfileUnit.jsx';
+import SearchUnit from '../components/SearchUnit.jsx';
+import ProfileUnit from '../components/ProfileUnit.jsx';
 
 export default class ProfileContainer extends React.Component {
    render() {

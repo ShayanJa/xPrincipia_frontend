@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
-import SolutionForm from './SolutionForm.jsx';
-import ProblemForm from './ProblemForm.jsx';
-import SolutionContainer from './SolutionContainer.jsx';
-import SuggestionContainer from './SuggestionContainer.jsx';
-import QuestionContainer from './QuestionContainer.jsx';
+import SolutionForm from '../components/SolutionForm.jsx';
+import ProblemForm from '../components/ProblemForm.jsx';
+import SolutionContainer from '../containers/SolutionContainer.jsx';
+import SuggestionContainer from '../containers/SuggestionContainer.jsx';
+import QuestionContainer from '../containers/QuestionContainer.jsx';
 
 
-// <<<<<<< HEAD:src/components/SideBarProblemMenu.jsx
-// export default class SideBarProblemMenu extends React.Component {
-// =======
-export default class SideBarMenu extends React.Component {
+
+export default class SideBarProblemMenu extends React.Component {
   constructor(props){
         super(props);
 
