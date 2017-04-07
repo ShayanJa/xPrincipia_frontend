@@ -29,14 +29,8 @@ $.ajax({
     'Description' : this.state.question,
   }),
   success: function(result){
-    console.log(result)
-
-    alert('Your question has been asked.')
   },
-  error: function(result){
-    console.log(result)
-
-    alert('Please try again.')
+  error: function(result){    
   },
 
   });

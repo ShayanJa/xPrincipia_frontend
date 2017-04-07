@@ -15,7 +15,7 @@ constructor(props){
         }
         
     };
-        componentWillMount(){
+        componentDidMount(){
         var self = this;
         return axios.get('http://localhost:10000/suggestions/all').then(function (response) {
             console.log(response.data[0].Title)

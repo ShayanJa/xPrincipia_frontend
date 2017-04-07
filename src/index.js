@@ -45,17 +45,23 @@ ReactDOM.render(
     <IndexRoute component={Layout}></IndexRoute>
     <Route path='/home' component={Layout}>
       <IndexRoute component={FullProblem}></IndexRoute>
+{/*<<<<<<< HEAD
       <Route path='/problem' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/sidebar' component={SideBarProblem}>
+=======*/}
+      <Route path='/problem/:probID' component={FullProblem}>
+        <IndexRoute component={SideBarProblem}></IndexRoute>
+        <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
+
           <IndexRoute component={SolutionContainer}></IndexRoute>
-          <Route path='/problem/answers' component={AnswerContainer}></Route>
-          <Route path='/problem/createproblem' component={ProblemForm}></Route>
-          <Route path='/problem/createsolution' component={SolutionForm}></Route>
-          <Route path='/problem/questions' component={QuestionContainer}></Route>
-          <Route path='/problem/solutions' component={SolutionContainer}></Route>
-          <Route path='/problem/subproblems' component={SubProblemContainer}></Route>
-          <Route path='/problem/suggestions' component={SuggestionContainer}></Route>
+          <Route path='/problem/*/answers' component={AnswerContainer}></Route>
+          <Route path='/problem/:probID/create' component={ProblemForm}></Route>
+          <Route path='/solution/:probID/create' component={SolutionForm}></Route>
+          <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
+          <Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>
+          <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
+          <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
         </Route>
       </Route>
         <IndexRoute component={FullSolution}></IndexRoute>

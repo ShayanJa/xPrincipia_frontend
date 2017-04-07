@@ -14,7 +14,7 @@ export default class SolutionContainer extends React.Component {
         }
 
     };
-        componentWillMount(){
+        componentDidMount(){
         var self = this;
         return axios.get('http://localhost:10000/solutions/all').then(function (response) {
             console.log(response.data[0].Title)
@@ -23,11 +23,12 @@ export default class SolutionContainer extends React.Component {
             })
         })
     }
+
    render() {
       return (
         <div id="solutions">
-          <Link to="/problem/createsolution"><div id="createButton">Create</div></Link>
-            <SolutionUnit solutions={this.state.solutions} />
+          <Link to="/solution/create"><div id="createButton">Create</div></Link>
+            <SolutionUnit solutions={this.state.solutions} probID={this.props.params.probID}/>
           <SideBarMore />
         </div>
 

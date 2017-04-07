@@ -29,14 +29,11 @@ $.ajax({
     'description' : this.state.suggestion,
   }),
   success: function(result){
-    console.log(result)
 
-    alert('Your suggestion has been added.')
+    
   },
   error: function(result){
-    console.log(result)
-
-    alert('Please try again.')
+    
   },
 
   });

@@ -14,7 +14,7 @@ export default class SubProblemContainer extends React.Component {
         }
         
     };
-        componentWillMount(){
+        componentDidMount(){
         var self = this;
         return axios.get('http://localhost:10000/problems/all').then(function (response) {
             console.log(response.data[0].Title)
@@ -26,7 +26,7 @@ export default class SubProblemContainer extends React.Component {
    render() {
       return (
         <div id="solutions">
-          <Link to="/problem/createproblem"><div id="createButton">Create</div></Link>
+          <Link to={`/problem/${this.props.probID}create`}><div id="createButton">Create</div></Link>
             <SubProblemUnit problems={this.state.problems} />
           <SideBarMore />
         </div>

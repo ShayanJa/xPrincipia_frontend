@@ -6,9 +6,11 @@ export default class SideBarProblem extends React.Component {
    render() {
       return (
           <div>
-          	<SideBarProblemMenu />
+          	<SideBarProblemMenu probID={this.props.params.probID} />
           	{this.props.children}
           </div>
       );
    }
 }
+
+
