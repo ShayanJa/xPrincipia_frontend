@@ -267,7 +267,7 @@
 
 /*UserSolution, FullSolution, and Problem*/
 
-    #solution, #problem {
+    /*#solution, #problem {
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
     	position: relative;
@@ -287,7 +287,7 @@
     	border-radius: 0px;
       float: left;
       width: 60%;
-    }
+    }*/
     #fullProblem, #fullSolution {
       width: 60%;
       float: left;
@@ -709,7 +709,7 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
-    	margin: 5% 15% 0% 15%;
+    	margin: 3% 15% 0% 15%;
     	border: 1px solid #00dcff;
     }
     #profileLeft, #profileRight {
@@ -1330,11 +1330,15 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
+      width: 100%;
     }
-      #problem, #sidebar {
-    	border: 1px solid #00dcff;
-    	background-color: #0f131c;
-    	position: relative;
+    #container {
+      width: 100%;
+    }
+    #problem, #sidebar {
+      border: 1px solid #00dcff;
+      background-color: #0f131c;
+      position: relative;
     }
     #problem, #sidebar {
     	border-width: 0px 2px;
@@ -1387,7 +1391,7 @@
     	border-width: 0px 1px 0px 0px;
     	display: flex;
     	flex-direction: column;
-    	justify-conent: center;
+    	justify-content: center;
     	width: 100%;
     }
     #developMenu {

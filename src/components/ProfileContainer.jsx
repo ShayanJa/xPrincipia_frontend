@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import img from '../assets/dnablackinvert.png'
-import SearchUnit from './SearchUnit.jsx';
+import img from '../assets/dnablackinvert.png';
+import Header from './Header.jsx';
 import ProfileUnit from './ProfileUnit.jsx';
+import SearchUnit from './SearchUnit.jsx';
 
 export default class ProfileContainer extends React.Component {
    render() {
       return (
-
+    <div>
+      <Header />
       <div id="profileBox">
         <div id="profileLeft">
             <div id="userInformation">
@@ -49,6 +51,7 @@ export default class ProfileContainer extends React.Component {
             </div></a>
         </div>
       </div>
+    </div>
 
       );
    }
