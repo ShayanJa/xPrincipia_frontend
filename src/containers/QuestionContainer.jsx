@@ -10,34 +10,25 @@ export default class QuestionContainer extends React.Component {
         super(props);
 
         this.state = {
-            questions: []
+            questions: [],
+           
         }
         
     };
         componentDidMount(){
         var self = this;
+        console.log(this.props.params.probID)
         return axios.get('http://localhost:10000/questions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 questions: response.data
             })
         })  
     }
-    componentWillReceiveProps(newProps){
-    var self = this;
-    self.setState({
-        probID: newProps.params.probID
-    })
-      return axios.get('http://localhost:10000/questions/typeID?id='+newProps.params.probID).then(function (response) {
-          console.log(response.data)
-          self.setState({
-             questions: response.data
-          })
-        })
-    }
+   
    render() {
       return (
         <div id="questionContainer">
-          <QuestionForm probID={this.state.probID}/>
+          <QuestionForm probID={this.props.params.probID}/>
             <QuestionUnit questions={this.state.questions} />
           <SideBarMore />
         </div>

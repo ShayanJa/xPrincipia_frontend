@@ -25,8 +25,8 @@ $.ajax({
   url: 'http://localhost:10000/questions/create',
   processData: false,
   data: JSON.stringify({
-    'Type':'1',
-    'TypeID': "1",
+    'type':'1',
+    'typeID': this.props.probID,
     'Description' : this.state.question,
   }),
   success: function(result){
@@ -39,7 +39,6 @@ $.ajax({
 
    render() {
       return (
-
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>
