@@ -16,7 +16,7 @@ export default class SubProblemContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/problems/all').then(function (response) {
+        return axios.get('http://localhost:10000/problems/subproblems?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 problems: response.data
             })
