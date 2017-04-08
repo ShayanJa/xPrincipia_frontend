@@ -25,9 +25,9 @@ export default class ProfileContainer extends React.Component {
       <div id="profileBox">
         <div id="profileLeft">
             <div id="userInformation">
-                <p id="userName">Ben Francis</p>
+                <p id="userName">{cookie.load('userName')}</p>
                 <img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="150" height="150" />
-                <p id="userEmail">franc514@umn.edu</p>
+                <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">
                 <div id="userProblemsSolutionsButton">Problems and Solutions</div>
