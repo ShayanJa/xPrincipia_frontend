@@ -30,6 +30,7 @@ $.ajax({
     'Description' : this.state.question,
   }),
   success: function(result){
+    alert("hey")
   },
   error: function(result){    
   },
