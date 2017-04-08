@@ -3,7 +3,7 @@ import React from 'react';
 export default class UserSolution extends React.Component {
    render() {
       return (
-      <div>
+      <div id="maxContainer">
         <div id="fullSolution">
             <div id="solutionHeader">
               <div id="parentButton">Problem</div>
