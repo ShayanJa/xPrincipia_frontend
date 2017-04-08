@@ -324,6 +324,7 @@
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
+      color: #00ffdc;
     }
     #parentButton:hover {
     	color: #0f131c;
