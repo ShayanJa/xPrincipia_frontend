@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import $ from 'min-jquery';
 import axios from 'axios'
+import cookie from 'react-cookie'
 
 
 export default class SolutionForm extends React.Component {
@@ -31,6 +32,7 @@ export default class SolutionForm extends React.Component {
     this.state.references = document.getElementById('solutionReferencesForm').value
 
   axios.post('http://localhost:10000/auth/solutions/create', {
+      username: cookie.load('userName'),
       problemID:this.props.params.probID,
       title : this.state.title,
       summary : this.state.summary,
