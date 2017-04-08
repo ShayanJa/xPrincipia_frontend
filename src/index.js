@@ -56,8 +56,8 @@ ReactDOM.render(
         <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='/problem/*/answers' component={AnswerContainer}></Route>
-          <Route path='/problem/:probID/create' component={ProblemForm}></Route>
-          <Route path='/solution/:probID/create' component={SolutionForm}></Route>
+          <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
+          <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>
           <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
           <Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
