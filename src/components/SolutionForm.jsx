@@ -70,7 +70,7 @@ export default class SolutionForm extends React.Component {
                         </label><br />
 
                       <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
-                          <textarea name="solutionSummary" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="solutionSummaryForm"/>
+                          <textarea name="solutionSummary" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="solutionSummaryForm"/>
                         </label><br />
 
                       <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />

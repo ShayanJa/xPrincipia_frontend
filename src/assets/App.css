@@ -36,9 +36,9 @@
       list-style-type: none;
       margin: 0px;
     }
-    ul li a {text-decoration: none}
 
     a {
+      color: inherit;
       text-decoration: none;
     }
 
@@ -328,10 +328,9 @@
     	width: 100%;
     	padding: 0px;
     	margin: 0px;
-      color: #00ffdc;
     }
     #parentButton:hover {
-    	color: #0f131c;
+    	color: #0f131c !important;
     	background-color: #00ffdc;
     	border-color: #0f131c;
     	cursor: pointer;
