@@ -55,7 +55,7 @@ export default class FullProblem extends React.Component {
         <div id="fullProblem">
           <div id="problemHeader">
             {/*Link back to the parent problem*/}
-          <div id="parentButton"><Link to={`/problem/${this.state.parentID}/solutions`}>Parent</Link></div>
+          <div id="parentButton"><Link to={`/problem/${this.props.params.probID}/solutions`}>Parent</Link></div>
             <h1 id="elementLabel">Problem</h1>
           </div>
           <div id="problemIntro">
