@@ -25,14 +25,16 @@ $.ajax({
   url: 'http://localhost:10000/suggestions/create',
   processData: false,
   data: JSON.stringify({
-    'description' : this.state.suggestion,
+    'type':'1',
+    'typeID': this.props.probID,
+    'Description' : this.state.suggestion,
   }),
   success: function(result){
-
+    console.log("it works " + this.props.probID)
     
   },
   error: function(result){
-    
+      console.log("it doesn't works " + this.props.probID)
   },
 
   });
