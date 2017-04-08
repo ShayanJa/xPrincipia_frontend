@@ -17,7 +17,7 @@ export default class SolutionContainer extends React.Component {
         componentDidMount(){
         var self = this;
         window.scrollTo(0,0);
-        return axios.get('http://localhost:10000/solutions/problemID?id='+this.props.params.probID).then(function (response) {
+        return axios.get('http://localhost:10000/auth/solutions/problemID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 solutions: response.data
             })

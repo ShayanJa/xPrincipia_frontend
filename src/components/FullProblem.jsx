@@ -13,7 +13,7 @@ export default class FullProblem extends React.Component {
     };
     componentDidMount(){
       var self = this;
-      return axios.get('http://localhost:10000/problems/ID?id='+this.props.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
           console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
@@ -30,7 +30,7 @@ export default class FullProblem extends React.Component {
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://localhost:10000/problems/ID?id='+newProps.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
           console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes

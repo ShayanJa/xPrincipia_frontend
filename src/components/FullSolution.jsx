@@ -13,7 +13,7 @@ export default class FullSolution extends React.Component {
     };
     componentDidMount(){
       var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      return axios.get('http://localhost:10000/authsolutions/ID?id='+this.props.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
               solutionInfo: response.data,
@@ -22,7 +22,7 @@ export default class FullSolution extends React.Component {
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
               solutionInfo: response.data,  
