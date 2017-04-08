@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Info from '../components/Info.jsx';
 import LoginUnit from '../components/LoginUnit.jsx';
 import RegisterUnit from '../components/RegisterUnit.jsx';

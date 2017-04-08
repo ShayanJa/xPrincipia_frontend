@@ -4,9 +4,19 @@ import img from '../assets/dnablackinvert.png';
 import Header from '../components/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
 import SearchUnit from '../components/SearchUnit.jsx'; 
-
+import cookie from 'react-cookie'
 
 export default class ProfileContainer extends React.Component {
+    constructor(){
+        super();
+    
+
+    this.onLogout = this.onLogout.bind(this);
+    }   
+    onLogout() {
+        cookie.remove('userToken');
+        document.location = "/login";
+    }
    render() {
       return (
     <div>
@@ -23,7 +33,7 @@ export default class ProfileContainer extends React.Component {
                 <div id="notificationsButton">Notifications (Coming Soon)</div>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
                 <div id="aboutXPButton">About XPrincipia (Coming Soon)</div>
-                <div id="logOutButton">Logout</div>
+                <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>
             </div>

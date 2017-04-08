@@ -16,7 +16,7 @@ class App extends React.Component {
     };
 
   componentWillMount() {
-    this.state =  { userToken: cookie.load('userToken') };
+    this.setState( { userToken: cookie.load('userToken') });
     axios.defaults.headers.common['Authorization'] = 'Bearer '+cookie.load('userToken');
   }
  
@@ -29,11 +29,21 @@ class App extends React.Component {
     cookie.remove('userToken', { path: '/' });
   }
   render() {
+    console.log(
+      "yeeeee"
+    )
+    if (this.state.userToken === undefined ){
+      if (window.location.pathname != "/login" && window.location.pathname != "/register"){
+        document.location = "/login";
+      }
+      
+    }
     return (
       <div className="App">
         {this.props.children}
       </div>
-    );
+      );
+    
   }
 }
 
