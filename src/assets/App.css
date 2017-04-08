@@ -38,6 +38,10 @@
     }
     ul li a {text-decoration: none}
 
+    a {
+      text-decoration: none;
+    }
+
 /*End Global*/
 
 
@@ -438,6 +442,14 @@
     	font-size: 120%;
     	line-height: 150%;
     }
+    #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
+    #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
+    #solutionDescription:hover, #problemDescription:hover, 
+    #solutionEvidence:hover, #solutionFutureExperiments:hover, 
+    #solutionReferences:hover, #problemRequirements:hover, #xp:hover {
+      color: #ffffff;
+    }
+
     #elementLabel {
       flex: 0 1 auto;
       margin: 1px 5% 0% 0%;

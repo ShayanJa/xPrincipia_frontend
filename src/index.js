@@ -33,7 +33,10 @@ import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 //Assets
 import './assets/index.css';
 
+
+
 ReactDOM.render(
+ 
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcomecontainer' component={WelcomeContainer}>
