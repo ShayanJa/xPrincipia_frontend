@@ -33,7 +33,7 @@ export default class FullSolution extends React.Component {
   }
    render() {
       return (
-      <div>
+      <div id="maxContainer">
         <div id="fullSolution">
             <div id="solutionHeader">
               <div id="parentButton">Problem</div>

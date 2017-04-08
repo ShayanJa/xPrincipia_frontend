@@ -30,7 +30,7 @@ export default class QuestionContainer extends React.Component {
         <div id="questionContainer">
           <QuestionForm probID={this.props.params.probID}/>
             <QuestionUnit questions={this.state.questions} />
-          <SideBarMore />
+            <SideBarMore />
         </div>
       
       );
