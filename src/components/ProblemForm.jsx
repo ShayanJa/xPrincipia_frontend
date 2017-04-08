@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import $ from 'min-jquery';
 import axios from 'axios'
+import cookie from 'react-cookie'
 
 export default class ProblemForm extends React.Component {
 
@@ -57,6 +58,7 @@ export default class ProblemForm extends React.Component {
   // });
   
   axios.post('http://localhost:10000/auth/problems/create', {
+      username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,
       field: this.state.field,
