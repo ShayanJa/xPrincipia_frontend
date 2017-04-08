@@ -14,16 +14,16 @@ export default class SubProblemContainer extends React.Component {
         }
         
     };
-        componentDidMount(){
+    componentDidMount(){
         var self = this;
         window.scrollTo(0,0);
-        return axios.get('http://localhost:10000/problems/all').then(function (response) {
+        return axios.get('http://localhost:10000/problems/subproblems?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 problems: response.data
             })
         })  
     }
-   render() {
+    render() {
       return (
         <div id="solutions">
           <Link to={`/problem/${this.props.params.probID}/problem/create`}><div id="createButton">Create</div></Link>
