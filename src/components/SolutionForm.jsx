@@ -4,8 +4,8 @@ import $ from 'min-jquery';
 
 export default class SolutionForm extends React.Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state= {
       title: '',
@@ -36,6 +36,7 @@ export default class SolutionForm extends React.Component {
     url: 'http://localhost:10000/solutions/create',
     processData: false,
     data: JSON.stringify({
+      'problemID':this.props.params.probID,
       'title' : this.state.title,
       'summary' : this.state.summary,
       'description' : this.state.description,

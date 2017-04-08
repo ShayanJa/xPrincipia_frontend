@@ -32,10 +32,10 @@ export default class FullSolution extends React.Component {
   }
    render() {
       return (
-      <div id="maxContainer">
+      <div id="maxContainer"> 
         <div id="fullSolution">
             <div id="solutionHeader">
-              <div id="parentButton">Problem</div>
+              <div id="parentButton"><Link to={`/problem/${this.state.solutionInfo.ProblemID}/solutions`}>Problem</Link></div>
               <h1 id="elementLabel">Solution</h1>
             </div>
             <div id="solutionIntro">
@@ -57,22 +57,19 @@ export default class FullSolution extends React.Component {
             <div>
               <h1 id="evidenceLabel">Evidence</h1>
               <p id="solutionEvidence">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                  {this.state.solutionInfo.Evidence}
               </p>
             </div>
             <div>
               <h1 id="futureExperimentsLabel">Future Experiments</h1>
               <p id="solutionFutureExperiments">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                  {this.state.solutionInfo.Experiments}
               </p>
             </div>
             <div>
               <h1 id="solutionReferencesLabel">References</h1>
               <p id="solutionReferences">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                 {this.state.solutionInfo.References}
               </p>
             </div>
             <br />
