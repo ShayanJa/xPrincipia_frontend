@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import $ from 'min-jquery';
+import axios from 'axios'
 
 export default class ProblemForm extends React.Component {
 
@@ -16,10 +17,10 @@ export default class ProblemForm extends React.Component {
       references: ''
     }
 
-    this.postSolution = this.postSolution.bind(this);
+    this.postProblem = this.postProblem.bind(this);
   };
 
-  postSolution() {
+  postProblem() {
     //Read field items into component state
     this.state.title = document.getElementById('problemTitleForm').value
     this.state.field = document.getElementById('problemFieldForm').value
@@ -28,32 +29,49 @@ export default class ProblemForm extends React.Component {
     this.state.references = document.getElementById('problemReferencesForm').value
 
   //Ajax post solution request
-  $.ajax({
-    crossDomain: 'true',
-    type: 'POST',
-    headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/problems/create',
-    processData: false,
-    data: JSON.stringify({
-      'title' : this.state.title,
-      'field': this.state.field,
-      'summary': this.state.summary,
-      'description' : this.state.description,
-      'requirements' : this.state.requirements,
-      'references' : this.state.references,
-    }),
-    success: function(result){
-      console.log(result)
+  // $.ajax({
+  //   crossDomain: 'true',
+  //   type: 'POST',
+  //   headers: {'Content-Type' : 'application/json'},
+  //   url: 'http://localhost:10000/auth/problems/create',
+  //   processData: false,
+  //   data: JSON.stringify({
+  //     'title' : this.state.title,
+  //     'field': this.state.field,
+  //     'summary': this.state.summary,
+  //     'description' : this.state.description,
+  //     'requirements' : this.state.requirements,
+  //     'references' : this.state.references,
+  //   }),
+  //   success: function(result){
+  //     console.log(result)
 
-      alert('Your solution has been posted.')
-    },
-    error: function(result){
-      console.log(result)
+  //     alert('Your solution has been posted.')
+  //   },
+  //   error: function(result){
+  //     console.log(result)
 
-      alert('There was an error.')
-    },
+  //     alert('There was an error.')
+  //   },
 
-    });
+  // });
+  
+  axios.post('http://localhost:10000/auth/problems/create', {
+      parentID: this.props.params.probID,
+      title : this.state.title,
+      field: this.state.field,
+      summary : this.state.summary,
+      description : this.state.description,
+     
+      requirements: this.state.requirements,
+      references: this.state.references
+    })
+    .then(function (result) {
+      
+    })
+    .catch(function (error) {
+      alert("yo")
+      });
   };
 
   render() {

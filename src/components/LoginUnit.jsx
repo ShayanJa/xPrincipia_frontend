@@ -25,36 +25,7 @@ export default class LoginUnit extends React.Component {
     //Read field items into component state
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
-
-  // Ajax post login request
-  // $.ajax({
-  //   crossDomain: 'true',
-  //   type: 'POST',
-  //   headers: {'Content-Type' : 'application/json'},
-  //   url: 'http://localhost:10000/login',
-  //   processData: false,
-  //   data: JSON.stringify({
-  //     'username' : this.state.username,
-  //     'password' : this.state.password
-  //   }),
-  //   success: function(result){
-  //     // cookie.save('userToken', result.token );
-  //     console.log(result)
-  //     self.setState({
-  //       userToken: result.token
-  //     })
-  //     cookie.save('userToken', self.state.token );
-  //     alert('Welcome to XPrincipia.'+ cookie.load('userToken'))
-  //     document.location = "/welcome";
-  //   },
-  //   error: function(result){
-  //     console.log(result)
-
-  //     alert('Please try again.')
-  //   },
-
-  // });
-    var self = this
+    
     axios.post('http://localhost:10000/login', {
       username : this.state.username,
       password: this.state.password

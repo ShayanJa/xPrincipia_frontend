@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import $ from 'min-jquery';
+import axios from 'axios'
 
 
 export default class SolutionForm extends React.Component {
@@ -29,34 +30,21 @@ export default class SolutionForm extends React.Component {
     this.state.experiments = document.getElementById('solutionExperimentsForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
-  //Ajax post solution request
-  $.ajax({
-    crossDomain: 'true',
-    type: 'POST',
-    headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/solutions/create',
-    processData: false,
-    data: JSON.stringify({
-      'problemID':this.props.params.probID,
-      'title' : this.state.title,
-      'summary' : this.state.summary,
-      'description' : this.state.description,
-      'evidence' : this.state.evidence,
-      'experiments' : this.state.experiments,
-      'references' : this.state.references
-    }),
-    success: function(result){
-      console.log(result)
-
-      alert('Your solution has been posted.')
-    },
-    error: function(result){
-      console.log(result)
-
-      alert('There was an error.')
-    },
-
-    });
+  axios.post('http://localhost:10000/auth/solutions/create', {
+      problemID:this.props.params.probID,
+      title : this.state.title,
+      summary : this.state.summary,
+      description : this.state.description,
+      evidence: this.state.evidence,
+      experiments : this.state.experiments,
+      references: this.state.references
+    })
+    .then(function (result) {
+      
+    })
+    .catch(function (error) {
+      });
+  
   }
 
   render() {
