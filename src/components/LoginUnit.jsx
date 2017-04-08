@@ -25,7 +25,7 @@ export default class LoginUnit extends React.Component {
     //Read field items into component state
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
-    
+
     axios.post('http://localhost:10000/login', {
       username : this.state.username,
       password: this.state.password
@@ -36,7 +36,7 @@ export default class LoginUnit extends React.Component {
       self.setState({
         userToken: result.data.token
       })
-      
+      cookie.save('userName', self.state.username)
       document.location = "/welcome";
     })
     .catch(function (error) {

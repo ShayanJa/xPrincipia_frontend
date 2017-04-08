@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'min-jquery';
 import axios from 'axios';
+import cookie from 'react-cookie'
 
 export default class QuestionForm extends React.Component {
 
@@ -22,6 +23,7 @@ export default class QuestionForm extends React.Component {
   axios.post('http://localhost:10000/auth/questions/create', {
     type:'1',
     typeID: this.props.probID,
+    username: cookie.load('userName'),
     description : this.state.question,
   })
   .then(function (result) {

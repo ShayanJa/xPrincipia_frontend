@@ -22,7 +22,7 @@ postRegister() {
   this.state.email = document.getElementById('registerEmail').value
   this.state.password = document.getElementById('registerPassword').value
   this.state.fullname = document.getElementById('registerFullName').value
-  this.state.fullname = document.getElementById('registerUserName').value
+  this.state.username = document.getElementById('registerUserName').value
 
 // Ajax post register request
 $.ajax({
@@ -33,9 +33,10 @@ $.ajax({
   processData: false,
   data: JSON.stringify({
     'email' : this.state.email,
+    'username' : this.state.username,
     'password' : this.state.password,
-    'fullname' : this.state.fullname,
-    'username' : this.state.username
+    // 'fullname' : this.state.fullname,
+    
   }),
   success: function(result){
     console.log(result)

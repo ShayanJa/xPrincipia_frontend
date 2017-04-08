@@ -35,14 +35,21 @@ class App extends React.Component {
     if (this.state.userToken === undefined ){
       if (window.location.pathname != "/login" && window.location.pathname != "/register"){
         document.location = "/login";
+        return (
+        <div>
+          <p>error image</p>
+          {/*Put 404 error image and also wait 2 seconds before redirecting*/}
+        </div>
+        )
       }
-      
     }
-    return (
+      return (
       <div className="App">
         {this.props.children}
       </div>
       );
+    
+    
     
   }
 }
