@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import $ from 'min-jquery';
 
 
@@ -87,7 +88,7 @@ export default class SolutionForm extends React.Component {
                       <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
                           </textarea></label><br />
-                      <input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/>
+                      <Link to={`/problem/${this.props.probID}/solutions`}><input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/></Link>
             </fieldset>
           </form>
       </div>

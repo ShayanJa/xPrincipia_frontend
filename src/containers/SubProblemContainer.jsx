@@ -16,6 +16,7 @@ export default class SubProblemContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
+        window.scrollTo(0,0);
         return axios.get('http://localhost:10000/problems/all').then(function (response) {
             self.setState({
                 problems: response.data
