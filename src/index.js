@@ -65,17 +65,17 @@ ReactDOM.render(
         </Route>
       </Route>
         <IndexRoute component={FullSolution}></IndexRoute>
-        <Route path='/fullsolution/:probID' component={FullSolution}>
+        <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
           <IndexRoute component={SideBarFullSolution}></IndexRoute>
-          <Route path='/fullsolution/:probID/sidebar' component={SideBarFullSolution}>
+          <Route path='/fullsolution/:probID/:solutionID/sidebar' component={SideBarFullSolution}>
             <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/fullsolution/:probID/answers' component={AnswerContainer}></Route>
-            <Route path='/fullsolution/:probID/createproblem' component={ProblemForm}></Route>
-            <Route path='/fullsolution/:probID/createsolution' component={SolutionForm}></Route>
-            <Route path='/fullsolution/:probID/questions' component={QuestionContainer}></Route>
-            <Route path='/fullsolution/:probID/solutions' component={SolutionContainer}></Route>
-            <Route path='/fullsolution/:probID/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/fullsolution/:probID/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/answers' component={AnswerContainer}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/createproblem' component={ProblemForm}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/createsolution' component={SolutionForm}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/questions' component={QuestionContainer}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/solutions' component={SolutionContainer}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/subproblems' component={SubProblemContainer}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/suggestions' component={SuggestionContainer}></Route>
           </Route>
         </Route>
         <IndexRoute component={UserSolution}></IndexRoute>

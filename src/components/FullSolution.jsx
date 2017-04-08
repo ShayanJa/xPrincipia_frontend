@@ -13,20 +13,19 @@ export default class FullSolution extends React.Component {
     };
     componentDidMount(){
       var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+this.props.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
-              solutionInfo: response.data
+              solutionInfo: response.data,
           })
     })  
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+newProps.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
-              solutionInfo: response.data,
-              probID: response.data.ID
+              solutionInfo: response.data,  
           })
     })
 
@@ -85,7 +84,7 @@ export default class FullSolution extends React.Component {
             <br />
         </div>
         <div id="sidebar">
-           {React.cloneElement(this.props.children, {probID: this.state.probID})}
+           {React.cloneElement(this.props.children, {probID: this.state.solutionInfo.problemID, solutionID: this.state.solutionInfo.ID})}
         </div>
       </div>
       );
