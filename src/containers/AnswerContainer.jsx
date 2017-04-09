@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import QuestionUnit from '../components/QuestionUnit.jsx';
 import AnswerUnit from '../components/AnswerUnit.jsx';

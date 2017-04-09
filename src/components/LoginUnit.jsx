@@ -31,17 +31,14 @@ export default class LoginUnit extends React.Component {
       password: this.state.password
     })
     .then(function (result) {
-      cookie.save('userToken', result.data.token );
-      console.log(result.data)
       self.setState({
         userToken: result.data.token
       })
+      cookie.save('userToken', result.data.token );
       cookie.save('userName', self.state.username)
       document.location = "/welcome";
     })
     .catch(function (error) {
-      console.log(error);
-
       alert('Please try again.')
     });
   }

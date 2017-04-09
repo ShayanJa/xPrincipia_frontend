@@ -15,13 +15,12 @@ export default class FullSolution extends React.Component {
     componentDidMount(){
       var self = this;
       return axios.get('http://localhost:10000/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
-          console.log(response.data)
           self.setState({
               solutionInfo: response.data,
           })
     })
     .catch(function (error) {
-        if(error.response.status == 401){
+        if(error.response.status === 401){
             document.location = "/login"
         }
     });   
@@ -31,13 +30,12 @@ export default class FullSolution extends React.Component {
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get('http://localhost:10000/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
-          console.log(response.data)
           self.setState({
               solutionInfo: response.data,  
           })
     })
     .catch(function (error) {
-        if(error.response.status == 401){
+        if(error.response.status === 401){
             document.location = "/login"
         }
     }); 

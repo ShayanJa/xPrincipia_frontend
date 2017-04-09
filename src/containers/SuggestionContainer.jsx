@@ -17,7 +17,6 @@ constructor(props){
     };
         componentDidMount(){
         var self = this;
-        // console.log(this.props.params.probID)
         return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 suggestions: response.data

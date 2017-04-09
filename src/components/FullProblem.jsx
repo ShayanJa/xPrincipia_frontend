@@ -14,10 +14,9 @@ export default class FullProblem extends React.Component {
     componentDidMount(){
       var self = this;
       return axios.get('http://localhost:10000/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
-          console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
-          if (response.data.ParentID == 0){
+          if (response.data.ParentID === 0){
             self.setState({
               parentID: response.data.ID
             })
@@ -28,7 +27,7 @@ export default class FullProblem extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status == 401){
+        if(error.response.status === 401){
             document.location = "/login"
         }
     });   
@@ -36,10 +35,9 @@ export default class FullProblem extends React.Component {
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get('http://localhost:10000/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
-          console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
-          if (response.data.ParentID == 0){
+          if (response.data.ParentID === 0){
             self.setState({
               parentID: response.data.ID
             })
@@ -51,7 +49,7 @@ export default class FullProblem extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status == 401){
+        if(error.response.status === 401){
             document.location = "/login"
         }
     }); 

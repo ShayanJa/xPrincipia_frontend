@@ -18,35 +18,34 @@ export default class WelcomeUnitsContainer extends React.Component {
 
 
      queryProblem () {
-         var self = this
+         //get search text box data
         this.state.searchText = document.getElementById('exploreInput').value
-        console.log(document.getElementById('exploreInput').value)
+
+        var self = this
         return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
-          console.log(response.data)
             self.setState({
               problems: response.data
             })
         })
         .catch(function (error) {
-            if(error.response.status == 401){
+            if(error.response.status === 401){
                 document.location = "/login"
             }
         }); 
-    }
+        }
         componentWillMount(){
         var self = this;
         return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
-            console.log(response.data[0].Title)
             self.setState({
                 problems: response.data
             })
         }) 
         .catch(function (error) {
-            if(error.response.status == 401){
+            if(error.response.status === 401){
                 document.location = "/login"
             }
         }); 
-    }
+        }
  
    render() {
       return (

@@ -8,7 +8,7 @@ import App from './App';
 import Error404 from './components/Error404.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
-import Info from './components/Info.jsx';
+// import Info from './components/Info.jsx';
 import Layout from './components/Layout.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';

@@ -8,7 +8,8 @@ export default class ProblemForm extends React.Component {
 
   constructor(){
     super();
-
+    
+    //ProblemForm structure in backend
     this.state= {
       title: '',
       field: '',
@@ -28,34 +29,6 @@ export default class ProblemForm extends React.Component {
     this.state.description = document.getElementById('problemDescriptionForm').value
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
-
-  //Ajax post solution request
-  // $.ajax({
-  //   crossDomain: 'true',
-  //   type: 'POST',
-  //   headers: {'Content-Type' : 'application/json'},
-  //   url: 'http://localhost:10000/auth/problems/create',
-  //   processData: false,
-  //   data: JSON.stringify({
-  //     'title' : this.state.title,
-  //     'field': this.state.field,
-  //     'summary': this.state.summary,
-  //     'description' : this.state.description,
-  //     'requirements' : this.state.requirements,
-  //     'references' : this.state.references,
-  //   }),
-  //   success: function(result){
-  //     console.log(result)
-
-  //     alert('Your solution has been posted.')
-  //   },
-  //   error: function(result){
-  //     console.log(result)
-
-  //     alert('There was an error.')
-  //   },
-
-  // });
   
   axios.post('http://localhost:10000/auth/problems/create', {
       username: cookie.load('userName'),

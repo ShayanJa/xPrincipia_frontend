@@ -20,7 +20,6 @@ export default class Header extends React.Component {
     queryProblem () {
         var self = this
         this.state.searchText = document.getElementById('exploreInput').value
-        console.log("hello")
         return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
           console.log(response.data)
             self.setState({
@@ -31,7 +30,7 @@ export default class Header extends React.Component {
     }
 
     submitSearch(e) {
-        // if (e.keyCode == 13){
+        // if (e.keyCode === 13){
         //     alert("hey");
         //     // document.location = '/welcome';
         // }

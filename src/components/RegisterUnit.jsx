@@ -60,13 +60,11 @@ axios.post('http://localhost:10000/register', {
       password: this.state.password
     })
     .then(function (result) {
-      console.log(result)
       alert('You have been registered. Welcome to XPrincipia! Please log in')
     
      
     })
     .catch(function (error) {
-      console.log(error);
 
       alert('Please try again.')
     });
