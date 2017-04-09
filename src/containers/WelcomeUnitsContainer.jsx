@@ -6,15 +6,29 @@ import WelcomeUnit from '../components/WelcomeUnit.jsx';
 import WelcomeMore from '../components/WelcomeMore.jsx';
 
 export default class WelcomeUnitsContainer extends React.Component {
- 
-   constructor(props){
+    constructor(props){
         super(props);
 
         this.state = {
-            problems: []
+           problems : [],
+           searchText: [],
         }
-        
+        this.queryProblem = this.queryProblem.bind(this)
     };
+
+
+     queryProblem () {
+         var self = this
+        this.state.searchText = document.getElementById('exploreInput').value
+        console.log(document.getElementById('exploreInput').value)
+        return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
+          console.log(response.data)
+            self.setState({
+              problems: response.data
+            })
+          
+        })  
+    }
         componentWillMount(){
         var self = this;
         return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
@@ -27,10 +41,19 @@ export default class WelcomeUnitsContainer extends React.Component {
  
    render() {
       return (
-        <div id="welcomeUnitsContainer">
-          <WelcomeUnit problems={this.state.problems} />
-          <WelcomeMore />
+      <div>
+        <div id="welcomeFormComponent">
+            <form  id="exploreWelcomeForm">
+                <input type="search" name="search"
+                    placeholder="Select or search a problem" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
+                {/*<input type="submit" value="Go" id="submitExplore" />*/}
+            </form>
         </div>
+            <div id="welcomeUnitsContainer">
+            <WelcomeUnit problems={this.state.problems} />
+            <WelcomeMore />
+            </div>
+      </div>
       );
    }
 }
