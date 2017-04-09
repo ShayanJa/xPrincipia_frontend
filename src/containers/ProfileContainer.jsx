@@ -41,13 +41,13 @@ export default class ProfileContainer extends React.Component {
             <div id="profileSidebarMenu">
                 <div id="profileProblemsMenu">
                     <div id="solveTitle">Problems</div>
-                    <a href="./solutionslist.html"><div id="followedProblemsButton">Followed</div></a>
-                    <a href="./subproblemlist.html"><div id="createdProblemsButton">Created</div></a>
+                    <div id="followedProblemsButton">Followed</div>
+                    <div id="createdProblemsButton">Created</div>
                 </div>
                 <div id="profileSolutionsMenu">
                     <div id="developTitle">Solutions</div>
-                    <a href="./commentslist.html"><div id="votedSolutionsButton">Voted</div></a>
-                    <a href="./suggestionslist.html"><div id="createdSolutionsButton">Created</div></a>
+                    <div id="votedSolutionsButton">Voted</div>
+                    <div id="createdSolutionsButton">Created</div>
                 </div>
             </div>
             <div id="profileRightElements">
