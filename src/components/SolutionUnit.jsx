@@ -23,7 +23,7 @@ export default class SolutionUnit extends React.Component {
 
 				<div id="solutionUnitTitle">
 					{/*<div id="percent">70%</div>*/}
-					<div id="percent">{solution.Rank}</div>
+					<div id="percent">{floatToDecimal(solution.PercentRank)}</div>
 					<div id="unitTitle">{solution.Title}</div>
 				</div>
 				<div id="solutionUnitSummary">
@@ -34,4 +34,11 @@ export default class SolutionUnit extends React.Component {
         </li>);
 
   }
+}
+
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	console.log(float)
+	return float
 }

@@ -18,7 +18,7 @@ export default class SubProblemUnit extends React.Component {
         <li key={problem.ID} id="subProblemUnit">
 				<Link to={`/problem/${problem.ID}/subproblems`} >
 					<div id="subProblemTitle">
-						<div id="percent">70%</div>
+						<div id="percent">{problem.Rank}</div>
 						<div id="unitTitle">{problem.Title}</div>
 						{/*<button type="button" id="problemVote">Vote</button>*/}
 					</div>
