@@ -1,15 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import SolutionContainer from '../containers/SolutionContainer.jsx';
-import SuggestionContainer from '../containers/SuggestionContainer.jsx';
-import QuestionContainer from '../containers/QuestionContainer.jsx';
-
 
 export default class SideBarFullSolutionMenu extends React.Component {
-  constructor(props){
-        super(props);
 
-    };
    render() {
       return (
       <div id="sidebarMenu">

@@ -4,9 +4,6 @@ import { Link } from 'react-router';
 
 export default class WelcomeUnit extends React.Component {
    
-	constructor(props){
-        super(props);
-	}
 	render() {
 		return (
 	    <div>

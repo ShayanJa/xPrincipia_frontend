@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import SolutionUnit from '../components/SolutionUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';

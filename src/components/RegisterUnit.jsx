@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import $ from 'min-jquery';
 import axios from 'axios';
-import cookie from 'react-cookie'
 
 export default class RegisterUnit extends React.Component {
 
@@ -53,7 +51,6 @@ postRegister() {
 //   },
 
 // });
-var self = this
 axios.post('http://localhost:10000/register', {
       email: this.state.email,
       username : this.state.username,

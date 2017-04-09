@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import $ from 'min-jquery';
 import axios from 'axios'
 import cookie from 'react-cookie'
 
