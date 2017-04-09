@@ -29,10 +29,9 @@ class App extends React.Component {
     cookie.remove('userToken', { path: '/' });
   }
   render() {
-    console.log(
-      "yeeeee"
-    )
+    //Check if user is logged in
     if (this.state.userToken === undefined ){
+      //redirect to login page if not logged in. Register is also allowed
       if (window.location.pathname != "/login" && window.location.pathname != "/register"){
         document.location = "/login";
         return (
@@ -42,7 +41,14 @@ class App extends React.Component {
         </div>
         )
       }
+    } 
+
+    //Load the welcome page if route is '/'
+    if (window.location.pathname === "/"){
+      document.location = "/welcome";
     }
+
+    //Return the rest of the renderings
       return (
       <div className="App">
         {this.props.children}
