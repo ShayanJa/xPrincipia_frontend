@@ -1,6 +1,7 @@
 import React from 'react';
 import {  Link  } from 'react-router';
-import img from '../assets/dnablackinvert.png'
+import img from '../assets/dnablackinvert.png';
+import cookie from 'react-cookie';
 
 export default class Header extends React.Component {
    render() {
@@ -18,7 +19,7 @@ export default class Header extends React.Component {
               <Link to="/welcome"><div>XPrincipia</div></Link>
             </div>
             <div id="avatarHeader">
-              <div id="avatarFullName">Ben Francis</div>
+              <div id="avatarFullName">{cookie.load("userName")}</div>
               <Link to="/profile">
               <img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="33" height="33" />
               </Link>

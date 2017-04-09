@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 import $ from 'min-jquery';
+import axios from 'axios'
+import cookie from 'react-cookie'
 
 
 export default class SolutionForm extends React.Component {
 
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
 
     this.state= {
       title: '',
@@ -28,33 +31,22 @@ export default class SolutionForm extends React.Component {
     this.state.experiments = document.getElementById('solutionExperimentsForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
-  //Ajax post solution request
-  $.ajax({
-    crossDomain: 'true',
-    type: 'POST',
-    headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/solutions/create',
-    processData: false,
-    data: JSON.stringify({
-      'title' : this.state.title,
-      'summary' : this.state.summary,
-      'description' : this.state.description,
-      'evidence' : this.state.evidence,
-      'experiments' : this.state.experiments,
-      'references' : this.state.references
-    }),
-    success: function(result){
-      console.log(result)
-
-      alert('Your solution has been posted.')
-    },
-    error: function(result){
-      console.log(result)
-
-      alert('There was an error.')
-    },
-
-    });
+  axios.post('http://localhost:10000/auth/solutions/create', {
+      username: cookie.load('userName'),
+      problemID:this.props.params.probID,
+      title : this.state.title,
+      summary : this.state.summary,
+      description : this.state.description,
+      evidence: this.state.evidence,
+      experiments : this.state.experiments,
+      references: this.state.references
+    })
+    .then(function (result) {
+      
+    })
+    .catch(function (error) {
+      });
+  
   }
 
   render() {
@@ -68,7 +60,7 @@ export default class SolutionForm extends React.Component {
                         </label><br />
 
                       <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
-                          <textarea name="solutionSummary" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="solutionSummaryForm"/>
+                          <textarea name="solutionSummary" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="solutionSummaryForm"/>
                         </label><br />
 
                       <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
@@ -86,7 +78,7 @@ export default class SolutionForm extends React.Component {
                       <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
                           </textarea></label><br />
-                      <input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/>
+                      <Link to={`/problem/${this.props.params.probID}/solutions`}><input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/></Link>
             </fieldset>
           </form>
       </div>

@@ -13,30 +13,29 @@ export default class FullSolution extends React.Component {
     };
     componentDidMount(){
       var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+this.props.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
-              solutionInfo: response.data
+              solutionInfo: response.data,
           })
     })  
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://localhost:10000/solutions/ID?id='+newProps.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
           console.log(response.data)
           self.setState({
-              solutionInfo: response.data,
-              probID: response.data.ID
+              solutionInfo: response.data,  
           })
     })
 
   }
    render() {
       return (
-      <div>
+      <div id="maxContainer"> 
         <div id="fullSolution">
             <div id="solutionHeader">
-              <div id="parentButton">Problem</div>
+              <div id="parentButton"><Link to={`/problem/${this.state.solutionInfo.ProblemID}/solutions`}>Problem</Link></div>
               <h1 id="elementLabel">Solution</h1>
             </div>
             <div id="solutionIntro">
@@ -58,22 +57,19 @@ export default class FullSolution extends React.Component {
             <div>
               <h1 id="evidenceLabel">Evidence</h1>
               <p id="solutionEvidence">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                  {this.state.solutionInfo.Evidence}
               </p>
             </div>
             <div>
               <h1 id="futureExperimentsLabel">Future Experiments</h1>
               <p id="solutionFutureExperiments">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                  {this.state.solutionInfo.Experiments}
               </p>
             </div>
             <div>
               <h1 id="solutionReferencesLabel">References</h1>
               <p id="solutionReferences">
-                  Relate the functions of the brain to the functions of consciousness (edit this in future)<br /><br />
-                  Provide one future experiment idea for falsification and one for predictive verification
+                 {this.state.solutionInfo.References}
               </p>
             </div>
             <br />
@@ -85,7 +81,7 @@ export default class FullSolution extends React.Component {
             <br />
         </div>
         <div id="sidebar">
-           {React.cloneElement(this.props.children, {probID: this.state.probID})}
+           {React.cloneElement(this.props.children, {probID: this.state.solutionInfo.problemID, solutionID: this.state.solutionInfo.ID})}
         </div>
       </div>
       );

@@ -13,8 +13,16 @@ export default class FullProblem extends React.Component {
     };
     componentDidMount(){
       var self = this;
-      return axios.get('http://localhost:10000/problems/ID?id='+this.props.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
           console.log(response.data)
+          //if parent ID is 0 then the problem is at the root of the tree
+          // return id as the parentID for routing purposes
+          if (response.data.ParentID == 0){
+            self.setState({
+              parentID: response.data.ID
+            })
+          }
+          //set other data
           self.setState({
               problemInfo: response.data
           })
@@ -22,8 +30,16 @@ export default class FullProblem extends React.Component {
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://localhost:10000/problems/ID?id='+newProps.params.probID).then(function (response) {
+      return axios.get('http://localhost:10000/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
           console.log(response.data)
+          //if parent ID is 0 then the problem is at the root of the tree
+          // return id as the parentID for routing purposes
+          if (response.data.ParentID == 0){
+            self.setState({
+              parentID: response.data.ID
+            })
+          }
+          //set other data
           self.setState({
               problemInfo: response.data,
               probID: response.data.ID
@@ -35,10 +51,11 @@ export default class FullProblem extends React.Component {
    render() {
 
       return (
-      <div id="container">
+      <div id="maxContainer">
         <div id="fullProblem">
           <div id="problemHeader">
-          <div id="parentButton">Parent</div>
+            {/*Link back to the parent problem*/}
+          <div id="parentButton"><Link to={`/problem/${this.state.parentID}/solutions`}>Parent</Link></div>
             <h1 id="elementLabel">Problem</h1>
           </div>
           <div id="problemIntro">

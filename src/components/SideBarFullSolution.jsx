@@ -6,7 +6,7 @@ export default class SideBarFullSolution extends React.Component {
    render() {
       return (
           <div>
-          	<SideBarFullSolutionMenu probID={this.props.params.probID}/>
+          	<SideBarFullSolutionMenu solutionID={this.props.params.solutionID} probID={this.props.params.probID}/>
           	{this.props.children}
           </div>
       );

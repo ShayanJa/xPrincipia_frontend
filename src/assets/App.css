@@ -11,6 +11,9 @@
     	position: relative;
     	background-color: #0f131c;
     }
+    #maxContainer {
+      width: 100%;
+    }
     h1 {
     	text-align: center;
     	font-weight: 100;
@@ -33,7 +36,11 @@
       list-style-type: none;
       margin: 0px;
     }
-    ul li a {text-decoration: none}
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
 /*End Global*/
 
@@ -323,7 +330,7 @@
     	margin: 0px;
     }
     #parentButton:hover {
-    	color: #0f131c;
+    	color: #0f131c !important;
     	background-color: #00ffdc;
     	border-color: #0f131c;
     	cursor: pointer;
@@ -434,6 +441,14 @@
     	font-size: 120%;
     	line-height: 150%;
     }
+    #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
+    #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
+    #solutionDescription:hover, #problemDescription:hover, 
+    #solutionEvidence:hover, #solutionFutureExperiments:hover, 
+    #solutionReferences:hover, #problemRequirements:hover, #xp:hover {
+      color: #ffffff;
+    }
+
     #elementLabel {
       flex: 0 1 auto;
       margin: 1px 5% 0% 0%;
@@ -1332,9 +1347,6 @@
     	flex-direction: row;
       width: 100%;
     }
-    #container {
-      width: 100%;
-    }
     #problem, #sidebar {
       border: 1px solid #00dcff;
       background-color: #0f131c;
@@ -1383,6 +1395,10 @@
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
     	margin-bottom: 10px;
+    }
+    .activeMenu div {
+      color: #0f131c !important;
+      background-color: #00ffdc;  
     }
     #solveMenu, #developMenu {
     	flex: 1 1 auto;

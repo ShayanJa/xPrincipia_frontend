@@ -1,43 +1,42 @@
 import React from 'react';
-import $ from 'min-jquery'
+import $ from 'min-jquery';
+import axios from 'axios';
+import cookie from 'react-cookie'
 
 export default class QuestionForm extends React.Component {
 
-constructor(){
+  constructor(){
   super();
 
   this.state= {
     question: '',
   }
 
-  this.postQuestion = this.postQuestion.bind(this);
-};
+    this.postQuestion = this.postQuestion.bind(this);
+  };
 
-postQuestion() {
+  postQuestion() {
+  var self = this
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
+  
+  axios.post('http://localhost:10000/auth/questions/create', {
+    type:'1',
+    typeID: this.props.probID,
+    username: cookie.load('userName'),
+    description : this.state.question,
+  })
+  .then(function (result) {
+    
+  })
+  .catch(function (error) {
+    });
+  }
 
-// Ajax post question request
-$.ajax({
-  crossDomain: 'true',
-  type: 'POST',
-  headers: {'Content-Type' : 'application/json'},
-  url: 'http://localhost:10000/questions/create',
-  processData: false,
-  data: JSON.stringify({
-    'Description' : this.state.question,
-  }),
-  success: function(result){
-  },
-  error: function(result){    
-  },
 
-  });
-}
 
    render() {
       return (
-
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>

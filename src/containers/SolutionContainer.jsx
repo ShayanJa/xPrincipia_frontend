@@ -16,7 +16,8 @@ export default class SolutionContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/solutions/all').then(function (response) {
+        window.scrollTo(0,0);
+        return axios.get('http://localhost:10000/auth/solutions/problemID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 solutions: response.data
             })
@@ -26,7 +27,7 @@ export default class SolutionContainer extends React.Component {
    render() {
       return (
         <div id="solutions">
-           <Link to={`/problem/${this.props.params.probID}/create`}><div id="createButton">Create</div></Link>
+           <Link to={`/problem/${this.props.params.probID}/solution/create`}><div id="createButton">Create</div></Link>
             <SolutionUnit solutions={this.state.solutions} probID={this.props.params.probID}/>
           <SideBarMore />
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import $ from 'min-jquery'
+import axios from 'axios'
+import cookie from 'react-cookie'
 
 export default class SuggestionForm extends React.Component {
 
@@ -15,28 +17,21 @@ constructor(){
 
 postSuggestion() {
   //Read field items into component state
-  this.state.suggestion = document.getElementById('suggestionTextArea').value
-
-// Ajax post suggestion request
-$.ajax({
-  crossDomain: 'true',
-  type: 'POST',
-  headers: {'Content-Type' : 'application/json'},
-  url: 'http://localhost:10000/suggestions/create',
-  processData: false,
-  data: JSON.stringify({
-    'description' : this.state.suggestion,
-  }),
-  success: function(result){
-
+this.state.suggestion = document.getElementById('suggestionTextArea').value
+ var self = this
+ axios.post('http://localhost:10000/auth/suggestions/create', {
+    username: cookie.load('userName'),
+    type:'1',
+    typeID: this.props.probID,
+    description : this.state.suggestion,
+  })
+  .then(function (result) {
     
-  },
-  error: function(result){
-    
-  },
+  })
+  .catch(function (error) {
+    });
+  }
 
-  });
-}
 
    render() {
       return (

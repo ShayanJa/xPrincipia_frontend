@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router';
 import $ from 'min-jquery';
+import axios from 'axios'
+import cookie from 'react-cookie'
 
 export default class ProblemForm extends React.Component {
 
@@ -15,44 +18,62 @@ export default class ProblemForm extends React.Component {
       references: ''
     }
 
-    this.postSolution = this.postSolution.bind(this);
+    this.postProblem = this.postProblem.bind(this);
   };
 
-  postSolution() {
+  postProblem() {
     //Read field items into component state
-    this.state.title = document.getElementById('problemTitle').value
-    this.state.field = document.getElementById('problemField').value
+    this.state.title = document.getElementById('problemTitleForm').value
+    this.state.field = document.getElementById('problemFieldForm').value
     this.state.description = document.getElementById('problemDescriptionForm').value
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
 
   //Ajax post solution request
-  $.ajax({
-    crossDomain: 'true',
-    type: 'POST',
-    headers: {'Content-Type' : 'application/json'},
-    url: 'http://localhost:10000/problems/create',
-    processData: false,
-    data: JSON.stringify({
-      'title' : this.state.title,
-      'field': this.state.field,
-      'summary': this.state.summary,
-      'description' : this.state.description,
-      'requirements' : this.state.requirements,
-      'references' : this.state.references
-    }),
-    success: function(result){
-      console.log(result)
+  // $.ajax({
+  //   crossDomain: 'true',
+  //   type: 'POST',
+  //   headers: {'Content-Type' : 'application/json'},
+  //   url: 'http://localhost:10000/auth/problems/create',
+  //   processData: false,
+  //   data: JSON.stringify({
+  //     'title' : this.state.title,
+  //     'field': this.state.field,
+  //     'summary': this.state.summary,
+  //     'description' : this.state.description,
+  //     'requirements' : this.state.requirements,
+  //     'references' : this.state.references,
+  //   }),
+  //   success: function(result){
+  //     console.log(result)
 
-      alert('Your solution has been posted.')
-    },
-    error: function(result){
-      console.log(result)
+  //     alert('Your solution has been posted.')
+  //   },
+  //   error: function(result){
+  //     console.log(result)
 
-      alert('There was an error.')
-    },
+  //     alert('There was an error.')
+  //   },
 
-    });
+  // });
+  
+  axios.post('http://localhost:10000/auth/problems/create', {
+      username: cookie.load('userName'),
+      parentID: this.props.params.probID,
+      title : this.state.title,
+      field: this.state.field,
+      summary : this.state.summary,
+      description : this.state.description,
+     
+      requirements: this.state.requirements,
+      references: this.state.references
+    })
+    .then(function (result) {
+      
+    })
+    .catch(function (error) {
+      alert("yo")
+      });
   };
 
   render() {
@@ -61,31 +82,31 @@ export default class ProblemForm extends React.Component {
             <form id="createForm">
               <fieldset>
                   <legend>Create:Problem</legend>
-                        <label htmlFor="problemTitle" id="problemTitleFormLabel">Title<br />
+                        <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
 
-                        <label htmlFor="problemFieldLabel" id="problemFieldFormLabel">Field<br />
+                        <label htmlFor="problemFieldForm" id="problemFieldFormLabel">Field<br />
                             <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
                           </label><br />
 
-                        <label htmlFor="problemSummary" id="problemSummaryFormLabel">Summary<br />
-                            <textarea name="problemField" required="required" maxLength="140" placeholder="Summarize in 140 characters here." id="problemSummaryForm"/>
+                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Summary<br />
+                            <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="problemSummaryForm"/>
                           </label><br />
 
-                        <label htmlFor="problemDescription" id="problemDescriptionFormLabel">Description<br />
+                        <label htmlFor="problemDescriptionForm" id="problemDescriptionFormLabel">Description<br />
                             <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
                             </textarea></label><br />
 
-                        <label htmlFor="problemRequirements" id="problemRequirementsFormLabel">Requirements<br />
+                        <label htmlFor="problemRequirementsForm" id="problemRequirementsFormLabel">Requirements<br />
                             <textarea name="problemRequirements" placeholder="List requirements that solutions need to fulfill. Please enter as a list with a space between each requirement. " id="problemRequirementsForm">
                             </textarea></label><br />
 
-                        <label htmlFor="problemReferences" id="problemReferencesFormLabel">References<br />
+                        <label htmlFor="problemReferencesForm" id="problemReferencesFormLabel">References<br />
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
-                        <input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/>
+                        <Link to={`/problem/${this.props.params.probID}/subproblems`}><input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/></Link>
               </fieldset>
             </form>
         </div>

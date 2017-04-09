@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import axios from 'axios';
 import SubProblemUnit from '../components/SubProblemUnit.jsx';
@@ -14,18 +13,19 @@ export default class SubProblemContainer extends React.Component {
         }
         
     };
-        componentDidMount(){
+    componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/problems/all').then(function (response) {
+        window.scrollTo(0,0);
+        return axios.get('http://localhost:10000/auth/problems/subproblems?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 problems: response.data
             })
         })  
     }
-   render() {
+    render() {
       return (
         <div id="solutions">
-          <Link to={`/problem/${this.props.params.probID}/create`}><div id="createButton">Create</div></Link>
+          <Link to={`/problem/${this.props.params.probID}/problem/create`}><div id="createButton">Create</div></Link>
             <SubProblemUnit problems={this.state.problems} />
           <SideBarMore />
         </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router';
 import $ from 'min-jquery';
+import axios from 'axios';
+import cookie from 'react-cookie'
 
 export default class RegisterUnit extends React.Component {
 
@@ -22,33 +24,52 @@ postRegister() {
   this.state.email = document.getElementById('registerEmail').value
   this.state.password = document.getElementById('registerPassword').value
   this.state.fullname = document.getElementById('registerFullName').value
-  this.state.fullname = document.getElementById('registerUserName').value
+  this.state.username = document.getElementById('registerUserName').value
 
-// Ajax post register request
-$.ajax({
-  crossDomain: 'true',
-  type: 'POST',
-  headers: {'Content-Type' : 'application/json'},
-  url: 'http://localhost:10000/register',
-  processData: false,
-  data: JSON.stringify({
-    'email' : this.state.email,
-    'password' : this.state.password,
-    'fullname' : this.state.fullname,
-    'username' : this.state.username
-  }),
-  success: function(result){
-    console.log(result)
+// // Ajax post register request
+// $.ajax({
+//   crossDomain: 'true',
+//   type: 'POST',
+//   headers: {'Content-Type' : 'application/json'},
+//   url: 'http://localhost:10000/register',
+//   processData: false,
+//   data: JSON.stringify({
+//     'email' : this.state.email,
+//     'username' : this.state.username,
+//     'password' : this.state.password,
+//     // 'fullname' : this.state.fullname,
+    
+//   }),
+//   success: function(result){
+//     console.log(result)
+//     document.location('/welcome')
+    
+//     alert('Welcome to XPrincipia.')
+//   },
+//   error: function(result){
+//     console.log(result)
 
-    alert('Welcome to XPrincipia.')
-  },
-  error: function(result){
-    console.log(result)
+//     alert('Please try again.')
+//   },
 
-    alert('Please try again.')
-  },
+// });
+var self = this
+axios.post('http://localhost:10000/register', {
+      email: this.state.email,
+      username : this.state.username,
+      password: this.state.password
+    })
+    .then(function (result) {
+      console.log(result)
+      alert('You have been registered. Welcome to XPrincipia! Please log in')
+    
+     
+    })
+    .catch(function (error) {
+      console.log(error);
 
-  });
+      alert('Please try again.')
+    });
 }
 
   render() {
@@ -61,7 +82,7 @@ $.ajax({
                 <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" /> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
-                <Link to='/welcome'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
+                <Link to='/login'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
             </form>
             <Link to='/login'><div id="loginButton">Login</div></Link>
         </div>

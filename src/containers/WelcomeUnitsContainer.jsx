@@ -17,7 +17,7 @@ export default class WelcomeUnitsContainer extends React.Component {
     };
         componentWillMount(){
         var self = this;
-        return axios.get('http://localhost:10000/problems/all').then(function (response) {
+        return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
             console.log(response.data[0].Title)
             self.setState({
                 problems: response.data

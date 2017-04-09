@@ -18,7 +18,7 @@ export default class SuggestionUnit extends React.Component {
     return (
        <li key={suggestion.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">Q: Jack Jackson</div>
+					<div id="suggestionAdder">{suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
 				<button type="button" id="suggestionVote">Vote</button>   

@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export default class SolutionUnit extends React.Component {
+	constructor(props){
+        super(props);
+
+    };
 	render() {
 		return (
 	    <div>
@@ -18,7 +22,7 @@ export default class SolutionUnit extends React.Component {
         <li key={solution.ID}>
 
 			<div id="solutionUnit">
-			<Link to={`/fullsolution/${solution.ID}/solutions/`}>
+			<Link to={`/fullsolution/${solution.ProblemID}/${solution.ID}/solutions/`}>
 
 				<div id="solutionUnitTitle">
 					<div id="percent">70%</div>
