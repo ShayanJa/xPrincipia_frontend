@@ -18,15 +18,16 @@ export default class SubProblemUnit extends React.Component {
         <li key={problem.ID} id="subProblemUnit">
 				<Link to={`/problem/${problem.ID}/subproblems`} >
 					<div id="subProblemTitle">
-						<div id="subProblemUnitTitle">{problem.Title}</div>
-						<button type="button" id="problemVote">Vote</button>
+						<div id="percent">70%</div>
+						<div id="unitTitle">{problem.Title}</div>
+						{/*<button type="button" id="problemVote">Vote</button>*/}
 					</div>
 					<div id="subProblemSummary">{problem.Summary}</div>
 				</Link>
 
         <br ></br> 
 
-        </li>)
+        </li>);
 	
   }
 }
