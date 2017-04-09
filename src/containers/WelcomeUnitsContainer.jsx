@@ -26,8 +26,12 @@ export default class WelcomeUnitsContainer extends React.Component {
             self.setState({
               problems: response.data
             })
-          
-        })  
+        })
+        .catch(function (error) {
+            if(error.response.status == 401){
+                document.location = "/login"
+            }
+        }); 
     }
         componentWillMount(){
         var self = this;
@@ -36,7 +40,12 @@ export default class WelcomeUnitsContainer extends React.Component {
             self.setState({
                 problems: response.data
             })
-        })  
+        }) 
+        .catch(function (error) {
+            if(error.response.status == 401){
+                document.location = "/login"
+            }
+        }); 
     }
  
    render() {

@@ -11,6 +11,7 @@ export default class FullSolution extends React.Component {
         }
 
     };
+    //initialize the component with this state
     componentDidMount(){
       var self = this;
       return axios.get('http://localhost:10000/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
@@ -18,8 +19,15 @@ export default class FullSolution extends React.Component {
           self.setState({
               solutionInfo: response.data,
           })
-    })  
-  }
+    })
+    .catch(function (error) {
+        if(error.response.status == 401){
+            document.location = "/login"
+        }
+    });   
+    }
+
+  //On recieving new props
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get('http://localhost:10000/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
@@ -28,6 +36,11 @@ export default class FullSolution extends React.Component {
               solutionInfo: response.data,  
           })
     })
+    .catch(function (error) {
+        if(error.response.status == 401){
+            document.location = "/login"
+        }
+    }); 
 
   }
    render() {

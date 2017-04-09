@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
-import WelcomeForm from '../components/WelcomeForm.jsx';
 import Header from '../components/Header.jsx';
 
 export default class WelcomeContainer extends React.Component {

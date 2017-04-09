@@ -14,9 +14,11 @@ export default class Header extends React.Component {
            searchText: [],
         }
         this.queryProblem = this.queryProblem.bind(this)
+        this.queryProblem = this.submitSearch.bind(this)
     };
 
     queryProblem () {
+        var self = this
         this.state.searchText = document.getElementById('exploreInput').value
         console.log("hello")
         return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
@@ -24,8 +26,16 @@ export default class Header extends React.Component {
             self.setState({
               problems: response.data
             })
-          
+            document.location = '/welcome';
         })  
+    }
+
+    submitSearch(e) {
+        // if (e.keyCode == 13){
+        //     alert("hey");
+        //     // document.location = '/welcome';
+        // }
+        document.location = '/welcome';
     }
 
    render() {
@@ -36,7 +46,7 @@ export default class Header extends React.Component {
                 <form id="exploreFormHeader">
                     <input type="search" name="search"
                         placeholder="Explore" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
-                    {/*<input type="submit"  value="Go" id="submitExplore" />*/}
+                    <input onKeyPress={this.submitSearch}  id="submitExplore" />
                 </form>
             </div>
             <div id="logo">

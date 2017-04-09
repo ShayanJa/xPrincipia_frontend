@@ -26,7 +26,12 @@ export default class FullProblem extends React.Component {
           self.setState({
               problemInfo: response.data
           })
-    })  
+    })
+    .catch(function (error) {
+        if(error.response.status == 401){
+            document.location = "/login"
+        }
+    });   
   }
   componentWillReceiveProps(newProps){
     var self = this;
@@ -45,6 +50,11 @@ export default class FullProblem extends React.Component {
               probID: response.data.ID
           })
     })
+    .catch(function (error) {
+        if(error.response.status == 401){
+            document.location = "/login"
+        }
+    }); 
 
   }
 
