@@ -72,7 +72,7 @@ export default class ProblemForm extends React.Component {
       
     })
     .catch(function (error) {
-      alert("yo")
+      alert("There was an error.")
       });
   };
 
