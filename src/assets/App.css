@@ -484,6 +484,60 @@
 
 
 
+/*Errors*/
+
+#errorContainer {
+  color: #dddddd;
+  margin: 5px 5px 10px 5px;
+  flex: 1 1 auto;
+  width: 100%;
+
+}
+#error {
+  color: #ffffff;
+  width: 100%;
+  letter-spacing: .15em;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 11%;
+  /*margin-left: 30%;*/
+}
+#errorTitle {
+  font-size: 200%;
+  letter-spacing: 16px;
+  border: 1px solid #00dcff;
+  border-width: 2px 0px;
+  text-align: center;
+}
+#errorSlogan {
+  margin-top: 15px;
+  letter-spacing: 12px;
+}
+#loader {
+    border: 12px solid #0f131c;
+    border-top: 7px solid #00dcff;
+    border-bottom: 7px solid #00dcff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.3s linear infinite;
+    text-align: center;
+    align-content: center;
+    float: center;
+    color: #00dcff;
+    margin-top: 15%;
+    margin-left: 44%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*End Errors*/
+
+
+
 /*Header*/
 
     #header {
@@ -557,20 +611,24 @@
       display: flex;
       flex-direction: row;
       padding-right: 20px;
+      text-align: right;
+      float: right;
     }
     #avatarImage {
+      display: inline-block;
       border: 1px solid #00dcff;
     	border-radius: 50%;
       display: block;
       margin: 0 auto;
       vertical-align: middle;
+      float: right;
     }
     #avatarFullName {
       display: inline-block;
       margin: 0 auto;
       font-size: 200%;
       color: #dddddd;
-      float: right;
+      float: left;
       letter-spacing: 8px;
     }
 
@@ -645,7 +703,7 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    	margin: 21% 15% 0% 15%;
+    	margin: 27% 15% 0% 15%;
     	text-align: center;
       height: 193px;
     }
@@ -815,11 +873,8 @@
     	width: 100%;
     	padding-bottom: 3px;
     }
-    #developMenu {
-    	border-width: 0px 0px 0px 1px;
-    }
     #solveTitle, #developTitle {
-    	flex: 1 1 auto;
+      flex: 1 1 auto;
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	border-width: 0px 0px 1px 0px;
@@ -1390,6 +1445,7 @@
     #sidebarMenu {
     	display: inline-flex;
     	flex-direction: row;
+      align-items: stretch;
     	width: 100%;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
@@ -1408,10 +1464,8 @@
     	display: flex;
     	flex-direction: column;
     	justify-content: center;
-    	width: 100%;
-    }
-    #developMenu {
-    	border-width: 0px 0px 0px 1px;
+    	width: 50%;
+          	display: block;
     }
     #solveTitle, #developTitle {
     	flex: 1 1 auto;
