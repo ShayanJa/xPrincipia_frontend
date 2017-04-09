@@ -1,7 +1,6 @@
 import React from 'react';
-import $ from 'min-jquery'
-import axios from 'axios'
-import cookie from 'react-cookie'
+import axios from 'axios';
+import cookie from 'react-cookie';
 
 export default class SuggestionForm extends React.Component {
 
@@ -18,7 +17,6 @@ constructor(){
 postSuggestion() {
   //Read field items into component state
 this.state.suggestion = document.getElementById('suggestionTextArea').value
- var self = this
  axios.post('http://localhost:10000/auth/suggestions/create', {
     username: cookie.load('userName'),
     type:'1',

@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import img from '../assets/dnablackinvert.png';
 import Header from '../components/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
-import SearchUnit from '../components/SearchUnit.jsx'; 
 import cookie from 'react-cookie'
 
 export default class ProfileContainer extends React.Component {
@@ -26,7 +24,7 @@ export default class ProfileContainer extends React.Component {
         <div id="profileLeft">
             <div id="userInformation">
                 <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" />
+                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />
                 <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import SuggestionUnit from '../components/SuggestionUnit.jsx';
 import SuggestionForm from '../components/SuggestionForm.jsx';

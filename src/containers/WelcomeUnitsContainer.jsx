@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Link } from 'react-router';
 import axios from 'axios';
 import WelcomeUnit from '../components/WelcomeUnit.jsx';
 import WelcomeMore from '../components/WelcomeMore.jsx';

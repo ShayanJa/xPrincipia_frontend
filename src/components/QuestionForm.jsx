@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'min-jquery';
 import axios from 'axios';
 import cookie from 'react-cookie'
 
@@ -16,7 +15,6 @@ export default class QuestionForm extends React.Component {
   };
 
   postQuestion() {
-  var self = this
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
   
