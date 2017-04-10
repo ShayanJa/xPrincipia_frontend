@@ -51,10 +51,10 @@ export default class ProfileContainer extends React.Component {
                 </div>
             </div>
             <div id="profileRightElements">
+              {/*<ProfileUnit />
               <ProfileUnit />
               <ProfileUnit />
-              <ProfileUnit />
-              <ProfileUnit />
+              <ProfileUnit />*/}
             </div>
             <div id="moreButton">
                 More
