@@ -7,13 +7,15 @@ ADD . /usr/src/app
 
 # Install dependencies
 WORKDIR /usr/src/app
-RUN npm install
+
+# Run when you don't have node_modules '
+# RUN npm install
 
 # Build the app
 RUN npm build
 
 # Expose the app port
-EXPOSE 8000
+EXPOSE 3000
 
 # Start the app
 CMD [ "npm", "start" ]
