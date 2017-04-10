@@ -22,7 +22,7 @@ export default class FullSolution extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status === 401){
+        if(error.response.status === 401 || error.response.status === 403){
             document.location = "/login"
         }
     });   
@@ -37,7 +37,7 @@ export default class FullSolution extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status === 401){
+        if(error.response.status === 401 || error.response.status === 403){
             document.location = "/login"
         }
     }); 

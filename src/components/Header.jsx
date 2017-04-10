@@ -30,11 +30,12 @@ export default class Header extends React.Component {
     }
 
     submitSearch(e) {
-        // if (e.keyCode === 13){
-        //     alert("hey");
-        //     // document.location = '/welcome';
-        // }
-        document.location = '/welcome';
+        if (e.keyCode === 13){
+            // alert("This is not functional yet");
+            document.location = '/welcome';
+            
+        }
+        
     }
 
    render() {
