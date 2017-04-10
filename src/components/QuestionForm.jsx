@@ -18,7 +18,7 @@ export default class QuestionForm extends React.Component {
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
   
-  axios.post('http://http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/login/auth/questions/create', {
+  axios.post('http://http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/questions/create', {
     type:'1',
     typeID: this.props.probID,
     username: cookie.load('userName'),
