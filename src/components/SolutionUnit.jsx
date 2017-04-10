@@ -22,7 +22,6 @@ export default class SolutionUnit extends React.Component {
 			<Link to={`/fullsolution/${solution.ProblemID}/${solution.ID}/solutions/`}>
 
 				<div id="solutionUnitTitle">
-					{/*<div id="percent">70%</div>*/}
 					<div id="percent">{floatToDecimal(solution.PercentRank)}</div>
 					<div id="unitTitle">{solution.Title}</div>
 				</div>

@@ -6,8 +6,7 @@ export default class SubProblemUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.problems.map(this.renderItem)} </ul>
-	               
+				<ul> {this.props.problems.map(this.renderItem)}</ul>         
 	    </div>
 		);
 	}
@@ -18,7 +17,7 @@ export default class SubProblemUnit extends React.Component {
         <li key={problem.ID} id="subProblemUnit">
 				<Link to={`/problem/${problem.ID}/subproblems`} >
 					<div id="subProblemTitle">
-						<div id="percent">{problem.PercentRank}</div>
+						<div id="percent">{floatToDecimal(problem.PercentRank)}</div>
 						<div id="unitTitle">{problem.Title}</div>
 						{/*<button type="button" id="problemVote">Vote</button>*/}
 					</div>
@@ -30,4 +29,10 @@ export default class SubProblemUnit extends React.Component {
         </li>);
 	
   }
+}
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	console.log(float)
+	return Math.round(float*100)+'%';
 }

@@ -65,14 +65,10 @@ export default class FullProblem extends React.Component {
            
         })
         .then(function (result) {
-            
-            var link = '/problem/4' + this.state.problemInfo.ParentID + '/subproblems'
-            console.log('wtf')
-            document.location = '/problem/4' + this.state.problemInfo.ParentID + '/subproblems'
-            alert("it workes")
+            document.location = window.location.pathname 
         })
         .catch(function (error) {
-            // alert("Already voted on solution")
+            alert("Already voted on solution")
         })
   }
 
