@@ -54,9 +54,9 @@ export default class Header extends React.Component {
             </div>
             <div id="avatarHeader">
               <Link to="/profile">
-              <div id="avatarFullName">{cookie.load("userName")}
-              
-              <img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="33" height="33" alt="User avatar, DNA Helix" />
+              <div id="avatarFullName">
+                  <div id="headerName">{cookie.load("userName")}</div>
+                  <div id="imgContainer"><img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="33" height="33" alt="User avatar, DNA Helix" /></div>
               </div>
               </Link>
             </div>
