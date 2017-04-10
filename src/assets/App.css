@@ -798,6 +798,7 @@
     	flex-direction: row;
     	margin: 3% 15% 0% 15%;
     	border: 1px solid #00dcff;
+      width: 71%;
     }
     #profileLeft, #profileRight {
     	color: #dddddd;
@@ -919,6 +920,7 @@
     #profileRightElements {
     	margin: 2px 15px 0px 5px;
     	padding: 5px;
+      width: 100%;
     }
     #profileRightUnit {
     	border: 1px solid #00dcff;
