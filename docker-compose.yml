@@ -1,0 +1,13 @@
+api:
+    # based off the golang:1.6.1-alpine image
+
+    #Docker hub image
+    image: xprincipia/frontend
+
+    # Local host build
+    # build:
+    #   context: .
+
+    #   dockerfile: dockerfile
+    ports:
+      - 80:3000
