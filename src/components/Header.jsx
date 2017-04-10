@@ -45,7 +45,7 @@ export default class Header extends React.Component {
             <div id="explore">
                 <form id="exploreFormHeader">
                     <input type="search" name="search"
-                        placeholder="Explore" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
+                        placeholder="Explore" id="exploreInput"  onKeyDown={this.queryProblem}/>
                     <input onKeyPress={this.submitSearch}  id="submitExplore" />
                 </form>
             </div>
