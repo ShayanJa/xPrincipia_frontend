@@ -29,7 +29,7 @@ postRegister() {
 //   crossDomain: 'true',
 //   type: 'POST',
 //   headers: {'Content-Type' : 'application/json'},
-//   url: 'http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/login/register',
+//   url: 'http://localhost:10000/login/register',
 //   processData: false,
 //   data: JSON.stringify({
 //     'email' : this.state.email,
@@ -51,7 +51,7 @@ postRegister() {
 //   },
 
 // });
-axios.post('http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/register', {
+axios.post('http://localhost:10000/register', {
       email: this.state.email,
       username : this.state.username,
       password: this.state.password

@@ -16,7 +16,7 @@ constructor(props){
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/suggestions/typeID?id='+this.props.params.probID).then(function (response) {
+        return axios.get('http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com:10000/auth/suggestions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 suggestions: response.data
             })

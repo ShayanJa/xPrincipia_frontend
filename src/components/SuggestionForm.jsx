@@ -17,7 +17,7 @@ constructor(){
 postSuggestion() {
   //Read field items into component state
 this.state.suggestion = document.getElementById('suggestionTextArea').value
- axios.post('http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/suggestions/create', {
+ axios.post('http://localhost:10000/auth/suggestions/create', {
     username: cookie.load('userName'),
     type:'1',
     typeID: this.props.probID,
