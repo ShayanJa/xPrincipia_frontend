@@ -19,7 +19,7 @@ export default class AnswerContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
+        return axios.get('ttp://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 questions: response.data,
             })

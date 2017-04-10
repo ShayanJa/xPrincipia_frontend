@@ -29,7 +29,7 @@ export default class ProblemForm extends React.Component {
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
   
-  axios.post('http://localhost:10000/auth/problems/create', {
+  axios.post('http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/problems/create', {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,

@@ -22,7 +22,7 @@ $.ajax({
   crossDomain: 'true',
   type: 'POST',
   headers: {'Content-Type' : 'application/json'},
-  url: 'http://localhost:10000/problem/answers',
+  url: 'http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/problem/answers',
   processData: false,
   data: JSON.stringify({
     'answer' : this.state.answer,
