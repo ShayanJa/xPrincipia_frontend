@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import $ from 'min-jquery';
 import cookie from 'react-cookie'
 import axios from 'axios'
 
@@ -31,17 +30,14 @@ export default class LoginUnit extends React.Component {
       password: this.state.password
     })
     .then(function (result) {
-      cookie.save('userToken', result.data.token );
-      console.log(result.data)
       self.setState({
         userToken: result.data.token
       })
+      cookie.save('userToken', result.data.token );
       cookie.save('userName', self.state.username)
       document.location = "/welcome";
     })
     .catch(function (error) {
-      console.log(error);
-
       alert('Please try again.')
     });
   }
@@ -52,7 +48,7 @@ export default class LoginUnit extends React.Component {
         <div id="signup">
             <form action="http://www.xprincipia.com/login.php" method="post" id="loginForm">
                 <div id="enter">Enter</div>
-                <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="loginEmail" autofocus /> <br />
+                <input type="email" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autofocus /> <br />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword" /> <br />
                 <Link to='/login'><input type="submit" value="Login" onClick={this.postLogin} id="submitLogin" /></Link>
             </form>

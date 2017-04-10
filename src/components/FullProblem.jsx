@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
+import cookie from 'react-cookie'
 
 export default class FullProblem extends React.Component {
   constructor(props){
@@ -9,15 +10,14 @@ export default class FullProblem extends React.Component {
         this.state = {
             problemInfo: [],
         }
-
+        this.submitVote = this.submitVote.bind(this)
     };
     componentDidMount(){
       var self = this;
       return axios.get('http://localhost:10000/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
-          console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
-          if (response.data.ParentID == 0){
+          if (response.data.ParentID === 0){
             self.setState({
               parentID: response.data.ID
             })
@@ -26,15 +26,19 @@ export default class FullProblem extends React.Component {
           self.setState({
               problemInfo: response.data
           })
-    })  
+    })
+    .catch(function (error) {
+        if(error.response.status === 401 || error.response.status === 403){
+            document.location = "/login"
+        }
+    });   
   }
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get('http://localhost:10000/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
-          console.log(response.data)
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
-          if (response.data.ParentID == 0){
+          if (response.data.ParentID === 0){
             self.setState({
               parentID: response.data.ID
             })
@@ -45,7 +49,27 @@ export default class FullProblem extends React.Component {
               probID: response.data.ID
           })
     })
+    .catch(function (error) {
+        if(error.response.status === 401 || error.response.status === 403){
+            document.location = "/login"
+        }
+    }); 
 
+  }
+  submitVote() {
+      var self = this;
+       axios.post('http://localhost:10000/auth/vote/create', {
+           Type: 0,
+           TypeID: this.state.problemInfo.ID,
+           username : cookie.load("userName"),
+           
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("Already voted on solution")
+        })
   }
 
    render() {
@@ -60,7 +84,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="followProblem">Follow</div>
+            <div id="followProblem" onClick={this.submitVote}>Follow</div>
             <div id="contributor">{this.state.problemInfo.OriginalPosterUsername}</div>
             <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
             <h1 id="problemSummaryLabel">Summary</h1>

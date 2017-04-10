@@ -2,14 +2,11 @@ import React from 'react';
 import {Link} from 'react-router';
 
 export default class SubProblemUnit extends React.Component {
-	constructor(props){
-        super(props);
-	}
+
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.problems.map(this.renderItem)} </ul>
-	               
+				<ul> {this.props.problems.map(this.renderItem)}</ul>         
 	    </div>
 		);
 	}
@@ -18,20 +15,24 @@ export default class SubProblemUnit extends React.Component {
     return (
 
         <li key={problem.ID} id="subProblemUnit">
-        	<Link to={`/problem/${problem.ID}/subproblems`} >
-			
-				<div id="subProblemTitle">
-					<div id="percent">70%</div>
-					<div id="unitTitle">{problem.Title}</div>
-				</div>
-				<div id="subProblemSummary">
-					{problem.Summary}
-				</div>
-			</Link>
+				<Link to={`/problem/${problem.ID}/subproblems`} >
+					<div id="subProblemTitle">
+						<div id="percent">{floatToDecimal(problem.PercentRank)}</div>
+						<div id="unitTitle">{problem.Title}</div>
+						{/*<button type="button" id="problemVote">Vote</button>*/}
+					</div>
+					<div id="subProblemSummary">{problem.Summary}</div>
+				</Link>
 
         <br ></br> 
 
-        </li>)
+        </li>);
 	
   }
+}
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	console.log(float)
+	return Math.round(float*100)+'%';
 }

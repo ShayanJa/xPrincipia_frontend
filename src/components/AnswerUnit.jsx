@@ -2,16 +2,24 @@ import React from 'react';
 
 export default class AnswerUnit extends React.Component {
 
-   render() {
-      return (
+	render() {
+		return (
+	    <div>
+			<ul> {this.props.answers.map(this.renderItem)} </ul>
+	               
+	    </div>
+		);
+	}
 
-        <div id="answerUnit">
+   renderItem(answer) {
+      return (
+        <li key={answer.ID} id="answerUnit">
             <div id="answerContent">
-                <div id="answerAdder">A: Shayan Talebi</div>
-                <div id="answerText">By noting that entropy is actually increased through abiogenesis, in addition to the complexity. The history of complexity increase in the universe is the dependent variable of a parabolic curve where entropy always increases as the independent variable. In summary, both increase.</div>
+                <div id="answerAdder">A: {answer.Username}</div>
+                <div id="answerText">{answer.Description}</div>
             </div>
             <button type="button" id="answerVote">Vote</button>
-        </div>
+        </li>
 
       );
    }

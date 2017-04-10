@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export default class SolutionUnit extends React.Component {
-	constructor(props){
-        super(props);
 
-    };
 	render() {
 		return (
 	    <div>
@@ -25,7 +22,7 @@ export default class SolutionUnit extends React.Component {
 			<Link to={`/fullsolution/${solution.ProblemID}/${solution.ID}/solutions/`}>
 
 				<div id="solutionUnitTitle">
-					<div id="percent">70%</div>
+					<div id="percent">{floatToDecimal(solution.PercentRank)}</div>
 					<div id="unitTitle">{solution.Title}</div>
 				</div>
 				<div id="solutionUnitSummary">
@@ -36,4 +33,11 @@ export default class SolutionUnit extends React.Component {
         </li>);
 
   }
+}
+
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	console.log(float)
+	return Math.round(float*100)+'%';
 }

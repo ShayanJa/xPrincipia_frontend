@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 export default class QuestionUnit extends React.Component {
-	constructor(props){
-        super(props);
-	}
+
 	render() {
 		return (
 	    <div>
@@ -22,7 +20,7 @@ export default class QuestionUnit extends React.Component {
                 	<div id="questionText">{question.Description}</div>
 				</div>
 				<button type="button" id="questionVote">Vote</button>
-            <Link to="problem/answers"><button type="button" id="questionAnswers">Answers</button></Link>
+            <Link to={`/problem/${question.TypeID}/${question.ID}/questions`}><button type="button" id="questionAnswers">Answers</button></Link>
         <br/><br/> 
         </li>)
   }

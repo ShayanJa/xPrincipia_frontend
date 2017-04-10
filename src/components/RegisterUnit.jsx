@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import $ from 'min-jquery';
 import axios from 'axios';
-import cookie from 'react-cookie'
 
 export default class RegisterUnit extends React.Component {
 
@@ -31,7 +29,7 @@ postRegister() {
 //   crossDomain: 'true',
 //   type: 'POST',
 //   headers: {'Content-Type' : 'application/json'},
-//   url: 'http://localhost:10000/register',
+//   url: 'http://localhost:10000/login/register',
 //   processData: false,
 //   data: JSON.stringify({
 //     'email' : this.state.email,
@@ -53,20 +51,17 @@ postRegister() {
 //   },
 
 // });
-var self = this
 axios.post('http://localhost:10000/register', {
       email: this.state.email,
       username : this.state.username,
       password: this.state.password
     })
     .then(function (result) {
-      console.log(result)
       alert('You have been registered. Welcome to XPrincipia! Please log in')
     
      
     })
     .catch(function (error) {
-      console.log(error);
 
       alert('Please try again.')
     });

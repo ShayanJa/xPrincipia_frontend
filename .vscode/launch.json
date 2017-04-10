@@ -14,7 +14,7 @@
             "type": "node",
             "request": "attach",
             "name": "Attach to Process",
-            "address": "localhost",
+            "address": "http://localhost:10000/login",
             "port": 5858
         }
     ]

@@ -4,29 +4,33 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 
 //Load Components
-import UserSolution from './components/UserSolution.jsx';
-import ProblemForm from './components/ProblemForm.jsx';
-import SolutionForm from './components/SolutionForm.jsx';
+
+import Error404 from './components/Error404.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
-import Info from './components/Info.jsx';
-import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
+// import Info from './components/Info.jsx';
 import Layout from './components/Layout.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
+import ProblemForm from './components/ProblemForm.jsx';
+import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
-import SideBarProblem from './components/SideBarProblem';
 import SideBarFullSolution from './components/SideBarFullSolution';
+import SideBarProblem from './components/SideBarProblem';
 import SideBarUserSolution from './components/SideBarUserSolution';
+import SolutionForm from './components/SolutionForm.jsx';
+import UserSolution from './components/UserSolution.jsx';
+import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 
 //Load Containers
-import SearchContainer from './containers/SearchContainer.jsx';
-import ProfileContainer from './containers/ProfileContainer.jsx';
-import LoginContainer from './containers/LoginContainer.jsx';
 import AnswerContainer from './containers/AnswerContainer.jsx';
-import SolutionContainer from './containers/SolutionContainer.jsx';
+import ErrorContainer from './containers/ErrorContainer.jsx';
+import LoginContainer from './containers/LoginContainer.jsx';
+import ProfileContainer from './containers/ProfileContainer.jsx';
 import QuestionContainer from './containers/QuestionContainer.jsx';
-import SuggestionContainer from './containers/SuggestionContainer.jsx';
+import SearchContainer from './containers/SearchContainer.jsx';
+import SolutionContainer from './containers/SolutionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
+import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
 import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 // import Profile from './components/Profile.jsx'
@@ -44,6 +48,11 @@ ReactDOM.render(
       <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
       <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
+    <Route path='/error' component={ErrorContainer}>
+      <IndexRoute component={Redirection}></IndexRoute>
+      <Route path='/404' component={Error404}></Route>
+      <Route path='/redirection' component={Redirection}></Route>
+    </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
@@ -58,7 +67,7 @@ ReactDOM.render(
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
-          <Route path='/problem/*/answers' component={AnswerContainer}></Route>
+          <Route path='/problem/:probID/:questID/answers' component={AnswerContainer}></Route>
           <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>
           <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>

@@ -1,7 +1,5 @@
 import React from 'react';
 import Info from '../components/Info.jsx';
-import LoginUnit from '../components/LoginUnit.jsx';
-import RegisterUnit from '../components/RegisterUnit.jsx';
 import cookie from 'react-cookie'
 
 export default class LoginContainer extends React.Component {
