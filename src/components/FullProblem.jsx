@@ -57,7 +57,6 @@ export default class FullProblem extends React.Component {
 
   }
   submitVote() {
-      var self = this;
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 0,
            TypeID: this.state.problemInfo.ID,

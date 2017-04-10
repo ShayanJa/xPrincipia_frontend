@@ -44,7 +44,6 @@ export default class FullSolution extends React.Component {
 
   }
   submitVote() {
-      var self = this;
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 1,
            TypeID: this.state.solutionInfo.ID,
