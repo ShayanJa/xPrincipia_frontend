@@ -56,9 +56,9 @@ export default class ProfileContainer extends React.Component {
               <ProfileUnit />
               <ProfileUnit />
             </div>
-            <a href="moreElementsHere"><div id="moreButton">
+            <div id="moreButton">
                 More
-            </div></a>
+            </div>
         </div>
       </div>
     </div>
