@@ -26,6 +26,7 @@ export default class ProblemForm extends React.Component {
     this.state.title = document.getElementById('problemTitleForm').value
     this.state.field = document.getElementById('problemFieldForm').value
     this.state.description = document.getElementById('problemDescriptionForm').value
+    this.state.summary = document.getElementById('problemSummaryForm').value
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
   

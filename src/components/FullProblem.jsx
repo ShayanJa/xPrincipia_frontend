@@ -103,6 +103,12 @@ export default class FullProblem extends React.Component {
               {this.state.problemInfo.Requirements}
             </p>
           </div>
+          <div>
+            <h1 id="problemRequirementsLabel">References</h1>
+            <p id="problemRequirements">
+              {this.state.problemInfo.References}
+            </p>
+          </div>
           <br />
           <br />
           <br />
