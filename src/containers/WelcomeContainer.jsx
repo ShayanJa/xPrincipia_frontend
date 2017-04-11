@@ -6,7 +6,7 @@ export default class WelcomeContainer extends React.Component {
       return (
         <div id="welcomeBox">
             <h1 id="welcomePrompt">Welcome to XPrincipia</h1>
-            <Link to="/welcome/create"><div id="createWelcomeButton">Create</div></Link>
+            <Link to="/welcome/create" activeClassName="activeWelcome"><div id="createWelcomeButton">Create</div></Link>
             {this.props.children}
         </div>
       );
