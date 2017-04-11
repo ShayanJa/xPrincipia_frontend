@@ -46,7 +46,7 @@ ReactDOM.render(
     <Route path='/welcomecontainer' component={WelcomeContainer}>
       <IndexRoute component={WelcomeUnitsContainer}></IndexRoute>
       <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
-      <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
+      <Route path='/welcome/create' component={ProblemForm}></Route>
     </Route>
     <Route path='/error' component={ErrorContainer}>
       <IndexRoute component={Redirection}></IndexRoute>
