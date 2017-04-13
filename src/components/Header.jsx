@@ -30,9 +30,10 @@ export default class Header extends React.Component {
     }
 
     submitSearch(e) {
-        if (e.keyCode === 13){
+        // if (e.keyCode === 13)
+        {
             // alert("This is not functional yet");
-            document.location = '/welcome';
+            document.location = '/search';
             
         }
         
@@ -45,7 +46,7 @@ export default class Header extends React.Component {
             <div id="explore">
                 <form id="exploreFormHeader">
                     <input type="search" name="search"
-                        placeholder="Explore" id="exploreInput"  onKeyDown={this.queryProblem}/>
+                        placeholder="Explore" id="exploreHeaderInput"  onKeyDown={this.queryProblem}/>
                     <input onKeyPress={this.submitSearch}  id="submitExplore" />
                 </form>
             </div>

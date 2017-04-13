@@ -1,5 +1,6 @@
 import React from 'react';
-import $ from 'min-jquery'
+import axios from 'axios';
+import cookie from 'react-cookie';
 
 export default class AnswerForm extends React.Component {
 
@@ -16,30 +17,23 @@ constructor(){
 postAnswer() {
   //Read field items into component state
   this.state.answer = document.getElementById('answerTextArea').value
-
 // Ajax post answer request
-$.ajax({
-  crossDomain: 'true',
-  type: 'POST',
-  headers: {'Content-Type' : 'application/json'},
-  url: 'http://ec2-13-58-19-50.us-east-2.compute.amazonaws.com:10000/problem/answers',
-  processData: false,
-  data: JSON.stringify({
-    'answer' : this.state.answer,
-  }),
-  success: function(result){
-    console.log(result)
+axios.post('http://localhost:10000/auth/answers/create', {
+  type:'1',
+// Questions has "probID here"
+  typeID: this.props.questID,
+  username: cookie.load('userName'),
+  description : this.state.answer,
+})
+.then(function (result) {
 
-    alert('Your answer has been added.')
-  },
-  error: function(result){
-    console.log(result)
-
-    alert('Please try again.')
-  },
-
+})
+.catch(function (error) {
+  alert('Please try again');
   });
 }
+
+
 
    render() {
       return (
@@ -47,7 +41,7 @@ $.ajax({
       <div id="answerFormComponent">
         <form id="answerForm">
             <fieldset>
-                <legend>Answer</legend>
+                <legend>Answers</legend>
                      <textarea name="answerText" required="required" id="answerTextArea"></textarea>
                      <br />
                      <input type="submit" value="Add" onClick={this.postAnswer} id="addAnswer"/>

@@ -6,7 +6,7 @@ export default class SideBarProblem extends React.Component {
    render() {
       return (
           <div>
-          	<SideBarProblemMenu probID={this.props.params.probID} />
+          	<SideBarProblemMenu probID={this.props.params.probID} questID={this.props.params.probID}/>
           	{this.props.children}
           </div>
       );

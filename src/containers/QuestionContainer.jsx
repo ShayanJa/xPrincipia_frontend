@@ -1,8 +1,8 @@
 import React from 'react';
+import axios from 'axios';
 import QuestionUnit from '../components/QuestionUnit.jsx';
 import QuestionForm from '../components/QuestionForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
-import axios from 'axios';
 
 export default class QuestionContainer extends React.Component {
   constructor(props){
@@ -27,7 +27,7 @@ export default class QuestionContainer extends React.Component {
       return (
         <div id="questionContainer">
           <QuestionForm probID={this.props.params.probID} questID={this.props.params.questID}/>
-            <QuestionUnit probID={this.props.params.probID} questions={this.state.questions} />
+            <QuestionUnit probID={this.props.params.probID} questID={this.props.params.questID} questions={this.state.questions} />
             <SideBarMore />
         </div>
       

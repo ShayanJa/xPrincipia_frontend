@@ -57,7 +57,7 @@ export default class WelcomeUnitsContainer extends React.Component {
         </div>
             <div id="welcomeUnitsContainer">
             <WelcomeUnit problems={this.state.problems} />
-            <WelcomeMore />
+            {/*<WelcomeMore />*/}
             </div>
       </div>
       );

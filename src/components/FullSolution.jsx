@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
-import cookie from 'react-cookie'
+import cookie from 'react-cookie';
 
 export default class FullSolution extends React.Component {
   constructor(props){

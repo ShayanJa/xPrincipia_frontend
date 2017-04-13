@@ -6,7 +6,6 @@ import AnswerForm from '../components/AnswerForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 export default class AnswerContainer extends React.Component {
- 
    constructor(props){
         super(props);
 
@@ -19,21 +18,23 @@ export default class AnswerContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('ttp://ec2-13-58-19-50.us-east-2.compute.amazonaws.com/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
+        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 questions: response.data,
             })
-        })  
+        })
+        return axios.get('http://localhost:10000/auth/answers/typeID?id='+this.props.params.probID).then(function (response) {
+            self.setState({
+                questions: response.data,
+            })
+        })    
     }
  
    render() {
       return (
         <div id="answerContainer">
-            <AnswerForm probID={this.props.params.probID} questionID={this.props.params.questionID} />
+            <AnswerForm probID={this.props.params.probID} questID={this.props.params.questID} />
             <QuestionUnit questions={this.state.questions}/>
-            <AnswerUnit answers={this.state.answers}/>
-            <AnswerUnit answers={this.state.answers}/>
-            <AnswerUnit answers={this.state.answers}/>
             <AnswerUnit answers={this.state.answers}/>
             <SideBarMore />
         </div>

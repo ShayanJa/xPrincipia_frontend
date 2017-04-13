@@ -9,6 +9,8 @@ import Error404 from './components/Error404.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
 // import Info from './components/Info.jsx';
+import Instructions from './components/Instructions.jsx';
+import Intro from './components/Intro.jsx';
 import Layout from './components/Layout.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
@@ -46,7 +48,7 @@ ReactDOM.render(
     <Route path='/welcomecontainer' component={WelcomeContainer}>
       <IndexRoute component={WelcomeUnitsContainer}></IndexRoute>
       <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
-      <Route path='/welcome/create' component={ProblemForm}></Route>
+      <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
     <Route path='/error' component={ErrorContainer}>
       <IndexRoute component={Redirection}></IndexRoute>
@@ -55,6 +57,8 @@ ReactDOM.render(
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
+    <Route path='/intro' component={Intro}></Route>
+    <Route path='/instructions' component={Instructions}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
       <IndexRoute component={LoginContainer}></IndexRoute>
       <Route path='/login' component={LoginUnit}></Route>

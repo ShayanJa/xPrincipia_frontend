@@ -586,8 +586,20 @@
       letter-spacing: 8px;
       font-size: 100%;
       padding-top: 10px;
+      text-align: center;
       }
     #exploreInput {
+      color: #dddddd;
+    	background-color: #0f131c;
+    	border: 1px solid #dddddd;
+    	height: 35px;
+    	width: 200px;
+    	letter-spacing: 6px;
+    	font-size: 80%;
+    	font-family: 'Raleway', sans-serif;
+    	text-align: center;
+    }
+    #exploreHeaderInput {
       color: #dddddd;
     	background-color: #0f131c;
     	border: 1px solid #dddddd;
@@ -714,7 +726,7 @@
     }
     #introduction {
     	text-align: center;
-    	font-size: 100%;
+    	font-size: 120%;
     	line-height: 150%;
     	letter-spacing: 3px;
       color: #dddddd;
@@ -1369,7 +1381,11 @@
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
       letter-spacing: 16px;
     }
-    .activeWelcome div {
+    .activeBlue div {
+      color: #0f131c !important;
+      background-color: #00dcff !important;  
+    }
+    .activeBlue button {
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
@@ -1414,6 +1430,20 @@
     	font-family: 'Alegreya Sans', sans-serf;
     	padding: 0px 5px 5px 5px;
     	font-size: 90%;
+    }
+    input#submitWelcomeProblem {
+    	display: block;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	background-color: #0f131c;
+    	width: 85%;
+    	margin-left: 7.5%;
+    }
+    input#submitWelcomeProblem:hover {
+    	color: #0f131c;
+    	border: 1px solid #0f131c;
+    	background-color: #00dcff;
+    	cursor: pointer;
     }
 
 /*End Welcome*/
@@ -1501,7 +1531,7 @@
     	border-radius: 3px;
     	margin-bottom: 10px;
     }
-    .activeMenu div {
+    .activeGreen div {
       color: #0f131c !important;
       background-color: #00ffdc;  
     }
