@@ -826,7 +826,7 @@
     #profileLeft, #profileRight {
     	color: #dddddd;
     	padding: 0px 10px 0px 10px;
-    	overflow: scroll !important;
+    	/*overflow: scroll !important;*/
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
     	width: 60%;
@@ -1436,7 +1436,7 @@
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: #0f131c;
-    	width: 85%;
+    	width: 84.5%;
     	margin-left: 7.5%;
     }
     input#submitWelcomeProblem:hover {
