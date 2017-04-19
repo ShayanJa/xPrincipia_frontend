@@ -31,7 +31,7 @@ export default class QuestionUnit extends React.Component {
 	renderItem(question) {
   
     return (
-        <li key={question.ID} id="questionUnit">
+        <li key={question.ID} id="questionUnit"> 
 				<div id="questionContent">
 					<div id="questionAdder">Q: {question.Username}</div>
                 	<div id="questionText">{question.Description}</div>

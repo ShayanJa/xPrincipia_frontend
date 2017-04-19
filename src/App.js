@@ -44,7 +44,7 @@ class App extends React.Component {
     } 
 
     //Load the welcome page if route is '/'
-    if (window.location.pathname === "/"){
+    if (window.location.pathname === "/" || window.location.pathname === "/problem/undefined/subproblems" ){
       document.location = "/welcome";
     }
 

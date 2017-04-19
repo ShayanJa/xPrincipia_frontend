@@ -18,24 +18,25 @@ export default class AnswerContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
+        axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 questions: response.data,
             })
         })
-        return axios.get('http://localhost:10000/auth/answers/questionID?id='+this.props.params.questions.questID).then(function (response) {
+        axios.get('http://localhost:10000/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
             self.setState({
                 answers: response.data,
             })
-        })    
+        })
+        return     
     }
  
    render() {
       return (
         <div id="answerContainer">
             <AnswerForm probID={this.props.params.probID} questID={this.props.params.questID} />
-            <QuestionUnit questions={this.state.questions}/>
-            <AnswerUnit answers={this.state.answers}/>
+            {/*<QuestionUnit questions={this.state.questions}/>*/}
+            <AnswerUnit answers={this.state.answers} />
             <SideBarMore />
         </div>
       );
