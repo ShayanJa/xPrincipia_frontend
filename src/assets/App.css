@@ -118,7 +118,7 @@
       cursor: pointer;
     }
     #questionAnswers:active {
-      color: #00ffdc;
+      color: #00dcff;
       background-color: #0f131c;
     }
     #questionVote {
@@ -448,6 +448,9 @@
     	font-size: 120%;
     	line-height: 150%;
     }
+    #solutionReferences, #problemReferences {
+      text-align: left;
+    }
     #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
     #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
     #solutionDescription:hover, #problemDescription:hover, 
@@ -729,7 +732,7 @@
     	font-size: 120%;
     	line-height: 150%;
     	letter-spacing: 3px;
-      color: #dddddd;
+      color: #ffffff;
       padding-left: 15px;
     }
     #introduction {
@@ -805,6 +808,52 @@
     }
 
 /*End Login*/
+
+
+
+/*Notifications*/
+
+    #notificationFailureBox, #notificationSuccessBox {
+      margin: auto;
+      display: inline-block;
+      overflow: hidden;
+    	flex: 1 1 auto;
+    	text-align: center;
+      width: 25%;
+      text-align: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      text-align: right;
+            padding-top: 5px;
+    }
+    #notificationFailureText, #notificationSuccessText {
+      margin: 0 auto;
+      font-size: 200%;
+      letter-spacing: 6px;
+      font-size: 150%;
+      text-align: center;
+      margin: auto;
+      display: inline-block;
+      overflow: hidden;
+    	flex: 1 1 auto;
+    	text-align: center;
+      border: 1px solid #ff3333;
+      border-width: 1.5px;
+      border-radius: 3px;
+      padding: 5px;
+      color: #ff3333;
+      width: 100%;
+    }
+    #notificationSuccessText {
+      border: 1px solid #00ffdc;
+      color: #00ffdc;
+    }
+
+/*End Notifications*/
 
 
 
@@ -1037,23 +1086,6 @@
     #questionText {
     	font-family: 'Alegreya Sans';
       margin-top: 5px;
-    }
-    #questionAnswers {
-    	flex: 1 1 auto;
-    	color: #00dcff;
-    	background-color: #0f131c;
-    	border: 1px solid #00dcff;
-    	border-radius: 2px;
-    	cursor: pointer;
-    }
-    #questionAnswers:hover {
-    	color: #0f131c;
-    	background-color: #00dcff;
-      cursor: pointer;
-    }
-    #questionAnswers:active {
-    	color: #00ffdc;
-    	background-color: #0f131c;
     }
     #moreButton {
     	margin: auto;
@@ -1616,7 +1648,7 @@
 
 /*Forms*/
 
-#questionTextArea, #answerTextArea, #suggestionTextArea {
+#questionTextArea, #answerTextArea, #suggestionTextArea, #commentTextArea {
   text-align: left;
   font-family: 'Alegreya Sans', sans-serif;
   padding: 10px;
@@ -1697,3 +1729,188 @@
     }
 
 /*More Sidebar*/
+
+
+
+
+
+/*NewsFeed*/
+
+    #newsFeedBox {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: -ms-flexbox;
+    	display: -webkit-flex;
+    	overflow: auto;
+    	display: inline-flex;
+    	align-items: stretch;
+    	flex-direction: row;
+    	margin: 1% 1% 1% 1%;
+    	border: 1px solid #00dcff;
+      width: 98%;
+    }
+    #newsFeedLeft, #newsFeedRight {
+    	color: #dddddd;
+    	padding: 0px 10px 0px 10px;
+    	/*overflow: scroll !important;*/
+    	margin: 5px 5px 10px 5px;
+    	flex: 1 1 auto;
+    	width: 60%;
+    	margin: 0;
+    }
+    #newsFeedRight {
+      width: 72%;
+    }
+    #newsFeedLeft {
+    	width: 28%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px 0px 0px;
+    }
+    #avatar {
+    	padding: 10px;
+    	text-align: center;
+    	border-radius: 50%;
+    	display: block;
+    	margin: 0px auto;
+    }
+    #avatarImageProfile {
+      border: 1px solid #00dcff;
+    	border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+    #userName {
+    	font-size: 200%;
+    	text-align: center;
+    	line-height: 100%;
+    	margin: 10px;
+    	padding: 0px;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    #userEmail {
+    	font-size: 125%;
+    	text-align: center;
+    	line-height: 100%;
+    	margin: 0px;
+    	padding: 10px 0px 5px 0px;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    }
+    #userOptions {
+    }
+    #newsFeedFieldUnit {
+    	background-color: #0f131c;
+    	color: #00dcff;
+    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-size: 100%;
+    	font-weight: 100;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 5px 0px;
+    	letter-spacing: 1px;
+    }
+    #newsFeedFieldUnit:hover {
+    	background-color: #00dcff;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #newsFeedFieldUnit:active {
+      background-color: #00dcff;
+      color: #0f131c;
+    }
+    #xp {
+    	text-align: center;
+    }
+    #profileSidebarMenu {
+    	display: inline-flex;
+    	flex-direction: row;
+    	width: 100%;
+    	border: 1px solid #00dcff;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	margin-bottom: 0px;
+    }
+    #profileProblemsMenu, #profileSolutionsMenu {
+    	flex: 1 1 auto;
+    	text-align: center;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 1px 0px 0px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-conent: center;
+    	width: 100%;
+    	padding-bottom: 3px;
+    }
+    #solveTitle, #developTitle {
+      flex: 1 1 auto;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	font-size: 80%;
+    	padding: 3px 5px 3px 10px;
+    	margin: 0px 0px;
+    	letter-spacing: 4px;
+    }
+    #followedProblemsButton, #createdProblemsButton, #votedSolutionsButton, #createdSolutionsButton {
+    	flex: 1 1 auto;
+    	color: #00ffdc;
+    	font-size: 90%;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px;
+    	border-radius: 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 3px 10px 0px 10px;
+    }
+    #followedProblemsButton:hover, #createdProblemsButton:hover,
+    #votedSolutionsButton:hover, #createdSolutionsButton:hover,
+    #followedProblemsButton:active, #createdProblemsButton:active,
+    #votedSolutionsButton:active, #createdSolutionsButton:active {
+    	background-color: #00ffdc;
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #profileRightElements {
+    	margin: 2px 15px 0px 5px;
+    	padding: 5px;
+      width: 100%;
+    }
+    #profileRightUnit {
+    	border: 1px solid #00dcff;
+    	border-width: 1px 0px 0px 0px;
+    	padding: 2px;
+    }
+    #profileRightUnit:hover {
+      color: #ffffff;
+      cursor: pointer;
+    }
+    #profileUnitTitle {
+      display: block;
+      margin: 0px;
+      padding: 2px 5px 2px 5px;
+      font-size: 100%;
+      color: #00dcff !important;
+      line-height: 95%;
+      height: auto;
+    }
+    #unitSummary {
+    	font-family: 'Alegreya Sans', sans-serf;
+    	padding: 0px 5px 5px 5px;
+    	font-size: 80%;
+    	margin: 0px;
+    	text-align: justify;
+    }
+    #moreButton {
+    	margin: auto;
+    	text-align: center;
+    	margin-left: 0px;
+    	margin-right: 0px;
+    	font-size: 100%;
+    	padding: 5px 0px 5px 0px;
+    	color: #00ffdc;
+    	border: 1px solid #00ffdc;
+    	border-width: 1px 1px 0px 1px;
+    }

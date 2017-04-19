@@ -2,42 +2,42 @@ import React from 'react';
 import img from '../assets/dnablackinvert.png';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
-import cookie from 'react-cookie';
+import cookie from 'react-cookie'
 
-export default class ProfileContainer extends React.Component {
+export default class NewsFeedContainer extends React.Component {
     constructor(){
         super();
     
-
-    this.onLogout = this.onLogout.bind(this);
     }   
-    onLogout() {
-        cookie.remove('userToken');
-        cookie.remove('userName');
-        document.location = "/login";
-    }
+
    render() {
       return (
     <div>
       <Header />
-      <div id="profileBox">
-        <div id="profileLeft">
+      <div id="newsFeedBox">
+        <div id="newsFeedLeft">
             <div id="userInformation">
-                <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />
-                <p id="userEmail">{cookie.load('userName')}</p>
+                <p id="userName">Fields</p>
+                {/*<img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />*/}
+                {/*<p id="userEmail">{cookie.load('userName')}</p>*/}
             </div>
             <div id="userOptions">
-                <div id="userProblemsSolutionsButton">Problems and Solutions (Coming Soon)</div>
-                <div id="notificationsButton">Notifications (Coming Soon)</div>
-                <div id="userSettingsButton">Settings (Coming Soon)</div>
-                <div id="aboutXPButton">About XPrincipia (Coming Soon)</div>
-                <div id="logOutButton" onClick={this.onLogout}>Logout</div>
+                <div id="newsFeedFieldUnit">Physics</div>
+                <div id="newsFeedFieldUnit">Astrophysics</div>
+                <div id="newsFeedFieldUnit">Information Theory</div>
+                <div id="newsFeedFieldUnit">Astrobiology</div>
+                <div id="newsFeedFieldUnit">Quantum Physics</div>
+                <div id="newsFeedFieldUnit">Machine Learning</div>
+                <div id="newsFeedFieldUnit">Artificial Intelligence</div>
+                <div id="newsFeedFieldUnit">Neural Networks</div>
+                <div id="newsFeedFieldUnit">Consciousness</div>
+                <div id="newsFeedFieldUnit">General Relativity</div>
+                                
                 <br />
                 <p id="xp">XP</p>
             </div>
         </div>
-        <div id="profileRight">
+        <div id="newsFeedRight">
             <div id="profileSidebarMenu">
                 <div id="profileProblemsMenu">
                     <div id="solveTitle">Problems</div>

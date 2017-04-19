@@ -25,8 +25,8 @@ constructor(props){
    render() {
       return (
         <div id="suggestionContainer">
-            <SuggestionForm probID={this.props.params.probID}/>
-            <SuggestionUnit suggestions={this.state.suggestions} />
+            <SuggestionForm probID={this.props.params.probID} suggID={this.props.params.suggID}/>
+            <SuggestionUnit suggestions={this.state.suggestions} suggID={this.props.params.suggID}/>
             <SideBarMore />
         </div>
       );

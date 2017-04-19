@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
@@ -36,7 +37,8 @@ export default class SuggestionUnit extends React.Component {
 					<div id="suggestionAdder">{suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
-				<button type="button" id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button>   
+				<button type="button" id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
+                <Link to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
             <br /><br /> 
         </li>)
 

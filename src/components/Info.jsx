@@ -11,7 +11,7 @@ export default class Info extends React.Component {
           <div id="learnMore">
               <div id="introduction">
                   .
-                  <br /> Submit today's cutting-edge problems
+                  <br /> Submit and breakdown today's scientific problems
                  <br />.<br />Create and vote on solutions
                   <br />.<br />.
               </div>

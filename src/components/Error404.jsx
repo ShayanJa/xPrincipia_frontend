@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header.jsx';
+import Header from '../containers/Header.jsx';
 
 export default class Error404 extends React.Component {
    render() {

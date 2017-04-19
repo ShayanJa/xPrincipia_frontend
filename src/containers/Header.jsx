@@ -2,7 +2,10 @@ import React from 'react';
 import {  Link  } from 'react-router';
 import img from '../assets/dnablackinvert.png';
 import cookie from 'react-cookie';
-import axios from 'axios'
+import axios from 'axios';
+import HeaderAvatar from '../components/HeaderAvatar.jsx';
+import NotificationSuccess from '../components/NotificationSuccess.jsx';
+import NotificationFailure from '../components/NotificationFailure.jsx';
 
 export default class Header extends React.Component {
 
@@ -53,14 +56,7 @@ export default class Header extends React.Component {
             <div id="logo">
               <Link to="/welcome"><div>XPrincipia</div></Link>
             </div>
-            <div id="avatarHeader">
-              <Link to="/profile">
-              <div id="avatarFullName">
-                  <div id="headerName">{cookie.load("userName")}</div>
-                  <div id="imgContainer"><img src={require('../assets/dnablackinvert.png')} id="avatarImage" width="33" height="33" alt="User avatar, DNA Helix" /></div>
-              </div>
-              </Link>
-            </div>
+            <HeaderAvatar />
         </div>
       </div>
       );

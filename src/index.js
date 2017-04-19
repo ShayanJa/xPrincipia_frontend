@@ -25,8 +25,10 @@ import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 
 //Load Containers
 import AnswerContainer from './containers/AnswerContainer.jsx';
+import CommentContainer from './containers/CommentContainer.jsx';
 import ErrorContainer from './containers/ErrorContainer.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
+import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
 import QuestionContainer from './containers/QuestionContainer.jsx';
 import SearchContainer from './containers/SearchContainer.jsx';
@@ -57,6 +59,7 @@ ReactDOM.render(
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/profile' component={ProfileContainer}></Route>
+    <Route path='/newsfeed' component={NewsFeedContainer}></Route>
     <Route path='/intro' component={Intro}></Route>
     <Route path='/instructions' component={Instructions}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
@@ -72,6 +75,7 @@ ReactDOM.render(
         <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='/problem/:probID/:questID/answers' component={AnswerContainer}></Route>
+          <Route path='/problem/:probID/:suggID/comments' component={CommentContainer}></Route>
           <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>
           <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
