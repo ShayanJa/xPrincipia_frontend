@@ -19,9 +19,7 @@ postAnswer() {
   this.state.answer = document.getElementById('answerTextArea').value
 // Ajax post answer request
 axios.post('http://localhost:10000/auth/answers/create', {
-  type:'1',
-// Questions has "probID here"
-  typeID: this.props.questID,
+  questionID: this.props.questID,
   username: cookie.load('userName'),
   description : this.state.answer,
 })

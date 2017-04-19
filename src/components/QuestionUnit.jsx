@@ -37,7 +37,7 @@ export default class QuestionUnit extends React.Component {
                 	<div id="questionText">{question.Description}</div>
 				</div>
 				<button type="button" id="questionVote">Vote<br />{floatToDecimal(question.PercentRank)}</button>
-            <Link to={`/problem/${question.TypeID}/${question.ID}/answers`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Answers</button></Link>
+            <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Answers</button></Link>
         <br/><br/> 
         </li>)
   }
