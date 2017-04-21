@@ -15,8 +15,8 @@ export default class WelcomeUnit extends React.Component {
 	renderItem(problem) {
   
       return (
-      <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-        <li key={problem.ID} id="welcomeProblemsUnit">
+      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li  id="welcomeProblemsUnit">
             
               <div id="welcomeProblemsHeader">
                 <div id="welcomeProblemsTag">{problem.Field}</div>
