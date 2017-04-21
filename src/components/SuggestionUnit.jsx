@@ -38,7 +38,7 @@ export default class SuggestionUnit extends React.Component {
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
 				<button type="button" id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
-                <Link to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
+                <Link  activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
             <br /><br /> 
         </li>)
 
