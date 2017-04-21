@@ -36,7 +36,7 @@ export default class Header extends React.Component {
         // if (e.keyCode === 13)
         {
             // alert("This is not functional yet");
-            document.location = '/search';
+            document.location = '/welcome';
             
         }
         

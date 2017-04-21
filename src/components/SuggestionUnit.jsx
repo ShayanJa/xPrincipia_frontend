@@ -29,10 +29,10 @@ export default class SuggestionUnit extends React.Component {
            
         })
         .then(function (result) {
-            document.location = window.location.pathname 
+            document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a suggestion.")
+            alert("I'm sorry, you've already voted on a suggestion.");
         })
   }
   

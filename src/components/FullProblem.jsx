@@ -84,7 +84,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="followProblem" onClick={this.submitVote}>Follow</div>
+            <div id="followProblem" onClick={this.submitVote}>Vote</div>
             <div id="contributor">{this.state.problemInfo.OriginalPosterUsername}</div>
             <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
             <h1 id="problemSummaryLabel">Summary</h1>
