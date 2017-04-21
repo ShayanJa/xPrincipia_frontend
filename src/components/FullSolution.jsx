@@ -51,10 +51,11 @@ export default class FullSolution extends React.Component {
            
         })
         .then(function (result) {
-            document.location = window.location.pathname 
+            document.location = window.location.pathname;
+            alert("Thank you, your vote has been recorded.");
         })
         .catch(function (error) {
-            alert("Already voted on solution")
+            alert("I'm sorry, you've already voted on a solution.");
         })
   }
    render() {

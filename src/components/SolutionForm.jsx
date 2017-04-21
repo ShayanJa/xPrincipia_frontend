@@ -41,9 +41,10 @@ export default class SolutionForm extends React.Component {
       references: this.state.references
     })
     .then(function (result) {
-      
+      document.location = window.location.pathname 
     })
     .catch(function (error) {
+        alert("There was an error.")
       });
   
   }
