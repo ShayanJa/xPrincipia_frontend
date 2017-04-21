@@ -4,21 +4,6 @@ import cookie from 'react-cookie';
 
 export default class AnswerUnit extends React.Component {
 
-  submitVote() {
-       axios.post('http://localhost:10000/auth/vote/create', {
-           Type: 4,
-           TypeID: this.state.answerInfo.ID,
-           username : cookie.load("userName"),
-           
-        })
-        .then(function (result) {
-            document.location = window.location.pathname 
-        })
-        .catch(function (error) {
-            alert("You've already voted on a question.")
-        })
-  }
-
 	render() {
 		return (
 	    <div>
@@ -29,13 +14,27 @@ export default class AnswerUnit extends React.Component {
 	}
 
    renderItem(answer) {
+       function submitVote() {
+       axios.post('http://localhost:10000/auth/vote/create', {
+           Type: 4,
+           TypeID: answer.ID,
+           username : cookie.load("userName"),
+           
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("You've already voted on a question.")
+        })
+    }
       return (
         <li key={answer.ID} id="answerUnit">
             <div id="answerContent">
                 <div id="answerAdder">A: {answer.Username}</div>
                 <div id="answerText">{answer.Description}</div>
             </div>
-            <button type="button" id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
+            <button type="button" onClick={submitVote} id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
         </li>
 
       );
