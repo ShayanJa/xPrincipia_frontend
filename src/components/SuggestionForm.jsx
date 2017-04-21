@@ -37,7 +37,7 @@ this.state.suggestion = document.getElementById('suggestionTextArea').value
       <div id="suggestionFormComponent">
             <form id="suggestionForm">
                 <fieldset>
-                    <legend>Suggestion</legend>
+                    <legend>Suggestions</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="submit" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
