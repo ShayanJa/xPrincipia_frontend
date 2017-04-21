@@ -6,20 +6,7 @@ import cookie from 'react-cookie';
 
 export default class SuggestionUnit extends React.Component {
 
-  submitVote() {
-       axios.post('http://localhost:10000/auth/vote/create', {
-           Type: 1,
-           TypeID: this.state.suggestionInfo.ID,
-           username : cookie.load("userName"),
-           
-        })
-        .then(function (result) {
-            document.location = window.location.pathname 
-        })
-        .catch(function (error) {
-            alert("You've already voted on a question.")
-        })
-  }
+  
 
 	render() {
 		return (
@@ -30,6 +17,21 @@ export default class SuggestionUnit extends React.Component {
 		);
 	}
 	renderItem(suggestion) {
+
+       function  submitVote() {
+       axios.post('http://localhost:10000/auth/vote/create', {
+           Type: 3,
+           TypeID: suggestion.ID,
+           username : cookie.load("userName"),
+           
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("You've already voted on a question.")
+        })
+  }
   
     return (
        <li key={suggestion.ID} id="suggestionUnit">
@@ -37,7 +39,7 @@ export default class SuggestionUnit extends React.Component {
 					<div id="suggestionAdder">{suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
-				<button type="button" id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
                 <Link  activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
             <br /><br /> 
         </li>)
