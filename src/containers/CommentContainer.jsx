@@ -18,23 +18,19 @@ export default class CommentContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
+         axios.get('http://localhost:10000/auth/comments/suggestionID?id='+this.props.params.suggID).then(function (response) {
             self.setState({
-                suggestions: response.data,
+                comments: response.data,
             })
-        })
-        return axios.get('http://localhost:10000/auth/answers/typeID?id='+this.props.params.probID).then(function (response) {
-            self.setState({
-                suggestions: response.data,
-            })
-        })    
+        })  
+        return  
     }
  
    render() {
       return (
         <div id="answerContainer">
             <CommentForm probID={this.props.params.probID} suggID={this.props.params.suggID} />
-            <CommentUnit suggestions={this.state.questions}/>
+            {/*<CommentUnit suggestions={this.state.suggestions}/>*/}
             <CommentUnit comments={this.state.comments}/>
             <SideBarMore />
         </div>

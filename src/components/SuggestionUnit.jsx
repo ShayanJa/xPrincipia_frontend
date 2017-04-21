@@ -5,7 +5,10 @@ import cookie from 'react-cookie';
 
 
 export default class SuggestionUnit extends React.Component {
-
+    constructor(props){
+        super(props);
+         this.renderItem = this.renderItem.bind(this)
+    };
   
 
 	render() {
@@ -40,7 +43,7 @@ export default class SuggestionUnit extends React.Component {
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
 				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
-                <Link  activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
+                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
             <br /><br /> 
         </li>)
 

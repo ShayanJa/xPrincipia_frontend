@@ -19,9 +19,9 @@ postComment() {
   this.state.comment = document.getElementById('commentTextArea').value
 // Ajax post comment request
 axios.post('http://localhost:10000/auth/comments/create', {
-  type:'1',
+  type:'5',
 // Questions has "probID here"
-  typeID: this.props.suggID,
+  suggestionID: this.props.suggID,
   username: cookie.load('userName'),
   description : this.state.comment,
 })

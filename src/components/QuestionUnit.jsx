@@ -5,7 +5,7 @@ import cookie from 'react-cookie';
 
 export default class QuestionUnit extends React.Component {
 constructor(props){
-        super(props);
+     super(props);
 
         this.renderItem = this.renderItem.bind(this)
         // this.submitVote = this.submitVote.bind(this)

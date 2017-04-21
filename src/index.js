@@ -78,11 +78,12 @@ ReactDOM.render(
           <Route path='/problem/:probID/:suggID/comments' component={CommentContainer}></Route>
           <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>
-          <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
-          <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
           <Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
+          <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
+          <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
           <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
+          <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>
         </Route>
       </Route>
         <IndexRoute component={FullSolution}></IndexRoute>

@@ -6,8 +6,8 @@ export default class CommentUnit extends React.Component {
 
   submitVote() {
        axios.post('http://localhost:10000/auth/vote/create', {
-           Type: 1,
-           TypeID: this.state.answerInfo.ID,
+           Type: 5,
+           SuggestionID: this.props.comment.SuggestionID,
            username : cookie.load("userName"),
            
         })
@@ -22,20 +22,20 @@ export default class CommentUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.answers.map(this.renderItem)} </ul>
+			<ul> {this.props.comments.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);
 	}
 
-   renderItem(answer) {
+   renderItem(comment) {
       return (
-        <li key={answer.ID} id="answerUnit">
+        <li key={comment.ID} id="answerUnit">
             <div id="answerContent">
-                <div id="answerAdder">C: {answer.Username}</div>
-                <div id="answerText">{answer.Description}</div>
+                <div id="answerAdder">C: {comment.Username}</div>
+                <div id="answerText">{comment.Description}</div>
             </div>
-            <button type="button" id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
+            <button type="button" id="answerVote">Vote<br />{floatToDecimal(comment.PercentRank)}</button>
         </li>
 
       );

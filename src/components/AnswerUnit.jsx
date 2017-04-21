@@ -6,7 +6,7 @@ export default class AnswerUnit extends React.Component {
 
   submitVote() {
        axios.post('http://localhost:10000/auth/vote/create', {
-           Type: 3,
+           Type: 4,
            TypeID: this.state.answerInfo.ID,
            username : cookie.load("userName"),
            
