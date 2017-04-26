@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 export default class ProfileUnit extends React.Component {
     constructor(props){
@@ -11,24 +12,25 @@ export default class ProfileUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.followedSolutions.map(this.renderItem)} </ul>
+			<ul> {this.props.displayItems.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);
 	}
 
-   renderItem(solution) {
+   renderItem(item) {
       return (
-          <li key={solution.ID}>
+          <Link to={`/fullsolution/${item.ProblemID}/${item.ID}/solutions`} >
+          <li key={item.ID}>
     <div id="profileRightUnit">
-          <div id="profileUnitTitle">{solution.Title}
+          <div id="profileUnitTitle">{item.Title}
               
           </div>
           <div id="unitSummary">
               
           </div>
       </div>
-      </li>
+      </li></Link>
       );
    }
 }
