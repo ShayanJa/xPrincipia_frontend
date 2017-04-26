@@ -16,7 +16,7 @@ export default class AnswerContainer extends React.Component {
         }
         
     };
-        componentDidMount(){
+    componentDidMount(){
         var self = this;
         axios.get('http://localhost:10000/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
             self.setState({

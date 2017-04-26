@@ -3,6 +3,7 @@ import img from '../assets/dnablackinvert.png';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
 import cookie from 'react-cookie';
+import axios from 'axios'
 
 export default class ProfileContainer extends React.Component {
     constructor(){
@@ -15,6 +16,15 @@ export default class ProfileContainer extends React.Component {
         cookie.remove('userToken');
         cookie.remove('userName');
         document.location = "/login";
+    }
+    componentDidMount(){
+        var self = this;
+        axios.get('http://localhost:10000/auth/user/followedProblems/'+cookie.load('userName')).then(function (response) {
+            self.setState({
+                followedProblems: response.data,
+            })
+        })
+        return     
     }
    render() {
       return (
