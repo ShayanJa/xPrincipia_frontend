@@ -52,6 +52,5 @@ export default class SuggestionUnit extends React.Component {
 
 //convert float to Decimal
 function floatToDecimal(float) {
-	console.log(float)
 	return Math.round(float*100)+'%';
 }

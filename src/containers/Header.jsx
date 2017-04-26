@@ -24,7 +24,6 @@ export default class Header extends React.Component {
         var self = this
         this.state.searchText = document.getElementById('exploreInput').value
         return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
-          console.log(response.data)
             self.setState({
               problems: response.data
             })
