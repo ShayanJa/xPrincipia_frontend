@@ -20,9 +20,10 @@ export default class ProfileContainer extends React.Component {
 
 
         this.onLogout = this.onLogout.bind(this);
-        this.onCreatedSolutions = this.onCreatedSolutions.bind(this)
-        this.onVotedSolutions = this.onVotedSolutions.bind(this)
-        this.onCreatedProblems = this.onCreatedProblems.bind(this)
+        this.onCreatedSolution = this.onCreatedSolution.bind(this)
+        this.onVotedSolution = this.onVotedSolution.bind(this)
+        this.onCreatedProblem = this.onCreatedProblem.bind(this)
+        this.onFollowedProblem = this.onFollowedProblem.bind(this)
     }
 
     componentDidMount(){
@@ -43,6 +44,11 @@ export default class ProfileContainer extends React.Component {
                 createdProblems: response.data,
             })
         })
+         axios.get('http://localhost:10000/users/followedProblems?username='+cookie.load('userName')).then(function (response) {
+            self.setState({
+                followedProblems: response.data,
+            })
+        })
         
     }   
     onLogout() {
@@ -50,24 +56,31 @@ export default class ProfileContainer extends React.Component {
         cookie.remove('userName');
         document.location = "/login";
     }
-    onCreatedSolutions() {
+    onCreatedSolution() {
         var self = this;
         self.setState({
             currentItems: this.state.createdSolutions,
             currentType: 'solution',
         })
     }
-    onVotedSolutions() {
+    onVotedSolution() {
         var self = this;
         self.setState({
             currentItems: this.state.followedSolutions,
             currentType: 'solution',
         })
     }
-    onCreatedProblems() {
+    onCreatedProblem() {
         var self = this;
         self.setState({
             currentItems: this.state.createdProblems,
+            currentType: 'problem',
+        })
+    }
+    onFollowedProblem() {
+        var self = this;
+        self.setState({
+            currentItems: this.state.followedProblems,
             currentType: 'problem',
         })
     }
@@ -97,13 +110,13 @@ export default class ProfileContainer extends React.Component {
             <div id="profileSidebarMenu">
                 <div id="profileProblemsMenu">
                     <div id="solveTitle">Problems</div>
-                    <div id="followedProblemsButton">Followed</div>
-                    <div id="createdProblemsButton" onClick={this.onCreatedProblems}>Created</div>
+                    <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Followed</div>
+                    <div id="createdProblemsButton" onClick={this.onCreatedProblem}>Created</div>
                 </div>
                 <div id="profileSolutionsMenu">
                     <div id="developTitle">Solutions</div>
-                    <div id="votedSolutionsButton" onClick={this.onVotedSolutions}>Voted</div>
-                    <div id="createdSolutionsButton" onClick={this.onCreatedSolutions}>Created</div>
+                    <div id="votedSolutionsButton" onClick={this.onVotedSolution}>Voted</div>
+                    <div id="createdSolutionsButton" onClick={this.onCreatedSolution}>Created</div>
                 </div>
             </div>
             <div id="profileRightElements">
