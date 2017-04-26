@@ -19,7 +19,7 @@ postSuggestion() {
 this.state.suggestion = document.getElementById('suggestionTextArea').value
  axios.post('http://localhost:10000/auth/suggestions/create', {
     username: cookie.load('userName'),
-    type:'1',
+    type:'0',
     typeID: this.props.probID,
     description : this.state.suggestion,
   })

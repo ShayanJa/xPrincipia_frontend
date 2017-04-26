@@ -19,7 +19,7 @@ postQuestion() {
   this.state.question = document.getElementById('questionTextArea').value
   
 axios.post('http://localhost:10000/auth/questions/create', {
-  type:'1',
+  type:'0',
   typeID: this.props.probID,
   username: cookie.load('userName'),
   description : this.state.question,
