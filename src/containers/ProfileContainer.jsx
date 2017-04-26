@@ -14,7 +14,8 @@ export default class ProfileContainer extends React.Component {
             createdSolutions: [],
             votedProblems: [],
             createdProblems: [],
-            currentItems:[]
+            currentItems:[],
+            currentType: 'solution',
         }
 
 
@@ -46,13 +47,15 @@ export default class ProfileContainer extends React.Component {
     onCreatedSolutions() {
         var self = this;
         self.setState({
-            currentItems: this.state.createdSolutions
+            currentItems: this.state.createdSolutions,
+            currentType: 'solution',
         })
     }
     onVotedSolutions() {
         var self = this;
         self.setState({
-            currentItems: this.state.followedSolutions
+            currentItems: this.state.followedSolutions,
+            currentType: 'solution',
         })
     }
 
@@ -91,7 +94,7 @@ export default class ProfileContainer extends React.Component {
                 </div>
             </div>
             <div id="profileRightElements">
-              <ProfileUnit displayItems={this.state.currentItems} />
+              <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
             </div>
             <div id="moreButton">
                 More

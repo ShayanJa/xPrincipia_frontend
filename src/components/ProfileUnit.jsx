@@ -19,6 +19,7 @@ export default class ProfileUnit extends React.Component {
 	}
 
    renderItem(item) {
+       if (this.props.currentType === 'solution') {
       return (
           <Link to={`/fullsolution/${item.ProblemID}/${item.ID}/solutions`} >
           <li key={item.ID}>
@@ -32,5 +33,6 @@ export default class ProfileUnit extends React.Component {
       </div>
       </li></Link>
       );
+       }
    }
 }
