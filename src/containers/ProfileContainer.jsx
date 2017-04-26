@@ -8,6 +8,10 @@ import axios from 'axios'
 export default class ProfileContainer extends React.Component {
     constructor(){
         super();
+
+        this.state = {
+            solutions: [],
+        }
     
 
     this.onLogout = this.onLogout.bind(this);
@@ -19,9 +23,9 @@ export default class ProfileContainer extends React.Component {
     }
     componentDidMount(){
         var self = this;
-        axios.get('http://localhost:10000/auth/user/followedProblems/'+cookie.load('userName')).then(function (response) {
+        axios.get('http://localhost:10000/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
-                followedProblems: response.data,
+                solutions: response.data,
             })
         })
         return     
@@ -61,10 +65,7 @@ export default class ProfileContainer extends React.Component {
                 </div>
             </div>
             <div id="profileRightElements">
-              <ProfileUnit />
-              {/*<ProfileUnit />
-              <ProfileUnit />
-              <ProfileUnit />*/}
+              <ProfileUnit solutions={this.state.solutions} />
             </div>
             <div id="moreButton">
                 More

@@ -1,18 +1,34 @@
 import React from 'react';
 
 export default class ProfileUnit extends React.Component {
-   render() {
-      return (
+    constructor(props){
+        super(props);
 
-      <div id="profileRightUnit">
-          <div id="profileUnitTitle">
+        this.renderItem = this.renderItem.bind(this)
+    // this.submitVote = this.submitVote.bind(this)
+};
+
+	render() {
+		return (
+	    <div>
+			<ul> {this.props.solutions.map(this.renderItem)} </ul>
+	               
+	    </div>
+		);
+	}
+
+   renderItem(solution) {
+      return (
+          <li key={solution.ID}>
+    <div id="profileRightUnit">
+          <div id="profileUnitTitle">{solution.Title}
               
           </div>
           <div id="unitSummary">
               
           </div>
       </div>
-
+      </li>
       );
    }
 }
