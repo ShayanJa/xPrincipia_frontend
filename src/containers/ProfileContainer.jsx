@@ -22,6 +22,7 @@ export default class ProfileContainer extends React.Component {
         this.onLogout = this.onLogout.bind(this);
         this.onCreatedSolutions = this.onCreatedSolutions.bind(this)
         this.onVotedSolutions = this.onVotedSolutions.bind(this)
+        this.onCreatedProblems = this.onCreatedProblems.bind(this)
     }
 
     componentDidMount(){
@@ -35,6 +36,11 @@ export default class ProfileContainer extends React.Component {
         axios.get('http://localhost:10000/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 createdSolutions: response.data,
+            })
+        })
+        axios.get('http://localhost:10000/users/createdProblems?username='+cookie.load('userName')).then(function (response) {
+            self.setState({
+                createdProblems: response.data,
             })
         })
         
@@ -56,6 +62,13 @@ export default class ProfileContainer extends React.Component {
         self.setState({
             currentItems: this.state.followedSolutions,
             currentType: 'solution',
+        })
+    }
+    onCreatedProblems() {
+        var self = this;
+        self.setState({
+            currentItems: this.state.createdProblems,
+            currentType: 'problem',
         })
     }
 
@@ -85,7 +98,7 @@ export default class ProfileContainer extends React.Component {
                 <div id="profileProblemsMenu">
                     <div id="solveTitle">Problems</div>
                     <div id="followedProblemsButton">Followed</div>
-                    <div id="createdProblemsButton">Created</div>
+                    <div id="createdProblemsButton" onClick={this.onCreatedProblems}>Created</div>
                 </div>
                 <div id="profileSolutionsMenu">
                     <div id="developTitle">Solutions</div>
