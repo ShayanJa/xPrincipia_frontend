@@ -11,7 +11,7 @@ export default class ProfileUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.solutions.map(this.renderItem)} </ul>
+			<ul> {this.props.followedSolutions.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);

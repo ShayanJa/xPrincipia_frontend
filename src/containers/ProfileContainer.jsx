@@ -10,26 +10,52 @@ export default class ProfileContainer extends React.Component {
         super();
 
         this.state = {
-            solutions: [],
+            followedSolutions: [],
+            createdSolutions: [],
+            votedProblems: [],
+            createdProblems: [],
+            currentItems:[]
         }
-    
 
-    this.onLogout = this.onLogout.bind(this);
+
+        this.onLogout = this.onLogout.bind(this);
+        this.onCreatedSolutions = this.onCreatedSolutions.bind(this)
+        this.onVotedSolutions = this.onVotedSolutions.bind(this)
+    }
+
+    componentDidMount(){
+        var self = this;
+        axios.get('http://localhost:10000/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
+            self.setState({
+                followedSolutions: response.data,
+                currentItems: response.data,
+            })
+        })
+        axios.get('http://localhost:10000/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
+            self.setState({
+                createdSolutions: response.data,
+            })
+        })
+        
     }   
     onLogout() {
         cookie.remove('userToken');
         cookie.remove('userName');
         document.location = "/login";
     }
-    componentDidMount(){
+    onCreatedSolutions() {
         var self = this;
-        axios.get('http://localhost:10000/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
-            self.setState({
-                solutions: response.data,
-            })
+        self.setState({
+            currentItems: this.state.createdSolutions
         })
-        return     
     }
+    onVotedSolutions() {
+        var self = this;
+        self.setState({
+            currentItems: this.state.followedSolutions
+        })
+    }
+
    render() {
       return (
     <div>
@@ -60,12 +86,12 @@ export default class ProfileContainer extends React.Component {
                 </div>
                 <div id="profileSolutionsMenu">
                     <div id="developTitle">Solutions</div>
-                    <div id="votedSolutionsButton">Voted</div>
-                    <div id="createdSolutionsButton">Created</div>
+                    <div id="votedSolutionsButton" onClick={this.onVotedSolutions}>Voted</div>
+                    <div id="createdSolutionsButton" onClick={this.onCreatedSolutions}>Created</div>
                 </div>
             </div>
             <div id="profileRightElements">
-              <ProfileUnit solutions={this.state.solutions} />
+              <ProfileUnit followedSolutions={this.state.currentItems} />
             </div>
             <div id="moreButton">
                 More
