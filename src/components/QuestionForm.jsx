@@ -28,9 +28,10 @@ postQuestion() {
     description : this.state.question,
   })
     .then(function (result) {
-      
+      alert("Your suggestion has been successfully posted!")
     })
     .catch(function (error) {
+      alert("I'm sorry there was a problem with your request")
       });
     } 
 
@@ -44,10 +45,11 @@ postQuestion() {
       description : this.state.question,
     })
       .then(function (result) {
-        
+        alert("Your suggestion has been successfully posted!")
       })
       .catch(function (error) {
-        });
+        alert("I'm sorry there was a problem with your request")
+      });
     }
 
   }

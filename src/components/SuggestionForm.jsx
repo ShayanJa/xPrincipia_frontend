@@ -26,11 +26,12 @@ if(this.props.solutionID){
     description : this.state.suggestion,
   })
   .then(function (result) {
-    
+    alert("Your suggestion has been successfully posted!")
   })
   .catch(function (error) {
-    });
-  } 
+    alert("I'm sorry there was a problem with your request")
+  });
+} 
   //else post to problem
   //probID will be used
     else {
@@ -41,10 +42,11 @@ if(this.props.solutionID){
       description : this.state.suggestion,
     })
       .then(function (result) {
-        
+        alert("Your suggestion has been successfully posted!")
       })
       .catch(function (error) {
-        });
+        alert("I'm sorry there was a problem with your request")
+      });
     }
 }
 
