@@ -17,19 +17,41 @@ export default class QuestionForm extends React.Component {
 postQuestion() {
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
-  
-axios.post('http://localhost:10000/auth/questions/create', {
-  type:'0',
-  typeID: this.props.probID,
-  username: cookie.load('userName'),
-  description : this.state.question,
-})
-  .then(function (result) {
-    
+
+  //if User is on a solution post with type 1
+  //solutionID will be available in props
+  if(this.props.solutionID){
+    axios.post('http://localhost:10000/auth/questions/create', {
+    type:'1',
+    typeID: this.props.solutionID,
+    username: cookie.load('userName'),
+    description : this.state.question,
   })
-  .catch(function (error) {
-    });
+    .then(function (result) {
+      
+    })
+    .catch(function (error) {
+      });
+    } 
+
+    //else post to problem
+    //probID will be used
+    else {
+      axios.post('http://localhost:10000/auth/questions/create', {
+      type:'0',
+      typeID: this.props.probID,
+      username: cookie.load('userName'),
+      description : this.state.question,
+    })
+      .then(function (result) {
+        
+      })
+      .catch(function (error) {
+        });
+    }
+
   }
+  
 
 
 
