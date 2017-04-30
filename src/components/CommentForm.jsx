@@ -26,7 +26,7 @@ axios.post('http://localhost:10000/auth/comments/create', {
   description : this.state.comment,
 })
 .then(function (result) {
-
+  document.location = window.location.pathname 
 })
 .catch(function (error) {
   alert('Please try again');
@@ -44,7 +44,7 @@ axios.post('http://localhost:10000/auth/comments/create', {
                 <legend>Comments</legend>
                      <textarea name="answerText" required="required" id="commentTextArea"></textarea>
                      <br />
-                     <input type="submit" value="Add" onClick={this.postComment} id="addAnswer"/>
+                     <input type="button" value="Add" onClick={this.postComment} id="addAnswer"/>
             </fieldset>
         </form>
       </div>

@@ -26,7 +26,7 @@ if(this.props.solutionID){
     description : this.state.suggestion,
   })
   .then(function (result) {
-    alert("Your suggestion has been successfully posted!")
+    document.location = window.location.pathname 
   })
   .catch(function (error) {
     alert("I'm sorry there was a problem with your request")
@@ -42,7 +42,7 @@ if(this.props.solutionID){
       description : this.state.suggestion,
     })
       .then(function (result) {
-        alert("Your suggestion has been successfully posted!")
+        document.location = window.location.pathname 
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
@@ -60,7 +60,7 @@ if(this.props.solutionID){
                     <legend>Suggestions</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="submit" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
+                         <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
                 </fieldset>
             </form>
       </div>

@@ -28,7 +28,7 @@ postQuestion() {
     description : this.state.question,
   })
     .then(function (result) {
-      alert("Your suggestion has been successfully posted!")
+      document.location = window.location.pathname 
     })
     .catch(function (error) {
       alert("I'm sorry there was a problem with your request")
@@ -45,7 +45,7 @@ postQuestion() {
       description : this.state.question,
     })
       .then(function (result) {
-        alert("Your suggestion has been successfully posted!")
+        document.location = window.location.pathname 
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
@@ -65,7 +65,7 @@ postQuestion() {
                     <legend>Questions</legend>
                          <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="submit" value="Ask" onClick={this.postQuestion} id="askquestion"/>
+                         <input type="button" value="Ask" onClick={this.postQuestion} id="askquestion"/>
                 </fieldset>
             </form>
       </div>

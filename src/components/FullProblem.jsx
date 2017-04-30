@@ -12,7 +12,7 @@ export default class FullProblem extends React.Component {
         }
         this.submitVote = this.submitVote.bind(this)
     };
-    componentDidMount(){
+    componentWillMount(){
       var self = this;
       return axios.get('http://localhost:10000/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
           //if parent ID is 0 then the problem is at the root of the tree

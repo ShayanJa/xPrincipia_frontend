@@ -28,23 +28,23 @@ export default class ProfileContainer extends React.Component {
 
     componentDidMount(){
         var self = this;
-        axios.get('http://localhost:10000/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
+        axios.get('http://localhost:10000/auth/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 followedSolutions: response.data,
                 currentItems: response.data,
             })
         })
-        axios.get('http://localhost:10000/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
+        axios.get('http://localhost:10000/auth/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 createdSolutions: response.data,
             })
         })
-        axios.get('http://localhost:10000/users/createdProblems?username='+cookie.load('userName')).then(function (response) {
+        axios.get('http://localhost:10000/auth/users/createdProblems?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 createdProblems: response.data,
             })
         })
-         axios.get('http://localhost:10000/users/followedProblems?username='+cookie.load('userName')).then(function (response) {
+         axios.get('http://localhost:10000/auth/users/followedProblems?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 followedProblems: response.data,
             })
