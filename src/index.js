@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Redirect, Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 
 //Load Components
@@ -113,7 +113,8 @@ ReactDOM.render(
         </Route>
       </Route>
     </Route>
-    <Route path='*' component={Error404} />
+    {/*<Redirect from='*' to='/404' />*/}
+    <Route path='*' component={Error404}/>
   </Router>,
   document.getElementById('root')
 );
