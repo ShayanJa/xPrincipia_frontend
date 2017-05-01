@@ -9,11 +9,10 @@ export default class Info extends React.Component {
               <div id="bannerSlogan">Open Source Science</div>
           </div>
           <div id="learnMore">
-              <div id="introduction">.<br />We are an open source scientific development network allowing anyone to
-                  contribute to humanity's work on cutting edge progress.
-                  <br />
+              <div id="introduction">
                   .
-                  <br /> Join to create and develop solutions to today's many problems. Together we aim to build our best future.
+                  <br /> Submit and breakdown today's scientific problems
+                 <br />.<br />Create and vote on solutions
                   <br />.<br />.
               </div>
               <br />

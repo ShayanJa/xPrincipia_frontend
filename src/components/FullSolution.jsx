@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
-import cookie from 'react-cookie'
+import cookie from 'react-cookie';
 
 export default class FullSolution extends React.Component {
   constructor(props){
@@ -44,7 +44,6 @@ export default class FullSolution extends React.Component {
 
   }
   submitVote() {
-      var self = this;
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 1,
            TypeID: this.state.solutionInfo.ID,
@@ -52,10 +51,11 @@ export default class FullSolution extends React.Component {
            
         })
         .then(function (result) {
-            document.location = window.location.pathname 
+            document.location = window.location.pathname;
+            alert("Thank you, your vote has been recorded.");
         })
         .catch(function (error) {
-            alert("Already voted on solution")
+            alert("I'm sorry, you've already voted on a solution.");
         })
   }
    render() {

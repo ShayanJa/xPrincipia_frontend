@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header.jsx';
+import Header from '../containers/Header.jsx';
 
 
 export default class Layout extends React.Component {

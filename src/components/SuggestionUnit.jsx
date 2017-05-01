@@ -1,7 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router';
+import axios from 'axios';
+import cookie from 'react-cookie';
 
 
 export default class SuggestionUnit extends React.Component {
+    constructor(props){
+        super(props);
+         this.renderItem = this.renderItem.bind(this)
+    };
+  
 
 	render() {
 		return (
@@ -12,6 +20,21 @@ export default class SuggestionUnit extends React.Component {
 		);
 	}
 	renderItem(suggestion) {
+
+       function  submitVote() {
+       axios.post('http://localhost:10000/auth/vote/create', {
+           Type: 3,
+           TypeID: suggestion.ID,
+           username : cookie.load("userName"),
+           
+        })
+        .then(function (result) {
+            document.location = window.location.pathname;
+        })
+        .catch(function (error) {
+            alert("I'm sorry, you've already voted on a suggestion.");
+        })
+  }
   
     return (
        <li key={suggestion.ID} id="suggestionUnit">
@@ -19,10 +42,15 @@ export default class SuggestionUnit extends React.Component {
 					<div id="suggestionAdder">{suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
-				<button type="button" id="suggestionVote">Vote</button>   
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
+                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
             <br /><br /> 
         </li>)
 
   }
 }
 
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
+}
