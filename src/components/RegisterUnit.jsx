@@ -52,6 +52,7 @@ postRegister() {
 
 // });
 axios.post('http://localhost:10000/register', {
+      fullName: this.state.fullname,
       email: this.state.email,
       username : this.state.username,
       password: this.state.password
@@ -62,8 +63,8 @@ axios.post('http://localhost:10000/register', {
      
     })
     .catch(function (error) {
-
-      alert('Please try again.')
+      console.log(error.response.data)
+      alert( error.response.data)
     });
 }
 
@@ -71,7 +72,7 @@ axios.post('http://localhost:10000/register', {
       return (
 
         <div id="register">
-            <form action="http://www.xprincipia.com/register.php" method="post" id="registerForm">
+            <form id="registerForm">
                 <div id="enter">Enter</div>
                 <input type="text" name="fullname" required="required" maxLength="30" placeholder="Full Name" id="registerFullName" autoFocus />
                 <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
