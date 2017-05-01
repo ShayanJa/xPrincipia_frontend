@@ -14,7 +14,7 @@ constructor(){
   this.postAnswer = this.postAnswer.bind(this);
 };
 
-postAnswer() {
+postAnswer() { 
   //Read field items into component state
   this.state.answer = document.getElementById('answerTextArea').value
 // Ajax post answer request
