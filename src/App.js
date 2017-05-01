@@ -10,7 +10,16 @@ class App extends React.Component {
       super(props);
 
       this.state = {
-          userToken: []
+          userToken: [],
+          undefinedPaths: [
+          "/problem/undefined/suggestions", 
+          '/problem/undefined/subproblems',
+          '/problem/undefined/questions',
+          '/problem/undefined/solutions',
+          '/problem/solutions',
+          '/problem/subproblems',
+          '/problem/suggestions',
+          '/problem/questions']
       }
         
     };
@@ -44,7 +53,7 @@ class App extends React.Component {
     } 
 
     //Load the welcome page if route is '/'
-    if (window.location.pathname === "/" || window.location.pathname === "/problem/undefined/subproblems" ){
+    if (window.location.pathname === "/" || this.state.undefinedPaths.inArray(window.location.pathname) ){
       document.location = "/welcome";
     }
 
@@ -61,3 +70,20 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+ Array.prototype.inArray = function (value)
+//TODO: Put in util library
+
+// Returns true if the passed value is found in the
+// array. Returns false if it is not.
+{
+    var i;
+    for (i=0; i < this.length; i++) {
+        // Matches identical (===), not just similar (==).
+        if (this[i] === value) {
+            return true;
+        }
+    }
+    return false;
+};

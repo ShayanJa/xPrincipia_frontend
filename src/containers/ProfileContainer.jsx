@@ -97,7 +97,7 @@ export default class ProfileContainer extends React.Component {
                 <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">
-                <div id="userProblemsSolutionsButton">Problems and Solutions (Coming Soon)</div>
+                <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 <div id="notificationsButton">Notifications (Coming Soon)</div>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
                 <div id="aboutXPButton">About XPrincipia (Coming Soon)</div>

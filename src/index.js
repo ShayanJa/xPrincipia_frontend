@@ -44,7 +44,6 @@ import './assets/index.css';
 
 
 ReactDOM.render(
- 
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcomecontainer' component={WelcomeContainer}>
@@ -114,6 +113,7 @@ ReactDOM.render(
         </Route>
       </Route>
     </Route>
+    <Route path='*' component={Error404} />
   </Router>,
   document.getElementById('root')
 );
