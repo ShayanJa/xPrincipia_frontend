@@ -105,7 +105,7 @@ export default class ProfileContainer extends React.Component {
                 <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 <div id="notificationsButton">Notifications (Coming Soon)</div>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
-                <div id="aboutXPButton" onClick={this.goToAbout}>About XPrincipia (Coming Soon)</div>
+                <div id="aboutXPButton" onClick={this.goToAbout}>About XPrincipia </div>
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>
