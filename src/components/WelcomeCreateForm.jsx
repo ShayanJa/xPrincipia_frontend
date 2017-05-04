@@ -45,8 +45,9 @@ export default class WelcomeCreateForm extends React.Component {
       
     })
     .catch(function (error) {
-      alert("There was an error.")
-      });
+      console.log(error.response.data)
+      alert( error.response.data)
+    });
   };
 
   render() {

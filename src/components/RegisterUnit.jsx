@@ -59,7 +59,6 @@ axios.post('http://localhost:10000/register', {
     })
     .then(function (result) {
       alert('You have been registered. Welcome to XPrincipia! Please log in')
-    
      
     })
     .catch(function (error) {
