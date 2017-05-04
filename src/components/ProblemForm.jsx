@@ -84,7 +84,7 @@ export default class ProblemForm extends React.Component {
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
-                        <input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/>
+                        <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>
               </fieldset>
             </form>
         </div>

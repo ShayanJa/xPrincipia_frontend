@@ -80,7 +80,7 @@ export default class WelcomeCreateForm extends React.Component {
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
-                        <Link to={`/problem/${this.props.params.probID}/subproblems`}><input type="submit" value="Create" onClick={this.postProblem} id="submitWelcomeProblem"/></Link>
+                        <Link to={`/welcome`}><input type="submit" value="Create" onClick={this.postProblem} id="submitWelcomeProblem"/></Link>
               </fieldset>
             </form>
             <Link to='/welcome'><div id="welcomeMore">Back</div></Link>
