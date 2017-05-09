@@ -24,6 +24,8 @@ export default class ProfileContainer extends React.Component {
         this.onVotedSolution = this.onVotedSolution.bind(this)
         this.onCreatedProblem = this.onCreatedProblem.bind(this)
         this.onFollowedProblem = this.onFollowedProblem.bind(this)
+
+        this.goToAbout = this.goToAbout.bind(this)
     }
 
     componentDidMount(){
@@ -84,6 +86,9 @@ export default class ProfileContainer extends React.Component {
             currentType: 'problem',
         })
     }
+    goToAbout() {
+        window.location.href='http://www.xprincipia.com'
+    }
 
    render() {
       return (
@@ -100,7 +105,7 @@ export default class ProfileContainer extends React.Component {
                 <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 <div id="notificationsButton">Notifications (Coming Soon)</div>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
-                <div id="aboutXPButton">About XPrincipia (Coming Soon)</div>
+                <div id="aboutXPButton" onClick={this.goToAbout}>About XPrincipia </div>
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>

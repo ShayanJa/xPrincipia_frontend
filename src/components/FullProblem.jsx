@@ -57,6 +57,7 @@ export default class FullProblem extends React.Component {
 
   }
   submitVote() {
+      var self = this
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 0,
            TypeID: this.state.problemInfo.ID,
@@ -64,7 +65,7 @@ export default class FullProblem extends React.Component {
            
         })
         .then(function (result) {
-            document.location = window.location.pathname;
+            document.location = "/problem/" + self.state.parentID + "/subproblems";
             alert("Thank you, your vote has been recorded.")
         })
         .catch(function (error) {

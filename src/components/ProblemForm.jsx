@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Redirect, Router, Route, IndexRoute, browserHistory } from 'react-router';
 import axios from 'axios'
 import cookie from 'react-cookie'
+
 
 export default class ProblemForm extends React.Component {
 
@@ -22,6 +23,7 @@ export default class ProblemForm extends React.Component {
   };
 
   postProblem() {
+    
     //Read field items into component state
     this.state.title = document.getElementById('problemTitleForm').value
     this.state.field = document.getElementById('problemFieldForm').value
@@ -30,7 +32,8 @@ export default class ProblemForm extends React.Component {
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
   
-  axios.post('http://localhost:10000/auth/problems/create', {
+    var self = this
+    axios.post('http://localhost:10000/auth/problems/create', {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,
@@ -42,11 +45,13 @@ export default class ProblemForm extends React.Component {
       references: this.state.references
     })
     .then(function (result) {
-      document.location = window.location.pathname 
+      //redirect back to the last page     
+      document.location = '/problem/'+self.props.params.probID+'/subproblems'
     })
     .catch(function (error) {
-      alert("There was an error.")
-      });
+      console.log(error.response.data)
+      alert( error.response.data)
+    });
   };
 
   render() {
@@ -79,7 +84,7 @@ export default class ProblemForm extends React.Component {
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
-                        <Link to={`/problem/${this.props.params.probID}/subproblems`}><input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/></Link>
+                        <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>
               </fieldset>
             </form>
         </div>

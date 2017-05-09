@@ -520,8 +520,10 @@
   text-align: center;
 }
 #errorSlogan {
+  margin-left: 35px;
   margin-top: 15px;
   letter-spacing: 12px;
+  text-align: center;
 }
 #loader {
     border: 12px solid #0f131c;
