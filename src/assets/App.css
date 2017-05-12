@@ -156,12 +156,19 @@
       flex-grow: 1;
       margin: 2px;
 
-/*Button to Div CSS*/
+      /*Button to Div CSS*/
       text-align: center;
       font-size: 71%;
       padding: 2px;
-
     }
+    #deleteLogo {
+      /*border: 1px solid #ff7f7f;
+    	border-radius: 50%;*/
+      display: block;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+
     #flagSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
