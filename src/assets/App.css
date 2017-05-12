@@ -164,7 +164,8 @@
     }
     #flagSBButton {
       color: #ff7f7f;
-      border: 1px solid #ff7474;
+      border: 1px solid #ff7f7f;
+      /*OR #fc5353*/
       margin-top: 1px;
     }
     #flagSBButton:hover {
