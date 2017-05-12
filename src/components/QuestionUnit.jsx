@@ -43,8 +43,14 @@ constructor(props){
 					<div id="questionAdder">Q: {question.Username}</div>
                 	<div id="questionText">{question.Description}</div>
 				</div>
+                <div id="flagContainer">
+                    <div id="editSBButton" onClick={submitVote}>Edit</div>
+                    <div id="flagSBButton" onClick={submitVote}>F</div>
+                </div>
 				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
-            <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Answers</button></Link>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                    <button type="button" id="questionAnswers">Answers</button
+                ></Link>
         <br/><br/> 
         </li>)
   }

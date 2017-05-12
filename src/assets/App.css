@@ -138,6 +138,54 @@
       color: #00ffdc;
       background-color: #0f131c;
     }
+    #flagContainer {
+      flex: 1 1 auto;
+      height: 100%;
+      display: flex;
+    	flex-direction: column;
+      border: 1px solid #00ffdc;
+      border-width: 1px 0px 0px 0px;
+    }
+    #flagSBButton, #editSBButton {
+      flex: 1 1 auto;
+      color: #00ffdc;
+      background-color: #0f131c;
+      border: 1px solid #00ffdc;
+      border-radius: 2px;
+      cursor: pointer;
+      flex-grow: 1;
+      margin: 2px;
+
+/*Button to Div CSS*/
+      text-align: center;
+      font-size: 71%;
+      padding: 2px;
+
+    }
+    #flagSBButton {
+      color: #ff7f7f;
+      border: 1px solid #ff7474;
+      margin-top: 1px;
+    }
+    #flagSBButton:hover {
+      color: #0f131c;
+      background-color: #ff7f7f;
+      cursor: pointer;
+    }
+    #editSBButton:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+      cursor: pointer;
+    }
+    #flagSBButton:active {
+      color: #ff7f7f;
+      background-color: #0f131c;
+    }    
+    #editSBButton:active {
+      color: #00ffdc;
+      background-color: #0f131c;
+    }
+
     #answerProblem fieldset {
       border: 1px solid #00dcff;
     }
