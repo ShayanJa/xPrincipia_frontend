@@ -55,6 +55,30 @@
 
 
 
+/*Media Queries*/
+    @media screen and (min-width: 600px) {
+      #loginContainer {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        width: 99%;
+        border: 1px solid #00dcff;
+        border-width: 0px 0px;
+        min-height: 99%;
+      }
+}
+
+
+
+/*End Media Queries*/
+
+
+
 /*ORGANIZED BY COMPONENT*/
 
 
