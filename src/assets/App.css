@@ -138,14 +138,14 @@
       color: #00ffdc;
       background-color: #0f131c;
     }
-    #flagContainer {
+    /*#flagContainer {
       flex: 1 1 auto;
       height: 100%;
       display: flex;
     	flex-direction: column;
       border: 1px solid #00ffdc;
       border-width: 1px 0px 0px 0px;
-    }
+    }*/
     #flagSBButton, #editSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
@@ -154,7 +154,7 @@
       border-radius: 2px;
       cursor: pointer;
       flex-grow: 1;
-      margin: 2px;
+      height: 100%;
 
       /*Button to Div CSS*/
       text-align: center;
@@ -173,10 +173,11 @@
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
       /*OR #fc5353*/
-      margin-top: 1px;
+      margin: 1px;
+      padding: 3px;
     }
     #flagSBButton:hover {
-      color: #0f131c;
+      color: #0f131c !important;
       background-color: #ff7f7f;
       cursor: pointer;
     }
