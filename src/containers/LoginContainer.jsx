@@ -19,11 +19,8 @@ export default class LoginContainer extends React.Component {
    render() {
       return (
         <div id="loginContainer">
-            <MediaQuery minDeviceWidth={1224}>
-              <div>You are a desktop or laptop</div>
-            </MediaQuery>
-            <Info />
-            {this.props.children}
+          <Info />
+          {this.props.children}
         </div>
       );
    }

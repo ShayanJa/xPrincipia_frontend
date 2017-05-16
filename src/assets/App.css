@@ -56,24 +56,59 @@
 
 
 /*Media Queries*/
-    @media screen and (min-width: 600px) {
-      #loginContainer {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        overflow: hidden;
-        display: flex;
-        align-items: stretch;
-        flex-direction: column;
-        width: 99%;
-        border: 1px solid #00dcff;
-        border-width: 0px 0px;
-        min-height: 99%;
-      }
+
+  /*#loginContainer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    width: 99%;
+    border: 1px solid #00dcff;
+    border-width: 0px 0px;
+    min-height: 99%;
+    color: red !important;
+}*/
+
+@media screen and (max-width: 600px) {
+  /*Login Page*/
+  #fullProblem, #fullSolution {
+    width: 100% !important;
+  }
+  #loginContainer {
+    flex-direction: column !important;
+    background-color: green;
+  }
+  #introduction {
+    width: 100%;
+    display: none;
+  }
+  /*Welcome Page*/
+  #welcomeBox {
+    margin: 0 auto !important;
+  }
+  /*Header*/
+  #headerName {
+    display: none !important;
+  }
+  /*Problem Page*/
+  #voteSolution, #followProblem {
+    width: 100px !important;
+    /*margin-left: 0px auto !important;*/
+    padding-left: 15px !important;
+    /*text-align: center !important;*/
+  }
+  #parentButton {
+    flex: 0 1 auto;
+    margin-right: auto;
+    margin-top: 1px;
+    width: 31% !important;
+    text-align: right;
+  }
 }
-
-
 
 /*End Media Queries*/
 
@@ -383,6 +418,10 @@
       float: left;
       width: 60%;
     }*/
+
+
+
+
     #fullProblem, #fullSolution {
       width: 60%;
       float: left;
@@ -528,6 +567,7 @@
     	padding-right: 5%;
     	font-size: 120%;
     	line-height: 150%;
+      word-wrap: break-word; 
     }
     #solutionReferences, #problemReferences {
       text-align: left;
