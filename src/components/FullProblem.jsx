@@ -107,7 +107,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div>
             <h1 id="problemRequirementsLabel">References</h1>
-            <p id="problemRequirements">
+            <p id="problemReferences">
               {this.state.problemInfo.References}
             </p>
           </div>
