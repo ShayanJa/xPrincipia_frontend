@@ -57,22 +57,6 @@
 
 /*Media Queries*/
 
-  /*#loginContainer {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    overflow: hidden;
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    width: 99%;
-    border: 1px solid #00dcff;
-    border-width: 0px 0px;
-    min-height: 99%;
-    color: red !important;
-}*/
-
 @media screen and (max-width: 600px) {
   /*Login Page*/
   #fullProblem, #fullSolution {
