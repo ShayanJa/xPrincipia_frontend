@@ -111,11 +111,11 @@ export default class FullProblem extends React.Component {
               {this.state.problemInfo.References}
             </p>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <br id="xpbr"/>
+          <br id="xpbr"/>
+          <br id="xpbr"/>
+          <br id="xpbr"/>
+          <br id="xpbr"/>
           <p id="xp">XP</p>
           <br />
         </div>

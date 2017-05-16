@@ -64,33 +64,141 @@
   }
   #loginContainer {
     flex-direction: column !important;
-    background-color: green;
+    width: 100% !important;
   }
   #introduction {
     width: 100%;
     display: none;
   }
+  #learnMore {
+    display: none !important;
+  }
+  #info {
+    width: 100% !important;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+  }
+  #banner {
+    width: 100% !important;
+    padding-left: 0px !important;
+    margin-top: 30% !important;
+  }
+  #bannerTitle {
+    font-size: 105% !important;
+    letter-spacing: 14px !important;
+    padding-left: 10px !important;
+  }
+  #bannerSlogan {
+    letter-spacing: 10px !important;
+    font-size: 70% !important;
+  }
+  #signup, #register {
+    width: 100% !important;
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+  }
+  #loginForm, #registerForm {
+    border-radius: 3px;
+    margin: 0% 15% 0% 15% !important;
+  }
+
   /*Welcome Page*/
   #welcomeBox {
     margin: 0 auto !important;
   }
+
   /*Header*/
   #headerName {
     display: none !important;
   }
-  /*Problem Page*/
-  #voteSolution, #followProblem {
-    width: 100px !important;
-    /*margin-left: 0px auto !important;*/
-    padding-left: 15px !important;
-    /*text-align: center !important;*/
+  #explore {
+    display: none !important;
   }
+  #logo {
+    font-size: 150% !important;
+    letter-spacing: 16px;
+    flex: 1 6 auto !important;
+    width: 80% !important;
+  }
+  #avatarHeader {
+    flex: 1 1 auto !important;
+    width: 7% !important;
+  }
+
+  /*Problem Page*/
   #parentButton {
     flex: 0 1 auto;
-    margin-right: auto;
+    margin-right: 0px !important;
     margin-top: 1px;
     width: 31% !important;
     text-align: right;
+  }
+  #elementLabel {
+    flex: 1 1 auto;
+    margin: 1px 0% 0% 0% !important;
+    padding: 4px;
+    letter-spacing: 12px;
+    color: #00dcff;
+    text-align: left !important;
+  }
+  #voteSolution, #followProblem {
+    width: 100px !important;
+    /*margin-left: 0 auto !important;*/
+    padding-left: 15px !important;
+    /*text-align: center !important;*/
+  }
+  #solutionTitle, #problemTitle {
+    border-width: 0px;
+    font-size: 220% !important;
+  }
+  #solutionSummary, #problemSummary {
+    margin: 5px 25px;
+    line-height: 150%;
+    font-size: 120%;
+    border: 1px solid #00dcff;
+    border-width: 1px 0px;
+    padding: 15px;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  #solutionSummaryLabel, #problemSummaryLabel {
+    color: #00dcff;
+  }
+  #solutionSummary, #problemSummary {
+    text-align: left;
+  }
+  #xpbr {
+    display: none;
+  }
+  #xp {
+    display: none;
+  }
+
+  /*Profile*/
+  #profileBox {
+    overflow: auto;
+    display: flex !important;
+    align-items: stretch;
+    flex-direction: column !important;
+    margin: 3% 0% 0% 0% !important;
+    border: 1px solid #00dcff;
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  #profileLeft, #profileRight {
+    color: #dddddd;
+    padding: 0px 0px 0px 0px !important;
+    /*overflow: scroll !important;*/
+    margin: 0px 0px 0px 0px !important;
+    flex: 1 1 auto;
+    width: 100% !important;
+  }
+  #profileRightElements {
+    margin: 2px 0px 0px 0px !important;
+    padding: 0px !important;
   }
 }
 
@@ -727,7 +835,10 @@
     	font-weight: 100;
     	letter-spacing: 16px;
     	flex: 1 2 auto;
+/*Changing the width to 100% gets rid of gap on right
+ but shrinking screen messes up avatar*/
       width: 50%;
+
     }
     #avatarHeader {
       width: 25%;
@@ -774,7 +885,7 @@
       float: left;
       flex: 2 2 auto;
     }
-    #imgContainer {
+    #imgContainerAvatar {
       flex: 1 1 auto;
     }
 
@@ -843,7 +954,6 @@
     }
     #introduction {
     	margin: 0% 10%;
-    	border:
     }
     #loginForm, #registerForm {
     	border: 1px solid #00dcff;
