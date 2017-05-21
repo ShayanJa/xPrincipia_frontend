@@ -1566,12 +1566,13 @@
 /*Welcome*/
 
     #welcomeBox {
-    	/*margin: 7% 20% 0% 20%;*/
-    	border: 1px solid #00dcff;
+    	margin: 1% 20% 0% 20%;
+    	border: 1px solid #dddddd;
       border-radius: 3px;
     }
     #welcomePrompt {
-    	margin: 15px 0px 10px 0px;
+    	color: #dddddd;
+      margin: 5px 0px 5px 0px;
     	font-size: 180%;
       letter-spacing: 6px;
     }
@@ -1612,6 +1613,9 @@
     	margin: 2px 15px 5px 5px;
     	padding: 5px;
     }
+    #welcomeUnitsContainer ul li {
+      display: inline;
+    }
     #createWelcomeButton {
       background-color: #0f131c;
       color: #00dcff;
@@ -1651,8 +1655,7 @@
       display: inline;
     }
     #welcomeProblemsUnit {
-    	border: 1px solid #00dcff;
-    	border-width: 1px 0px 0px 0px;
+    	display: block;
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
@@ -1666,10 +1669,12 @@
       width: 12em;
       height: 12em;
       margin: 1em;
+      margin-right: 10px;
       word-wrap: break-word; 
       display: flex;
       align-items: center; 
      justify-content: center;
+     background-color: rgba(255,255,255,0.05);
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
