@@ -48,16 +48,16 @@ export default class WelcomeUnitsContainer extends React.Component {
    render() {
       return (
       <div>
-        <div id="welcomeFormComponent">
+        {/*<div id="welcomeFormComponent">
             <form  id="exploreWelcomeForm">
                 <input type="search" name="search"
                     placeholder="Select or search a problem" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
-                {/*<input type="submit" value="Go" id="submitExplore" />*/}
             </form>
-        </div>
+        </div>*/}
             <div id="welcomeUnitsContainer">
-            <WelcomeUnit problems={this.state.problems} />
-            {/*<WelcomeMore />*/}
+                <WelcomeUnit problems={this.state.problems} />
+                {/*<WelcomeMore />*/}
+
             </div>
       </div>
       );

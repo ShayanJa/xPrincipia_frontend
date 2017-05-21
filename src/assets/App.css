@@ -1566,13 +1566,14 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 7% 20% 0% 20%;
+    	/*margin: 7% 20% 0% 20%;*/
     	border: 1px solid #00dcff;
       border-radius: 3px;
     }
     #welcomePrompt {
     	margin: 15px 0px 10px 0px;
-    	font-size: 220%;
+    	font-size: 180%;
+      letter-spacing: 6px;
     }
     #selectProblemPrompt{
     	padding: 5px 5px 0px 5px;
@@ -1646,6 +1647,9 @@
       background-color: #00dcff;
       color: #0f131c;
     }
+    ul#welcomeProblemsUnitList li {
+      display: inline;
+    }
     #welcomeProblemsUnit {
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
@@ -1656,9 +1660,18 @@
     }
     #welcomeProblemsHeader{
     	display: inline-flex;
-    	flex-direction: row;
+    	flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 12em;
+      height: 12em;
+      margin: 1em;
+      word-wrap: break-word; 
+      display: flex;
+      align-items: center; 
+     justify-content: center;
     }
-    #welcomeProblemsTag {
+    /*#welcomeProblemsTag {
     	flex: 1 1 auto;
     	display: inline-block;
     	color: #00ffdc !important;
@@ -1667,12 +1680,15 @@
     	font-size: 120%;
     	padding: 2px 5px 2px 5px;
     	margin-bottom: 35px;
-    }
+    }*/
     #welcomeProblemsTitle {
-    	flex: 1 1 auto;
+    	/*flex: 1 1 auto;*/
+      margin: 0 auto;
     	padding: 5px 10px 5px 10px;
     	font-size: 150%;
-    	color: #dddddd;
+    	color: #00dcff;
+      word-wrap: break-word; 
+      text-align: center;
     }
     #welcomeProblemsSummary {
     	font-family: 'Alegreya Sans', sans-serf;

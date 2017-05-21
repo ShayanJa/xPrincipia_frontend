@@ -7,7 +7,7 @@ export default class WelcomeUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.problems.map(this.renderItem)} </ul>
+			<ul id="welcomeProblemsUnitList"> {this.props.problems.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);
@@ -19,7 +19,7 @@ export default class WelcomeUnit extends React.Component {
         <li  id="welcomeProblemsUnit">
             
               <div id="welcomeProblemsHeader">
-                <div id="welcomeProblemsTag">{problem.Field}</div>
+                {/*<div id="welcomeProblemsTag">{problem.Field}</div>*/}
                 <div id="welcomeProblemsTitle">
                     {problem.Title}
                 </div>
