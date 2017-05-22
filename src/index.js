@@ -97,7 +97,7 @@ ReactDOM.render(
             <Route path='/fullsolution/:probID/:solutionID/suggestions' component={SuggestionContainer}></Route>
           </Route>
         </Route>
-        <IndexRoute component={UserSolution}></IndexRoute>
+        {/*<IndexRoute component={UserSolution}></IndexRoute>
         <Route path='/usersolution' component={UserSolution}>
           <IndexRoute component={SideBarUserSolution}></IndexRoute>
           <Route path='/usersolution/sidebar' component={SideBarUserSolution}>
@@ -110,7 +110,7 @@ ReactDOM.render(
             <Route path='/usersolution/subproblems' component={SubProblemContainer}></Route>
             <Route path='/usersolution/suggestions' component={SuggestionContainer}></Route>
           </Route>
-        </Route>
+        </Route>*/}
       </Route>
     </Route>
     {/*<Redirect from='*' to='/404' />*/}

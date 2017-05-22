@@ -77,50 +77,32 @@ export default class FullProblem extends React.Component {
 
       return (
       <div id="maxContainer">
-        <div id="fullProblem">
-          <div id="problemHeader">
-            {/*Link back to the parent problem*/}
-          <div id="parentButton"><Link to={`/problem/${this.state.parentID}/solutions`}>Parent</Link></div>
-            <h1 id="elementLabel">Problem</h1>
-          </div>
-          <div id="problemIntro">
-            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="followProblem" onClick={this.submitVote}>Vote</div>
-            <div id="contributor">{this.state.problemInfo.OriginalPosterUsername}</div>
-            <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
-            <h1 id="problemSummaryLabel">Summary</h1>
+        <div id="problemIntro">
+          <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
+          <div id="followProblem" onClick={this.submitVote}>Vote</div>
+          <div id="contributor">{this.state.problemInfo.OriginalPosterUsername}</div>
+          <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
+        </div>
+        <div id="problemWSB">
+          <div id="fullProblem">
+            <div id="problemHeader">
+              <Link to={`/problem/${this.state.parentID}/solutions`}>
+                <div id="parentButton">
+                  <img src={require('../assets/deleteLogo.png')} id="deleteLogo" width="10" height="10" alt="Delete Button, Red X" />
+                </div>
+              </Link>
+            </div>
+            <h1 id="problemSummaryLabel">Additional Info</h1>
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>
           </div>
-          <div>
-            <h1 id="problemDescriptionLabel">Description</h1>
-            <p id="problemDescription">
-              {this.state.problemInfo.Description}
-            </p>
+          <div id="sidebar">
+            {React.cloneElement(this.props.children, {probID: this.state.probID})}
           </div>
-          <div>
-            <h1 id="problemRequirementsLabel">Requirements</h1>
-            <p id="problemRequirements">
-              {this.state.problemInfo.Requirements}
-            </p>
-          </div>
-          <div>
-            <h1 id="problemRequirementsLabel">References</h1>
-            <p id="problemReferences">
-              {this.state.problemInfo.References}
-            </p>
-          </div>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <p id="xp">XP</p>
-          <br />
         </div>
-        <div id="sidebar">
-          {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        <div>
+            Sub Problem Circles Here{/*SubProblems Here seperate column*/}
         </div>
       </div>
       );

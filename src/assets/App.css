@@ -13,6 +13,12 @@
     }
     #maxContainer {
       width: 100%;
+      display: inline-flex;
+    	flex-direction: column;
+      word-wrap: break-word; 
+      align-items: center; 
+      justify-content: center;
+      
     }
     h1 {
     	text-align: center;
@@ -1789,13 +1795,13 @@
     	border-width: 0px 0px;
     }
     #sidebarMenu {
-    	display: inline-flex;
-    	flex-direction: row;
+    	display: flex;
+    	flex-direction: column;
       align-items: stretch;
     	width: 100%;
-    	border: 1px solid #00dcff;
+    	/*border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
-    	border-radius: 3px;
+    	border-radius: 3px;*/
     	margin-bottom: 10px;
     }
     .activeGreen div {
