@@ -1365,15 +1365,6 @@
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
-#unitTitle {
-  display: block;
-  margin: 0px;
-  padding: 2px 5px 2px 5px;
-  font-size: 130%;
-  color: #00dcff;
-  line-height: 120%;
-  height: auto;
-}
 #subProblemUnitTitle {
   display: block;
   margin: 0px;
@@ -1692,25 +1683,17 @@
     	flex-direction: row;
       width: 100%;
     }
-    #problem, #sidebar {
+    #problem {
       border: 1px solid #00dcff;
       background-color: #0f131c;
-      position: relative;
-    }
-    #problem, #sidebar {
     	border-width: 0px 2px;
     	border-radius: 23px;
+      position: relative;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
     	overflow: scroll !important;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
-    	outline: 1px solid #131b2b;
-    	outline-width: 0px 1px;
-    }
-    #sidebar {
-    	outline-width: 0px 0px;
-    	padding-left: 0px;
     }
     #problem {
     	flex-grow: 2;
@@ -1726,12 +1709,6 @@
 
 /*SideBar*/
 
-    #sidebar {
-    	flex-grow: 1;
-    	flex-shrink: 1;
-    	border-radius: 0px;
-    	border-width: 0px 0px;
-    }
     #sidebarMenu {
     	display: flex;
     	flex-direction: column;
@@ -2148,7 +2125,6 @@
 
 #problemIntro {
   flex: 10 1 auto;
-  padding: 10px 0px 0px 0px;
   display: inline;
   width: 90%;
 }
@@ -2185,6 +2161,7 @@
   border-radius: 3px;
   text-align: center !important;
   letter-spacing: 8px;
+  display: inline;
 }
 #problemAdditionalInfoLabel {
   color: #00dcff;
@@ -2194,26 +2171,36 @@
   margin: 0 auto;
 }
 
-/*Sub Problems*/
 
-#SPVote {
+
+
+/*Sidebar*/
+
+#sidebar {
+  padding-left: 0px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: 0px;
+  border-width: 0px 0px;
+
+  border: 1px solid #00dcff;
+  background-color: #0f131c;
+  border-width: 0px 2px;
+  border-radius: 23px;
+  position: relative;
+  color: #dddddd;
+  padding: 0px 10px 20px 10px;
+  overflow: scroll !important;
+  margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
-  color: #00ffdc;
-  background-color: #0f131c;
-  border: 1px solid #00ffdc;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 70%;
+  width: 100%;
 }
-#SPVote:hover {
-  color: #0f131c;
-  background-color: #00ffdc;
-  cursor: pointer;
-}
-#SPVote:active {
-  color: #00ffdc;
-  background-color: #0f131c;
-}
+
+/*End Sidebar*/
+
+
+
+/*Sub Problems*/
 
 #SPUnitList li {
   display: inline;
@@ -2268,12 +2255,60 @@
   background-color: rgba(0,220,255,0.05);
 }
 #SPTitle {
+  /*display: block;
+  margin: 0px;
+  padding: 2px 5px 2px 5px;
+  font-size: 130%;
+  color: #00dcff;
+  line-height: 120%;
+  height: auto;*/
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 120%;
+  color: #00dcff;
+  word-wrap: break-word; 
+  text-align: center;
+  margin-top: 20% !important;
+}
+#SPPercent {
+  /*float: left;
+  color: #00dcff;
+  font-size: 200%;
+  padding: 0px 0px 0px 0px;
+  margin: 5px 10px 0px 5px;
+  height: auto;
+  text-align: left;
+  color: #00dcff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;*/
+
   margin: 0 auto;
   padding: 5px 10px 5px 10px;
   font-size: 150%;
   color: #00dcff;
   word-wrap: break-word; 
   text-align: center;
+}
+#SPVote {
+  padding: 5px 10px 5px 10px;
+  color: #00dcff;
+  word-wrap: break-word; 
+  text-align: center;
+
+  flex: 1 1 auto;
+  border: 1px solid #00ffdc;
+  border-radius: 0% 0% 50% 50%;
+  cursor: pointer;
+  font-size: 70%;
+}
+#SPVote:hover {
+  color: #0f131c;
+  background-color: #00ffdc;
+  cursor: pointer;
+}
+#SPVote:active {
+  color: #00ffdc;
+  background-color: #0f131c;
 }
 
 /*End Layout 2 CSS*/

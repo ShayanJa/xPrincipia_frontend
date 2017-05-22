@@ -17,12 +17,11 @@ export default class WelcomeUnit extends React.Component {
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-              <div id="welcomeProblemsHeader">
-                {/*<div id="welcomeProblemsTag">{problem.Field}</div>*/}
-                <div id="welcomeProblemsTitle">
-                    {problem.Title}
-                </div>
-              </div>
+          <div id="welcomeProblemsHeader">
+            <div id="welcomeProblemsTitle">
+                {problem.Title}
+            </div>
+          </div>
         </li>
       </Link>
 

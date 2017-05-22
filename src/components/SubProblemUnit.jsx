@@ -14,11 +14,11 @@ export default class SubProblemUnit extends React.Component {
   
     return (
 
-        <Link to={`/problem/${problem.ID}/subproblems`}>
+        <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
 				<li key={problem.ID} id="SPUnit">
 				<div id="SPHeader">
 					<div id="SPTitle">{problem.Title}</div>
-					<div id="percent">{floatToDecimal(problem.PercentRank)}</div>
+					<div id="SPpercent">{floatToDecimal(problem.PercentRank)}</div>
 					<div id="SPVote">Vote</div>
 				</div>
 			</li>
