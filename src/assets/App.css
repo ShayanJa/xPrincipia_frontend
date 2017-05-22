@@ -110,102 +110,85 @@
     margin: 0% 15% 0% 15% !important;
   }
 
-  /*Welcome Page*/
-  #welcomeBox {
-    margin: 0 auto !important;
-  }
+/*Header*/
+#headerName {
+  display: none !important;
+}
+#explore {
+  display: none !important;
+}
+#logo {
+  font-size: 150% !important;
+  letter-spacing: 16px;
+  flex: 1 6 auto !important;
+  width: 80% !important;
+}
+#avatarHeader {
+  flex: 1 1 auto !important;
+  width: 7% !important;
+}
 
-  /*Header*/
-  #headerName {
-    display: none !important;
-  }
-  #explore {
-    display: none !important;
-  }
-  #logo {
-    font-size: 150% !important;
-    letter-spacing: 16px;
-    flex: 1 6 auto !important;
-    width: 80% !important;
-  }
-  #avatarHeader {
-    flex: 1 1 auto !important;
-    width: 7% !important;
-  }
+/*Problem Page*/
 
-  /*Problem Page*/
-  #parentButton {
-    flex: 0 1 auto;
-    margin-right: 0px !important;
-    margin-top: 1px;
-    width: 31% !important;
-    text-align: right;
-  }
-  #elementLabel {
-    flex: 1 1 auto;
-    margin: 1px 0% 0% 0% !important;
-    padding: 4px;
-    letter-spacing: 12px;
-    color: #00dcff;
-    text-align: left !important;
-  }
-  #voteSolution, #followProblem {
-    width: 100px !important;
-    /*margin-left: 0 auto !important;*/
-    padding-left: 15px !important;
-    /*text-align: center !important;*/
-  }
-  #solutionTitle, #problemTitle {
-    border-width: 0px;
-    font-size: 220% !important;
-  }
-  #solutionSummary, #problemSummary {
-    margin: 5px 25px;
-    line-height: 150%;
-    font-size: 120%;
-    border: 1px solid #00dcff;
-    border-width: 1px 0px;
-    padding: 15px;
-    margin-top: 20px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-  }
-  #solutionSummaryLabel, #problemSummaryLabel {
-    color: #00dcff;
-  }
-  #solutionSummary, #problemSummary {
-    text-align: left;
-  }
-  #xpbr {
-    display: none;
-  }
-  #xp {
-    display: none;
-  }
+#elementLabel {
+  flex: 1 1 auto;
+  margin: 1px 0% 0% 0% !important;
+  padding: 4px;
+  letter-spacing: 12px;
+  color: #00dcff;
+  text-align: left !important;
+}
+#solutionTitle {
+  border-width: 0px;
+  font-size: 220% !important;
+}
+#solutionSummary, #problemSummary {
+  margin: 5px 25px;
+  line-height: 150%;
+  font-size: 120%;
+  border: 1px solid #00dcff;
+  border-width: 1px 0px;
+  padding: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+#solutionSummaryLabel {
+  color: #00dcff;
+}
+#solutionSummary, #problemSummary {
+  text-align: left;
+}
+#xpbr {
+  display: none;
+}
+#xp {
+  display: none;
+}
 
-  /*Profile*/
-  #profileBox {
-    overflow: auto;
-    display: flex !important;
-    align-items: stretch;
-    flex-direction: column !important;
-    margin: 3% 0% 0% 0% !important;
-    border: 1px solid #00dcff;
-    width: 100% !important;
-    padding: 0px !important;
-  }
-  #profileLeft, #profileRight {
-    color: #dddddd;
-    padding: 0px 0px 0px 0px !important;
-    /*overflow: scroll !important;*/
-    margin: 0px 0px 0px 0px !important;
-    flex: 1 1 auto;
-    width: 100% !important;
-  }
-  #profileRightElements {
-    margin: 2px 0px 0px 0px !important;
-    padding: 0px !important;
-  }
+/*Profile*/
+#profileBox {
+  overflow: auto;
+  display: flex !important;
+  align-items: stretch;
+  flex-direction: column !important;
+  margin: 3% 0% 0% 0% !important;
+  border: 1px solid #00dcff;
+  width: 100% !important;
+  padding: 0px !important;
+}
+#profileLeft, #profileRight {
+  color: #dddddd;
+  padding: 0px 0px 0px 0px !important;
+  /*overflow: scroll !important;*/
+  margin: 0px 0px 0px 0px !important;
+  flex: 1 1 auto;
+  width: 100% !important;
+}
+#profileRightElements {
+  margin: 2px 0px 0px 0px !important;
+  padding: 0px !important;
+}
 }
 
 /*End Media Queries*/
@@ -317,13 +300,6 @@
       text-align: center;
       font-size: 71%;
       padding: 2px;
-    }
-    #deleteLogo {
-      /*border: 1px solid #ff7f7f;
-    	border-radius: 50%;*/
-      display: block;
-      margin: 0 auto;
-      vertical-align: middle;
     }
 
     #flagSBButton {
@@ -535,31 +511,6 @@
     	align-content: space-between;
     	width: 100%;
     }
-    #parentButton {
-    	flex: 0 1 auto;
-    	margin-right: auto;
-    	margin-top: 1px;
-    	width: 23%;
-    	padding: 4px;
-    	color: #00ffdc;
-    	font-size: 85%;
-    	letter-spacing: 12px;
-    	background-color: #0f131c;
-    	border: 1px solid #00ffdc;
-    	border-width: 0px 1px 1px 0px;
-    	text-align: right;
-    }
-    #parentButton a {
-    	width: 100%;
-    	padding: 0px;
-    	margin: 0px;
-    }
-    #parentButton:hover {
-    	color: #0f131c !important;
-    	background-color: #00ffdc;
-    	border-color: #0f131c;
-    	cursor: pointer;
-    }
     #elementLabel {
     	flex: 0 1 auto;
     	margin: 1px 5% 0% 0%;
@@ -573,16 +524,12 @@
     	color: #00dcff;
     	text-align: center;
     }
-    #solutionIntro, #problemIntro {
+    #solutionIntro {
     	border: 1px solid #00dcff;
     	border-width: 0px 0px 0px 0px;
     	border-radius: 0px;
     	margin: 0px 40px;
     	padding: 10px 0px;
-    }
-    #solutionTitle, #problemTitle {
-    	border-width: 0px;
-      font-size: 260%;
     }
     #solutionSummary, #problemSummary {
       margin: 5px 25px;
@@ -595,9 +542,6 @@
       padding-top: 15px;
       padding-bottom: 20px;
     }
-    #solutionSummaryLabel, #problemSummaryLabel {
-    	color: #00dcff;
-    }
     #contributor, #createDate {
     	width: 100%;
     	text-align: center;
@@ -605,23 +549,20 @@
     #createDate {
     	margin-bottom: 10px;
     }
-    #voteSolution, #followProblem {
+    #voteSolution {
       width: 30%;
-    	margin-left: 33.7%;
-    	padding-left: 2%;
-    	background-color: #0f131c;
+     	margin-bottom: 10px !important;
+      margin-top: -10px !important;
+    	margin: 0 auto;
+      padding-left: 1%;
     	color: #00dcff;
-    	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 120%;
-    	font-weight: 100;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px;
     	border-radius: 3px;
-    	text-align: center;
-    	text-decoration: none;
-    	margin-bottom: 10px;
-    	letter-spacing: 16px;
-    }
+    	text-align: center !important;
+    	letter-spacing: 8px;
+}
     #voteSolution:hover, #followProblem:hover {
     	background-color: #00dcff;
     	color: #0f131c;
@@ -774,7 +715,6 @@
       background-color: #0f131c;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px;
-    	text-align: center;
     	overflow: hidden;
     	width: 100%;
     	display: -webkit-box;
@@ -1393,7 +1333,7 @@
 
 /*SubProblemUnit and SolutionUnit*/
 
-#subProblemUnit, #solutionUnit {
+#solutionUnit {
   padding: 5px;
   padding-left: 0px;
   margin: 2px;
@@ -1444,8 +1384,8 @@
   height: auto;
   width: 75%;
 }
-#subProblemTitle, #solutionUnitTitle {
-  dispaly: inline-block;
+#solutionUnitTitle {
+  display: inline-block;
   text-align: left;
   padding: 0px;
   margin: 0px;
@@ -1453,8 +1393,6 @@
   margin-bottom: 0px;
   margin-left: 0px;
   letter-spacing: 1px;
-}
-#subProblemTitle, #solutionUnitTitle {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1678,7 +1616,7 @@
       word-wrap: break-word; 
       align-items: center; 
      justify-content: center;
-     background-color: rgba(255,255,255,0.05);
+     background-color: rgba(0,220,255,0.05);
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
@@ -1973,8 +1911,6 @@
 
 
 
-
-
 /*NewsFeed*/
 
     #newsFeedBox {
@@ -2155,3 +2091,189 @@
     	border: 1px solid #00ffdc;
     	border-width: 1px 1px 0px 1px;
     }
+/*End Newsfeed*/
+
+
+
+
+/*Logos*/
+
+#backArrow {
+  border: 2px solid #00dcff;
+  border-radius: 50%;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding: 10px;
+  /*background-color: rgba(0,220,255,0.05);*/
+
+}
+
+#backArrow:hover {
+  background-color: rgba(0,220,255,0.15);
+  }
+
+#deleteLogo {
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+/*Layout 2 CSS*/
+
+/*ProblemPage*/
+
+#backArrow {
+  flex: 1 1 auto;
+  padding: 4px;
+  color: #00ffdc;
+  text-align: center;
+}
+
+#problemRow1, #problemRow2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 100%;
+}
+
+#problemIntro {
+  flex: 10 1 auto;
+  padding: 10px 0px 0px 0px;
+  display: inline;
+  width: 90%;
+}
+
+#problemTitle {
+  /*border-width: 0px;
+  font-size: 220%;
+  display: block;*/
+  color: #dddddd;
+  margin: 2% 10% 2% 10%;
+  font-size: 180%;
+  letter-spacing: 6px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+#fullProblem {
+  flex: 1 1 auto;
+  width: 60%
+}
+#sidebarMenu {
+  flex: 1 1 auto;
+  width: 40%;
+}
+#followProblem {
+  width: 20%;
+  margin-bottom: 10px !important;
+  margin-top: -10px !important;
+  margin: 0 auto;
+  padding-left: 1%;
+  color: #00dcff;
+  font-size: 120%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center !important;
+  letter-spacing: 8px;
+}
+#problemAdditionalInfoLabel {
+  color: #00dcff;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 150%;
+  margin: 0 auto;
+}
+
+/*Sub Problems*/
+
+#SPVote {
+  flex: 1 1 auto;
+  color: #00ffdc;
+  background-color: #0f131c;
+  border: 1px solid #00ffdc;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 70%;
+}
+#SPVote:hover {
+  color: #0f131c;
+  background-color: #00ffdc;
+  cursor: pointer;
+}
+#SPVote:active {
+  color: #00ffdc;
+  background-color: #0f131c;
+}
+
+#SPUnitList li {
+  display: inline;
+}
+#subProblemUnit {
+  /*padding: 5px;
+  padding-left: 0px;
+  margin: 2px;
+  margin-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border: 2px solid #00dcff;
+  border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
+  padding: 10px;
+  padding-left: 3px;
+  padding-bottom: 0px;*/
+  display: block;
+}
+#SPUnit:hover * {
+  color: #ffffff;
+  cursor: pointer;
+}
+#SPHeader {
+  /*display: inline-block;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  color: #dddddd;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Alegreya Sans';
+  padding-top: 10px;
+  flex: 2 2 auto;*/
+  display: inline-flex;
+  flex-direction: column;
+  border: 2px solid #00dcff;
+  border-radius: 100%;
+  width: 12em;
+  height: 12em;
+  margin: 2%;
+  word-wrap: break-word; 
+  align-items: center; 
+  justify-content: center;
+  background-color: rgba(0,220,255,0.05);
+}
+#SPTitle {
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 150%;
+  color: #00dcff;
+  word-wrap: break-word; 
+  text-align: center;
+}
+
+/*End Layout 2 CSS*/

@@ -6,7 +6,7 @@ export default class SubProblemUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-				<ul> {this.props.problems.map(this.renderItem)}</ul>         
+				<ul id="SPUnitList"> {this.props.problems.map(this.renderItem)}</ul>         
 	    </div>
 		);
 	}
@@ -14,20 +14,17 @@ export default class SubProblemUnit extends React.Component {
   
     return (
 
-        <li key={problem.ID} id="subProblemUnit">
-				<Link to={`/problem/${problem.ID}/subproblems`} >
-					<div id="subProblemTitle">
-						<div id="percent">{floatToDecimal(problem.PercentRank)}</div>
-						<div id="unitTitle">{problem.Title}</div>
-						{/*<button type="button" id="problemVote">Vote</button>*/}
-					</div>
-					<div id="subProblemSummary">{problem.Summary}</div>
-				</Link>
+        <Link to={`/problem/${problem.ID}/subproblems`}>
+				<li key={problem.ID} id="SPUnit">
+				<div id="SPHeader">
+					<div id="SPTitle">{problem.Title}</div>
+					<div id="percent">{floatToDecimal(problem.PercentRank)}</div>
+					<div id="SPVote">Vote</div>
+				</div>
+			</li>
+		</Link>
 
-        <br ></br> 
-
-        </li>);
-	
+	);
   }
 }
 
