@@ -25,7 +25,10 @@ export default class WelcomeCreateForm extends React.Component {
     //Read field items into component state
     this.state.title = document.getElementById('problemTitleForm').value
     this.state.field = document.getElementById('problemFieldForm').value
+    this.state.description = document.getElementById('problemDescriptionForm').value
     this.state.summary = document.getElementById('problemSummaryForm').value
+    this.state.requirements = document.getElementById('problemRequirementsForm').value
+    this.state.references = document.getElementById('problemReferencesForm').value
   
   axios.post('http://localhost:10000/auth/problems/create', {
       username: cookie.load('userName'),
@@ -33,7 +36,10 @@ export default class WelcomeCreateForm extends React.Component {
       title : this.state.title,
       field: this.state.field,
       summary : this.state.summary,
+      description : this.state.description,
      
+      requirements: this.state.requirements,
+      references: this.state.references
     })
     .then(function (result) {
       
@@ -58,9 +64,21 @@ export default class WelcomeCreateForm extends React.Component {
                             <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
                           </label><br />
 
-                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Info<br />
-                            <textarea name="problemField" required="required" maxLength="250" placeholder="Optional: Provide any additional information, in 250 characters." id="problemSummaryForm"/>
+                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Summary<br />
+                            <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="problemSummaryForm"/>
                           </label><br />
+
+                        <label htmlFor="problemDescriptionForm" id="problemDescriptionFormLabel">Description<br />
+                            <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
+                            </textarea></label><br />
+
+                        <label htmlFor="problemRequirementsForm" id="problemRequirementsFormLabel">Requirements<br />
+                            <textarea name="problemRequirements" placeholder="List requirements that solutions need to fulfill. Please enter as a list with a space between each requirement. " id="problemRequirementsForm">
+                            </textarea></label><br />
+
+                        <label htmlFor="problemReferencesForm" id="problemReferencesFormLabel">References<br />
+                            <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
+                            </textarea></label><br />
 
                         <Link to={`/welcome`}><input type="submit" value="Create" onClick={this.postProblem} id="submitWelcomeProblem"/></Link>
               </fieldset>
@@ -70,3 +88,4 @@ export default class WelcomeCreateForm extends React.Component {
       );
    }
 }
+

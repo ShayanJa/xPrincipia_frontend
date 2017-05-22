@@ -49,38 +49,12 @@ export default class WelcomeUnitsContainer extends React.Component {
       return (
       <div>
             <div id="welcomeUnitsContainer">
-                <ul id="welcomeProblemsUnitList">
-                    <li  id="welcomeProblemsUnit">
-                        <div id="welcomeProblemsHeader">
-                            <div id="welcomeProblemsTitle">
-                                Civilization
-                            </div>
-                        </div>
-                    </li>
-                    <li  id="welcomeProblemsUnit">
-                        <div id="welcomeProblemsHeader">
-                            <div id="welcomeProblemsTitle">
-                                Evolution
-                            </div>
-                        </div>
-                    </li>
-                    <li  id="welcomeProblemsUnit">
-                        <div id="welcomeProblemsHeader">
-                            <div id="welcomeProblemsTitle">
-                                Understanding
-                            </div>
-                        </div>
-                    </li>
-                    <li  id="welcomeProblemsUnit">
-                        <div id="welcomeProblemsHeader">
-                            <div id="welcomeProblemsTitle">
-                                Efficiency
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <WelcomeUnit problems={this.state.problems} />
             </div>
       </div>
       );
    }
 }
+
+
+
