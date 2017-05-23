@@ -98,7 +98,7 @@ export default class FullProblem extends React.Component {
           </div>
           <SideBarProblemMenu probID={this.props.params.probID} questID={this.props.params.probID}/>
       </div>
-        <div id="sidebar">
+        <div id="sidebarSB">
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
       </div>
