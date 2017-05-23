@@ -1487,9 +1487,10 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 1% 20% 0% 20%;
+    	margin: 1% 20% 2% 20%;
     	border: 1px solid #dddddd;
       border-radius: 3px;
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
     }
     #welcomePrompt {
     	color: #dddddd;
@@ -1573,7 +1574,11 @@
       color: #0f131c;
     }
     #welcomeProblemsUnitList li {
-      display: inline;
+      display: inline-block;
+      margin: 2%;
+    }
+    #welcomeProblemsUnitList {
+      text-align: center;
     }
     #welcomeProblemsUnit {
     	display: block;
@@ -1587,6 +1592,7 @@
     	flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       width: 14em;
       height: 14em;
       margin: 1%;
@@ -1733,7 +1739,7 @@
     	margin: 0px 0px;
     	letter-spacing: 12px;
     }
-    #SBButton {
+    #SBButton, #SBButton1 {
     	flex: 1 1 auto;
     	color: #dddddd;
     	font-size: 130%;
@@ -1744,12 +1750,16 @@
     	text-decoration: none;
     	margin: 6px 20px;
     }
-    #SBButton:hover {
+    #SBButton:hover, #SBButton1:hover {
     	background-color: rgba(0,220,255,0.15);
     	color: #00dcff;
     	cursor: pointer;
       border-color: #00dcff;
     }
+    #SBButton1 {
+      margin-top: 0px;
+    }
+    
     #createButton {
     	background-color: #0f131c;
     	color: #00dcff;
@@ -1761,13 +1771,13 @@
     	border-radius: 3px;
     	text-align: center;
     	text-decoration: none;
-    	width: 60%;
+    	width: 50%;
     	margin: 0 auto;
     	padding: 0px;
     	-webkit-transition-duration: 0s;
     	transition-duration: 0s;
     	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    	letter-spacing: 16px;
+    	letter-spacing: 10px;
     }
     #createButton:hover {
     	background-color: #00dcff;
@@ -2124,6 +2134,7 @@
   letter-spacing: 6px;
   border: 1px solid #dddddd;
   border-radius: 3px;
+  box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
 }
 #fullProblem {
   flex: 1 1 auto;
@@ -2150,7 +2161,7 @@
   color: #00dcff;
   text-align: left;
   margin-left: 10%;
-  font-size: 150%;
+  font-size: 130%;
   margin-right: 0 auto;
 }
 #followProblem {
@@ -2161,7 +2172,7 @@
   padding-top: 2px;
   padding-bottom: 2px;
   color: #00ffdc;
-  font-size: 120%;
+  font-size: 110%;
   border: 1px solid #00ffdc;
   border-width: 1px 1px;
   border-radius: 3px;
@@ -2170,16 +2181,17 @@
 }
 
 #problemSummary {
-  margin: 5px 25px;
+  margin: 10px 25px 5px 25px;
   line-height: 150%;
-  font-size: 120%;
+  font-size: 100%;
   border: 1px solid #00dcff;
   border-width: 1px 0px;
   padding: 15px;
-  margin-top: 20px;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: left;
+  max-height: 5em;
+  overflow: scroll;
 }
 
 
@@ -2213,16 +2225,26 @@
 
 /*Sub Problems*/
 
+#SPUnitList {
+  text-align: center;
+}
+
 #SPUnitList li {
-  display: inline;
+  display: inline-block;
+  margin: 0% 1% 2% 1%;
 }
 #subProblemUnit {
   display: block;
 }
-#SPUnit:hover * {
-  color: #ffffff;
+#SPHeader:hover #SPTitle{
+  color: #dddddd;
   cursor: pointer;
 }
+/*#SPHeader:hover #SPPercent{
+  color: #00dcff;
+  cursor: pointer;
+  font-size: 150%;
+}*/
 #SPHeader {
   display: inline-flex;
   flex-direction: column;
@@ -2230,11 +2252,12 @@
   border-radius: 100%;
   width: 12em;
   height: 12em;
-  margin: 2%;
   word-wrap: break-word; 
   align-items: center; 
   justify-content: center;
   background-color: rgba(0,220,255,0.05);
+  margin: 0 auto;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 #SPTitle {
   /*display: block;
@@ -2254,10 +2277,10 @@
 #SPPercent {
   /*font-family: 'Raleway', sans-serif;*/
   /*margin: 0 auto;*/
-  padding: 5px 10px 5px 10px;
-  font-size: 150%;
-  color: #00dcff;
-  word-wrap: break-word; 
+  /*padding: 5px 10px 5px 10px;*/
+  /*font-size: 150%;*/
+  /*color: #00ffdc;*/
+  /*word-wrap: break-word; */
   text-align: center;
 }
 #SPVote {

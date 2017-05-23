@@ -14,13 +14,12 @@ import Intro from './components/Intro.jsx';
 import Layout from './components/Layout.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
+import ProblemLeftSB from './components/ProblemLeftSB.jsx';
 import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import SideBarFullSolution from './components/SideBarFullSolution';
 import SideBarProblem from './components/SideBarProblem';
-import SideBarUserSolution from './components/SideBarUserSolution';
 import SolutionForm from './components/SolutionForm.jsx';
-import UserSolution from './components/UserSolution.jsx';
 import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 
 //Load Containers
@@ -74,43 +73,43 @@ ReactDOM.render(
         <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
           <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
-          <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>
-          <Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>
+          {/*<Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>*/}
+          {/*<Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>*/}
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
+          {/*<Route path='/problem/:probID/questions' component={QuestionContainer}></Route>*/}
+          {/*<Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>*/}
+          {/*<Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>*/}
+          {/*<Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>*/}
+        </Route>
+      </Route>
+      <IndexRoute component={ProblemLeftSB}></IndexRoute>
+        <Route path='/problem/:probID/sb' component={ProblemLeftSB}>
+        <IndexRoute component={SideBarProblem}></IndexRoute>
+        <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
+          <IndexRoute component={SolutionContainer}></IndexRoute>
+          <Route path='/problem/:probID/solution/create' component={SolutionForm}></Route>*/}
+          <Route path='/problem/:probID/solutions' component={SolutionContainer}></Route>
           <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
           <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
           <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
           <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>
         </Route>
-      </Route>
-        <IndexRoute component={FullSolution}></IndexRoute>
-        <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
-          <IndexRoute component={SideBarFullSolution}></IndexRoute>
-          <Route path='/fullsolution/:probID/:solutionID/sidebar' component={SideBarFullSolution}>
-            <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/fullsolution/:probID/:solutionID/answers' component={AnswerContainer}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/createproblem' component={ProblemForm}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/createsolution' component={SolutionForm}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/questions' component={QuestionContainer}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/solutions' component={SolutionContainer}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/fullsolution/:probID/:solutionID/suggestions' component={SuggestionContainer}></Route>
-          </Route>
+      </Route>        
+
+      <IndexRoute component={FullSolution}></IndexRoute>
+      <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
+        <IndexRoute component={SideBarFullSolution}></IndexRoute>
+        <Route path='/fullsolution/:probID/:solutionID/sidebar' component={SideBarFullSolution}>
+          <IndexRoute component={SolutionContainer}></IndexRoute>
+          <Route path='/fullsolution/:probID/:solutionID/answers' component={AnswerContainer}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/createproblem' component={ProblemForm}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/createsolution' component={SolutionForm}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/questions' component={QuestionContainer}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/solutions' component={SolutionContainer}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/subproblems' component={SubProblemContainer}></Route>
+          <Route path='/fullsolution/:probID/:solutionID/suggestions' component={SuggestionContainer}></Route>
         </Route>
-        {/*<IndexRoute component={UserSolution}></IndexRoute>
-        <Route path='/usersolution' component={UserSolution}>
-          <IndexRoute component={SideBarUserSolution}></IndexRoute>
-          <Route path='/usersolution/sidebar' component={SideBarUserSolution}>
-            <IndexRoute component={SolutionContainer}></IndexRoute>
-            <Route path='/usersolution/answers' component={AnswerContainer}></Route>
-            <Route path='/usersolution/createproblem' component={ProblemForm}></Route>
-            <Route path='/usersolution/createsolution' component={SolutionForm}></Route>
-            <Route path='/usersolution/questions' component={QuestionContainer}></Route>
-            <Route path='/usersolution/solutions' component={SolutionContainer}></Route>
-            <Route path='/usersolution/subproblems' component={SubProblemContainer}></Route>
-            <Route path='/usersolution/suggestions' component={SuggestionContainer}></Route>
-          </Route>
-        </Route>*/}
+      </Route>
       </Route>
     </Route>
     {/*<Redirect from='*' to='/404' />*/}
