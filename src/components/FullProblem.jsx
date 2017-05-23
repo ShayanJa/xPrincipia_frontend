@@ -80,16 +80,18 @@ export default class FullProblem extends React.Component {
       <div id="maxContainer">
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/solutions`}>
-            <img src={require('../assets/upArrow.png')} id="backArrow" width="40" height="40" alt="Back arrow, blue up arrow" />
+            <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />
           </Link>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="followProblem" onClick={this.submitVote}>Vote</div>
           </div>
         </div>
         <div id="problemRow2">
           <div id="fullProblem">
-            <div id="problemAdditionalInfoLabel">Additional Info</div>
+            <div id="fullProblemHeader">
+              <div id="problemAdditionalInfoLabel">Additional Information</div>
+              <div id="followProblem" onClick={this.submitVote}>Vote</div>
+            </div>
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>

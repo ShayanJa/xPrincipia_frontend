@@ -19,7 +19,9 @@ export default class SubProblemUnit extends React.Component {
 				<div id="SPHeader">
 					<div id="SPTitle">{problem.Title}</div>
 					<div id="SPpercent">{floatToDecimal(problem.PercentRank)}</div>
-					<div id="SPVote">Vote</div>
+					{/*<div>
+						<img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
+					</div>*/}
 				</div>
 			</li>
 		</Link>
