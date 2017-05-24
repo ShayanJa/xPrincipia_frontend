@@ -120,7 +120,6 @@ export default class ProblemLeftSB extends React.Component {
           <br />
         </div>
         <div id="sidebar">
-          cat
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
       </div>
