@@ -1762,11 +1762,11 @@
     
     #createButton {
     	background-color: #0f131c;
-    	color: #00dcff;
+    	color: #00ffdc;
     	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 150%;
     	font-weight: 100;
-    	border: 1px solid #00dcff;
+    	border: 1px solid #00ffdc;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
     	text-align: center;
@@ -2190,8 +2190,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
-  max-height: 5em;
-  overflow: scroll;
 }
 
 
