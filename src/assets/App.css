@@ -162,7 +162,6 @@
   padding-top: 15px;
   padding-bottom: 20px;
 }
-}
 #xpbr {
   display: none;
 }
@@ -192,6 +191,7 @@
 #profileRightElements {
   margin: 2px 0px 0px 0px !important;
   padding: 0px !important;
+}
 }
 
 /*End Media Queries*/
