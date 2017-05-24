@@ -77,7 +77,7 @@ export default class FullProblem extends React.Component {
    render() {
 
       return (
-      <div id="maxContainer">
+      <div id="maxContainerColumn">
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/solutions`}>
             <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />

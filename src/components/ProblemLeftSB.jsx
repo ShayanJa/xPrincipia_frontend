@@ -76,48 +76,28 @@ export default class ProblemLeftSB extends React.Component {
    render() {
 
       return (
-      <div id="maxContainer">
-        <div id="fullProblem">
-          <div id="problemHeader">
-            {/*Link back to the parent problem*/}
-          <div id="parentButton"><Link to={`/problem/${this.state.parentID}/solutions`}>Parent</Link></div>
-            <h1 id="elementLabel">Problem</h1>
+      <div id="maxContainerRow">
+        <div id="fullProblemLeft">
+          <div id="problemLeftSBHeader">
+            <Link to={`/problem/${this.state.parentID}/solutions`}>
+              <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />
+            </Link>
           </div>
-          <div id="problemIntro">
-            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="followProblem" onClick={this.submitVote}>Vote</div>
-            <div id="contributor">{this.state.problemInfo.OriginalPosterUsername}</div>
-            <div id="createDate">{this.state.problemInfo.CreatedAt}</div>
+        <div id="problemLeftSBIntro">
+          {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
+          <div id="SPHeaderLeftSB">
+            <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
+            <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
+            {/*<div>
+              <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
+            </div>*/}
+          </div> 
+          <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
             <h1 id="problemSummaryLabel">Summary</h1>
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>
           </div>
-          <div>
-            <h1 id="problemDescriptionLabel">Description</h1>
-            <p id="problemDescription">
-              {this.state.problemInfo.Description}
-            </p>
-          </div>
-          <div>
-            <h1 id="problemRequirementsLabel">Requirements</h1>
-            <p id="problemRequirements">
-              {this.state.problemInfo.Requirements}
-            </p>
-          </div>
-          <div>
-            <h1 id="problemRequirementsLabel">References</h1>
-            <p id="problemReferences">
-              {this.state.problemInfo.References}
-            </p>
-          </div>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <br id="xpbr"/>
-          <p id="xp">XP</p>
-          <br />
         </div>
         <div id="sidebar">
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
@@ -125,4 +105,10 @@ export default class ProblemLeftSB extends React.Component {
       </div>
       );
    }
+}
+
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
 }

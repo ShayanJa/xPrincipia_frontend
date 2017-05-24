@@ -11,14 +11,20 @@
     	position: relative;
     	background-color: #0f131c;
     }
-    #maxContainer {
+    #maxContainerColumn {
       width: 100%;
       display: inline-flex;
     	flex-direction: column;
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
-      
+    }
+    #maxContainerRow {
+      width: 100%;
+      display: inline-flex;
+    	flex-direction: row;
+      word-wrap: break-word; 
+      justify-content: center;
     }
     h1 {
     	text-align: center;
@@ -402,7 +408,7 @@
     #problemDescriptionFormLabel, #problemRequirementsFormLabel,
     #problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
     #solutionDescriptionFormLabel, #solutionEvidenceFormLabel,
-    #solutionExperimentsFormLabel, #solutionReferenceFormLabel {
+    #solutionExperimentsFormLabel, #solutionReferenceFormLabel, #solutionSummaryFormLabel {
       clear: both;
       color: #00dcff;
     }
@@ -1706,10 +1712,8 @@
     	flex-direction: column;
       align-items: stretch;
     	width: 100%;
-    	/*border: 1px solid #00dcff;
-    	border-width: 1px 1px 1px 1px;
-    	border-radius: 3px;*/
     	margin-bottom: 10px;
+      justify-content: center;
     }
     .activeGreen div {
       color: #0f131c !important;
@@ -1748,7 +1752,9 @@
     	border-radius: 3px;
     	text-align: center;
     	text-decoration: none;
-    	margin: 6px 20px;
+      margin: 0 auto;
+    	margin-top: 12px;
+      width: 70%;
     }
     #SBButton:hover, #SBButton1:hover {
     	background-color: rgba(0,220,255,0.15);
@@ -2113,7 +2119,7 @@
   display: -webkit-flex;
   display: inline-flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   align-content: space-between;
   width: 100%;
 }
@@ -2217,25 +2223,6 @@
   width: 100%;
 }
 
-#sidebar {
-  padding-left: 0px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  border-radius: 0px;
-  border-width: 0px 0px;
-
-  border: 1px solid #00dcff;
-  background-color: #0f131c;
-  border-width: 0px 2px;
-  border-radius: 23px;
-  position: relative;
-  color: #dddddd;
-  padding: 0px 10px 20px 10px;
-  overflow: scroll !important;
-  margin: 5px 5px 10px 5px;
-  flex: 1 1 auto;
-  width: 100%;
-}
 
 /*End Sidebar*/
 
@@ -2321,5 +2308,137 @@
   color: #00ffdc;
   background-color: #0f131c;
 }
+
+/*ProblemLeftSB Page*/
+
+#sidebar {
+  padding-left: 0px;
+  color: #dddddd;
+  padding: 0px 10px 20px 10px;
+  margin: 5px 5px 10px 5px;
+  flex: 1 1 auto;
+  width: 100%;
+  padding: 0px 10px 20px 10px;
+  flex: 1 1 auto;
+  /*overflow: scroll !important;*/
+  /*position: relative;*/
+  float: right;
+}
+
+#fullProblemLeft {
+  width: 60%;
+  float: left;
+  flex: 1 1 auto;
+  display: inline-flex;
+  flex-direction: column;
+  word-wrap: break-word; 
+  align-items: center; 
+  justify-content: center;
+}
+#problemLeftSBHeader {
+  flex: 1 1 auto;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 100%;
+}
+
+#SPHeaderLeftSB {
+  display: inline-flex;
+  flex-direction: column;
+  border: 2px solid #00dcff;
+  border-radius: 100%;
+  width: 16em;
+  height: 16em;
+  word-wrap: break-word; 
+  align-items: center; 
+  justify-content: center;
+  background-color: rgba(0,220,255,0.05);
+  margin: 0 auto;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#SPTitleLeftSB {
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 140%;
+  color: #00dcff;
+  word-wrap: break-word; 
+  text-align: center;
+}
+#SPPercentLeftSB {
+  text-align: center;
+}
+#problemLeftSBIntro {
+  flex: 10 1 auto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  /*width: 90%;*/
+}
+#followProblemLeftSB {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  padding-left: 1%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #00ffdc;
+  font-size: 110%;
+  border: 1px solid #00ffdc;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  letter-spacing: 8px;
+  width: 40%;
+  margin-top: 5%;
+}
+
+/*End ProblemLeftSB*/
+
+
+
+/*Right SB*/
+
+#solutionsHeader {
+  flex: 1 1 auto;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB {
+  flex: 1 1 auto;
+  color: #dddddd;
+  border: 1px solid #dddddd;
+  border-width: 0px 1px 0px 1px;
+  font-size: 80%;
+  /*padding: 3px 5px 3px 10px;*/
+  padding: 5px;
+  margin: 0 auto;
+  letter-spacing: 12px;
+  width: 12em;
+  text-align: center;
+
+}
+#solutionsTitleRightSB {
+  flex: 1 1 auto;
+  color: #00dcff;
+  border: 1px solid #00dcff;
+  /*border-width: 0px 0px 1px 0px;*/
+  font-size: 80%;
+  /*padding: 3px 5px 3px 10px;*/
+  padding: 5px;
+  margin: 0px 0px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/*End Right SB*/
+
 
 /*End Layout 2 CSS*/
