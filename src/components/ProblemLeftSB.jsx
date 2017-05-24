@@ -83,22 +83,24 @@ export default class ProblemLeftSB extends React.Component {
               <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
-        <div id="problemLeftSBIntro">
-          {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
-          <div id="SPHeaderLeftSB">
-            <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
-            <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
-            {/*<div>
-              <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
-            </div>*/}
-          </div> 
-          <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
-            <h1 id="problemSummaryLabel">Summary</h1>
-            <p id="problemSummary">
-              {this.state.problemInfo.Summary}
-            </p>
+          <div id="problemLeftSBIntro">
+            {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
+            <div id="SPHeaderLeftSB">
+              <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
+              <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
+              {/*<div>
+                <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
+              </div>*/}
+            </div> 
+              <div id="fullProblemHeaderSB">
+                <div id="problemAdditionalInfoLabelSB">Additional Info</div>
+                <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
+              </div>
+              <p id="problemSummary">
+                {this.state.problemInfo.Summary}
+              </p>
+            </div>
           </div>
-        </div>
         <div id="sidebar">
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>

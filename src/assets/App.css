@@ -391,7 +391,9 @@
       border: 2px solid #00dcff;
       border-width: 0px 0px 1px 0px;
       border-radius: 3px;
-      padding: 5px 5px 5px 5px;
+      padding: 0px 5px 5px 5px;
+      width: 90%;
+      margin: 0 auto;
      }
     #problemSummaryForm, #problemDescriptionForm,
     #problemRequirementsForm, #problemReferencesForm,
@@ -1333,7 +1335,7 @@
   padding-bottom: 0px;
   margin-bottom: 0px;
   border: 2px solid #00dcff;
-  border-width: 0px 0px 1px 0px;
+  border-width: 1px 0px 0px 0px;
   border-radius: 0px;
   padding: 10px;
   padding-left: 3px;
@@ -1503,6 +1505,7 @@
       margin: 5px 0px 5px 0px;
     	font-size: 180%;
       letter-spacing: 6px;
+      cursor: default;
     }
     #selectProblemPrompt{
     	padding: 5px 5px 0px 5px;
@@ -2150,7 +2153,8 @@
   flex: 1 1 auto;
   width: 40%;
 }
-#fullProblemHeader {
+#fullProblemHeader,
+#fullProblemHeaderSB {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2161,7 +2165,8 @@
   align-content: space-between;
   width: 100%;
 }
-#problemAdditionalInfoLabel {
+#problemAdditionalInfoLabel,
+#problemAdditionalInfoLabelSB {
   flex: 1 1 auto;
   width: 40%;
   color: #00dcff;
@@ -2170,7 +2175,8 @@
   font-size: 130%;
   margin-right: 0 auto;
 }
-#followProblem {
+#followProblem,
+#followProblemLeftSB {
   flex: 1 1 auto;
   margin-left: 0 auto;
   margin-right: 5%;
@@ -2332,15 +2338,13 @@
   display: inline-flex;
   flex-direction: column;
   word-wrap: break-word; 
-  align-items: center; 
-  justify-content: center;
 }
 #problemLeftSBHeader {
   flex: 1 1 auto;
   display: inline-flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: space-between;
+  /*justify-content: space-between;*/
+  /*align-items: flex-start;*/
+  /*align-content: space-between;*/
   width: 100%;
 }
 
@@ -2368,31 +2372,19 @@
 }
 #SPPercentLeftSB {
   text-align: center;
+  font-size: 150%;
 }
 #problemLeftSBIntro {
   flex: 10 1 auto;
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   align-items: center;
-  align-content: space-between;
+  /*align-content: space-between;*/
   /*width: 90%;*/
 }
 #followProblemLeftSB {
-  flex: 1 1 auto;
-  margin: 0 auto;
-  padding-left: 1%;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  color: #00ffdc;
-  font-size: 110%;
-  border: 1px solid #00ffdc;
-  border-width: 1px 1px;
-  border-radius: 3px;
-  text-align: center;
-  letter-spacing: 8px;
-  width: 40%;
-  margin-top: 5%;
+
 }
 
 /*End ProblemLeftSB*/
@@ -2423,7 +2415,14 @@
   letter-spacing: 12px;
   width: 12em;
   text-align: center;
-
+}
+#topSolutionsButtonRightSB:hover,
+#createSolutionsButtonRightSB:hover {
+  background-color: rgba(255,255,255,0.2);
+  /*background-color: #00dcff;*/
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
 }
 #solutionsTitleRightSB {
   flex: 1 1 auto;
@@ -2436,6 +2435,11 @@
   margin: 0px 0px;
   letter-spacing: 4px;
   text-align: center;
+}
+#problemAdditionalInfoLabelSB {
+}
+#fullProblemHeaderSB {
+  margin-top: 5%;
 }
 
 /*End Right SB*/

@@ -54,7 +54,7 @@ export default class SolutionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset>
-                <legend>Create: Solution</legend>
+                {/*<legend>Create: Solution</legend>*/}
                       <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
                           <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autoFocus/>
                         </label><br />
