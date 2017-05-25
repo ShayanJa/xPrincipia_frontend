@@ -2137,6 +2137,7 @@
   border-radius: 3px;
   text-align: center !important;
   letter-spacing: 8px;
+  
 }
 
 #problemSummary {
@@ -2434,10 +2435,16 @@
   text-align: center !important;
   letter-spacing: 8px;
 }
-#voteSolution:hover, #followProblem:hover {
+#voteSolution:hover {
   background-color: #00dcff;
   color: #0f131c;
-  cursor: pointer;
+  cursor: pointer !important;
+}
+#followProblem:hover,
+#followProblemLeftSB:hover {
+  background-color: #00ffdc;
+  color: #0f131c;
+  cursor: pointer !important; 
 }
 #solutionDescription, #problemDescription, 
 #solutionEvidence, #solutionFutureExperiments, 
