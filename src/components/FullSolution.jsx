@@ -62,10 +62,6 @@ export default class FullSolution extends React.Component {
       return (
       <div id="maxContainer"> 
         <div id="fullSolution">
-            <div id="solutionHeader">
-              <div id="parentButton"><Link to={`/problem/${this.state.solutionInfo.ProblemID}/solutions`}>Problem</Link></div>
-              <h1 id="elementLabel">Solution</h1>
-            </div>
             <div id="solutionIntro">
               <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
               <div id="voteSolution" onClick={this.submitVote}>Vote</div>
@@ -107,9 +103,6 @@ export default class FullSolution extends React.Component {
             <br />
             <p id="xp">XP</p>
             <br />
-        </div>
-        <div id="sidebar">
-           {React.cloneElement(this.props.children, {probID: this.state.solutionInfo.problemID, solutionID: this.state.solutionInfo.ID})}
         </div>
       </div>
       );

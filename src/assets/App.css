@@ -501,7 +501,7 @@
 
 
 
-    #fullProblem, #fullSolution {
+    #fullProblem {
       width: 60%;
       float: left;
     }
@@ -2432,7 +2432,9 @@
 #fullProblemHeaderSB {
   margin-top: 5%;
 }
-
+#fullSolution {
+  width: 100%;
+}
 /*End Right SB*/
 
 
