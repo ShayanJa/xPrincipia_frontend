@@ -15,6 +15,7 @@ import Layout from './components/Layout.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
 import ProblemLeftSB from './components/ProblemLeftSB.jsx';
+import ProblemDiscussMenu from './components/ProblemDiscussMenu.jsx';
 import ProblemSolutionsMenu from './components/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/ProblemTopSolutions.jsx';
 import Redirection from './components/Redirection.jsx';
@@ -85,8 +86,11 @@ ReactDOM.render(
             <IndexRoute component={ProblemTopSolutions}></IndexRoute>
             <Route path='/problem/:probID/solutions' component={ProblemTopSolutions}></Route>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
+            <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}></Route>
+          </Route>
 
-            {/*<Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>*/}
+          <IndexRoute component={ProblemDiscussMenu}></IndexRoute>
+          <Route path='/problem/discuss' component={ProblemDiscussMenu}>
             <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
             <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
@@ -95,7 +99,7 @@ ReactDOM.render(
         </Route>        
 
       <IndexRoute component={FullSolution}></IndexRoute>
-      <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
+      <Route path='/fullsolution/:probID/:solutionID/x' component={FullSolution}>
         <IndexRoute component={SideBarFullSolution}></IndexRoute>
         <Route path='/fullsolution/:probID/:solutionID/sidebar' component={SideBarFullSolution}>
           <IndexRoute component={SolutionContainer}></IndexRoute>

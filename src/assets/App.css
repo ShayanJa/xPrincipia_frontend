@@ -1182,17 +1182,6 @@
     	margin: 0px;
     	text-align: justify;
     }
-    #moreButton {
-    	margin: auto;
-    	text-align: center;
-    	margin-left: 0px;
-    	margin-right: 0px;
-    	font-size: 100%;
-    	padding: 5px 0px 5px 0px;
-    	color: #00ffdc;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 1px 0px 1px;
-    }
 
 /*End Profile*/
 
@@ -1243,16 +1232,7 @@
     	font-family: 'Alegreya Sans';
       margin-top: 5px;
     }
-    #moreButton {
-    	margin: auto;
-    	text-align: center;
-    	font-size: 130%;
-    	padding: 5px;
-    	color: #00ffdc;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 1px 1px 1px;
-    	border-radius: 3px;
-    }
+
 
 /*End Question*/
 
@@ -1844,20 +1824,24 @@
 
 /*MoreButton*/
 
-    #moreButton {
+    #moreButton, #moreButtonProfile {
     	margin: auto;
     	text-align: center;
     	font-size: 130%;
-    	padding: 5px;
     	color: #00ffdc;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 1px 1px 1px;
+      border: 1px solid #00ffdc;
     	border-radius: 3px;
+    	font-size: 100%;
+    	padding: 5px 0px 5px 0px;
+    	
     }
-    #moreButton:hover {
+    #moreButton:hover, #moreButtonProfile:hover {
     	color: #0f131c;
     	background-color: #00ffdc;
       cursor: pointer;
+    }
+    #moreButtonProfile {
+      border: 1px 1px 0px 1px;
     }
     #welcomeMore {
       margin: auto;
@@ -2061,17 +2045,7 @@
     	margin: 0px;
     	text-align: justify;
     }
-    #moreButton {
-    	margin: auto;
-    	text-align: center;
-    	margin-left: 0px;
-    	margin-right: 0px;
-    	font-size: 100%;
-    	padding: 5px 0px 5px 0px;
-    	color: #00ffdc;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 1px 0px 1px;
-    }
+
 /*End Newsfeed*/
 
 
@@ -2418,11 +2392,28 @@
 }
 #topSolutionsButtonRightSB:hover,
 #createSolutionsButtonRightSB:hover {
-  background-color: rgba(255,255,255,0.2);
-  /*background-color: #00dcff;*/
+  background-color: rgba(0,220,255,0.15);
   color: #00dcff;
   cursor: pointer;
   border-color: #00dcff;
+}
+.activeWhite {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff !important;
+  cursor: default;
+  border-color: #00dcff;
+}
+/*.activeWhite #topSolutionsButtonRightSB,
+.activeWhite #createSolutionsButtonRightSB {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: default;
+  border-color: #00dcff;
+}*/
+.activeWhite #topSolutionsButtonRightSB:hover,
+.activeWhite #createSolutionsButtonRightSB:hover {
+  cursor: default;
+  background-color: none;
 }
 #solutionsTitleRightSB {
   flex: 1 1 auto;

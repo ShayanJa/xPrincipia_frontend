@@ -4,7 +4,7 @@ import SolutionUnit from '../components/SolutionUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 import axios from 'axios'
 
-export default class ProblemSolutionsMenu extends React.Component {
+export default class ProblemDiscussMenu extends React.Component {
   constructor(props){
         super(props);
 
@@ -27,9 +27,23 @@ export default class ProblemSolutionsMenu extends React.Component {
       return (
         <div id="solutions">
             <div id="solutionsTitleRightSB">Solutions</div>
-            <div id="solutionsHeader">
-                <Link to={`/problem/${this.props.params.probID}/solutions`} activeClassName="activeWhite"><div id="topSolutionsButtonRightSB">Top</div></Link>
-                <Link to={`/problem/${this.props.params.probID}/solutions/create`}  activeClassName="activeWhite"><div id="createSolutionsButtonRightSB">Create</div></Link>
+            <div id="sidebarMenu">
+                <Link to={`/problem/${this.props.probID}/solutions`}>
+                    <div id="SBButton1">Solutions</div>
+                </Link>
+
+                <Link to={`/problem/${this.props.probID}/subproblems`}>
+                    <div id="SBButton">Discuss</div>
+                </Link>
+
+                <Link to={`/problem/${this.props.probID}/questions`}>
+                    <div id="SBButton">Learn</div>
+                </Link>
+                
+                <Link to={`/problem/${this.props.probID}/suggestions`}>
+                    <div id="SBButton">Theory</div>
+                </Link>
+            
             </div>
             {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>

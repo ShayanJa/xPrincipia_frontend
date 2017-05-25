@@ -7,19 +7,19 @@ export default class SideBarProblemMenu extends React.Component {
       return (
       <div id="sidebarMenu">
 
-        <Link to={`/problem/${this.props.probID}/solutions`} activeClassName="activeXGreen">
+        <Link to={`/problem/${this.props.probID}/solutions`}>
           <div id="SBButton1">Solutions</div>
         </Link>
 
-        <Link to={`/problem/${this.props.probID}/subproblems`} activeClassName="activeXGreen">
+        <Link to={`/problem/${this.props.probID}/discuss`}>
           <div id="SBButton">Discuss</div>
         </Link>
 
-        <Link to={`/problem/${this.props.probID}/questions`} activeClassName="activeXGreen">
+        <Link to={`/problem/${this.props.probID}/questions`}>
           <div id="SBButton">Learn</div>
         </Link>
 
-        <Link to={`/problem/${this.props.probID}/suggestions`} activeClassName="activeXGreen">
+        <Link to={`/problem/${this.props.probID}/suggestions`}>
           <div id="SBButton">Theory</div>
         </Link>
         

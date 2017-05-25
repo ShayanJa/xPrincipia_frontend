@@ -127,7 +127,7 @@ export default class ProfileContainer extends React.Component {
             <div id="profileRightElements">
               <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
             </div>
-            <div id="moreButton">
+            <div id="moreButtonProfile">
                 More
             </div>
         </div>

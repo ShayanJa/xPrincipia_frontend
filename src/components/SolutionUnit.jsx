@@ -19,15 +19,15 @@ export default class SolutionUnit extends React.Component {
         <li key={solution.ID}>
 
 			<div id="solutionUnit">
-			<Link to={`/fullsolution/${solution.ProblemID}/${solution.ID}/solutions/`}>
+			<Link to={`/fullsolution/${solution.ProblemID}/${solution.ID}/`}>
 
 				<div id="solutionUnitTitle">
 					<div id="percent">{floatToDecimal(solution.PercentRank)}</div>
 					<div id="unitTitle">{solution.Title}</div>
 				</div>
-				<div id="solutionUnitSummary">
+				{/*<div id="solutionUnitSummary">
 					{solution.Summary}
-				</div>
+				</div>*/}
 			</Link>
 			</div>
         </li>);
