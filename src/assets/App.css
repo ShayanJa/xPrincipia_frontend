@@ -2471,13 +2471,22 @@
   color: #dddddd;
   font-size: 130%;
   border: 1px solid #dddddd;
-  border-width: 1px 1px;
+  border-width: 0px 1px 0px 1px;
   border-radius: 3px;
   text-align: center;
   text-decoration: none;
   margin: 0 auto;
-  margin-top: 12px;
+  /*margin-top: 12px;*/
   width: 70%;
+}
+#SBDiscussButton:hover, #SBDiscussButton1:hover {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
+}
+#SBDiscussButton1 {
+  border-width: 0px 1px 1px 1px;
 }
 #sidebarDiscussMenu {
   display: inline-flex;
@@ -2485,7 +2494,7 @@
   align-items: stretch;
   width: 100%;
   border: 1px solid #00dcff;
-  border-width: 1px 1px 1px 1px;
+  border-width: 0px 0px 1px 0px;
   border-radius: 3px;
   margin-bottom: 10px;
 }
@@ -2493,7 +2502,7 @@
   flex: 1 1 auto;
   text-align: center;
   border: 1px solid #00dcff;
-  border-width: 0px 1px 0px 0px;
+  border-width: 0px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2501,7 +2510,7 @@
   display: block;
 }
 #discussGroup2 {
-  border-width: 0px 0px 0px 1px;
+  border-width: 0px 0px 0px 0px;
 }
 
 
