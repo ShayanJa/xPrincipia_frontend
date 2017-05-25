@@ -67,31 +67,31 @@ export default class FullSolution extends React.Component {
               <div id="voteSolution" onClick={this.submitVote}>Vote</div>
               <div id="contributor">{this.state.solutionInfo.OriginalPosterUsername}</div>
               <div id="createDate">{this.state.solutionInfo.CreatedAt}</div>
-              <h1 id="solutionSummaryLabel">Summary</h1>
+              <div id="solutionSummaryLabel">Summary</div>
               <p id="solutionSummary">
                  {this.state.solutionInfo.Summary}
               </p>
             </div>
             <div>
-              <h1 id="solutionDescriptionLabel">Description</h1>
+              <div id="solutionFormLabel">Description</div>
               <p id="solutionDescription">
                   {this.state.solutionInfo.Description}
               </p>
             </div>
             <div>
-              <h1 id="evidenceLabel">Evidence</h1>
+              <div id="solutionFormLabel">Evidence</div>
               <p id="solutionEvidence">
                   {this.state.solutionInfo.Evidence}
               </p>
             </div>
             <div>
-              <h1 id="futureExperimentsLabel">Future Experiments</h1>
+              <div id="solutionFormLabel">Future Experiments</div>
               <p id="solutionFutureExperiments">
                   {this.state.solutionInfo.Experiments}
               </p>
             </div>
             <div>
-              <h1 id="solutionReferencesLabel">References</h1>
+              <div id="solutionFormLabel">References</div>
               <p id="solutionReferences">
                  {this.state.solutionInfo.References}
               </p>

@@ -148,9 +148,6 @@
   border-width: 0px;
   font-size: 220% !important;
 }
-#solutionSummaryLabel {
-  color: #00dcff;
-}
 #solutionSummary {
   margin: 5px 25px;
   line-height: 150%;
@@ -543,25 +540,6 @@
     #createDate {
     	margin-bottom: 10px;
     }
-    #voteSolution {
-      width: 30%;
-     	margin-bottom: 10px !important;
-      margin-top: -10px !important;
-    	margin: 0 auto;
-      padding-left: 1%;
-    	color: #00dcff;
-    	font-size: 120%;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
-    	text-align: center !important;
-    	letter-spacing: 8px;
-}
-    #voteSolution:hover, #followProblem:hover {
-    	background-color: #00dcff;
-    	color: #0f131c;
-    	cursor: pointer;
-    }
     #editSolution {
     	width: 30%;
     	margin-left: 35%;
@@ -584,11 +562,6 @@
       color: #0f131c;
       cursor: pointer;
     }
-    #solutionDescriptionLabel, #problemDescriptionLabel, 
-    #evidenceLabel, #futureExperimentsLabel, 
-    #solutionReferencesLabel, #problemRequirementsLabel, #problemReferencesLabel {
-    	color: #00dcff;
-    }
     #solutionDescription, #problemDescription, 
     #solutionEvidence, #solutionFutureExperiments, 
     #solutionReferences, #problemRequirements, #problemReferences {
@@ -598,7 +571,7 @@
     	margin-bottom: 0px;
     	padding-left: 5%;
     	padding-right: 5%;
-    	font-size: 120%;
+    	font-size: 100%;
     	line-height: 150%;
       word-wrap: break-word; 
     }
@@ -2365,7 +2338,7 @@
 
 
 
-/*Right SB*/
+/*Right Solutions SB*/
 
 #solutionsHeader {
   flex: 1 1 auto;
@@ -2400,7 +2373,6 @@
 .activeWhite {
   background-color: rgba(0,220,255,0.15);
   color: #00dcff !important;
-  cursor: default;
   border-color: #00dcff;
 }
 /*.activeWhite #topSolutionsButtonRightSB,
@@ -2412,7 +2384,6 @@
 }*/
 .activeWhite #topSolutionsButtonRightSB:hover,
 .activeWhite #createSolutionsButtonRightSB:hover {
-  cursor: default;
   background-color: none;
 }
 #solutionsTitleRightSB {
@@ -2434,8 +2405,100 @@
 }
 #fullSolution {
   width: 100%;
+  border: 1px solid #00dcff;
+  background-color: rgba(255,255,255,0.05);
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
 }
-/*End Right SB*/
+#solutionFormLabel {
+  color: #00dcff;
+  font-size: 150%;
+  /*margin-left: 5%;*/
+  text-align: center;
+}
+#solutionSummaryLabel {
+  color: #00dcff;
+  font-size: 150%;
+  text-align: center;
+}
+#voteSolution {
+  width: 30%;
+  margin-bottom: 10px !important;
+  margin-top: -10px !important;
+  margin: 0 auto;
+  padding-left: 1%;
+  color: #00dcff;
+  font-size: 120%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center !important;
+  letter-spacing: 8px;
+}
+#voteSolution:hover, #followProblem:hover {
+  background-color: #00dcff;
+  color: #0f131c;
+  cursor: pointer;
+}
+#solutionDescription, #problemDescription, 
+#solutionEvidence, #solutionFutureExperiments, 
+#solutionReferences, #problemRequirements, #problemReferences {
+  border: 1px solid #00dcff;
+  border-width: 0px 1px 0px 1px;
+  padding: 0px 5px 10px 5px;
+  margin: 2.5% 5% 5% 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 100%;
+  line-height: 150%;
+  word-wrap: break-word; 
+}
 
+/*End Right Solutions SB*/
+
+
+
+/*Discuss SB*/
+
+#SBDiscussButton, #SBDiscussButton1 {
+  flex: 1 1 auto;
+  color: #dddddd;
+  font-size: 130%;
+  border: 1px solid #dddddd;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 12px;
+  width: 70%;
+}
+#sidebarDiscussMenu {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+#discussGroup1, #discussGroup2 {
+  flex: 1 1 auto;
+  text-align: center;
+  border: 1px solid #00dcff;
+  border-width: 0px 1px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  display: block;
+}
+#discussGroup2 {
+  border-width: 0px 0px 0px 1px;
+}
+
+
+
+/*End Discuss SB*/
 
 /*End Layout 2 CSS*/

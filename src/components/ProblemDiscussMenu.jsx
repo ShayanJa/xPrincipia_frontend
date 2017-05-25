@@ -26,24 +26,29 @@ export default class ProblemDiscussMenu extends React.Component {
    render() {
       return (
         <div id="solutions">
-            <div id="solutionsTitleRightSB">Solutions</div>
-            <div id="sidebarMenu">
-                <Link to={`/problem/${this.props.probID}/solutions`}>
-                    <div id="SBButton1">Questions</div>
-                </Link>
+            <div id="solutionsTitleRightSB">Discuss</div>
+            <div id="sidebarDiscussMenu">
+                <div id="discussGroup1">
+                    <Link to={`/problem/${this.props.probID}/solutions`}>
+                        <div id="SBDiscussButton1">Questions</div>
+                    </Link>
 
-                <Link to={`/problem/${this.props.probID}/subproblems`}>
-                    <div id="SBButton">Suggestions</div>
-                </Link>
+                    <Link to={`/problem/${this.props.probID}/subproblems`}>
+                        <div id="SBDiscussButton">Suggestions</div>
+                    </Link>
+                </div>
 
-                <Link to={`/problem/${this.props.probID}/questions`}>
-                    <div id="SBButton">ProsCons</div>
-                </Link>
+                <div id="discussGroup2">
+                    <Link to={`/problem/${this.props.probID}/questions`}>
+                        <div id="SBDiscussButton">ProsCons</div>
+                    </Link>
 
-                <Link to={`/problem/${this.props.probID}/suggestions`}>
-                    <div id="SBButton">FreeForm</div>
-                </Link>
-            
+                    <Link to={`/problem/${this.props.probID}/suggestions`}>
+                        <div id="SBDiscussButton">FreeForm</div>
+                    </Link>
+                </div>
+
+
             </div>
             {/*{React.cloneElement(this.props.children, {probID: this.state.probID})}*/}
         </div>
