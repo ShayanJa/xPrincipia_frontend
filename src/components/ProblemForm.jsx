@@ -37,12 +37,7 @@ export default class ProblemForm extends React.Component {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,
-      field: this.state.field,
-      summary : this.state.summary,
       description : this.state.description,
-     
-      requirements: this.state.requirements,
-      references: this.state.references
     })
     .then(function (result) {
       //redirect back to the last page     
@@ -64,24 +59,8 @@ export default class ProblemForm extends React.Component {
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
 
-                        <label htmlFor="problemFieldForm" id="problemFieldFormLabel">Field<br />
-                            <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
-                          </label><br />
-
-                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Summary<br />
-                            <textarea name="problemField" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="problemSummaryForm"/>
-                          </label><br />
-
                         <label htmlFor="problemDescriptionForm" id="problemDescriptionFormLabel">Description<br />
                             <textarea name="problemDescription" required="required" placeholder="Describe the problem in detail here." id="problemDescriptionForm">
-                            </textarea></label><br />
-
-                        <label htmlFor="problemRequirementsForm" id="problemRequirementsFormLabel">Requirements<br />
-                            <textarea name="problemRequirements" placeholder="List requirements that solutions need to fulfill. Please enter as a list with a space between each requirement. " id="problemRequirementsForm">
-                            </textarea></label><br />
-
-                        <label htmlFor="problemReferencesForm" id="problemReferencesFormLabel">References<br />
-                            <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
                         <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>

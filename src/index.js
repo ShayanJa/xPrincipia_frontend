@@ -16,6 +16,7 @@ import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
 import ProblemLeftSB from './components/ProblemLeftSB.jsx';
 import ProblemDiscussMenu from './components/ProblemDiscussMenu.jsx';
+import ProblemLearnMenu from './components/ProblemLearnMenu.jsx';
 import ProblemSolutionsMenu from './components/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/ProblemTopSolutions.jsx';
 import Redirection from './components/Redirection.jsx';
@@ -29,6 +30,7 @@ import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 import AnswerContainer from './containers/AnswerContainer.jsx';
 import CommentContainer from './containers/CommentContainer.jsx';
 import ErrorContainer from './containers/ErrorContainer.jsx';
+import LearnContentContainer from './containers/LearnContentContainer.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
@@ -92,6 +94,14 @@ ReactDOM.render(
           <Route path='/problem/:probID/discuss' component={ProblemDiscussMenu}>
             <IndexRoute component={QuestionContainer}></IndexRoute>
             <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
+            <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
+            <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>
+          </Route>
+          <IndexRoute component={ProblemLearnMenu}></IndexRoute>
+          <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
+            <IndexRoute component={LearnContentContainer}></IndexRoute>
+            <Route path='/problem/:probID/learn/content' component={LearnContentContainer}></Route>
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
             <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>

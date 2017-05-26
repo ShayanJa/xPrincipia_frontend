@@ -93,7 +93,7 @@ export default class FullProblem extends React.Component {
               <div id="followProblem" onClick={this.submitVote}>Vote</div>
             </div>
             <p id="problemSummary">
-              {this.state.problemInfo.Summary}
+              {this.state.problemInfo.Description}
             </p>
           </div>
           <SideBarProblemMenu probID={this.props.params.probID} questID={this.props.params.probID}/>

@@ -1722,7 +1722,7 @@
       margin-top: 0px;
     }
     
-    #createButton {
+    #createButton, #createSPButton {
     	background-color: #0f131c;
     	color: #00ffdc;
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -1741,10 +1741,13 @@
     	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     	letter-spacing: 10px;
     }
-    #createButton:hover {
+    #createButton:hover, #createSPButton:hover {
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
+    }
+    #createSPButton:hover {
+      background-color: #00ffdc;
     }
     #createButton:active {
       background-color: #00dcff;
@@ -2141,7 +2144,7 @@
 }
 
 #problemSummary {
-  margin: 10px 25px 5px 25px;
+  margin: 10px 25px 0px 25px;
   line-height: 150%;
   font-size: 100%;
   border: 1px solid #00dcff;
@@ -2186,6 +2189,7 @@
 
 #SPUnitList {
   text-align: center;
+  margin-top: 1%;
 }
 
 #SPUnitList li {
@@ -2351,7 +2355,9 @@
 }
 
 #topSolutionsButtonRightSB,
-#createSolutionsButtonRightSB {
+#createSolutionsButtonRightSB, 
+#contentLearnButtonRightSB, 
+#resourcesLearnButtonRightSB {
   flex: 1 1 auto;
   color: #dddddd;
   border: 1px solid #dddddd;
@@ -2364,6 +2370,7 @@
   width: 12em;
   text-align: center;
 }
+
 #topSolutionsButtonRightSB:hover,
 #createSolutionsButtonRightSB:hover {
   background-color: rgba(0,220,255,0.15);
@@ -2495,7 +2502,6 @@
   width: 100%;
   border: 1px solid #00dcff;
   border-width: 0px 0px 1px 0px;
-  border-radius: 3px;
   margin-bottom: 10px;
 }
 #discussGroup1, #discussGroup2 {
@@ -2513,8 +2519,62 @@
   border-width: 0px 0px 0px 0px;
 }
 
-
-
 /*End Discuss SB*/
+
+
+
+/*Learn SB*/
+
+#contentLearnButtonRightSB, 
+#resourcesLearnButtonRightSB {
+  letter-spacing: 10px;
+}
+#contentLearnButtonRightSB:hover, 
+#resourcesLearnButtonRightSB:hover {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
+}
+
+#intensityHeader {
+  border: 1px solid #00dcff;
+  border-width: 1px 1px;
+  overflow: hidden;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: strech;
+  text-align: center;
+}
+#intensityLabel, #intensityNumber {
+  margin: auto;
+  display: inline-block;
+  flex: 2 1 auto;
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 6px;
+  color: #00dcff;
+  font-size: 120%;
+}
+#intensityNumber {
+  flex: 3 1 auto;
+  border: 1px solid #00dcff;
+  border-width: 0px 0px 0px 1px;
+}
+#intensityNumber:hover {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
+}
+
+/*End Learn SB*/
+
+
+
+
 
 /*End Layout 2 CSS*/

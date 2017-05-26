@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router';
-import SolutionUnit from '../components/SolutionUnit.jsx';
-import SideBarMore from '../components/SideBarMore.jsx';
 import axios from 'axios'
 
 export default class ProblemDiscussMenu extends React.Component {

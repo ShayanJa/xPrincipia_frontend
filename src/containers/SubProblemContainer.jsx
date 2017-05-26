@@ -27,7 +27,7 @@ export default class SubProblemContainer extends React.Component {
         <div id="solutions">
             <SubProblemUnit problems={this.state.problems} />
             <Link to={`/problem/${this.props.params.probID}/problem/create`}>
-                <div id="createButton">
+                <div id="createSPButton">
                     Create a Sub Problem
                 </div>
             </Link>
