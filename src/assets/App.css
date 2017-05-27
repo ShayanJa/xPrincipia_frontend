@@ -306,7 +306,8 @@
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
       /*OR #fc5353*/
-      margin: 1px;
+      /*margin: 1px;*/
+      margin-top: 0px;
       padding: 3px;
     }
     #flagSBButton:hover {
@@ -2517,6 +2518,34 @@
 }
 #discussGroup2 {
   border-width: 0px 0px 0px 0px;
+}
+#prosConsMenu {
+  border: 1px solid #00dcff;
+  border-width: 1px 1px;
+  overflow: hidden;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: strech;
+  text-align: center;
+}
+#prosLabel, #consLabel {
+  margin: auto;
+  display: inline-block;
+  flex: 2 1 auto;
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 6px;
+  color: #00dcff;
+  font-size: 120%;
+}
+#prosConsLabel:hover {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
 }
 
 /*End Discuss SB*/

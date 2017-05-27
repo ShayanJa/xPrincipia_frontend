@@ -5,7 +5,7 @@ import CommentUnit from '../components/CommentUnit.jsx';
 import CommentForm from '../components/CommentForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
-export default class CommentContainer extends React.Component {
+export default class ProsConsCommentContainer extends React.Component {
    constructor(props){
         super(props);
 

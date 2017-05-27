@@ -28,16 +28,22 @@ import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 
 //Load Containers
 import AnswerContainer from './containers/AnswerContainer.jsx';
-import CommentContainer from './containers/CommentContainer.jsx';
+import ConsContainer from './containers/ConsContainer.jsx';
 import ErrorContainer from './containers/ErrorContainer.jsx';
+import FreeFormContainer from './containers/FreeFormContainer.jsx';
+import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx';
 import LearnContentContainer from './containers/LearnContentContainer.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
+import ProsContainer from './containers/ProsContainer.jsx';
+import ProsConsCommentContainer from './containers/ProsConsCommentContainer.jsx';
+import ProsConsContainer from './containers/ProsConsContainer.jsx';
 import QuestionContainer from './containers/QuestionContainer.jsx';
 import SearchContainer from './containers/SearchContainer.jsx';
 import SolutionContainer from './containers/SolutionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
+import SuggestionCommentContainer from './containers/SuggestionCommentContainer.jsx';
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
 import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
@@ -96,7 +102,15 @@ ReactDOM.render(
             <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
             <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>
+            <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
+            <Route path='/problem/:probID/freeform' component={FreeFormContainer}></Route>
+            <Route path='/problem/:probID/freeform/:ffID/comments' component={FreeFormCommentContainer}></Route>
+            <Route path='/problem/:probID/proscons' component={ProsConsContainer}>
+              <IndexRoute component={ProsContainer}></IndexRoute>
+              <Route path='/problem/:probID/pros' component={ProsContainer}></Route>
+              <Route path='/problem/:probID/cons' component={ConsContainer}></Route>
+            </Route>
+            <Route path='/problem/:probID/proscons/:pcID/comments' component={ProsConsCommentContainer}></Route>
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
@@ -104,7 +118,7 @@ ReactDOM.render(
             <Route path='/problem/:probID/learn/content' component={LearnContentContainer}></Route>
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
             <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentContainer}></Route>
+            <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
           </Route>
         </Route>        
 

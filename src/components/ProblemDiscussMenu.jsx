@@ -37,11 +37,11 @@ export default class ProblemDiscussMenu extends React.Component {
                 </div>
 
                 <div id="discussGroup2">
-                    <Link to={`/problem/${this.props.params.probID}/questions`}>
+                    <Link to={`/problem/${this.props.params.probID}/proscons`}>
                         <div id="SBDiscussButton1">ProsCons</div>
                     </Link>
 
-                    <Link to={`/problem/${this.props.params.probID}/suggestions`}>
+                    <Link to={`/problem/${this.props.params.probID}/freeform`}>
                         <div id="SBDiscussButton">FreeForm</div>
                     </Link>
                 </div>
