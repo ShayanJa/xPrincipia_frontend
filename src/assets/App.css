@@ -147,17 +147,7 @@
 #solutionTitle {
   border-width: 0px;
   font-size: 220% !important;
-}
-#solutionSummary {
-  margin: 5px 25px;
-  line-height: 150%;
-  font-size: 120%;
-  border: 1px solid #00dcff;
-  border-width: 1px 0px;
-  padding: 15px;
-  margin-top: 20px;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  
 }
 #xpbr {
   display: none;
@@ -527,20 +517,6 @@
     	color: #00dcff;
     	text-align: center;
     }
-    #solutionIntro {
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 0px 0px;
-    	border-radius: 0px;
-    	margin: 0px 40px;
-    	padding: 10px 0px;
-    }
-    #contributor, #createDate {
-    	width: 100%;
-    	text-align: center;
-    }
-    #createDate {
-    	margin-bottom: 10px;
-    }
     #editSolution {
     	width: 30%;
     	margin-left: 35%;
@@ -563,9 +539,10 @@
       color: #0f131c;
       cursor: pointer;
     }
-    #solutionDescription, #problemDescription, 
-    #solutionEvidence, #solutionFutureExperiments, 
-    #solutionReferences, #problemRequirements, #problemReferences {
+    
+    #solutionSummary, #solutionDescription, 
+    #solutionFutureExperiments, #solutionReferences, 
+    #problemRequirements, #problemReferences {
     	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 1px;
     	padding: 0px 5px 10px 5px;
@@ -576,6 +553,17 @@
     	line-height: 150%;
       word-wrap: break-word; 
     }
+    /*#solutionSummary {
+      margin: 5px 25px;
+      line-height: 150%;
+      font-size: 120%;
+      border: 1px solid #00dcff;
+      border-width: 1px 0px;
+      padding: 15px;
+      margin-top: 20px;
+      padding-top: 15px;
+      padding-bottom: 20px;
+    }*/
     #solutionReferences, #problemReferences {
       text-align: left;
     }
@@ -2085,9 +2073,6 @@
 }
 
 #problemTitle {
-  /*border-width: 0px;
-  font-size: 220%;
-  display: block;*/
   color: #dddddd;
   margin: 2% 10% 2% 10%;
   font-size: 180%;
@@ -2429,25 +2414,6 @@
   font-size: 150%;
   text-align: center;
 }
-#voteSolution {
-  width: 30%;
-  margin-bottom: 10px !important;
-  margin-top: -10px !important;
-  margin: 0 auto;
-  padding-left: 1%;
-  color: #00dcff;
-  font-size: 120%;
-  border: 1px solid #00dcff;
-  border-width: 1px 1px;
-  border-radius: 3px;
-  text-align: center !important;
-  letter-spacing: 8px;
-}
-#voteSolution:hover {
-  background-color: #00dcff;
-  color: #0f131c;
-  cursor: pointer !important;
-}
 #followProblem:hover,
 #followProblemLeftSB:hover {
   background-color: #00ffdc;
@@ -2604,6 +2570,86 @@
 
 
 
+/*Versions*/
 
+#voteVersionsMenu {
+  display: inline-flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+#voteSolution, #versionsButton {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-left: 1%;
+  color: #00ffdc;
+  font-size: 120%;
+  border: 1px solid #00ffdc;
+  border-radius: 0px 0px 0px 3px;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  margin: 0 auto;
+  letter-spacing: 8px;
+  width: 9em;
+  text-align: center;
+}
+#voteSolution:hover, 
+#versionsButton:hover {
+  background-color: #00ffdc;
+  color: #0f131c;
+  cursor: pointer;
+}
+#versionsButton {
+  color: #00dcff;
+  border: 1px solid #00dcff;
+  border-radius: 0px 0px 3px 0px;
+}
+#versionsButton:hover {
+  background-color: #00dcff;
+}
+
+#solutionTitle {
+  /*color: #dddddd;*/
+  /*margin: 2% 10% 2% 10%;*/
+  /*font-size: 180%;*/
+  /*letter-spacing: 6px;*/
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+}
+
+#solutionIntro {
+  border: 1px solid #00dcff;
+  border-width: 0px 0px 0px 0px;
+  border-radius: 0px;
+  margin: 0px 30px;
+  padding: 10px 0px;
+}
+#dateContributorMenu {
+  display: inline-flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid #00dcff;
+  border-width: 1px 0px;
+  margin-top: 10px;
+}
+#contributor, #createDate {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  letter-spacing: 8px;
+  width: 9em;
+  text-align: center;
+  color: 00dcff;
+}
 
 /*End Layout 2 CSS*/
