@@ -2442,20 +2442,19 @@
 
 /*Discuss SB*/
 
-#SBDiscussButton, #SBDiscussButton1 {
+#SBDiscussButton {
   flex: 1 1 auto;
   color: #dddddd;
   font-size: 130%;
   border: 1px solid #dddddd;
   border-width: 0px 1px 0px 1px;
-  border-radius: 3px;
   text-align: center;
   text-decoration: none;
   margin: 0 auto;
   /*margin-top: 12px;*/
   width: 70%;
 }
-#SBDiscussButton:hover, #SBDiscussButton1:hover {
+#SBDiscussButton:hover {
   background-color: rgba(0,220,255,0.15);
   color: #00dcff;
   cursor: pointer;
@@ -2478,8 +2477,8 @@
   text-align: center;
   border: 1px solid #00dcff;
   border-width: 0px 0px 0px 0px;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
   width: 100%;
   display: block;

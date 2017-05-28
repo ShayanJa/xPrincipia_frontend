@@ -28,21 +28,16 @@ export default class ProblemDiscussMenu extends React.Component {
             <div id="sidebarDiscussMenu">
                 <div id="discussGroup1">
                     <Link to={`/problem/${this.props.params.probID}/questions`}>
-                        <div id="SBDiscussButton1">Questions</div>
+                        <div id="SBDiscussButton">Questions</div>
                     </Link>
 
                     <Link to={`/problem/${this.props.params.probID}/suggestions`}>
                         <div id="SBDiscussButton">Suggestions</div>
                     </Link>
-                </div>
-
-                <div id="discussGroup2">
                     <Link to={`/problem/${this.props.params.probID}/freeform`}>
                         <div id="SBDiscussButton">FreeForm</div>
                     </Link>
                 </div>
-
-
             </div>
             {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
