@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class LearnContentForm extends React.Component {
+export default class LearnContentForm1 extends React.Component {
 
 constructor(){
   super();

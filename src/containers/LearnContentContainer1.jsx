@@ -1,11 +1,11 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentUnit from '../components/SuggestionUnit.jsx';
-import LearnContentForm from '../components/SuggestionForm.jsx';
-import SideBarMore from '../components/SideBarMore.jsx';
+import LearnContentForm1 from '../components/LearnContentForm1.jsx';
+import LearnContentUnit1 from '../components/LearnContentUnit1.jsx';
+import SideBarMore from '../components/SideBarMore';
 
 
-export default class LearnContentContainer extends React.Component {
+export default class LearnContentContainer1 extends React.Component {
 constructor(props){
         super(props);
 
@@ -31,28 +31,12 @@ constructor(props){
         }
     }
    render() {
-        //If user is on fullsolution make use solutionID
-       if (this.props.params.solutionID){
            return (
         <div id="suggestionContainer">
-          <LearnContentForm  solutionID={this.props.params.solutionID}/>
-            <LearnContentUnit suggestions={this.state.suggestions} />
+          <LearnContentForm1 probID={this.props.params.probID}  />
+            <LearnContentUnit1 suggestions={this.state.suggestions} />
             <SideBarMore />
-        </div>
-      
+        </div>  
       );
-
-       } else {
-           return (
-        <div id="suggestionContainer">
-          <LearnContentForm probID={this.props.params.probID}  />
-            <LearnContentUnit suggestions={this.state.suggestions} />
-            <SideBarMore />
-        </div>
-      
-      );
-
-       }
-      
-   }
+    }  
 }

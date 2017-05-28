@@ -19,10 +19,10 @@ export default class SideBarProblemMenu extends React.Component {
           <div id="SBButton">Learn</div>
         </Link>
 
-        <Link to={`/problem/${this.props.probID}/suggestions`}>
+        {/*<Link to={`/problem/${this.props.probID}/suggestions`}>
           <div id="SBButton">Theory</div>
         </Link>
-        
+        */}
       </div>
 
       );

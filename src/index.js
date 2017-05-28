@@ -15,6 +15,8 @@ import FullVersion from './components/FullVersion.jsx';
 import Instructions from './components/Instructions.jsx';
 import Intro from './components/Intro.jsx';
 import Layout from './components/Layout.jsx';
+import LearnContentMenu from './components/LearnContentMenu.jsx';
+import LearnResourcesMenu from './components/LearnResourcesMenu.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
 import ProblemLeftSB from './components/ProblemLeftSB.jsx';
@@ -39,7 +41,7 @@ import ErrorContainer from './containers/ErrorContainer.jsx';
 import FreeFormContainer from './containers/FreeFormContainer.jsx';
 import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx';
 import FullSolutionContainer from './containers/FullSolutionContainer.jsx';
-import LearnContentContainer from './containers/LearnContentContainer.jsx';
+import LearnContentContainer1 from './containers/LearnContentContainer1.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
@@ -134,11 +136,11 @@ ReactDOM.render(
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
-            <IndexRoute component={LearnContentContainer}></IndexRoute>
-            <Route path='/problem/:probID/learn/content' component={LearnContentContainer}></Route>
-            <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
-            <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
-            <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
+            <IndexRoute component={LearnContentMenu}></IndexRoute>
+            <Route path='/problem/:probID/learn/content' component={LearnContentMenu}></Route>
+              {/*<IndexRoute component={LearnContentContainer1}></IndexRoute>
+              <Route path='/problem/:probID/learn/content1' component={LearnContentContainer1}></Route>>*/}
+            <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}></Route>
           </Route>
         </Route>        
 

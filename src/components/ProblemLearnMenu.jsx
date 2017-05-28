@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import axios from 'axios'
 
-export default class ProblemSolutionsMenu extends React.Component {
+export default class ProblemLearnMenu extends React.Component {
   constructor(props){
         super(props);
 
@@ -34,13 +34,8 @@ export default class ProblemSolutionsMenu extends React.Component {
                     <div id="resourcesLearnButtonRightSB">Resources</div>
                 </Link>
             </div>
-            <div id="intensityHeader">
-                <div id="intensityLabel">Intensity</div>
-                <div id="intensityNumber">1</div>
-                <div id="intensityNumber">2</div>
-                <div id="intensityNumber">3</div>
-            </div>
-            {/*{React.cloneElement(this.props.children, {probID: this.state.probID})}*/}
+
+            {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
       );
