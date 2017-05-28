@@ -55,16 +55,12 @@ if(this.props.solutionID){
       return (
 
       <div id="suggestionFormComponent">
-            <div id="prosConsMenu">
-                <div id="prosLabel">Pros</div>
-                <div id="consLabel">Cons</div>
-            </div>
             <form id="suggestionForm">
                 <fieldset>
                     <legend>Pros</legend>
-                         <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
+                         <textarea name="suggestionText" required="required" id="prosConsTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Add Pro" onClick={this.postSuggestion} id="addSuggestion"/>
+                         <input type="button" value="Add" onClick={this.postSuggestion} id="addProsCons"/>
                 </fieldset>
             </form>
       </div>

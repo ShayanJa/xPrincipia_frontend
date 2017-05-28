@@ -33,7 +33,7 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
-          <ConsForm probID={this.props.params.probID}  />
+          <ConsForm probID={this.props.params.probID} solutionID={this.props.params.solutionID} />
             <ConsUnit suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>    

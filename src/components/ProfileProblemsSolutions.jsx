@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
 import img from '../assets/dnablackinvert.png';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios'
 
-export default class ProfileContainer extends React.Component {
+export default class ProfileProblemsSolutions extends React.Component {
     constructor(){
         super();
 
@@ -94,35 +93,24 @@ export default class ProfileContainer extends React.Component {
    render() {
       return (
     <div>
-      <Header />
-      <div id="profileBox">
-        <div id="profileLeft">
-            <div id="userInformation">
-                <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />
-                <p id="userEmail">{cookie.load('userName')}</p>
+        <div id="profileSidebarMenu">
+            <div id="profileProblemsMenu">
+                <div id="solveTitle">Problems</div>
+                <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Followed</div>
+                <div id="createdProblemsButton" onClick={this.onCreatedProblem}>Created</div>
             </div>
-            <div id="userOptions">
-                <Link to={`/profile/usercontent`} activeClassName="activeBlue">
-                    <div id="userProblemsSolutionsButton">Problems and Solutions </div>
-                </Link>
-                <Link to={`/profile/notifications`} activeClassName="activeBlue">
-                    <div id="notificationsButton">Notifications</div>
-                </Link>
-                <div id="userSettingsButton">Settings (Coming Soon)</div>
-                <div id="aboutXPButton" onClick={this.goToAbout}>About XPrincipia</div>
-                <Link to={`/profile/feedback`} activeClassName="activeBlue">
-                    <div id="userFeedbackButton">Feedback</div>
-                </Link>
-                <div id="logOutButton" onClick={this.onLogout}>Logout</div>
-                <br />
-                <p id="xp">XP</p>
+            <div id="profileSolutionsMenu">
+                <div id="developTitle">Solutions</div>
+                <div id="votedSolutionsButton" onClick={this.onVotedSolution}>Voted</div>
+                <div id="createdSolutionsButton" onClick={this.onCreatedSolution}>Created</div>
             </div>
         </div>
-        <div id="profileRight">
-            {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        <div id="profileRightElements">
+            <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
         </div>
-      </div>
+        <div id="moreButtonProfile">
+            More
+        </div>
     </div>
 
       );

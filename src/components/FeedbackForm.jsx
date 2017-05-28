@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class ConsForm extends React.Component {
+export default class FeedbackForm extends React.Component {
 
 constructor(){
   super();
@@ -55,12 +55,15 @@ if(this.props.solutionID){
       return (
 
       <div id="suggestionFormComponent">
+             <div id="feedbackExplanation">
+                Thank you for your feedback.
+            </div>
             <form id="suggestionForm">
-                <fieldset>
-                    <legend>Cons</legend>
-                         <textarea name="suggestionText" required="required" id="prosConsTextArea" autoFocus ></textarea>
+                <fieldset id="feedbackFieldset">
+                    <legend>User Feedback</legend>
+                         <textarea name="feedbackText" required="required" id="feedbackTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Add" onClick={this.postSuggestion} id="addProsCons"/>
+                         <input type="button" value="Submit" onClick={this.postSuggestion} id="addSuggestion"/>
                 </fieldset>
             </form>
       </div>

@@ -540,7 +540,7 @@
       cursor: pointer;
     }
     
-    #solutionSummary, #solutionDescription, 
+    #solutionDescription, 
     #solutionFutureExperiments, #solutionReferences, 
     #problemRequirements, #problemReferences {
     	border: 1px solid #00dcff;
@@ -1037,7 +1037,8 @@
     #userOptions {
     }
     #userProblemsSolutionsButton, #notificationsButton,
-    #userSettingsButton, #aboutXPButton, #logOutButton {
+    #userSettingsButton, #aboutXPButton, 
+    #userFeedbackButton, #logOutButton {
     	background-color: #0f131c;
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -1052,7 +1053,8 @@
     	letter-spacing: 1px;
     }
     #userProblemsSolutionsButton:hover, #notificationsButton:hover,
-    #userSettingsButton:hover, #aboutXPButton:hover, #logOutButton:hover {
+    #userSettingsButton:hover, #aboutXPButton:hover, 
+    #userFeedbackButton:hover, #logOutButton:hover {
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
@@ -1285,6 +1287,7 @@
 }
 #subProblemUnit:hover, #solutionUnit:hover {
   cursor: pointer;
+  /*box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);*/
 }
 #subProblemUnit:hover #subProblemSummary, #solutionUnit:hover #solutionUnitSummary {
   color: #ffffff;
@@ -1758,7 +1761,6 @@
   font-family: 'Alegreya Sans', sans-serif;
   padding: 10px;
   color: #ffffff;
-  background-color: #0f131c;
   border: 1px solid #ffffff;
   height: 4em;
   resize: none;
@@ -2485,34 +2487,6 @@
 #discussGroup2 {
   border-width: 0px 0px 0px 0px;
 }
-#prosConsMenu {
-  border: 1px solid #00dcff;
-  border-width: 1px 1px;
-  overflow: hidden;
-  width: 100%;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: strech;
-  text-align: center;
-}
-#prosLabel, #consLabel {
-  margin: auto;
-  display: inline-block;
-  flex: 2 1 auto;
-  text-align: center;
-  padding: 5px;
-  letter-spacing: 6px;
-  color: #00dcff;
-  font-size: 120%;
-}
-#prosConsLabel:hover {
-  background-color: rgba(0,220,255,0.15);
-  color: #00dcff;
-  cursor: pointer;
-  border-color: #00dcff;
-}
 
 /*End Discuss SB*/
 
@@ -2570,7 +2544,7 @@
 
 
 
-/*Versions*/
+/*Full Solution*/
 
 #voteVersionsMenu {
   display: inline-flex;
@@ -2594,7 +2568,7 @@
   padding: 5px;
   margin: 0 auto;
   letter-spacing: 8px;
-  width: 9em;
+  width: 15em;
   text-align: center;
 }
 #voteSolution:hover, 
@@ -2620,6 +2594,7 @@
   border: 1px solid #dddddd;
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+  margin-bottom: 0px;
 }
 
 #solutionIntro {
@@ -2629,7 +2604,41 @@
   margin: 0px 30px;
   padding: 10px 0px;
 }
-#dateContributorMenu {
+#solutionSummary {
+  padding-top: 5px;
+  margin-top: 15px;
+  /*border: 1px solid #00dcff;
+  border-width: 0px 1px 0px 1px;*/
+  padding: 0px 5px 10px 5px;
+  margin-bottom: 0px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 100%;
+  line-height: 150%;
+  word-wrap: break-word; 
+}
+#currentVersion {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  width: 5em;
+  text-align: center;
+}
+#createDate {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  width: 12em;
+  text-align: center;
+} 
+/*ProsCons*/
+#prosConsMenu {
   display: inline-flex;
   text-align: center;
   flex-direction: row;
@@ -2639,17 +2648,205 @@
   border-width: 1px 0px;
   margin-top: 10px;
 }
-#contributor, #createDate {
+#prosButton, #consButton {
   flex: 1 1 auto;
   margin: 0 auto;
   font-size: 80%;
   text-align: center;
   letter-spacing: 8px;
   padding: 5px;
-  letter-spacing: 8px;
-  width: 9em;
+  width: 20em;
   text-align: center;
-  color: 00dcff;
 }
+#prosButton:hover, #consButton:hover {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  cursor: pointer;
+  border-color: #00dcff;
+}
+#prosConsTextArea {
+  text-align: left;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 10px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  height: 4em;
+  resize: none;
+  background-color: inherit;
+}
+#addProsCons {
+  font-size: 90%;
+  color: #00ffdc;
+  background-color: inherit;
+  border: 1px solid #00ffdc;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+/*#currentVersion {
+  flex: 2 2 auto;
+  width: 2em;
+}*/
+
+/*End Full Solution*/
+
+
+
+/*Versions*/
+
+#fullVersions {
+  width: 100%;
+  background-color: inherit;
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+}
+
+#developVersionsButton {
+  /*color: #00ffdc;
+  font-size: 120%;
+  border: 1px solid #00ffdc;
+  border-width: 1px 1px 0px 1px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  letter-spacing: 8px;
+  background-color: rgba(0,220,255,0.15);*/
+
+  flex: 1 1 auto;
+  color: #00dcff;
+  /*border: 1px solid #00dcff;*/
+  font-size: 80%;
+  padding: 5px;
+  margin: 0px 0px;
+  letter-spacing: 4px;
+  text-align: center;
+  border: 1px solid #00dcff;
+  border-width: 1px 0px 0px 0px;
+}
+#developVersionsButton:hover {
+  background-color: #00dcff;
+  color: #0f131c;
+  cursor: pointer;
+}
+#versionUnit {
+  margin: 0 auto;
+  border: 2px solid #00dcff;
+  border-width: 1px 0px 0px 0px;
+  border-radius: 0px;
+  padding-left: 3px;
+  padding-bottom: 0px;
+}
+#versionUnit:hover {
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#versionUnitTitle {
+  display: inline-block;
+  text-align: left;
+  padding: 5px;
+  margin: 0px;
+  color: #dddddd;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: row;
+  flex: 2 2 auto;
+}
+#versionPercent {
+  float: left;
+  color: #00dcff;
+  font-size: 200%;
+  padding: 0px 0px 0px 0px;
+  margin-top: 0 auto;
+  margin-bottom: 0 auto;
+  height: auto;
+  text-align: left;
+  color: #00dcff;
+  /*font-family: 'Raleway', sans-serif;*/
+  text-align: center;
+  width: 3em;
+}
+
+#versionNumber {
+  font-size: 120%;
+  color: #00dcff;
+}
+
+#changesFrom {
+
+}
+#versionFrom {
+  color: #00ffdc;
+}
+#versionChangesForm {
+    height: 10em;
+}
+#createVersionForm {
+  background-color: inherit;
+  color: #00dcff;
+  height: auto;
+  border: 2px solid #00dcff;
+  border-width: 0px 0px 1px 0px;
+  border-radius: 3px;
+  padding: 0px 5px 5px 5px;
+  width: 90%;
+  margin: 0 auto;
+  }
+#createVersionForm textarea {
+  background-color: inherit;
+}
+#versionFormFieldset {
+  background-color: inherit;
+}
+input#submitNewVersion {
+  display: block;
+  color: #00dcff;
+  border: 1px solid #00dcff;
+  background-color: inherit;
+  width: 86%;
+  margin-left: 7.5%;
+}
+input#submitNewVersion:hover {
+  color: #0f131c;
+  border: 1px solid #0f131c;
+  background-color: #00dcff;
+  cursor: pointer;
+}
+
+/*End Versions*/
+
+
+
+/*Profile Additions*/
+
+#feedbackExplanation {
+  margin: 5% 5%;
+  border: 1px solid #00dcff;
+  border-width: 1px 0px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  padding: 2% 5%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 120%;
+}
+#feedbackFieldset {
+  width: 90%;
+  margin: 0 auto;
+}
+#feedbackTextArea {
+  text-align: left;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 10px;
+  color: #ffffff;
+  background-color: #0f131c;
+  border: 1px solid #ffffff;
+  height: 8em;
+  resize: none;
+  /*margin: 0 auto !important;
+  display: block;*/
+}
+
+/*End Profile Additions*/
+
+
 
 /*End Layout 2 CSS*/

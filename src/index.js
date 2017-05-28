@@ -6,8 +6,11 @@ import App from './App';
 //Load Components
 
 import Error404 from './components/Error404.jsx';
+import FeedbackForm from './components/FeedbackForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
+import FullSolutionContent from './components/FullSolutionContent.jsx';
+import FullVersion from './components/FullVersion.jsx';
 // import Info from './components/Info.jsx';
 import Instructions from './components/Instructions.jsx';
 import Intro from './components/Intro.jsx';
@@ -19,11 +22,14 @@ import ProblemDiscussMenu from './components/ProblemDiscussMenu.jsx';
 import ProblemLearnMenu from './components/ProblemLearnMenu.jsx';
 import ProblemSolutionsMenu from './components/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/ProblemTopSolutions.jsx';
+import ProfileNotifications from './components/ProfileNotifications.jsx';
+import ProfileProblemsSolutions from './components/ProfileProblemsSolutions.jsx';
 import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import SideBarFullSolution from './components/SideBarFullSolution';
 import SideBarProblem from './components/SideBarProblem';
 import SolutionForm from './components/SolutionForm.jsx';
+import VersionForm from './components/VersionForm.jsx';
 import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
 
 //Load Containers
@@ -32,19 +38,20 @@ import ConsContainer from './containers/ConsContainer.jsx';
 import ErrorContainer from './containers/ErrorContainer.jsx';
 import FreeFormContainer from './containers/FreeFormContainer.jsx';
 import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx';
+import FullSolutionContainer from './containers/FullSolutionContainer.jsx';
 import LearnContentContainer from './containers/LearnContentContainer.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
 import ProsContainer from './containers/ProsContainer.jsx';
 import ProsConsCommentContainer from './containers/ProsConsCommentContainer.jsx';
-import ProsConsContainer from './containers/ProsConsContainer.jsx';
 import QuestionContainer from './containers/QuestionContainer.jsx';
 import SearchContainer from './containers/SearchContainer.jsx';
 import SolutionContainer from './containers/SolutionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
 import SuggestionCommentContainer from './containers/SuggestionCommentContainer.jsx';
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
+import VersionsContainer from './containers/VersionsContainer.jsx'
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
 import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 // import Profile from './components/Profile.jsx'
@@ -67,7 +74,12 @@ ReactDOM.render(
       <Route path='/redirection' component={Redirection}></Route>
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
-    <Route path='/profile' component={ProfileContainer}></Route>
+    <Route path='/profile' component={ProfileContainer}>
+      <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
+      <Route path='/profile/usercontent' component={ProfileProblemsSolutions}></Route>
+      <Route path='/profile/feedback' component={FeedbackForm}></Route>
+      <Route path='/profile/notifications' component={ProfileNotifications}></Route>
+    </Route>
     <Route path='/newsfeed' component={NewsFeedContainer}></Route>
     <Route path='/intro' component={Intro}></Route>
     <Route path='/instructions' component={Instructions}></Route>
@@ -94,7 +106,21 @@ ReactDOM.render(
             <IndexRoute component={ProblemTopSolutions}></IndexRoute>
             <Route path='/problem/:probID/solutions' component={ProblemTopSolutions}></Route>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
-            <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}></Route>
+            <Route path='/fullsolution/:probID/:solutionID/container' component={FullSolutionContainer}>
+              <IndexRoute component={FullSolution}></IndexRoute>
+              <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
+                <IndexRoute component={FullSolutionContent}></IndexRoute>
+                <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/versions' component={VersionsContainer}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/fullversion' component={FullVersion}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/versionform' component={VersionForm}></Route>
+              </Route>
+              
+              
+
+            </Route>
           </Route>
           <IndexRoute component={ProblemDiscussMenu}></IndexRoute>
           <Route path='/problem/:probID/discuss' component={ProblemDiscussMenu}>
@@ -105,12 +131,6 @@ ReactDOM.render(
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
             <Route path='/problem/:probID/freeform' component={FreeFormContainer}></Route>
             <Route path='/problem/:probID/freeform/:ffID/comments' component={FreeFormCommentContainer}></Route>
-            <Route path='/problem/:probID/proscons' component={ProsConsContainer}>
-              <IndexRoute component={ProsContainer}></IndexRoute>
-              <Route path='/problem/:probID/pros' component={ProsContainer}></Route>
-              <Route path='/problem/:probID/cons' component={ConsContainer}></Route>
-            </Route>
-            <Route path='/problem/:probID/proscons/:pcID/comments' component={ProsConsCommentContainer}></Route>
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>

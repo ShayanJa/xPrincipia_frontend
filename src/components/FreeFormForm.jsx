@@ -41,7 +41,7 @@ axios.post('http://localhost:10000/auth/comments/create', {
       <div id="answerFormComponent">
         <form id="answerForm">
             <fieldset>
-                <legend>FreeForm Comments</legend>
+                <legend>FreeForm Discussion</legend>
                      <textarea name="answerText" required="required" id="commentTextArea"></textarea>
                      <br />
                      <input type="button" value="Add" onClick={this.postComment} id="addAnswer"/>

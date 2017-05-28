@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class FullSolution extends React.Component {
+export default class FullSolutionContainer extends React.Component {
   constructor(props){
         super(props);
 
@@ -60,35 +60,9 @@ export default class FullSolution extends React.Component {
   }
    render() {
       return (
-      <div id="maxContainer"> 
-        <div id="fullSolution">
-            <div id="solutionIntro">
-              <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
-              <div id="currentVersion">v.112</div>
-              <p id="solutionSummary">
-                {this.state.solutionInfo.Summary}
-              </p>
-              <div id="voteVersionsMenu">
-                    <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
-                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
-                        <div id="versionsButton">
-                                Versions
-                        </div>
-                    </Link>
-              </div>
-              <div id="createDate">{this.state.solutionInfo.CreatedAt}</div>
-              <div id="prosConsMenu">
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
-                    <div id="prosButton">Pros</div>
-                </Link>
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`}>
-                    <div id="consButton">Cons</div>
-                </Link>
-              </div>
-            </div>
-            {React.cloneElement(this.props.children, {probID: this.state.probID}, {solutionID: this.state.solutionID})}
+        <div>
+            {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
-      </div>
       );
    }
 }
