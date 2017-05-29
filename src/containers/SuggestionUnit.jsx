@@ -39,7 +39,7 @@ export default class SuggestionUnit extends React.Component {
     return (
        <li key={suggestion.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">{suggestion.Username}</div>
+					<div id="suggestionAdder">S: {suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
 				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 

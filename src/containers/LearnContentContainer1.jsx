@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentForm1 from '../components/LearnContentForm1.jsx';
-import LearnContentUnit1 from '../components/LearnContentUnit1.jsx';
-import SideBarMore from '../components/SideBarMore';
+import SuggestionUnit from '../components/SuggestionUnit.jsx';
+import LearnContentForm from '../components/LearnContentForm.jsx';
+import LearnContentUnit from '../components/LearnContentUnit.jsx';
+import SideBarMore from '../components/SideBarMore.jsx';
 
 
 export default class LearnContentContainer1 extends React.Component {
@@ -33,8 +34,8 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
-          <LearnContentForm1 probID={this.props.params.probID}  />
-            <LearnContentUnit1 suggestions={this.state.suggestions} />
+          <LearnContentForm probID={this.props.params.probID}  />
+            <LearnContentUnit suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  
       );

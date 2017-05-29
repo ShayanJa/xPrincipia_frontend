@@ -138,8 +138,8 @@ ReactDOM.render(
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
             <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}></Route>
-              {/*<IndexRoute component={LearnContentContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content1' component={LearnContentContainer1}></Route>>*/}
+              <IndexRoute component={LearnContentContainer1}></IndexRoute>
+              <Route path='/problem/:probID/learn/content1' component={LearnContentContainer1}></Route>>
             <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}></Route>
           </Route>
         </Route>        

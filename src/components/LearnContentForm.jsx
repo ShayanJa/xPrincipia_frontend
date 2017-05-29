@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class LearnContentForm1 extends React.Component {
+export default class LearnContentForm extends React.Component {
 
 constructor(){
   super();
@@ -14,7 +14,7 @@ constructor(){
   this.postSuggestion = this.postSuggestion.bind(this);
 };
 
-postLearnContent() {
+postSuggestion() {
   //Read field items into component state
 this.state.suggestion = document.getElementById('suggestionTextArea').value
 
@@ -57,10 +57,10 @@ if(this.props.solutionID){
       <div id="suggestionFormComponent">
             <form id="suggestionForm">
                 <fieldset>
-                    <legend>Add Learning Content</legend>
+                    <legend>User Content</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Add" onClick={this.postLearnContent} id="addSuggestion"/>
+                         <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
                 </fieldset>
             </form>
       </div>
