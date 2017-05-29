@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentForm1 from '../components/LearnContentForm1.jsx';
 import LearnContentUnit1 from '../components/LearnContentUnit1.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
@@ -33,7 +32,16 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
-          <LearnContentForm1 probID={this.props.params.probID}  />
+            <div id="suggestionFormComponent">
+                <form id="suggestionForm">
+                    <fieldset>
+                        <legend>Complexity 1 Content</legend>
+                            <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
+                            <br />
+                            <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
+                    </fieldset>
+                </form>
+            </div>
             <LearnContentUnit1 suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  

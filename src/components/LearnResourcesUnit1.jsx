@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 
 
-export default class LearnContentUnit2 extends React.Component {
+export default class LearnResourcesUnit1 extends React.Component {
     constructor(props){
         super(props);
          this.renderItem = this.renderItem.bind(this)
@@ -39,7 +39,7 @@ export default class LearnContentUnit2 extends React.Component {
     return (
        <li key={suggestion.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">2: {suggestion.Username}</div>
+					<div id="suggestionAdder">1: {suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
 				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 

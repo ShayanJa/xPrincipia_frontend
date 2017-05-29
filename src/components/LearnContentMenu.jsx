@@ -25,12 +25,12 @@ export default class LearnContentMenu extends React.Component {
       return (
         <div>
             <div id="intensityHeader">
-                <div id="intensityLabel">Intensity</div>
+                <div id="intensityLabel">Complexity</div>
                 <div id="intensityNumber">1</div>
                 <div id="intensityNumber">2</div>
                 <div id="intensityNumber">3</div>
             </div>
-            {/*{React.cloneElement(this.props.children, {probID: this.state.probID})}*/}
+            {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
       );

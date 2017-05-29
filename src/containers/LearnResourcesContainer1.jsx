@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentUnit2 from '../components/LearnContentUnit2.jsx';
+import LearnResourcesUnit1 from '../components/LearnResourcesUnit1.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 
-export default class LearnContentContainer1 extends React.Component {
+export default class LearnResourcesContainer1 extends React.Component {
 constructor(props){
         super(props);
 
@@ -31,20 +31,22 @@ constructor(props){
     }
    render() {
            return (
+        <div>
         <div id="suggestionContainer">
-            <div id="suggestionFormComponent">
-                    <form id="suggestionForm">
-                        <fieldset>
-                            <legend>Complexity 2 Content</legend>
-                                <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
-                                <br />
-                                <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
-                        </fieldset>
-                    </form>
-            </div>            
-            <LearnContentUnit2 suggestions={this.state.suggestions} />
+                <div id="suggestionFormComponent">
+            <form id="suggestionForm">
+                <fieldset>
+                    <legend>Complexity 1 Content</legend>
+                         <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
+                         <br />
+                         <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
+                </fieldset>
+            </form>
+      </div>
+            <LearnResourcesUnit1 suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  
+        </div>
       );
     }  
 }
