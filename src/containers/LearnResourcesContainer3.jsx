@@ -1,10 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import LearnResourcesUnit2 from '../components/LearnResourcesUnit2.jsx';
+import LearnResourcesUnit3 from '../components/LearnResourcesUnit3.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 
-export default class LearnResourcesContainer2 extends React.Component {
+export default class LearnResourcesContainer3 extends React.Component {
 constructor(props){
         super(props);
 
@@ -36,14 +36,14 @@ constructor(props){
                 <div id="suggestionFormComponent">
             <form id="suggestionForm">
                 <fieldset>
-                    <legend>Complexity 2 Content</legend>
+                    <legend>Complexity 3 Content</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
                 </fieldset>
             </form>
       </div>
-            <LearnResourcesUnit2 suggestions={this.state.suggestions} />
+            <LearnResourcesUnit3 suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  
         </div>

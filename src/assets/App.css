@@ -2518,7 +2518,7 @@
   text-align: center;
 }
 #intensityLabel, #intensityNumber {
-  margin: auto;
+  margin: 0 auto;
   display: inline-block;
   flex: 2 1 auto;
   text-align: center;

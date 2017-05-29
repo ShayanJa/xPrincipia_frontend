@@ -45,6 +45,7 @@ import LearnContentContainer1 from './containers/LearnContentContainer1.jsx';
 import LearnContentContainer2 from './containers/LearnContentContainer2.jsx';
 import LearnResourcesContainer1 from './containers/LearnResourcesContainer1.jsx';
 import LearnResourcesContainer2 from './containers/LearnResourcesContainer2.jsx';
+import LearnResourcesContainer3 from './containers/LearnResourcesContainer3.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
@@ -149,6 +150,7 @@ ReactDOM.render(
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
               <Route path='/problem/:probID/learn/resources/1' component={LearnResourcesContainer1}></Route>
               <Route path='/problem/:probID/learn/resources/2' component={LearnResourcesContainer2}></Route>
+              <Route path='/problem/:probID/learn/resources/3' component={LearnResourcesContainer3}></Route>
             </Route>
           </Route>
         </Route>        
