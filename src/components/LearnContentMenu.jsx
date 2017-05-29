@@ -26,9 +26,15 @@ export default class LearnContentMenu extends React.Component {
         <div>
             <div id="intensityHeader">
                 <div id="intensityLabel">Complexity</div>
-                <div id="intensityNumber">1</div>
-                <div id="intensityNumber">2</div>
-                <div id="intensityNumber">3</div>
+                <Link to={`/problem/${this.props.params.probID}/learn/content/1`} activeClassName="activeWhite">
+                    <div id="intensityNumber">1</div>
+                </Link>
+                <Link to={`/problem/${this.props.params.probID}/learn/content/2`} activeClassName="activeWhite">
+                    <div id="intensityNumber">2</div>
+                </Link>
+                <Link to={`/problem/${this.props.params.probID}/learn/content/3`} activeClassName="activeWhite">
+                    <div id="intensityNumber">3</div>
+                </Link>
             </div>
             {/*{React.cloneElement(this.props.children, {probID: this.state.probID})}*/}
         </div>

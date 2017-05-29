@@ -123,9 +123,6 @@ ReactDOM.render(
                 <Route path='/fullsolution/:probID/:solutionID/fullversion' component={FullVersion}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/versionform' component={VersionForm}></Route>
               </Route>
-              
-              
-
             </Route>
           </Route>
           <IndexRoute component={ProblemDiscussMenu}></IndexRoute>
@@ -142,9 +139,10 @@ ReactDOM.render(
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
             <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}>
-              <IndexRoute component={LearnContentContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}></Route>
-              <Route path='/problem/:probID/learn/content/2' component={LearnContentContainer2}></Route>
+              <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
+              <Route path='/problem/:probID/learn/content/1' component={LearnResourcesContainer1}></Route>
+              <Route path='/problem/:probID/learn/content/2' component={LearnResourcesContainer2}></Route>
+              <Route path='/problem/:probID/learn/content/3' component={LearnResourcesContainer3}></Route>
             </Route>
             <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}>
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
@@ -154,21 +152,6 @@ ReactDOM.render(
             </Route>
           </Route>
         </Route>        
-
-      <IndexRoute component={FullSolution}></IndexRoute>
-      <Route path='/fullsolution/:probID/:solutionID/x' component={FullSolution}>
-        <IndexRoute component={SideBarFullSolution}></IndexRoute>
-        <Route path='/fullsolution/:probID/:solutionID/sidebar' component={SideBarFullSolution}>
-          <IndexRoute component={SolutionContainer}></IndexRoute>
-          <Route path='/fullsolution/:probID/:solutionID/answers' component={AnswerContainer}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/createproblem' component={ProblemForm}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/createsolution' component={SolutionForm}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/questions' component={QuestionContainer}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/solutions' component={SolutionContainer}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/subproblems' component={SubProblemContainer}></Route>
-          <Route path='/fullsolution/:probID/:solutionID/suggestions' component={SuggestionContainer}></Route>
-        </Route>
-      </Route>
       </Route>
     </Route>
     {/*<Redirect from='*' to='/404' />*/}
