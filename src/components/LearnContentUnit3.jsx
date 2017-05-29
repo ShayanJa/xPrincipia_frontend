@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 
 
-export default class LearnContentUnit extends React.Component {
+export default class LearnContentUnit3 extends React.Component {
     constructor(props){
         super(props);
          this.renderItem = this.renderItem.bind(this)

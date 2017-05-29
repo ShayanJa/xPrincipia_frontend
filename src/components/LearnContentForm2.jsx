@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class LearnContentForm extends React.Component {
+export default class LearnContentForm2 extends React.Component {
 
 constructor(){
   super();
@@ -57,7 +57,7 @@ if(this.props.solutionID){
       <div id="suggestionFormComponent">
             <form id="suggestionForm">
                 <fieldset>
-                    <legend>User Content</legend>
+                    <legend>Complexity 2 Content</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>

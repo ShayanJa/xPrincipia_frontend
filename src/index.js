@@ -42,6 +42,7 @@ import FreeFormContainer from './containers/FreeFormContainer.jsx';
 import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx';
 import FullSolutionContainer from './containers/FullSolutionContainer.jsx';
 import LearnContentContainer1 from './containers/LearnContentContainer1.jsx';
+import LearnContentContainer2 from './containers/LearnContentContainer2.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
@@ -139,7 +140,8 @@ ReactDOM.render(
             <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}></Route>
               <IndexRoute component={LearnContentContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content1' component={LearnContentContainer1}></Route>>
+              <Route path='/problem/:probID/learn/content1' component={LearnContentContainer1}></Route>
+              <Route path='/problem/:probID/learn/content2' component={LearnContentContainer2}></Route>
             <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}></Route>
           </Route>
         </Route>        

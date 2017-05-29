@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentForm1 from '../components/LearnContentForm1.jsx';
-import LearnContentUnit1 from '../components/LearnContentUnit1.jsx';
+import LearnContentForm2 from '../components/LearnContentForm2.jsx';
+import LearnContentUnit2 from '../components/LearnContentUnit2.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 
@@ -33,8 +33,10 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
-          <LearnContentForm1 probID={this.props.params.probID}  />
-            <LearnContentUnit1 suggestions={this.state.suggestions} />
+          {/*Put children thing here, move forms
+            unit combos to children routes of this*/}
+          <LearnContentForm2 probID={this.props.params.probID}  />
+            <LearnContentUnit2 suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  
       );
