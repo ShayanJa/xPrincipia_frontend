@@ -1287,7 +1287,7 @@
 }
 #subProblemUnit:hover, #solutionUnit:hover {
   cursor: pointer;
-  /*box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);*/
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 #subProblemUnit:hover #subProblemSummary, #solutionUnit:hover #solutionUnitSummary {
   color: #ffffff;
@@ -2026,7 +2026,18 @@
   vertical-align: middle;
 }
 
+img#flagSolutionButton {
+  /*display: inline;*/
+  display: block;
+  margin: 0 auto;
+  border: rgba(255,127,127,1);
+  /*opacity: 0.5;*/
+}
 
+#flagSolutionButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+}
 
 
 
@@ -2525,6 +2536,37 @@
   color: #00dcff;
   cursor: pointer;
   border-color: #00dcff;
+}
+/*Radio Buttons styling*/
+
+input[type=radio] {
+  position: absolute;
+  /*visibility: hidden;*/
+  /*display: none;*/
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 20px;
+  width: 4em;
+}
+
+input[type=radio]:checked + label{
+  color: red !important;
+  background: orange !important;
+}
+
+label + input[type=radio] + label {
+  border-left: 3px solid green;
+}
+.radio-group {
+  border: 1px solid white;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /*End Learn SB*/

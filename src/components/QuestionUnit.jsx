@@ -45,8 +45,8 @@ constructor(props){
                 	<div id="questionText">{question.Description}</div>
 				</div>
                 {/*<div id="flagContainer">*/}
-                    <div id="editSBButton" onClick={submitVote}>Edit</div>
-                    <div id="flagSBButton" onClick={submitVote}><img src={require('../assets/deleteLogo.png')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" /></div>
+                    <div id="editSBButton">Edit</div>
+                    <div id="flagSBButton"><img src={require('../assets/deleteLogo.png')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" /></div>
                 {/*</div>*/}
 				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">

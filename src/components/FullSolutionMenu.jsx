@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class FullSolutionContent extends React.Component {
+export default class FullSolutionMenu extends React.Component {
   constructor(props){
         super(props);
 
@@ -70,7 +70,6 @@ export default class FullSolutionContent extends React.Component {
                     </Link>
               </div>
               <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
-              <img src={require('../assets/flag.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
               <div id="prosConsMenu">
                 <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
                     <div id="prosButton">Pros</div>
@@ -79,26 +78,7 @@ export default class FullSolutionContent extends React.Component {
                     <div id="consButton">Cons</div>
                 </Link>
               </div>
-            <div>
-              <br />
-              <div id="solutionFormLabel">Description</div>
-              <p id="solutionDescription">
-                  {this.state.solutionInfo.Description}
-              </p>
-            </div>
-            <div>
-              <div id="solutionFormLabel">References</div>
-              <p id="solutionReferences">
-                 {this.state.solutionInfo.References}
-              </p>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <p id="xp">XP</p>
-            <br />
+              {React.cloneElement(this.props.children, {probID: this.state.probID}, {solutionID: this.state.solutionID})}
         </div>
       );
    }

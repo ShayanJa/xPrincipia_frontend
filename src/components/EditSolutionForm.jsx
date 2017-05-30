@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 
 
-export default class VersionForm extends React.Component {
+export default class EditSolutionForm extends React.Component {
 
   constructor(props){
     super(props);
@@ -13,8 +13,6 @@ export default class VersionForm extends React.Component {
       title: '',
       summary: '',
       description: '',
-      evidence: '',
-      experiments: '',
       references: '',
       solutionInfo: '',
     }
@@ -31,8 +29,10 @@ export default class VersionForm extends React.Component {
               solutionInfo: response.data
           })
           
-          document.getElementById('versionDescriptionForm').value = self.state.solutionInfo.Description;
-          document.getElementById('versionReferencesForm').value = self.state.solutionInfo.References;
+          document.getElementById('editTitleForm').value = self.state.solutionInfo.Title;
+          document.getElementById('editSummaryForm').value = self.state.solutionInfo.Summary;
+          document.getElementById('editDescriptionForm').value = self.state.solutionInfo.Description;
+          document.getElementById('editReferencesForm').value = self.state.solutionInfo.References;
 
     })
     .catch(function (error) {
@@ -47,8 +47,6 @@ export default class VersionForm extends React.Component {
     this.state.title = document.getElementById('solutionTitleForm').value
     this.state.summary = document.getElementById('solutionSummaryForm').value
     this.state.description = document.getElementById('solutionDescriptionForm').value
-    this.state.evidence = document.getElementById('solutionEvidenceForm').value
-    this.state.experiments = document.getElementById('solutionExperimentsForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
   axios.post('http://localhost:10000/auth/solutions/create', {
@@ -57,8 +55,6 @@ export default class VersionForm extends React.Component {
       title : this.state.title,
       summary : this.state.summary,
       description : this.state.description,
-      evidence: this.state.evidence,
-      experiments : this.state.experiments,
       references: this.state.references
     })
     .then(function (result) {
@@ -75,17 +71,22 @@ export default class VersionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createVersionForm">
             <fieldset id="versionFormFieldset">
-                <legend>Develop</legend>
-                      <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Changes from v.112<br />
-                          <textarea name="solutionDescription" required="required" placeholder='This allows users to see your updates.' id="versionChangesForm">
-                          </textarea></label><br />
+                <legend>Improve</legend>
+                      
+                      <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
+                         <input type="text" name="solutionTitle" required="required" maxLength="140" id="editTitleForm" autoFocus/>
+                      </label><br />
+
+                      <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
+                         <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="editSummaryForm"/>
+                      </label><br />
 
                       <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
-                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="versionDescriptionForm">
+                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="editDescriptionForm">
                           </textarea></label><br />
 
                       <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
-                          <textarea name="solutionReferences" placeholder="Provide your references here." id="versionReferencesForm">
+                          <textarea name="solutionReferences" placeholder="Provide your references here." id="editReferencesForm">
                           </textarea></label><br />
                       <Link to={`/problem/${this.props.params.probID}/solutions`}>
                         <input type="submit" value="Create" onClick={this.postSolution} id="submitNewVersion"/>

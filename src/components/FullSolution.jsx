@@ -20,6 +20,12 @@ export default class FullSolution extends React.Component {
           self.setState({
               solutionInfo: response.data,
           })
+          var solutionInfo = self.state.solutionInfo
+          solutionInfo.CreatedAt = dateTime(solutionInfo.CreatedAt)
+          self.setState({
+              solutionInfo : solutionInfo
+          })
+
     })
     .catch(function (error) {
         if(error.response.status === 401 || error.response.status === 403){
@@ -27,7 +33,6 @@ export default class FullSolution extends React.Component {
         }
     });   
     }
-
   //On recieving new props
   componentWillReceiveProps(newProps){
     var self = this;
@@ -35,6 +40,12 @@ export default class FullSolution extends React.Component {
           self.setState({
               solutionInfo: response.data,  
           })
+          var solutionInfo = self.state.solutionInfo
+          solutionInfo.CreatedAt = dateTime(solutionInfo.CreatedAt)
+          self.setState({
+              solutionInfo : solutionInfo
+          })
+
     })
     .catch(function (error) {
         if(error.response.status === 401 || error.response.status === 403){
@@ -80,3 +91,9 @@ export default class FullSolution extends React.Component {
       );
    }
 }
+
+
+
+ function dateTime(str){
+     return str.substring(0,9)
+ }
