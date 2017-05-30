@@ -61,23 +61,28 @@ export default class FullSolutionContent extends React.Component {
    render() {
       return (
       <div> 
+            <div id="voteVersionsMenu">
+                    <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
+                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
+                        <div id="versionsButton">
+                                Versions
+                        </div>
+                    </Link>
+              </div>
+              <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
+              <div id="prosConsMenu">
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
+                    <div id="prosButton">Pros</div>
+                </Link>
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`}>
+                    <div id="consButton">Cons</div>
+                </Link>
+              </div>
             <div>
               <br />
               <div id="solutionFormLabel">Description</div>
               <p id="solutionDescription">
                   {this.state.solutionInfo.Description}
-              </p>
-            </div>
-            <div>
-              <div id="solutionFormLabel">Evidence</div>
-              <p id="solutionEvidence">
-                  {this.state.solutionInfo.Evidence}
-              </p>
-            </div>
-            <div>
-              <div id="solutionFormLabel">Future Experiments</div>
-              <p id="solutionFutureExperiments">
-                  {this.state.solutionInfo.Experiments}
               </p>
             </div>
             <div>
@@ -100,4 +105,9 @@ export default class FullSolutionContent extends React.Component {
 
 
  
- 
+  function dateTime(str) {
+     if(str != undefined){
+        var result = str.substring(0,9);
+        return result
+     }
+}

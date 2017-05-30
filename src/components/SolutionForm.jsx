@@ -13,8 +13,6 @@ export default class SolutionForm extends React.Component {
       title: '',
       summary: '',
       description: '',
-      evidence: '',
-      experiments: '',
       references: ''
     }
 
@@ -26,8 +24,6 @@ export default class SolutionForm extends React.Component {
     this.state.title = document.getElementById('solutionTitleForm').value
     this.state.summary = document.getElementById('solutionSummaryForm').value
     this.state.description = document.getElementById('solutionDescriptionForm').value
-    this.state.evidence = document.getElementById('solutionEvidenceForm').value
-    this.state.experiments = document.getElementById('solutionExperimentsForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
   axios.post('http://localhost:10000/auth/solutions/create', {
@@ -54,30 +50,27 @@ export default class SolutionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset>
-                      <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
-                          <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autoFocus/>
-                        </label><br />
+              <Link to={`/problem/${this.props.params.probID}/solutions`}>
+                <div id="backSolutionArrowDiv">
+                    <img src={require('../assets/upArrowLight.png')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
+              </Link>
+              <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
+                  <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autoFocus/>
+                </label><br />
 
-                      <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
-                          <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="solutionSummaryForm"/>
-                        </label><br />
+              <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
+                  <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="solutionSummaryForm"/>
+                </label><br />
 
-                      <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
-                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionDescriptionForm">
-                          </textarea></label><br />
+              <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
+                  <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionDescriptionForm">
+                  </textarea></label><br />
 
-                      <label htmlFor="solutionEvidence" id="solutionEvidenceFormLabel">Evidence/Logic<br />
-                          <textarea name="solutionEvidence" placeholder="Provide your evidence and logic here." id="solutionEvidenceForm">
-                          </textarea></label><br />
-
-                      <label htmlFor="futureExperiments" id="solutionExperimentsFormLabel">Future Experiments<br />
-                          <textarea name="futureExperiments" placeholder="Outline future experiment ideas here." id="solutionExperimentsForm">
-                          </textarea></label><br />
-
-                      <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
-                          <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
-                          </textarea></label><br />
-                      <Link to={`/problem/${this.props.params.probID}/solutions`}><input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/></Link>
+              <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
+                  <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
+                  </textarea></label><br />
+              <Link to={`/problem/${this.props.params.probID}/solutions`}><input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/></Link>
             </fieldset>
           </form>
       </div>

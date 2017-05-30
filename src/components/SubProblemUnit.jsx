@@ -5,9 +5,17 @@ export default class SubProblemUnit extends React.Component {
 
 	render() {
 		return (
-	    <div>
-				<ul id="SPUnitList"> {this.props.problems.map(this.renderItem)}</ul>         
-	    </div>
+	    <div id="SPwrapper">
+			<ul id="SPUnitList"> 
+				<li>
+					<img src={require('../assets/leftArrowLight.png')} id="SParrowImg" width="30" height="50" alt="User avatar, DNA Helix" />
+				</li>
+				{this.props.problems.map(this.renderItem)}
+				<li>
+					<img src={require('../assets/rightArrowLight.png')} id="SParrowImg" width="30" height="50" alt="User avatar, DNA Helix" />
+				</li>
+			</ul>
+		</div>
 		);
 	}
 	renderItem(problem) {

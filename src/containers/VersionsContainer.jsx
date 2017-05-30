@@ -30,10 +30,17 @@ export default class VersionsContainer extends React.Component {
       <div> 
           
         <div id="fullVersions">
-            <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versionform`}>
-                <div id="developVersionsButton">Develop v.112</div>
-            </Link>
-            <VersionsUnit solutions={this.state.solutions} probID={this.props.params.probID} solutionID={this.props.params.solutionsID} />
+            <div id="developVersionsHeader">
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}`}>
+                    <div id="downArrowDiv">
+                        <img src={require('../assets/upArrowLight.png')} id="backDevelopArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                    </div>
+                </Link>
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versionform`}>
+                    <div id="developVersionsButton">Develop v.112</div>
+                </Link>
+            </div>
+            <VersionsUnit solutions={this.state.solutions} probID={this.props.params.probID} solutionID={this.props.params.solutionID} />
             <SideBarMore />
         </div>
       </div>

@@ -15,11 +15,31 @@ export default class VersionForm extends React.Component {
       description: '',
       evidence: '',
       experiments: '',
-      references: ''
+      references: '',
+      solutionInfo: '',
     }
 
     this.postSolution = this.postSolution.bind(this);
   };
+  componentWillMount(){
+      var self = this;
+      return axios.get('http://localhost:10000/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+          //if parent ID is 0 then the problem is at the root of the tree
+          // return id as the parentID for routing purposes
+          //set other data
+          self.setState({
+              solutionInfo: response.data
+          })
+          
+          document.getElementById('versionDescriptionForm').value = self.state.solutionInfo.Description
+
+    })
+    .catch(function (error) {
+        if(error.response.status === 401 || error.response.status === 403){
+            document.location = "/login"
+        }
+    });   
+  }
 
   postSolution() {
     //Read field items into component state
@@ -56,19 +76,11 @@ export default class VersionForm extends React.Component {
             <fieldset id="versionFormFieldset">
                 <legend>Develop</legend>
                       <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Changes from v.112<br />
-                          <textarea name="solutionDescription" required="required" placeholder="This allows users to see your updates." id="versionChangesForm">
+                          <textarea name="solutionDescription" required="required" placeholder='This allows users to see your updates.' id="versionChangesForm">
                           </textarea></label><br />
 
                       <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
-                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionDescriptionForm">
-                          </textarea></label><br />
-
-                      <label htmlFor="solutionEvidence" id="solutionEvidenceFormLabel">Evidence/Logic<br />
-                          <textarea name="solutionEvidence" placeholder="Provide your evidence and logic here." id="solutionEvidenceForm">
-                          </textarea></label><br />
-
-                      <label htmlFor="futureExperiments" id="solutionExperimentsFormLabel">Future Experiments<br />
-                          <textarea name="futureExperiments" placeholder="Outline future experiment ideas here." id="solutionExperimentsForm">
+                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="versionDescriptionForm">
                           </textarea></label><br />
 
                       <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />

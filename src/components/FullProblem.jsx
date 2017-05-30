@@ -79,8 +79,8 @@ export default class FullProblem extends React.Component {
       return (
       <div id="maxContainerColumn">
         <div id="problemRow1">
-          <Link to={`/problem/${this.state.parentID}/solutions`}>
-            <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />
+          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+            <img src={require('../assets/upArrowLight.png')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
           </Link>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
@@ -98,6 +98,9 @@ export default class FullProblem extends React.Component {
           </div>
           <SideBarProblemMenu probID={this.props.params.probID} questID={this.props.params.probID}/>
       </div>
+        <div id="SPLabel">
+          Sub problems
+        </div>
         <div id="sidebarSB">
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>

@@ -75,18 +75,6 @@ export default class FullVersion extends React.Component {
               </p>
             </div>
             <div>
-              <div id="solutionFormLabel">Evidence</div>
-              <p id="solutionEvidence">
-                  {this.state.solutionInfo.Evidence}
-              </p>
-            </div>
-            <div>
-              <div id="solutionFormLabel">Future Experiments</div>
-              <p id="solutionFutureExperiments">
-                  {this.state.solutionInfo.Experiments}
-              </p>
-            </div>
-            <div>
               <div id="solutionFormLabel">References</div>
               <p id="solutionReferences">
                  {this.state.solutionInfo.References}

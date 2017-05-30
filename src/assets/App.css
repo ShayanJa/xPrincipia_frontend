@@ -1828,9 +1828,8 @@
     #sideBarMore {
       text-align: center;
       font-size: 100%;
-      padding: 5px;
       color: #00ffdc;
-      border: 1px solid #00dcff;
+      border: 1px solid #00ffdc;
       border-width: 1px 1px 1px 1px;
       border-radius: 3px;
     }
@@ -2021,20 +2020,6 @@
 
 /*Logos*/
 
-#backArrow {
-  border: 2px solid #00dcff;
-  border-radius: 50%;
-  margin: 0 auto;
-  vertical-align: middle;
-  padding: 15px;
-  /*background-color: rgba(0,220,255,0.05);*/
-
-}
-
-#backArrow:hover {
-  background-color: rgba(0,220,255,0.15);
-  }
-
 #deleteLogo {
   display: block;
   margin: 0 auto;
@@ -2049,12 +2034,22 @@
 /*Layout 2 CSS*/
 
 /*ProblemPage*/
-
+#problemLeftSBBAckArrow {
+  
+}
 #backArrow {
   flex: 1 1 auto;
   padding: 4px;
   color: #00ffdc;
   text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  margin-left: 25%;
+}
+
+#backArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
 
 #problemRow1, #problemRow2 {
@@ -2151,15 +2146,9 @@
   flex-shrink: 1;
   border-radius: 0px;
   border-width: 0px 0px;
-
-  border: 1px solid #00dcff;
-  background-color: #0f131c;
-  border-width: 0px 2px;
-  border-radius: 23px;
   position: relative;
   color: #dddddd;
   padding: 0px 10px 20px 10px;
-  overflow: scroll !important;
   margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
   width: 100%;
@@ -2171,15 +2160,31 @@
 
 
 /*Sub Problems*/
-
+#SPLabel {
+  text-align: center;
+  width: 100%;
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
+  /*background-color: rgba(0,220,255,0.05);*/
+  margin: 2% 10% 0% 10%;
+  font-size: 180%;
+  letter-spacing: 6px;
+}
+#SPwrapper {
+  width: 100%;
+  margin:0 auto;
+  text-align:center;
+}
 #SPUnitList {
   text-align: center;
   margin-top: 1%;
+  padding: 5px 0;
 }
-
 #SPUnitList li {
   display: inline-block;
+  /*display: inline;*/
   margin: 0% 1% 2% 1%;
+  list-style-type:none;
 }
 #subProblemUnit {
   display: block;
@@ -2188,11 +2193,6 @@
   color: #dddddd;
   cursor: pointer;
 }
-/*#SPHeader:hover #SPPercent{
-  color: #00dcff;
-  cursor: pointer;
-  font-size: 150%;
-}*/
 #SPHeader {
   display: inline-flex;
   flex-direction: column;
@@ -2208,13 +2208,6 @@
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 #SPTitle {
-  /*display: block;
-  margin: 0px;
-  padding: 2px 5px 2px 5px;
-  font-size: 130%;
-  color: #00dcff;
-  line-height: 120%;
-  height: auto;*/
   margin: 0 auto;
   padding: 5px 10px 5px 10px;
   font-size: 120%;
@@ -2223,12 +2216,6 @@
   text-align: center;
 }
 #SPPercent {
-  /*font-family: 'Raleway', sans-serif;*/
-  /*margin: 0 auto;*/
-  /*padding: 5px 10px 5px 10px;*/
-  /*font-size: 150%;*/
-  /*color: #00ffdc;*/
-  /*word-wrap: break-word; */
   text-align: center;
 }
 #SPVote {
@@ -2237,8 +2224,6 @@
   text-align: center;
   padding: 0px 5px;
   flex: 1 1 auto;
-  /*border: 1px solid #00dcff;
-  border-radius: 0% 0% 50% 50%;*/
   cursor: pointer;
   font-size: 70%;
 }
@@ -2263,8 +2248,6 @@
   width: 100%;
   padding: 0px 10px 20px 10px;
   flex: 1 1 auto;
-  /*overflow: scroll !important;*/
-  /*position: relative;*/
   float: right;
 }
 
@@ -2279,9 +2262,6 @@
 #problemLeftSBHeader {
   flex: 1 1 auto;
   display: inline-flex;
-  /*justify-content: space-between;*/
-  /*align-items: flex-start;*/
-  /*align-content: space-between;*/
   width: 100%;
 }
 
@@ -2329,7 +2309,20 @@
 
 
 /*Right Solutions SB*/
-
+#backSolutionArrowDiv {
+  width: 100%;
+}
+#backSolutionArrow {
+  flex: 1 1 auto;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  /*display: block;*/
+}
+#backSolutionArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+}
 #solutionsHeader {
   flex: 1 1 auto;
   text-align: center;
@@ -2513,19 +2506,17 @@
   flex-wrap: nowrap;
   align-items: strech;
   text-align: center;
+  margin: 0 auto;
 }
-#intensityLabel, #intensityNumber {
+#intensityNumber {
   margin: 0 auto;
   display: inline-block;
-  flex: 2 1 auto;
+  flex: 1 1 auto;
   text-align: center;
   padding: 5px;
   letter-spacing: 6px;
   color: #00dcff;
   font-size: 120%;
-}
-#intensityNumber {
-  flex: 3 1 auto;
   border: 1px solid #00dcff;
   border-width: 0px 0px 0px 1px;
 }
@@ -2591,6 +2582,7 @@
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
   margin-bottom: 0px;
+  margin-top: 5px;
 }
 
 #solutionIntro {
@@ -2598,7 +2590,7 @@
   border-width: 0px 0px 0px 0px;
   border-radius: 0px;
   margin: 0px 30px;
-  padding: 10px 0px;
+  padding: 0px 0px 0px 0px;
 }
 #solutionSummary {
   padding-top: 5px;
@@ -2633,6 +2625,8 @@
   width: 12em;
   text-align: center;
 } 
+
+
 /*ProsCons*/
 #prosConsMenu {
   display: inline-flex;
@@ -2694,28 +2688,19 @@
   background-color: inherit;
   /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
 }
-
+#developVersionsHeader {
+  
+}
 #developVersionsButton {
-  /*color: #00ffdc;
-  font-size: 120%;
-  border: 1px solid #00ffdc;
-  border-width: 1px 1px 0px 1px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 5px;
-  letter-spacing: 8px;
-  background-color: rgba(0,220,255,0.15);*/
-
   flex: 1 1 auto;
   color: #00dcff;
-  /*border: 1px solid #00dcff;*/
-  font-size: 80%;
+  font-size: 120%;
   padding: 5px;
   margin: 0px 0px;
   letter-spacing: 4px;
   text-align: center;
   border: 1px solid #00dcff;
-  border-width: 1px 0px 0px 0px;
+  border-width: 1px 0px 1px 0px;
 }
 #developVersionsButton:hover {
   background-color: #00dcff;
@@ -2725,7 +2710,7 @@
 #versionUnit {
   margin: 0 auto;
   border: 2px solid #00dcff;
-  border-width: 1px 0px 0px 0px;
+  border-width: 0px 0px 1px 0px;
   border-radius: 0px;
   padding-left: 3px;
   padding-bottom: 0px;
@@ -2843,6 +2828,53 @@ input#submitNewVersion:hover {
 
 /*End Profile Additions*/
 
+/*Arrows*/
 
+#SParrowImg {
+  background-color: #0f131c;
+  /*border: 1px solid #00dcff;*/
+  margin: 0 auto;
+  vertical-align: middle;
+ }
+#SParrowImg:hover {
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  cursor: pointer;
+ }
+/*#downArrowDiv:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+}*/
+ #downGreenArrowDiv, #downArrowDiv {
+   width: 100%;
+ }
+ #downGreenArrowDiv:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+ }
+ #downGreenArrow {
+  flex: 1 1 auto;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+#downArrowDiv {
+  flex: 1 1 auto;
+}
+#backDevelopArrow {
+  flex: 1 1 auto;
+  color: #00ffdc;
+  text-align: center;
+  /*margin: 0 auto;*/
+  display: block;
+}
+#backDevelopArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+}
+/*#downGreenArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+}*/
 
 /*End Layout 2 CSS*/

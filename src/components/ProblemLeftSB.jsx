@@ -79,8 +79,8 @@ export default class ProblemLeftSB extends React.Component {
       <div id="maxContainerRow">
         <div id="fullProblemLeft">
           <div id="problemLeftSBHeader">
-            <Link to={`/problem/${this.state.parentID}/solutions`}>
-              <img src={require('../assets/upArrow.png')} id="backArrow" width="30" height="30" alt="Back arrow, blue up arrow" />
+            <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+              <img src={require('../assets/upArrowLight.png')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
           <div id="problemLeftSBIntro">
