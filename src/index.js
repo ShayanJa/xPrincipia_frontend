@@ -43,6 +43,7 @@ import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx'
 import FullSolutionContainer from './containers/FullSolutionContainer.jsx';
 import LearnContentContainer1 from './containers/LearnContentContainer1.jsx';
 import LearnContentContainer2 from './containers/LearnContentContainer2.jsx';
+import LearnContentContainer3 from './containers/LearnContentContainer3.jsx';
 import LearnResourcesContainer1 from './containers/LearnResourcesContainer1.jsx';
 import LearnResourcesContainer2 from './containers/LearnResourcesContainer2.jsx';
 import LearnResourcesContainer3 from './containers/LearnResourcesContainer3.jsx';
@@ -137,12 +138,12 @@ ReactDOM.render(
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
-            <IndexRoute component={LearnContentMenu}></IndexRoute>
+            <IndexRoute component={LearnResourcesMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}>
-              <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content/1' component={LearnResourcesContainer1}></Route>
-              <Route path='/problem/:probID/learn/content/2' component={LearnResourcesContainer2}></Route>
-              <Route path='/problem/:probID/learn/content/3' component={LearnResourcesContainer3}></Route>
+              <IndexRoute component={LearnContentContainer1}></IndexRoute>
+              <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}></Route>
+              <Route path='/problem/:probID/learn/content/2' component={LearnContentContainer2}></Route>
+              <Route path='/problem/:probID/learn/content/3' component={LearnContentContainer3}></Route>
             </Route>
             <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}>
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>

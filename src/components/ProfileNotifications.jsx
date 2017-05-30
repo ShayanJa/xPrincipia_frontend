@@ -1,39 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link} from 'react-router'
 
 export default class ProfileNotifications extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.renderItem = this.renderItem.bind(this)
+    // this.submitVote = this.submitVote.bind(this)
+};
 
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.solutions.map(this.renderItem)} </ul>     
+			<ul> {this.props.displayItems.map(this.renderItem)} </ul>
+	               
 	    </div>
-
 		);
 	}
 
-	renderItem(solution) {
-
-    return (
-
-        <li key={solution.ID}>
-
-			<div id="versionUnit">
-
-				<div id="versionUnitTitle">
-					<div>
-                        <div id="versionNumber">XPrincipiav.112</div>
-                        <div id="changesFrom">Thank you for joining XPrincipia. Select "Tour" for a guide through the site.</div>
-                    </div>
-				</div>
-			</div>
-        </li>);
-
-  }
-}
-
-
-//convert float to Decimal
-function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
+   renderItem(item) {
+       if (this.props.currentType === 'solution') {
+        return (
+          <Link key={item.ID} to={`/fullsolution/${item.ProblemID}/${item.ID}/solutions`} >
+            <li><div id="profileRightUnit">
+                <div id="profileUnitTitle">{item.Title}</div>
+             <div id="unitSummary">{item.Summary} </div>
+            </div></li>
+          </Link>
+      );
+       }
+      else if (this.props.currentType === 'problem') {
+        return (
+          <Link key={item.ID} to={`/problem/${item.ID}/solutions`} >
+            <li><div id="profileRightUnit">
+                <div id="profileUnitTitle">{item.Title}</div>
+             <div id="unitSummary">{item.Summary} </div>
+            </div></li>
+          </Link>
+      );
+       }
+   }
 }

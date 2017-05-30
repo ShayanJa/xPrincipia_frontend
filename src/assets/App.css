@@ -1655,14 +1655,6 @@
 
 /*SideBar*/
 
-    #sidebarMenu {
-    	display: flex;
-    	flex-direction: column;
-      align-items: stretch;
-    	width: 100%;
-    	margin-bottom: 10px;
-      justify-content: center;
-    }
     .activeGreen div {
       color: #0f131c !important;
       background-color: #00ffdc;  
@@ -1691,10 +1683,19 @@
     	margin: 0px 0px;
     	letter-spacing: 12px;
     }
+    #sidebarMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 10px;
+      justify-content: center;
+      flex: 1 1 auto;
+      width: 40%;
+    }
     #SBButton, #SBButton1 {
     	flex: 1 1 auto;
     	color: #dddddd;
-    	font-size: 130%;
+    	font-size: 150%;
     	border: 1px solid #dddddd;
     	border-width: 1px 1px;
     	border-radius: 3px;
@@ -2086,10 +2087,6 @@
 #fullProblem {
   flex: 1 1 auto;
   width: 60%
-}
-#sidebarMenu {
-  flex: 1 1 auto;
-  width: 40%;
 }
 #fullProblemHeader,
 #fullProblemHeaderSB {

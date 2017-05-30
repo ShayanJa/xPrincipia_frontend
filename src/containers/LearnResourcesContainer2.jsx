@@ -36,7 +36,7 @@ constructor(props){
                 <div id="suggestionFormComponent">
             <form id="suggestionForm">
                 <fieldset>
-                    <legend>Complexity 2 Content</legend>
+                    <legend>Complexity 2 Resources</legend>
                          <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                          <br />
                          <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
