@@ -3,8 +3,6 @@ import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
-import ProblemPageExplanation from './explanations/ProblemPageExplanation.jsx';
-
 
 export default class FullProblem extends React.Component {
   constructor(props){
@@ -108,10 +106,8 @@ export default class FullProblem extends React.Component {
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
-          <Link to={`/problem/${this.state.probID}/explanation`}>
-            <div>
-              <img src={require('../assets/tutorial.png')} id="tutorialProblem" width="50" height="50" alt="Back arrow, blue up arrow" />
-            </div>
+          <Link to={`/problem/${this.state.probID}/tutorial`}>
+              <img src={require('../assets/tutorial.png')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
           </Link>
 
       </div>

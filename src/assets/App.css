@@ -2939,12 +2939,39 @@ input#submitNewVersion:hover {
 
 /*Explanations*/
 
-#explanation {
-  display: absolute;
+#tutorialProblemBackground {
+ background-color: rgba(0,220,255,0.15);
+ height: 99%;
+}
+#tutorialProblem {
+  /*display: absolute;
   z-index: 10;
   top: 10;
-  left: 10;
+  left: 10;*/
   border: 1px solid #00dcff;
+  width: 60%;
+  margin: 0 auto;
+  height: 60%;
+  margin-top: 10%;
+  background-color: #0f131c;
+}
+#tutorialBanner {
+  margin: 0 auto;
+  margin-top: 15%;
+}
+#tutorialTitle {
+  font-size: 140%;
+  text-align: center;
+  margin-top: 5%;
+
+}
+#tutorialSummary {
+  font-size: 120%;
+  text-align: center;
+
+}
+#tutorialProse {
+  text-align: center;
 }
 
 /*End Explanations*/
