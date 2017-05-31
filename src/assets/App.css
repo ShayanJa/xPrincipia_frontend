@@ -18,6 +18,8 @@
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
+      z-index: 5;
+      position: relative;
     }
     #maxContainerRow {
       width: 100%;
@@ -2024,7 +2026,7 @@
 #deleteLogo {
   display: block;
   margin: 0 auto;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 img#flagSolutionButton {
@@ -2040,7 +2042,16 @@ img#flagSolutionButton {
   box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
 }
 
+#tutorialProblem {
+  display: fixed;
+  top: 100px;
+  right: 100px;
+}
 
+#tutorialProblem:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
 
 
 /*Layout 2 CSS*/
@@ -2923,5 +2934,21 @@ input#submitNewVersion:hover {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
 }*/
+
+
+
+/*Explanations*/
+
+#explanation {
+  display: absolute;
+  z-index: 10;
+  top: 10;
+  left: 10;
+  border: 1px solid #00dcff;
+}
+
+/*End Explanations*/
+
+
 
 /*End Layout 2 CSS*/

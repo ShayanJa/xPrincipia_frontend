@@ -21,9 +21,10 @@ import LearnContentMenu from './components/LearnContentMenu.jsx';
 import LearnResourcesMenu from './components/LearnResourcesMenu.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/ProblemForm.jsx';
-import ProblemLeftSB from './components/ProblemLeftSB.jsx';
 import ProblemDiscussMenu from './components/ProblemDiscussMenu.jsx';
 import ProblemLearnMenu from './components/ProblemLearnMenu.jsx';
+import ProblemLeftSB from './components/ProblemLeftSB.jsx';
+import ProblemPageExplanation from './components/explanations/ProblemPageExplanation';
 import ProblemSolutionsMenu from './components/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/ProblemTopSolutions.jsx';
 import ProfileNotifications from './components/ProfileNotifications.jsx';
@@ -77,6 +78,7 @@ ReactDOM.render(
       <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
       <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
+    <Route path='/problem/:probID/explanation' component={ProblemPageExplanation}></Route>
     <Route path='/error' component={ErrorContainer}>
       <IndexRoute component={Redirection}></IndexRoute>
       <Route path='/404' component={Error404}></Route>
