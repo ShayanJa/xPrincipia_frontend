@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
 export default class FullSolutionContent extends React.Component {
   constructor(props){
@@ -83,6 +84,7 @@ export default class FullSolutionContent extends React.Component {
                     <div id="consButton">Cons</div>
                 </Link>
               </div>
+            
               <div>
             {this.props.children}
             </div>

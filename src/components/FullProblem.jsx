@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import ProblemPageExplanation from './explanations/ProblemPageExplanation.jsx';
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
 export default class FullProblem extends React.Component {
   constructor(props){
@@ -79,7 +79,14 @@ export default class FullProblem extends React.Component {
    render() {
 
       return (
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+      transitionAppearTimeout={2000}
+      transitionEnter={false}
+      transitionLeave={false}>
       <div id="maxContainerColumn">
+        
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../assets/upArrowLight.png')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
@@ -116,7 +123,7 @@ export default class FullProblem extends React.Component {
 
       </div>
 
-
+      </ReactCSSTransitionGroup>
       );
    }
 }

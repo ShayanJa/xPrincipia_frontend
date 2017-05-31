@@ -71,7 +71,7 @@ export default class EditSolutionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset id="editFormFieldset">
-                <legend>Improve</legend>
+                <legend>Edit</legend>
                       
                       <label htmlFor="solutionTitle" id="editTitleFormLabel">Title<br />
                          <input type="text" name="solutionTitle" required="required" maxLength="140" id="editTitleForm" autoFocus/>
