@@ -22,9 +22,7 @@ export default class FullSolutionContent extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+       
     });   
     }
 
@@ -37,9 +35,9 @@ export default class FullSolutionContent extends React.Component {
           })
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     }); 
 
   }
@@ -85,26 +83,9 @@ export default class FullSolutionContent extends React.Component {
                     <div id="consButton">Cons</div>
                 </Link>
               </div>
-            <div>
-              <br />
-              <div id="solutionFormLabel">Description</div>
-              <p id="solutionDescription">
-                  {this.state.solutionInfo.Description}
-              </p>
+              <div>
+            {this.props.children}
             </div>
-            <div>
-              <div id="solutionFormLabel">References</div>
-              <p id="solutionReferences">
-                 {this.state.solutionInfo.References}
-              </p>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <p id="xp">XP</p>
-            <br />
         </div>
       );
    }
