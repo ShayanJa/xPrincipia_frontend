@@ -2042,13 +2042,13 @@ img#flagSolutionButton {
   box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
 }
 
-#tutorialProblem {
+#tutorialProblemButton {
   display: fixed;
   top: 100px;
   right: 100px;
 }
 
-#tutorialProblem:hover {
+#tutorialProblemButton:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
@@ -2939,10 +2939,6 @@ input#submitNewVersion:hover {
 
 /*Explanations*/
 
-#tutorialProblemBackground {
- background-color: rgba(0,220,255,0.15);
- height: 99%;
-}
 #tutorialProblem {
   /*display: absolute;
   z-index: 10;
@@ -2952,26 +2948,55 @@ input#submitNewVersion:hover {
   width: 60%;
   margin: 0 auto;
   height: 60%;
-  margin-top: 10%;
+  margin-top: 4%;
   background-color: #0f131c;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 #tutorialBanner {
   margin: 0 auto;
   margin-top: 15%;
 }
 #tutorialTitle {
-  font-size: 140%;
+  font-size: 200%;
   text-align: center;
   margin-top: 5%;
+  color: #00dcff;
+  letter-spacing: 8px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 
 }
 #tutorialSummary {
-  font-size: 120%;
+  font-size: 140%;
   text-align: center;
-
+  letter-spacing: 2px;
 }
 #tutorialProse {
   text-align: center;
+  letter-spacing: 2px;
+  line-height: 150%;
+  /*margin-top: 3%;*/
+}
+#tutorialNumbers {
+  color: #00dcff;
+}
+#tutorialReturn {
+  margin: 0 auto;
+  color: #00ffdc;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #00ffdc;
+  width: 30%;
+  margin-bottom: 3%;
+  margin-top: 5%;
+  font-size: 140%;
+  letter-spacing: 8px;
+  background-color: rgba(0,255,220,0.05)
+}
+#tutorialReturn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);
+
 }
 
 /*End Explanations*/
