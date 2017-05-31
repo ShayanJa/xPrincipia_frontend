@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-export default class FullSolutionContent extends React.Component {
+export default class FullSolutionDescription extends React.Component {
   constructor(props){
         super(props);
 
@@ -61,30 +61,6 @@ export default class FullSolutionContent extends React.Component {
    render() {
       return (
       <div> 
-            <div id="voteVersionsMenu">
-                    <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
-                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
-                        <div id="versionsButton">
-                                Versions
-                        </div>
-                    </Link>
-              </div>
-              <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
-              {/*<img src={require('../assets/flag.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />*/}
-              <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
-                <img src={require('../assets/edit.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
-              </Link>
-              {/*<img src={require('../assets/delete.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />*/}
-
-
-              <div id="prosConsMenu">
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
-                    <div id="prosButton">Pros</div>
-                </Link>
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`}>
-                    <div id="consButton">Cons</div>
-                </Link>
-              </div>
             <div>
               <br />
               <div id="solutionFormLabel">Description</div>
@@ -105,7 +81,7 @@ export default class FullSolutionContent extends React.Component {
             <br />
             <p id="xp">XP</p>
             <br />
-        </div>
+      </div>
       );
    }
 }

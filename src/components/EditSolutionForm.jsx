@@ -69,23 +69,23 @@ export default class EditSolutionForm extends React.Component {
   render() {
       return (
       <div id="createSolutionBox">
-          <form id="createVersionForm">
-            <fieldset id="versionFormFieldset">
+          <form id="createForm">
+            <fieldset id="editFormFieldset">
                 <legend>Improve</legend>
                       
-                      <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
+                      <label htmlFor="solutionTitle" id="editTitleFormLabel">Title<br />
                          <input type="text" name="solutionTitle" required="required" maxLength="140" id="editTitleForm" autoFocus/>
                       </label><br />
 
-                      <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
+                      <label htmlFor="solutionSummary" id="editSummaryFormLabel">Summary<br />
                          <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="editSummaryForm"/>
                       </label><br />
 
-                      <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
+                      <label htmlFor="solutionDescription" id="editDescriptionFormLabel">Description<br />
                           <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="editDescriptionForm">
                           </textarea></label><br />
 
-                      <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
+                      <label htmlFor="solutionReferences" id="editReferenceFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="editReferencesForm">
                           </textarea></label><br />
                       <Link to={`/problem/${this.props.params.probID}/solutions`}>

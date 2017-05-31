@@ -5,6 +5,7 @@ import App from './App';
 
 //Load Components
 
+import EditSolutionForm from './components/EditSolutionForm.jsx';
 import Error404 from './components/Error404.jsx';
 import FeedbackForm from './components/FeedbackForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
@@ -118,6 +119,7 @@ ReactDOM.render(
               <IndexRoute component={FullSolution}></IndexRoute>
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
                 <IndexRoute component={FullSolutionContent}></IndexRoute>
+                <Route path='/fullsolution/:probID/:solutionID/edit' component={EditSolutionForm}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}></Route>

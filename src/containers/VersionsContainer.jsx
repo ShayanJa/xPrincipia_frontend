@@ -33,7 +33,7 @@ export default class VersionsContainer extends React.Component {
             <div id="developVersionsHeader">
                 <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}`}>
                     <div id="downArrowDiv">
-                        <img src={require('../assets/upArrowLight.png')} id="backDevelopArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                        <img src={require('../assets/leftArrowLight.png')} id="backDevelopArrow" width="30" height="50" alt="Back arrow, blue up arrow" />
                     </div>
                 </Link>
                 <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versionform`}>

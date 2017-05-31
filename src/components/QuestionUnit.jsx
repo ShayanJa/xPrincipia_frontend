@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import img from '../assets/deleteLogo.png';
 
 export default class QuestionUnit extends React.Component {
 constructor(props){
@@ -46,7 +45,7 @@ constructor(props){
 				</div>
                 {/*<div id="flagContainer">*/}
                     <div id="editSBButton">Edit</div>
-                    <div id="flagSBButton"><img src={require('../assets/deleteLogo.png')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" /></div>
+                    <div id="flagSBButton"><img src={require('../assets/delete.png')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" /></div>
                 {/*</div>*/}
 				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">

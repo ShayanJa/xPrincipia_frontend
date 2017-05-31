@@ -74,16 +74,16 @@ export default class FullSolution extends React.Component {
       <div id="maxContainer"> 
         <div id="fullSolution">
             <div id="solutionIntro">
-            <Link to={`/problem/${this.props.params.probID}/solutions`}>
-              <div id="backSolutionArrowDiv">
-                  <img src={require('../assets/upArrowLight.png')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
-              </div>
-            </Link>
-              <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
-              <div id="currentVersion">v.112</div>
-              <p id="solutionSummary">
+                <Link to={`/problem/${this.props.params.probID}/solutions`}>
+                <div id="backSolutionArrowDiv">
+                    <img src={require('../assets/upArrowLight.png')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
+                </Link>
+                <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
+                <div id="currentVersion">v.112</div>
+                <p id="solutionSummary">
                 {this.state.solutionInfo.Summary}
-              </p>
+                </p>
             </div>
             {React.cloneElement(this.props.children, {probID: this.state.probID}, {solutionID: this.state.solutionID})}
         </div>
