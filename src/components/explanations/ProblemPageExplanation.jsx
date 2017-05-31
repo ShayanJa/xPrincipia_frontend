@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link  } from 'react-router';
 
 export default class Info extends React.Component {
    render() {
       return (
-      <div id="info">
+      <div id="explanation">
           <div id="banner">
               <div id="bannerTitle">Problem Page</div>
               <div id="bannerSlogan">Break down and solve problems</div>
@@ -20,6 +21,11 @@ export default class Info extends React.Component {
               </div>
               <br />
           </div>
+          {/*<Link to={`/problem/${this.state.parentID}/subproblems`}>*/}
+            <div>
+                Return
+            </div>
+          {/*</Link>*/}
       </div>
       );
    }
