@@ -11,6 +11,7 @@ import FeedbackForm from './components/FeedbackForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
 import FullSolution from './components/FullSolution.jsx';
 import FullSolutionContent from './components/FullSolutionContent.jsx';
+import FullSolutionDescription from './components/FullSolutionDescription.jsx';
 import FullSolutionMenu from './components/FullSolutionMenu.jsx';
 import FullVersion from './components/FullVersion.jsx';
 import Info from './components/Info.jsx';
@@ -122,9 +123,12 @@ ReactDOM.render(
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
                 <IndexRoute component={FullSolutionContent}></IndexRoute>
                 <Route path='/fullsolution/:probID/:solutionID/edit' component={EditSolutionForm}></Route>
-                <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}></Route>
-                <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}></Route>
-                <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}>
+                  <IndexRoute component={FullSolutionDescription}></IndexRoute>
+                  <Route path='/fullsolution/:probID/:solutionID/description' component={FullSolutionDescription}></Route>
+                  <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}></Route>
+                  <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}></Route>                
+                </Route>
                 <Route path='/fullsolution/:probID/:solutionID/versions' component={VersionsContainer}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/fullversion' component={FullVersion}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/versionform' component={VersionForm}></Route>
@@ -143,7 +147,7 @@ ReactDOM.render(
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
-            <IndexRoute component={LearnResourcesMenu}></IndexRoute>
+            <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}>
               <IndexRoute component={LearnContentContainer1}></IndexRoute>
               <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}></Route>

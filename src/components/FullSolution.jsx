@@ -48,9 +48,9 @@ export default class FullSolution extends React.Component {
 
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     }); 
 
   }
@@ -85,7 +85,7 @@ export default class FullSolution extends React.Component {
                 {this.state.solutionInfo.Summary}
                 </p>
             </div>
-            {React.cloneElement(this.props.children, {probID: this.state.probID}, {solutionID: this.state.solutionID})}
+            {React.cloneElement(this.props.children)}
         </div>
       </div>
       );
