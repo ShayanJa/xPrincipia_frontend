@@ -35,7 +35,7 @@ export default class ProblemLearnMenu extends React.Component {
                 </Link>
             </div>
 
-            {React.cloneElement(this.props.children, {probID: this.state.probID})}
+            {React.cloneElement(this.props.children, {probID: this.props.params.probID})}
         </div>
 
       );

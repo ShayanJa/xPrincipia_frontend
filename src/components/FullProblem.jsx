@@ -3,7 +3,7 @@ import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
-import ProblemPageExplanation from './explanations/ProblemPageExplanation.jsx';
+
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import TutorialProblemPage from './tutorials/TutorialProblemPage.jsx';
 
