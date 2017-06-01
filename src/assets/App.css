@@ -379,7 +379,7 @@
  /*CreateProblem and Create Solution*/
 
     #createForm {
-      background-color: #0f131c;
+      background-color: inherit;
       color: #00dcff;
       height: auto;
       border: 2px solid #00dcff;
@@ -407,18 +407,26 @@
     #editSummaryFormLabel, #editDescriptionFormLabel, #editReferencesFormLabel     {
       clear: both;
       color: #00dcff;
-      margin-top: 5%;
+      margin-top: 3%;
+      letter-spacing: 1px;
     }
-
     #editTitleFormLabel, #versionChangesFormLabel {
       clear: both;
       color: #00dcff;
-      margin-top: 2%;      
+      margin-top: 2%;    
+      background-color: inherit;  
+      letter-spacing: 1px;
     }
+    #editTitleForm, #editSummaryForm, 
+    #editDescriptionForm, #editReferencesForm {
+      background-color: inherit; 
+    }
+ 
 
 
     fieldset {
     	border: 1px solid #00dcff;
+      background-color: inherit;
     }
     input, textarea {
       font-family: 'Alegreya Sans SC', sans-serif;
@@ -2082,7 +2090,7 @@ img#flagSolutionButton {
   margin: 0 auto;
   vertical-align: middle;
   margin-left: 25%;
-  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
 
 #backArrow:hover {
@@ -2844,6 +2852,9 @@ label + input[type=radio] + label {
   background-color: inherit;
 }
 #versionFormFieldset {
+  background-color: inherit;
+}
+#editFormFieldset {
   background-color: inherit;
 }
 input#submitNewVersion {

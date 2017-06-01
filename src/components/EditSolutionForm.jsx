@@ -85,7 +85,7 @@ export default class EditSolutionForm extends React.Component {
                           <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="editDescriptionForm">
                           </textarea></label><br />
 
-                      <label htmlFor="solutionReferences" id="editReferenceFormLabel">References<br />
+                      <label htmlFor="solutionReferences" id="editReferencesFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="editReferencesForm">
                           </textarea></label><br />
                       <Link to={`/problem/${this.props.params.probID}/solutions`}>
