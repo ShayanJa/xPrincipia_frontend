@@ -401,12 +401,19 @@
       height: 10em;
     }
     #problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
-    #problemDescriptionFormLabel, #problemRequirementsFormLabel,
+    #problemDescriptionFormLabel, 
     #problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
-    #solutionDescriptionFormLabel, #solutionEvidenceFormLabel,
-    #solutionExperimentsFormLabel, #solutionReferenceFormLabel, #solutionSummaryFormLabel {
+    #solutionDescriptionFormLabel, #solutionReferenceFormLabel, #solutionSummaryFormLabel,
+    #editSummaryFormLabel, #editDescriptionFormLabel, #editReferencesFormLabel     {
       clear: both;
       color: #00dcff;
+      margin-top: 5%;
+    }
+
+    #editTitleFormLabel, #versionChangesFormLabel {
+      clear: both;
+      color: #00dcff;
+      margin-top: 2%;      
     }
 
 
@@ -423,18 +430,19 @@
       border-radius: 5px;
       padding: 3px 8px 3px 8px;
       display: block;
-      float: left;
+      /*float: left;*/
       margin-bottom: 10px;
-      margin-left: 7%;
-      width: 82%;
+      /*margin-left: 7%;*/
+      width: 80%;
       resize: none;
+      margin: 0 auto;
     }
     textarea {
     	text-align: left;
     	font-family: 'Alegreya Sans', sans-serif;
     	font-weight: 100;
     	height: 10em;
-      margin-left: 7.5%;
+      /*margin-left: 7.5%;*/
     }
     input:focus {
     	border-color: #00dcff;
@@ -499,12 +507,9 @@
     #fullProblem {
       width: 60%;
       float: left;
+      flex: 1 1 auto;
     }
     #solutionHeader, #problemHeader {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
     	display: inline-flex;
     	justify-content: space-between;
     	align-items: flex-start;
@@ -1394,7 +1399,6 @@
       border: 1px solid #00dcff;
       font-size: 90%;
       text-align: justify;
-      color: ;
     }
     #suggestionUnit {
       display: -webkit-box;
@@ -2079,7 +2083,7 @@ img#flagSolutionButton {
   margin: 0 auto;
   vertical-align: middle;
   margin-left: 25%;
-  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
 }
 
 #backArrow:hover {
@@ -2114,10 +2118,7 @@ img#flagSolutionButton {
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
 }
-#fullProblem {
-  flex: 1 1 auto;
-  width: 60%
-}
+
 #fullProblemHeader,
 #fullProblemHeaderSB {
   display: inline-flex;
@@ -2312,6 +2313,10 @@ img#flagSolutionButton {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#SPHeaderLeftSB:hover {
+  box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
+
 }
 #SPTitleLeftSB {
   margin: 0 auto;
@@ -2574,8 +2579,6 @@ label {
   display: inline-block;
   cursor: pointer;
   font-weight: bold;
-  padding: 5px 20px;
-  width: 4em;
 }
 
 input[type=radio]:checked + label{
@@ -2850,7 +2853,8 @@ input#submitNewVersion {
   border: 1px solid #00dcff;
   background-color: inherit;
   width: 86%;
-  margin-left: 7.5%;
+  margin: 0 auto;
+  margin-top: 5%;
 }
 input#submitNewVersion:hover {
   color: #0f131c;

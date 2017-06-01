@@ -76,7 +76,7 @@ export default class VersionForm extends React.Component {
           <form id="createVersionForm">
             <fieldset id="versionFormFieldset">
                 <legend>Develop</legend>
-                      <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Changes from v.112<br />
+                      <label htmlFor="solutionDescription" id="versionChangesFormLabel">Changes from v.112<br />
                           <textarea name="solutionDescription" required="required" placeholder='This allows users to see your updates.' id="versionChangesForm">
                           </textarea></label><br />
 
