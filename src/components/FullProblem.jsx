@@ -5,6 +5,8 @@ import cookie from 'react-cookie';
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import ProblemPageExplanation from './explanations/ProblemPageExplanation.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+import TutorialProblemPage from './tutorials/TutorialProblemPage.jsx';
+
 
 export default class FullProblem extends React.Component {
   constructor(props){
@@ -94,7 +96,7 @@ export default class FullProblem extends React.Component {
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
           </div>
-          {/*<img src={require('../assets/tutorial.png')} id="tutorialProblem" width="50" height="50" alt="Back arrow, blue up arrow" />*/}
+          {/*<img src={require('../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />*/}
         </div>
         <div id="problemRow2">
           <div id="fullProblem">
@@ -115,11 +117,11 @@ export default class FullProblem extends React.Component {
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
-          <Link to={`/problem/${this.state.probID}/explanation`}>
-            <div>
-              <img src={require('../assets/tutorial.png')} id="tutorialProblem" width="50" height="50" alt="Back arrow, blue up arrow" />
-            </div>
-          </Link>
+        <div id="tutorialProblemButtonDiv">
+          <img src={require('../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        </div>
+        
+        <TutorialProblemPage />
 
       </div>
 
