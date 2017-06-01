@@ -4,7 +4,8 @@ import img from '../assets/dnablackinvert.png';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/ProfileUnit.jsx';
 import cookie from 'react-cookie';
-import axios from 'axios'
+import axios from 'axios';
+import TutorialProfilePage from '../components/tutorials/TutorialProfilePage.jsx';
 
 export default class ProfileContainer extends React.Component {
     constructor(){
@@ -123,6 +124,12 @@ export default class ProfileContainer extends React.Component {
             {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
       </div>
+
+        <div id="tutorialProfileButtonDiv">
+          <img src={require('../assets/tutorial.svg')} id="tutorialProfileButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        </div>
+        
+        <TutorialProfilePage />
     </div>
 
       );

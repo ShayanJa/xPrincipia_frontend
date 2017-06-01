@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
-import cookie from 'react-cookie'
+import cookie from 'react-cookie';
+import TutorialSolutionPage from '../components/tutorials/TutorialSolutionPage.jsx';
 
 export default class ProblemLeftSB extends React.Component {
   constructor(props){
@@ -76,34 +77,43 @@ export default class ProblemLeftSB extends React.Component {
    render() {
 
       return (
-      <div id="maxContainerRow">
-        <div id="fullProblemLeft">
-          <div id="problemLeftSBHeader">
-            <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-              <img src={require('../assets/upArrowLight.png')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
-            </Link>
-          </div>
-          <div id="problemLeftSBIntro">
-            {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
-            <div id="SPHeaderLeftSB">
-              <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
-              <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
-              {/*<div>
-                <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
-              </div>*/}
-            </div> 
-              <div id="fullProblemHeaderSB">
-                <div id="problemAdditionalInfoLabelSB">Additional Info</div>
-                <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
-              </div>
-              <p id="problemSummary">
-                {this.state.problemInfo.Summary}
-              </p>
+      <div id="fullWide">
+        <div id="maxContainerRow">
+          <div id="fullProblemLeft">
+            <div id="problemLeftSBHeader">
+              <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+                <img src={require('../assets/upArrowLight.png')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+              </Link>
             </div>
+            <div id="problemLeftSBIntro">
+              {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
+              <div id="SPHeaderLeftSB">
+                <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
+                <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
+                {/*<div>
+                  <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
+                </div>*/}
+              </div> 
+                <div id="fullProblemHeaderSB">
+                  <div id="problemAdditionalInfoLabelSB">Additional Info</div>
+                  <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
+                </div>
+                <p id="problemSummary">
+                  {this.state.problemInfo.Summary}
+                </p>
+              </div>
+            </div>
+          <div id="sidebar">
+            {React.cloneElement(this.props.children, {probID: this.state.probID})}
           </div>
-        <div id="sidebar">
-          {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
+
+          <div id="tutorialSolutionButtonDiv">
+            <img src={require('../assets/tutorial.svg')} id="tutorialSolutionButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+          </div>
+          
+          <TutorialSolutionPage />
+
       </div>
       );
    }

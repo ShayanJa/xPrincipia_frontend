@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link  } from 'react-router';
 
-export default class ProblemPageTutorial extends React.Component {
+export default class TutorialProblemPage extends React.Component {
    render() {
       return (
         <div id="tutorialProblem">
           <div id="tutorialbanner">
-              <div id="tutorialTitle">Problem Page Tutorial</div>
+              <div id="tutorialTitle">Problems and Sub Problems</div>
               <div id="tutorialSummary">
                   <span id="tutorialNumbers">1. </span>
                   Break down and solve problems
@@ -20,7 +20,7 @@ export default class ProblemPageTutorial extends React.Component {
                   <span id="tutorialNumbers">2. </span>
                     Discuss the problem: 
               </div>
-                  <br />Ask or answer questions
+                    Ask or answer questions
                   <br />Suggest new ideas <br />
                   Engage in freeform discussion
                   <br /> 
@@ -34,11 +34,9 @@ export default class ProblemPageTutorial extends React.Component {
                   
               <br />
           </div>
-          {/*<Link to={`/problem/${this.state.parentID}/subproblems`}>*/}
             <div id="tutorialReturn">
                 Return
             </div>
-          {/*</Link>*/}
         </div>
       );
    }

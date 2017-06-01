@@ -11,6 +11,9 @@
     	position: relative;
     	background-color: #0f131c;
     }
+    #fullWide {
+      width: 100%;
+    }
     #maxContainerColumn {
       width: 100%;
       display: inline-flex;
@@ -27,6 +30,7 @@
     	flex-direction: row;
       word-wrap: break-word; 
       justify-content: center;
+      margin-bottom: 3%;
     }
     h1 {
     	text-align: center;
@@ -989,7 +993,7 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
-    	margin: 3% 15% 0% 15%;
+    	margin: 3% 15% 3% 15%;
     	border: 1px solid #00dcff;
       width: 71%;
     }
@@ -1491,6 +1495,7 @@
     #welcomeUnitsContainer {
     	margin: 2px 15px 5px 5px;
     	padding: 5px;
+      margin-bottom: 10%;
     }
     #welcomeUnitsContainer ul li {
       display: inline;
@@ -1555,8 +1560,11 @@
       margin: 1%;
       word-wrap: break-word; 
       align-items: center; 
-     justify-content: center;
-     background-color: rgba(0,220,255,0.05);
+      justify-content: center;
+      background-color: rgba(0,220,255,0.05);
+    }
+    #welcomeProblemsHeader:hover {
+      box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
@@ -1737,13 +1745,25 @@
     	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     	letter-spacing: 10px;
     }
-    #createButton:hover, #createSPButton:hover {
+    /*#createButton:hover {
+    	background-color: rgba(0,220,255,0.05);
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      cursor: pointer;
+    }
+    #createSPButton:hover {
+    	background-color: rgba(0,255,220,0.05);
+      box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+      cursor: pointer;
+    }*/
+    #createButton:hover {
     	background-color: #00dcff;
     	color: #0f131c;
     	cursor: pointer;
     }
     #createSPButton:hover {
       background-color: #00ffdc;
+      color: #0f131c;
+    	cursor: pointer;
     }
     #createButton:active {
       background-color: #00dcff;
@@ -2042,16 +2062,7 @@ img#flagSolutionButton {
   box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
 }
 
-#tutorialProblemButton {
-  display: fixed;
-  top: 100px;
-  right: 100px;
-}
 
-#tutorialProblemButton:hover {
-  cursor: pointer;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-}
 
 
 /*Layout 2 CSS*/
@@ -2109,10 +2120,6 @@ img#flagSolutionButton {
 }
 #fullProblemHeader,
 #fullProblemHeaderSB {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -2230,6 +2237,9 @@ img#flagSolutionButton {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#SPHeader:hover {
+  box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
 }
 #SPTitle {
   margin: 0 auto;
@@ -2939,11 +2949,21 @@ input#submitNewVersion:hover {
 
 /*Explanations*/
 
-#tutorialProblem {
-  /*display: absolute;
-  z-index: 10;
-  top: 10;
-  left: 10;*/
+#tutorialProblemButtonDiv, #tutorialWelcomeButtonDiv,
+#tutorialProfileButtonDiv, #tutorialSolutionButtonDiv  {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+#tutorialProblemButtonDiv:hover, #tutorialWelcomeButtonDiv:hover,
+#tutorialProfileButtonDiv:hover, #tutorialSolutionButtonDiv:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+
+#tutorialProblem, #tutorialWelcome, 
+#tutorialProfile, #tutorialSolution {
   border: 1px solid #00dcff;
   width: 60%;
   margin: 0 auto;
@@ -2951,6 +2971,10 @@ input#submitNewVersion:hover {
   margin-top: 4%;
   background-color: #0f131c;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  
+  
+  /*display: none;*/
+
 }
 #tutorialBanner {
   margin: 0 auto;
