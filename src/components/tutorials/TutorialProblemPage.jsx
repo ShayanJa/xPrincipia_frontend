@@ -35,7 +35,7 @@ export default class TutorialProblemPage extends React.Component {
               <br />
           </div>
             <div id="tutorialReturn">
-                Return
+                Close
             </div>
         </div>
       );

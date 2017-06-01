@@ -43,7 +43,6 @@ export default class Header extends React.Component {
 
    render() {
       return (
-      <div id="headerSection">
         <div id="header">
             <div id="explore">
                 <form id="exploreFormHeader">
@@ -54,11 +53,10 @@ export default class Header extends React.Component {
                 </form>
             </div>
             <div id="logo">
-              <Link to="/welcome"><div>XPrincipia</div></Link>
+              <Link to="/welcome"><div id="logoName">XPrincipia</div></Link>
             </div>
             <HeaderAvatar />
         </div>
-      </div>
       );
    }
 }

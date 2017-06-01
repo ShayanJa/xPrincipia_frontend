@@ -680,24 +680,21 @@
 /*Header*/
 
     #header {
-      background-color: #0f131c;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px;
     	overflow: hidden;
     	width: 100%;
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
     	display: inline-flex;
     	flex-direction: row;
     	justify-content: space-between;
     	flex-wrap: nowrap;
-    	align-items: strech;
+    	align-items: stretch;
       text-align: center;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
     #explore, #logo, #avatarHeader {
-      margin: auto;
+      margin: 0 auto;
       display: inline-block;
       overflow: hidden;
     	flex: 1 1 auto;
@@ -707,17 +704,17 @@
     	color: #dddddd;
     	letter-spacing: 8px;
       width: 25%;
+      margin: 0 auto;
     }
     #exploreFormHeader{
       overflow: hidden;
       padding: 0px;
-      margin: 0px;
+      margin: 0 auto;
       text-align: center;
       color: #dddddd;
       letter-spacing: 8px;
       font-size: 100%;
-      padding-top: 10px;
-      text-align: center;
+      margin-top: 2px;
       }
     #exploreInput {
       color: #dddddd;
@@ -740,6 +737,7 @@
     	font-size: 80%;
     	font-family: 'Raleway', sans-serif;
     	text-align: center;
+      margin: 0 auto;
     }
     #submitExplore {
     	display: none;
@@ -752,7 +750,9 @@
 /*Changing the width to 100% gets rid of gap on right
  but shrinking screen messes up avatar*/
       width: 50%;
-
+    }
+    #logoName {
+      margin: 0 auto;
     }
     #avatarHeader {
       width: 25%;
@@ -1499,7 +1499,6 @@
     #welcomeUnitsContainer {
     	margin: 2px 15px 5px 5px;
     	padding: 5px;
-      margin-bottom: 10%;
     }
     #welcomeUnitsContainer ul li {
       display: inline;
@@ -2966,6 +2965,10 @@ input#submitNewVersion:hover {
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 
+#tutorialWelcomeButtonDiv {
+  margin-top: 10%;
+}
+
 #tutorialProblem, #tutorialWelcome, 
 #tutorialProfile, #tutorialSolution {
   border: 1px solid #00dcff;
@@ -2975,11 +2978,9 @@ input#submitNewVersion:hover {
   margin-top: 4%;
   background-color: #0f131c;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-  
-  
-  /*display: none;*/
 
-}
+  display: none;
+  }
 #tutorialBanner {
   margin: 0 auto;
   margin-top: 15%;
@@ -3032,3 +3033,15 @@ input#submitNewVersion:hover {
 
 
 /*End Layout 2 CSS*/
+
+
+/*Transitions*/
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
