@@ -1187,7 +1187,6 @@
     	border: 1px solid #00dcff;
     	font-size: 90%;
     	text-align: justify;
-    	color: ;
     }
     #questionUnit {
     	display: -webkit-box;
@@ -3045,9 +3044,12 @@ input#submitNewVersion:hover {
 
 /*End Layout 2 CSS*/
 
+<<<<<<< HEAD
 
 /*Transitions*/
 
+=======
+>>>>>>> 2c68e8c261ffdde6c014b8aa20ac2dd0a85414b7
 .example-appear {
   opacity: 0.01;
 }

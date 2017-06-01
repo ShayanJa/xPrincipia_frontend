@@ -3,6 +3,10 @@ import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2c68e8c261ffdde6c014b8aa20ac2dd0a85414b7
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import TutorialProblemPage from './tutorials/TutorialProblemPage.jsx';
 
