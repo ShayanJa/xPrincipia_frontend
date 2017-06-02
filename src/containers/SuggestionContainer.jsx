@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import SuggestionUnit from '../components/SuggestionUnit.jsx';
-import SuggestionForm from '../components/SuggestionForm.jsx';
+import SuggestionUnit from '../components/suggestions/SuggestionUnit.jsx';
+import SuggestionForm from '../components/suggestions/SuggestionForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router';
-import SolutionUnit from '../components/SolutionUnit.jsx';
+import SolutionUnit from '../components/solutions/SolutionUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
-import VersionForm from '../components/VersionForm.jsx';
-import VersionsUnit from '../components/VersionsUnit.jsx';
+import VersionForm from '../components/versions/VersionForm.jsx';
+import VersionsUnit from '../components/versions/VersionsUnit.jsx';
 import axios from 'axios'
 
 export default class VersionsContainer extends React.Component {

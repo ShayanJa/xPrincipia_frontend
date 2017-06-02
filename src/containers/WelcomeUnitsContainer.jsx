@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import WelcomeUnit from '../components/WelcomeUnit.jsx';
-import WelcomeMore from '../components/WelcomeMore.jsx';
+import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
+import WelcomeMore from '../components/welcome/WelcomeMore.jsx';
 
 export default class WelcomeUnitsContainer extends React.Component {
     constructor(props){

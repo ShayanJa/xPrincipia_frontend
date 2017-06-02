@@ -2,7 +2,7 @@ import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import TutorialSolutionPage from '../components/tutorials/TutorialSolutionPage.jsx';
+import TutorialSolutionPage from '../tutorials/TutorialSolutionPage.jsx';
 
 export default class ProblemLeftSB extends React.Component {
   constructor(props){
@@ -82,7 +82,7 @@ export default class ProblemLeftSB extends React.Component {
           <div id="fullProblemLeft">
             <div id="problemLeftSBHeader">
               <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                <img src={require('../assets/leftArrow.svg')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                <img src={'/frontend/src/assets/leftArrow.svg'} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
               </Link>
             </div>
             <div id="problemLeftSBIntro">
@@ -109,7 +109,7 @@ export default class ProblemLeftSB extends React.Component {
         </div>
 
           <div id="tutorialSolutionButtonDiv">
-            <img src={require('../assets/tutorial.svg')} id="tutorialSolutionButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+            <img src={'/frontend/src/assets/tutorial.svg'} id="tutorialSolutionButton" width="50" height="50" alt="Back arrow, blue up arrow" />
           </div>
           
           <TutorialSolutionPage />

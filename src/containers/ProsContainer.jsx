@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import ProsForm from '../components/ProsForm.jsx';
-import ProsUnit from '../components/ProsUnit.jsx';
+import ProsForm from '../components/proscons/ProsForm.jsx';
+import ProsUnit from '../components/proscons/ProsUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 

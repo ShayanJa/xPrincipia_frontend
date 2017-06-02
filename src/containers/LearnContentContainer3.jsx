@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import LearnContentUnit3 from '../components/LearnContentUnit3.jsx';
+import LearnContentUnit3 from '../components/learn/LearnContentUnit3.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 

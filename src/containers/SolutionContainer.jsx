@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import SolutionUnit from '../components/SolutionUnit.jsx';
+import SolutionUnit from '../components/solutions/SolutionUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 import axios from 'axios'
 

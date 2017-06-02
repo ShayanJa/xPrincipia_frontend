@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import FreeFormUnit from '../components/FreeFormUnit.jsx';
-import FreeFormForm from '../components/FreeFormForm.jsx';
+import FreeFormUnit from '../components/freeform/FreeFormUnit.jsx';
+import FreeFormForm from '../components/freeform/FreeFormForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 

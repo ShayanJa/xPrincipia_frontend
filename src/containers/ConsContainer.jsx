@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import ConsForm from '../components/ConsForm.jsx';
-import ConsUnit from '../components/ConsUnit.jsx';
+import ConsForm from '../components/proscons/ConsForm.jsx';
+import ConsUnit from '../components/proscons/ConsUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 
@@ -14,6 +14,7 @@ constructor(props){
         }
         
     };
+
     componentDidMount(){
         var self = this;
         if(this.props.params.solutionID){

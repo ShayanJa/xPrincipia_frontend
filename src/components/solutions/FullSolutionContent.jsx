@@ -69,11 +69,11 @@ export default class FullSolutionContent extends React.Component {
                     </Link>
               </div>
               <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
-              {/*<img src={require('../assets/flag.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />*/}
+              <img src={'/frontend/src/assets/flag.svg'} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
               <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
-                <img src={require('../assets/edit.svg')} id="editSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
+                <img src={'/frontend/src/assets/edit.svg'} id="editSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
               </Link>
-              {/*<img src={require('../assets/delete.png')} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />*/}
+              <img src={'/frontend/src/assets/delete.svg'} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
 
 
               <div id="prosConsMenu">

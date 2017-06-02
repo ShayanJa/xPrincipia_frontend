@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import LearnResourcesUnit2 from '../components/LearnResourcesUnit2.jsx';
+import LearnResourcesUnit2 from '../components/learn/LearnResourcesUnit2.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 

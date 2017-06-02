@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import QuestionUnit from '../components/QuestionUnit.jsx';
-import CommentUnit from '../components/CommentUnit.jsx';
-import CommentForm from '../components/CommentForm.jsx';
+import QuestionUnit from '../components/questions/QuestionUnit.jsx';
+import CommentUnit from '../components/comments/CommentUnit.jsx';
+import CommentForm from '../components/comments/CommentForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 export default class SuggestionCommentContainer extends React.Component {

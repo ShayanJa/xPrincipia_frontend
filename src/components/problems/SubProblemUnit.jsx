@@ -8,11 +8,11 @@ export default class SubProblemUnit extends React.Component {
 	    <div id="SPwrapper">
 			<ul id="SPUnitList"> 
 				<li>
-					<img src={require('../assets/leftArrowLight.png')} id="SParrowImg" width="30" height="50" alt="User avatar, DNA Helix" />
+					<img src={'/frontend/src/assets/leftArrow.svg'} id="SParrowImg" width="50" height="50" alt="User avatar, DNA Helix" />
 				</li>
 				{this.props.problems.map(this.renderItem)}
 				<li>
-					<img src={require('../assets/rightArrowLight.png')} id="SParrowImg" width="30" height="50" alt="User avatar, DNA Helix" />
+					<img src={'/frontend/src/assets/leftArrow.svg'} id="SParrowImg" width="50" height="50" alt="User avatar, DNA Helix" />
 				</li>
 			</ul>
 		</div>

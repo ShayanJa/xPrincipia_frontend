@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import LearnResourcesUnit1 from '../components/LearnResourcesUnit1.jsx';
-import SideBarMore from '../components/SideBarMore.jsx';
+import LearnResourcesUnit1 from './LearnResourcesUnit1.jsx';
+import SideBarMore from '../SideBarMore.jsx';
 
 
 export default class LearnContentForm extends React.Component {
