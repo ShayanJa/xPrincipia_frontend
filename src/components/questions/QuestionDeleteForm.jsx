@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import { Link } from 'react-router';
 
 export default class QuestionDeleteForm extends React.Component {
 
@@ -63,9 +64,12 @@ postQuestion() {
             <form id="questionForm">
                 <fieldset>
                     <legend>Delete Question</legend>
-                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
+                         <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <input type="button" value="Ask" onClick={this.postQuestion} id="askquestion"/>
+                         <div onClick={this.postQuestion} id="deleteQuestion">Delete</div>
+                         <Link>
+                          <div id="returnQuestion">Return</div>
+                         </Link>
                 </fieldset>
             </form>
       </div>

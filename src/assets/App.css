@@ -1800,7 +1800,7 @@
   resize: none;
 }
 
-#askquestion, #addSuggestion, #addAnswer {
+#askQuestion, #addSuggestion, #addAnswer {
   font-size: 90%;
   color: #00ffdc;
   background-color: #0f131c;
@@ -3067,12 +3067,7 @@ input#submitNewVersion:hover {
 
 /*End Layout 2 CSS*/
 
-<<<<<<< HEAD
-
 /*Transitions*/
-
-=======
->>>>>>> 2c68e8c261ffdde6c014b8aa20ac2dd0a85414b7
 .example-appear {
   opacity: 0.01;
 }
@@ -3080,4 +3075,57 @@ input#submitNewVersion:hover {
 .example-appear.example-appear-active {
   opacity: 1;
   transition: opacity .5s ease-in;
+}
+
+/*End Transition*/
+
+
+
+/*Flags, Edit and Delete*/
+
+/*#redLegend {
+  color: #ff7f7f;
+}*/
+
+#editQuestion {
+  font-size: 90%;
+  color: #ff7f7f;
+  background-color: #0f131c;
+  border: 1px solid #ff7f7f;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+#redFieldset {
+  border-color: #ff7f7f;
+}
+
+textarea:focus {
+  border-color: #ff7f7f !important;
+}
+#deleteQuestion, #returnQuestion {
+  font-size: 120%;
+  color: #ff7f7f;
+  background-color: #0f131c;
+  border: 1px solid #ff7f7f;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
+  padding: 5px;
+}
+#returnQuestion {
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
+  display: inline;
+}
+#deleteQuestion:hover {
+  cursor: pointer;
+  color: #0f131c;
+  background-color: #ff7f7f;
+}
+#returnQuestion:hover {
+  cursor: pointer;
+  color: #0f131c;
+  background-color: #00ffdc;
 }

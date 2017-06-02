@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import { Link } from 'react-router';
 
 export default class QuestionFlagForm extends React.Component {
 
@@ -60,12 +61,12 @@ postQuestion() {
    render() {
       return (
       <div id="questionFormComponent">
-            <form id="questionForm">
+            <form id="flagForm">
                 <fieldset>
-                    <legend>Flag Question</legend>
-                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
+                    <legend>Reason for Flag</legend>
+                         <textarea name="questionText" required="required" id="questionFlagTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Ask" onClick={this.postQuestion} id="askquestion"/>
+                         <input type="button" value="Submit" onClick={this.postQuestion} id="askquestion"/>
                 </fieldset>
             </form>
       </div>

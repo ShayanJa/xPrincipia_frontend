@@ -80,14 +80,14 @@ export default class FullProblem extends React.Component {
    render() {
 
       return (
-        <ReactCSSTransitionGroup
+
+      <div id="maxContainerColumn">
+        {/*<ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}
       transitionAppearTimeout={2000}
       transitionEnter={false}
-      transitionLeave={false}>
-      <div id="maxContainerColumn">
-
+      transitionLeave={false}>*/}
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             {/*<img src={require('.../assets/parent2.svg')} id="SPArrow" width="70" height="70" alt="Back arrow, blue up arrow" />*/}
@@ -120,10 +120,10 @@ export default class FullProblem extends React.Component {
         </div>
         
         <TutorialProblemPage />
-
+        {/*</ReactCSSTransitionGroup>*/}
       </div>
 
-      </ReactCSSTransitionGroup>
+      
       );
    }
 }
