@@ -2066,21 +2066,20 @@ img#flagSolutionButton {
   border: rgba(255,127,127,1);
   /*opacity: 0.5;*/
 }
+img#editSolutionButton {
+  /*display: inline;*/
+  display: block;
+  margin: 0 auto;
+  border: rgba(255,127,127,1);
+  padding: 3px;
+  /*opacity: 0.5;*/
+}
 
-#flagSolutionButton:hover {
+#flagSolutionButton:hover, #editSolutionButton:hover  {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
 }
 
-
-
-
-/*Layout 2 CSS*/
-
-/*ProblemPage*/
-#problemLeftSBBAckArrow {
-  
-}
 #backArrow {
   flex: 1 1 auto;
   padding: 4px;
@@ -2096,6 +2095,30 @@ img#flagSolutionButton {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
+
+
+/*Layout 2 CSS*/
+
+/*ProblemPage*/
+#problemLeftSBBAckArrow {
+  
+}
+#SPArrow {
+  flex: 1 1 auto;
+  padding: 4px;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  /*margin-left: 25%;*/
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+}
+
+#SPArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+
 
 #problemRow1, #problemRow2 {
   display: -webkit-box;
@@ -2139,7 +2162,7 @@ img#flagSolutionButton {
   width: 40%;
   color: #00dcff;
   text-align: left;
-  margin-left: 10%;
+  margin-left: 15%;
   font-size: 130%;
   margin-right: 0 auto;
 }

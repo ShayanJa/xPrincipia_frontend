@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import QuestionUnit from '../components/QuestionUnit.jsx';
-import QuestionForm from '../components/QuestionForm.jsx';
+import QuestionUnit from '../components/questions/QuestionUnit.jsx';
+import QuestionForm from '../components/questions/QuestionForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 export default class QuestionContainer extends React.Component {
@@ -34,20 +34,9 @@ export default class QuestionContainer extends React.Component {
    
    render() {
         //If user is on fullsolution make use solutionID
-       if (this.props.params.solutionID){
-           return (
+    return (
         <div id="questionContainer">
-          <QuestionForm  solutionID={this.props.params.solutionID}/>
-            <QuestionUnit questions={this.state.questions} />
-            <SideBarMore />
-        </div>
-      
-      );
-
-       } else {
-           return (
-        <div id="questionContainer">
-          <QuestionForm probID={this.props.params.probID}  />
+            {this.props.children}
             <QuestionUnit questions={this.state.questions} />
             <SideBarMore />
         </div>
@@ -56,6 +45,5 @@ export default class QuestionContainer extends React.Component {
 
        }
       
-   }
 }
 

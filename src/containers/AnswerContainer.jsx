@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import QuestionUnit from '../components/QuestionUnit.jsx';
+import QuestionUnit from '../components/questions/QuestionUnit.jsx';
 import AnswerUnit from '../components/AnswerUnit.jsx';
 import AnswerForm from '../components/AnswerForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';

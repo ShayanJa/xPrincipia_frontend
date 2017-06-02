@@ -5,7 +5,6 @@ import App from './App';
 
 //Load Components
 
-import EditSolutionForm from './components/EditSolutionForm.jsx';
 import Error404 from './components/Error404.jsx';
 import FeedbackForm from './components/FeedbackForm.jsx';
 import FullProblem from './components/FullProblem.jsx';
@@ -29,10 +28,15 @@ import ProblemSolutionsMenu from './components/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/ProblemTopSolutions.jsx';
 import ProfileNotifications from './components/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/ProfileProblemsSolutions.jsx';
+import QuestionDeleteForm from './components/questions/QuestionDeleteForm.jsx';
+import QuestionEditForm from './components/questions/QuestionEditForm.jsx';
+import QuestionFlagForm from './components/questions/QuestionFlagForm.jsx';
+import QuestionForm from './components/questions/QuestionForm.jsx';
 import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import SideBarFullSolution from './components/SideBarFullSolution';
 import SideBarProblem from './components/SideBarProblem';
+import SolutionEditForm from './components/SolutionEditForm.jsx';
 import SolutionForm from './components/SolutionForm.jsx';
 import VersionForm from './components/VersionForm.jsx';
 import WelcomeCreateForm from './components/WelcomeCreateForm.jsx';
@@ -120,7 +124,7 @@ ReactDOM.render(
               <IndexRoute component={FullSolution}></IndexRoute>
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
                 <IndexRoute component={FullSolutionContent}></IndexRoute>
-                <Route path='/fullsolution/:probID/:solutionID/edit' component={EditSolutionForm}></Route>
+                <Route path='/fullsolution/:probID/:solutionID/edit' component={SolutionEditForm}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}>
                   <IndexRoute component={FullSolutionDescription}></IndexRoute>
                   <Route path='/fullsolution/:probID/:solutionID/description' component={FullSolutionDescription}></Route>
@@ -136,7 +140,13 @@ ReactDOM.render(
           <IndexRoute component={ProblemDiscussMenu}></IndexRoute>
           <Route path='/problem/:probID/discuss' component={ProblemDiscussMenu}>
             <IndexRoute component={QuestionContainer}></IndexRoute>
-            <Route path='/problem/:probID/questions' component={QuestionContainer}></Route>
+            <Route path='/problem/:probID/questions/container' component={QuestionContainer}>
+              <IndexRoute component={QuestionForm}></IndexRoute>
+              <Route path='/problem/:probID/questions' component={QuestionForm}></Route>
+              <Route path='/problem/:probID/question/:questID/edit' component={QuestionEditForm}></Route>
+              <Route path='/problem/:probID/question/:questID/flag' component={QuestionFlagForm}></Route>
+              <Route path='/problem/:probID/question/:questID/delete' component={QuestionDeleteForm}></Route>
+            </Route> 
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
             <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>

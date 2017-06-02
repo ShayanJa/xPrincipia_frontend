@@ -90,7 +90,7 @@ export default class FullProblem extends React.Component {
         
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
-            <img src={require('../assets/parent2.svg')} id="backArrow" width="70" height="70" alt="Back arrow, blue up arrow" />
+            <img src={require('../assets/parent2.svg')} id="SPArrow" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>

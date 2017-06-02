@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
+
 export default class QuestionUnit extends React.Component {
 constructor(props){
      super(props);
@@ -44,8 +45,22 @@ constructor(props){
                 	<div id="questionText">{question.Description}</div>
 				</div>
                 {/*<div id="flagContainer">*/}
-                    <div id="editSBButton">Edit</div>
-                    <div id="flagSBButton"><img src={require('../assets/delete.png')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" /></div>
+                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/edit`}>
+                        <div id="editSBButton">
+                            Edit
+                        </div>
+                    </Link>
+                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
+                        <div id="flagSBButton">
+                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            Flag
+                        </div>
+                    </Link>
+                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>
+                        <div id="editSBButton">
+                            Delete
+                        </div>
+                    </Link>
                 {/*</div>*/}
 				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
