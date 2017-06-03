@@ -3087,14 +3087,6 @@ input#submitNewVersion:hover {
   color: #ff7f7f;
 }*/
 
-#editQuestion {
-  font-size: 90%;
-  color: #ff7f7f;
-  background-color: #0f131c;
-  border: 1px solid #ff7f7f;
-  border-radius: 2px;
-  margin-top: 5px;
-}
 #redFieldset {
   border-color: #ff7f7f;
 }
@@ -3102,7 +3094,7 @@ input#submitNewVersion:hover {
 textarea:focus {
   border-color: #ff7f7f !important;
 }
-#deleteQuestion, #returnQuestion {
+#deleteButton, #editButton, #flagButton, #returnButton {
   font-size: 120%;
   color: #ff7f7f;
   background-color: #0f131c;
@@ -3114,7 +3106,7 @@ textarea:focus {
   text-align: center;
   padding: 5px;
 }
-#returnQuestion {
+#returnButton {
   color: #00ffdc;
   border: 1px solid #00ffdc;
   display: inline;

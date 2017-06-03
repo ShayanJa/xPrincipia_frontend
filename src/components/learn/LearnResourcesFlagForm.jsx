@@ -3,7 +3,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
 
-export default class QuestionFlagForm extends React.Component {
+export default class LearnResourcesFlagForm extends React.Component {
 
   constructor(){
   super();
@@ -77,3 +77,4 @@ postQuestion() {
       );
    }
 }
+

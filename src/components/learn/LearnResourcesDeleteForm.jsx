@@ -3,7 +3,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
 
-export default class QuestionFlagForm extends React.Component {
+export default class LearnResourcesDeleteForm extends React.Component {
 
   constructor(){
   super();
@@ -61,12 +61,12 @@ postQuestion() {
    render() {
       return (
       <div id="questionFormComponent">
-            <form id="flagForm">
+            <form id="questionForm">
                 <fieldset>
-                    <legend>Reason for Flag</legend>
-                         <textarea name="questionText" required="required" id="questionFlagTextArea" autoFocus ></textarea>
+                    <legend>Delete Question</legend>
+                         <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="flagButton">Submit</div>
+                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
                          <Link to='/problem/${question.TypeID}/questions'>
                             <div id="returnButton">Return</div>
                          </Link>

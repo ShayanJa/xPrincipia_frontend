@@ -66,9 +66,9 @@ postQuestion() {
                     <legend>Delete Question</legend>
                          <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="deleteQuestion">Delete</div>
-                         <Link>
-                          <div id="returnQuestion">Return</div>
+                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
+                         <Link to='/problem/${question.TypeID}/questions'>
+                            <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
             </form>

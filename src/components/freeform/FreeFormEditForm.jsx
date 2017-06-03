@@ -3,7 +3,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
 
-export default class QuestionEditForm extends React.Component {
+export default class FreeFormEditForm extends React.Component {
 
   constructor(){
   super();
