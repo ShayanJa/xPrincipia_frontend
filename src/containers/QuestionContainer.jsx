@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import QuestionUnit from '../components/questions/QuestionUnit.jsx';
-import QuestionForm from '../components/questions/QuestionForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 export default class QuestionContainer extends React.Component {

@@ -282,7 +282,7 @@
       border: 1px solid #00ffdc;
       border-width: 1px 0px 0px 0px;
     }*/
-    #flagSBButton, #editSBButton {
+    #flagSBButton, #editSBButton, #deleteSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: #0f131c;
@@ -298,7 +298,7 @@
       padding: 2px;
     }
 
-    #flagSBButton {
+    #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
       /*OR #fc5353*/
@@ -306,7 +306,7 @@
       margin-top: 0px;
       padding: 3px;
     }
-    #flagSBButton:hover {
+    #flagSBButton:hover, #deleteSBButton:hover {
       color: #0f131c !important;
       background-color: #ff7f7f;
       cursor: pointer;

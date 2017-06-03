@@ -38,7 +38,8 @@ constructor(props){
         })
     }
   
-    return (
+       if (question.Username === cookie.load('userName')) {
+           return (
         <li key={question.ID} id="questionUnit"> 
 				<div id="questionContent">
 					<div id="questionAdder">Q: {question.Username}</div>
@@ -50,14 +51,8 @@ constructor(props){
                             Edit
                         </div>
                     </Link>
-                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
-                        <div id="flagSBButton">
-                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
-                            Flag
-                        </div>
-                    </Link>
                     <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>
-                        <div id="editSBButton">
+                        <div id="deleteSBButton">
                             Delete
                         </div>
                     </Link>
@@ -67,11 +62,33 @@ constructor(props){
                     <button type="button" id="questionAnswers">Answers</button>
                 </Link>
         <br/><br/> 
-        </li>)
+        </li>);
+
+    } else {
+    return (
+        <li key={question.ID} id="questionUnit"> 
+				<div id="questionContent">
+					<div id="questionAdder">Q: {question.Username}</div>
+                	<div id="questionText">{question.Description}</div>
+				</div>
+                {/*<div id="flagContainer">*/}
+                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
+                        <div id="flagSBButton">
+                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            Flag
+                        </div>
+                    </Link>
+                {/*</div>*/}
+				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                    <button type="button" id="questionAnswers">Answers</button>
+                </Link>
+        <br/><br/> 
+        </li>);
   }
-}
+}}
 
 //convert float to Decimal
 function floatToDecimal(float) {
 	return Math.round(float*100)+'%';
-}
+};

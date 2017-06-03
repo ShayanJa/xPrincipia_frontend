@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import SuggestionUnit from '../components/suggestions/SuggestionUnit.jsx';
-import SuggestionForm from '../components/suggestions/SuggestionForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
 
@@ -31,28 +30,14 @@ constructor(props){
         }
     }
    render() {
-        //If user is on fullsolution make use solutionID
-       if (this.props.params.solutionID){
            return (
         <div id="suggestionContainer">
-          <SuggestionForm  solutionID={this.props.params.solutionID}/>
+            {this.props.children}
             <SuggestionUnit suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>
       
       );
-
-       } else {
-           return (
-        <div id="suggestionContainer">
-          <SuggestionForm probID={this.props.params.probID}  />
-            <SuggestionUnit suggestions={this.state.suggestions} />
-            <SideBarMore />
-        </div>
-      
-      );
-
-       }
       
    }
 }
