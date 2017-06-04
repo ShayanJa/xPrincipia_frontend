@@ -5,8 +5,16 @@ import App from './App';
 
 //Load Components
 
+import ConsDeleteForm from './components/proscons/ConsDeleteForm.jsx';
+import ConsEditForm from './components/proscons/ConsEditForm.jsx';
+import ConsFlagForm from './components/proscons/ConsFlagForm.jsx';
+import ConsForm from './components/proscons/ConsForm.jsx';
 import Error404 from './components/Error404.jsx';
 import FeedbackForm from './components/FeedbackForm.jsx';
+import FreeFormDeleteForm from './components/freeform/FreeFormDeleteForm.jsx';
+import FreeFormEditForm from './components/freeform/FreeFormEditForm.jsx';
+import FreeFormFlagForm from './components/freeform/FreeFormFlagForm.jsx';
+import FreeFormForm from './components/freeform/FreeFormForm.jsx';
 import FullProblem from './components/problems/FullProblem.jsx';
 import FullSolution from './components/solutions/FullSolution.jsx';
 import FullSolutionContent from './components/solutions/FullSolutionContent.jsx';
@@ -17,7 +25,15 @@ import Info from './components/Info.jsx';
 import Instructions from './components/tutorials/Instructions.jsx';
 import Intro from './components/Intro.jsx';
 import Layout from './components/Layout.jsx';
+import LearnContentDeleteForm from './components/learn/LearnContentDeleteForm.jsx';
+import LearnContentEditForm from './components/learn/LearnContentEditForm.jsx';
+import LearnContentFlagForm from './components/learn/LearnContentFlagForm.jsx';
+import LearnContentForm from './components/learn/LearnContentForm.jsx';
 import LearnContentMenu from './components/learn/LearnContentMenu.jsx';
+import LearnResourcesDeleteForm from './components/learn/LearnResourcesDeleteForm.jsx';
+import LearnResourcesEditForm from './components/learn/LearnResourcesEditForm.jsx';
+import LearnResourcesFlagForm from './components/learn/LearnResourcesFlagForm.jsx';
+import LearnResourcesForm from './components/learn/LearnResourcesForm.jsx';
 import LearnResourcesMenu from './components/learn/LearnResourcesMenu.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/problems/ProblemForm.jsx';
@@ -28,6 +44,10 @@ import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
 import ProfileNotifications from './components/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/ProfileProblemsSolutions.jsx';
+import ProsDeleteForm from './components/proscons/ProsDeleteForm.jsx';
+import ProsEditForm from './components/proscons/ProsEditForm.jsx';
+import ProsFlagForm from './components/proscons/ProsFlagForm.jsx';
+import ProsForm from './components/proscons/ProsForm.jsx';
 import QuestionDeleteForm from './components/questions/QuestionDeleteForm.jsx';
 import QuestionEditForm from './components/questions/QuestionEditForm.jsx';
 import QuestionFlagForm from './components/questions/QuestionFlagForm.jsx';
@@ -38,6 +58,10 @@ import SideBarFullSolution from './components/solutions/SideBarFullSolution';
 import SideBarProblem from './components/problems/SideBarProblem';
 import SolutionEditForm from './components/solutions/SolutionEditForm.jsx';
 import SolutionForm from './components/solutions/SolutionForm.jsx';
+import SuggestionDeleteForm from './components/suggestions/SuggestionDeleteForm.jsx';
+import SuggestionEditForm from './components/suggestions/SuggestionEditForm.jsx';
+import SuggestionFlagForm from './components/suggestions/SuggestionFlagForm.jsx';
+import SuggestionForm from './components/suggestions/SuggestionForm.jsx';
 import VersionForm from './components/versions/VersionForm.jsx';
 import WelcomeCreateForm from './components/welcome/WelcomeCreateForm.jsx';
 
@@ -128,8 +152,20 @@ ReactDOM.render(
                 <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}>
                   <IndexRoute component={FullSolutionDescription}></IndexRoute>
                   <Route path='/fullsolution/:probID/:solutionID/description' component={FullSolutionDescription}></Route>
-                  <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}></Route>
-                  <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}></Route>                
+                  <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}>
+                    <IndexRoute component={ProsForm}></IndexRoute>
+                    <Route path='/problem/:probID/pros' component={ProsForm}></Route>
+                    <Route path='/problem/:probID/pros/:questID/edit' component={ProsEditForm}></Route>
+                    <Route path='/problem/:probID/pros/:questID/flag' component={ProsFlagForm}></Route>
+                    <Route path='/problem/:probID/pros/:questID/delete' component={ProsDeleteForm}></Route>
+                  </Route>
+                  <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}>
+                    <IndexRoute component={ConsForm}></IndexRoute>
+                    <Route path='/problem/:probID/cons' component={ConsForm}></Route>
+                    <Route path='/problem/:probID/cons/:questID/edit' component={ConsEditForm}></Route>
+                    <Route path='/problem/:probID/cons/:questID/flag' component={ConsFlagForm}></Route>
+                    <Route path='/problem/:probID/cons/:questID/delete' component={ConsDeleteForm}></Route>
+                  </Route>                
                 </Route>
                 <Route path='/fullsolution/:probID/:solutionID/versions' component={VersionsContainer}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/fullversion' component={FullVersion}></Route>
@@ -148,9 +184,21 @@ ReactDOM.render(
               <Route path='/problem/:probID/question/:questID/delete' component={QuestionDeleteForm}></Route>
             </Route> 
             <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
-            <Route path='/problem/:probID/suggestions' component={SuggestionContainer}></Route>
+            <Route path='/problem/:probID/suggestions' component={SuggestionContainer}>
+              <IndexRoute component={SuggestionForm}></IndexRoute>
+              <Route path='/problem/:probID/suggestions' component={SuggestionForm}></Route>
+              <Route path='/problem/:probID/suggestion/:questID/edit' component={SuggestionEditForm}></Route>
+              <Route path='/problem/:probID/suggestion/:questID/flag' component={SuggestionFlagForm}></Route>
+              <Route path='/problem/:probID/suggestion/:questID/delete' component={SuggestionDeleteForm}></Route>
+            </Route>
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
-            <Route path='/problem/:probID/freeform' component={FreeFormContainer}></Route>
+            <Route path='/problem/:probID/freeform' component={FreeFormContainer}>
+            <Route path='/problem/:probID/suggestions' component={FreeFormForm}></Route>
+              <IndexRoute component={FreeFormForm}></IndexRoute>
+              <Route path='/problem/:probID/freeform/:questID/edit' component={FreeFormEditForm}></Route>
+              <Route path='/problem/:probID/freeform/:questID/flag' component={FreeFormFlagForm}></Route>
+              <Route path='/problem/:probID/freeform/:questID/delete' component={FreeFormDeleteForm}></Route>
+            </Route>
             <Route path='/problem/:probID/freeform/:ffID/comments' component={FreeFormCommentContainer}></Route>
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
@@ -158,15 +206,23 @@ ReactDOM.render(
             <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content' component={LearnContentMenu}>
               <IndexRoute component={LearnContentContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}></Route>
-              <Route path='/problem/:probID/learn/content/2' component={LearnContentContainer2}></Route>
-              <Route path='/problem/:probID/learn/content/3' component={LearnContentContainer3}></Route>
+              <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}>
+                <IndexRoute component={LearnContentForm}></IndexRoute>
+                <Route path='/problem/:probID/learncontent' component={LearnContentForm}></Route>
+                <Route path='/problem/:probID/learncontent/:questID/edit' component={LearnContentEditForm}></Route>
+                <Route path='/problem/:probID/learncontent/:questID/flag' component={LearnContentFlagForm}></Route>
+                <Route path='/problem/:probID/learncontent/:questID/delete' component={LearnContentDeleteForm}></Route>
+              </Route>
             </Route>
             <Route path='/problem/:probID/learn/resources' component={LearnResourcesMenu}>
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/resources/1' component={LearnResourcesContainer1}></Route>
-              <Route path='/problem/:probID/learn/resources/2' component={LearnResourcesContainer2}></Route>
-              <Route path='/problem/:probID/learn/resources/3' component={LearnResourcesContainer3}></Route>
+              <Route path='/problem/:probID/learn/resources/1' component={LearnResourcesContainer1}>
+                <IndexRoute component={LearnResourcesForm}></IndexRoute>
+                <Route path='/problem/:probID/learnresources' component={LearnResourcesForm}></Route>
+                <Route path='/problem/:probID/learnresources/:questID/edit' component={LearnResourcesEditForm}></Route>
+                <Route path='/problem/:probID/learnresources/:questID/flag' component={LearnResourcesFlagForm}></Route>
+                <Route path='/problem/:probID/learnresources/:questID/delete' component={LearnResourcesDeleteForm}></Route>              
+              </Route>
             </Route>
           </Route>
         </Route>        

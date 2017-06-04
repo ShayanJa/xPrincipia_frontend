@@ -36,19 +36,47 @@ export default class SuggestionUnit extends React.Component {
         })
   }
   
+       if (suggestion.Username === cookie.load('userName')) {
+           return (
+       <li key={suggestion.ID} id="suggestionUnit">
+				<div id="suggestionContent">
+					<div id="suggestionAdder">S: {suggestion.Username}</div>
+                	<div id="suggestionText">{suggestion.Description}</div>
+				</div>
+                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/edit`}>
+                        <div id="editSBButton">
+                            Edit
+                        </div>
+                    </Link>
+                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/delete`}>
+                        <div id="deleteSBButton">
+                            Delete
+                        </div>
+                    </Link>
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
+                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
+            <br /><br /> 
+        </li>);
+
+    } else {
     return (
        <li key={suggestion.ID} id="suggestionUnit">
 				<div id="suggestionContent">
 					<div id="suggestionAdder">S: {suggestion.Username}</div>
                 	<div id="suggestionText">{suggestion.Description}</div>
 				</div>
+                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/flag`}>
+                        <div id="flagSBButton">
+                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            Flag
+                        </div>
+                    </Link>
 				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
                 <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
             <br /><br /> 
-        </li>)
-
+        </li>);
   }
-}
+}}
 
 //convert float to Decimal
 function floatToDecimal(float) {

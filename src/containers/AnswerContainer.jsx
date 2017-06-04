@@ -29,7 +29,7 @@ export default class AnswerContainer extends React.Component {
    render() {
       return (
         <div id="answerContainer">
-            <AnswerForm probID={this.props.params.probID} questID={this.props.params.questID} />
+            {this.props.children}
             {/*<QuestionUnit questions={this.state.questions}/>*/}
             <AnswerUnit answers={this.state.answers} />
             <SideBarMore />

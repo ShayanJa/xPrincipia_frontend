@@ -28,8 +28,7 @@ export default class SuggestionCommentContainer extends React.Component {
    render() {
       return (
         <div id="answerContainer">
-            <CommentForm probID={this.props.params.probID} suggID={this.props.params.suggID} />
-            {/*<CommentUnit suggestions={this.state.suggestions}/>*/}
+            {this.props.children}
             <CommentUnit comments={this.state.comments}/>
             <SideBarMore />
         </div>

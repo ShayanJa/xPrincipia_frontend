@@ -32,27 +32,13 @@ constructor(props){
     }
    render() {
         //If user is on fullsolution make use solutionID
-       if (this.props.params.solutionID){
-           return (
+        return (
         <div id="suggestionContainer">
-          <FreeFormForm  solutionID={this.props.params.solutionID}/>
+          {this.props.children}
             <FreeFormUnit suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>
       
       );
-
-       } else {
-           return (
-        <div id="suggestionContainer">
-          <FreeFormForm probID={this.props.params.probID}  />
-            <FreeFormUnit suggestions={this.state.suggestions} />
-            <SideBarMore />
-        </div>
-      
-      );
-
-       }
-      
    }
 }

@@ -90,7 +90,7 @@ export default class FullProblem extends React.Component {
       transitionLeave={false}>*/}
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
-            {/*<img src={require('.../assets/parent2.svg')} id="SPArrow" width="70" height="70" alt="Back arrow, blue up arrow" />*/}
+            <img src={'/frontend/src/assets/parent2.svg'} id="SPArrow" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
@@ -109,7 +109,7 @@ export default class FullProblem extends React.Component {
           <SideBarProblemMenu probID={this.props.params.probID} />
       </div>
         <div id="SPLabel">
-          Sub problems
+          Sub Projects
         </div>
         <div id="sidebarSB">
           {React.cloneElement(this.props.children, {probID: this.state.probID})}

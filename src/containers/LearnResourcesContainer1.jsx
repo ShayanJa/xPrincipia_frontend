@@ -33,16 +33,7 @@ constructor(props){
            return (
         <div>
         <div id="suggestionContainer">
-                <div id="suggestionFormComponent">
-            <form id="suggestionForm">
-                <fieldset>
-                    <legend>Complexity 1 Resources</legend>
-                         <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
-                         <br />
-                         <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
-                </fieldset>
-            </form>
-      </div>
+            {this.props.children}
             <LearnResourcesUnit1 suggestions={this.state.suggestions} />
             <SideBarMore />
         </div>  

@@ -64,7 +64,9 @@ postQuestion() {
             <form id="flagForm">
                 <fieldset>
                     <legend>Reason for Flag</legend>
-                         <textarea name="questionText" required="required" id="questionFlagTextArea" autoFocus ></textarea>
+                         <textarea name="questionText" required="required" id="questionFlagTextArea" 
+                         placeholder="Optional: Is this flag due to bad culture, illogical content, 
+                         or another reason?" autoFocus ></textarea>
                          <br />
                          <div onClick={this.postQuestion} id="flagButton">Submit</div>
                          <Link to='/problem/${question.TypeID}/questions'>
