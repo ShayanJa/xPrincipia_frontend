@@ -9,20 +9,20 @@ export default class LearnContentEditForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    learnItem: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.postLearnItem = this.postLearnItem.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
           self.setState({
-              questions: response.data
+              learnItems: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.question.description;
+          document.getElementById('questionEditTextArea').value = self.state.learnItem.description;
 
     })
     .catch(function (error) {
@@ -32,15 +32,15 @@ export default class LearnContentEditForm extends React.Component {
     });   
   }
 
-postQuestion() {
+postLearnItem() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.learnItem = document.getElementById('questionTextArea').value
 
-  axios.post('http://localhost:10000/auth/questions/create', {
+  axios.post('http://localhost:10000/auth/learnItems/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.learnItem,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -60,11 +60,11 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset id="redFieldset">
-                    <legend id="redLegend">Edit Question</legend>
+                    <legend id="redLegend">Edit Learn Content</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.postLearnItem} id="editButton">Edit</div>
+                         <Link to='/problem/${learnItem.TypeID}/learnItems'>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

@@ -9,24 +9,24 @@ export default class FreeFormFlagForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    freeForm: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.postFreeForm = this.postFreeForm.bind(this);
   };
 
-postQuestion() {
+postFreeForm() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.freeForm = document.getElementById('questionTextArea').value
 
   //if User is on a solution post with type 1
   //solutionID will be available in props
   if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/questions/create', {
+    axios.post('http://localhost:10000/auth/freeForms/create', {
     type:'1',
     typeID: this.props.solutionID,
     username: cookie.load('userName'),
-    description : this.state.question,
+    description : this.state.freeForm,
   })
     .then(function (result) {
       document.location = window.location.pathname 
@@ -39,11 +39,11 @@ postQuestion() {
     //else post to problem
     //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/questions/create', {
+      axios.post('http://localhost:10000/auth/freeForms/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.freeForm,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -66,8 +66,8 @@ postQuestion() {
                     <legend>Reason for Flag</legend>
                          <textarea name="questionText" required="required" id="questionFlagTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="flagButton">Submit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.postFreeForm} id="flagButton">Submit</div>
+                         <Link to='/problem/${freeForm.TypeID}/freeform'>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

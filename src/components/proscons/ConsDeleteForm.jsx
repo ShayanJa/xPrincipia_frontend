@@ -9,24 +9,24 @@ export default class ConsDeleteForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    con: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.postCon = this.postCon.bind(this);
   };
 
-postQuestion() {
+postCon() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.con = document.getElementById('questionTextArea').value
 
   //if User is on a solution post with type 1
   //solutionID will be available in props
   if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/questions/create', {
+    axios.post('http://localhost:10000/auth/cons/create', {
     type:'1',
     typeID: this.props.solutionID,
     username: cookie.load('userName'),
-    description : this.state.question,
+    description : this.state.con,
   })
     .then(function (result) {
       document.location = window.location.pathname 
@@ -39,11 +39,11 @@ postQuestion() {
     //else post to problem
     //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/questions/create', {
+      axios.post('http://localhost:10000/auth/cons/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.con,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -63,11 +63,11 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>
-                    <legend>Delete Question</legend>
-                         <div>Are you sure you would like to delete this question?</div>
+                    <legend>Delete Con</legend>
+                         <div>Are you sure you would like to delete this Con?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.postCon} id="deleteButton">Delete</div>
+                         <Link to='/problem/${con.TypeID}/cons'>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

@@ -4,51 +4,51 @@ import cookie from 'react-cookie';
 
 export default class FreeFormForm extends React.Component {
 
-constructor(){
+  constructor(){
   super();
 
   this.state= {
-    comment: '',
+    freeForm: '',
   }
 
-  this.postComment = this.postComment.bind(this);
-};
+    this.postFreeForm = this.postFreeForm.bind(this);
+  };
 
-postComment() {
+postFreeForm() {
   //Read field items into component state
-  this.state.comment = document.getElementById('commentTextArea').value
-// Ajax post comment request
-axios.post('http://localhost:10000/auth/comments/create', {
-  type:'5',
-// Questions has "probID here"
-  suggestionID: this.props.suggID,
-  username: cookie.load('userName'),
-  description : this.state.comment,
-})
-.then(function (result) {
-  document.location = window.location.pathname 
-})
-.catch(function (error) {
-  alert('Please try again');
-  });
-}
+  this.state.freeForm = document.getElementById('questionTextArea').value
+
+      axios.post('http://localhost:10000/auth/freeForms/create', {
+      type:'0',
+      typeID: this.props.probID,
+      username: cookie.load('userName'),
+      description : this.state.freeForm,
+    })
+      .then(function (result) {
+        document.location = window.location.pathname 
+      })
+      .catch(function (error) {
+        alert("I'm sorry, there was a problem with your request.")
+      });
+    }
+
+  
 
 
 
    render() {
       return (
-
-      <div id="answerFormComponent">
-        <form id="answerForm">
-            <fieldset>
-                <legend>FreeForm Discussion</legend>
-                     <textarea name="answerText" required="required" id="commentTextArea"></textarea>
-                     <br />
-                     <input type="button" value="Add" onClick={this.postComment} id="addAnswer"/>
-            </fieldset>
-        </form>
+      <div id="questionFormComponent">
+            <form id="questionForm">
+                <fieldset>
+                    <legend>FreeForm Discussion</legend>
+                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
+                         <br />
+                         <input type="button" value="Ask" onClick={this.postFreeForm} id="askQuestion"/>
+                </fieldset>
+            </form>
       </div>
 
       );
    }
-}
+   }

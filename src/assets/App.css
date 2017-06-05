@@ -69,6 +69,7 @@
       width: 100%;
     }
 
+
 /*End Global*/
 
 
@@ -946,52 +947,6 @@
     }
 
 /*End Login*/
-
-
-
-/*Notifications*/
-
-    #notificationFailureBox, #notificationSuccessBox {
-      margin: auto;
-      display: inline-block;
-      overflow: hidden;
-    	flex: 1 1 auto;
-    	text-align: center;
-      width: 25%;
-      text-align: center;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      text-align: right;
-            padding-top: 5px;
-    }
-    #notificationFailureText, #notificationSuccessText {
-      margin: 0 auto;
-      font-size: 200%;
-      letter-spacing: 6px;
-      font-size: 150%;
-      text-align: center;
-      margin: auto;
-      display: inline-block;
-      overflow: hidden;
-    	flex: 1 1 auto;
-    	text-align: center;
-      border: 1px solid #ff3333;
-      border-width: 1.5px;
-      border-radius: 3px;
-      padding: 5px;
-      color: #ff3333;
-      width: 100%;
-    }
-    #notificationSuccessText {
-      border: 1px solid #00ffdc;
-      color: #00ffdc;
-    }
-
-/*End Notifications*/
 
 
 
@@ -2194,6 +2149,8 @@ img#editSolutionButton {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  /*font-weight: 300;*/
 }
 
 
@@ -2703,6 +2660,7 @@ label + input[type=radio] + label {
   font-size: 100%;
   line-height: 150%;
   word-wrap: break-word; 
+  font-family: 'Open Sans', sans-serif;
 }
 #currentVersion {
   flex: 1 1 auto;
@@ -3121,3 +3079,77 @@ textarea:focus {
   color: #0f131c;
   background-color: #00ffdc;
 }
+
+
+
+
+/*Notifications*/
+
+    #notification {
+      position: fixed;
+      top: 5;
+      right: 5;
+      /*margin-left: -12.5%;*/
+      z-index: 5;
+      width: 35%;
+      border: 1px solid #00dcff;
+      background-color: #0f131c;
+      padding: 5px;
+      text-align: center;
+      display: none;
+    }
+    #notificationHeader {
+
+    }
+    #notificationContent {
+
+    }
+    #notificationReturn {
+      
+    }
+
+    /*Notifications*/
+
+    #notificationFailureBox, #notificationSuccessBox {
+      margin: auto;
+      display: inline-block;
+      overflow: hidden;
+    	flex: 1 1 auto;
+    	text-align: center;
+      width: 25%;
+      text-align: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      text-align: right;
+            padding-top: 5px;
+    }
+    #notificationFailureText, #notificationSuccessText {
+      margin: 0 auto;
+      font-size: 200%;
+      letter-spacing: 6px;
+      font-size: 150%;
+      text-align: center;
+      margin: auto;
+      display: inline-block;
+      overflow: hidden;
+    	flex: 1 1 auto;
+    	text-align: center;
+      border: 1px solid #ff3333;
+      border-width: 1.5px;
+      border-radius: 3px;
+      padding: 5px;
+      color: #ff3333;
+      width: 100%;
+    }
+    #notificationSuccessText {
+      border: 1px solid #00ffdc;
+      color: #00ffdc;
+    }
+
+/*End Notifications*/
+
+/*End Notifications*/

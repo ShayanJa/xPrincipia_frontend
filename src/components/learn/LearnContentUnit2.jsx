@@ -14,17 +14,17 @@ export default class LearnContentUnit2 extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.suggestions.map(this.renderItem)} </ul>
+			<ul> {this.props.resources.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);
 	}
-	renderItem(suggestion) {
+	renderItem(resource) {
 
        function  submitVote() {
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 3,
-           TypeID: suggestion.ID,
+           TypeID: resource.ID,
            username : cookie.load("userName"),
            
         })
@@ -32,18 +32,18 @@ export default class LearnContentUnit2 extends React.Component {
             document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a suggestion.");
+            alert("I'm sorry, you've already voted on a learning resource.");
         })
   }
   
     return (
-       <li key={suggestion.ID} id="suggestionUnit">
+       <li key={resource.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">2: {suggestion.Username}</div>
-                	<div id="suggestionText">{suggestion.Description}</div>
+					<div id="suggestionAdder">2: {resource.Username}</div>
+                	<div id="suggestionText">{resource.Description}</div>
 				</div>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
-                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
+                <Link  to={`/problem/${resource.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
             <br /><br /> 
         </li>)
 

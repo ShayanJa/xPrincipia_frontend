@@ -8,22 +8,22 @@ constructor(){
   super();
 
   this.state= {
-    suggestion: '',
+    pro: '',
   }
 
-  this.postSuggestion = this.postSuggestion.bind(this);
+  this.postPro = this.postPro.bind(this);
 };
 
-postSuggestion() {
+postPro() {
   //Read field items into component state
-this.state.suggestion = document.getElementById('suggestionTextArea').value
+this.state.pro = document.getElementById('proTextArea').value
 
 if(this.props.solutionID){
- axios.post('http://localhost:10000/auth/suggestions/create', {
+ axios.post('http://localhost:10000/auth/pros/create', {
     username: cookie.load('userName'),
     type:'1',
     typeID: this.props.solutionID,
-    description : this.state.suggestion,
+    description : this.state.pro,
   })
   .then(function (result) {
     document.location = window.location.pathname 
@@ -35,11 +35,11 @@ if(this.props.solutionID){
   //else post to problem
   //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/suggestions/create', {
+      axios.post('http://localhost:10000/auth/pros/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.suggestion,
+      description : this.state.pro,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -60,7 +60,7 @@ if(this.props.solutionID){
                     <legend>Pros</legend>
                          <textarea name="suggestionText" required="required" id="prosConsTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Add" onClick={this.postSuggestion} id="addProsCons"/>
+                         <input type="button" value="Add" onClick={this.postPro} id="addProsCons"/>
                 </fieldset>
             </form>
       </div>

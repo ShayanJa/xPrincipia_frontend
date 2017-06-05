@@ -61,6 +61,12 @@ class App extends React.Component {
       return (
       <div className="App">
         {this.props.children}
+        <div id="notification">
+          <div id="notificationHeader">Notification</div>
+          <br />
+          <div id="notificationContent">Notification Content</div>
+          <div id="notificationReturn">Return</div>
+        </div>
       </div>
       );
     

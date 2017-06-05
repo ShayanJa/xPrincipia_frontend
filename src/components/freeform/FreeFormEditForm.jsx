@@ -9,20 +9,20 @@ export default class FreeFormEditForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    freeForm: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.postFreeForm = this.postFreeForm.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/freeForms/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
           self.setState({
-              questions: response.data
+              freeForms: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.question.description;
+          document.getElementById('questionEditTextArea').value = self.state.freeForm.description;
 
     })
     .catch(function (error) {
@@ -32,15 +32,15 @@ export default class FreeFormEditForm extends React.Component {
     });   
   }
 
-postQuestion() {
+postFreeForm() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.freeForm = document.getElementById('questionTextArea').value
 
-  axios.post('http://localhost:10000/auth/questions/create', {
+  axios.post('http://localhost:10000/auth/freeForms/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.freeForm,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -60,11 +60,11 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset id="redFieldset">
-                    <legend id="redLegend">Edit Question</legend>
+                    <legend id="redLegend">Edit FreeForm Comment</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.postFreeForm} id="editButton">Edit</div>
+                         <Link to='/problem/${freeForm.TypeID}/freeForms'>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

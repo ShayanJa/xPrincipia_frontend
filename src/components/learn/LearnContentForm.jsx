@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import LearnResourcesUnit1 from './LearnResourcesUnit1.jsx';
+import cookie from 'react-cookie';
+import LearnContentUnit1 from './LearnContentUnit1.jsx';
 import SideBarMore from '../SideBarMore.jsx';
 
 
@@ -9,22 +10,62 @@ constructor(props){
         super(props);
 
         this.state = {
-            suggestions: []
+            learnItems: []
         }
+            this.postLearnItem = this.postLearnItem.bind(this);
         
     };
+    postLearnItem() {
+  //Read field items into component state
+  this.state.learnItem = document.getElementById('questionTextArea').value
+
+  //if User is on a solution post with type 1
+  //solutionID will be available in props
+  if(this.props.solutionID){
+    axios.post('http://localhost:10000/auth/learnItems/create', {
+    type:'1',
+    typeID: this.props.solutionID,
+    username: cookie.load('userName'),
+    description : this.state.learnItem,
+  })
+    .then(function (result) {
+      document.location = window.location.pathname 
+    })
+    .catch(function (error) {
+      alert("I'm sorry there was a problem with your request")
+      });
+    } 
+
+    //else post to problem
+    //probID will be used
+    else {
+      axios.post('http://localhost:10000/auth/learnItems/create', {
+      type:'0',
+      typeID: this.props.probID,
+      username: cookie.load('userName'),
+      description : this.state.learnItem,
+    })
+      .then(function (result) {
+        document.location = window.location.pathname 
+      })
+      .catch(function (error) {
+        alert("I'm sorry there was a problem with your request")
+      });
+    }
+
+  }
     componentDidMount(){
         var self = this;
         if(this.props.params.solutionID){
-            return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.solutionID+'&dataType=1').then(function (response) {
+            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.solutionID+'&dataType=1').then(function (response) {
                 self.setState({
-                    suggestions: response.data
+                    learnItems: response.data
                 })
             })  
         } else {
-            return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
                 self.setState({
-                    suggestions: response.data
+                    learnItems: response.data
                 })
             }) 
         }
@@ -46,7 +87,7 @@ constructor(props){
                              </div>
                             <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                             <br />
-                            <input type="button" value="Add" onClick={this.postSuggestion} id="addSuggestion"/>
+                            <input type="button" value="Add" onClick={this.postLearnItem} id="addSuggestion"/>
                     </fieldset>
                 </form>
             </div>

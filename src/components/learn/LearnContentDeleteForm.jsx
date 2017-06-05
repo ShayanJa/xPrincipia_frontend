@@ -9,24 +9,24 @@ export default class LearnContentDeleteForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    learnItem: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.postLearnItem = this.postLearnItem.bind(this);
   };
 
-postQuestion() {
+postLearnItem() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.learnItem = document.getElementById('questionTextArea').value
 
   //if User is on a solution post with type 1
   //solutionID will be available in props
   if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/questions/create', {
+    axios.post('http://localhost:10000/auth/learnItems/create', {
     type:'1',
     typeID: this.props.solutionID,
     username: cookie.load('userName'),
-    description : this.state.question,
+    description : this.state.learnItem,
   })
     .then(function (result) {
       document.location = window.location.pathname 
@@ -39,11 +39,11 @@ postQuestion() {
     //else post to problem
     //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/questions/create', {
+      axios.post('http://localhost:10000/auth/learnItems/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.learnItem,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -63,11 +63,11 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>
-                    <legend>Delete Question</legend>
-                         <div>Are you sure you would like to delete this question?</div>
+                    <legend>Delete Learn Content</legend>
+                         <div>Are you sure you would like to delete this learning content?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.postLearnItem} id="deleteButton">Delete</div>
+                         <Link to='/problem/${learnItem.TypeID}/learnItems'>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

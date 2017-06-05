@@ -14,17 +14,17 @@ export default class FreeFormUnit extends React.Component {
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.suggestions.map(this.renderItem)} </ul>
+			<ul> {this.props.freeForms.map(this.renderItem)} </ul>
 	               
 	    </div>
 		);
 	}
-	renderItem(suggestion) {
+	renderItem(freeForm) {
 
        function  submitVote() {
        axios.post('http://localhost:10000/auth/vote/create', {
            Type: 3,
-           TypeID: suggestion.ID,
+           TypeID: freeForm.ID,
            username : cookie.load("userName"),
            
         })
@@ -32,47 +32,47 @@ export default class FreeFormUnit extends React.Component {
             document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a suggestion.");
+            alert("I'm sorry, you've already voted on a comment.");
         })
   }
   
-       if (suggestion.Username === cookie.load('userName')) {
+       if (freeForm.Username === cookie.load('userName')) {
            return (
-       <li key={suggestion.ID} id="suggestionUnit">
+       <li key={freeForm.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">S: {suggestion.Username}</div>
-                	<div id="suggestionText">{suggestion.Description}</div>
+					<div id="suggestionAdder">S: {freeForm.Username}</div>
+                	<div id="suggestionText">{freeForm.Description}</div>
 				</div>
-                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/edit`}>
+                    <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/edit`}>
                         <div id="editSBButton">
                             Edit
                         </div>
                     </Link>
-                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/delete`}>
+                    <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/delete`}>
                         <div id="deleteSBButton">
                             Delete
                         </div>
                     </Link>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
-                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(freeForm.PercentRank)}</button> 
+                <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link> 
             <br /><br /> 
         </li>);
 
     } else {
     return (
-       <li key={suggestion.ID} id="suggestionUnit">
+       <li key={freeForm.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">S: {suggestion.Username}</div>
-                	<div id="suggestionText">{suggestion.Description}</div>
+					<div id="suggestionAdder">S: {freeForm.Username}</div>
+                	<div id="suggestionText">{freeForm.Description}</div>
 				</div>
-                    <Link to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/flag`}>
+                    <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/flag`}>
                         <div id="flagSBButton">
                             {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
                             Flag
                         </div>
                     </Link>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(suggestion.PercentRank)}</button> 
-                <Link  to={`/problem/${suggestion.TypeID}/suggestion/${suggestion.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  {/* to={`/problem/${suggestion.TypeID}/${suggestion.ID}/comments`} */}
+				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(freeForm.PercentRank)}</button> 
+                <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
             <br /><br /> 
         </li>);
   }

@@ -9,22 +9,22 @@ constructor(props){
         super(props);
 
         this.state = {
-            suggestions: []
+            resources: []
         }
         
     };
     componentDidMount(){
         var self = this;
         if(this.props.params.solutionID){
-            return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.solutionID+'&dataType=1').then(function (response) {
+            return axios.get('http://localhost:10000/auth/resources/typeID?id='+this.props.params.solutionID+'&dataType=1').then(function (response) {
                 self.setState({
-                    suggestions: response.data
+                    resources: response.data
                 })
             })  
         } else {
-            return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+            return axios.get('http://localhost:10000/auth/resources/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
                 self.setState({
-                    suggestions: response.data
+                    resources: response.data
                 })
             }) 
         }
@@ -34,7 +34,7 @@ constructor(props){
         <div>
         <div id="suggestionContainer">
             {this.props.children}
-            <LearnResourcesUnit1 suggestions={this.state.suggestions} />
+            <LearnResourcesUnit1 resources={this.state.resources} />
             <SideBarMore />
         </div>  
         </div>
