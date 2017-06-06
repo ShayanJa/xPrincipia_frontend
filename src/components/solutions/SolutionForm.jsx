@@ -52,7 +52,7 @@ export default class SolutionForm extends React.Component {
             <fieldset>
               <Link to={`/problem/${this.props.params.probID}/solutions`}>
                 <div id="backSolutionArrowDiv">
-                    <img src={'/frontend/src/assets/upArrow.svg'} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                    <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
                 </div>
               </Link>
               <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
