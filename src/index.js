@@ -23,7 +23,7 @@ import FullSolutionMenu from './components/solutions/FullSolutionMenu.jsx';
 import FullVersion from './components/versions/FullVersion.jsx';
 import Info from './components/Info.jsx';
 import Instructions from './components/tutorials/Instructions.jsx';
-import Intro from './components/Intro.jsx';
+import Intro from './components/tutorials/Intro.jsx';
 import Layout from './components/Layout.jsx';
 import LearnContentDeleteForm from './components/learn/LearnContentDeleteForm.jsx';
 import LearnContentEditForm from './components/learn/LearnContentEditForm.jsx';
@@ -42,6 +42,7 @@ import ProblemLearnMenu from './components/problems/ProblemLearnMenu.jsx';
 import ProblemLeftSB from './components/problems/ProblemLeftSB.jsx';
 import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
+import ProfileAbout from './components/ProfileAbout.jsx';
 import ProfileNotifications from './components/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/ProfileProblemsSolutions.jsx';
 import ProsDeleteForm from './components/proscons/ProsDeleteForm.jsx';
@@ -106,20 +107,23 @@ ReactDOM.render(
       <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
       <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
+    <IndexRoute component={Intro}></IndexRoute>
+    <Route path='/intro' component={Intro}></Route>
     <Route path='/error' component={ErrorContainer}>
       <IndexRoute component={Redirection}></IndexRoute>
       <Route path='/404' component={Error404}></Route>
       <Route path='/redirection' component={Redirection}></Route>
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
+    <Route path='/intro' component={Intro}></Route>
     <Route path='/profile' component={ProfileContainer}>
       <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
       <Route path='/profile/usercontent' component={ProfileProblemsSolutions}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
+      <Route path='/profile/about' component={ProfileAbout}></Route>
     </Route>
     <Route path='/newsfeed' component={NewsFeedContainer}></Route>
-    <Route path='/intro' component={Intro}></Route>
     <Route path='/instructions' component={Instructions}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
       <IndexRoute component={LoginContainer}></IndexRoute>

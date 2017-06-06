@@ -111,7 +111,9 @@ export default class ProfileContainer extends React.Component {
                     <div id="notificationsButton">Notifications</div>
                 </Link>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
-                <div id="aboutXPButton" onClick={this.goToAbout}>About XPrincipia</div>
+                <Link to={`/profile/about`} activeClassName="activeBlue">
+                    <div id="aboutXPButton">About XPrincipia</div>
+                </Link>
                 <Link to={`/profile/feedback`} activeClassName="activeBlue">
                     <div id="userFeedbackButton">Feedback</div>
                 </Link>

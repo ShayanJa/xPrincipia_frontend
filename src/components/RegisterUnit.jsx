@@ -58,7 +58,7 @@ axios.post('http://localhost:10000/register', {
       password: this.state.password
     })
     .then(function (result) {
-      alert('You have been registered. Welcome to XPrincipia! Please log in')
+      {window.location.href='/intro'}
      
     })
     .catch(function (error) {

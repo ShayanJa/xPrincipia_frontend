@@ -827,20 +827,23 @@
     	display: inline-flex;
     	align-items: stretch;
     	flex-direction: row;
-    	width: 99%;
+    	width:99.99%;
     	border: 1px solid #00dcff;
     	border-width: 0px 0px;
-    	min-height: 99%;
+    	min-height: 99.99%;
     }
     #info, #signup, #register {
     	color: #dddddd;
-    	padding: 0px 10px 20px 10px;
-    	margin: 5px 5px 10px 5px;
+    	padding: 30px 10px 20px 0px;
+    	margin: 0px 0px 0px 0px;
     	flex: 1 1 auto;
     	width: 60%;
+    }#info {
+      padding: 0px;
     }
     #signup, #register {
-    	width: 40%;
+    	width: 100%;
+      font-size: 90%;
     }
     #banner {
     	color: #ffffff;
@@ -848,19 +851,30 @@
     	letter-spacing: .15em;
     	font-size: 200%;
     	text-align: center;
-    	margin-top: 14%;
-    	padding: 0px 0px 5px 13px;
+    	padding: 0px 0px 5px 0px;
+      margin-top: 10%;
     }
     #bannerTitle {
-    	font-size: 200%;
+    	font-size: 250%;
     	letter-spacing: 16px;
     	border: 1px solid #00dcff;
     	border-width: 2px 0px;
       text-align: center;
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+
     }
     #bannerSlogan {
-      margin-top: 15px;
+      padding: 3px;
+      border: 1px solid #00dcff;
+    	border-width: 2px 0px;
       letter-spacing: 12px;
+      /*color: #00dcff;
+      background-color: rgba(0, 220, 255, 0.05);*/
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 15px;
     }
     #learnMore {
     	color: #00dcff;
@@ -882,25 +896,21 @@
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 1px;
     	border-radius: 3px;
-    	margin: 27% 15% 0% 15%;
     	text-align: center;
-      height: 193px;
+      width: 40%;
+      margin: 0 auto;
     }
-    #registerForm {
-      height: 285px;
-    }
-    #enter {
-    	color: #00dcff;
-    	font-size: 200%;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	margin-bottom: 5px;
-    }
-    #loginEmail, #registerFullName {
+    #loginEmail, #registerFullName,
+    #loginPassword, #registerPassword,
+    #registerUserName, #registerEmail {
     	margin-top: 15px;
+      font-size: 75%;
+      width: 45%;
+      margin-bottom: 0px;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
     }
-    #loginPassword, #registerPassword {
-      margin-bottom: 19px;
+    #loginPassword {
+      margin-top: 0px;
     }
     input {
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -912,11 +922,19 @@
     	border-radius: 3px;
     	padding: 3px 0px 3px 0px;
     	display: block;
-    	margin-left: 9%;
+    	margin: 0 auto;
     	width: 82%;
+    }
+    #enter {
+    	color: #00dcff;
+    	font-size: 100%;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	margin-bottom: 0px;
     }
     #submitLogin, #submitRegister {
     	color: #00dcff;
+      font-size: 90%;
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	width: 100%;
@@ -936,8 +954,9 @@
     	border: 1px solid #00ffdc;
       border-width: 0px 1px 1px 1px;
       border-radius: 3px;
-    	margin: 0% 19% 5% 19%;
-    	font-size: 120%;
+    	margin: 0 auto;
+    	font-size: 70%;
+      width: 30%;
     }
 
     #registerButton:hover, #loginButton:hover {
@@ -1413,7 +1432,7 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 1% 20% 2% 20%;
+    	margin: 4% 20% 4% 20%;
     	border: 1px solid #dddddd;
       border-radius: 3px;
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
@@ -1480,7 +1499,6 @@
       padding: 0px;
       -webkit-transition-duration: 0s;
       transition-duration: 0s;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
       letter-spacing: 16px;
     }
     .activeBlue div {
@@ -1705,10 +1723,11 @@
     	width: 50%;
     	margin: 0 auto;
     	padding: 0px;
-    	-webkit-transition-duration: 0s;
-    	transition-duration: 0s;
-    	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     	letter-spacing: 10px;
+    }
+    #createSPButton {
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
     /*#createButton:hover {
     	background-color: rgba(0,220,255,0.05);
@@ -1767,7 +1786,7 @@
   color: #00dcff;
   border: 1px solid #00dcff;
 }
-#askquestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
+#askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;
   background-color: #00ffdc;
   cursor: pointer;
@@ -2070,6 +2089,22 @@ img#editSolutionButton {
 }
 
 #SPArrow:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#SPParent {
+  flex: 1 1 auto;
+  padding: 4px;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding: 5px;
+  /*margin-left: 25%;*/
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+}
+
+#SPParent:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
@@ -2896,6 +2931,7 @@ input#submitNewVersion:hover {
   /*border: 1px solid #00dcff;*/
   margin: 0 auto;
   vertical-align: middle;
+  padding: 5px;
  }
 #SParrowImg:hover {
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -2941,13 +2977,74 @@ input#submitNewVersion:hover {
 
 
 
-/*Explanations*/
+/*Tutorials*/
 
+#tutorialIntro {
+  margin: 0 auto;
+  margin-top: 4%;
+}
+#introPrompt {
+  color: #dddddd;
+  margin: 5px 0px 5px 0px;
+  font-size: 180%;
+  cursor: default;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 5%;
+  letter-spacing: 6px;
+  margin-bottom: 5%;
+}
+#introBanner {
+  margin: 4% 20% 4% 20%;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+#introProse {
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 150%;
+  margin: 10px;
+  font-size: 150%;
+}
+#introProse2 {
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 150%;
+  margin: 10px;
+  font-size: 150%;
+}
+#introContent {
+  width:80%;
+  border: 1px solid #00dcff;
+  border-width: 0px 1px;
+  margin: 0 auto;
+}
+#enterButton {
+  color: #00dcff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 150%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  padding: 5px;
+  letter-spacing: 10px;
+  margin-top: 2%;
+}
+#tutorialIntroButton {
+  padding: 3px;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+}
 #tutorialProblemButtonDiv, #tutorialWelcomeButtonDiv,
 #tutorialProfileButtonDiv, #tutorialSolutionButtonDiv  {
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 #tutorialProblemButtonDiv:hover, #tutorialWelcomeButtonDiv:hover,
@@ -2961,7 +3058,7 @@ input#submitNewVersion:hover {
 }
 
 #tutorialProblem, #tutorialWelcome, 
-#tutorialProfile, #tutorialSolution {
+#tutorialProfile, #tutorialSolution, {
   border: 1px solid #00dcff;
   width: 60%;
   margin: 0 auto;
@@ -2970,7 +3067,7 @@ input#submitNewVersion:hover {
   background-color: #0f131c;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 
-  display: none;
+  /*display: none;*/
   }
 #tutorialBanner {
   margin: 0 auto;
@@ -3019,7 +3116,22 @@ input#submitNewVersion:hover {
 
 }
 
-/*End Explanations*/
+/*End Tutorials*/
+
+
+
+/*Profile About*/
+#profileAbout {
+  border: 1px solid #00dcff;
+  width: 60%;
+  margin: 0 auto;
+  height: 60%;
+  margin-top: 4%;
+  background-color: #0f131c;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+
+/*End Profile About*/
 
 
 
