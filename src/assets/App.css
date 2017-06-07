@@ -1478,7 +1478,7 @@
     	display: none;
     }
     #welcomeUnitsContainer {
-    	margin: 2px 15px 5px 5px;
+    	margin: 2px 15px 5px 15px;
     	padding: 5px;
     }
     #welcomeUnitsContainer ul li {
@@ -1518,15 +1518,25 @@
       background-color: #00dcff;
       color: #0f131c;
     }
+    #SPListDiv {
+      text-align: center;
+    }
+    #welcomeProblemsUnitList {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      margin: 0 auto;
+    }
     #welcomeProblemsUnitList li {
       display: inline-block;
       margin: 2%;
     }
-    #welcomeProblemsUnitList {
-      text-align: center;
-    }
     #welcomeProblemsUnit {
-    	display: block;
+    	display: inline-block;
+      width: 14em;
+      margin: 0% 5% 0% 5%;
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
@@ -1540,7 +1550,6 @@
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       width: 14em;
       height: 14em;
-      margin: 1%;
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
@@ -1560,11 +1569,10 @@
     	margin-bottom: 35px;
     }*/
     #welcomeProblemsTitle {
-    	/*flex: 1 1 auto;*/
       margin: 0 auto;
     	padding: 5px 10px 5px 10px;
-    	font-size: 150%;
-    	color: #00dcff;
+    	font-size: 130%;
+    	/*color: #00dcff;*/
       word-wrap: break-word; 
       text-align: center;
     }
@@ -2230,14 +2238,22 @@ img#editSolutionButton {
 }
 #SPUnitList {
   text-align: center;
-  margin-top: 1%;
-  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
 }
 #SPUnitList li {
   display: inline-block;
   /*display: inline;*/
   margin: 0% 1% 2% 1%;
   list-style-type:none;
+}
+#SPUnit {
+  display: inline-block;
+  width: 14em;
+  margin: 0% 5% 0% 5%;  
 }
 #subProblemUnit {
   display: block;
