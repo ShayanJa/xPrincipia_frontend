@@ -79,7 +79,7 @@ axios.post('http://localhost:10000/register', {
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
                 <Link to='/login'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
             </form>
-            <Link to='/intro'><div id="loginButton">Login</div></Link>
+            <Link to='/login'><div id="loginButton">Login</div></Link>
         </div>
 
       );

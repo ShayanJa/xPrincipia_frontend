@@ -873,7 +873,7 @@
       letter-spacing: 12px;
       /*color: #00dcff;
       background-color: rgba(0, 220, 255, 0.05);*/
-      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
       width: 60%;
       margin: 0 auto;
       margin-top: 15px;
@@ -905,7 +905,8 @@
     #loginEmail, #registerFullName,
     #loginPassword, #registerPassword,
     #registerUserName, #registerEmail {
-    	margin-top: 15px;
+    	display: block;
+      margin-top: 15px;
       font-size: 75%;
       width: 45%;
       margin-bottom: 0px;
