@@ -59,7 +59,7 @@ postQuestion() {
       return (
       <div id="questionFormComponent">
             <form id="questionForm">
-                <fieldset id="redFieldset">
+                <fieldset>
                     <legend id="redLegend">Edit Question</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />

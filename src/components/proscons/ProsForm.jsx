@@ -22,7 +22,7 @@ if(this.props.solutionID){
  axios.post('http://localhost:10000/auth/pros/create', {
     username: cookie.load('userName'),
     type:'1',
-    typeID: this.props.solutionID,
+    typeID: this.props.params.solutionID,
     description : this.state.pro,
   })
   .then(function (result) {
@@ -37,7 +37,7 @@ if(this.props.solutionID){
     else {
       axios.post('http://localhost:10000/auth/pros/create', {
       type:'0',
-      typeID: this.props.probID,
+      typeID: this.props.params.probID,
       username: cookie.load('userName'),
       description : this.state.pro,
     })

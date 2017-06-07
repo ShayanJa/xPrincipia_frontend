@@ -291,7 +291,8 @@
       border-radius: 2px;
       cursor: pointer;
       flex-grow: 1;
-      height: 100%;
+      height: 50%;
+      margin: 0 auto;
 
       /*Button to Div CSS*/
       text-align: center;
@@ -304,8 +305,12 @@
       border: 1px solid #ff7f7f;
       /*OR #fc5353*/
       /*margin: 1px;*/
-      margin-top: 0px;
-      padding: 3px;
+
+      /*padding: 3px;*/
+    }
+    #flagSBButton:active, #deleteSBButton:active {
+      color: #0f131c !important;
+      background-color: #ff7f7f;
     }
     #flagSBButton:hover, #deleteSBButton:hover {
       color: #0f131c !important;
@@ -3193,6 +3198,11 @@ textarea:focus {
   text-align: center;
   padding: 5px;
 }
+#deleteButton:hover {
+  cursor: pointer;
+  color: #0f131c;
+  background-color: #ff7f7f;
+}
 #returnButton {
   color: #00ffdc;
   border: 1px solid #00ffdc;
@@ -3203,6 +3213,7 @@ textarea:focus {
   color: #0f131c;
   background-color: #ff7f7f;
 }
+
 #returnQuestion:hover {
   cursor: pointer;
   color: #0f131c;

@@ -22,7 +22,7 @@ postQuestion() {
   //if User is on a solution post with type 1
   //solutionID will be available in props
 
-      axios.put('http://localhost:10000/auth/questions/update?id=1', {
+      axios.put('http://localhost:10000/auth/questions/update?id='+this.props.params.questID, {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

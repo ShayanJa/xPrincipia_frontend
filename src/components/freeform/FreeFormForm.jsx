@@ -20,7 +20,7 @@ postFreeForm() {
 
       axios.post('http://localhost:10000/auth/freeForms/create', {
       type:'0',
-      typeID: this.props.probID,
+      typeID: this.props.params.probID,
       username: cookie.load('userName'),
       description : this.state.freeForm,
     })

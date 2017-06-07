@@ -21,7 +21,7 @@ postComment() {
 axios.post('http://localhost:10000/auth/comments/create', {
   type:'5',
 // Questions has "probID here"
-  suggestionID: this.props.suggID,
+  suggestionID: this.props.params.suggID,
   username: cookie.load('userName'),
   description : this.state.comment,
 })
