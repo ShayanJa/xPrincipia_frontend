@@ -24,3 +24,7 @@ Question graphic by <a href="undefined">undefined</a> from <a href="https://logo
 
 // Tutorial
 Book graphic by <a href="http://www.flaticon.com/authors/ocha">ocha</a> from <a href="http://www.flaticon.com/">Flaticon</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check out the new logo that I created on <a href="http://logomakr.com" title="Logo Maker">LogoMaker.com</a> https://logomakr.com/8gUu118gUu11
+
+
+// Arrows
+https://thenounproject.com/alicoskun/collection/arrows/?oq=arrow%20collection&cidx=18&i=940775
