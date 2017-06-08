@@ -48,7 +48,7 @@ constructor(props){
                 {/*<div id="flagContainer">*/}
                     <Link to={`/problem/${question.TypeID}/question/${question.ID}/edit`}>
                         <div id="editSBButton">
-                            Edit
+                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="11" height="11" alt="Edit Button" />
                         </div>
                     </Link>
                     <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>

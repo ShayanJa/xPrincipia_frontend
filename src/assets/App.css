@@ -287,7 +287,7 @@
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: #0f131c;
-      border: 1px solid #00ffdc;
+      border: 1px solid #00dcff;
       border-radius: 2px;
       cursor: pointer;
       flex-grow: 1;
@@ -385,7 +385,7 @@
  /*CreateProblem and Create Solution*/
 
     #createForm {
-      background-color: inherit;
+      /*background-color: rgba(255,255,255,0.05);*/
       color: #00dcff;
       height: auto;
       padding: 0px 5px 5px 5px;
@@ -435,13 +435,14 @@
       background-color: inherit;
     }
     input, textarea {
-      font-family: 'Alegreya Sans SC', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-size: 100%;
       color: #ffffff;
-      background-color: #0f131c;
+      background-color: inherit;
       text-align: center;
-      border: 1px solid #ffffff;
-      border-radius: 5px;
+      /*border: 1px solid #ffffff;*/
+      border: 1px solid #00dcff;
+      border-radius: 3px;
       padding: 3px 8px 3px 8px;
       display: block;
       /*float: left;*/
@@ -450,6 +451,12 @@
       width: 80%;
       resize: none;
       margin: 0 auto;
+    }
+    input {
+    	font-size: 140%;
+    	padding: 3px 0px 3px 0px;
+    	display: block;
+    	width: 82%;
     }
     textarea {
     	text-align: left;
@@ -468,7 +475,7 @@
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	width: 86%;
     	margin: 0 auto;
       margin-top: 3%;
@@ -919,19 +926,6 @@
     }
     #loginPassword {
       margin-top: 0px;
-    }
-    input {
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 140%;
-    	color: #ffffff;
-    	text-align: center;
-    	background-color: #0f131c;
-    	border: 1px solid #00dcff;
-    	border-radius: 3px;
-    	padding: 3px 0px 3px 0px;
-    	display: block;
-    	margin: 0 auto;
-    	width: 82%;
     }
     #enter {
     	color: #00dcff;
@@ -2048,6 +2042,16 @@
   margin: 0 auto;
   /*vertical-align: middle;*/
 }
+img#editLogo {
+  display: block;
+  margin: 0 auto;
+  border: #00dcff;
+  padding: 3px;
+}
+#editLogo:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+}
 
 img#flagSolutionButton {
   /*display: inline;*/
@@ -2168,9 +2172,10 @@ img#editSolutionButton {
   width: 40%;
   color: #00dcff;
   text-align: left;
-  margin-left: 15%;
+  margin-left: 5%;
   font-size: 130%;
   margin-right: 0 auto;
+  font-family: 'Lato', 'Alegreya Sans SC' , sans-serif;
 }
 #followProblem,
 #followProblemLeftSB {
@@ -2251,6 +2256,7 @@ img#editSolutionButton {
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
+  margin-top: 4%;
 }
 #SPUnitList li {
   display: inline-block;
@@ -2965,10 +2971,11 @@ input#submitNewVersion:hover {
 }*/
  #downGreenArrowDiv, #downArrowDiv {
    width: 100%;
+   box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
  }
  #downGreenArrowDiv:hover {
   cursor: pointer;
-  box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+  box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);
  }
  #downGreenArrow {
   flex: 1 1 auto;
@@ -3213,6 +3220,11 @@ textarea:focus {
   color: #0f131c;
   background-color: #ff7f7f;
 }
+#returnButton {
+  cursor: pointer;
+  color: #0f131c;
+  background-color: #ff7f7f;
+}
 
 #returnQuestion:hover {
   cursor: pointer;
@@ -3265,7 +3277,7 @@ textarea:focus {
       display: flex;
       flex-direction: row;
       text-align: right;
-            padding-top: 5px;
+      padding-top: 5px;
     }
     #notificationFailureText, #notificationSuccessText {
       margin: 0 auto;

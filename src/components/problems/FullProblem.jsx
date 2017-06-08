@@ -82,12 +82,12 @@ export default class FullProblem extends React.Component {
       return (
 
       <div id="maxContainerColumn">
-        {/*<ReactCSSTransitionGroup
+        <ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}
       transitionAppearTimeout={2000}
       transitionEnter={false}
-      transitionLeave={false}>*/}
+      transitionLeave={false}>
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
@@ -103,7 +103,7 @@ export default class FullProblem extends React.Component {
               <div id="followProblem" onClick={this.submitVote}>Vote</div>
             </div>
             <p id="problemSummary">
-              {this.state.problemInfo.Description}
+              {this.state.problemInfo.Summary}
             </p>
           </div>
           <SideBarProblemMenu probID={this.props.params.probID} />
@@ -120,7 +120,7 @@ export default class FullProblem extends React.Component {
         </div>
         
         <TutorialProblemPage />
-        {/*</ReactCSSTransitionGroup>*/}
+        </ReactCSSTransitionGroup>
       </div>
 
       

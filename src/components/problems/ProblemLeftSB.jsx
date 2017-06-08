@@ -2,6 +2,7 @@ import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import TutorialSolutionPage from '../tutorials/TutorialSolutionPage.jsx';
 
 export default class ProblemLeftSB extends React.Component {
@@ -78,6 +79,12 @@ export default class ProblemLeftSB extends React.Component {
 
       return (
       <div id="fullWide">
+          <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
         <div id="maxContainerRow">
           <div id="fullProblemLeft">
             <div id="problemLeftSBHeader">
@@ -95,7 +102,7 @@ export default class ProblemLeftSB extends React.Component {
                 </div>*/}
               </div> 
                 <div id="fullProblemHeaderSB">
-                  <div id="problemAdditionalInfoLabelSB">Additional Info</div>
+                  <div id="problemAdditionalInfoLabelSB">ADDITIONAL INFO</div>
                   <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
                 </div>
                 <p id="problemSummary">
@@ -113,7 +120,7 @@ export default class ProblemLeftSB extends React.Component {
           </div>
           
           <TutorialSolutionPage />
-
+          </ReactCSSTransitionGroup>
       </div>
       );
    }

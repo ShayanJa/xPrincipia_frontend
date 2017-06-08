@@ -14,7 +14,7 @@ export default class ProblemForm extends React.Component {
     this.state= {
       title: '',
       // field: '',
-      description: '',
+      summary: '',
     }
 
     this.postProblem = this.postProblem.bind(this);
@@ -25,7 +25,7 @@ export default class ProblemForm extends React.Component {
     //Read field items into component state
     this.state.title = document.getElementById('problemTitleForm').value
     // this.state.field = document.getElementById('problemFieldForm').value
-    this.state.description = document.getElementById('problemDescriptionForm').value
+    this.state.summary = document.getElementById('problemSummaryForm').value
     // this.state.references = document.getElementById('problemReferencesForm').value
   
     var self = this
@@ -33,7 +33,7 @@ export default class ProblemForm extends React.Component {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,
-      description : this.state.description,
+      summary : this.state.summary,
     })
     .then(function (result) {
       //redirect back to the last page     
@@ -60,9 +60,9 @@ export default class ProblemForm extends React.Component {
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
 
-                        <label htmlFor="problemDescriptionForm" id="problemDescriptionFormLabel">Additional Information<br />
-                            <textarea name="problemDescription" required="required" maxLength="250" 
-                            placeholder="Please provide any additional information you'd like. (250 character max.)" id="problemDescriptionForm">
+                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />
+                            <textarea name="problemSummary" required="required" maxLength="250" 
+                            placeholder="Please provide any additional information you'd like. (250 character max.)" id="problemSummaryForm">
                             </textarea></label><br />
 
                         <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>

@@ -60,15 +60,15 @@ export default class SolutionForm extends React.Component {
                 </label><br />
 
               <label htmlFor="solutionSummary" id="solutionSummaryFormLabel">Summary<br />
-                  <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="solutionSummaryForm"/>
+                  <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize your proposal here. (250 characters)" id="solutionSummaryForm"/>
                 </label><br />
 
               <label htmlFor="solutionDescription" id="solutionDescriptionFormLabel">Description<br />
-                  <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionDescriptionForm">
+                  <textarea name="solutionDescription" required="required" placeholder="Describe your proposal here." id="solutionDescriptionForm">
                   </textarea></label><br />
 
               <label htmlFor="solutionReferences" id="solutionReferenceFormLabel">References<br />
-                  <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionReferencesForm">
+                  <textarea name="solutionReferences" placeholder="Please provide any references here." id="solutionReferencesForm">
                   </textarea></label><br />
               <Link to={`/problem/${this.props.params.probID}/solutions`}><input type="submit" value="Create" onClick={this.postSolution} id="submitSolution"/></Link>
             </fieldset>
