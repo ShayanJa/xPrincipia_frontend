@@ -12,17 +12,17 @@ export default class SuggestionEditForm extends React.Component {
     question: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.updateSuggestion = this.updateSuggestion.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.suggID).then(function (response) {
           self.setState({
-              questions: response.data
+              suggestion: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.question.description;
+          document.getElementById('questionEditTextArea').value = self.state.suggestion.Description;
 
     })
     .catch(function (error) {
@@ -32,22 +32,22 @@ export default class SuggestionEditForm extends React.Component {
     });   
   }
 
-postQuestion() {
-  //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  updateSuggestion() {
+    //Read field items into component state
+    this.state.suggestion = document.getElementById('questionEditTextArea').value
 
-  axios.post('http://localhost:10000/auth/questions/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.question,
-    })
-      .then(function (result) {
-        document.location = window.location.pathname 
+    axios.post('http://localhost:10000/auth/questions/create', {
+        type:'0',
+        typeID: this.props.probID,
+        username: cookie.load('userName'),
+        description : this.state.question,
       })
-      .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
-      });
+        .then(function (result) {
+          document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+          alert("I'm sorry there was a problem with your request")
+        });
     }
 
   
