@@ -9,7 +9,7 @@ export default class SuggestionEditForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    suggestion: '',
   }
 
     this.updateSuggestion = this.updateSuggestion.bind(this);
@@ -17,7 +17,7 @@ export default class SuggestionEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/suggestions/typeID?id='+this.props.params.suggID).then(function (response) {
+        return axios.get('http://localhost:10000/auth/suggestions/ID?id='+this.props.params.suggID).then(function (response) {
           self.setState({
               suggestion: response.data
           })
@@ -36,11 +36,11 @@ export default class SuggestionEditForm extends React.Component {
     //Read field items into component state
     this.state.suggestion = document.getElementById('questionEditTextArea').value
 
-    axios.post('http://localhost:10000/auth/questions/create', {
+    axios.put('http://localhost:10000/auth/suggestions/update?id='+this.props.params.suggID, {
         type:'0',
-        typeID: this.props.probID,
+        typeID: this.state.suggestion.ID,
         username: cookie.load('userName'),
-        description : this.state.question,
+        description : this.state.suggestion,
       })
         .then(function (result) {
           document.location = window.location.pathname 
@@ -60,10 +60,10 @@ export default class SuggestionEditForm extends React.Component {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset id="redFieldset">
-                    <legend id="redLegend">Edit Question</legend>
+                    <legend id="redLegend">Edit Suggestion</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
+                         <div onClick={this.updateSuggestion} id="editButton">Edit</div>
                          <Link to='/problem/${question.TypeID}/questions'>
                           <div id="returnButton">Return</div>
                          </Link>
