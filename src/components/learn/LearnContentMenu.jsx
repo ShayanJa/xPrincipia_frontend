@@ -35,7 +35,7 @@ export default class LearnContentMenu extends React.Component {
                     <div id="intensityNumber">Hard</div>
                 </Link>
             </div>
-            {React.cloneElement(this.props.children, {probID: this.state.probID})}
+            {this.props.children}
         </div>
 
       );

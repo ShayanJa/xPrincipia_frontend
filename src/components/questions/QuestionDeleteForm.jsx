@@ -35,12 +35,6 @@ postQuestion() {
         alert("I'm sorry there was a problem with your request")
       });
     }
-
-
-  
-
-
-
    render() {
       return (
       <div id="questionFormComponent">

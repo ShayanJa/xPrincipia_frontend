@@ -8,8 +8,35 @@ export default class LearnContentUnit3 extends React.Component {
     constructor(props){
         super(props);
          this.renderItem = this.renderItem.bind(this)
+        //  this.submitVote = this.submitVote.bind(this)
     };
-  
+    // submitVote() {
+    //    axios.post('http://localhost:10000/auth/vote/create', {
+    //        Type: 3,
+    //        TypeID: resource.ID,
+    //        username : cookie.load("userName"),
+           
+    //     })
+    //     .then(function (result) {
+    //         document.location = window.location.pathname;
+    //     })
+    //     .catch(function (error) {
+    //         alert("I'm sorry, you've already voted on a learning resource.");
+    //     })
+    // }
+    renderItem(resource) {
+        return (
+        <li key={resource.ID} id="suggestionUnit">
+            <div id="suggestionContent">
+                <div id="suggestionAdder">3: {resource.Username}</div>
+                <div id="suggestionText">{resource.Description}</div>
+            </div>
+            <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
+            <Link  to={`/problem/${resource.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
+        <br /><br /> 
+        </li>)
+
+    }
 
 	render() {
 		return (
@@ -19,36 +46,11 @@ export default class LearnContentUnit3 extends React.Component {
 	    </div>
 		);
 	}
-	renderItem(resource) {
 
-       function  submitVote() {
-       axios.post('http://localhost:10000/auth/vote/create', {
-           Type: 3,
-           TypeID: resource.ID,
-           username : cookie.load("userName"),
-           
-        })
-        .then(function (result) {
-            document.location = window.location.pathname;
-        })
-        .catch(function (error) {
-            alert("I'm sorry, you've already voted on a learning resource.");
-        })
-  }
-  
-    return (
-       <li key={resource.ID} id="suggestionUnit">
-				<div id="suggestionContent">
-					<div id="suggestionAdder">3: {resource.Username}</div>
-                	<div id="suggestionText">{resource.Description}</div>
-				</div>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
-                <Link  to={`/problem/${resource.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
-            <br /><br /> 
-        </li>)
 
-  }
+
 }
+
 
 //convert float to Decimal
 function floatToDecimal(float) {
