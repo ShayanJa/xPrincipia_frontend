@@ -12,7 +12,7 @@ export default class QuestionEditForm extends React.Component {
     question: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.updateQuestion = this.updateQuestion.bind(this);
   };
 
   componentWillMount(){
@@ -21,7 +21,7 @@ export default class QuestionEditForm extends React.Component {
           self.setState({
               question: response.data
           })
-          console.log(self.state.question)
+          console.log(self.state.question.Description)
           document.getElementById('questionEditTextArea').value = self.state.question.Description;
 
     })
@@ -32,13 +32,13 @@ export default class QuestionEditForm extends React.Component {
     });   
   }
 
-postQuestion() {
+updateQuestion() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.question = document.getElementById('questionEditTextArea').value
 
-  axios.post('http://localhost:10000/auth/questions/update', {
+  axios.put('http://localhost:10000/auth/questions/update?id='+this.props.params.questID, {
       type:'0',
-      typeID: this.props.probID,
+      typeID: this.props.params.probID,
       username: cookie.load('userName'),
       description : this.state.question,
     })
@@ -63,7 +63,7 @@ postQuestion() {
                     <legend id="redLegend">Edit Question</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
+                         <div onClick={this.updateQuestion} id="editButton">Edit</div>
                          <Link to='/problem/${question.TypeID}/questions'>
                           <div id="returnButton">Return</div>
                          </Link>
