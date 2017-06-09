@@ -46,7 +46,7 @@ updateQuestion() {
         document.location = window.location.pathname 
       })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request.")
       });
     }
 

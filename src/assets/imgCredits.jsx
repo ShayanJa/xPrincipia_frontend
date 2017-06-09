@@ -28,3 +28,10 @@ Book graphic by <a href="http://www.flaticon.com/authors/ocha">ocha</a> from <a 
 
 // Arrows
 https://thenounproject.com/alicoskun/collection/arrows/?oq=arrow%20collection&cidx=18&i=940775
+
+// Comments
+https://thenounproject.com/search/?q=comments&i=835334
+
+// Delete
+https://thenounproject.com/search/?q=x&i=810288
+

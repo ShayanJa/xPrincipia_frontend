@@ -12,17 +12,17 @@ export default class FreeFormEditForm extends React.Component {
     freeForm: '',
   }
 
-    this.postFreeForm = this.postFreeForm.bind(this);
+    this.updateFreeForm = this.updateFreeForm.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/freeForms/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/freeForms/ID?id='+this.props.params.freeID).then(function (response) {
           self.setState({
-              freeForms: response.data
+              freeForm: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.freeForm.description;
+          document.getElementById('freeFormEditTextArea').value = self.state.freeForm.Description;
 
     })
     .catch(function (error) {
@@ -32,13 +32,13 @@ export default class FreeFormEditForm extends React.Component {
     });   
   }
 
-postFreeForm() {
+updateFreeForm() {
   //Read field items into component state
-  this.state.freeForm = document.getElementById('questionTextArea').value
+  this.state.freeForm = document.getElementById('freeFormEditTextArea').value
 
-  axios.post('http://localhost:10000/auth/freeForms/create', {
+  axios.put('http://localhost:10000/auth/freeForms/update?id='+this.props.params.freeID, {
       type:'0',
-      typeID: this.props.probID,
+      typeID: this.props.params.probID,
       username: cookie.load('userName'),
       description : this.state.freeForm,
     })
@@ -46,7 +46,7 @@ postFreeForm() {
         document.location = window.location.pathname 
       })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request.")
       });
     }
 
@@ -61,11 +61,13 @@ postFreeForm() {
             <form id="questionForm">
                 <fieldset id="redFieldset">
                     <legend id="redLegend">Edit FreeForm Comment</legend>
-                         <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
+                         <textarea name="questionText" required="required" id="freeFormEditTextArea" autofocus ></textarea>
                          <br />
-                         <div onClick={this.postFreeForm} id="editButton">Edit</div>
                          <Link to='/problem/${freeForm.TypeID}/freeForms'>
-                          <div id="returnButton">Return</div>
+                            <div onClick={this.updateFreeForm} id="editButton">Edit</div>
+                         </Link>
+                         <Link to='/problem/${freeForm.TypeID}/freeForms'>
+                            <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
             </form>

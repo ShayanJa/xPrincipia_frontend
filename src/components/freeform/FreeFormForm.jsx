@@ -16,7 +16,7 @@ export default class FreeFormForm extends React.Component {
 
 postFreeForm() {
   //Read field items into component state
-  this.state.freeForm = document.getElementById('questionTextArea').value
+  this.state.freeForm = document.getElementById('freeFormTextArea').value
 
       axios.post('http://localhost:10000/auth/freeForms/create', {
       type:'0',
@@ -42,7 +42,7 @@ postFreeForm() {
             <form id="questionForm">
                 <fieldset>
                     <legend>FreeForm Discussion</legend>
-                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
+                         <textarea name="questionText" required="required" id="freeFormTextArea" autoFocus ></textarea>
                          <br />
                          <input type="button" value="Ask" onClick={this.postFreeForm} id="askQuestion"/>
                 </fieldset>

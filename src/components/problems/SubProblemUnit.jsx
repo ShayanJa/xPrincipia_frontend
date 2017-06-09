@@ -3,6 +3,16 @@ import {Link} from 'react-router';
 
 export default class SubProblemUnit extends React.Component {
 
+//   constructor(){
+//   super();
+
+//     this.refreshPage = this.refreshPage.bind(this);
+//   };
+
+// refreshPage() {
+// 	document.location = window.location.pathname ;
+// }
+
 	render() {
 		return (
 	    <div id="SPwrapper">
