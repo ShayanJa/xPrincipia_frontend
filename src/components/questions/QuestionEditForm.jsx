@@ -17,18 +17,18 @@ export default class QuestionEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
           self.setState({
-              questions: response.data
+              question: response.data
           })
-          
-          document.getElementById('questionEditTextArea').value = self.state.question.description;
+          console.log(self.state.question)
+          document.getElementById('questionEditTextArea').value = self.state.question.Description;
 
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     });   
   }
 
@@ -36,7 +36,7 @@ postQuestion() {
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
 
-  axios.post('http://localhost:10000/auth/questions/create', {
+  axios.post('http://localhost:10000/auth/questions/update', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),
