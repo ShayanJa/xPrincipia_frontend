@@ -38,7 +38,7 @@ export default class SuggestionEditForm extends React.Component {
 
     axios.put('http://localhost:10000/auth/suggestions/update?id='+this.props.params.suggID, {
         type:'0',
-        typeID: this.state.suggestion.ID,
+        typeID: this.props.params.probID,
         username: cookie.load('userName'),
         description : this.state.suggestion,
       })

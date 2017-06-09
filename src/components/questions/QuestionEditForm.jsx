@@ -50,11 +50,6 @@ updateQuestion() {
       });
     }
 
-  
-  
-
-
-
    render() {
       return (
       <div id="questionFormComponent">
