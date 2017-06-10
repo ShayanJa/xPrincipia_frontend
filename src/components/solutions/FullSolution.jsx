@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 
 export default class FullSolution extends React.Component {
   constructor(props){
@@ -72,6 +73,12 @@ export default class FullSolution extends React.Component {
    render() {
       return (
       <div id="maxContainer"> 
+        <ReactCSSTransitionGroup
+        transitionName="example"
+        transitionAppear={true}
+        transitionAppearTimeout={2000}
+        transitionEnter={false}
+        transitionLeave={false}>
         <div id="fullSolution">
             <div id="solutionIntro">
                 <Link to={`/problem/${this.props.params.probID}/solutions`}>
@@ -87,6 +94,7 @@ export default class FullSolution extends React.Component {
             </div>
             {React.cloneElement(this.props.children, {solutionInfo: this.state.questions})}
         </div>
+        </ReactCSSTransitionGroup>
       </div>
       );
    }

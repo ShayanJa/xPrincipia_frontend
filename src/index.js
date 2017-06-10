@@ -208,24 +208,24 @@ ReactDOM.render(
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>
             <IndexRoute component={LearnContentMenu}></IndexRoute>
-            <Route path='/problem/:probID/learncontent/menu' component={LearnContentMenu}>
+            <Route path='/problem/:probID/learn/content/menu' component={LearnContentMenu}>
               <IndexRoute component={LearnContentContainer1}></IndexRoute>
               <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}>
                 <IndexRoute component={LearnContentForm}></IndexRoute>
-                <Route path='/problem/:probID/learncontent' component={LearnContentForm}></Route>
-                <Route path='/problem/:probID/learncontent/:learnitemID/edit' component={LearnContentEditForm}></Route>
-                <Route path='/problem/:probID/learncontent/:learnitemID/flag' component={LearnContentFlagForm}></Route>
-                <Route path='/problem/:probID/learncontent/:learnitemID/delete' component={LearnContentDeleteForm}></Route>
+                <Route path='/problem/:probID/learn/content' component={LearnContentForm}></Route>
+                {/*<Route path='/problem/:probID/learn/content/:learnitemID/edit' component={LearnContentEditForm}></Route>*/}
+                {/*<Route path='/problem/:probID/learn/content/:learnitemID/flag' component={LearnContentFlagForm}></Route>*/}
+                {/*<Route path='/problem/:probID/learn/content/:learnitemID/delete' component={LearnContentDeleteForm}></Route>*/}
               </Route>
             </Route>
-            <Route path='/problem/:probID/learnresources/menu' component={LearnResourcesMenu}>
+            <Route path='/problem/:probID/learn/resources/menu' component={LearnResourcesMenu}>
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
               <Route path='/problem/:probID/learn/resources/1' component={LearnResourcesContainer1}>
                 <IndexRoute component={LearnResourcesForm}></IndexRoute>
-                <Route path='/problem/:probID/learnresources' component={LearnResourcesForm}></Route>
-                <Route path='/problem/:probID/learnresources/:resourceID/edit' component={LearnResourcesEditForm}></Route>
-                <Route path='/problem/:probID/learnresources/:resourceID/flag' component={LearnResourcesFlagForm}></Route>
-                <Route path='/problem/:probID/learnresources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>              
+                <Route path='/problem/:probID/learn/resources' component={LearnResourcesForm}></Route>
+                <Route path='/problem/:probID/learn/resources/:resourceID/edit' component={LearnResourcesEditForm}></Route>
+                <Route path='/problem/:probID/learn/resources/:resourceID/flag' component={LearnResourcesFlagForm}></Route>
+                <Route path='/problem/:probID/learn/resources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>              
               </Route>
             </Route>
           </Route>

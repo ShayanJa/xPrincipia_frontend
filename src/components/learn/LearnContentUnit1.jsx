@@ -3,8 +3,43 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
-
 export default class LearnContentUnit1 extends React.Component {
+    constructor(props){
+        super(props);
+         this.renderItem = this.renderItem.bind(this)
+    };
+
+    render() {
+		return (
+            <div>
+                <ul> {this.props.learnItems.map(this.renderItem)} </ul>
+                    
+            </div>
+		);
+	}
+    renderItem(learnItem) {
+        return (
+        <li key={learnItem.ID} id="suggestionUnit">
+            <div id="suggestionContent">
+                <div id="suggestionAdder">1: {learnItem.Username}</div>
+                <div id="suggestionText">{learnItem.Description}</div>
+            </div>
+            <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
+            <Link  to={`/problem/${learnItem.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
+        <br /><br /> 
+        </li>)
+
+    }
+
+
+}
+
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
+}
+
+/*export default class LearnContentUnit1 extends React.Component {
     constructor(props){
         super(props);
          this.renderItem = this.renderItem.bind(this)
@@ -48,9 +83,4 @@ export default class LearnContentUnit1 extends React.Component {
         </li>)
 
   }
-}
-
-//convert float to Decimal
-function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
-}
+}*/

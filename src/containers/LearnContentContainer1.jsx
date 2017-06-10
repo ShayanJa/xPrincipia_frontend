@@ -14,22 +14,14 @@ constructor(props){
         }
         
     };
-    componentDidMount(){
+    componentWillMount(){
         var self = this;
-        if(this.props.params.solutionID){
-            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=1').then(function (response) {
-                self.setState({
-                    learnItems: response.data
-                })
-            })  
-        } else {
-            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID).then(function (response) {
                 self.setState({
                     learnItems: response.data
                 })
             }) 
         }
-    }
    render() {
            return (
         <div id="suggestionContainer">

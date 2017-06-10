@@ -75,8 +75,8 @@ axios.post('http://localhost:10000/register', {
                 <div id="enter">Enter</div>
                 <input type="text" name="fullname" required="required" maxLength="30" placeholder="Full Name" id="registerFullName" autoFocus />
                 <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
-                <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" /> <br />
-                <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/> <br />
+                <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" />
+                <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/>
                 <Link to='/login'><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
             </form>
             <Link to='/login'><div id="loginButton">Login</div></Link>

@@ -985,9 +985,10 @@
       width: 45%;
       margin-bottom: 0px;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      font-family: 'Alegreya Sans SC', sans-serif;
     }
-    #loginPassword {
-      margin-top: 0px;
+    #loginPassword, #registerPassword {
+      margin-bottom: 15px;
     }
     #enter {
     	color: #00dcff;
@@ -1005,11 +1006,12 @@
     	padding: 0px;
     	margin: 0px;
       text-align: center;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      letter-spacing: 4px;
     }
     #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
     	background-color: #00dcff;
-    	border: 1px solid #0f131c;
     	cursor: pointer;
     }
     #registerButton, #loginButton {
@@ -1021,6 +1023,7 @@
     	margin: 0 auto;
     	font-size: 70%;
       width: 30%;
+      letter-spacing: 4px;
     }
 
     #registerButton:hover, #loginButton:hover {
@@ -1804,7 +1807,7 @@
     	letter-spacing: 10px;
     }
     #createSPButton {
-      margin-top: 5px;
+      margin-top: 35px;
       margin-bottom: 5px;
     }
     /*#createButton:hover {
@@ -2307,7 +2310,7 @@ img#editLogo {
   border-width: 0px 0px;
   position: relative;
   color: #dddddd;
-  padding: 0px 10px 20px 10px;
+  padding: 0px 10px 20px 0px;
   margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
   width: 100%;
@@ -3149,7 +3152,7 @@ input#submitNewVersion:hover {
   width: 20%;
   margin: 0 auto;
   padding: 5px;
-  letter-spacing: 10px;
+  letter-spacing: 4px;
   margin-top: 2%;
 }
 #tutorialIntroButton {
