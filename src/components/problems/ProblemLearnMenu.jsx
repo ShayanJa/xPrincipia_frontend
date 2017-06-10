@@ -26,11 +26,11 @@ export default class ProblemLearnMenu extends React.Component {
         <div id="solutions">
             <div id="solutionsTitleRightSB">Learn</div>
             <div id="solutionsHeader">
-                <Link to={`/problem/${this.props.params.probID}/learn/content`} activeClassName="activeWhite">
+                <Link to={`/problem/${this.props.params.probID}/learncontent`} activeClassName="activeWhite">
                     <div id="contentLearnButtonRightSB">Content</div>
                 </Link>
 
-                <Link to={`/problem/${this.props.params.probID}/learn/resources`}  activeClassName="activeWhite">
+                <Link to={`/problem/${this.props.params.probID}/learnresources`}  activeClassName="activeWhite">
                     <div id="resourcesLearnButtonRightSB">Resources</div>
                 </Link>
             </div>

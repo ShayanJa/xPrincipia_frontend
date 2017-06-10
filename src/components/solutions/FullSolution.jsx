@@ -85,7 +85,7 @@ export default class FullSolution extends React.Component {
                 {this.state.solutionInfo.Summary}
                 </p>
             </div>
-            {React.cloneElement(this.props.children)}
+            {React.cloneElement(this.props.children, {solutionInfo: this.state.questions})}
         </div>
       </div>
       );

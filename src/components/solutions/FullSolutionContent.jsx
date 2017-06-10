@@ -58,7 +58,9 @@ export default class FullSolutionContent extends React.Component {
         })
   }
    render() {
-      return (
+    //    if (solutionInfo.Username === cookie.load('userName')) {
+       if (1) {
+           return (
       <div> 
             <div id="voteVersionsMenu">
                     <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
@@ -69,11 +71,43 @@ export default class FullSolutionContent extends React.Component {
                     </Link>
               </div>
               <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
-              <img src={'/frontend/src/assets/flag.svg'} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
+              
+              <img src={require('../../assets/editBlue.svg')} id="editSolutionButton" width="20" height="20" alt="Edit Button" />
+
               <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
-                <img src={'/frontend/src/assets/edit.svg'} id="editSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
+                <img src={require('../../assets/delete.svg')} id="deleteSolutionButton" width="20" height="20" alt="Edit Button" />              
               </Link>
-              <img src={'/frontend/src/assets/delete.svg'} id="flagSolutionButton" width="18" height="18" alt="Flag Button, Red Flag" />
+
+
+              <div id="prosConsMenu">
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
+                    <div id="prosButton">Pros</div>
+                </Link>
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`}>
+                    <div id="consButton">Cons</div>
+                </Link>
+              </div>
+            
+              <div>
+            {this.props.children}
+            </div>
+        </div>
+               )    } else {
+    return (
+      <div> 
+            <div id="voteVersionsMenu">
+                    <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
+                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
+                        <div id="versionsButton">
+                                Versions
+                        </div>
+                    </Link>
+              </div>
+              <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
+              
+              <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
+                <img src={require('../../assets/flag.svg')} id="flagSolutionButton" width="20" height="20" alt="Edit Button" />
+              </Link>
 
 
               <div id="prosConsMenu">
@@ -90,9 +124,7 @@ export default class FullSolutionContent extends React.Component {
             </div>
         </div>
       );
-   }
-}
-
+   }}}
 
  
   function dateTime(str) {

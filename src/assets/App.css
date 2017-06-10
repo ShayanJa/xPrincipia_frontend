@@ -58,6 +58,7 @@
     a {
       color: inherit;
       text-decoration: none;
+      /*margin: inherit;*/
     }
     #comingSoon {
       font-size: 200%;
@@ -75,6 +76,49 @@
 
 
 /*Media Queries*/
+@media screen and (max-width: 900px) { 
+
+  #welcomeProblemsUnit {
+    display: inline-block;
+    width: 100% !important;
+    margin: 0% 5% 0% 5% !important;
+  }
+  #welcomeProblemsHeader{
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid #00dcff;
+    border-radius: 0% !important;
+    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    width: 30em !important;
+    height: auto !important;
+    word-wrap: break-word; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0,220,255,0.05);
+    margin-bottom: 5% !important;
+  }
+  #welcomeProblemsHeader:hover {
+    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  }
+  #welcomeProblemsUnitList {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #welcomeProblemsTitle {
+    margin: 0 auto;
+    padding: 10px 15px 10px 15px !important;
+    font-size: 170% !important;
+    /*color: #00dcff;*/
+    word-wrap: break-word; 
+    text-align: center;
+  }
+
+}
 
 @media screen and (max-width: 600px) {
   /*Login Page*/
@@ -2089,25 +2133,30 @@ img#editLogo {
   box-shadow: 0 0 1pt 1pt rgba(0220,255,0.5);
 }
 
-img#flagSolutionButton {
-  /*display: inline;*/
+#flagSolutionButton, #deleteSolutionButton {
   display: block;
   margin: 0 auto;
-  border: rgba(255,127,127,1);
-  /*opacity: 0.5;*/
+  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
 }
-img#editSolutionButton {
-  /*display: inline;*/
+#deleteSolutionButton {
+  margin-top: 5px;
+  padding: 3px;
+}
+#editSolutionButton {
   display: block;
   margin: 0 auto;
-  border: rgba(255,127,127,1);
   padding: 3px;
-  /*opacity: 0.5;*/
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+
 }
 
-#flagSolutionButton:hover, #editSolutionButton:hover  {
+#flagSolutionButton:hover {
   cursor: pointer;
-  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  box-shadow: 0 0 2pt 2pt rgba(255,127,127,0.5);
+}
+#editSolutionButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 
 #backArrow {
@@ -2742,6 +2791,7 @@ label + input[type=radio] + label {
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
   margin-bottom: 0px;
   margin-top: 5px;
+  /*font-family: 'Open Sans', sans-serif;*/
 }
 
 #solutionIntro {
@@ -3114,6 +3164,8 @@ input#submitNewVersion:hover {
   text-align: center;
   width: 100%;
   margin-bottom: 5px;
+
+  display: none;
 }
 
 #tutorialProblemButtonDiv:hover, #tutorialWelcomeButtonDiv:hover,
@@ -3127,7 +3179,7 @@ input#submitNewVersion:hover {
 }
 
 #tutorialProblem, #tutorialWelcome, 
-#tutorialProfile, #tutorialSolution, {
+#tutorialProfile, #tutorialSolution {
   border: 1px solid #00dcff;
   width: 60%;
   margin: 0 auto;
@@ -3135,8 +3187,7 @@ input#submitNewVersion:hover {
   margin-top: 4%;
   background-color: #0f131c;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-
-  /*display: none;*/
+  display: none;
   }
 #tutorialBanner {
   margin: 0 auto;

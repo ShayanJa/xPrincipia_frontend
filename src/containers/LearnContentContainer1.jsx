@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import LearnResourcesUnit1 from '../components/learn/LearnResourcesUnit1.jsx';
+import LearnContentUnit1 from '../components/learn/LearnResourcesUnit1.jsx';
 import LearnContentForm from '../components/learn/LearnContentForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 
@@ -34,7 +34,7 @@ constructor(props){
            return (
         <div id="suggestionContainer">
             {this.props.children}
-            <LearnResourcesUnit1 resources={this.state.learnItems} />
+            <LearnContentUnit1 learnItems={this.state.learnItems} />
             <SideBarMore />
         </div>  
       );
