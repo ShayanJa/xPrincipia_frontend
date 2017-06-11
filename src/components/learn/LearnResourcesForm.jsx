@@ -49,15 +49,15 @@ constructor(props){
             <div id="suggestionFormComponent">
                 <form id="suggestionForm">
                     <fieldset>
-                        <legend>Create Content</legend>
-                             <div class="radio-group">
-                                <input type="radio" id="option-one" name="selector" />
-                                    <label for="option-one">Easy</label>
-                                <input type="radio" id="option-two" name="selector" />
-                                    <label for="option-two">Medium</label>
-                                <input type="radio" id="option-three" name="selector" />
-                                    <label for="option-three">Hard</label>
-                             </div>
+                        <legend>Add a Resource</legend>
+                             {/*<div>
+                                <input type="radio" />
+                                    <label>Easy</label>
+                                <input type="radio" />
+                                    <label>Medium</label>
+                                <input type="radio" />
+                                    <label>Hard</label>
+                             </div>*/}
                             <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
                             <br />
                             <input type="button" value="Add" onClick={this.postResource} id="addSuggestion"/>

@@ -7,7 +7,7 @@ export default class SideBarProblemMenu extends React.Component {
       return (
       <div id="sidebarMenu">
 
-        <Link to={`/problem/${this.props.probID}/solutions`}>
+        <Link to={`/problem/${this.props.probID}/solutions/top`}>
           <div id="SBButton1">Proposals</div>
         </Link>
 
@@ -15,7 +15,7 @@ export default class SideBarProblemMenu extends React.Component {
           <div id="SBButton">Discuss</div>
         </Link>
 
-        <Link to={`/problem/${this.props.probID}/learn/content`}>
+        <Link to={`/problem/${this.props.probID}/learn/resources`}>
           <div id="SBButton">Learn</div>
         </Link>
 

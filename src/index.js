@@ -42,9 +42,9 @@ import ProblemLearnMenu from './components/problems/ProblemLearnMenu.jsx';
 import ProblemLeftSB from './components/problems/ProblemLeftSB.jsx';
 import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
-import ProfileAbout from './components/ProfileAbout.jsx';
-import ProfileNotifications from './components/ProfileNotifications.jsx';
-import ProfileProblemsSolutions from './components/ProfileProblemsSolutions.jsx';
+import ProfileAbout from './components/profile/ProfileAbout.jsx';
+import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
+import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
 import ProsDeleteForm from './components/proscons/ProsDeleteForm.jsx';
 import ProsEditForm from './components/proscons/ProsEditForm.jsx';
 import ProsFlagForm from './components/proscons/ProsFlagForm.jsx';
@@ -146,7 +146,7 @@ ReactDOM.render(
           <IndexRoute component={ProblemSolutionsMenu}></IndexRoute>
           <Route path='/problem/:probID/solutions' component={ProblemSolutionsMenu}>
             <IndexRoute component={ProblemTopSolutions}></IndexRoute>
-            <Route path='/problem/:probID/solutions' component={ProblemTopSolutions}></Route>
+            <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
             <Route path='/fullsolution/:probID/:solutionID/container' component={FullSolutionContainer}>
               <IndexRoute component={FullSolution}></IndexRoute>
@@ -213,9 +213,9 @@ ReactDOM.render(
               <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}>
                 <IndexRoute component={LearnContentForm}></IndexRoute>
                 <Route path='/problem/:probID/learn/content' component={LearnContentForm}></Route>
-                {/*<Route path='/problem/:probID/learn/content/:learnitemID/edit' component={LearnContentEditForm}></Route>*/}
-                {/*<Route path='/problem/:probID/learn/content/:learnitemID/flag' component={LearnContentFlagForm}></Route>*/}
-                {/*<Route path='/problem/:probID/learn/content/:learnitemID/delete' component={LearnContentDeleteForm}></Route>*/}
+                <Route path='/problem/:probID/learn/content/:learnitemID/edit' component={LearnContentEditForm}></Route>
+                <Route path='/problem/:probID/learn/content/:learnitemID/flag' component={LearnContentFlagForm}></Route>
+                <Route path='/problem/:probID/learn/content/:learnitemID/delete' component={LearnContentDeleteForm}></Route>
               </Route>
             </Route>
             <Route path='/problem/:probID/learn/resources/menu' component={LearnResourcesMenu}>

@@ -26,7 +26,7 @@ export default class ProblemSolutionsMenu extends React.Component {
         <div id="solutions">
             <div id="solutionsTitleRightSB">Proposals</div>
             <div id="solutionsHeader">
-                <Link to={`/problem/${this.props.params.probID}/solutions`} activeClassName="activeWhite"><div id="topSolutionsButtonRightSB">Top</div></Link>
+                <Link to={`/problem/${this.props.params.probID}/solutions/top`} activeClassName="activeWhite"><div id="topSolutionsButtonRightSB">Top</div></Link>
                 <Link to={`/problem/${this.props.params.probID}/solutions/create`}  activeClassName="activeWhite"><div id="createSolutionsButtonRightSB">Create</div></Link>
             </div>
             {React.cloneElement(this.props.children, {probID: this.state.probID})}

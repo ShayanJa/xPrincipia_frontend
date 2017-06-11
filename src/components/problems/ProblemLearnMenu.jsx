@@ -25,7 +25,7 @@ export default class ProblemLearnMenu extends React.Component {
       return (
         <div id="solutions">
             <div id="solutionsTitleRightSB">Learn</div>
-            <div id="solutionsHeader">
+            <div id="solutionsLearnHeader">
                 <Link to={`/problem/${this.props.params.probID}/learn/content`} activeClassName="activeWhite">
                     <div id="contentLearnButtonRightSB">Content</div>
                 </Link>

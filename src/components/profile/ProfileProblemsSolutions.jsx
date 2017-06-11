@@ -1,7 +1,6 @@
 import React from 'react';
-import img from '../assets/dnablackinvert.png';
-import Header from '../containers/Header.jsx';
-import ProfileUnit from '../components/ProfileUnit.jsx';
+import Header from '../../containers/Header.jsx';
+import ProfileUnit from '../../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios'
 

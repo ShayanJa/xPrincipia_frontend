@@ -15,20 +15,11 @@ export default class QuestionContainer extends React.Component {
     };
     componentWillMount(){
         var self = this;
-        if(this.props.params.solutionID){
-            return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.solutionID+'&dataType=1').then(function (response) {
-                self.setState({
-                    questions: response.data
-                })
-            })  
-        } else {
-            return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+            return axios.get('http://localhost:10000/auth/questions/typeID?id='+this.props.params.probID).then(function (response) {
                 self.setState({
                     questions: response.data
                 })
             }) 
-        }
-        return
     }
    
    render() {

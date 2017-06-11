@@ -69,6 +69,9 @@
     	font-family: 'Alegreya Sans SC', sans-serif;
       width: 100%;
     }
+    input:focus, textarea:focus {
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    }
 
 
 /*End Global*/
@@ -330,7 +333,7 @@
     #flagSBButton, #editSBButton, #deleteSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
       border: 1px solid #00dcff;
       border-radius: 2px;
       cursor: pointer;
@@ -1331,20 +1334,6 @@
 
 /*SubProblemUnit and SolutionUnit*/
 
-#solutionUnit {
-  padding: 5px;
-  padding-left: 0px;
-  margin: 2px;
-  margin-left: 0px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  border: 2px solid #00dcff;
-  border-width: 1px 0px 0px 0px;
-  border-radius: 0px;
-  padding: 10px;
-  padding-left: 3px;
-  padding-bottom: 0px;
-}
 #subProblemUnit:hover, #solutionUnit:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
@@ -1374,24 +1363,41 @@
   height: auto;
   width: 75%;
 }
-#solutionUnitTitle {
-  display: inline-block;
-  text-align: left;
+#solutionUnit {
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #00dcff;
+}
+#solutionUnitContainer {
   padding: 0px;
-  margin: 0px;
-  color: #dddddd;
-  margin-bottom: 0px;
-  margin-left: 0px;
+  margin: 0 auto;
+  color: #00dcff;
   letter-spacing: 1px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  font-family: 'Open Sans';
-  padding-top: 10px;
   flex: 2 2 auto;
+  font-size: 120%;
+}
+#solutionPercent {
+  float: left;
+  color: #00dcff;
+  font-size: 150%;
+  margin: 0 auto;;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  text-align: center;
+  width: 10%;
+}
+#solutionUnitTitle {
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  margin-right: 9%;
+  margin-left: 1%;
+  color: #00dcff;
+  letter-spacing: 1px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 120%;
+  width: 100%;
 }
 #problemVote {
   flex: 1 1 auto;
@@ -2153,7 +2159,7 @@ img#editLogo {
 
 }
 
-#flagSolutionButton:hover {
+#flagSolutionButton:hover, #deleteSolutionButton:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(255,127,127,0.5);
 }
@@ -2455,7 +2461,9 @@ img#editLogo {
 }
 #SPHeaderLeftSB:hover {
   box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
-
+}
+#SPHeaderLeftSB:hover #SPPercentLeftSB {
+  color: #ffffff;
 }
 #SPTitleLeftSB {
   margin: 0 auto;
@@ -2510,6 +2518,17 @@ img#editLogo {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
+}
+#solutionsLearnHeader {
+  flex: 1 1 auto;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  border: 1px solid #00dcff;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 10px;
 }
 
 #topSolutionsButtonRightSB,
@@ -2867,7 +2886,12 @@ label + input[type=radio] + label {
   cursor: pointer;
   border-color: #00dcff;
 }
-#prosConsTextArea {
+#prosButton:active, #consButton:active {
+  background-color: rgba(0,220,255,0.15);
+  color: #00dcff;
+  border-color: #00dcff;
+}
+#proTextArea, #conTextArea {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   padding: 10px;
@@ -2884,6 +2908,12 @@ label + input[type=radio] + label {
   border: 1px solid #00ffdc;
   border-radius: 2px;
   margin-top: 5px;
+}
+#addProsCons:hover {
+  color: #0f131c;
+  background-color: #00ffdc;
+  border: 1px solid #00ffdc;
+  cursor: pointer;
 }
 /*#currentVersion {
   flex: 2 2 auto;
@@ -3204,7 +3234,6 @@ input#submitNewVersion:hover {
   letter-spacing: 8px;
   margin-top: 5%;
   margin-bottom: 5%;
-
 }
 #tutorialSummary {
   font-size: 140%;
@@ -3245,14 +3274,53 @@ input#submitNewVersion:hover {
 
 /*Profile About*/
 #profileAbout {
-  border: 1px solid #00dcff;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  height: 60%;
   margin-top: 4%;
-  background-color: #0f131c;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
+#profileAboutTitle {
+  font-size: 200%;
+  text-align: center;
+  margin-top: 5%;
+  color: #ffffff;
+  letter-spacing: 8px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#profileAboutBanner {
+  margin: 0 auto;
+  margin-top: 5%;
+}
+#profileAboutSummary {
+  font-size: 140%;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #00dcff;
+}
+#profileAboutProse {
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 150%;
+  /*margin-top: 3%;*/
+}
+#profileAboutReturn {
+  margin: 0 auto;
+  color: #00ffdc;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #00ffdc;
+  /*width: 30%;*/
+  margin-bottom: 3%;
+  margin-top: 5%;
+  font-size: 140%;
+  letter-spacing: 8px;
+  background-color: rgba(0,255,220,0.05)
+}
+/*#profileAboutReturn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);
+
+}*/
 
 /*End Profile About*/
 
@@ -3288,9 +3356,9 @@ input#submitNewVersion:hover {
   border-color: #ff7f7f;
 }
 
-textarea:focus {
+/*textarea:focus {
   border-color: #ff7f7f !important;
-}
+}*/
 #deleteButton, #editButton, #flagButton, #returnButton {
   font-size: 120%;
   color: #ff7f7f;

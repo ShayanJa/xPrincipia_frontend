@@ -49,17 +49,17 @@ constructor(props){
                 <form id="suggestionForm">
                     <fieldset>
                         <legend>Create Content</legend>
-                             <div>
+                             {/*<div>
                                 <input type="radio" id="option-one" />
                                     <label>Easy</label>
                                 <input type="radio" id="option-two" />
                                     <label>Medium</label>
                                 <input type="radio" id="option-three" />
                                     <label>Hard</label>
-                             </div>
+                             </div>*/}
                             <textarea name="suggestionText" required="required" id="learnContentTextArea" autoFocus ></textarea>
                             <br />
-                            <input type="button" value="Add" onClick={this.postLearnItem} id="addSuggestion"/>
+                            <input type="button" value="Create" onClick={this.postLearnItem} id="addSuggestion"/>
                     </fieldset>
                 </form>
             </div>
