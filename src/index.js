@@ -158,17 +158,17 @@ ReactDOM.render(
                   <Route path='/fullsolution/:probID/:solutionID/description' component={FullSolutionDescription}></Route>
                   <Route path='/fullsolution/:probID/:solutionID/pros' component={ProsContainer}>
                     <IndexRoute component={ProsForm}></IndexRoute>
-                    <Route path='/problem/:probID/pros' component={ProsForm}></Route>
-                    <Route path='/problem/:probID/pros/:questID/edit' component={ProsEditForm}></Route>
-                    <Route path='/problem/:probID/pros/:questID/flag' component={ProsFlagForm}></Route>
-                    <Route path='/problem/:probID/pros/:questID/delete' component={ProsDeleteForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/pros/pros' component={ProsForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/pros/:proID/edit' component={ProsEditForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/pros/:protID/flag' component={ProsFlagForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/pros/:proID/delete' component={ProsDeleteForm}></Route>
                   </Route>
                   <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}>
                     <IndexRoute component={ConsForm}></IndexRoute>
-                    <Route path='/problem/:probID/cons' component={ConsForm}></Route>
-                    <Route path='/problem/:probID/cons/:questID/edit' component={ConsEditForm}></Route>
-                    <Route path='/problem/:probID/cons/:questID/flag' component={ConsFlagForm}></Route>
-                    <Route path='/problem/:probID/cons/:questID/delete' component={ConsDeleteForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/cons' component={ConsForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/cons/:conID/edit' component={ConsEditForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/cons/:conID/flag' component={ConsFlagForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/cons/:conID/delete' component={ConsDeleteForm}></Route>
                   </Route>                
                 </Route>
                 <Route path='/fullsolution/:probID/:solutionID/versions' component={VersionsContainer}></Route>

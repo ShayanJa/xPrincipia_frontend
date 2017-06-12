@@ -86,7 +86,7 @@
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
-  #welcomeProblemsHeader{
+  #welcomeProblemsHeader, #welcomeProblemsHeader2 {
     display: inline-flex;
     flex-direction: column;
     border: 2px solid #00dcff;
@@ -100,7 +100,7 @@
     background-color: rgba(0,220,255,0.05);
     margin-bottom: 5% !important;
   }
-  #welcomeProblemsHeader:hover {
+  #welcomeProblemsHeader:hover, #welcomeProblemsHeader2:hover {
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
   }
   #welcomeProblemsUnitList {
@@ -1621,8 +1621,12 @@
     	color: #ffffff;
     	cursor: pointer;
     }
-    #welcomeProblemsHeader{
-    	display: inline-flex;
+    #welcomeProblemsHeader, 
+    #welcomeProblemsHeader1,
+    #welcomeProblemsHeader2,
+    #welcomeProblemsHeader3,
+    #welcomeProblemsHeader4 {
+      display: inline-flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1634,8 +1638,55 @@
       justify-content: center;
       background-color: rgba(0,220,255,0.05);
     }
-    #welcomeProblemsHeader:hover {
+    #welcomeProblemsHeader:hover, 
+    #welcomeProblemsHeader1:hover,
+    #welcomeProblemsHeader2:hover,
+    #welcomeProblemsHeader3:hover,
+    #welcomeProblemsHeader4:hover {
       box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
+    }
+    #welcomeProblemsHeader2{
+    	/*background-image: url('./vitruvianMan.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: rgba(15,19,28,0.99);
+      background-blend-mode: overlay;
+      z-index: 1;*/
+      /*transition: 0.5s all;*/
+      /*transition: background-color 0.5s, background-image 0.5s;*/
+      /*transition-timing-function: ease;*/
+    }
+    #welcomeProblemsHeader1:hover,
+    #welcomeProblemsHeader2:hover,
+    #welcomeProblemsHeader3:hover,
+    #welcomeProblemsHeader4:hover {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: rgba(15,19,28,0.2);
+      /*background-color: rgba(0,220,255,0.1);*/
+      /*background-color: rgba(255,255,255,0.2);*/
+      background-blend-mode: overlay;
+      /*transition-delay: 1s;
+      transition-timing-function: linear;*/
+    }
+    #welcomeProblemsHeader1:hover {
+      background-image: url('./earthRise.jpg');
+    }
+    #welcomeProblemsHeader2:hover {
+      background-image: url('./vitruvianMan.jpg');
+    }
+    #welcomeProblemsHeader3:hover {
+      background-image: url('./einstein.jpg');
+    }
+    #welcomeProblemsHeader4:hover {
+      background-image: url('./vitruvianMan.jpg');
+    }
+
+    #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
+    #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
+    #welcomeProblemsHeader3:hover #welcomeProblemsTitle,
+    #welcomeProblemsHeader4:hover #welcomeProblemsTitle {
+      visibility: hidden;
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;

@@ -44,14 +44,14 @@ export default class Header extends React.Component {
    render() {
       return (
         <div id="header">
-            <div id="explore">
+            {/*<div id="explore">
                 <form id="exploreFormHeader">
                     <input type="search" name="search"
                         placeholder="Explore" id="exploreHeaderInput"  
                         onKeyDown={this.queryProblem} />
                     <input onKeyPress={this.submitSearch}  id="submitExplore" />
                 </form>
-            </div>
+            </div>*/}
             <div id="logo">
               <Link to="/welcome"><div id="logoName">XPrincipia</div></Link>
             </div>
