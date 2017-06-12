@@ -21,7 +21,7 @@ export default class ProfileUnit extends React.Component {
    renderItem(item) {
        if (this.props.currentType === 'solution') {
         return (
-          <Link key={item.ID} to={`/fullsolution/${item.ProblemID}/${item.ID}/solutions`} >
+          <Link key={item.ID} to={`/fullsolution/${item.ProblemID}/${item.ID}`} >
             <li><div id="profileRightUnit">
                 <div id="profileUnitTitle">{item.Title}</div>
              <div id="unitSummary">{item.Summary} </div>
@@ -31,7 +31,7 @@ export default class ProfileUnit extends React.Component {
        }
       else if (this.props.currentType === 'problem') {
         return (
-          <Link key={item.ID} to={`/problem/${item.ID}/solutions`} >
+          <Link key={item.ID} to={`/problem/${item.ID}`} >
             <li><div id="profileRightUnit">
                 <div id="profileUnitTitle">{item.Title}</div>
              <div id="unitSummary">{item.Summary} </div>
