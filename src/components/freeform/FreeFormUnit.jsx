@@ -50,17 +50,17 @@ export default class FreeFormUnit extends React.Component {
 				</div>
                     <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/delete`}>
                         <div id="deleteSBButton">
-                            <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                            <img src={require('../../assets/delete.svg')} id="editLogo" width="12" height="12" alt="Delete Button" />
                         </div>
                     </Link>
                     <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/edit`}>
                         <div id="editSBButton">
-                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="12" height="12" alt="Edit Button" />
                         </div>
                     </Link>
 				<Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue">
                     <div id="commentSBButton">
-                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Edit Button" />
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
                     </div>
                 </Link> 
                 <div onClick={submitVote} id="suggestionVote">
