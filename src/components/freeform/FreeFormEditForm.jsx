@@ -26,9 +26,9 @@ export default class FreeFormEditForm extends React.Component {
 
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     });   
   }
 
@@ -59,9 +59,9 @@ updateFreeForm() {
       return (
       <div id="questionFormComponent">
             <form id="questionForm">
-                <fieldset id="redFieldset">
+                <fieldset>
                     <legend id="redLegend">Edit FreeForm Comment</legend>
-                         <textarea name="questionText" required="required" id="freeFormEditTextArea" autofocus ></textarea>
+                         <textarea name="questionText" required="required" id="freeFormEditTextArea" autoFocus ></textarea>
                          <br />
                          <Link to='/problem/${freeForm.TypeID}/freeForms'>
                             <div onClick={this.updateFreeForm} id="editButton">Edit</div>

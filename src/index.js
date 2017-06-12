@@ -196,9 +196,9 @@ ReactDOM.render(
               <Route path='/problem/:probID/suggestion/:suggID/delete' component={SuggestionDeleteForm}></Route>
             </Route>
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
-            <Route path='/problem/:probID/freeform' component={FreeFormContainer}>
+            <Route path='/problem/:probID/freeforms' component={FreeFormContainer}>
               <IndexRoute component={FreeFormForm}></IndexRoute>
-              <Route path='/problem/:probID/suggestions' component={FreeFormForm}></Route>
+              <Route path='/problem/:probID/freeforms' component={FreeFormForm}></Route>
               <Route path='/problem/:probID/freeform/:freeID/edit' component={FreeFormEditForm}></Route>
               <Route path='/problem/:probID/freeform/:freeID/flag' component={FreeFormFlagForm}></Route>
               <Route path='/problem/:probID/freeform/:freeID/delete' component={FreeFormDeleteForm}></Route>

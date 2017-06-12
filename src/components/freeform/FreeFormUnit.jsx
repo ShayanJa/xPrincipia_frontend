@@ -60,7 +60,7 @@ export default class FreeFormUnit extends React.Component {
                     </Link>
 				<Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue">
                     <div id="commentSBButton">
-                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="30" height="30" alt="Edit Button" />
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Edit Button" />
                     </div>
                 </Link> 
                 <div onClick={submitVote} id="suggestionVote">

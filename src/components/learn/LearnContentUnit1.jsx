@@ -19,7 +19,24 @@ export default class LearnContentUnit1 extends React.Component {
 		);
 	}
     renderItem(learnItem) {
-        return (
+
+       function  submitVote() {
+       axios.post('http://localhost:10000/auth/vote/create', {
+           Type: 3,
+           TypeID: learnItem.ID,
+           username : cookie.load("userName"),
+           
+        })
+        .then(function (result) {
+            document.location = window.location.pathname;
+        })
+        .catch(function (error) {
+            alert("I'm sorry, you've already voted on a comment.");
+        })
+  }
+
+       if (question.Username === cookie.load('userName')) {
+           return (
         <li key={learnItem.ID} id="suggestionUnit">
             <div id="suggestionContent">
                 <div id="suggestionAdder">1: {learnItem.Username}</div>
@@ -29,10 +46,19 @@ export default class LearnContentUnit1 extends React.Component {
             <Link  to={`/problem/${learnItem.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
         <br /><br /> 
         </li>)
-
+        } else {
+            return (
+        <li key={learnItem.ID} id="suggestionUnit">
+            <div id="suggestionContent">
+                <div id="suggestionAdder">1: {learnItem.Username}</div>
+                <div id="suggestionText">{learnItem.Description}</div>
+            </div>
+            <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
+            <Link  to={`/problem/${learnItem.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
+        <br /><br /> 
+        </li>)
+  }
     }
-
-
 }
 
 //convert float to Decimal

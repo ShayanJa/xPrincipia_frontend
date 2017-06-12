@@ -17,7 +17,7 @@ constructor(props){
     };
     postResource() {
   //Read field items into component state
-  this.state.resource = document.getElementById('questionTextArea').value
+  this.state.resource = document.getElementById('resourcesTextArea').value
 
   //if User is on a solution post with type 1
   //solutionID will be available in props
@@ -58,7 +58,7 @@ constructor(props){
                                 <input type="radio" />
                                     <label>Hard</label>
                              </div>*/}
-                            <textarea name="suggestionText" required="required" id="suggestionTextArea" autoFocus ></textarea>
+                            <textarea name="suggestionText" required="required" id="resourcesTextArea" autoFocus ></textarea>
                             <br />
                             <input type="button" value="Add" onClick={this.postResource} id="addSuggestion"/>
                     </fieldset>

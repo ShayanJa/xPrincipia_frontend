@@ -99,7 +99,7 @@ export default class FullProblem extends React.Component {
         <div id="problemRow2">
           <div id="fullProblem">
             <div id="fullProblemHeader">
-              <div id="problemAdditionalInfoLabel">ADDITIONAL INFORMATION</div>
+              <div id="problemAdditionalInfoLabel">Additional Information</div>
               <div id="followProblem" onClick={this.submitVote}>Vote</div>
             </div>
             <p id="problemSummary">

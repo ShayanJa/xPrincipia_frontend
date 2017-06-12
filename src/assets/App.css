@@ -86,7 +86,11 @@
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
-  #welcomeProblemsHeader, #welcomeProblemsHeader2 {
+  #welcomeProblemsHeader, 
+  #welcomeProblemsHeader1,
+  #welcomeProblemsHeader2,
+  #welcomeProblemsHeader3,
+  #welcomeProblemsHeader4 {
     display: inline-flex;
     flex-direction: column;
     border: 2px solid #00dcff;
@@ -99,6 +103,7 @@
     justify-content: center;
     background-color: rgba(0,220,255,0.05);
     margin-bottom: 5% !important;
+    background-size: cover !important;
   }
   #welcomeProblemsHeader:hover, #welcomeProblemsHeader2:hover {
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
@@ -841,6 +846,8 @@
     }
     #logoName {
       margin: 0 auto;
+      float: left;
+      margin-left: 5%;
     }
     #avatarHeader {
       width: 25%;
@@ -853,6 +860,7 @@
       flex-direction: row;
       text-align: right;
       float: right;
+      margin-right: -5%;
     }
     #avatarImage {
       display: block;
@@ -914,7 +922,6 @@
     #info, #signup, #register {
     	color: #dddddd;
     	padding: 30px 10px 20px 0px;
-    	margin: 0px 0px 0px 0px;
     	flex: 1 1 auto;
     	width: 60%;
     }#info {
@@ -923,6 +930,13 @@
     #signup, #register {
     	width: 100%;
       font-size: 90%;
+      margin: 0 auto;
+      margin-top: 1%;
+      margin-bottom: 3%;
+    }
+    #register {
+      margin-top: 1%;
+      margin-bottom: 2%;
     }
     #banner {
     	color: #ffffff;
@@ -931,7 +945,7 @@
     	font-size: 200%;
     	text-align: center;
     	padding: 0px 0px 5px 0px;
-      margin-top: 10%;
+      margin-top: 11%;
     }
     #bannerTitle {
     	font-size: 250%;
@@ -985,7 +999,7 @@
     	display: block;
       margin-top: 15px;
       font-size: 75%;
-      width: 45%;
+      width: 22%;
       margin-bottom: 0px;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       font-family: 'Alegreya Sans SC', sans-serif;
@@ -1000,17 +1014,22 @@
     	border-width: 0px 0px 1px 0px;
     	margin-bottom: 0px;
     }
-    #submitLogin, #submitRegister {
+    #submitLogin, #submitRegister,
+    #registerButton, #loginButton {
     	color: #00dcff;
-      font-size: 90%;
+      font-size: 65%;
     	border: 1px solid #00dcff;
-    	border-width: 1px 0px 0px 0px;
-    	width: 100%;
+      border-radius: 3px;
+    	width: 14%;
     	padding: 0px;
-    	margin: 0px;
+    	margin: 0 auto;
       text-align: center;
       font-family: 'Alegreya Sans SC', sans-serif;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
+      margin-top: 4%;
+    }
+    #submitLogin, #submitRegister {
+      margin-top: 0.5%;
     }
     #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
@@ -1018,15 +1037,11 @@
     	cursor: pointer;
     }
     #registerButton, #loginButton {
-      text-align: center;
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
-      border-width: 0px 1px 1px 1px;
-      border-radius: 3px;
-    	margin: 0 auto;
-    	font-size: 70%;
-      width: 30%;
-      letter-spacing: 4px;
+      border-width: 1px 1px 1px 1px;
+      width: 9%;
+      font-size: 60%;
     }
 
     #registerButton:hover, #loginButton:hover {
@@ -1511,7 +1526,7 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 4% 20% 4% 20%;
+    	margin: 5.5% 20% 4.6% 20%;
     	border: 1px solid #dddddd;
       border-radius: 3px;
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
@@ -1645,48 +1660,41 @@
     #welcomeProblemsHeader4:hover {
       box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
     }
-    #welcomeProblemsHeader2{
-    	/*background-image: url('./vitruvianMan.jpg');
+    #welcomeProblemsHeader1,
+    #welcomeProblemsHeader2,
+    #welcomeProblemsHeader3,
+    #welcomeProblemsHeader4 {
       background-size: contain;
       background-repeat: no-repeat;
-      background-color: rgba(15,19,28,0.99);
+      background-color: rgba(15,19,28,0.999);
+      /*background-color: rgba(0,220,255,0.1);*/
+      /*background-color: rgba(255,255,255,0.2);*/
       background-blend-mode: overlay;
-      z-index: 1;*/
-      /*transition: 0.5s all;*/
-      /*transition: background-color 0.5s, background-image 0.5s;*/
-      /*transition-timing-function: ease;*/
+      transition: all 0.5s ease 0s;
+    }
+    #welcomeProblemsHeader1 {
+      background-image: url('./earthRise.jpg');
+    }
+    #welcomeProblemsHeader2 {
+      background-image: url('./vitruvianMan.jpg');
+    }
+    #welcomeProblemsHeader3 {
+      background-image: url('./einstein.jpg');
+    }
+    #welcomeProblemsHeader4 {
+      background-image: url('./lhc.jpg');
     }
     #welcomeProblemsHeader1:hover,
     #welcomeProblemsHeader2:hover,
     #welcomeProblemsHeader3:hover,
     #welcomeProblemsHeader4:hover {
-      background-size: contain;
-      background-repeat: no-repeat;
-      /*background-color: rgba(15,19,28,0.2);*/
-      background-color: rgba(0,220,255,0.1);
-      /*background-color: rgba(255,255,255,0.2);*/
-      background-blend-mode: overlay;
-      /*transition-delay: 1s;
-      transition-timing-function: linear;*/
+      background-color: rgba(15,19,28,0.5);
     }
-    #welcomeProblemsHeader1:hover {
-      background-image: url('./earthRise.jpg');
-    }
-    #welcomeProblemsHeader2:hover {
-      background-image: url('./vitruvianMan.jpg');
-    }
-    #welcomeProblemsHeader3:hover {
-      background-image: url('./einstein.jpg');
-    }
-    #welcomeProblemsHeader4:hover {
-      background-image: url('./vitruvianMan.jpg');
-    }
-
     #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader3:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader4:hover #welcomeProblemsTitle {
-      visibility: hidden;
+      /*visibility: hidden;*/
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
@@ -1850,7 +1858,7 @@
     #createButton, #createSPButton {
     	background-color: #0f131c;
     	color: #00ffdc;
-    	font-family: 'Alegreya Sans SC', sans-serif;
+    	font-family: 'Alegreya Sans SC' , sans-serif;
     	font-size: 150%;
     	font-weight: 100;
     	border: 1px solid #00ffdc;
@@ -1902,7 +1910,10 @@
 
 /*Forms*/
 
-#questionTextArea, #answerTextArea, #suggestionTextArea, #commentTextArea {
+#questionTextArea, #answerTextArea, 
+#suggestionTextArea, #commentTextArea,
+#proTextArea, #conTextArea, 
+#resourcesTextArea, #learnContentTextArea {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
   padding: 10px;
@@ -2265,7 +2276,7 @@ img#editLogo {
   margin: 0 auto;
   vertical-align: middle;
   padding: 5px;
-  /*margin-left: 25%;*/
+  margin-left: 50%;
   /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
 }
 
@@ -2301,6 +2312,11 @@ img#editLogo {
   border: 1px solid #dddddd;
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(15,19,28,0.99);
+  background-blend-mode: overlay;
+  background-image: url('./vitruvianMan.jpg');*/
 }
 
 #fullProblemHeader,
@@ -2320,24 +2336,34 @@ img#editLogo {
   margin-left: 5%;
   font-size: 130%;
   margin-right: 0 auto;
-  font-family: 'Lato', 'Alegreya Sans SC' , sans-serif;
+  font-family: 'Alegreya Sans SC' , sans-serif;
+  letter-spacing: 1px;
+}
+#problemAdditionalInfoLabel {
+  font-size: 170%;
 }
 #followProblem,
 #followProblemLeftSB {
   flex: 1 1 auto;
-  margin-left: 0 auto;
-  margin-right: 5%;
-  padding-left: 1%;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  margin: 0 auto;
+  margin-right: 25px;
+  padding: 3px;
   color: #00ffdc;
-  font-size: 110%;
+  font-size: 140%;
   border: 1px solid #00ffdc;
   border-width: 1px 1px;
   border-radius: 3px;
-  text-align: center !important;
+  text-align: center;
   letter-spacing: 8px;
-  
+  font-family: 'Alegreya Sans SC', sans-serif;
+  height: auto;
+  width: 10%;
+}
+#followProblem:hover,
+#followProblemLeftSB:hover {
+  background-color: #00ffdc;
+  color: #0f131c;
+  cursor: pointer; 
 }
 
 #problemSummary {
@@ -2350,7 +2376,7 @@ img#editLogo {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: left;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   /*font-weight: 300;*/
 }
 
@@ -2510,10 +2536,7 @@ img#editLogo {
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
-#SPHeaderLeftSB:hover {
-  box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
-}
-#SPHeaderLeftSB:hover #SPPercentLeftSB {
+#SPHeaderLeftSB:hover #SPTitleLeftSB {
   color: #ffffff;
 }
 #SPTitleLeftSB {
@@ -2634,8 +2657,6 @@ img#editLogo {
   letter-spacing: 4px;
   text-align: center;
 }
-#problemAdditionalInfoLabelSB {
-}
 #fullProblemHeaderSB {
   margin-top: 5%;
 }
@@ -2655,12 +2676,6 @@ img#editLogo {
   color: #00dcff;
   font-size: 150%;
   text-align: center;
-}
-#followProblem:hover,
-#followProblemLeftSB:hover {
-  background-color: #00ffdc;
-  color: #0f131c;
-  cursor: pointer !important; 
 }
 #solutionDescription, #problemDescription, 
 #solutionEvidence, #solutionFutureExperiments, 
@@ -3421,27 +3436,32 @@ input#submitNewVersion:hover {
   width: 20%;
   text-align: center;
   padding: 5px;
+  float: right;
+  margin-right: 10%;
+}
+#returnButton {
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
+  float: left;
+  margin-right: 0%;
+  margin-left: 10%;
 }
 #deleteButton:hover, #editButton:hover {
   cursor: pointer;
   color: #0f131c;
   background-color: #ff7f7f;
 }
-#returnButton {
-  color: #00ffdc;
-  border: 1px solid #00ffdc;
-  display: inline;
+#returnButton:hover {
+  cursor: pointer;
+  color: #0f131c;
+  background-color: #00ffdc;
 }
 #deleteQuestion:hover {
   cursor: pointer;
   color: #0f131c;
   background-color: #ff7f7f;
 }
-#returnButton {
-  cursor: pointer;
-  color: #0f131c;
-  background-color: #ff7f7f;
-}
+
 
 #returnQuestion:hover {
   cursor: pointer;
@@ -3522,3 +3542,14 @@ input#submitNewVersion:hover {
 /*End Notifications*/
 
 /*End Notifications*/
+
+
+
+/*Fonts*/
+
+#problemAdditionalInfoLabel,
+#followProblem {
+  /*font-family: 'Open Sans', sans-serif;*/
+}
+
+/*End Fonts*/

@@ -34,7 +34,7 @@ export default class ProblemDiscussMenu extends React.Component {
                     <Link to={`/problem/${this.props.params.probID}/suggestions`}>
                         <div id="SBDiscussButton">Suggestions</div>
                     </Link>
-                    <Link to={`/problem/${this.props.params.probID}/freeform`}>
+                    <Link to={`/problem/${this.props.params.probID}/freeforms`}>
                         <div id="SBDiscussButton">FreeForm</div>
                     </Link>
                 </div>
