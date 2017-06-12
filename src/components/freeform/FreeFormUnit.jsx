@@ -33,7 +33,7 @@ export default class FreeFormUnit extends React.Component {
             document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a comment.");
+            alert("You may only vote for one comment in this sub problem.");
         })
   }
   

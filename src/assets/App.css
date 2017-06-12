@@ -2366,6 +2366,7 @@ img#editLogo {
   margin-right: 0 auto;
   font-family: 'Alegreya Sans SC' , sans-serif;
   letter-spacing: 1px;
+  font-size: 150%;
 }
 #problemAdditionalInfoLabel {
   font-size: 170%;
@@ -2386,10 +2387,15 @@ img#editLogo {
   font-family: 'Alegreya Sans SC', sans-serif;
   height: auto;
   width: 10%;
+  background-color: rgba(0, 255, 220, 0);
+  transition: all 0.5s ease 0s;
+}
+#followProblemLeftSB {
+  font-size: 120%;
 }
 #followProblem:hover,
 #followProblemLeftSB:hover {
-  background-color: #00ffdc;
+  background-color: rgba(0, 255, 220, 1);
   color: #0f131c;
   cursor: pointer; 
 }
@@ -2877,8 +2883,9 @@ label + input[type=radio] + label {
   padding: 5px;
   margin: 0 auto;
   letter-spacing: 8px;
-  width: 15em;
+  width: 10em;
   text-align: center;
+  transition: all 0.5s ease 0s;
 }
 #voteSolution:hover, 
 #versionsButton:hover {
@@ -3582,3 +3589,23 @@ input#submitNewVersion:hover {
 }
 
 /*End Fonts*/
+
+
+
+/*Animations*/
+
+  /*@keyframes oscillate {
+    0%   {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
+    25%  {box-shadow: 0 0 1pt 5pt rgba(0,220,255,0.5);}
+    50%  {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
+    75%  {box-shadow: 0 0 1pt 5pt rgba(0,220,255,0.5);}
+    100% {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
+  }
+
+  #empty {
+    animation-name: oscillate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }*/
+
+/*End Animations*/
