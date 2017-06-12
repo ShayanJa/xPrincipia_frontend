@@ -135,9 +135,9 @@ ReactDOM.render(
       <IndexRoute component={FullProblem}></IndexRoute>
       <Route path='/problem/:probID' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
-        <Route path='/problem/:probID/SideBar' component={SideBarProblem}>
+        <Route path='/problem/:probID/sideBar' component={SideBarProblem}>
           <IndexRoute component={SolutionContainer}></IndexRoute>
-          <Route path='/problem/:probID/problem/create' component={ProblemForm}></Route>
+          <Route path='/problem/:probID/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
         </Route>
       </Route>
@@ -160,7 +160,7 @@ ReactDOM.render(
                     <IndexRoute component={ProsForm}></IndexRoute>
                     <Route path='/problem/:probID/:solutionID/pros/pros' component={ProsForm}></Route>
                     <Route path='/problem/:probID/:solutionID/pros/:proID/edit' component={ProsEditForm}></Route>
-                    <Route path='/problem/:probID/:solutionID/pros/:protID/flag' component={ProsFlagForm}></Route>
+                    <Route path='/problem/:probID/:solutionID/pros/:proID/flag' component={ProsFlagForm}></Route>
                     <Route path='/problem/:probID/:solutionID/pros/:proID/delete' component={ProsDeleteForm}></Route>
                   </Route>
                   <Route path='/fullsolution/:probID/:solutionID/cons' component={ConsContainer}>
@@ -203,7 +203,7 @@ ReactDOM.render(
               <Route path='/problem/:probID/freeform/:freeID/flag' component={FreeFormFlagForm}></Route>
               <Route path='/problem/:probID/freeform/:freeID/delete' component={FreeFormDeleteForm}></Route>
             </Route>
-            <Route path='/problem/:probID/freeform/:ffID/comments' component={FreeFormCommentContainer}></Route>
+            <Route path='/problem/:probID/freeform/:freeID/comments' component={FreeFormCommentContainer}></Route>
           </Route>
           <IndexRoute component={ProblemLearnMenu}></IndexRoute>
           <Route path='/problem/:probID/learn' component={ProblemLearnMenu}>

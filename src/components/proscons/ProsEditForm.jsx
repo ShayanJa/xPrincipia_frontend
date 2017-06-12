@@ -12,17 +12,17 @@ export default class ProsEditForm extends React.Component {
     pro: '',
   }
 
-    this.postPro = this.postPro.bind(this);
+    this.updatePro = this.updatePro.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/pros/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://localhost:10000/auth/pros/ID?id='+this.props.params.proID).then(function (response) {
           self.setState({
-              pros: response.data
+              pro: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.pro.description;
+          document.getElementById('proEditTextArea').value = self.state.pro.Description;
 
     })
     .catch(function (error) {
@@ -32,13 +32,13 @@ export default class ProsEditForm extends React.Component {
     });   
   }
 
-postPro() {
+updatePro() {
   //Read field items into component state
-  this.state.pro = document.getElementById('questionTextArea').value
+  this.state.pro = document.getElementById('proEditTextArea').value
 
-  axios.post('http://localhost:10000/auth/pros/create', {
-      type:'0',
-      typeID: this.props.probID,
+  axios.put('http://localhost:10000/auth/pros/update?id='+this.props.params.proID, {
+      type:'1',
+      typeID: this.props.params.solutionID,
       username: cookie.load('userName'),
       description : this.state.pro,
     })
@@ -46,7 +46,7 @@ postPro() {
         document.location = window.location.pathname 
       })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request.")
       });
     }
 
@@ -59,11 +59,11 @@ postPro() {
       return (
       <div id="questionFormComponent">
             <form id="questionForm">
-                <fieldset id="redFieldset">
+                <fieldset>
                     <legend id="redLegend">Edit Pro</legend>
-                         <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
+                         <textarea name="questionText" required="required" id="proEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postPro} id="editButton">Edit</div>
+                         <div onClick={this.updatePro} id="editButton">Edit</div>
                          <Link to='/problem/${pro.TypeID}/pros'>
                           <div id="returnButton">Return</div>
                          </Link>

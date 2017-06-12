@@ -71,14 +71,12 @@ constructor(props){
 					<div id="questionAdder">Q: {question.Username}</div>
                 	<div id="questionText">{question.Description}</div>
 				</div>
-                {/*<div id="flagContainer">*/}
-                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
+                    {/*<Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
                         <div id="flagSBButton">
-                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            <img src={require('.../src/assets/flag.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />
                             Flag
                         </div>
-                    </Link>
-                {/*</div>*/}
+                    </Link>*/}
 				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
                     <button type="button" id="questionAnswers">Answers</button>

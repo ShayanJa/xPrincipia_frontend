@@ -7,6 +7,7 @@ import cookie from 'react-cookie';
 export default class FreeFormUnit extends React.Component {
     constructor(props){
         super(props);
+
          this.renderItem = this.renderItem.bind(this)
     };
   
@@ -74,12 +75,12 @@ export default class FreeFormUnit extends React.Component {
 					<div id="suggestionAdder">S: {freeForm.Username}</div>
                 	<div id="suggestionText">{freeForm.Description}</div>
 				</div>
-                    <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/flag`}>
+                    {/*<Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/flag`}>
                         <div id="flagSBButton">
-                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            <img src={require('.../src/assets/flag.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />
                             Flag
                         </div>
-                    </Link>
+                    </Link>*/}
                 <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
                 <button type="button" onClick={submitVote} id="suggestionVote">
                     Vote

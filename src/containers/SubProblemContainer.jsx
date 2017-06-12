@@ -25,7 +25,7 @@ export default class SubProblemContainer extends React.Component {
     render() {
       return (
         <div id="solutions">
-            <Link to={`/problem/${this.props.params.probID}/problem/create`}>
+            <Link to={`/problem/${this.props.params.probID}/create`}>
                 <div id="createSPButton">
                     Create a Sub Project
                 </div>
