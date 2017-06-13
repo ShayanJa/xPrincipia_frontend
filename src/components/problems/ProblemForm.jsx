@@ -26,7 +26,6 @@ export default class ProblemForm extends React.Component {
     this.state.title = document.getElementById('problemTitleForm').value
     // this.state.field = document.getElementById('problemFieldForm').value
     this.state.summary = document.getElementById('problemSummaryForm').value
-    // this.state.references = document.getElementById('problemReferencesForm').value
   
     var self = this
     axios.post('http://localhost:10000/auth/problems/create', {

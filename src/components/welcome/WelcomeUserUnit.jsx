@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-export default class WelcomeUnit extends React.Component {
+export default class WelcomeUserUnit extends React.Component {
    
 	render() {
 		return (
 	    <div id="SPListDiv">
-			<ul id="welcomeProblemsUnitList"> 
+			<ul id="welcomeUserProblemsUnitList"> 
         {this.props.problems.map(this.renderItem)} 
       </ul>
 	               
@@ -21,7 +21,7 @@ if (problem.Title === 'Interstellar Civilization') {
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeader1">
+          <div id="welcomeProblemsHeaderInvisible">
             <div id="welcomeProblemsTitle">
                 {problem.Title}
             </div>
@@ -33,7 +33,7 @@ if (problem.Title === 'Interstellar Civilization') {
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeader2">
+          <div id="welcomeProblemsHeaderInvisible">
             <div id="welcomeProblemsTitle">
                 {problem.Title}
             </div>
@@ -45,7 +45,7 @@ if (problem.Title === 'Interstellar Civilization') {
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeader3">
+          <div id="welcomeProblemsHeaderInvisible">
             <div id="welcomeProblemsTitle">
                 {problem.Title}
             </div>
@@ -57,7 +57,7 @@ if (problem.Title === 'Interstellar Civilization') {
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeader4">
+          <div id="welcomeProblemsHeaderInvisible">
             <div id="welcomeProblemsTitle">
                 {problem.Title}
             </div>
@@ -68,9 +68,9 @@ if (problem.Title === 'Interstellar Civilization') {
 } else 
       return (
       <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-        <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeaderInvisible">
-            <div id="welcomeProblemsTitle">
+        <li  id="welcomeUserProblemsUnit">
+          <div id="welcomeUserProblemsHeader">
+            <div id="welcomeUserProblemsTitle">
                 {problem.Title}
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios'
-import cookie from 'react-cookie'
+import cookie from 'react-cookie';
+// import $ from 'jquery';
 
 export default class WelcomeCreateForm extends React.Component {
 
@@ -19,6 +20,7 @@ export default class WelcomeCreateForm extends React.Component {
     }
 
     this.postProblem = this.postProblem.bind(this);
+    // this.toggle = this.toggle.bind(this);
   };
 
   postProblem() {
@@ -50,6 +52,14 @@ export default class WelcomeCreateForm extends React.Component {
     });
   };
 
+
+// toggle() {
+// $("welcomeMore").click(function(){
+//     $("createProblemBox").toggle(1000);
+// });}
+
+
+
   render() {
       return (
         <div id="createProblemBox">
@@ -64,7 +74,7 @@ export default class WelcomeCreateForm extends React.Component {
                             <input type="text" name="problemSubject" required="required" maxLength="50" placeholder="Enter field of study here" id="problemFieldForm"/>
                           </label><br />
 
-                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Summary<br />
+                        <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />
                             <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="problemSummaryForm"/>
                           </label><br />
 
@@ -80,7 +90,7 @@ export default class WelcomeCreateForm extends React.Component {
                             <textarea name="problemReferences" placeholder="Provide your references here." id="problemReferencesForm">
                             </textarea></label><br />
 
-                        <Link to={`/welcome`}><input type="submit" value="Create" onClick={this.postProblem} id="submitWelcomeProblem"/></Link>
+                        <Link to={`/welcome`}><input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/></Link>
               </fieldset>
             </form>
             <Link to='/welcome'><div id="welcomeMore">Back</div></Link>

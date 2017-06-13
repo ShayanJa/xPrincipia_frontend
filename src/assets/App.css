@@ -72,6 +72,9 @@
     input:focus, textarea:focus {
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
     }
+    #invisible {
+      display: none;
+    }
 
 
 /*End Global*/
@@ -105,7 +108,11 @@
     margin-bottom: 5% !important;
     background-size: cover !important;
   }
-  #welcomeProblemsHeader:hover, #welcomeProblemsHeader2:hover {
+  #welcomeProblemsHeader:hover, 
+  #welcomeProblemsHeader1:hover,
+  #welcomeProblemsHeader2:hover,
+  #welcomeProblemsHeader3:hover,
+  #welcomeProblemsHeader4:hover {
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
   }
   #welcomeProblemsUnitList {
@@ -476,7 +483,7 @@
     #problemTitleForm {
       font-family: 'Alegreya Sans SC', sans-serif;
       color: #ffffff;
-      margin: 2% 10% 4% 10%;
+      margin: 0 auto;
       letter-spacing: 6px;
       border: 1px solid #ffffff;
       border-radius: 3px;
@@ -557,16 +564,19 @@
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	background-color: inherit;
+    	background-color: rgba(0,220,255,0);
     	width: 86%;
     	margin: 0 auto;
       margin-top: 3%;
       margin-bottom: 2%;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      transition: all 0.5s ease 0s;
+      letter-spacing: 2px;
     }
     input#submitProblem:hover, input#submitSolution:hover {
     	color: #0f131c;
     	border: 1px solid #0f131c;
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	cursor: pointer;
     }
     label {
@@ -1608,7 +1618,7 @@
       display: inline;
     }
     #createWelcomeButton {
-      background-color: #0f131c;
+      background-color: rgba(0,220,255,0);
       color: #00dcff;
       font-family: 'Alegreya Sans SC', sans-serif;
       font-size: 150%;
@@ -1620,9 +1630,13 @@
       width: 100%;
       margin: 0px;
       padding: 0px;
-      -webkit-transition-duration: 0s;
-      transition-duration: 0s;
+      transition: all 0.5s ease 0s;
       letter-spacing: 16px;
+    }
+    #createWelcomeButton:hover {
+      background-color: rgba(0,220,255,1);
+      color: #0f131c;
+      cursor: pointer;
     }
     .activeBlue div {
       color: #0f131c !important;
@@ -1631,11 +1645,6 @@
     .activeBlue button {
       color: #0f131c !important;
       background-color: #00dcff !important;  
-    }
-    #createWelcomeButton:hover {
-      background-color: #00dcff;
-      color: #0f131c;
-      cursor: pointer;
     }
     #createWelcomeButton:active {
       background-color: #00dcff;
@@ -1735,19 +1744,62 @@
     	padding: 2px 5px 2px 5px;
     	margin-bottom: 35px;
     }*/
-    #welcomeProblemsTitle {
-      margin: 0 auto;
-    	padding: 5px 10px 5px 10px;
-    	font-size: 130%;
-    	/*color: #00dcff;*/
-      word-wrap: break-word; 
-      text-align: center;
-    }
-    #welcomeProblemsSummary {
+  #welcomeProblemsTitle {
+    margin: 0 auto;
+    padding: 5px 10px 5px 10px;
+    font-size: 130%;
+    /*color: #00dcff;*/
+    word-wrap: break-word; 
+    text-align: center;
+  }
+  #welcomeProblemsHeaderInvisible {
+    display: none;
+  }
+  #welcomeUserProblemsUnit {
+    display: inline-block;
+    width: 100% !important;
+    margin: 0% 5% 0% 5% !important;
+  }
+  #welcomeUserProblemsHeader {
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid #00dcff;
+    border-radius: 0% !important;
+    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    width: 30em !important;
+    height: auto !important;
+    word-wrap: break-word; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0,220,255,0.05);
+    margin-bottom: 5% !important;
+    background-size: cover !important;
+  }
+  #welcomeUserProblemsHeader:hover {
+    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  }
+  #welcomeUserProblemsUnitList {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #welcomeUserProblemsTitle {
+    margin: 0 auto;
+    padding: 10px 15px 10px 15px !important;
+    font-size: 170% !important;
+    /*color: #00dcff;*/
+    word-wrap: break-word; 
+    text-align: center;
+  }
+    /*#welcomeProblemsSummary {
     	font-family: 'Open Sans', sans-serf;
     	padding: 0px 5px 5px 5px;
     	font-size: 90%;
-    }
+    }*/
     input#submitWelcomeProblem {
     	display: block;
     	color: #00dcff;
@@ -1873,6 +1925,8 @@
       margin: 0 auto;
     	margin-top: 12px;
       width: 70%;
+      background-color: rgba(0,220,255,0);
+      transition: all 0.5s ease 0s;
     }
     #SBButton:hover, #SBButton1:hover {
     	background-color: rgba(0,220,255,0.15);
@@ -1885,7 +1939,7 @@
     }
     
     #createButton, #createSPButton {
-    	background-color: #0f131c;
+    	background-color: rgba(0,255,220,0);
     	color: #00ffdc;
     	font-family: 'Alegreya Sans SC' , sans-serif;
     	font-size: 150%;
@@ -1899,28 +1953,19 @@
     	margin: 0 auto;
     	padding: 0px;
     	letter-spacing: 10px;
+      transition: all 0.5s ease 0s;
     }
     #createSPButton {
       margin-top: 35px;
       margin-bottom: 5px;
     }
-    /*#createButton:hover {
-    	background-color: rgba(0,220,255,0.05);
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
-      cursor: pointer;
-    }
-    #createSPButton:hover {
-    	background-color: rgba(0,255,220,0.05);
-      box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
-      cursor: pointer;
-    }*/
     #createButton:hover {
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	color: #0f131c;
     	cursor: pointer;
     }
     #createSPButton:hover {
-      background-color: #00ffdc;
+      background-color: rgba(0,255,220,1);
       color: #0f131c;
     	cursor: pointer;
     }
@@ -2005,6 +2050,7 @@
       color: #00ffdc;
       border: 1px solid #00dcff;
       border-width: 1px 0px 0px 0px;
+      letter-spacing: 2px;
     }
     #welcomeMore:hover {
       color: #0f131c;
@@ -2308,12 +2354,27 @@ img#editLogo {
   margin-left: 50%;
   padding-top: 0px;
   margin-top: -10%;
-  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  transition: all 1s ease 0s;
+}
+a#SPParent {
+  flex: 1 1 auto;
+  padding: 4px;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  padding: 5px;
+  margin-left: 50%;
+  padding-top: 0px;
+  margin-top: -10%;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  transition: all 1s ease 0s;
 }
 
 #SPParent:hover {
   cursor: pointer;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
 
 
@@ -3181,10 +3242,12 @@ input#submitNewVersion:hover {
 
 #SParrowImg {
   background-color: #0f131c;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
   /*border: 1px solid #00dcff;*/
   margin: 0 auto;
   vertical-align: middle;
   padding: 5px;
+  transition: all 0.5s ease 0s;
  }
 #SParrowImg:hover {
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
