@@ -12,48 +12,25 @@ export default class FreeFormDeleteForm extends React.Component {
     freeForm: '',
   }
 
-    this.postFreeForm = this.postFreeForm.bind(this);
+    this.deleteFreeform = this.deleteFreeform.bind(this);
   };
 
-postFreeForm() {
-  //Read field items into component state
-  this.state.freeForm = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-  if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/freeForms/create', {
-    type:'1',
-    typeID: this.props.solutionID,
-    username: cookie.load('userName'),
-    description : this.state.freeForm,
-  })
+deleteFreeform() {
+//Delete question
+    axios.delete('http://localhost:10000/auth/freeForm/delete?id='+this.props.params.freeFormID, {
+      params: {
+        id: this.props.params.freeFormID,
+        username: cookie.load('userName')
+      }
+    })
     .then(function (result) {
       document.location = window.location.pathname 
     })
     .catch(function (error) {
       alert("I'm sorry there was a problem with your request")
-      });
-    } 
-
-    //else post to problem
-    //probID will be used
-    else {
-      axios.post('http://localhost:10000/auth/freeForms/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.freeForm,
-    })
-      .then(function (result) {
-        document.location = window.location.pathname 
-      })
-      .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
-      });
-    }
-
+    });
   }
+  
   
 
 
@@ -63,10 +40,10 @@ postFreeForm() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>
-                    <legend>Delete FreeForm Comment</legend>
-                         <div>Are you sure you would like to delete this comment?</div>
+                    <legend>Delete Free Form</legend>
+                         <div>Are you sure you would like to delete this Discussion Item?</div>
                          <br />
-                         <div onClick={this.postFreeForm} id="deleteButton">Delete</div>
+                         <div onClick={this.deleteFreeform} id="deleteButton">Delete</div>
                          <Link to='/problem/${freeForm.TypeID}/freeForms'>
                             <div id="returnButton">Return</div>
                          </Link>
