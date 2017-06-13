@@ -43,12 +43,12 @@ constructor(props){
                 <div id="answerAdder">A: {answer.Username}</div>
                 <div id="answerText">{answer.Description}</div>
             </div>
-                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answers/${this.props.answerID}/edit`}>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.ID}/edit`}>
                     <div id="editSBButton">
                         <img src={require('../../assets/editBlue.svg')} id="editLogo" width="11" height="11" alt="Edit Button" />
                     </div>
                 </Link>
-                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answers/${this.props.answerID}/delete`}>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.TypeID}/delete`}>
                     <div id="deleteSBButton">
                         Delete
                     </div>

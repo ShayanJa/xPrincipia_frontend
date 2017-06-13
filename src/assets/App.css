@@ -1051,7 +1051,7 @@
     }
     #submitLogin, #submitRegister {
       margin-top: 0.5%;
-      width: 10%;
+      width: 15%;
     }
     #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
@@ -1061,12 +1061,12 @@
     #registerButton, #loginButton {
     	color: #00ffdc;
     	border: 1px solid #00ffdc;
-      border-width: 1px 1px 1px 1px;
-      width: 9%;
+      border-width: 0px 1px 1px 1px;
+      width: 10%;
       font-size: 60%;
     }
-    #registerButton {
-      margin-top: 2.5%;
+    #registerButton, #loginButton {
+      margin-top: 0%;
     }
     #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
