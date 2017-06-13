@@ -17,8 +17,7 @@ constructor(props){
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.questions.map(this.renderItem)} </ul>
-	               
+			<ul> {this.props.questions.map(this.renderItem)} </ul>	               
 	    </div>
 		);
 	}
@@ -34,7 +33,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a question.")
+            alert("You may vote for only one question per problem.")
         })
     }
   

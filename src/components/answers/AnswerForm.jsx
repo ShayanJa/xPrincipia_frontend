@@ -27,7 +27,7 @@ axios.post('http://localhost:10000/auth/answers/create', {
   document.location = window.location.pathname 
 })
 .catch(function (error) {
-  alert('Please try again');
+  alert("I'm sorry, there was a problem with your request.");
   });
 }
 

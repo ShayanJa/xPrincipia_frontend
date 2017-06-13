@@ -1,9 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 
 export default class AnswerUnit extends React.Component {
 
+constructor(props){
+     super(props);
+
+        this.renderItem = this.renderItem.bind(this)
+        // this.submitVote = this.submitVote.bind(this)
+
+    };
 	render() {
 		return (
 	    <div>
@@ -25,21 +33,40 @@ export default class AnswerUnit extends React.Component {
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You've already voted on a question.")
+            alert("You may vote for only one answer per question.")
         })
     }
-      return (
+    if (answer.Username === cookie.load('userName')) {
+        return (
+        <li key={answer.ID} id="answerUnit">
+            <div id="answerContent">
+                <div id="answerAdder">A: {answer.Username}</div>
+                <div id="answerText">{answer.Description}</div>
+            </div>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answers/${this.props.answerID}/edit`}>
+                    <div id="editSBButton">
+                        <img src={require('../../assets/editBlue.svg')} id="editLogo" width="11" height="11" alt="Edit Button" />
+                    </div>
+                </Link>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answers/${this.props.answerID}/delete`}>
+                    <div id="deleteSBButton">
+                        Delete
+                    </div>
+                </Link>
+            <button type="button" onClick={submitVote} id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
+        </li>);
+
+    } else {
+    return (
         <li key={answer.ID} id="answerUnit">
             <div id="answerContent">
                 <div id="answerAdder">A: {answer.Username}</div>
                 <div id="answerText">{answer.Description}</div>
             </div>
             <button type="button" onClick={submitVote} id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
-        </li>
-
-      );
+        </li>);
    }
-}
+}}
 
 //convert float to Decimal
 function floatToDecimal(float) {

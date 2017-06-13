@@ -1020,14 +1020,14 @@
     }
     #loginPassword, #registerPassword {
       margin-bottom: 15px;
-      width: 16%;
+      /*width: 22%;*/
     }
-    #registerEmail {
+    /*#registerEmail {
       width: 18%;
     }
     #registerUserName {
       width: 20%;
-    }
+    }*/
     #enter {
     	color: #00dcff;
     	font-size: 100%;
