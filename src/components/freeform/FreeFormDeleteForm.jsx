@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {browserHistory } from 'react-router';
 
 export default class FreeFormDeleteForm extends React.Component {
 
@@ -43,7 +44,7 @@ deleteFreeform() {
                     <legend>Delete Free Form</legend>
                          <div>Are you sure you would like to delete this Discussion Item?</div>
                          <br />
-                         <div onClick={this.deleteFreeform} id="deleteButton">Delete</div>
+                         <Link to='/problem/${freeForm.TypeID}/freeForms'><div onClick={this.deleteFreeform} id="deleteButton">Delete</div> </Link>
                          <Link to='/problem/${freeForm.TypeID}/freeForms'>
                             <div id="returnButton">Return</div>
                          </Link>
