@@ -475,6 +475,16 @@
       width: 90%;
       margin: 0 auto;
      }
+    #welcomeCreateForm {
+      background-color: rgba(0,220,255,0.01);
+      color: #00dcff;
+      height: auto;
+      padding: 0px 5px 5px 5px;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 1%;
+      margin-bottom: 2%;
+    }
     #problemSummaryForm, #problemDescriptionForm,
     #problemRequirementsForm, #problemReferencesForm,
     #solutionSummaryForm, #solutionReferencesForm {
@@ -508,6 +518,9 @@
     }
     #problemTitleFormLabel {
       margin-top: 0%;
+    }
+    #welcomeCreateForm #problemTitleFormLabel {
+      margin-top: 2%;
     }
     #editTitleFormLabel, #versionChangesFormLabel {
       clear: both;
@@ -702,10 +715,14 @@
     }
     #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
     #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
-    #solutionDescription:hover, #problemDescription:hover, 
-    #solutionEvidence:hover, #solutionFutureExperiments:hover, 
-    #solutionReferences:hover, #problemRequirements:hover, #xp:hover {
+    #solutionDescription:hover, #problemDescription:hover,  
+    #solutionReferences:hover, #xp:hover {
       color: #ffffff;
+    }
+    #solutionSummary:hover, #problemSummary:hover,
+    #solutionDescription:hover, #problemDescription:hover, 
+    #solutionReferences:hover {
+      font-size: 110%;
     }
     #elementLabel {
       flex: 0 1 auto;
@@ -813,6 +830,11 @@
       text-align: center;
       padding: 3px 0px 2px 0px;
       font-size: 110%;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+    }
+    #header:hover {
+      transform: scale(1.02);
     }
     #explore, #logo, #avatarHeader {
       margin: 0 auto;
@@ -1099,18 +1121,21 @@
 
 /*Profile*/
 
+    #profileContainer {
+      margin: 0 auto;
+      width: 100%;
+    }
+
     #profileBox {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
     	overflow: auto;
-    	display: inline-flex;
+    	display: flex;
     	align-items: stretch;
     	flex-direction: row;
-    	margin: 3% 15% 3% 15%;
+    	margin: 0 auto;
     	border: 1px solid #00dcff;
-      width: 71%;
+      width: 80%;
+      margin-top: 7%;
+
     }
     #profileLeft, #profileRight {
     	color: #dddddd;
@@ -1620,11 +1645,27 @@
     	display: none;
     }
     #welcomeUnitsContainer {
-    	margin: 0% 5%;
+    	margin: 0% 5% 3% 5%;
     	padding: 2px;
     }
     #welcomeUnitsContainer ul li {
       display: inline;
+    }
+    #createWelcomeButtonBox {
+      margin: 2.5% 22% 0% 22%;
+    	border: 1px solid #dddddd;
+      /*border-radius: 3px;*/
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
+      transform: scale(1);
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonBox:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
     }
     #createWelcomeButton {
       /*background-color: rgba(0,220,255,0);
@@ -1647,20 +1688,37 @@
     	font-size: 160%;
       letter-spacing: 6px;
       cursor: default;
+      transition: all 0.5s ease 0s;
     }
-    #createWelcomeButtonBox {
+    #createWelcomeButton:hover {
+      cursor: pointer;
+      color: #00dcff;
+    }
+    #createWelcomeButtonFormBox {
       margin: 2.5% 22% 0% 22%;
     	border: 1px solid #dddddd;
       /*border-radius: 3px;*/
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
       border: 2px solid #00dcff;
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
       background-color: rgba(0,220,255,0.05);
+      transform: scale(1.02);
+      transition: all 0.5s ease 0s;
     }
-    #createWelcomeButton:hover {
-      background-color: rgba(0,220,255,1);
-      color: #0f131c;
+    #createWelcomeButtonFormBox:hover {
       cursor: pointer;
+    }
+    #createWelcomeButtonForm {
+      color: #00dcff;
+      margin: 5px 0px;
+    	font-size: 160%;
+      letter-spacing: 6px;
+      cursor: default;
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonForm:hover {
+      cursor: pointer;
+      color: #00dcff;
     }
     .activeBlue div {
       color: #0f131c !important;
@@ -1670,10 +1728,10 @@
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
-    #createWelcomeButton:active {
+    /*#createWelcomeButton:active {
       background-color: #00dcff;
       color: #0f131c;
-    }
+    }*/
     #SPListDiv {
       text-align: center;
     }
@@ -1754,11 +1812,19 @@
       background-color: rgba(15,19,28,0.5);
       transform: scale(1.02);
     }
+  #welcomeProblemsTitle {
+    margin: 0 auto;
+    padding: 5px 10px 5px 10px;
+    font-size: 130%;
+    /*color: #00dcff;*/
+    word-wrap: break-word; 
+    text-align: center;
+  }
     #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader3:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader4:hover #welcomeProblemsTitle {
-      /*visibility: hidden;*/
+      /*visibility:none;*/
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
@@ -1770,21 +1836,13 @@
     	padding: 2px 5px 2px 5px;
     	margin-bottom: 35px;
     }*/
-  #welcomeProblemsTitle {
-    margin: 0 auto;
-    padding: 5px 10px 5px 10px;
-    font-size: 130%;
-    /*color: #00dcff;*/
-    word-wrap: break-word; 
-    text-align: center;
-  }
   #welcomeProblemsHeaderInvisible {
     display: none;
   }
   #welcomeUserProblemsUnit {
     display: inline-block;
-    width: 100% !important;
-    margin: 0% 5% 0% 5% !important;
+    width: 100%;
+    margin: 0% 5% 0% 5%;
   }
   #welcomeUserProblemsUnit:hover * {
     color: #ffffff;
@@ -1801,7 +1859,7 @@
     word-wrap: break-word; 
     align-items: center; 
     justify-content: center;
-    background-color: rgba(0,220,255,0.05);
+    background-color: rgba(0,220,255,0);
     margin-bottom: 5%;
     background-size: cover;
     position: relative;
@@ -1823,7 +1881,7 @@
   #welcomeUserProblemsTitle {
     margin: 0 auto;
     padding: 10px 15px 10px 15px !important;
-    font-size: 170% !important;
+    font-size: 130%;
     /*color: #00dcff;*/
     word-wrap: break-word; 
     text-align: center;
@@ -2475,12 +2533,13 @@ a#SPParent {
   flex: 1 1 auto;
   margin: 0 auto;
   margin-right: 25px;
-  padding: 3px;
+  padding: 5px;
+  padding-left: 1%;
   color: #00ffdc;
-  font-size: 140%;
+  font-size: 120%;
   border: 1px solid #00ffdc;
   border-width: 1px 1px;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
   text-align: center;
   letter-spacing: 8px;
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -2511,7 +2570,11 @@ a#SPParent {
   transition: all 0.25s ease 0s;
   color: #dddddd;
   min-width: 80%;
+  transition: all 0.5s ease 0s;
   /*font-weight: 300;*/
+}
+#problemSummary:hover {
+  font-size: 125%;
 }
 
 
@@ -2669,9 +2732,14 @@ a#SPParent {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
 }
-#SPHeaderLeftSB:hover #SPTitleLeftSB {
+#SPHeaderLeftSB:hover #SPPercentLeftSB {
   color: #ffffff;
+}
+#SPHeaderLeftSB:hover {
+  transform: scale(1.02);
 }
 #SPTitleLeftSB {
   margin: 0 auto;
@@ -2754,6 +2822,8 @@ a#SPParent {
   letter-spacing: 12px;
   width: 12em;
   text-align: center;
+  transition: all 0.5s ease 0s;
+  background-color: rgba(0,220,255,0);
 }
 
 #topSolutionsButtonRightSB:hover,
@@ -2829,10 +2899,7 @@ a#SPParent {
   font-size: 100%;
   line-height: 150%;
   word-wrap: break-word; 
-  transition: all 0.5s ease 0.5s;
-}
-#solutionDescription:hover {
-  font-size: 150%;
+  transition: all 0.5s ease 0s;
 }
 
 /*End Right Solutions SB*/
@@ -2989,7 +3056,7 @@ label + input[type=radio] + label {
   color: #00ffdc;
   font-size: 120%;
   border: 1px solid #00ffdc;
-  border-radius: 0px 0px 0px 3px;
+  border-radius: 0px 0px 0px 0px;
   text-align: center;
   letter-spacing: 8px;
   padding: 5px;
@@ -3035,18 +3102,17 @@ label + input[type=radio] + label {
   padding: 0px 0px 0px 0px;
 }
 #solutionSummary {
-  padding-top: 5px;
-  margin-top: 15px;
-  /*border: 1px solid #00dcff;
-  border-width: 0px 1px 0px 1px;*/
-  padding: 0px 5px 10px 5px;
-  margin-bottom: 0px;
+  margin-top: 25px;
+  padding: 0px 5px 0px 5px;
+  margin-bottom: 25px;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 100%;
   line-height: 150%;
   word-wrap: break-word; 
   font-family: 'Open Sans', sans-serif;
+  transition: all 0.5s ease 0s;
+  text-align: left;
 }
 #currentVersion {
   flex: 1 1 auto;

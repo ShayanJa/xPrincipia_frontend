@@ -94,7 +94,7 @@ export default class ProfileContainer extends React.Component {
 
    render() {
       return (
-    <div>
+    <div id="profileContainer">
       <Header />
       <div id="profileBox">
         <div id="profileLeft">

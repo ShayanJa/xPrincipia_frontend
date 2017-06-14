@@ -87,7 +87,7 @@ export default class FullSolution extends React.Component {
                 </div>
                 </Link>
                 <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
-                <div id="currentVersion">v.112</div>
+                {/*<div id="currentVersion">v.112</div>*/}
                 <p id="solutionSummary">
                 {this.state.solutionInfo.Summary}
                 </p>

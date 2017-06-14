@@ -65,15 +65,20 @@ export default class WelcomeCreateForm extends React.Component {
   render() {
       return (
       <div>
-        <div id="createWelcomeButtonBox">
+        {/*<div id="createWelcomeButtonBox">
           <Link to="/welcome/create" activeClassName="activeBlue">
             <h1 id="createWelcomeButton">Create a Project</h1>
           </Link>
-        </div>
+        </div>*/}
         <div id="createProblemBox">
-            <form id="createForm">
+            <form id="welcomeCreateForm">
               <fieldset>
-                  <legend>Create:Project</legend>
+                  {/*<legend>Create:Project</legend>*/}
+                        <div id="createWelcomeButtonFormBox">
+                          <Link to="/welcome/" activeClassName="activeBlue">
+                            <h1 id="createWelcomeButtonForm">Create a Project</h1>
+                          </Link>
+                        </div>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
@@ -101,7 +106,7 @@ export default class WelcomeCreateForm extends React.Component {
                         <Link to={`/welcome`}><input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/></Link>
               </fieldset>
             </form>
-            <Link to='/welcome'><div id="welcomeMore">Back</div></Link>
+            {/*<Link to='/welcome'><div id="welcomeMore">Back</div></Link>*/}
             {/*<div id="welcomeMore" onClick={this.toggle}>Toggle</div>*/}
         </div>
       </div>
