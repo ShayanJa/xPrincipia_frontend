@@ -75,6 +75,12 @@
     #invisible {
       display: none;
     }
+    #welcomeMoreX {
+      display: visible;
+    }
+    span {
+      width: 100%;
+    }
 
 
 /*End Global*/
@@ -1565,14 +1571,17 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 5.5% 20% 4.6% 20%;
+    	margin: 2.5% 20% 2.5% 20%;
     	border: 1px solid #dddddd;
-      border-radius: 3px;
+      /*border-radius: 3px;*/
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
     }
     #welcomePrompt {
     	color: #dddddd;
-      margin: 5px 0px 5px 0px;
+      margin: 5px 0px;
     	font-size: 180%;
       letter-spacing: 6px;
       cursor: default;
@@ -1618,7 +1627,7 @@
       display: inline;
     }
     #createWelcomeButton {
-      background-color: rgba(0,220,255,0);
+      /*background-color: rgba(0,220,255,0);
       color: #00dcff;
       font-family: 'Alegreya Sans SC', sans-serif;
       font-size: 150%;
@@ -1627,11 +1636,26 @@
       border-width: 1px 0px;
       text-align: center;
       text-decoration: none;
-      width: 100%;
-      margin: 0px;
+      width: 70%;
+      margin: 0 auto;
       padding: 0px;
       transition: all 0.5s ease 0s;
-      letter-spacing: 16px;
+      letter-spacing: 16px;*/
+
+      color: #dddddd;
+      margin: 5px 0px;
+    	font-size: 160%;
+      letter-spacing: 6px;
+      cursor: default;
+    }
+    #createWelcomeButtonBox {
+      margin: 2.5% 22% 0% 22%;
+    	border: 1px solid #dddddd;
+      /*border-radius: 3px;*/
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
     }
     #createWelcomeButton:hover {
       background-color: rgba(0,220,255,1);
@@ -1709,6 +1733,7 @@
       /*background-color: rgba(255,255,255,0.2);*/
       background-blend-mode: overlay;
       transition: all 0.5s ease 0s;
+      transform: scale(1);
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
@@ -1727,6 +1752,7 @@
     #welcomeProblemsHeader3:hover,
     #welcomeProblemsHeader4:hover {
       background-color: rgba(15,19,28,0.5);
+      transform: scale(1.02);
     }
     #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
@@ -1760,23 +1786,30 @@
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
+  #welcomeUserProblemsUnit:hover * {
+    color: #ffffff;
+    cursor: pointer;
+  }
   #welcomeUserProblemsHeader {
-    display: inline-flex;
+    display: block;
     flex-direction: column;
     border: 2px solid #00dcff;
-    border-radius: 0% !important;
-    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
-    width: 30em !important;
-    height: auto !important;
+    border-radius: 0%;
+    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+    width: 30em;
+    height: auto;
     word-wrap: break-word; 
     align-items: center; 
     justify-content: center;
     background-color: rgba(0,220,255,0.05);
-    margin-bottom: 5% !important;
-    background-size: cover !important;
+    margin-bottom: 5%;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    /*transition: all 0.5s ease 0s;*/
   }
   #welcomeUserProblemsHeader:hover {
-    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
   }
   #welcomeUserProblemsUnitList {
     text-align: center;
@@ -1794,6 +1827,7 @@
     /*color: #00dcff;*/
     word-wrap: break-word; 
     text-align: center;
+    /*position: relative;*/
   }
     /*#welcomeProblemsSummary {
     	font-family: 'Open Sans', sans-serf;
@@ -2404,6 +2438,7 @@ a#SPParent {
   border: 1px solid #dddddd;
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+  transition: all 0.25s ease 0s;
   /*background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(15,19,28,0.99);
@@ -2473,6 +2508,9 @@ a#SPParent {
   padding: 15px 15px 17px 15px;
   text-align: left;
   font-family: 'Source Sans Pro', sans-serif;
+  transition: all 0.25s ease 0s;
+  color: #dddddd;
+  min-width: 80%;
   /*font-weight: 300;*/
 }
 
@@ -2768,6 +2806,12 @@ a#SPParent {
   /*margin-left: 5%;*/
   text-align: center;
 }
+#solutionDescriptionFormLabel {
+  color: #00dcff;
+  font-size: 150%;
+  /*margin-left: 5%;*/
+  text-align: center;
+}
 #solutionSummaryLabel {
   color: #00dcff;
   font-size: 150%;
@@ -2785,6 +2829,10 @@ a#SPParent {
   font-size: 100%;
   line-height: 150%;
   word-wrap: break-word; 
+  transition: all 0.5s ease 0.5s;
+}
+#solutionDescription:hover {
+  font-size: 150%;
 }
 
 /*End Right Solutions SB*/
@@ -3042,6 +3090,8 @@ label + input[type=radio] + label {
   padding: 5px;
   width: 20em;
   text-align: center;
+  transition: all 0.5s ease 0s;
+  background-color: rgba(0,220,255,0);
 }
 #prosButton:hover, #consButton:hover {
   background-color: rgba(0,220,255,0.15);

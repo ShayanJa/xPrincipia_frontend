@@ -68,7 +68,9 @@ import SuggestionEditForm from './components/suggestions/SuggestionEditForm.jsx'
 import SuggestionFlagForm from './components/suggestions/SuggestionFlagForm.jsx';
 import SuggestionForm from './components/suggestions/SuggestionForm.jsx';
 import VersionForm from './components/versions/VersionForm.jsx';
+import WelcomeCreateButton from './components/welcome/WelcomeCreateButton.jsx';
 import WelcomeCreateForm from './components/welcome/WelcomeCreateForm.jsx';
+
 
 //Load Containers
 import AnswerContainer from './containers/AnswerContainer.jsx';
@@ -96,7 +98,6 @@ import SuggestionCommentContainer from './containers/SuggestionCommentContainer.
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import VersionsContainer from './containers/VersionsContainer.jsx'
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
-import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 // import Profile from './components/Profile.jsx'
 //Assets
 import './assets/index.css';
@@ -107,8 +108,8 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcomecontainer' component={WelcomeContainer}>
-      <IndexRoute component={WelcomeUnitsContainer}></IndexRoute>
-      <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
+      <IndexRoute component={WelcomeCreateButton}></IndexRoute>
+      <Route path='/welcome' component={WelcomeCreateButton}></Route>
       <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
     <IndexRoute component={Intro}></IndexRoute>

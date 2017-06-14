@@ -53,18 +53,16 @@ export default class WelcomeContainer extends React.Component {
       return (
         <div>
           <Header />
-          
+
           <div id="welcomeBox">
-              <Link to="/welcome"><h1 id="welcomePrompt">XPrincipia Projects</h1></Link>
+              <Link to="/welcome">
+                <h1 id="welcomePrompt">XPrincipia Projects</h1>
+              </Link>
           </div>
 
           <div id="welcomeUnitsContainer">
                 <WelcomeUnit problems={this.state.problems} />
           </div>
-
-          <Link to="/welcome/create" activeClassName="activeBlue">
-            <div id="createWelcomeButton">Create</div>
-          </Link>
           
           {this.props.children}
 

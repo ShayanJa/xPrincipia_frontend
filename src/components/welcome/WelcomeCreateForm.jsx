@@ -54,18 +54,26 @@ export default class WelcomeCreateForm extends React.Component {
 
 
 // toggle() {
+//   $(document).ready(function(){
 // $("welcomeMore").click(function(){
-//     $("createProblemBox").toggle(1000);
-// });}
-
+//     $("welcomeMoreX").toggle(1000);
+//     });
+//   });
+// }
 
 
   render() {
       return (
+      <div>
+        <div id="createWelcomeButtonBox">
+          <Link to="/welcome/create" activeClassName="activeBlue">
+            <h1 id="createWelcomeButton">Create a Project</h1>
+          </Link>
+        </div>
         <div id="createProblemBox">
             <form id="createForm">
               <fieldset>
-                  <legend>Create:Problem</legend>
+                  <legend>Create:Project</legend>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
                             <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
                           </label><br />
@@ -94,7 +102,9 @@ export default class WelcomeCreateForm extends React.Component {
               </fieldset>
             </form>
             <Link to='/welcome'><div id="welcomeMore">Back</div></Link>
+            {/*<div id="welcomeMore" onClick={this.toggle}>Toggle</div>*/}
         </div>
+      </div>
       );
    }
 }
