@@ -88,7 +88,7 @@ export default class WelcomeCreateForm extends React.Component {
                           </label><br />
 
                         <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />
-                            <textarea name="problemField" required="required" maxLength="250" placeholder="Summarize in 250 characters here." id="problemSummaryForm"/>
+                            <textarea name="problemField" required="required" maxLength="250" placeholder="Please provide any additional information you'd like. (250 character max.)" id="problemSummaryForm"/>
                           </label><br />
 
                         <label htmlFor="problemDescriptionForm" id="problemDescriptionFormLabel">Description<br />

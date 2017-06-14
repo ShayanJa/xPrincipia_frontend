@@ -107,9 +107,9 @@ export default class ProfileProblemsSolutions extends React.Component {
         <div id="profileRightElements">
             <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
         </div>
-        <div id="moreButtonProfile">
+        {/*<div id="moreButtonProfile">
             More
-        </div>
+        </div>*/}
     </div>
 
       );

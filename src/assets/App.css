@@ -81,6 +81,9 @@
     span {
       width: 100%;
     }
+    /*a {
+      height: inherit;
+    }*/
 
 
 /*End Global*/
@@ -1133,8 +1136,8 @@
     	flex-direction: row;
     	margin: 0 auto;
     	border: 1px solid #00dcff;
-      width: 80%;
-      margin-top: 7%;
+      width: 85%;
+      margin-top: 30px;
 
     }
     #profileLeft, #profileRight {
@@ -1163,33 +1166,39 @@
     	border-radius: 50%;
       display: block;
       margin: 0 auto;
-      vertical-align: middle;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+    }
+    #avatarImageProfile:hover {
+      transform: scale(1.05);
     }
     #userName {
-    	font-size: 200%;
+    	font-size: 270%;
     	text-align: center;
     	line-height: 100%;
     	margin: 10px;
     	padding: 0px;
     	font-family: 'Alegreya Sans SC', sans-serif;
+      margin-top: 7%;
+      margin-bottom: 2%;
     }
     #userEmail {
-    	font-size: 125%;
+    	font-size: 155%;
     	text-align: center;
     	line-height: 100%;
     	margin: 0px;
     	padding: 10px 0px 5px 0px;
     	font-family: 'Alegreya Sans SC', sans-serif;
-    }
-    #userOptions {
+      margin-top: 1%;
+      margin-bottom: 6%;
     }
     #userProblemsSolutionsButton, #notificationsButton,
     #userSettingsButton, #aboutXPButton, 
     #userFeedbackButton, #logOutButton {
-    	background-color: #0f131c;
+    	background-color: rgba(0,220,255,0);
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 100%;
+    	font-size: 135%;
     	font-weight: 100;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px;
@@ -1198,11 +1207,12 @@
     	text-decoration: none;
     	margin: 5px 0px;
     	letter-spacing: 1px;
+      transition: all 0.5s ease 0s;
     }
     #userProblemsSolutionsButton:hover, #notificationsButton:hover,
     #userSettingsButton:hover, #aboutXPButton:hover, 
     #userFeedbackButton:hover, #logOutButton:hover {
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -1222,6 +1232,7 @@
     	border-width: 1px 1px;
     	border-radius: 3px;
     	margin-bottom: 0px;
+      font-size: 130%;
     }
     #profileProblemsMenu, #profileSolutionsMenu {
     	flex: 1 1 auto;
@@ -1244,8 +1255,10 @@
     	margin: 0px 0px;
     	letter-spacing: 4px;
     }
-    #followedProblemsButton, #createdProblemsButton, #votedSolutionsButton, #createdSolutionsButton {
-    	flex: 1 1 auto;
+    #followedProblemsButton, #createdProblemsButton, 
+    #votedSolutionsButton, #createdSolutionsButton {
+    	background-color: rgba(0,255,220,0);
+      flex: 1 1 auto;
     	color: #00ffdc;
     	font-size: 90%;
     	border: 1px solid #00ffdc;
@@ -1254,12 +1267,13 @@
     	text-align: center;
     	text-decoration: none;
     	margin: 3px 10px 0px 10px;
+      transition: all 0.5s ease 0s;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
     #votedSolutionsButton:hover, #createdSolutionsButton:hover,
     #followedProblemsButton:active, #createdProblemsButton:active,
     #votedSolutionsButton:active, #createdSolutionsButton:active {
-    	background-color: #00ffdc;
+    	background-color: rgba(0,255,220,1);
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -1450,6 +1464,8 @@
   padding: 10px;
   margin: 0 auto;
   border: 1px solid #00dcff;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
 }
 #solutionUnitContainer {
   padding: 0px;
@@ -1849,8 +1865,8 @@
     cursor: pointer;
   }
   #welcomeUserProblemsHeader {
-    display: block;
-    flex-direction: column;
+    /*display: block;*/
+    /*flex-direction: column;*/
     border: 2px solid #00dcff;
     border-radius: 0%;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -1881,7 +1897,7 @@
   #welcomeUserProblemsTitle {
     margin: 0 auto;
     padding: 10px 15px 10px 15px !important;
-    font-size: 130%;
+    font-size: 140%;
     /*color: #00dcff;*/
     word-wrap: break-word; 
     text-align: center;
@@ -2124,11 +2140,13 @@
     	border-radius: 3px;
     	font-size: 100%;
     	padding: 5px 0px 5px 0px;
+      transition: all 0.5s ease 0s;
+      background-color: rgba(0,255,220,0);
     	
     }
     #moreButton:hover, #moreButtonProfile:hover {
     	color: #0f131c;
-    	background-color: #00ffdc;
+      background-color: rgba(0,255,220,1);
       cursor: pointer;
     }
     #moreButtonProfile {
@@ -2198,36 +2216,6 @@
     	width: 28%;
     	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 0px;
-    }
-    #avatar {
-    	padding: 10px;
-    	text-align: center;
-    	border-radius: 50%;
-    	display: block;
-    	margin: 0px auto;
-    }
-    #avatarImageProfile {
-      border: 1px solid #00dcff;
-    	border-radius: 50%;
-      display: block;
-      margin: 0 auto;
-      vertical-align: middle;
-    }
-    #userName {
-    	font-size: 200%;
-    	text-align: center;
-    	line-height: 100%;
-    	margin: 10px;
-    	padding: 0px;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    }
-    #userEmail {
-    	font-size: 125%;
-    	text-align: center;
-    	line-height: 100%;
-    	margin: 0px;
-    	padding: 10px 0px 5px 0px;
-    	font-family: 'Alegreya Sans SC', sans-serif;
     }
     #userOptions {
     }
@@ -2867,8 +2855,8 @@ a#SPParent {
 #fullSolution {
   width: 100%;
   border: 1px solid #00dcff;
-  background-color: rgba(255,255,255,0.05);
-  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  /*background-color: rgba(255,255,255,0.05);*/
+  background-color: rgba(0,220,255,0.05);
 }
 #solutionFormLabel {
   color: #00dcff;
@@ -3376,6 +3364,7 @@ input#submitNewVersion:hover {
  #downGreenArrowDiv, #downArrowDiv {
    width: 100%;
    box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+   transition: all 0.5s ease 0s;
  }
  #downGreenArrowDiv:hover {
   cursor: pointer;
