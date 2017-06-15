@@ -58,8 +58,8 @@ updateQuestion() {
                     <legend id="redLegend">Edit Question</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.updateQuestion} id="editButton">Edit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <Link to={`/problem/${this.state.question.TypeID}/questions`}><div onClick={this.updateQuestion} id="editButton">Edit</div></Link>
+                         <Link to={`/problem/${this.state.question.TypeID}/questions`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
