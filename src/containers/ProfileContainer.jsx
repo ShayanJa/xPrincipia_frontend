@@ -104,7 +104,7 @@ export default class ProfileContainer extends React.Component {
                 <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">
-                <Link to={`/profile/usercontent`} activeClassName="activeBlue">
+                <Link to={`/profile`} activeClassName="activeBlue">
                     <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 </Link>
                 <Link to={`/profile/notifications`} activeClassName="activeBlue">

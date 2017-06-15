@@ -121,9 +121,9 @@ ReactDOM.render(
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/intro' component={Intro}></Route>
-    <Route path='/profile' component={ProfileContainer}>
+    <Route path='/profile/container' component={ProfileContainer}>
       <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
-      <Route path='/profile/usercontent' component={ProfileProblemsSolutions}></Route>
+      <Route path='/profile' component={ProfileProblemsSolutions}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
       <Route path='/profile/about' component={ProfileAbout}></Route>
@@ -141,7 +141,7 @@ ReactDOM.render(
       <Route path='/problem/:probID' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/:probID/sideBar' component={SideBarProblem}>
-          <IndexRoute component={SolutionContainer}></IndexRoute>
+          <IndexRoute component={SubProblemContainer}></IndexRoute>
           <Route path='/problem/:probID/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
         </Route>

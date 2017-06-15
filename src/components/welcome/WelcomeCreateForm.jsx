@@ -44,14 +44,13 @@ export default class WelcomeCreateForm extends React.Component {
       references: this.state.references
     })
     .then(function (result) {
-      
+      document.location = window.location.pathname 
     })
     .catch(function (error) {
       console.log(error.response.data)
       alert( error.response.data)
     });
   };
-
 
 // toggle() {
 //   $(document).ready(function(){
@@ -80,7 +79,7 @@ export default class WelcomeCreateForm extends React.Component {
                           </Link>
                         </div>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
+                            <input type="text" name="problemTitle" required="required" maxLength="70" id="problemTitleForm" autoFocus/>
                           </label><br />
 
                         <label htmlFor="problemFieldForm" id="problemFieldFormLabel">Field<br />

@@ -98,15 +98,46 @@ export default class FullProblem extends React.Component {
         </div>
         <div id="problemRow2">
           <div id="fullProblem">
-            <div id="fullProblemHeader">
-              <div id="problemAdditionalInfoLabel">Additional Information</div>
-              <div id="followProblem" onClick={this.submitVote}>Vote</div>
-            </div>
+            <div id="problemAdditionalInfoLabel">Additional Information</div>
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>
+            <div id="createSPButtonBox">
+              <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                <h1 id="createSPButton">Create a Sub Project</h1>
+              </Link>
+            </div>
           </div>
-          <SideBarProblemMenu probID={this.props.params.probID} />
+          <div id="columnContainer">
+            {/*<div id="fullProblemHeader">*/}
+              <div id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              
+              
+                    <div id="sidebarMenu">
+
+                      <div id="followProblem" onClick={this.submitVote}>Vote</div>
+
+                      <Link to={`/problem/${this.props.paramsprobID}/solutions/top`}>
+                        <div id="SBButton">Proposals</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.paramsprobID}/questions`}>
+                        <div id="SBButton">Discuss</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
+                        <div id="SBButton">Learn</div>
+                      </Link>
+
+                      {/*<Link to={`/problem/${this.props.probID}/theory`}>
+                        <div id="SBButton">Theory</div>
+                      </Link> */}
+
+                    </div>
+              
+            {/*</div>*/}
+            {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
+          </div>
       </div>
         {/*<div id="SPLabel">
           Sub Projects
@@ -128,6 +159,9 @@ export default class FullProblem extends React.Component {
    }
 }
 
-
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
+}
  
  

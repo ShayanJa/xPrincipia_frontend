@@ -93,13 +93,9 @@ export default class ProblemLeftSB extends React.Component {
               </Link>
             </div>
             <div id="problemLeftSBIntro">
-              {/*<h1 id="problemTitle">{this.state.problemInfo.Title}</h1>*/}
               <div id="SPHeaderLeftSB">
                 <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
                 <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
-                {/*<div>
-                  <img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
-                </div>*/}
               </div> 
                 <div id="fullProblemHeaderSB">
                   <div id="problemAdditionalInfoLabelSB">Additional Info</div>

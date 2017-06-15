@@ -19,63 +19,70 @@ export default class WelcomeUserUnit extends React.Component {
 if (problem.Title === 'Interstellar Civilization') {
 
       return (
-      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+      
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeaderInvisible">
-            <div id="welcomeProblemsTitle">
-                {problem.Title}
-            </div>
-          </div>
+            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+                <div id="welcomeProblemsHeaderInvisible">
+                    <div id="welcomeProblemsTitle">
+                        {problem.Title}
+                    </div>
+                </div>
+            </Link>
         </li>
-      </Link>);
+      
+      
+      );
 
 } else if (problem.Title === 'Evolving Humanity') {
       return (
-      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeaderInvisible">
-            <div id="welcomeProblemsTitle">
-                {problem.Title}
+          <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+            <div id="welcomeProblemsHeaderInvisible">
+                <div id="welcomeProblemsTitle">
+                    {problem.Title}
+                </div>
             </div>
-          </div>
+          </Link>
         </li>
-      </Link>
+      
       );
 } else if (problem.Title === 'Theoretical Knowledge') {
       return (
-      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeaderInvisible">
-            <div id="welcomeProblemsTitle">
-                {problem.Title}
-            </div>
-          </div>
+            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+                <div id="welcomeProblemsHeaderInvisible">
+                    <div id="welcomeProblemsTitle">
+                        {problem.Title}
+                    </div>
+                </div>
+            </Link>
         </li>
-      </Link>
+      
       );
 } else if (problem.Title === 'Technology Development') {
       return (
-      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeProblemsUnit">
-          <div id="welcomeProblemsHeaderInvisible">
-            <div id="welcomeProblemsTitle">
-                {problem.Title}
-            </div>
-          </div>
+            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+                <div id="welcomeProblemsHeaderInvisible">
+                    <div id="welcomeProblemsTitle">
+                        {problem.Title}
+                    </div>
+                </div>
+            </Link>
         </li>
-      </Link>
+      
       );
 } else 
       return (
-      <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
         <li  id="welcomeUserProblemsUnit">
-          <div id="welcomeUserProblemsHeader">
-            <div id="welcomeUserProblemsTitle">
-                {problem.Title}
-            </div>
-          </div>
+            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+                <div id="welcomeUserProblemsHeader">
+                    <div id="welcomeUserProblemsTitle">
+                        {problem.Title}
+                    </div>
+                </div>
+            </Link>
         </li>
-      </Link>
       );
    }
 }

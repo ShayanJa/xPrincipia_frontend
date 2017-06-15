@@ -56,7 +56,7 @@ export default class ProblemForm extends React.Component {
                           </div>
                         </Link>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
+                            <input type="text" name="problemTitle" required="required" maxLength="70" id="problemTitleForm" autoFocus/>
                           </label><br />
 
                         <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />
