@@ -17,7 +17,7 @@ export default class QuestionEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
           self.setState({
               question: response.data
           })
@@ -36,7 +36,7 @@ updateQuestion() {
   //Read field items into component state
   this.state.question = document.getElementById('questionEditTextArea').value
 
-  axios.put('http://localhost:10000/auth/questions/update?id='+this.props.params.questID, {
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/update?id='+this.props.params.questID, {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

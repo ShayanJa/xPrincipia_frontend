@@ -17,7 +17,7 @@ export default class LearnContentEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
           self.setState({
               learnItems: response.data
           })
@@ -36,7 +36,7 @@ postLearnItem() {
   //Read field items into component state
   this.state.learnItem = document.getElementById('questionTextArea').value
 
-  axios.post('http://localhost:10000/auth/learnItems/create', {
+  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

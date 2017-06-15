@@ -22,7 +22,7 @@ postResource() {
   //if User is on a solution post with type 1
   //solutionID will be available in props
   if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/resources/create', {
+    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
     type:'1',
     typeID: this.props.solutionID,
     username: cookie.load('userName'),
@@ -39,7 +39,7 @@ postResource() {
     //else post to problem
     //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/resources/create', {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

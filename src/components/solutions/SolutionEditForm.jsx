@@ -21,7 +21,7 @@ export default class EditSolutionForm extends React.Component {
   };
   componentWillMount(){
       var self = this;
-      return axios.get('http://localhost:10000/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
           //set other data
@@ -49,7 +49,7 @@ export default class EditSolutionForm extends React.Component {
     this.state.description = document.getElementById('solutionDescriptionForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
-  axios.post('http://localhost:10000/auth/solutions/create', {
+  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
       username: cookie.load('userName'),
       problemID:this.props.params.probID,
       title : this.state.title,

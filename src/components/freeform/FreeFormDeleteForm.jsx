@@ -18,7 +18,7 @@ export default class FreeFormDeleteForm extends React.Component {
 
 deleteFreeform() {
 //Delete question
-    axios.delete('http://localhost:10000/auth/freeForm/delete?id='+this.props.params.freeFormID, {
+    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForm/delete?id='+this.props.params.freeFormID, {
       params: {
         id: this.props.params.freeFormID,
         username: cookie.load('userName')

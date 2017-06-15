@@ -17,7 +17,7 @@ export default class SuggestionDeleteForm extends React.Component {
 
 deleteSuggestion() {
 //Delete question
-    axios.delete('http://localhost:10000/auth/suggestions/delete?id='+this.props.params.suggID, {
+    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/delete?id='+this.props.params.suggID, {
       params: {
         id: this.props.params.suggID,
         username: cookie.load('userName')

@@ -21,7 +21,7 @@ postQuestion() {
   //if User is on a solution post with type 1
   //solutionID will be available in props
 
-      axios.post('http://localhost:10000/auth/questions/create', {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/create', {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

@@ -17,7 +17,7 @@ export default class LearnResourcesEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/resources/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
           self.setState({
               resources: response.data
           })
@@ -36,7 +36,7 @@ postResource() {
   //Read field items into component state
   this.state.resource = document.getElementById('questionTextArea').value
 
-  axios.post('http://localhost:10000/auth/resources/create', {
+  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

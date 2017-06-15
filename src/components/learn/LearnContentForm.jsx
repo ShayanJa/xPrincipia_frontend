@@ -20,7 +20,7 @@ constructor(props){
 
   //if User is on a solution post with type 1
   //solutionID will be available in props
-      axios.post('http://localhost:10000/auth/learnItems/create', {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/create', {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),
@@ -36,7 +36,7 @@ constructor(props){
 
     // componentDidMount(){
     //     var self = this;
-    //         return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+    //         return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
     //             self.setState({
     //                 learnItems: response.data
     //             })

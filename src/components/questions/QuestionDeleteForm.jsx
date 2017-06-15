@@ -18,7 +18,7 @@ export default class QuestionDeleteForm extends React.Component {
 deleteQuestion() {
   
 //Delete question
-      axios.delete('http://localhost:10000/auth/questions/delete?id='+this.props.params.questID, {
+      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/delete?id='+this.props.params.questID, {
         params: {
           id: this.props.params.questID,
           username: cookie.load('userName')

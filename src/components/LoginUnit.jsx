@@ -25,7 +25,7 @@ export default class LoginUnit extends React.Component {
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
 
-    axios.post('http://localhost:10000/login', {
+    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
       username : this.state.username,
       password: this.state.password
     })
@@ -39,7 +39,7 @@ export default class LoginUnit extends React.Component {
       // Store token/Username in db table
 
       
-      axios.post('http://localhost:10000/auth/saveToken',  {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
         username : self.state.username,
         token : "Bearer " + result.data.token
       }, {headers: { Authorization: "Bearer " + result.data.token }})

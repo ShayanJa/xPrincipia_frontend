@@ -18,7 +18,7 @@ postFreeForm() {
   //Read field items into component state
   this.state.freeForm = document.getElementById('freeFormTextArea').value
 
-      axios.post('http://localhost:10000/auth/freeForms/create', {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/create', {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

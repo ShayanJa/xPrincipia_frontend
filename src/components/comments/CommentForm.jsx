@@ -18,7 +18,7 @@ postComment() {
   //Read field items into component state
   this.state.comment = document.getElementById('commentTextArea').value
 // Ajax post comment request
-axios.post('http://localhost:10000/auth/comments/create', {
+axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/comments/create', {
   type:'5',
 // Questions has "probID here"
   suggestionID: this.props.params.suggID,

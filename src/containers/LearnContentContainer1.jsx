@@ -15,7 +15,7 @@ constructor(props){
     };
     componentWillMount(){
         var self = this;
-            return axios.get('http://localhost:10000/auth/learnItems/typeID?id='+this.props.params.probID).then(function (response) {
+            return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/typeID?id='+this.props.params.probID).then(function (response) {
                 self.setState({
                     learnItems: response.data
                 })

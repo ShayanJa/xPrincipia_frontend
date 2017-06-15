@@ -17,7 +17,7 @@ export default class ConsEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://localhost:10000/auth/cons/ID?id='+this.props.params.conID).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/cons/ID?id='+this.props.params.conID).then(function (response) {
           self.setState({
               con: response.data
           })
@@ -36,7 +36,7 @@ updateCon() {
   //Read field items into component state
   this.state.con = document.getElementById('conEditTextArea').value
 
-  axios.put('http://localhost:10000/auth/cons/update?id='+this.props.params.conID, {
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/cons/update?id='+this.props.params.conID, {
       type:'1',
       typeID: this.props.params.solutionID,
       username: cookie.load('userName'),
