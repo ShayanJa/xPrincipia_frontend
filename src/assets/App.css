@@ -108,10 +108,10 @@
   }
   #welcomeProblemsHeader, 
   #welcomeProblemsHeader1,
-  a#welcomeProblemsHeader2,
+  #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     /*border: 2px solid #00dcff;*/
     border-radius: 0% !important;
@@ -136,7 +136,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column !important;
     justify-content: space-around;
     width: 100%;
     margin: 0 auto;
@@ -1696,7 +1696,7 @@
       display: inline;
     }
     #createWelcomeButtonBox {
-      margin: 2.5% 18% 0% 18%;
+      margin: 0% 18% 0% 18%;
     	border: 1px solid #dddddd;
       /*border-radius: 3px;*/
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
@@ -1764,6 +1764,7 @@
     }*/
     #SPListDiv {
       text-align: center;
+      margin-bottom: 50px;
     }
     #welcomeProblemsUnitList {
       
@@ -1886,7 +1887,7 @@
     border: 1px solid #00dcff;
     border-radius: 0%;
     /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
-    width: 40em;
+    width: 94.5%;
     height: auto;
     word-wrap: break-word; 
     align-items: center; 
@@ -1912,7 +1913,8 @@
     margin: 0 auto;
     background-color: rgba(0,220,255,0.0);
     border: 1px solid #00dcff;
-    border-width: 0px 1px;
+    border-width: 0px 1px 1px 1px;
+    padding-bottom: 2%;
   }
   #welcomeUserProblemsUnitList a {
     /*display: block;*/
