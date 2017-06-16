@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { Link } from 'react-router';
 
 
@@ -7,10 +8,9 @@ export default class WelcomeUserUnit extends React.Component {
 	render() {
 		return (
 	    <div id="SPListDiv">
-			<ul id="welcomeUserProblemsUnitList"> 
-        {this.props.problems.map(this.renderItem)} 
-      </ul>
-	               
+            <ul id="welcomeUserProblemsUnitList"> 
+                {this.props.problems.map(this.renderItem)} 
+            </ul>	               
 	    </div>
 		);
 	}

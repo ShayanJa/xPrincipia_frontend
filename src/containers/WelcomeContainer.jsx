@@ -13,6 +13,7 @@ export default class WelcomeContainer extends React.Component {
 
         this.state = {
            problems : [],
+           userproblems : [],
            searchText: [],
         }
         this.queryProblem = this.queryProblem.bind(this)
@@ -26,7 +27,7 @@ export default class WelcomeContainer extends React.Component {
         var self = this
         return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
             self.setState({
-              problems: response.data
+              userproblems: response.data
             })
         })
         .catch(function (error) {
@@ -39,7 +40,8 @@ export default class WelcomeContainer extends React.Component {
         var self = this;
         return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
             self.setState({
-                problems: response.data
+                problems: response.data,
+                userproblems: response.data
             })
         }) 
         .catch(function (error) {
@@ -66,8 +68,15 @@ export default class WelcomeContainer extends React.Component {
           
           {this.props.children}
 
+         <div id="welcomeFormComponent">
+               <form  id="exploreWelcomeForm">
+                 <input type="search" name="search"
+                    placeholder="Select or search a project" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
+                 {/*<input type="submit" value="Go" id="submitExplore" />*/}
+            </form>
+         </div>
           <div id="welcomeUnitsContainer">
-              <WelcomeUserUnit problems={this.state.problems} />
+              <WelcomeUserUnit problems={this.state.userproblems} />
           </div>
 
           <div id="tutorialWelcomeButtonDiv">

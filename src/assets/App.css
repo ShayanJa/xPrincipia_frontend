@@ -1663,13 +1663,14 @@
     }
     #exploreWelcomeForm{
     	overflow: hidden;
-    	padding: 5px 0px 5px 0px;
-    	margin: 0px;
+    	padding: 5px 0px 0px 0px;
+    	margin: 0 auto;
     	text-align: center;
     	color: #dddddd;
     	letter-spacing: 8px;
     	font-size: 100%;
     	padding-top: 10px;
+      width: 70%;
     	}
     #exploreInput {
     	color: #dddddd;
