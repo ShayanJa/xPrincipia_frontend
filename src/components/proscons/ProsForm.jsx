@@ -18,7 +18,7 @@ postPro() {
   //Read field items into component state
 this.state.pro = document.getElementById('proTextArea').value
 
- axios.post('http://localhost:10000/auth/pros/create', {
+ axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/pros/create', {
     username: cookie.load('userName'),
     type:'1',
     typeID: this.props.params.solutionID,

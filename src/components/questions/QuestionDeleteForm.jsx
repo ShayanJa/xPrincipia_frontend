@@ -12,22 +12,18 @@ export default class QuestionDeleteForm extends React.Component {
     question: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.deleteQuestion = this.deleteQuestion.bind(this);
   };
 
-postQuestion() {
-  //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-
-      axios.put('http://localhost:10000/auth/questions/update?id='+this.props.params.questID, {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.question,
-    })
+deleteQuestion() {
+  
+//Delete question
+      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/delete?id='+this.props.params.questID, {
+        params: {
+          id: this.props.params.questID,
+          username: cookie.load('userName')
+        }
+      })
       .then(function (result) {
         document.location = window.location.pathname 
       })
@@ -43,7 +39,7 @@ postQuestion() {
                     <legend>Delete Question</legend>
                          <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
+                         <div onClick={this.deleteQuestion} id="deleteButton">Delete</div>
                          <Link to='/problem/${question.TypeID}/questions'>
                             <div id="returnButton">Return</div>
                          </Link>
@@ -54,3 +50,5 @@ postQuestion() {
       );
    }
 }
+
+

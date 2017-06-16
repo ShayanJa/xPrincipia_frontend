@@ -14,7 +14,7 @@
             "type": "node",
             "request": "attach",
             "name": "Attach to Process",
-            "address": "http://localhost:10000/login",
+            "address": "http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login",
             "port": 5858
         }
     ]

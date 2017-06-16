@@ -26,7 +26,7 @@ export default class SolutionForm extends React.Component {
     this.state.description = document.getElementById('solutionDescriptionForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
-  axios.post('http://localhost:10000/auth/solutions/create', {
+  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
       username: cookie.load('userName'),
       problemID:this.props.params.probID,
       title : this.state.title,

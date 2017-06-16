@@ -12,47 +12,23 @@ export default class SuggestionDeleteForm extends React.Component {
     question: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.deleteSuggestion = this.deleteSuggestion.bind(this);
   };
 
-postQuestion() {
-  //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-  if(this.props.solutionID){
-    axios.post('http://localhost:10000/auth/questions/create', {
-    type:'1',
-    typeID: this.props.solutionID,
-    username: cookie.load('userName'),
-    description : this.state.question,
-  })
+deleteSuggestion() {
+//Delete question
+    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/delete?id='+this.props.params.suggID, {
+      params: {
+        id: this.props.params.suggID,
+        username: cookie.load('userName')
+      }
+    })
     .then(function (result) {
       document.location = window.location.pathname 
     })
     .catch(function (error) {
       alert("I'm sorry there was a problem with your request")
-      });
-    } 
-
-    //else post to problem
-    //probID will be used
-    else {
-      axios.post('http://localhost:10000/auth/questions/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.question,
-    })
-      .then(function (result) {
-        document.location = window.location.pathname 
-      })
-      .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
-      });
-    }
-
+    });
   }
   
 
@@ -63,11 +39,11 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset>
-                    <legend>Delete Question</legend>
-                         <div>Are you sure you would like to delete this question?</div>
+                    <legend>Delete Suggestion</legend>
+                         <div>Are you sure you would like to delete this suggestion?</div>
                          <br />
-                         <div onClick={this.postQuestion} id="deleteButton">Delete</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <div onClick={this.deleteSuggestion} id="deleteButton">Delete</div>
+                         <Link to={`/problem/${this.props.params.probID}/suggestion`}>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
@@ -77,3 +53,6 @@ postQuestion() {
       );
    }
 }
+
+
+

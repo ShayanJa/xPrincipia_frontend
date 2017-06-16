@@ -18,7 +18,7 @@ postAnswer() {
   //Read field items into component state
   this.state.answer = document.getElementById('answerTextArea').value
 // Ajax post answer request
-axios.post('http://localhost:10000/auth/answers/create', {
+axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/answers/create', {
   questionID: this.props.params.questID,
   username: cookie.load('userName'),
   description : this.state.answer,

@@ -19,7 +19,7 @@ postSuggestion() {
 this.state.suggestion = document.getElementById('suggestionTextArea').value
 
 if(this.props.solutionID){
- axios.post('http://localhost:10000/auth/suggestions/create', {
+ axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/create', {
     username: cookie.load('userName'),
     type:'1',
     typeID: this.props.solutionID,
@@ -35,7 +35,7 @@ if(this.props.solutionID){
   //else post to problem
   //probID will be used
     else {
-      axios.post('http://localhost:10000/auth/suggestions/create', {
+      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

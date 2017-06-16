@@ -22,7 +22,7 @@ export default class SuggestionUnit extends React.Component {
 	renderItem(suggestion) {
 
        function  submitVote() {
-       axios.post('http://localhost:10000/auth/vote/create', {
+       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
            Type: 3,
            TypeID: suggestion.ID,
            username : cookie.load("userName"),

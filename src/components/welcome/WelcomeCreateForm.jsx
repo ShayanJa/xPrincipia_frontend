@@ -32,7 +32,7 @@ export default class WelcomeCreateForm extends React.Component {
     this.state.requirements = document.getElementById('problemRequirementsForm').value
     this.state.references = document.getElementById('problemReferencesForm').value
   
-  axios.post('http://localhost:10000/auth/problems/create', {
+  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/create', {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,
