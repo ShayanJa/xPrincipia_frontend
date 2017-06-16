@@ -2900,7 +2900,7 @@ a#SPParent {
 }
 #solutionDescriptionFormLabel {
   color: #00dcff;
-  font-size: 150%;
+  /*font-size: 150%;*/
   /*margin-left: 5%;*/
   text-align: center;
 }
