@@ -3029,6 +3029,8 @@ a#SPParent {
   font-size: 120%;
   border: 1px solid #00dcff;
   border-width: 0px 0px 0px 1px;
+  background-color: rgba(0,220,255,0);
+  transition: all 0.5s ease 0s;
 }
 #intensityNumber:hover {
   background-color: rgba(0,220,255,0.15);
