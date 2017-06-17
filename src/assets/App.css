@@ -710,7 +710,10 @@
     #solutionSummary:hover, #problemSummary:hover,
     #solutionDescription:hover, #problemDescription:hover, 
     #solutionReferences:hover {
-      font-size: 110%;
+      /*font-size: 110%;*/
+    }
+    #problemSummary:hover {
+      /*font-size: 135%;*/
     }
     #elementLabel {
       flex: 0 1 auto;
@@ -918,6 +921,7 @@
     }
     #avatarFullName {
       margin: 0 auto;
+      margin-right: 3%;
       font-size: 200%;
       color: #dddddd;
       letter-spacing: 8px;
@@ -2601,9 +2605,6 @@ a#SPParent {
   min-width: 80%;
   transition: all 0.5s ease 0s;
   /*font-weight: 300;*/
-}
-#problemSummary:hover {
-  font-size: 135%;
 }
 
 
