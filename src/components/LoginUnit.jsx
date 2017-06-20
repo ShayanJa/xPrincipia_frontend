@@ -25,7 +25,7 @@ export default class LoginUnit extends React.Component {
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
 
-    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
+    return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
       username : this.state.username,
       password: this.state.password
     })
@@ -35,23 +35,21 @@ export default class LoginUnit extends React.Component {
       })
       cookie.save('userToken', result.data.token );
       cookie.save('userName', self.state.username)
-      document.location = "/welcome";
+      
       // Store token/Username in db table
-
-      
-      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
+      return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
         username : self.state.username,
-        token : "Bearer " + result.data.token
-      }, {headers: { Authorization: "Bearer " + result.data.token }})
-      
-      
-      //Give back welcome screen
-      document.location = "/welcome";
+        token : "Bearer " + self.state.userToken
+      }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){
+        document.location = "/welcome";
+      })
    
     })
     .catch(function (error) {
       alert('Please try again.')
     });
+
+
   }
 
    render() {
