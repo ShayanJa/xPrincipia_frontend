@@ -26,9 +26,9 @@ export default class QuestionEditForm extends React.Component {
 
     })
     .catch(function (error) {
-        // if(error.response.status === 401 || error.response.status === 403){
-        //     document.location = "/login"
-        // }
+        if(error.response.status === 401 || error.response.status === 403){
+            document.location = "/login"
+        }
     });   
   }
 
@@ -58,8 +58,8 @@ updateQuestion() {
                     <legend id="redLegend">Edit Question</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <Link to='/problem/${question.TypeID}/questions'><div onClick={this.updateQuestion} id="editButton">Edit</div></Link>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                         <Link to={`/problem/${this.state.question.TypeID}/questions`}><div onClick={this.updateQuestion} id="editButton">Edit</div></Link>
+                         <Link to={`/problem/${this.state.question.TypeID}/questions`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

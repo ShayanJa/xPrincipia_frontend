@@ -1712,8 +1712,11 @@
     }
     #createWelcomeButtonBox:hover {
       transform: scale(1.02);
-      cursor: pointer;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+    }
+    #createWelcomeButtonBox:hover * {
+      color: #00dcff;
+      cursor: pointer;
     }
     #createWelcomeButton {
       color: #dddddd;
@@ -1723,10 +1726,6 @@
       letter-spacing: 6px;
       cursor: default;
       transition: all 0.5s ease 0s;
-    }
-    #createWelcomeButton:hover {
-      cursor: pointer;
-      color: #00dcff;
     }
     #createWelcomeButtonFormBox {
       margin: 2.5% 22% 0% 22%;
