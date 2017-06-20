@@ -55,7 +55,7 @@ export default class EditSolutionForm extends React.Component {
       title : self.state.title,
       summary : self.state.summary,
       description : self.state.description,
-      evidence: self.state.references
+      references: self.state.references
     })
     .then(function (result) {
       document.location = window.location.pathname 

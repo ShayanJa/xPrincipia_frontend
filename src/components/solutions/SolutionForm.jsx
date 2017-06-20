@@ -32,8 +32,6 @@ export default class SolutionForm extends React.Component {
       title : this.state.title,
       summary : this.state.summary,
       description : this.state.description,
-      evidence: this.state.evidence,
-      experiments : this.state.experiments,
       references: this.state.references
     })
     .then(function (result) {

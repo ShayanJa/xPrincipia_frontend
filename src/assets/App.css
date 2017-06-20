@@ -503,8 +503,7 @@
     	text-align: left;
     	height: 5em;
     }
-    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, 
-    #solutionEvidenceForm, #solutionExperimentsForm {
+    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, {
       height: 10em;
     }
     #problemTitleForm {
@@ -2913,7 +2912,6 @@ a#SPParent {
   text-align: center;
 }
 #solutionDescription, #problemDescription, 
-#solutionEvidence, #solutionFutureExperiments, 
 #solutionReferences, #problemRequirements, #problemReferences {
   border: 1px solid #00dcff;
   border-width: 0px 1px 0px 1px;
