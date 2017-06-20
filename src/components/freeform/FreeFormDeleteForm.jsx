@@ -44,8 +44,8 @@ deleteFreeform() {
                     <legend>Delete Free Form</legend>
                          <div>Are you sure you would like to delete this Discussion Item?</div>
                          <br />
-                         <Link to='/problem/${freeForm.TypeID}/freeForms'><div onClick={this.deleteFreeform} id="deleteButton">Delete</div> </Link>
-                         <Link to='/problem/${freeForm.TypeID}/freeForms'>
+                         <Link to={`/problem/${this.state.freeForm.TypeID}/freeForms`}><div onClick={this.deleteFreeform} id="deleteButton">Delete</div> </Link>
+                         <Link to={`/problem/${this.state.freeForm.TypeID}/freeForms`}>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

@@ -17,7 +17,7 @@ export default class EditSolutionForm extends React.Component {
       solutionInfo: '',
     }
 
-    this.postSolution = this.postSolution.bind(this);
+    this.updateSolution = this.updateSolution.bind(this);
   };
   componentWillMount(){
       var self = this;
@@ -49,13 +49,13 @@ export default class EditSolutionForm extends React.Component {
     this.state.description = document.getElementById('solutionEditDescriptionForm').value
     this.state.references = document.getElementById('solutionEditReferencesForm').value
 
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
+  var self = this;
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/update?id='+this.props.params.solutionID, {
       username: cookie.load('userName'),
-      problemID:this.props.params.probID,
-      title : this.state.title,
-      summary : this.state.summary,
-      description : this.state.description,
-      references: this.state.references
+      title : self.state.title,
+      summary : self.state.summary,
+      description : self.state.description,
+      evidence: self.state.references
     })
     .then(function (result) {
       document.location = window.location.pathname 
@@ -89,7 +89,7 @@ export default class EditSolutionForm extends React.Component {
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionEditReferencesForm">
                           </textarea></label><br />
                       <Link to={`/problem/${this.props.params.probID}/solutions`}>
-                        <input type="submit" value="Create" onClick={this.postSolution} id="submitNewVersion"/>
+                        <input type="submit" value="Update" onClick={this.updateSolution} id="submitNewVersion"/>
                       </Link>
             </fieldset>
           </form>
