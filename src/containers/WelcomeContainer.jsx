@@ -25,7 +25,7 @@ export default class WelcomeContainer extends React.Component {
         this.state.searchText = document.getElementById('exploreInput').value
 
         var self = this
-        return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/search?q='+this.state.searchText).then(function (response) {
             self.setState({
               userproblems: response.data
             })
@@ -38,7 +38,7 @@ export default class WelcomeContainer extends React.Component {
         }
         componentWillMount(){
         var self = this;
-        return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/all').then(function (response) {
             self.setState({
                 problems: response.data,
                 userproblems: response.data

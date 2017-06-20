@@ -39,7 +39,7 @@ export default class LearnResourcesUnit1 extends React.Component {
     return (
        <li key={resource.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">1: {resource.Username}</div>
+					<div id="suggestionAdder">{resource.Username}</div>
                 	<div id="suggestionText">{resource.Description}</div>
 				</div>
 				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 

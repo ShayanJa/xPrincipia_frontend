@@ -2669,7 +2669,7 @@ a#SPParent {
   display: block;
 }
 #SPHeader:hover #SPTitle{
-  color: #dddddd;
+  color: #ffffff;
   cursor: pointer;
 }
 #SPHeader {
@@ -2685,20 +2685,26 @@ a#SPParent {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
 }
 #SPHeader:hover {
   box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
+  transform: scale(1.02);
 }
 #SPTitle {
   margin: 0 auto;
   padding: 5px 10px 5px 10px;
   font-size: 120%;
-  color: #00dcff;
+  color: #dddddd;
   word-wrap: break-word; 
   text-align: center;
+  transition: all 0.5s ease 0s;
 }
 #SPPercent {
   text-align: center;
+  color: #00ffdc;
+  font-size: 130%;
 }
 #SPVote {
   color: #00dcff;
