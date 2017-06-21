@@ -25,6 +25,7 @@ if (problem.Title === 'Interstellar Civilization') {
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
+                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
                     </div>
                 </div>
             </Link>
@@ -40,6 +41,7 @@ if (problem.Title === 'Interstellar Civilization') {
             <div id="welcomeProblemsHeaderInvisible">
                 <div id="welcomeProblemsTitle">
                     {problem.Title}
+                    <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
                 </div>
             </div>
           </Link>
@@ -53,6 +55,7 @@ if (problem.Title === 'Interstellar Civilization') {
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
+                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
                     </div>
                 </div>
             </Link>
@@ -66,6 +69,7 @@ if (problem.Title === 'Interstellar Civilization') {
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
+                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
                     </div>
                 </div>
             </Link>
@@ -79,10 +83,16 @@ if (problem.Title === 'Interstellar Civilization') {
                 <div id="welcomeUserProblemsHeader">
                     <div id="welcomeUserProblemsTitle">
                         {problem.Title}
+                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
                     </div>
+                    
                 </div>
             </Link>
         </li>
       );
    }
+}
+
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
 }

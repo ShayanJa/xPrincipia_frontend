@@ -2703,7 +2703,7 @@ a#SPParent {
 }
 #SPPercent {
   text-align: center;
-  color: #00ffdc;
+  color: #00ffdc !important;
   font-size: 130%;
 }
 #SPVote {
