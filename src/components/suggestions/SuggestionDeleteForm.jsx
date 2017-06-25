@@ -17,6 +17,7 @@ export default class SuggestionDeleteForm extends React.Component {
 
 deleteSuggestion() {
 //Delete question
+    var self = this
     axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/delete?id='+this.props.params.suggID, {
       params: {
         id: this.props.params.suggID,
@@ -24,7 +25,7 @@ deleteSuggestion() {
       }
     })
     .then(function (result) {
-
+      document.location = '/problem/'+ self.props.params.probID + '/suggestions'
     })
     .catch(function (error) {
       alert("I'm sorry there was a problem with your request")
@@ -42,9 +43,7 @@ deleteSuggestion() {
                     <legend>Delete Suggestion</legend>
                          <div>Are you sure you would like to delete this suggestion?</div>
                          <br />
-                         <Link to={`/problem/${this.state.suggestion.TypeID}/suggestions`}>
                           <div onClick={this.deleteSuggestion} id="deleteButton">Delete</div>
-                         </Link>
                          <Link to={`/problem/${this.props.params.probID}/suggestions`}>
                             <div id="returnButton">Return</div>
                          </Link>

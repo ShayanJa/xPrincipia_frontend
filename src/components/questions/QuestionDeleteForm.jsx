@@ -40,9 +40,7 @@ deleteQuestion() {
                     <legend>Delete Question</legend>
                          <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <Link to={`/problem/${this.props.params.probID}/questions`}>
                           <div onClick={this.deleteQuestion} id="deleteButton">Delete</div>
-                         </Link>
                          <Link to={`/problem/${this.props.params.probID}/questions`}>
                             <div id="returnButton">Return</div>
                          </Link>

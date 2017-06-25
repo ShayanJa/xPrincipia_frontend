@@ -18,6 +18,7 @@ export default class FreeFormDeleteForm extends React.Component {
 
 deleteFreeform() {
 //Delete question
+    var self = this
     axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForm/delete?id='+this.props.params.freeFormID, {
       params: {
         id: this.props.params.freeFormID,
@@ -25,7 +26,7 @@ deleteFreeform() {
       }
     })
     .then(function (result) {
-      document.location = window.location.pathname 
+      document.location = '/problem/'+ self.props.params.probID + '/freeforms'
     })
     .catch(function (error) {
       alert("I'm sorry there was a problem with your request")
@@ -44,7 +45,7 @@ deleteFreeform() {
                     <legend>Delete Free Form</legend>
                          <div>Are you sure you would like to delete this Discussion Item?</div>
                          <br />
-                         <Link to={`/problem/${this.state.freeForm.TypeID}/freeForms`}><div onClick={this.deleteFreeform} id="deleteButton">Delete</div> </Link>
+                         <div onClick={this.deleteFreeform} id="deleteButton">Delete</div>
                          <Link to={`/problem/${this.state.freeForm.TypeID}/freeForms`}>
                             <div id="returnButton">Return</div>
                          </Link>
