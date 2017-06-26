@@ -28,7 +28,6 @@ if (problem.Title === 'Interstellar Civilization') {
                   </div>
               </li>
           </Link>
-      
       );
 
 } else if (problem.Title === 'Evolving Humanity') {

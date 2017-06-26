@@ -110,7 +110,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              <div id="problemPercent">{this.state.problemInfo.Rank}</div> 
               
               
                     <div id="sidebarMenu">

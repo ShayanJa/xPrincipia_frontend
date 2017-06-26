@@ -375,16 +375,18 @@
       font-size: 71%;
       padding: 0px 1px;
       vertical-align: middle;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
     }
     #commentSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: #0f131c;
       border: 1px solid #00dcff;
-      border-radius: 2px;
+      border-radius: 2px 0px 0px 2px;
       cursor: pointer;
       flex-grow: 1;
-      height: 50%;
+      height: 23px;
       margin: 0 auto;
 
       /*Button to Div CSS*/
@@ -392,11 +394,20 @@
       font-size: 71%;
       padding: 6px;
       vertical-align: center;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
+    }
+    #commentSBButton:hover {
+      cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
 
     #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
+
       /*OR #fc5353*/
       /*margin: 1px;*/
 
@@ -407,14 +418,14 @@
       background-color: #ff7f7f;
     }
     #flagSBButton:hover, #deleteSBButton:hover {
-      color: #0f131c !important;
-      background-color: #ff7f7f;
+      /*color: #0f131c !important;
+      background-color: #ff7f7f;*/
       cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
     }
     #editSBButton:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
       cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
     #flagSBButton:active {
       color: #ff7f7f;
@@ -1614,20 +1625,24 @@
       color: #00ffdc;
       background-color: inherit;
       border: 1px solid #00ffdc;
-      border-radius: 2px;
+      border-width: 1px 1px 1px 0px;
+      border-radius: 2px 2px 0px 0px;
       cursor: pointer;
-      height: 28px;
+      height: 37px;
 
       text-align: center;
-      font-size: 130%;
-      padding: 4px;
-      padding-left: 5px;
+      font-size: 120%;
+      padding: 0px 24px 0px 25px;;
       letter-spacing: 4px;
+      margin: 0 auto;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
     }
     #suggestionVote:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
+      /*color: #0f131c;*/
+      /*background-color: #00ffdc;*/
       cursor: pointer;
+      box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);
     }
     #suggestionVote:active {
       color: #00ffdc;
@@ -1765,8 +1780,10 @@
       color: #0f131c;
     }*/
     #SPListDiv {
-      text-align: center;
-      margin-bottom: 50px;
+      width: 100%;
+      margin:0 auto;
+      text-align:center;
+      margin-bottom: 40px;
     }
     #welcomeProblemsUnitList {
       text-align: center;
@@ -1782,19 +1799,15 @@
       /*margin: 2%;*/
     }
     #welcomeProblemsUnit {
+      display: inline-block;
       width: 14em;
-      flex: 1 1 auto;
-      /*margin: 0% 5% 0% 5%;*/
+      margin: 0% 5% 0% 5%; 
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
     	cursor: pointer;
     }
-    #welcomeProblemsHeader, 
-    #welcomeProblemsHeader1,
-    #welcomeProblemsHeader2,
-    #welcomeProblemsHeader3,
-    #welcomeProblemsHeader4 {
+    #welcomeProblemsHeader {
       display: inline-flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
@@ -1821,9 +1834,21 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-color: rgba(15,19,28,0.999);
-      /*background-color: rgba(0,220,255,0.1);*/
-      /*background-color: rgba(255,255,255,0.2);*/
       background-blend-mode: overlay;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 14em;
+      height: 14em;
+      word-wrap: break-word; 
+      align-items: center; 
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       transition: all 0.5s ease 0s;
       transform: scale(1);
     }
@@ -1838,9 +1863,8 @@
       margin: 0 auto;
       padding: 5px 10px 5px 10px;
       font-size: 130%;
-      word-wrap: break-word; 
-      text-align: center;
       /*transform: rotate(0deg);*/
+      transition: all 0.5s ease 0s;
     }
     #welcomeProblemsHeader2 {
       background-image: url('./vitruvianMan.jpg');
@@ -1859,12 +1883,10 @@
       transform: scale(1.02);
     }
   #welcomeProblemsTitle {
-    margin: 0 auto;
-    padding: 5px 10px 5px 10px;
-    font-size: 130%;
-    /*color: #00dcff;*/
-    word-wrap: break-word; 
-    text-align: center;
+      margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      transition: all 0.5s ease 0s;
   }
     #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
@@ -1899,7 +1921,7 @@
     /*flex-direction: column;*/
     border: 1px solid #00dcff;
     border-radius: 0%;
-    /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+    box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
     width: 94.5%;
     height: auto;
     word-wrap: break-word; 
@@ -1911,10 +1933,10 @@
     position: relative;
     margin: 0 auto;
     margin-top: 2%;
-    /*transition: all 0.5s ease 0s;*/
+    transition: all 0.2s ease 0s;
   }
   #welcomeUserProblemsHeader:hover {
-    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+    box-shadow: 0 0 1.5pt 1.5pt rgba(0,220,255,0.5);
   }
   #welcomeUserProblemsUnitList {
     text-align: center;
@@ -2151,7 +2173,7 @@
   font-family: 'Open Sans', sans-serif;
   /*padding: 10px;*/
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: 1px solid #dddddd;
   height: 4em;
   resize: none;
 }
@@ -2363,7 +2385,7 @@ img#editLogo {
 }
 #editLogo:hover {
   cursor: pointer;
-  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);*/
 }
 #commentLogo:hover {
   cursor: pointer;
@@ -2570,6 +2592,7 @@ a#SPParent {
   width: 10%;
   background-color: rgba(0, 255, 220, 0);
   transition: all 0.5s ease 0s;
+  /*box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);*/
 }
 #followProblem {
   flex: 1 1 auto;
@@ -2589,15 +2612,12 @@ a#SPParent {
   text-decoration: none;
   transition: all 0.5s ease 0s;
 }
-
-#followProblemLeftSB {
-  font-size: 120%;
-}
 #followProblem:hover,
 #followProblemLeftSB:hover {
   background-color: rgba(0, 255, 220, 1);
   color: #0f131c;
   cursor: pointer; 
+  /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
 }
 
 #problemSummary {
@@ -2961,7 +2981,7 @@ a#SPParent {
   /*margin-top: 12px;*/
   width: 70%;
   background-color: rgba(0,220,255,0);
-  transition: all 0.5s ease 0s;
+  transition: all 0.2s ease 0s;
 
 }
 #SBDiscussButton:hover {

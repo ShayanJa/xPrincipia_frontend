@@ -21,7 +21,7 @@ export default class Intro extends React.Component {
                  Breakdown critical projects for the future
                  <br />
                  Create proposals 
-                 towards their achievement 
+                 to complete the projects
                  <br />
                  <br />
               </div>

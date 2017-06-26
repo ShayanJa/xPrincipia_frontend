@@ -63,16 +63,16 @@ export default class FreeFormUnit extends React.Component {
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
                     </div>
                 </Link> 
-                <div onClick={submitVote} id="suggestionVote">
+                <button type="button" onClick={submitVote} id="suggestionVote">
                     Vote
-                </div>             <br /><br /> 
+                </button>             <br /><br /> 
         </li>);
 
     } else {
     return (
        <li key={freeForm.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">S: {freeForm.Username}</div>
+					<div id="suggestionAdder">F: {freeForm.Username}</div>
                 	<div id="suggestionText">{freeForm.Description}</div>
 				</div>
                     {/*<Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/flag`}>
@@ -81,7 +81,11 @@ export default class FreeFormUnit extends React.Component {
                             Flag
                         </div>
                     </Link>*/}
-                <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
+                <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue">
+                    <div id="commentSBButton">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>
+                </Link>  
                 <button type="button" onClick={submitVote} id="suggestionVote">
                     Vote
                 </button> 
