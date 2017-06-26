@@ -107,7 +107,7 @@ export default class ProfileContainer extends React.Component {
                 <Link to={`/profile`} activeClassName="activeBlue">
                     <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 </Link>
-                <Link to={`/profile/notifications`} activeClassName="activeBlue">
+                {/*<Link to={`/profile/notifications`} activeClassName="activeBlue">
                     <div id="notificationsButton">Notifications</div>
                 </Link>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
@@ -116,7 +116,7 @@ export default class ProfileContainer extends React.Component {
                 </Link>
                 <Link to={`/profile/feedback`} activeClassName="activeBlue">
                     <div id="userFeedbackButton">Feedback</div>
-                </Link>
+                </Link>*/}
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>

@@ -1013,15 +1013,15 @@
       text-align: center;
       margin: 0 auto;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-
+      background-color: rgba(0, 220, 255, 0.05);
     }
     #bannerSlogan {
       padding: 3px;
       border: 1px solid #00dcff;
     	border-width: 2px 0px;
       letter-spacing: 12px;
-      /*color: #00dcff;
-      background-color: rgba(0, 220, 255, 0.05);*/
+      /*color: #00dcff;*/
+      background-color: rgba(0, 220, 255, 0.05);
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
       width: 60%;
       margin: 0 auto;
@@ -1769,15 +1769,14 @@
       margin-bottom: 50px;
     }
     #welcomeProblemsUnitList {
-      
-      /*text-align: center;*/
+      text-align: center;
       display: flex;
-      flex-direction : row;
-      /*align-items: center;*/
+      align-items: center;
       justify-content: space-between;
       width: 100%;
       margin: 0 auto;
-    }
+      /*margin-top: 4%;*/
+      }
     #welcomeProblemsUnitList li {
       /*display: inline-block;*/
       /*margin: 2%;*/
@@ -1830,6 +1829,18 @@
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
+      /*transform: rotate(20deg);*/
+    }
+    #welcomeProblemsHeader1:hover {
+      /*transform: rotate(0deg);*/
+    }
+    #welcomeProblemsTitle1 {
+      margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      word-wrap: break-word; 
+      text-align: center;
+      /*transform: rotate(0deg);*/
     }
     #welcomeProblemsHeader2 {
       background-image: url('./vitruvianMan.jpg');
@@ -3457,33 +3468,28 @@ input#submitNewVersion:hover {
 }
 #introPrompt {
   color: #dddddd;
-  margin: 5px 0px 5px 0px;
   font-size: 180%;
   cursor: default;
   font-size: 200%;
   text-align: center;
-  margin-top: 5%;
   letter-spacing: 6px;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 #introBanner {
-  margin: 4% 20% 4% 20%;
+  margin: 2% 20% 1% 20%;
   border: 1px solid #dddddd;
   border-radius: 3px;
+  background-color: rgba(0,220,255, 0.05);
 }
 #introProse {
-  text-align: left;
   letter-spacing: 2px;
   line-height: 150%;
-  margin: 10px;
-  font-size: 150%;
-}
-#introProse2 {
-  text-align: center;
-  letter-spacing: 2px;
-  line-height: 150%;
-  margin: 10px;
-  font-size: 150%;
+  padding: 10px;
+  font-size: 140%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*background-color: rgba(0,220,255, 0.05);*/
 }
 #introContent {
   width:80%;
@@ -3491,7 +3497,45 @@ input#submitNewVersion:hover {
   border-width: 0px 1px;
   margin: 0 auto;
 }
-#enterButton {
+#introSummary {
+  color: #00dcff;
+  text-align: center !important;
+  line-height: 250%;
+  font-size: 120%;
+}
+#introProseDescriptions {
+  text-align: center;
+  /*margin-left: 10%;
+  margin-right: 20%;*/
+  letter-spacing: 1px;
+  color: #dddddd;
+}
+#introEnterButton {
+  color: #00dcff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 150%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  padding: 5px;
+  letter-spacing: 4px;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0);
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+}
+#introEnterButton:hover {
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0.05);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+/*#enterButton {
   color: #00dcff;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 150%;
@@ -3504,7 +3548,7 @@ input#submitNewVersion:hover {
   padding: 5px;
   letter-spacing: 4px;
   margin-top: 2%;
-}
+}*/
 #tutorialIntroButton {
   padding: 3px;
   vertical-align: middle;
@@ -3565,9 +3609,6 @@ input#submitNewVersion:hover {
   letter-spacing: 2px;
   line-height: 150%;
   /*margin-top: 3%;*/
-}
-#tutorialNumbers {
-  color: #00dcff;
 }
 #tutorialReturn {
   margin: 0 auto;

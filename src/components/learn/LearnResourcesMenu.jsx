@@ -24,7 +24,7 @@ export default class LearnResourcesMenu extends React.Component {
    render() {
       return (
         <div>
-            <div id="intensityHeader">
+            {/*<div id="intensityHeader">
                 <div id="intensityNumber">
                     <Link to={`/problem/${this.props.params.probID}/learn/resources/1`}>
                         Easy
@@ -40,7 +40,7 @@ export default class LearnResourcesMenu extends React.Component {
                         Hard
                     </Link>
                 </div>
-            </div>
+            </div>*/}
             {this.props.children}
         </div>
 

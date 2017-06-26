@@ -22,7 +22,7 @@ if (problem.Title === 'Interstellar Civilization') {
           <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
               <li  id="welcomeProblemsUnit">
                   <div id="welcomeProblemsHeader1">
-                    <div id="welcomeProblemsTitle">
+                    <div id="welcomeProblemsTitle1">
                         {problem.Title}
                     </div>
                   </div>
