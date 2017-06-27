@@ -17,8 +17,7 @@ constructor(props){
 	render() {
 		return (
 	    <div>
-			<ul> {this.props.questions.map(this.renderItem)} </ul>
-	               
+			<ul> {this.props.questions.map(this.renderItem)} </ul>	               
 	    </div>
 		);
 	}
@@ -34,42 +33,54 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a question.")
+            alert("You may vote for only one question per problem.")
         })
     }
   
        if (question.Username === cookie.load('userName')) {
            return (
         <li key={question.ID} id="questionUnit"> 
-				<div id="questionContent">
-					<div id="questionAdder">Q: {question.Username}</div>
-                	<div id="questionText">{question.Description}</div>
+				<div id="suggestionContent">
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(question.PercentRank)}</span>
+					    {question.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {question.Description}
+                    </div>
 				</div>
-                {/*<div id="flagContainer">*/}
-                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/edit`}>
-                        <div id="editSBButton">
-                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="11" height="11" alt="Edit Button" />
-                        </div>
-                    </Link>
-                    <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>
-                        <div id="deleteSBButton">
-                            Delete
-                        </div>
-                    </Link>
-                {/*</div>*/}
-				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
-                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
-                    <button type="button" id="questionAnswers">Answers</button>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>
+                   <div id="deleteSBButton">
+                        <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
+                    </div>
                 </Link>
-        <br/><br/> 
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/edit`}>
+                    <div id="editSBButton">
+                        <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                    </div>
+                </Link>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                    <div id="commentSBButtonUser">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>                
+                </Link>
+                <button type="button" id="suggestionVote" onClick={submitVote}>
+                    Vote
+                </button>
+                <br/><br/> 
         </li>);
 
     } else {
     return (
         <li key={question.ID} id="questionUnit"> 
-				<div id="questionContent">
-					<div id="questionAdder">Q: {question.Username}</div>
-                	<div id="questionText">{question.Description}</div>
+				<div id="suggestionContent">
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(question.PercentRank)}</span>
+					    {question.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {question.Description}
+                    </div>
 				</div>
                     {/*<Link to={`/problem/${question.TypeID}/question/${question.ID}/flag`}>
                         <div id="flagSBButton">
@@ -77,11 +88,14 @@ constructor(props){
                             Flag
                         </div>
                     </Link>*/}
-				<button type="button" id="questionVote" onClick={submitVote}>Vote<br />{floatToDecimal(question.PercentRank)}</button>
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
-                    <button type="button" id="questionAnswers">Answers</button>
-                </Link>
-        <br/><br/> 
+                    <div id="commentSBButtonUser">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>                </Link>
+                <button type="button" id="suggestionVote" onClick={submitVote}>
+                    Vote
+                </button>
+                <br/><br/> 
         </li>);
   }
 }}

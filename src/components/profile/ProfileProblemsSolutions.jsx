@@ -93,13 +93,13 @@ export default class ProfileProblemsSolutions extends React.Component {
       return (
     <div>
         <div id="profileSidebarMenu">
-            <div id="profileProblemsMenu">
-                <div id="solveTitle">Problems</div>
-                <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Followed</div>
+            <div id="profileProjectsMenu">
+                <div id="projectsTitleProfile">Projects</div>
+                <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Voted</div>
                 <div id="createdProblemsButton" onClick={this.onCreatedProblem}>Created</div>
             </div>
-            <div id="profileSolutionsMenu">
-                <div id="developTitle">Solutions</div>
+            <div id="profileProposalsMenu">
+                <div id="proposalsTitleProfile">Proposals</div>
                 <div id="votedSolutionsButton" onClick={this.onVotedSolution}>Voted</div>
                 <div id="createdSolutionsButton" onClick={this.onCreatedSolution}>Created</div>
             </div>
@@ -107,9 +107,9 @@ export default class ProfileProblemsSolutions extends React.Component {
         <div id="profileRightElements">
             <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
         </div>
-        <div id="moreButtonProfile">
+        {/*<div id="moreButtonProfile">
             More
-        </div>
+        </div>*/}
     </div>
 
       );

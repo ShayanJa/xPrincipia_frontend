@@ -2,8 +2,8 @@ import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import TutorialProblemPage from '../tutorials/TutorialProblemPage.jsx';
 
 
@@ -85,9 +85,9 @@ export default class FullProblem extends React.Component {
         <ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}
-      transitionAppearTimeout={2000}
-      transitionEnter={false}
-      transitionLeave={false}>
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
@@ -98,15 +98,46 @@ export default class FullProblem extends React.Component {
         </div>
         <div id="problemRow2">
           <div id="fullProblem">
-            <div id="fullProblemHeader">
-              <div id="problemAdditionalInfoLabel">Additional Information</div>
-              <div id="followProblem" onClick={this.submitVote}>Vote</div>
-            </div>
+            <div id="problemAdditionalInfoLabel">Additional Information</div>
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>
+            <div id="createSPButtonBox">
+              <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                <h1 id="createSPButton">Create a Sub Project</h1>
+              </Link>
+            </div>
           </div>
-          <SideBarProblemMenu probID={this.props.params.probID} />
+          <div id="columnContainer">
+            {/*<div id="fullProblemHeader">*/}
+              <div id="problemPercent">{this.state.problemInfo.Rank}</div> 
+              
+              
+                    <div id="sidebarMenu">
+
+                      <div id="followProblem" onClick={this.submitVote}>Vote</div>
+
+                      <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
+                        <div id="SBButton">Proposals</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/questions`}>
+                        <div id="SBButton">Discuss</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
+                        <div id="SBButton">Learn</div>
+                      </Link>
+
+                      {/*<Link to={`/problem/${this.props.probID}/theory`}>
+                        <div id="SBButton">Theory</div>
+                      </Link> */}
+
+                    </div>
+              
+            {/*</div>*/}
+            {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
+          </div>
       </div>
         {/*<div id="SPLabel">
           Sub Projects
@@ -128,6 +159,9 @@ export default class FullProblem extends React.Component {
    }
 }
 
-
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
+}
  
  

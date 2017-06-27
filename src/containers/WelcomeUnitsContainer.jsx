@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
+import WelcomeUserUnit from '../components/welcome/WelcomeUserUnit.jsx';
 import WelcomeMore from '../components/welcome/WelcomeMore.jsx';
 
 export default class WelcomeUnitsContainer extends React.Component {
@@ -47,10 +48,13 @@ export default class WelcomeUnitsContainer extends React.Component {
  
    render() {
       return (
-      <div>
-            <div id="welcomeUnitsContainer">
-            <WelcomeUnit problems={this.state.problems} />
+      <div id="invisible">
+            {/*<div id="welcomeUnitsContainer">
+                <WelcomeUnit problems={this.state.problems} />
             </div>
+            <div id="welcomeUnitsContainer">
+                <WelcomeUserUnit problems={this.state.problems} />
+            </div>*/}
       </div>
       );
    }

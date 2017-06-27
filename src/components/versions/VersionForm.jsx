@@ -13,8 +13,6 @@ export default class VersionForm extends React.Component {
       title: '',
       summary: '',
       description: '',
-      evidence: '',
-      experiments: '',
       references: '',
       solutionInfo: '',
     }
@@ -47,8 +45,6 @@ export default class VersionForm extends React.Component {
     this.state.title = document.getElementById('solutionTitleForm').value
     this.state.summary = document.getElementById('solutionSummaryForm').value
     this.state.description = document.getElementById('solutionDescriptionForm').value
-    this.state.evidence = document.getElementById('solutionEvidenceForm').value
-    this.state.experiments = document.getElementById('solutionExperimentsForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
   axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
@@ -57,8 +53,6 @@ export default class VersionForm extends React.Component {
       title : this.state.title,
       summary : this.state.summary,
       description : this.state.description,
-      evidence: this.state.evidence,
-      experiments : this.state.experiments,
       references: this.state.references
     })
     .then(function (result) {

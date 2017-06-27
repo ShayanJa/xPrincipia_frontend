@@ -32,6 +32,12 @@
       justify-content: center;
       margin-bottom: 3%;
     }
+    #columnContainer {
+      display: inline-flex;
+    	flex-direction: column;
+      width: 40%;
+      /*justify-content: space-between;*/
+    }
     h1 {
     	text-align: center;
     	font-weight: 100;
@@ -58,7 +64,6 @@
     a {
       color: inherit;
       text-decoration: none;
-      /*margin: inherit;*/
     }
     #comingSoon {
       font-size: 200%;
@@ -72,6 +77,21 @@
     input:focus, textarea:focus {
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
     }
+    #invisible {
+      display: none;
+    }
+    #welcomeMoreX {
+      display: visible;
+    }
+    span {
+      width: 100%;
+    }
+    /*a {
+      height: inherit;
+    }*/
+    ol, ul {
+      list-style: none outside none;
+    }
 
 
 /*End Global*/
@@ -80,55 +100,6 @@
 
 /*Media Queries*/
 @media screen and (max-width: 900px) { 
-
-  #welcomeProblemsUnit {
-    display: inline-block;
-    width: 100% !important;
-    margin: 0% 5% 0% 5% !important;
-  }
-  #welcomeProblemsHeader, 
-  #welcomeProblemsHeader1,
-  #welcomeProblemsHeader2,
-  #welcomeProblemsHeader3,
-  #welcomeProblemsHeader4 {
-    display: inline-flex;
-    flex-direction: column;
-    border: 2px solid #00dcff;
-    border-radius: 0% !important;
-    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
-    width: 30em !important;
-    height: auto !important;
-    word-wrap: break-word; 
-    align-items: center; 
-    justify-content: center;
-    background-color: rgba(0,220,255,0.05);
-    margin-bottom: 5% !important;
-    background-size: cover !important;
-  }
-  #welcomeProblemsHeader:hover, #welcomeProblemsHeader2:hover {
-    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
-  }
-  #welcomeProblemsUnitList {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
-  }
-  #welcomeProblemsTitle {
-    margin: 0 auto;
-    padding: 10px 15px 10px 15px !important;
-    font-size: 170% !important;
-    /*color: #00dcff;*/
-    word-wrap: break-word; 
-    text-align: center;
-  }
-
-}
-
-@media screen and (max-width: 600px) {
   /*Login Page*/
   #fullProblem, #fullSolution {
     width: 100% !important;
@@ -157,13 +128,14 @@
     margin-top: 30% !important;
   }
   #bannerTitle {
-    font-size: 105% !important;
+    font-size: 110% !important;
     letter-spacing: 14px !important;
     padding-left: 10px !important;
   }
   #bannerSlogan {
     letter-spacing: 10px !important;
     font-size: 70% !important;
+    width: 90% !important;
   }
   #signup, #register {
     width: 100% !important;
@@ -174,6 +146,90 @@
     border-radius: 3px;
     margin: 0% 15% 0% 15% !important;
   }
+  #loginEmail, #loginPassword {
+    width: 80% !important;
+  }
+  #submitLogin {
+    width: 50% !important;
+  }
+  #registerButton {
+    width: 40% !important;
+  }
+/*Welcome*/
+  #welcomeProblemsUnit {
+    display: inline-block;
+    width: 100% !important;
+    margin: 0% 5% 0% 5% !important;
+  }
+  #welcomeProblemsHeader, 
+  #welcomeProblemsHeader1,
+  #welcomeProblemsHeader2,
+  #welcomeProblemsHeader3,
+  #welcomeProblemsHeader4 {
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid #00dcff;*/
+    border-radius: 0% !important;
+    box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    width: 30em !important;
+    height: auto !important;
+    word-wrap: break-word; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0,220,255,0.05);
+    margin-bottom: 5% !important;
+    background-size: cover !important;
+  }
+  #welcomeProblemsHeader:hover, 
+  #welcomeProblemsHeader1:hover,
+  #welcomeProblemsHeader2:hover,
+  #welcomeProblemsHeader3:hover,
+  #welcomeProblemsHeader4:hover {
+    box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  }
+  #welcomeProblemsUnitList {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+  #welcomeProblemsTitle, #welcomeProblemsTitle1 {
+    padding: 10px 15px 10px 15px !important;
+    font-size: 160% !important;
+  }
+  #welcomeUserProblemsUnitList {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  #createWelcomeButtonBox {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  #welcomeBox {
+  width: 100% !important;
+  margin: 0 auto !important;
+  margin-top: 5% !important;
+}
+#welcomeProblemsHeader1, #welcomeProblemsHeader2,
+#welcomeProblemsHeader3, #welcomeProblemsHeader4 {
+  margin-bottom: 0 !important;
+  border-width: 0px 1px 1px 1px !important;
+}
+#exploreWelcomeForm {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+#exploreInput {
+  margin: 0 auto !important;
+  width: 90% !important;
+  letter-spacing: 4px !important;
+}
+}
+
+@media screen and (max-width: 600px) {
 
 /*Header*/
 #headerName {
@@ -192,6 +248,8 @@
   flex: 1 1 auto !important;
   width: 7% !important;
 }
+
+/*Welcome Page*/
 
 /*Problem Page*/
 
@@ -286,11 +344,11 @@
     }
     #questionAdder {
       font-size: 90%;
-      color: #00ffdc;
+      color: #00dcff;
     }
     #answerAdder {
       font-size: 90%;
-      color: #00dcff;
+      color: #00ffdc;
     }
     #questionAnswers {
       flex: 1 1 auto;
@@ -327,40 +385,17 @@
       color: #00ffdc;
       background-color: #0f131c;
     }
-    /*#flagContainer {
-      flex: 1 1 auto;
-      height: 100%;
-      display: flex;
-    	flex-direction: column;
-      border: 1px solid #00ffdc;
-      border-width: 1px 0px 0px 0px;
-    }*/
-    #flagSBButton, #editSBButton, #deleteSBButton {
+    #commentSBButton, #commentSBButtonUser,
+    #deleteSBButton, #editSBButton, 
+    #editSBButtonAnswer, #flagSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: inherit;
       border: 1px solid #00dcff;
-      border-radius: 2px;
+      border-radius: 2px 0px 0px 2px;
       cursor: pointer;
       flex-grow: 1;
-      height: 50%;
-      margin: 0 auto;
-
-      /*Button to Div CSS*/
-      text-align: center;
-      font-size: 71%;
-      padding: 0px 1px;
-      vertical-align: middle;
-    }
-    #commentSBButton {
-      flex: 1 1 auto;
-      color: #00ffdc;
-      background-color: #0f131c;
-      border: 1px solid #00dcff;
-      border-radius: 2px;
-      cursor: pointer;
-      flex-grow: 1;
-      height: 50%;
+      height: 23px;
       margin: 0 auto;
 
       /*Button to Div CSS*/
@@ -368,35 +403,50 @@
       font-size: 71%;
       padding: 6px;
       vertical-align: center;
+      transition: all 0.25s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
+    }
+    #commentSBButtonUser {
+      border-radius: 0px 0px 0px 0px;
+    }
+    #editSBButton {
+      border-width: 1px 0px 1px 0px;
+      border-radius: 0px 0px 0px 0px;
+    }
+    #editSBButtonAnswer {
+      border-width: 1px 1px 1px 0px;
+      border-radius: 0px 0px 0px 0px;
+    }
+    #commentSBButton:hover, #commentSBButtonUser:hover {
+      cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
 
     #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
+      border-radius: 0px 0px 0px 2px;
       /*OR #fc5353*/
-      /*margin: 1px;*/
-
-      /*padding: 3px;*/
     }
     #flagSBButton:active, #deleteSBButton:active {
       color: #0f131c !important;
       background-color: #ff7f7f;
     }
     #flagSBButton:hover, #deleteSBButton:hover {
-      color: #0f131c !important;
-      background-color: #ff7f7f;
+      /*color: #0f131c !important;
+      background-color: #ff7f7f;*/
       cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
     }
-    #editSBButton:hover {
-      color: #0f131c;
-      background-color: #00ffdc;
+    #editSBButton:hover, #editSBButtonAnswer:hover {
       cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
     #flagSBButton:active {
       color: #ff7f7f;
       background-color: #0f131c;
     }    
-    #editSBButton:active {
+    #editSBButton:active, #editSBButtonAnswer:active {
       color: #00ffdc;
       background-color: #0f131c;
     }
@@ -424,7 +474,7 @@
     #answerContent {
     	flex: 3 3 auto;
     	font-family: 'Open Sans';
-    	border: 1px solid #00dcff;
+    	border: 1px solid #00ffdc;
     	border-width: 1px 0px 0px 0px;
     	width: 80%;
     	padding: 10px;
@@ -432,19 +482,20 @@
     }
     #answerVote {
       flex: 1 1 auto;
-      color: #00dcff;
+      color: #00ffdc;
       background-color: #0f131c;
-      border: 1px solid #00dcff;
+      border: 1px solid #00ffdc;
       border-radius: 2px;
       cursor: pointer;
+      transition: all 0.5s ease 0s;
     }
     #answerVote:hover {
       color: #0f131c;
-      background-color: #00dcff;
+      background-color: #00ffdc;
       cursor: pointer;
     }
     #answerVote:active {
-      color: #00dcff;
+      color: #00ffdc;
       background-color: #0f131c;
     }
 
@@ -462,6 +513,16 @@
       width: 90%;
       margin: 0 auto;
      }
+    #welcomeCreateForm {
+      background-color: rgba(0,220,255,0.01);
+      color: #00dcff;
+      height: auto;
+      padding: 0px 5px 5px 5px;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 1%;
+      margin-bottom: 2%;
+    }
     #problemSummaryForm, #problemDescriptionForm,
     #problemRequirementsForm, #problemReferencesForm,
     #solutionSummaryForm, #solutionReferencesForm {
@@ -469,14 +530,13 @@
     	text-align: left;
     	height: 5em;
     }
-    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, 
-    #solutionEvidenceForm, #solutionExperimentsForm {
+    #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, {
       height: 10em;
     }
     #problemTitleForm {
       font-family: 'Alegreya Sans SC', sans-serif;
       color: #ffffff;
-      margin: 2% 10% 4% 10%;
+      margin: 0 auto;
       letter-spacing: 6px;
       border: 1px solid #ffffff;
       border-radius: 3px;
@@ -495,6 +555,9 @@
     }
     #problemTitleFormLabel {
       margin-top: 0%;
+    }
+    #welcomeCreateForm #problemTitleFormLabel {
+      margin-top: 2%;
     }
     #editTitleFormLabel, #versionChangesFormLabel {
       clear: both;
@@ -557,16 +620,19 @@
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	background-color: inherit;
+    	background-color: rgba(0,220,255,0);
     	width: 86%;
     	margin: 0 auto;
       margin-top: 3%;
       margin-bottom: 2%;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      transition: all 0.5s ease 0s;
+      letter-spacing: 2px;
     }
     input#submitProblem:hover, input#submitSolution:hover {
     	color: #0f131c;
     	border: 1px solid #0f131c;
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	cursor: pointer;
     }
     label {
@@ -613,6 +679,7 @@
       width: 60%;
       float: left;
       flex: 1 1 auto;
+      margin-top: 1.5%;
     }
     #solutionHeader, #problemHeader {
     	display: inline-flex;
@@ -657,39 +724,22 @@
       cursor: pointer;
     }
     
-    #solutionDescription, 
-    #solutionFutureExperiments, #solutionReferences, 
-    #problemRequirements, #problemReferences {
-    	border: 1px solid #00dcff;
-    	border-width: 0px 1px 0px 1px;
-    	padding: 0px 5px 10px 5px;
-    	margin-bottom: 0px;
-    	padding-left: 5%;
-    	padding-right: 5%;
-    	font-size: 100%;
-    	line-height: 150%;
-      word-wrap: break-word; 
-    }
-    /*#solutionSummary {
-      margin: 5px 25px;
-      line-height: 150%;
-      font-size: 120%;
-      border: 1px solid #00dcff;
-      border-width: 1px 0px;
-      padding: 15px;
-      margin-top: 20px;
-      padding-top: 15px;
-      padding-bottom: 20px;
-    }*/
     #solutionReferences, #problemReferences {
       text-align: left;
     }
     #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
     #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
+    #solutionDescription:hover, #problemDescription:hover,  
+    #solutionReferences:hover, #xp:hover {
+      color: rgba(255,255,255,1);
+    }
+    #solutionSummary:hover, #problemSummary:hover,
     #solutionDescription:hover, #problemDescription:hover, 
-    #solutionEvidence:hover, #solutionFutureExperiments:hover, 
-    #solutionReferences:hover, #problemRequirements:hover, #xp:hover {
-      color: #ffffff;
+    #solutionReferences:hover {
+      /*font-size: 110%;*/
+    }
+    #problemSummary:hover {
+      /*font-size: 135%;*/
     }
     #elementLabel {
       flex: 0 1 auto;
@@ -772,6 +822,9 @@
     margin-top: 15%;
     margin-left: 44%;
 }
+#errorGear {
+  animation: spin 4s linear infinite;
+}
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -797,8 +850,13 @@
       text-align: center;
       padding: 3px 0px 2px 0px;
       font-size: 110%;
+      /*transition: all 0.5s ease 0s;
+      transform: scale(1);*/
     }
-    #explore, #logo, #avatarHeader {
+    /*#header:hover {
+      transform: scale(1.02);
+    }*/
+    #explore, #logo {
       margin: 0 auto;
       display: inline-block;
       overflow: hidden;
@@ -822,14 +880,15 @@
       margin-top: 2px;
       }
     #exploreInput {
-      color: #dddddd;
+    	color: #dddddd;
     	background-color: #0f131c;
     	border: 1px solid #dddddd;
     	height: 35px;
-    	width: 200px;
+    	width: 80%;
     	letter-spacing: 6px;
-    	font-size: 80%;
-    	font-family: 'Raleway', sans-serif;
+    	font-size: 120%;
+    	padding: auto;
+      font-family: 'Alegreya Sans SC', sans-serif;
     	text-align: center;
     }
     #exploreHeaderInput {
@@ -860,30 +919,36 @@
       margin: 0 auto;
       float: left;
       margin-left: 5%;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+      color: #ffffff;
     }
+    /*#logoName:active {
+      transform: scale(1.02);
+      color: #00dcff;
+      cursor: pointer;
+    }*/
     #avatarHeader {
-      width: 25%;
+      flex: 1 1 auto;
       text-align: center;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      text-align: right;
-      float: right;
-      margin-right: -5%;
+      /*text-align: right;*/
+
+      margin: 0 auto;
+      display: inline-block;
+      overflow: hidden;
+    	text-align: center;
     }
     #avatarImage {
       /*display: block;*/
       border: 1px solid #00dcff;
     	border-radius: 50%;
       margin: 0 auto;
-      vertical-align: middle;
+      /*vertical-align: middle;*/
       /*float: right;*/
     }
     #avatarFullName {
       margin: 0 auto;
+      margin-right: 3%;
       font-size: 200%;
       color: #dddddd;
       letter-spacing: 8px;
@@ -900,10 +965,17 @@
     	align-items: strech;
       text-align: right;
       float: right;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+      color: #ffffff;
     }
+    /*#avatarFullName:hover {
+      transform: scale(1.02);
+      color: #00dcff;
+      cursor: pointer;
+    }*/
     #headerName {
       display: inline;
-      float: left;
       flex: 2 2 auto;
     }
     #imgContainerAvatar {
@@ -969,15 +1041,15 @@
       text-align: center;
       margin: 0 auto;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-
+      background-color: rgba(0, 220, 255, 0.05);
     }
     #bannerSlogan {
       padding: 3px;
       border: 1px solid #00dcff;
     	border-width: 2px 0px;
       letter-spacing: 12px;
-      /*color: #00dcff;
-      background-color: rgba(0, 220, 255, 0.05);*/
+      /*color: #00dcff;*/
+      background-color: rgba(0, 220, 255, 0.05);
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
       width: 60%;
       margin: 0 auto;
@@ -1020,14 +1092,14 @@
     }
     #loginPassword, #registerPassword {
       margin-bottom: 15px;
-      width: 16%;
+      /*width: 22%;*/
     }
-    #registerEmail {
+    /*#registerEmail {
       width: 18%;
     }
     #registerUserName {
       width: 20%;
-    }
+    }*/
     #enter {
     	color: #00dcff;
     	font-size: 100%;
@@ -1038,6 +1110,7 @@
     #submitLogin, #submitRegister,
     #registerButton, #loginButton {
     	color: #00dcff;
+      background-color: rgba(0,220, 255, 0);
       font-size: 65%;
     	border: 1px solid #00dcff;
       border-radius: 3px;
@@ -1048,29 +1121,31 @@
       font-family: 'Alegreya Sans SC', sans-serif;
       letter-spacing: 2px;
       margin-top: 3%;
+      transition: all 0.5s ease 0s;
     }
     #submitLogin, #submitRegister {
       margin-top: 0.5%;
-      width: 10%;
+      width: 15%;
     }
     #submitLogin:hover, #submitRegister:hover {
     	color: #0f131c;
-    	background-color: #00dcff;
+    	background-color: rgba(0,220, 255, 1);
     	cursor: pointer;
     }
     #registerButton, #loginButton {
     	color: #00ffdc;
+      background-color: rgba(0,255, 220, 0);
     	border: 1px solid #00ffdc;
-      border-width: 1px 1px 1px 1px;
-      width: 9%;
+      border-width: 0px 1px 1px 1px;
+      width: 10%;
       font-size: 60%;
     }
-    #registerButton {
-      margin-top: 2.5%;
+    #registerButton, #loginButton {
+      margin-top: 0%;
     }
     #registerButton:hover, #loginButton:hover {
     	color: #0f131c;
-    	background-color: #00ffdc;
+    	background-color: rgba(0,255, 220, 1);
     	cursor: pointer;
     }
 
@@ -1080,22 +1155,28 @@
 
 /*Profile*/
 
+    #profileContainer {
+      margin: 0 auto;
+      width: 100%;
+    }
+
     #profileBox {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
     	overflow: auto;
-    	display: inline-flex;
+    	display: flex;
     	align-items: stretch;
     	flex-direction: row;
-    	margin: 3% 15% 3% 15%;
-    	border: 1px solid #00dcff;
-      width: 71%;
+    	margin: 0 auto;
+      /*width: 100%;*/
+
+      /*Box profile styles*/
+      border: 1px solid #00dcff;
+      width: 85%;
+      margin-top: 30px;
+
     }
     #profileLeft, #profileRight {
     	color: #dddddd;
-    	padding: 0px 10px 0px 10px;
+    	padding: 0px 0px 0px 0px;
     	/*overflow: scroll !important;*/
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
@@ -1119,33 +1200,39 @@
     	border-radius: 50%;
       display: block;
       margin: 0 auto;
-      vertical-align: middle;
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+    }
+    #avatarImageProfile:hover {
+      transform: scale(1.05);
     }
     #userName {
-    	font-size: 200%;
+    	font-size: 270%;
     	text-align: center;
     	line-height: 100%;
     	margin: 10px;
     	padding: 0px;
     	font-family: 'Alegreya Sans SC', sans-serif;
+      margin-top: 7%;
+      margin-bottom: 2%;
     }
     #userEmail {
-    	font-size: 125%;
+    	font-size: 155%;
     	text-align: center;
     	line-height: 100%;
     	margin: 0px;
     	padding: 10px 0px 5px 0px;
     	font-family: 'Alegreya Sans SC', sans-serif;
-    }
-    #userOptions {
+      margin-top: 1%;
+      margin-bottom: 6%;
     }
     #userProblemsSolutionsButton, #notificationsButton,
     #userSettingsButton, #aboutXPButton, 
     #userFeedbackButton, #logOutButton {
-    	background-color: #0f131c;
+    	background-color: rgba(0,220,255,0);
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 100%;
+    	font-size: 135%;
     	font-weight: 100;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px;
@@ -1154,11 +1241,12 @@
     	text-decoration: none;
     	margin: 5px 0px;
     	letter-spacing: 1px;
+      transition: all 0.5s ease 0s;
     }
     #userProblemsSolutionsButton:hover, #notificationsButton:hover,
     #userSettingsButton:hover, #aboutXPButton:hover, 
     #userFeedbackButton:hover, #logOutButton:hover {
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -1175,20 +1263,23 @@
     	flex-direction: row;
     	width: 100%;
     	border: 1px solid #00dcff;
-    	border-width: 1px 1px;
+    	border-width: 0px 1px 0px 0px;
     	border-radius: 3px;
     	margin-bottom: 0px;
+      font-size: 130%;
     }
-    #profileProblemsMenu, #profileSolutionsMenu {
+    #profileProjectsMenu, #profileProposalsMenu {
     	flex: 1 1 auto;
     	text-align: center;
     	border: 1px solid #00dcff;
-    	border-width: 0px 1px 0px 0px;
+    	border-width: 0px 0px 0px 0px;
     	display: flex;
     	flex-direction: column;
-    	justify-conent: center;
     	width: 100%;
     	padding-bottom: 3px;
+    }
+    #profileProjectsMenu {
+      /*border-right: 1px solid #00dcff;*/
     }
     #solveTitle, #developTitle {
       flex: 1 1 auto;
@@ -1200,22 +1291,46 @@
     	margin: 0px 0px;
     	letter-spacing: 4px;
     }
-    #followedProblemsButton, #createdProblemsButton, #votedSolutionsButton, #createdSolutionsButton {
-    	flex: 1 1 auto;
+    #projectsTitleProfile, #proposalsTitleProfile {
+      flex: 1 1 auto;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	font-size: 120%;
+    	padding: 5px 5px 5px 10px;
+    	margin: 0px 0px 0px 0px;
+    	letter-spacing: 4px;
+      background-color: rgba(0,220,255,0.05);
+    }
+    #projectsTitleProfile {
+      border-width: 0px 1px 1px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+    #followedProblemsButton, #createdProblemsButton, 
+    #votedSolutionsButton, #createdSolutionsButton {
+    	background-color: rgba(0,255,220,0);
+      flex: 1 1 auto;
     	color: #00ffdc;
     	font-size: 90%;
     	border: 1px solid #00ffdc;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
+    	border-width: 0px 1px 1px 1px;
+    	border-radius: 3px 3px 0px 0px;
     	text-align: center;
     	text-decoration: none;
-    	margin: 3px 10px 0px 10px;
+    	margin: 0px 10px 0px 10px;
+      transition: all 0.5s ease 0s;
+      padding: 3px;
+    }
+    #createdProblemsButton, #createdSolutionsButton {
+      border-top: 0px;
+      margin-top: 0px;
+      border-radius: 0px 0px 3px 3px;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
     #votedSolutionsButton:hover, #createdSolutionsButton:hover,
     #followedProblemsButton:active, #createdProblemsButton:active,
     #votedSolutionsButton:active, #createdSolutionsButton:active {
-    	background-color: #00ffdc;
+    	background-color: rgba(0,255,220,1);
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -1285,7 +1400,7 @@
     #questionContent {
     	flex: 3 3 auto;
     	font-family: 'Open Sans';
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	width: 80%;
     	padding: 10px;
@@ -1319,18 +1434,6 @@
     	letter-spacing: 8px;
     	font-size: 100%;
     	}
-    #exploreInput {
-    	color: #dddddd;
-    	background-color: #0f131c;
-    	border: 1px solid #dddddd;
-    	height: 35px;
-    	width: 80%;
-    	letter-spacing: 6px;
-    	font-size: 120%;
-    	padding: auto;
-    	font-family: 'Open Sans', sans-serif;
-    	text-align: center;
-    }
     #submitExplore {
     	display: none;
     }
@@ -1406,6 +1509,8 @@
   padding: 10px;
   margin: 0 auto;
   border: 1px solid #00dcff;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
 }
 #solutionUnitContainer {
   padding: 0px;
@@ -1506,43 +1611,48 @@
     #suggestionContent {
       flex: 3 3 auto;
       font-family: 'Open Sans';
-      border: 1px solid #00ffdc;
+      border: 1px solid #00dcff;
       border-width: 1px 0px 0px 0px;
       width: 80%;
       padding: 10px;
-    }
-    #suggestionAdder {
-      font-size: 90%;
-      color: #00ffdc;
-      font-family: 'Open Sans';
     }
     #suggestionText {
       font-family: 'Open Sans';
       margin-top: 5px;
     }
-    #suggestionVote {
+    #suggestionVote, #suggestionVoteNoComments {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: inherit;
       border: 1px solid #00ffdc;
-      border-radius: 2px;
+      border-width: 1px 1px 1px 0px;
+      border-radius: 2px 2px 0px 0px;
       cursor: pointer;
-      height: 28px;
+      height: 37px;
 
       text-align: center;
-      font-size: 130%;
-      padding: 4px;
-      padding-left: 5px;
+      font-size: 120%;
+      padding: 0px 24px 0px 25px;;
       letter-spacing: 4px;
+      margin: 0 auto;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
     }
-    #suggestionVote:hover {
+    #suggestionVoteNoComments {
+      border-width: 1px 1px 1px 1px;
+    }
+    #suggestionVote:hover, #suggestionVoteNoComments:hover {
       color: #0f131c;
       background-color: #00ffdc;
       cursor: pointer;
+      /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
     }
-    #suggestionVote:active {
+    #suggestionVote:active, #suggestionVoteNoComments:active {
       color: #00ffdc;
       background-color: #0f131c;
+    }
+    #suggestionVote:focus, #suggestionVoteNoComments:focus {
+      box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);
     }
 
 /*End Suggestion*/
@@ -1552,14 +1662,17 @@
 /*Welcome*/
 
     #welcomeBox {
-    	margin: 5.5% 20% 4.6% 20%;
+    	margin: 2.5% 20% 2.5% 20%;
     	border: 1px solid #dddddd;
-      border-radius: 3px;
+      /*border-radius: 3px;*/
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
     }
     #welcomePrompt {
     	color: #dddddd;
-      margin: 5px 0px 5px 0px;
+      margin: 5px 0px;
     	font-size: 180%;
       letter-spacing: 6px;
       cursor: default;
@@ -1574,52 +1687,79 @@
     }
     #exploreWelcomeForm{
     	overflow: hidden;
-    	padding: 5px 0px 5px 0px;
-    	margin: 0px;
+    	padding: 5px 0px 0px 0px;
+    	margin: 0 auto;
     	text-align: center;
     	color: #dddddd;
     	letter-spacing: 8px;
     	font-size: 100%;
     	padding-top: 10px;
+      width: 70%;
     	}
-    #exploreInput {
-    	color: #dddddd;
-    	background-color: #0f131c;
-    	border: 1px solid #dddddd;
-    	height: 35px;
-    	width: 80%;
-    	letter-spacing: 6px;
-    	font-size: 120%;
-    	padding: auto;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    	text-align: center;
-    }
     #submitExplore {
     	display: none;
     }
     #welcomeUnitsContainer {
-    	margin: 0% 5%;
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
     	padding: 2px;
     }
     #welcomeUnitsContainer ul li {
       display: inline;
     }
-    #createWelcomeButton {
-      background-color: #0f131c;
+    #createWelcomeButtonBox {
+      margin: 0% 18% 0% 18%;
+    	border: 1px solid #dddddd;
+      /*border-radius: 3px;*/
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
+      transform: scale(1);
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonBox:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+    }
+    #createWelcomeButtonBox:hover * {
       color: #00dcff;
-      font-family: 'Alegreya Sans SC', sans-serif;
-      font-size: 150%;
-      font-weight: 100;
-      border: 1px solid #00dcff;
-      border-width: 1px 0px;
-      text-align: center;
-      text-decoration: none;
-      width: 100%;
-      margin: 0px;
-      padding: 0px;
-      -webkit-transition-duration: 0s;
-      transition-duration: 0s;
-      letter-spacing: 16px;
+      cursor: pointer;
+    }
+    #createWelcomeButton {
+      color: #dddddd;
+      margin: 5px 0px;
+    	font-size: 180%;
+      padding: 5px;
+      letter-spacing: 6px;
+      cursor: default;
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonFormBox {
+      margin: 2.5% 22% 0% 22%;
+    	border: 1px solid #dddddd;
+      /*border-radius: 3px;*/
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+      background-color: rgba(0,220,255,0.05);
+      transform: scale(1.02);
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonFormBox:hover {
+      cursor: pointer;
+    }
+    #createWelcomeButtonForm {
+      color: #00dcff;
+      margin: 5px 0px;
+    	font-size: 160%;
+      letter-spacing: 6px;
+      cursor: default;
+      transition: all 0.5s ease 0s;
+    }
+    #createWelcomeButtonForm:hover {
+      cursor: pointer;
+      color: #00dcff;
     }
     .activeBlue div {
       color: #0f131c !important;
@@ -1629,44 +1769,39 @@
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
-    #createWelcomeButton:hover {
+    /*#createWelcomeButton:active {
       background-color: #00dcff;
       color: #0f131c;
-      cursor: pointer;
-    }
-    #createWelcomeButton:active {
-      background-color: #00dcff;
-      color: #0f131c;
-    }
+    }*/
     #SPListDiv {
-      text-align: center;
+      width: 100%;
+      margin:0 auto;
+      text-align:center;
+      margin-bottom: 40px;
     }
     #welcomeProblemsUnitList {
       text-align: center;
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 100%;
       margin: 0 auto;
-    }
+      /*margin-top: 4%;*/
+      }
     #welcomeProblemsUnitList li {
-      display: inline-block;
-      margin: 2%;
+      /*display: inline-block;*/
+      /*margin: 2%;*/
     }
     #welcomeProblemsUnit {
-    	display: inline-block;
+      display: inline-block;
       width: 14em;
-      margin: 0% 5% 0% 5%;
+      margin: 0% 5% 0% 5%; 
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
     	cursor: pointer;
     }
-    #welcomeProblemsHeader, 
-    #welcomeProblemsHeader1,
-    #welcomeProblemsHeader2,
-    #welcomeProblemsHeader3,
-    #welcomeProblemsHeader4 {
+    #welcomeProblemsHeader {
       display: inline-flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
@@ -1693,13 +1828,37 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-color: rgba(15,19,28,0.999);
-      /*background-color: rgba(0,220,255,0.1);*/
-      /*background-color: rgba(255,255,255,0.2);*/
       background-blend-mode: overlay;
       transition: all 0.5s ease 0s;
+      transform: scale(1);
+
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 14em;
+      height: 14em;
+      word-wrap: break-word; 
+      align-items: center; 
+      justify-content: center;
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
+      /*transform: rotate(20deg);*/
+    }
+    #welcomeProblemsHeader1:hover {
+      /*transform: rotate(0deg);*/
+    }
+    #welcomeProblemsTitle1 {
+      margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      /*transform: rotate(0deg);*/
+      transition: all 0.5s ease 0s;
     }
     #welcomeProblemsHeader2 {
       background-image: url('./vitruvianMan.jpg');
@@ -1715,12 +1874,19 @@
     #welcomeProblemsHeader3:hover,
     #welcomeProblemsHeader4:hover {
       background-color: rgba(15,19,28,0.5);
+      transform: scale(1.02);
     }
+  #welcomeProblemsTitle {
+      margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      transition: all 0.5s ease 0s;
+  }
     #welcomeProblemsHeader1:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader2:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader3:hover #welcomeProblemsTitle,
     #welcomeProblemsHeader4:hover #welcomeProblemsTitle {
-      /*visibility: hidden;*/
+      /*visibility:none;*/
     }
     /*#welcomeProblemsTag {
     	flex: 1 1 auto;
@@ -1732,19 +1898,73 @@
     	padding: 2px 5px 2px 5px;
     	margin-bottom: 35px;
     }*/
-    #welcomeProblemsTitle {
-      margin: 0 auto;
-    	padding: 5px 10px 5px 10px;
-    	font-size: 130%;
-    	/*color: #00dcff;*/
-      word-wrap: break-word; 
-      text-align: center;
-    }
-    #welcomeProblemsSummary {
+  #welcomeProblemsHeaderInvisible {
+    display: none;
+  }
+  #welcomeUserProblemsUnit {
+    display: inline-block;
+    width: 100%;
+    margin: 0% 5% 0% 5%;
+  }
+  #welcomeUserProblemsUnit:hover * {
+    color: #ffffff;
+    cursor: pointer;
+  }
+  #welcomeUserProblemsHeader {
+    /*display: block;*/
+    /*flex-direction: column;*/
+    border: 1px solid #00dcff;
+    border-radius: 0%;
+    box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+    width: 94.5%;
+    height: auto;
+    word-wrap: break-word; 
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0,220,255,0);
+    margin-bottom: 5%;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2%;
+    transition: all 0.2s ease 0s;
+  }
+  #welcomeUserProblemsHeader:hover {
+    box-shadow: 0 0 1.5pt 1.5pt rgba(0,220,255,0.5);
+  }
+  #welcomeUserProblemsUnitList {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 53%;
+    margin: 0 auto;
+    background-color: rgba(0,220,255,0.0);
+    border: 1px solid #00dcff;
+    border-width: 0px 1px 1px 1px;
+    padding-bottom: 2%;
+  }
+  #welcomeUserProblemsUnitList a {
+    /*display: block;*/
+    text-decoration: none;
+    list-style: none;
+  }
+  #welcomeUserProblemsTitle {
+    margin: 0 auto;
+    padding: 10px 15px 10px 15px !important;
+    font-size: 140%;
+    /*color: #00dcff;*/
+    word-wrap: break-word; 
+    text-align: center;
+    background-color: rgba(0,220,255,0.05);
+    /*position: relative;*/
+  }
+    /*#welcomeProblemsSummary {
     	font-family: 'Open Sans', sans-serf;
     	padding: 0px 5px 5px 5px;
     	font-size: 90%;
-    }
+    }*/
     input#submitWelcomeProblem {
     	display: block;
     	color: #00dcff;
@@ -1839,16 +2059,6 @@
     #developMenu {
     	border-width: 0px 0px 0px 1px;
     }
-    #solveTitle, #developTitle {
-    	flex: 1 1 auto;
-    	color: #00dcff;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	font-size: 80%;
-    	padding: 3px 5px 3px 10px;
-    	margin: 0px 0px;
-    	letter-spacing: 12px;
-    }
     #sidebarMenu {
       display: flex;
       flex-direction: column;
@@ -1856,7 +2066,7 @@
       margin-bottom: 10px;
       justify-content: center;
       flex: 1 1 auto;
-      width: 40%;
+      width: 100%;
     }
     #SBButton, #SBButton1 {
     	flex: 1 1 auto;
@@ -1870,6 +2080,8 @@
       margin: 0 auto;
     	margin-top: 12px;
       width: 70%;
+      background-color: rgba(0,220,255,0);
+      transition: all 0.5s ease 0s;
     }
     #SBButton:hover, #SBButton1:hover {
     	background-color: rgba(0,220,255,0.15);
@@ -1881,8 +2093,8 @@
       margin-top: 0px;
     }
     
-    #createButton, #createSPButton {
-    	background-color: #0f131c;
+    #createButton {
+    	background-color: rgba(0,255,220,0);
     	color: #00ffdc;
     	font-family: 'Alegreya Sans SC' , sans-serif;
     	font-size: 150%;
@@ -1896,34 +2108,45 @@
     	margin: 0 auto;
     	padding: 0px;
     	letter-spacing: 10px;
+      transition: all 0.5s ease 0s;
     }
-    #createSPButton {
-      margin-top: 35px;
-      margin-bottom: 5px;
-    }
-    /*#createButton:hover {
-    	background-color: rgba(0,220,255,0.05);
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
-      cursor: pointer;
-    }
-    #createSPButton:hover {
-    	background-color: rgba(0,255,220,0.05);
-      box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
-      cursor: pointer;
-    }*/
     #createButton:hover {
-    	background-color: #00dcff;
+    	background-color: rgba(0,220,255,1);
     	color: #0f131c;
-    	cursor: pointer;
-    }
-    #createSPButton:hover {
-      background-color: #00ffdc;
-      color: #0f131c;
     	cursor: pointer;
     }
     #createButton:active {
       background-color: #00dcff;
       color: #0f131c;
+    }
+    #createSPButtonBox {
+      margin: 6% 18% 0% 18%;
+    	border: 1px solid #dddddd;
+      /*border-radius: 3px;*/
+      /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+      border: 1px solid #00dcff;
+      /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;*/
+      background-color: rgba(0,220,255,0);
+      transform: scale(1);
+      transition: all 0.5s ease 0s;
+    }
+    #createSPButtonBox:hover {
+      transform: scale(1.02);
+      cursor: pointer;
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    }
+    #createSPButton {
+      color: #dddddd;
+      margin: 5px 0px;
+    	font-size: 180%;
+      padding: 5px;
+      letter-spacing: 6px;
+      cursor: default;
+      transition: all 0.5s ease 0s;
+    }
+    #createSPButton:hover {
+      cursor: pointer;
+      color: #00dcff;
     }
     #sidebarElements {
     	border: 1px solid #00dcff;
@@ -1935,28 +2158,28 @@
 /*End SideBar*/
 
 /*Forms*/
-
 #questionTextArea, #answerTextArea, 
 #suggestionTextArea, #commentTextArea,
 #proTextArea, #conTextArea, 
 #resourcesTextArea, #learnContentTextArea {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
-  padding: 10px;
+  /*padding: 10px;*/
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: 1px solid #dddddd;
   height: 4em;
   resize: none;
 }
 
 #askQuestion, #addSuggestion, #addAnswer {
   font-size: 90%;
-  color: #00ffdc;
-  background-color: #0f131c;
-  border: 1px solid #00ffdc;
+  color: #00dcff;
+  background-color: rgba(0,255,220,0);
+  border: 1px solid #00dcff;
   border-radius: 2px;
   /*margin-top: 5px;*/
   margin-bottom: 2%;
+  transition: all 0.5s ease 0s;
 }
 #addAnswer {
   color: #00dcff;
@@ -1964,7 +2187,7 @@
 }
 #askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;
-  background-color: #00ffdc;
+  background-color: rgba(0,220,255,1);
   cursor: pointer;
 }
 #addAnswer:hover, #addAnswer:active {
@@ -1984,11 +2207,13 @@
     	border-radius: 3px;
     	font-size: 100%;
     	padding: 5px 0px 5px 0px;
+      transition: all 0.5s ease 0s;
+      background-color: rgba(0,255,220,0);
     	
     }
     #moreButton:hover, #moreButtonProfile:hover {
     	color: #0f131c;
-    	background-color: #00ffdc;
+      background-color: rgba(0,255,220,1);
       cursor: pointer;
     }
     #moreButtonProfile {
@@ -2002,6 +2227,7 @@
       color: #00ffdc;
       border: 1px solid #00dcff;
       border-width: 1px 0px 0px 0px;
+      letter-spacing: 2px;
     }
     #welcomeMore:hover {
       color: #0f131c;
@@ -2058,36 +2284,6 @@
     	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 0px;
     }
-    #avatar {
-    	padding: 10px;
-    	text-align: center;
-    	border-radius: 50%;
-    	display: block;
-    	margin: 0px auto;
-    }
-    #avatarImageProfile {
-      border: 1px solid #00dcff;
-    	border-radius: 50%;
-      display: block;
-      margin: 0 auto;
-      vertical-align: middle;
-    }
-    #userName {
-    	font-size: 200%;
-    	text-align: center;
-    	line-height: 100%;
-    	margin: 10px;
-    	padding: 0px;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    }
-    #userEmail {
-    	font-size: 125%;
-    	text-align: center;
-    	line-height: 100%;
-    	margin: 0px;
-    	padding: 10px 0px 5px 0px;
-    	font-family: 'Alegreya Sans SC', sans-serif;
-    }
     #userOptions {
     }
     #newsFeedFieldUnit {
@@ -2115,47 +2311,6 @@
     }
     #xp {
     	text-align: center;
-    }
-    #profileSidebarMenu {
-    	display: inline-flex;
-    	flex-direction: row;
-    	width: 100%;
-    	border: 1px solid #00dcff;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
-    	margin-bottom: 0px;
-    }
-    #profileProblemsMenu, #profileSolutionsMenu {
-    	flex: 1 1 auto;
-    	text-align: center;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 1px 0px 0px;
-    	display: flex;
-    	flex-direction: column;
-    	justify-conent: center;
-    	width: 100%;
-    	padding-bottom: 3px;
-    }
-    #solveTitle, #developTitle {
-      flex: 1 1 auto;
-    	color: #00dcff;
-    	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
-    	font-size: 80%;
-    	padding: 3px 5px 3px 10px;
-    	margin: 0px 0px;
-    	letter-spacing: 4px;
-    }
-    #followedProblemsButton, #createdProblemsButton, #votedSolutionsButton, #createdSolutionsButton {
-    	flex: 1 1 auto;
-    	color: #00ffdc;
-    	font-size: 90%;
-    	border: 1px solid #00ffdc;
-    	border-width: 1px 1px;
-    	border-radius: 3px;
-    	text-align: center;
-    	text-decoration: none;
-    	margin: 3px 10px 0px 10px;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
     #votedSolutionsButton:hover, #createdSolutionsButton:hover,
@@ -2204,26 +2359,26 @@
 /*Logos*/
 
 #deleteLogo {
-  display: block;
-  margin: 0 auto;
+  /*display: block;
+  margin: 0 auto;*/
+  /*vertical-align: middle;*/
+  padding: 3px;
+}
+#editLogo {
+  /*margin: 0 auto;*/
+  /*border: #00dcff;*/
+  padding: 3px;
   /*vertical-align: middle;*/
 }
-img#editLogo {
-  /*display: block;*/
-  margin: 0 auto;
+#commentLogo {
+  /*margin: 0 auto;
   border: #00dcff;
   padding: 3px;
-  vertical-align: middle;
-}
-#commentlogo {
-  margin: 0 auto;
-  border: #00dcff;
-  padding: 3px;
-  vertical-align: middle;
+  vertical-align: middle;*/
 }
 #editLogo:hover {
   cursor: pointer;
-  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);*/
 }
 #commentLogo:hover {
   cursor: pointer;
@@ -2234,6 +2389,7 @@ img#editLogo {
   display: block;
   margin: 0 auto;
   box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  transition: all 0.5s ease 0s
 }
 #deleteSolutionButton {
   margin-top: 5px;
@@ -2244,6 +2400,7 @@ img#editLogo {
   margin: 0 auto;
   padding: 3px;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s
 
 }
 
@@ -2296,7 +2453,6 @@ img#editLogo {
 }
 #SPParent {
   flex: 1 1 auto;
-  padding: 4px;
   color: #00ffdc;
   text-align: center;
   margin: 0 auto;
@@ -2304,25 +2460,21 @@ img#editLogo {
   padding: 5px;
   margin-left: 50%;
   padding-top: 0px;
-  margin-top: -10%;
-  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  margin-top: 10px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
 }
-
 #SPParent:hover {
   cursor: pointer;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
 
 
 #problemRow1, #problemRow2 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: inline-flex;
   justify-content: space-between;
-  align-items: center;
-  align-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
   width: 100%;
 }
 
@@ -2331,15 +2483,36 @@ img#editLogo {
   display: inline;
   width: 90%;
 }
-
+#problemPercent {
+  color: rgba(0,255,220,1);
+  flex: 1 1 auto;
+  margin: 0 auto;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  padding: 5px;
+  /*padding-left: 9%;*/
+  font-size: 500%;
+  text-align: center;
+  letter-spacing: 4px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  height: auto;
+  width: 70%;
+  background-color: rgba(0, 255, 220, 0);
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
+}
+#problemPercent:hover {
+  transform: scale(1.1);
+}
 #problemTitle {
   color: #dddddd;
-  margin: 2% 10% 4% 10%;
+  margin: 2% 10% 0% 10%;
   font-size: 210%;
   letter-spacing: 6px;
   border: 1px solid #dddddd;
   border-radius: 3px;
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+  transition: all 0.25s ease 0s;
   /*background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(15,19,28,0.99);
@@ -2347,13 +2520,20 @@ img#editLogo {
   background-image: url('./vitruvianMan.jpg');*/
 }
 
-#fullProblemHeader,
+#fullProblemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  width: 100%;
+}
 #fullProblemHeaderSB {
   display: inline-flex;
   justify-content: space-between;
   align-items: flex-start;
   align-content: space-between;
   width: 100%;
+  margin-top: 5%;
 }
 #problemAdditionalInfoLabel,
 #problemAdditionalInfoLabelSB {
@@ -2371,17 +2551,17 @@ img#editLogo {
 #problemAdditionalInfoLabel {
   font-size: 170%;
 }
-#followProblem,
 #followProblemLeftSB {
   flex: 1 1 auto;
   margin: 0 auto;
   margin-right: 25px;
-  padding: 3px;
+  padding: 5px;
+  padding-left: 1%;
   color: #00ffdc;
-  font-size: 140%;
+  font-size: 120%;
   border: 1px solid #00ffdc;
   border-width: 1px 1px;
-  border-radius: 3px;
+  /*border-radius: 3px;*/
   text-align: center;
   letter-spacing: 8px;
   font-family: 'Alegreya Sans SC', sans-serif;
@@ -2389,26 +2569,47 @@ img#editLogo {
   width: 10%;
   background-color: rgba(0, 255, 220, 0);
   transition: all 0.5s ease 0s;
+  /*box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);*/
 }
-#followProblemLeftSB {
-  font-size: 120%;
+#followProblem {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 255, 220, 0);
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  /*letter-spacing: 8px;*/
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 170%;
+  height: auto;
+  width: 70%;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
 }
 #followProblem:hover,
 #followProblemLeftSB:hover {
   background-color: rgba(0, 255, 220, 1);
   color: #0f131c;
   cursor: pointer; 
+  /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
 }
 
 #problemSummary {
   margin: 10px 25px 0px 25px;
   line-height: 150%;
-  font-size: 115%;
+  font-size: 125%;
   border: 1px solid #00dcff;
   border-width: 1px 0px;
   padding: 15px 15px 17px 15px;
   text-align: left;
   font-family: 'Source Sans Pro', sans-serif;
+  transition: all 0.25s ease 0s;
+  color: #dddddd;
+  min-width: 80%;
+  transition: all 0.5s ease 0s;
   /*font-weight: 300;*/
 }
 
@@ -2456,16 +2657,16 @@ img#editLogo {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 #SPUnitList li {
   display: inline-block;
   /*display: inline;*/
   margin: 0% 1% 2% 1%;
-  list-style-type:none;
+  list-style-type: none;
 }
 #SPUnit {
   display: inline-block;
@@ -2476,7 +2677,7 @@ img#editLogo {
   display: block;
 }
 #SPHeader:hover #SPTitle{
-  color: #dddddd;
+  color: #ffffff;
   cursor: pointer;
 }
 #SPHeader {
@@ -2492,20 +2693,26 @@ img#editLogo {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
 }
 #SPHeader:hover {
   box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
+  transform: scale(1.02);
 }
 #SPTitle {
   margin: 0 auto;
   padding: 5px 10px 5px 10px;
   font-size: 120%;
-  color: #00dcff;
+  color: #dddddd;
   word-wrap: break-word; 
   text-align: center;
+  transition: all 0.5s ease 0s;
 }
 #SPPercent {
   text-align: center;
+  color: #00ffdc !important;
+  font-size: 130%;
 }
 #SPVote {
   color: #00dcff;
@@ -2544,14 +2751,21 @@ img#editLogo {
   width: 60%;
   float: left;
   flex: 1 1 auto;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   word-wrap: break-word; 
+  /*justify-content: flex-start;*/
 }
 #problemLeftSBHeader {
   flex: 1 1 auto;
   display: inline-flex;
   width: 100%;
+}
+#problemLeftSBIntro {
+  flex: 10000 1 auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #SPHeaderLeftSB {
@@ -2567,33 +2781,27 @@ img#editLogo {
   background-color: rgba(0,220,255,0.05);
   margin: 0 auto;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
+  transform: scale(1);
 }
-#SPHeaderLeftSB:hover #SPTitleLeftSB {
+/*#SPHeaderLeftSB:hover #SPPercentLeftSB {
   color: #ffffff;
+}*/
+#SPHeaderLeftSB:hover {
+  transform: scale(1.05);
 }
 #SPTitleLeftSB {
   margin: 0 auto;
   padding: 5px 10px 5px 10px;
   font-size: 140%;
-  color: #00dcff;
+  color: #ffffff;
   word-wrap: break-word; 
   text-align: center;
 }
 #SPPercentLeftSB {
   text-align: center;
   font-size: 150%;
-}
-#problemLeftSBIntro {
-  flex: 10 1 auto;
-  display: inline-flex;
-  flex-direction: column;
-  /*justify-content: space-between;*/
-  align-items: center;
-  /*align-content: space-between;*/
-  /*width: 90%;*/
-}
-#followProblemLeftSB {
-
+  color: #00ffdc;
 }
 
 /*End ProblemLeftSB*/
@@ -2652,6 +2860,8 @@ img#editLogo {
   letter-spacing: 12px;
   width: 12em;
   text-align: center;
+  transition: all 0.5s ease 0s;
+  background-color: rgba(0,220,255,0);
 }
 
 #topSolutionsButtonRightSB:hover,
@@ -2689,18 +2899,21 @@ img#editLogo {
   letter-spacing: 4px;
   text-align: center;
 }
-#fullProblemHeaderSB {
-  margin-top: 5%;
-}
 #fullSolution {
   width: 100%;
   border: 1px solid #00dcff;
-  background-color: rgba(255,255,255,0.05);
-  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  /*background-color: rgba(255,255,255,0.05);*/
+  background-color: rgba(0,220,255,0.05);
 }
 #solutionFormLabel {
   color: #00dcff;
   font-size: 150%;
+  /*margin-left: 5%;*/
+  text-align: center;
+}
+#solutionDescriptionFormLabel {
+  color: #00dcff;
+  /*font-size: 150%;*/
   /*margin-left: 5%;*/
   text-align: center;
 }
@@ -2710,7 +2923,6 @@ img#editLogo {
   text-align: center;
 }
 #solutionDescription, #problemDescription, 
-#solutionEvidence, #solutionFutureExperiments, 
 #solutionReferences, #problemRequirements, #problemReferences {
   border: 1px solid #00dcff;
   border-width: 0px 1px 0px 1px;
@@ -2719,8 +2931,10 @@ img#editLogo {
   padding-left: 5%;
   padding-right: 5%;
   font-size: 100%;
-  line-height: 150%;
+  line-height: 175%;
   word-wrap: break-word; 
+  transition: all 0.5s ease 0s;
+  text-align: left;
 }
 
 /*End Right Solutions SB*/
@@ -2740,6 +2954,9 @@ img#editLogo {
   margin: 0 auto;
   /*margin-top: 12px;*/
   width: 70%;
+  background-color: rgba(0,220,255,0);
+  transition: all 0.2s ease 0s;
+
 }
 #SBDiscussButton:hover {
   background-color: rgba(0,220,255,0.15);
@@ -2773,9 +2990,19 @@ img#editLogo {
 #discussGroup2 {
   border-width: 0px 0px 0px 0px;
 }
+#discussHeader {
+  font-size: 110%;
+  color: #00dcff;
+  margin-bottom: 3px;
+}
+#discussHeaderGreen {
+  font-size: 110%;
+  color: #00ffdc;
+  margin-bottom: 3px;
+}
 #discussPercent {
   margin-right: 10px;
-  font-size: 150%;
+  font-size: 120%;
 }
 
 /*End Discuss SB*/
@@ -2820,6 +3047,8 @@ img#editLogo {
   font-size: 120%;
   border: 1px solid #00dcff;
   border-width: 0px 0px 0px 1px;
+  background-color: rgba(0,220,255,0);
+  transition: all 0.5s ease 0s;
 }
 #intensityNumber:hover {
   background-color: rgba(0,220,255,0.15);
@@ -2877,7 +3106,7 @@ label + input[type=radio] + label {
   color: #00ffdc;
   font-size: 120%;
   border: 1px solid #00ffdc;
-  border-radius: 0px 0px 0px 3px;
+  border-radius: 0px 0px 0px 0px;
   text-align: center;
   letter-spacing: 8px;
   padding: 5px;
@@ -2912,6 +3141,8 @@ label + input[type=radio] + label {
   box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
   margin-bottom: 0px;
   margin-top: 5px;
+  transition: all 0.25s ease 0s;
+  color: rgba(221,221,221,1)
   /*font-family: 'Open Sans', sans-serif;*/
 }
 
@@ -2923,18 +3154,17 @@ label + input[type=radio] + label {
   padding: 0px 0px 0px 0px;
 }
 #solutionSummary {
-  padding-top: 5px;
-  margin-top: 15px;
-  /*border: 1px solid #00dcff;
-  border-width: 0px 1px 0px 1px;*/
-  padding: 0px 5px 10px 5px;
-  margin-bottom: 0px;
+  margin-top: 25px;
+  padding: 0px 5px 0px 5px;
+  margin-bottom: 25px;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 100%;
   line-height: 150%;
   word-wrap: break-word; 
   font-family: 'Open Sans', sans-serif;
+  transition: all 0.5s ease 0s;
+  text-align: left;
 }
 #currentVersion {
   flex: 1 1 auto;
@@ -2955,6 +3185,7 @@ label + input[type=radio] + label {
   padding: 5px;
   width: 12em;
   text-align: center;
+  transition: all 0.25s ease 0s;
 } 
 
 
@@ -2978,6 +3209,8 @@ label + input[type=radio] + label {
   padding: 5px;
   width: 20em;
   text-align: center;
+  transition: all 0.5s ease 0s;
+  background-color: rgba(0,220,255,0);
 }
 #prosButton:hover, #consButton:hover {
   background-color: rgba(0,220,255,0.15);
@@ -3003,14 +3236,15 @@ label + input[type=radio] + label {
 #addProsCons {
   font-size: 90%;
   color: #00ffdc;
-  background-color: inherit;
+  background-color: rgba(0,255,220,0);
   border: 1px solid #00ffdc;
   border-radius: 2px;
   margin-top: 5px;
+  transition: all 0.5s ease 0s;
 }
 #addProsCons:hover {
   color: #0f131c;
-  background-color: #00ffdc;
+  background-color: rgba(0,255,220,1);
   border: 1px solid #00ffdc;
   cursor: pointer;
 }
@@ -3178,10 +3412,12 @@ input#submitNewVersion:hover {
 
 #SParrowImg {
   background-color: #0f131c;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
   /*border: 1px solid #00dcff;*/
   margin: 0 auto;
   vertical-align: middle;
   padding: 5px;
+  transition: all 0.5s ease 0s;
  }
 #SParrowImg:hover {
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -3194,6 +3430,7 @@ input#submitNewVersion:hover {
  #downGreenArrowDiv, #downArrowDiv {
    width: 100%;
    box-shadow: 0 0 1pt 1pt rgba(0,255,220,0.5);
+   transition: all 0.5s ease 0s;
  }
  #downGreenArrowDiv:hover {
   cursor: pointer;
@@ -3236,33 +3473,28 @@ input#submitNewVersion:hover {
 }
 #introPrompt {
   color: #dddddd;
-  margin: 5px 0px 5px 0px;
   font-size: 180%;
   cursor: default;
   font-size: 200%;
   text-align: center;
-  margin-top: 5%;
   letter-spacing: 6px;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 #introBanner {
-  margin: 4% 20% 4% 20%;
+  margin: 2% 20% 1% 20%;
   border: 1px solid #dddddd;
   border-radius: 3px;
+  background-color: rgba(0,220,255, 0.05);
 }
 #introProse {
-  text-align: left;
   letter-spacing: 2px;
   line-height: 150%;
-  margin: 10px;
-  font-size: 150%;
-}
-#introProse2 {
-  text-align: center;
-  letter-spacing: 2px;
-  line-height: 150%;
-  margin: 10px;
-  font-size: 150%;
+  padding: 10px;
+  font-size: 140%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*background-color: rgba(0,220,255, 0.05);*/
 }
 #introContent {
   width:80%;
@@ -3270,7 +3502,45 @@ input#submitNewVersion:hover {
   border-width: 0px 1px;
   margin: 0 auto;
 }
-#enterButton {
+#introSummary {
+  color: #00dcff;
+  text-align: center !important;
+  line-height: 250%;
+  font-size: 120%;
+}
+#introProseDescriptions {
+  text-align: center;
+  /*margin-left: 10%;
+  margin-right: 20%;*/
+  letter-spacing: 1px;
+  color: #dddddd;
+}
+#introEnterButton {
+  color: #00dcff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 150%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  padding: 5px;
+  letter-spacing: 4px;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0);
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+}
+#introEnterButton:hover {
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0.05);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+/*#enterButton {
   color: #00dcff;
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 150%;
@@ -3283,7 +3553,7 @@ input#submitNewVersion:hover {
   padding: 5px;
   letter-spacing: 4px;
   margin-top: 2%;
-}
+}*/
 #tutorialIntroButton {
   padding: 3px;
   vertical-align: middle;
@@ -3345,9 +3615,6 @@ input#submitNewVersion:hover {
   line-height: 150%;
   /*margin-top: 3%;*/
 }
-#tutorialNumbers {
-  color: #00dcff;
-}
 #tutorialReturn {
   margin: 0 auto;
   color: #00ffdc;
@@ -3378,13 +3645,21 @@ input#submitNewVersion:hover {
   margin-top: 4%;
 }
 #profileAboutTitle {
-  font-size: 200%;
+  /*font-size: 200%;
   text-align: center;
   margin-top: 5%;
   color: #ffffff;
   letter-spacing: 8px;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 5%;*/
+
+      font-size: 250%;
+    	letter-spacing: 16px;
+    	border: 1px solid #00dcff;
+    	border-width: 2px 0px;
+      text-align: center;
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
 #profileAboutBanner {
   margin: 0 auto;
@@ -3450,7 +3725,6 @@ input#submitNewVersion:hover {
 #redFieldset {
   /*border-color: #ff7f7f;*/
 }
-
 #freeFormEditTextArea {
   border-color: #ff7f7f;
 }

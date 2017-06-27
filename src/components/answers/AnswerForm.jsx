@@ -27,7 +27,7 @@ axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/answer
   document.location = window.location.pathname 
 })
 .catch(function (error) {
-  alert('Please try again');
+  alert("I'm sorry, there was a problem with your request.");
   });
 }
 

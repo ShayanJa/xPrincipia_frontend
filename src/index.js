@@ -5,6 +5,10 @@ import App from './App';
 
 //Load Components
 
+import AnswerDeleteForm from './components/answers/AnswerDeleteForm.jsx';
+import AnswerEditForm from './components/answers/AnswerEditForm.jsx';
+import AnswerFlagForm from './components/answers/AnswerFlagForm.jsx';
+import AnswerForm from './components/answers/AnswerForm.jsx';
 import ConsDeleteForm from './components/proscons/ConsDeleteForm.jsx';
 import ConsEditForm from './components/proscons/ConsEditForm.jsx';
 import ConsFlagForm from './components/proscons/ConsFlagForm.jsx';
@@ -64,7 +68,9 @@ import SuggestionEditForm from './components/suggestions/SuggestionEditForm.jsx'
 import SuggestionFlagForm from './components/suggestions/SuggestionFlagForm.jsx';
 import SuggestionForm from './components/suggestions/SuggestionForm.jsx';
 import VersionForm from './components/versions/VersionForm.jsx';
+import WelcomeCreateButton from './components/welcome/WelcomeCreateButton.jsx';
 import WelcomeCreateForm from './components/welcome/WelcomeCreateForm.jsx';
+
 
 //Load Containers
 import AnswerContainer from './containers/AnswerContainer.jsx';
@@ -92,7 +98,6 @@ import SuggestionCommentContainer from './containers/SuggestionCommentContainer.
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
 import VersionsContainer from './containers/VersionsContainer.jsx'
 import WelcomeContainer from './containers/WelcomeContainer.jsx';
-import WelcomeUnitsContainer from './containers/WelcomeUnitsContainer.jsx';
 // import Profile from './components/Profile.jsx'
 //Assets
 import './assets/index.css';
@@ -103,8 +108,8 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
     <Route path='/welcomecontainer' component={WelcomeContainer}>
-      <IndexRoute component={WelcomeUnitsContainer}></IndexRoute>
-      <Route path='/welcome' component={WelcomeUnitsContainer}></Route>
+      <IndexRoute component={WelcomeCreateButton}></IndexRoute>
+      <Route path='/welcome' component={WelcomeCreateButton}></Route>
       <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
     </Route>
     <IndexRoute component={Intro}></IndexRoute>
@@ -116,9 +121,9 @@ ReactDOM.render(
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/intro' component={Intro}></Route>
-    <Route path='/profile' component={ProfileContainer}>
+    <Route path='/profile/container' component={ProfileContainer}>
       <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
-      <Route path='/profile/usercontent' component={ProfileProblemsSolutions}></Route>
+      <Route path='/profile' component={ProfileProblemsSolutions}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
       <Route path='/profile/about' component={ProfileAbout}></Route>
@@ -136,7 +141,7 @@ ReactDOM.render(
       <Route path='/problem/:probID' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/:probID/sideBar' component={SideBarProblem}>
-          <IndexRoute component={SolutionContainer}></IndexRoute>
+          <IndexRoute component={SubProblemContainer}></IndexRoute>
           <Route path='/problem/:probID/create' component={ProblemForm}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
         </Route>
@@ -187,8 +192,14 @@ ReactDOM.render(
               <Route path='/problem/:probID/question/:questID/flag' component={QuestionFlagForm}></Route>
               <Route path='/problem/:probID/question/:questID/delete' component={QuestionDeleteForm}></Route>
             </Route> 
-            <Route path='/problem/:probID/question/:questID/answers' component={AnswerContainer}></Route>
-            <Route path='/problem/:probID/suggestions' component={SuggestionContainer}>
+            <Route path='/problem/:probID/question/:questID/answers/container' component={AnswerContainer}>
+              <IndexRoute component={AnswerForm}></IndexRoute>
+              <Route path='/problem/:probID/question/:questID/answers' component={AnswerForm}></Route>
+              <Route path='/problem/:probID/question/:questID/answer/:answerID/edit' component={AnswerEditForm}></Route>
+              <Route path='/problem/:probID/question/:questID/answer/:answerID/flag' component={AnswerFlagForm}></Route>
+              <Route path='/problem/:probID/question/:questID/answer/:answerID/delete' component={AnswerDeleteForm}></Route>
+            </Route>
+            <Route path='/problem/:probID/suggestions/container' component={SuggestionContainer}>
               <IndexRoute component={SuggestionForm}></IndexRoute>
               <Route path='/problem/:probID/suggestions' component={SuggestionForm}></Route>
               <Route path='/problem/:probID/suggestion/:suggID/edit' component={SuggestionEditForm}></Route>
@@ -196,7 +207,7 @@ ReactDOM.render(
               <Route path='/problem/:probID/suggestion/:suggID/delete' component={SuggestionDeleteForm}></Route>
             </Route>
             <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
-            <Route path='/problem/:probID/freeforms' component={FreeFormContainer}>
+            <Route path='/problem/:probID/freeforms/container' component={FreeFormContainer}>
               <IndexRoute component={FreeFormForm}></IndexRoute>
               <Route path='/problem/:probID/freeforms' component={FreeFormForm}></Route>
               <Route path='/problem/:probID/freeform/:freeFormID/edit' component={FreeFormEditForm}></Route>

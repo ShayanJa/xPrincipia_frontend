@@ -29,10 +29,10 @@ export default class EditSolutionForm extends React.Component {
               solutionInfo: response.data
           })
           
-          document.getElementById('editTitleForm').value = self.state.solutionInfo.Title;
-          document.getElementById('editSummaryForm').value = self.state.solutionInfo.Summary;
-          document.getElementById('editDescriptionForm').value = self.state.solutionInfo.Description;
-          document.getElementById('editReferencesForm').value = self.state.solutionInfo.References;
+          document.getElementById('solutionEditTitleForm').value = self.state.solutionInfo.Title;
+          document.getElementById('solutionEditSummaryForm').value = self.state.solutionInfo.Summary;
+          document.getElementById('solutionEditDescriptionForm').value = self.state.solutionInfo.Description;
+          document.getElementById('solutionEditReferencesForm').value = self.state.solutionInfo.References;
 
     })
     .catch(function (error) {
@@ -42,12 +42,12 @@ export default class EditSolutionForm extends React.Component {
     });   
   }
 
-  updateSolution() {
+    updateSolution() {
     //Read field items into component state
-    this.state.title = document.getElementById('editTitleForm').value
-    this.state.summary = document.getElementById('editSummaryForm').value
-    this.state.description = document.getElementById('editDescriptionForm').value
-    this.state.references = document.getElementById('editReferencesForm').value
+    this.state.title = document.getElementById('solutionEditTitleForm').value
+    this.state.summary = document.getElementById('solutionEditSummaryForm').value
+    this.state.description = document.getElementById('solutionEditDescriptionForm').value
+    this.state.references = document.getElementById('solutionEditReferencesForm').value
 
   var self = this;
   axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/update?id='+this.props.params.solutionID, {
@@ -55,13 +55,13 @@ export default class EditSolutionForm extends React.Component {
       title : self.state.title,
       summary : self.state.summary,
       description : self.state.description,
-      evidence: self.state.references
+      references: self.state.references
     })
     .then(function (result) {
       document.location = window.location.pathname 
     })
     .catch(function (error) {
-        alert("There was an error.")
+        alert("I'm sorry, there was a problem with your request.")
       });
   
   }
@@ -74,19 +74,19 @@ export default class EditSolutionForm extends React.Component {
                 <legend>Edit</legend>
                       
                       <label htmlFor="solutionTitle" id="editTitleFormLabel">Title<br />
-                         <input type="text" name="solutionTitle" required="required" maxLength="140" id="editTitleForm" autoFocus/>
+                         <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionEditTitleForm" autoFocus/>
                       </label><br />
 
                       <label htmlFor="solutionSummary" id="editSummaryFormLabel">Summary<br />
-                         <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="editSummaryForm"/>
+                         <textarea name="solutionSummary" required="required" maxLength="400" placeholder="Summarize in 250 characters here." id="solutionEditSummaryForm"/>
                       </label><br />
 
                       <label htmlFor="solutionDescription" id="editDescriptionFormLabel">Description<br />
-                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="editDescriptionForm">
+                          <textarea name="solutionDescription" required="required" placeholder="Describe in detail here." id="solutionEditDescriptionForm">
                           </textarea></label><br />
 
                       <label htmlFor="solutionReferences" id="editReferencesFormLabel">References<br />
-                          <textarea name="solutionReferences" placeholder="Provide your references here." id="editReferencesForm">
+                          <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionEditReferencesForm">
                           </textarea></label><br />
                       <Link to={`/problem/${this.props.params.probID}/solutions`}>
                         <input type="submit" value="Update" onClick={this.updateSolution} id="submitNewVersion"/>

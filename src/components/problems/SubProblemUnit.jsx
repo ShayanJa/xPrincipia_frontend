@@ -3,15 +3,34 @@ import {Link} from 'react-router';
 
 export default class SubProblemUnit extends React.Component {
 
-//   constructor(){
-//   super();
+  constructor(){
+  super();
+  this.state = {
+	  problems: []
+  }
 
-//     this.refreshPage = this.refreshPage.bind(this);
-//   };
+    this.refreshPage = this.refreshPage.bind(this);
+  };
 
-// refreshPage() {
-// 	document.location = window.location.pathname ;
-// }
+    componentWillMount(){
+      var self = this;
+	  if (self.props.problem != null ){
+		  self.setState({problems: this.props.problems})
+	  }
+      return
+    }
+
+    //On recieving new props
+  componentWillReceiveProps(newProps){
+	  var self = this
+	  self.setState({problems: newProps.problems})
+	  console.log(self.state.problems)
+  }
+
+refreshPage() {
+	document.location = window.location.pathname ;
+}
+
 
 	render() {
 		return (
@@ -20,7 +39,7 @@ export default class SubProblemUnit extends React.Component {
 				<li>
 					<img src={require('../../assets/leftArrow.svg')} id="SParrowImg" width="50" height="50" alt="User avatar, DNA Helix" />
 				</li>
-				{this.props.problems.map(this.renderItem)}
+				{this.state.problems.map(this.renderItem)}
 				<li>
 					<img src={require('../../assets/rightArrow.svg')} id="SParrowImg" width="50" height="50" alt="User avatar, DNA Helix" />
 				</li>

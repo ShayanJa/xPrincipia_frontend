@@ -41,39 +41,46 @@ export default class FreeFormUnit extends React.Component {
            return (
        <li key={freeForm.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					{/*<div id="suggestionAdder">S: {freeForm.Username}</div>*/}
-                    {/*<div id="suggestionText">{freeForm.Description}</div>*/}
-					<div id="suggestionAdder">
+					<div id="discussHeader">
                         <span id="discussPercent">{floatToDecimal(freeForm.PercentRank)}</span>
+					    {freeForm.Username}
+                    </div>
+                    <div id="suggestionText">
                         {freeForm.Description}
                     </div>
 				</div>
                     <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/delete`}>
                         <div id="deleteSBButton">
-                            <img src={require('../../assets/delete.svg')} id="editLogo" width="12" height="12" alt="Delete Button" />
+                            <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                         </div>
                     </Link>
                     <Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/edit`}>
                         <div id="editSBButton">
-                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="12" height="12" alt="Edit Button" />
+                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                         </div>
                     </Link>
 				<Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue">
-                    <div id="commentSBButton">
+                    <div id="commentSBButtonUser">
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
                     </div>
                 </Link> 
-                <div onClick={submitVote} id="suggestionVote">
+                <button type="button" onClick={submitVote} id="suggestionVote">
                     Vote
-                </div>             <br /><br /> 
+                </button>             
+                <br /><br /> 
         </li>);
 
     } else {
     return (
        <li key={freeForm.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">S: {freeForm.Username}</div>
-                	<div id="suggestionText">{freeForm.Description}</div>
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(freeForm.PercentRank)}</span>
+					    {freeForm.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {freeForm.Description}
+                    </div>
 				</div>
                     {/*<Link to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/flag`}>
                         <div id="flagSBButton">
@@ -81,11 +88,15 @@ export default class FreeFormUnit extends React.Component {
                             Flag
                         </div>
                     </Link>*/}
-                <Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>  
+				<Link  to={`/problem/${freeForm.TypeID}/freeform/${freeForm.ID}/comments`} activeClassName="activeBlue">
+                    <div id="commentSBButtonUser">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>
+                </Link> 
                 <button type="button" onClick={submitVote} id="suggestionVote">
                     Vote
-                </button> 
-            <br /><br /> 
+                </button>             
+                <br /><br /> 
         </li>);
   }
 }}

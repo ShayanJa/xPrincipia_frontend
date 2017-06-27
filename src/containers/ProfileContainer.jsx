@@ -94,20 +94,20 @@ export default class ProfileContainer extends React.Component {
 
    render() {
       return (
-    <div>
+    <div id="profileContainer">
       <Header />
       <div id="profileBox">
         <div id="profileLeft">
             <div id="userInformation">
                 <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />
+                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="180" height="180" alt="User Avatar, DNA Helix" />
                 <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">
-                <Link to={`/profile/usercontent`} activeClassName="activeBlue">
+                <Link to={`/profile`} activeClassName="activeBlue">
                     <div id="userProblemsSolutionsButton">Problems and Solutions </div>
                 </Link>
-                <Link to={`/profile/notifications`} activeClassName="activeBlue">
+                {/*<Link to={`/profile/notifications`} activeClassName="activeBlue">
                     <div id="notificationsButton">Notifications</div>
                 </Link>
                 <div id="userSettingsButton">Settings (Coming Soon)</div>
@@ -116,7 +116,7 @@ export default class ProfileContainer extends React.Component {
                 </Link>
                 <Link to={`/profile/feedback`} activeClassName="activeBlue">
                     <div id="userFeedbackButton">Feedback</div>
-                </Link>
+                </Link>*/}
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>

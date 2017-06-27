@@ -26,7 +26,6 @@ export default class ProblemForm extends React.Component {
     this.state.title = document.getElementById('problemTitleForm').value
     // this.state.field = document.getElementById('problemFieldForm').value
     this.state.summary = document.getElementById('problemSummaryForm').value
-    // this.state.references = document.getElementById('problemReferencesForm').value
   
     var self = this
     axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/create', {
@@ -57,7 +56,7 @@ export default class ProblemForm extends React.Component {
                           </div>
                         </Link>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />
-                            <input type="text" name="problemTitle" required="required" maxLength="140" id="problemTitleForm" autoFocus/>
+                            <input type="text" name="problemTitle" required="required" maxLength="70" id="problemTitleForm" autoFocus/>
                           </label><br />
 
                         <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />

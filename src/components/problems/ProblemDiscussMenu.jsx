@@ -27,14 +27,14 @@ export default class ProblemDiscussMenu extends React.Component {
             <div id="solutionsTitleRightSB">Discuss</div>
             <div id="sidebarDiscussMenu">
                 <div id="discussGroup1">
-                    <Link to={`/problem/${this.props.params.probID}/questions`}>
+                    <Link to={`/problem/${this.props.params.probID}/questions`} activeClassName="activeWhite">
                         <div id="SBDiscussButton">Questions</div>
                     </Link>
 
-                    <Link to={`/problem/${this.props.params.probID}/suggestions`}>
+                    <Link to={`/problem/${this.props.params.probID}/suggestions`} activeClassName="activeWhite">
                         <div id="SBDiscussButton">Suggestions</div>
                     </Link>
-                    <Link to={`/problem/${this.props.params.probID}/freeforms`}>
+                    <Link to={`/problem/${this.props.params.probID}/freeforms`} activeClassName="activeWhite">
                         <div id="SBDiscussButton">FreeForm</div>
                     </Link>
                 </div>

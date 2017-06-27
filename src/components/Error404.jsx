@@ -9,7 +9,7 @@ export default class Error404 extends React.Component {
         <Header />
             <div id="errorContainer">
                 <div id="error">
-                    <img src={require('../assets/gear.svg')}  width="130" height="130" alt="User avatar, DNA Helix" />
+                    <img src={require('../assets/gear2.svg')} id="errorGear" width="250" height="250" alt="User avatar, DNA Helix" />
                     <h1 id="errorTitle">404</h1>
                     <div id="errorSlogan">Page not found</div>
                     <div id="errorSlogan2">Redirecting...</div>

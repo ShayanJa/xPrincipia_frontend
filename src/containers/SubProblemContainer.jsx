@@ -22,14 +22,15 @@ export default class SubProblemContainer extends React.Component {
             })
         })  
     }
+        //On recieving new props
+    componentWillReceiveProps(newProps){
+        var self = this
+        self.setState({problems: newProps.problems})
+        console.log(self.state.problems)
+    }
     render() {
       return (
         <div id="solutions">
-            <Link to={`/problem/${this.props.params.probID}/create`}>
-                <div id="createSPButton">
-                    Create a Sub Project
-                </div>
-            </Link>
             <SubProblemUnit problems={this.state.problems} />
         </div>
       
