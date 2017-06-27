@@ -346,8 +346,27 @@
 #problemSummaryLeftSB {
   margin-bottom: 8% !important;
 }
+#solutionPercent {
+  width: 15% !important;
+}
+#prosButton, #consButton {
+  width: 10em !important;
+}
 
-
+/*Profile*/
+#profileBox {
+  border-top-width: 0px !important;
+}
+#profileAboutTitle {
+  letter-spacing: 2px !important;
+}
+#profileAboutReturn {
+  letter-spacing: 2px !important;
+}
+#introProse {
+  /*margin: 0 auto !important;
+  padding: 0 !important;*/
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -3806,10 +3825,26 @@ input#submitNewVersion:hover {
   border: 1px solid #00ffdc;
   /*width: 30%;*/
   margin-bottom: 3%;
-  margin-top: 5%;
+  margin-top: 2%;
   font-size: 140%;
   letter-spacing: 8px;
   background-color: rgba(0,255,220,0.05)
+}
+#aboutProseDescriptions {
+  text-align: left;
+  /*margin-left: 10%;
+  margin-right: 20%;*/
+  letter-spacing: 1px;
+  color: #dddddd;
+  margin-top: 3%;
+}
+#aboutBlue {
+  color: #00dcff;
+  font-size: 110%;
+}
+#aboutList {
+  margin-left: 5%;
+  margin-top: 2%;
 }
 /*#profileAboutReturn:hover {
   cursor: pointer;
