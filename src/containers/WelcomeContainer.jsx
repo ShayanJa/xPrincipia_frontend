@@ -84,7 +84,6 @@ export default class WelcomeContainer extends React.Component {
           </div>
 
           <TutorialWelcomePage />
-
         </div>
       );
    }

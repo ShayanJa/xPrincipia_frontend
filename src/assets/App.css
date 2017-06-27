@@ -310,11 +310,11 @@
     }
     #questionAdder {
       font-size: 90%;
-      color: #00ffdc;
+      color: #00dcff;
     }
     #answerAdder {
       font-size: 90%;
-      color: #00dcff;
+      color: #00ffdc;
     }
     #questionAnswers {
       flex: 1 1 auto;
@@ -351,37 +351,12 @@
       color: #00ffdc;
       background-color: #0f131c;
     }
-    /*#flagContainer {
-      flex: 1 1 auto;
-      height: 100%;
-      display: flex;
-    	flex-direction: column;
-      border: 1px solid #00ffdc;
-      border-width: 1px 0px 0px 0px;
-    }*/
-    #flagSBButton, #editSBButton, #deleteSBButton {
+    #commentSBButton, #commentSBButtonUser,
+    #deleteSBButton, #editSBButton, 
+    #editSBButtonAnswer, #flagSBButton {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: inherit;
-      border: 1px solid #00dcff;
-      border-radius: 2px;
-      cursor: pointer;
-      flex-grow: 1;
-      height: 50%;
-      margin: 0 auto;
-
-      /*Button to Div CSS*/
-      text-align: center;
-      font-size: 71%;
-      padding: 0px 1px;
-      vertical-align: middle;
-      transition: all 0.5s ease 0s;
-      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
-    }
-    #commentSBButton {
-      flex: 1 1 auto;
-      color: #00ffdc;
-      background-color: #0f131c;
       border: 1px solid #00dcff;
       border-radius: 2px 0px 0px 2px;
       cursor: pointer;
@@ -394,10 +369,21 @@
       font-size: 71%;
       padding: 6px;
       vertical-align: center;
-      transition: all 0.5s ease 0s;
+      transition: all 0.25s ease 0s;
       box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
     }
-    #commentSBButton:hover {
+    #commentSBButtonUser {
+      border-radius: 0px 0px 0px 0px;
+    }
+    #editSBButton {
+      border-width: 1px 0px 1px 0px;
+      border-radius: 0px 0px 0px 0px;
+    }
+    #editSBButtonAnswer {
+      border-width: 1px 1px 1px 0px;
+      border-radius: 0px 0px 0px 0px;
+    }
+    #commentSBButton:hover, #commentSBButtonUser:hover {
       cursor: pointer;
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
@@ -405,13 +391,8 @@
     #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
-      transition: all 0.5s ease 0s;
-      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
-
+      border-radius: 0px 0px 0px 2px;
       /*OR #fc5353*/
-      /*margin: 1px;*/
-
-      /*padding: 3px;*/
     }
     #flagSBButton:active, #deleteSBButton:active {
       color: #0f131c !important;
@@ -423,7 +404,7 @@
       cursor: pointer;
       box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
     }
-    #editSBButton:hover {
+    #editSBButton:hover, #editSBButtonAnswer:hover {
       cursor: pointer;
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
     }
@@ -431,7 +412,7 @@
       color: #ff7f7f;
       background-color: #0f131c;
     }    
-    #editSBButton:active {
+    #editSBButton:active, #editSBButtonAnswer:active {
       color: #00ffdc;
       background-color: #0f131c;
     }
@@ -459,7 +440,7 @@
     #answerContent {
     	flex: 3 3 auto;
     	font-family: 'Open Sans';
-    	border: 1px solid #00dcff;
+    	border: 1px solid #00ffdc;
     	border-width: 1px 0px 0px 0px;
     	width: 80%;
     	padding: 10px;
@@ -467,19 +448,20 @@
     }
     #answerVote {
       flex: 1 1 auto;
-      color: #00dcff;
+      color: #00ffdc;
       background-color: #0f131c;
-      border: 1px solid #00dcff;
+      border: 1px solid #00ffdc;
       border-radius: 2px;
       cursor: pointer;
+      transition: all 0.5s ease 0s;
     }
     #answerVote:hover {
       color: #0f131c;
-      background-color: #00dcff;
+      background-color: #00ffdc;
       cursor: pointer;
     }
     #answerVote:active {
-      color: #00dcff;
+      color: #00ffdc;
       background-color: #0f131c;
     }
 
@@ -1383,7 +1365,7 @@
     #questionContent {
     	flex: 3 3 auto;
     	font-family: 'Open Sans';
-    	border: 1px solid #00ffdc;
+    	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	width: 80%;
     	padding: 10px;
@@ -1606,21 +1588,16 @@
     #suggestionContent {
       flex: 3 3 auto;
       font-family: 'Open Sans';
-      border: 1px solid #00ffdc;
+      border: 1px solid #00dcff;
       border-width: 1px 0px 0px 0px;
       width: 80%;
       padding: 10px;
-    }
-    #suggestionAdder {
-      font-size: 90%;
-      color: #00ffdc;
-      font-family: 'Open Sans';
     }
     #suggestionText {
       font-family: 'Open Sans';
       margin-top: 5px;
     }
-    #suggestionVote {
+    #suggestionVote, #suggestionVoteNoComments {
       flex: 1 1 auto;
       color: #00ffdc;
       background-color: inherit;
@@ -1638,15 +1615,21 @@
       transition: all 0.5s ease 0s;
       box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
     }
-    #suggestionVote:hover {
-      /*color: #0f131c;*/
-      /*background-color: #00ffdc;*/
-      cursor: pointer;
-      box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);
+    #suggestionVoteNoComments {
+      border-width: 1px 1px 1px 1px;
     }
-    #suggestionVote:active {
+    #suggestionVote:hover, #suggestionVoteNoComments:hover {
+      color: #0f131c;
+      background-color: #00ffdc;
+      cursor: pointer;
+      /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
+    }
+    #suggestionVote:active, #suggestionVoteNoComments:active {
       color: #00ffdc;
       background-color: #0f131c;
+    }
+    #suggestionVote:focus, #suggestionVoteNoComments:focus {
+      box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);
     }
 
 /*End Suggestion*/
@@ -2164,7 +2147,6 @@
 /*End SideBar*/
 
 /*Forms*/
-
 #questionTextArea, #answerTextArea, 
 #suggestionTextArea, #commentTextArea,
 #proTextArea, #conTextArea, 
@@ -2180,9 +2162,9 @@
 
 #askQuestion, #addSuggestion, #addAnswer {
   font-size: 90%;
-  color: #00ffdc;
+  color: #00dcff;
   background-color: rgba(0,255,220,0);
-  border: 1px solid #00ffdc;
+  border: 1px solid #00dcff;
   border-radius: 2px;
   /*margin-top: 5px;*/
   margin-bottom: 2%;
@@ -2194,7 +2176,7 @@
 }
 #askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;
-  background-color: rgba(0,255,220,1);
+  background-color: rgba(0,220,255,1);
   cursor: pointer;
 }
 #addAnswer:hover, #addAnswer:active {
@@ -2366,22 +2348,22 @@
 /*Logos*/
 
 #deleteLogo {
-  display: block;
-  margin: 0 auto;
+  /*display: block;
+  margin: 0 auto;*/
+  /*vertical-align: middle;*/
+  padding: 3px;
+}
+#editLogo {
+  /*margin: 0 auto;*/
+  /*border: #00dcff;*/
+  padding: 3px;
   /*vertical-align: middle;*/
 }
-img#editLogo {
-  /*display: block;*/
-  margin: 0 auto;
+#commentLogo {
+  /*margin: 0 auto;
   border: #00dcff;
   padding: 3px;
-  vertical-align: middle;
-}
-#commentlogo {
-  margin: 0 auto;
-  border: #00dcff;
-  padding: 3px;
-  vertical-align: middle;
+  vertical-align: middle;*/
 }
 #editLogo:hover {
   cursor: pointer;
@@ -2460,7 +2442,6 @@ img#editLogo {
 }
 #SPParent {
   flex: 1 1 auto;
-  padding: 4px;
   color: #00ffdc;
   text-align: center;
   margin: 0 auto;
@@ -2470,23 +2451,8 @@ img#editLogo {
   padding-top: 0px;
   margin-top: 10px;
   box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
-  transition: all 1s ease 0s;
+  transition: all 0.5s ease 0s;
 }
-a#SPParent {
-  flex: 1 1 auto;
-  padding: 4px;
-  color: #00ffdc;
-  text-align: center;
-  margin: 0 auto;
-  vertical-align: middle;
-  padding: 5px;
-  margin-left: 50%;
-  padding-top: 0px;
-  margin-top: -10%;
-  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
-  transition: all 1s ease 0s;
-}
-
 #SPParent:hover {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -2683,7 +2649,7 @@ a#SPParent {
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 #SPUnitList li {
   display: inline-block;
@@ -2825,9 +2791,6 @@ a#SPParent {
   text-align: center;
   font-size: 150%;
   color: #00ffdc;
-}
-#followProblemLeftSB {
-
 }
 
 /*End ProblemLeftSB*/
@@ -3016,9 +2979,19 @@ a#SPParent {
 #discussGroup2 {
   border-width: 0px 0px 0px 0px;
 }
+#discussHeader {
+  font-size: 110%;
+  color: #00dcff;
+  margin-bottom: 3px;
+}
+#discussHeaderGreen {
+  font-size: 110%;
+  color: #00ffdc;
+  margin-bottom: 3px;
+}
 #discussPercent {
   margin-right: 10px;
-  font-size: 150%;
+  font-size: 120%;
 }
 
 /*End Discuss SB*/
@@ -3252,14 +3225,15 @@ label + input[type=radio] + label {
 #addProsCons {
   font-size: 90%;
   color: #00ffdc;
-  background-color: inherit;
+  background-color: rgba(0,255,220,0);
   border: 1px solid #00ffdc;
   border-radius: 2px;
   margin-top: 5px;
+  transition: all 0.5s ease 0s;
 }
 #addProsCons:hover {
   color: #0f131c;
-  background-color: #00ffdc;
+  background-color: rgba(0,255,220,1);
   border: 1px solid #00ffdc;
   cursor: pointer;
 }
@@ -3740,7 +3714,6 @@ input#submitNewVersion:hover {
 #redFieldset {
   /*border-color: #ff7f7f;*/
 }
-
 #freeFormEditTextArea {
   border-color: #ff7f7f;
 }

@@ -58,7 +58,7 @@ axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/register', 
       password: this.state.password
     })
     .then(function (result) {
-      {window.location.href='/intro'}
+      // {window.location.href='/intro'}
      
     })
     .catch(function (error) {

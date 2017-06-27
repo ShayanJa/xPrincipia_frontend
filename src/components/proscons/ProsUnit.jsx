@@ -39,38 +39,55 @@ export default class ProsUnit extends React.Component {
            return (
        <li key={pro.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">{pro.Username}</div>
-                	<div id="suggestionText">{pro.Description}</div>
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(pro.PercentRank)}</span>
+					    {pro.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {pro.Description}
+                    </div>
 				</div>
-                    <Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/edit`}>
-                        <div id="editSBButton">
-                            Edit
-                        </div>
-                    </Link>
                     <Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/delete`}>
                         <div id="deleteSBButton">
-                            Delete
+                            <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                         </div>
                     </Link>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(pro.PercentRank)}</button> 
-                <Link  to={`/problem/${pro.TypeID}/pros/${pro.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
+                    <Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/edit`}>
+                        <div id="editSBButtonAnswer">
+                            <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                        </div>
+                    </Link>
+                {/*<Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/comments`}>
+                    <div id="commentSBButtonUser">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>                
+                </Link>*/}
+                <button type="button" onClick={submitVote} id="suggestionVote">
+                    Vote
+                </button>             
             <br /><br /> 
         </li>);
     } else {
     return (
        <li key={pro.ID} id="suggestionUnit">
 				<div id="suggestionContent">
-					<div id="suggestionAdder">{pro.Username}</div>
-                	<div id="suggestionText">{pro.Description}</div>
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(pro.PercentRank)}</span>
+					    {pro.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {pro.Description}
+                    </div>
 				</div>
-                <Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/flag`}>
+                {/*<Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/flag`}>
                         <div id="flagSBButton">
-                            {/*<img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />*/}
+                            <img src={require('.../src/assets/delete.svg')} id="deleteLogo" width="11" height="11" alt="Delete Button, Red X" />
                             Flag
                         </div>
-                    </Link>
-				<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(pro.PercentRank)}</button> 
-                <Link  to={`/problem/${pro.TypeID}/pros/${pro.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link> 
+                </Link>*/}
+				<button type="button" onClick={submitVote} id="suggestionVote">
+                    Vote
+                </button> 
             <br /><br /> 
         </li>);
   }

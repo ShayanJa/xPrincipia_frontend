@@ -39,31 +39,45 @@ constructor(props){
     if (answer.Username === cookie.load('userName')) {
         return (
         <li key={answer.ID} id="answerUnit">
-            <div id="answerContent">
-                <div id="answerAdder">A: {answer.Username}</div>
-                <div id="answerText">{answer.Description}</div>
-            </div>
-                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.ID}/edit`}>
-                    <div id="editSBButton">
-                        <img src={require('../../assets/editBlue.svg')} id="editLogo" width="11" height="11" alt="Edit Button" />
+				<div id="answerContent">
+					<div id="discussHeaderGreen">
+                        <span id="discussPercent">{floatToDecimal(answer.PercentRank)}</span>
+					    {answer.Username}
                     </div>
-                </Link>
+                    <div id="suggestionText">
+                        {answer.Description}
+                    </div>
+				</div>
                 <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.TypeID}/delete`}>
                     <div id="deleteSBButton">
-                        Delete
+                        <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                     </div>
                 </Link>
-            <button type="button" onClick={submitVote} id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.ID}/edit`}>
+                    <div id="editSBButtonAnswer">
+                        <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                    </div>
+                </Link>
+            <button type="button" onClick={submitVote} id="suggestionVote">
+                Vote
+            </button>
         </li>);
 
     } else {
     return (
         <li key={answer.ID} id="answerUnit">
-            <div id="answerContent">
-                <div id="answerAdder">A: {answer.Username}</div>
-                <div id="answerText">{answer.Description}</div>
-            </div>
-            <button type="button" onClick={submitVote} id="answerVote">Vote<br />{floatToDecimal(answer.PercentRank)}</button>
+				<div id="answerContent">
+					<div id="discussHeaderGreen">
+                        <span id="discussPercent">{floatToDecimal(answer.PercentRank)}</span>
+					    {answer.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {answer.Description}
+                    </div>
+				</div>
+            <button type="button" onClick={submitVote} id="suggestionVoteNoComments">
+                Vote
+            </button>
         </li>);
    }
 }}

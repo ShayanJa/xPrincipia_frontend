@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import ConsForm from '../components/proscons/ConsForm.jsx';
 import ConsUnit from '../components/proscons/ConsUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
@@ -34,9 +35,16 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
+        {/*<ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>*/}
           {this.props.children}
             <ConsUnit cons={this.state.cons} />
             <SideBarMore />
+        {/*</ReactCSSTransitionGroup>*/}
         </div>    
       );
    }

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+import SideBarProblemMenu from './SideBarProblemMenu.jsx';
 import TutorialProblemPage from '../tutorials/TutorialProblemPage.jsx';
 
 
@@ -85,9 +85,9 @@ export default class FullProblem extends React.Component {
         <ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}
-      transitionAppearTimeout={2000}
-      transitionEnter={false}
-      transitionLeave={false}>
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
         <div id="problemRow1">
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
