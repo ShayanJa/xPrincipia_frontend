@@ -13,6 +13,7 @@ export default class FullSolutionContent extends React.Component {
         }
 
         this.submitVote = this.submitVote.bind(this)
+        this.deleteSolution = this.deleteSolution.bind(this)
     };
     //initialize the component with this state
     componentDidMount(){
@@ -41,6 +42,23 @@ export default class FullSolutionContent extends React.Component {
         // }
     }); 
 
+  }
+  deleteSolution() {
+  
+  //Delete question
+   var self = this
+    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/delete?id='+this.props.params.solutionID, {
+        params: {
+          id: this.props.params.questID,
+          username: cookie.load('userName')
+        }
+      })
+      .then(function (result) {
+        document.location = '/problem/'+ self.props.params.probID + '/solutions/top'
+      })
+      .catch(function (error) {
+        alert("I'm sorry there was a problem with your request")
+      });
   }
   submitVote() {
        axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
@@ -76,7 +94,7 @@ export default class FullSolutionContent extends React.Component {
                 <img src={require('../../assets/editBlue.svg')} id="editSolutionButton" width="20" height="20" alt="Edit Button" />
               </Link>
               
-                <img src={require('../../assets/delete.svg')} id="deleteSolutionButton" width="20" height="20" alt="Edit Button" />              
+                <img src={require('../../assets/delete.svg')} id="deleteSolutionButton" width="20" height="20" alt="Edit Button" onClick={this.deleteSolution} />              
                 
               <div id="prosConsMenu">
                 <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
