@@ -227,6 +227,47 @@
   width: 90% !important;
   letter-spacing: 4px !important;
 }
+
+/*Problem Page*/
+
+#SPParent {
+  margin: 0 !important;
+  display: none !important;
+}
+#SPParent2 {
+  display: initial !important;
+  flex: 1 1 auto;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto !important;
+  vertical-align: middle;
+  padding: 5px;
+  padding-top: 0px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
+  height: 30px !important;
+  width: 30px !important;
+}
+#problemRow2 {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#problemTitle {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+#problemAdditionalInfoLabel {
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: none !important;
+}
+#problemSummary {
+  margin: 0 auto !important;
+  margin-left: 3% !important;
+  margin-right: 3% !important;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -275,7 +316,6 @@
 
 /*Profile*/
 #profileBox {
-  overflow: auto;
   display: flex !important;
   align-items: stretch;
   flex-direction: column !important;
@@ -1161,7 +1201,6 @@
     }
 
     #profileBox {
-    	overflow: auto;
     	display: flex;
     	align-items: stretch;
     	flex-direction: row;
@@ -2023,7 +2062,6 @@
       position: relative;
     	color: #dddddd;
     	padding: 0px 10px 20px 10px;
-    	overflow: scroll !important;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
     }
@@ -2465,6 +2503,13 @@
   transition: all 0.5s ease 0s;
 }
 #SPParent:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+}
+#SPParent2 {
+  display: none;
+}
+#SPParent2:hover {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
