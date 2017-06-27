@@ -210,7 +210,7 @@ ReactDOM.render(
             <IndexRoute component={LearnContentMenu}></IndexRoute>
             <Route path='/problem/:probID/learn/content/menu' component={LearnContentMenu}>
               <IndexRoute component={LearnContentContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/content/1' component={LearnContentContainer1}>
+              <Route path='/problem/:probID/learn/content/full' component={LearnContentContainer1}>
                 <IndexRoute component={LearnContentForm}></IndexRoute>
                 <Route path='/problem/:probID/learn/content' component={LearnContentForm}></Route>
                 <Route path='/problem/:probID/learn/content/:learnitemID/edit' component={LearnContentEditForm}></Route>
@@ -220,7 +220,7 @@ ReactDOM.render(
             </Route>
             <Route path='/problem/:probID/learn/resources/menu' component={LearnResourcesMenu}>
               <IndexRoute component={LearnResourcesContainer1}></IndexRoute>
-              <Route path='/problem/:probID/learn/resources/1' component={LearnResourcesContainer1}>
+              <Route path='/problem/:probID/learn/resources/full' component={LearnResourcesContainer1}>
                 <IndexRoute component={LearnResourcesForm}></IndexRoute>
                 <Route path='/problem/:probID/learn/resources' component={LearnResourcesForm}></Route>
                 <Route path='/problem/:probID/learn/resources/:resourceID/edit' component={LearnResourcesEditForm}></Route>

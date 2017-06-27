@@ -28,11 +28,13 @@ export default class ProblemLeftSB extends React.Component {
           self.setState({
               problemInfo: response.data
           })
+    }).then( function(response){
+
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     });   
   }
   componentWillReceiveProps(newProps){
@@ -50,11 +52,13 @@ export default class ProblemLeftSB extends React.Component {
               problemInfo: response.data,
               probID: response.data.ID
           })
+    }).then( function(response){
+      
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     }); 
 
   }

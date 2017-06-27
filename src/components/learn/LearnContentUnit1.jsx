@@ -13,51 +13,40 @@ export default class LearnContentUnit1 extends React.Component {
     render() {
 		return (
             <div>
-                <ul> {this.props.learnItems.map(this.renderItem)} </ul>
+                <ul> {this.props.items.map(this.renderItem)} </ul>
                     
             </div>
 		);
 	}
     renderItem(learnItem) {
 
-       function  submitVote() {
-       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
-           Type: 3,
-           TypeID: learnItem.ID,
-           username : cookie.load("userName"),
+//        function  submitVote() {
+//        axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+//            Type: 3,
+//            TypeID: learnItem.ID,
+//            username : cookie.load("userName"),
            
-        })
-        .then(function (result) {
-            document.location = window.location.pathname;
-        })
-        .catch(function (error) {
-            alert("I'm sorry, you've already voted on a comment.");
-        })
-  }
+//         })
+//         .then(function (result) {
+//             document.location = window.location.pathname;
+//         })
+//         .catch(function (error) {
+//             alert("I'm sorry, you've already voted on a comment.");
+//         })
+//   }
 
-       if (question.Username === cookie.load('userName')) {
-           return (
-        <li key={learnItem.ID} id="suggestionUnit">
-            <div id="suggestionContent">
-                <div id="suggestionAdder">1: {learnItem.Username}</div>
-                <div id="suggestionText">{learnItem.Description}</div>
-            </div>
-            <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
-            <Link  to={`/problem/${learnItem.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
-        <br /><br /> 
+      return (
+       <li key={learnItem.ID} id="suggestionUnit">
+				<div id="suggestionContent">
+					<div id="suggestionAdder">1: {learnItem.Username}</div>
+                	<div id="suggestionText">{learnItem.Description}</div>
+				</div>
+                <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(learnItem.PercentRank)}</button> 
+				{/*<button type="button" onClick={submitVote} id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> */}
+                <Link  to={`/problem/${learnItem.TypeID}/learnresources/${learnItem.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
+            <br /><br /> 
         </li>)
-        } else {
-            return (
-        <li key={learnItem.ID} id="suggestionUnit">
-            <div id="suggestionContent">
-                <div id="suggestionAdder">1: {learnItem.Username}</div>
-                <div id="suggestionText">{learnItem.Description}</div>
-            </div>
-            <button type="button"  id="suggestionVote">Vote<br />{floatToDecimal(resource.PercentRank)}</button> 
-            <Link  to={`/problem/${learnItem.TypeID}/learnresources/${resource.ID}/comments`} activeClassName="activeBlue"><button type="button" id="questionAnswers">Comments</button></Link>
-        <br /><br /> 
-        </li>)
-  }
+  
     }
 }
 
