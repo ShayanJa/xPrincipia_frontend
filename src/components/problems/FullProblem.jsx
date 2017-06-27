@@ -92,9 +92,12 @@ export default class FullProblem extends React.Component {
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
+
+          {/*Used for mobile*/}
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
-              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" alt="Back arrow, blue up arrow" />
+              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" align="middle" alt="Back arrow, blue up arrow" />
           </Link>
+
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
           </div>
@@ -136,6 +139,12 @@ export default class FullProblem extends React.Component {
                         <div id="SBButton">Theory</div>
                       </Link> */}
 
+                    </div>
+                    {/*Used for mobile*/}
+                    <div id="createSPButtonBox2">
+                      <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                        <h1 id="createSPButton">Create a Sub Project</h1>
+                      </Link>
                     </div>
               
             {/*</div>*/}

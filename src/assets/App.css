@@ -229,32 +229,31 @@
 }
 
 /*Problem Page*/
-
 #SPParent {
   margin: 0 !important;
   display: none !important;
 }
 #SPParent2 {
   display: initial !important;
-  flex: 1 1 auto;
-  color: #00ffdc;
-  text-align: center;
   margin: 0 auto !important;
-  vertical-align: middle;
-  padding: 5px;
-  padding-top: 0px;
-  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
-  transition: all 0.5s ease 0s;
-  height: 30px !important;
-  width: 30px !important;
+  height: 50px !important;
+  width: 250px !important;
+  text-align: center !important;
+  float: center !important;
 }
-#problemRow2 {
+#problemRow1, #problemRow2 {
   display: flex !important;
   flex-direction: column !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 #problemTitle {
   width: 100% !important;
   margin: 0 auto !important;
+  margin-bottom: 4% !important;
+}
+#problemIntro {
+  width: 100% !important;
 }
 #problemAdditionalInfoLabel {
   width: 100% !important;
@@ -262,11 +261,92 @@
   text-align: center !important;
   display: none !important;
 }
-#problemSummary {
+#problemSummary, #problemSummaryLeftSB {
   margin: 0 auto !important;
   margin-left: 3% !important;
   margin-right: 3% !important;
 }
+#columnContainer {
+  width: 100% !important;
+}
+#createSPButtonBox {
+  display: none !important;
+  width: 100% !important;
+}
+#createSPButtonBox2 {
+  display: initial !important;
+  margin: 0 auto !important;
+  margin-bottom: 1% !important;
+  margin-top: 4% !important;
+  width: 100% !important;
+}
+#SPHeader {
+  /*display: block;*/
+  /*flex-direction: column;*/
+  border: 1px solid #00dcff !important;
+  border-radius: 0% !important;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5) !important;
+  width: 94.5% !important;
+  height: auto !important;
+  word-wrap: break-word !important; 
+  align-items: center !important; 
+  justify-content: center !important;
+  background-color: rgba(0,220,255,0) !important;
+  margin-bottom: 5% !important;
+  background-size: cover !important;
+  position: relative !important;
+  margin: 0 auto !important;
+  margin-top: 2% !important;
+  transition: all 0.2s ease 0s !important;
+}
+#SPHeader:hover {
+  box-shadow: 0 0 1.5pt 1.5pt rgba(0,220,255,0.5) !important;
+}
+#SPUnitList {
+  flex-direction: column  !important;
+  display: flex  !important;
+}
+#SParrowImg {
+  display: none !important;
+}
+#sidebarSB {
+  padding: 0px !important;
+}
+/*Problem Left SB*/
+
+#maxContainerRow {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#fullProblemLeft {
+  width: 100% !important;
+}
+#problemLeftSBIntro {
+  width: 100% !important;
+}
+#sidebar {
+  padding: 0px !important;
+  margin: 0 auto !important;
+}
+#fullProblemHeaderSB {
+  margin-top: 3% !important;
+}
+#problemSummary, #problemSummaryLeftSB {
+  margin-bottom: 3% !important;
+}
+#problemAdditionalInfoLabelSB {
+  display: none !important;
+}
+#followProblemLeftSB {
+  width: 20% !important;
+  margin: 0 auto !important;
+  margin-top: 3% !important;
+  margin-bottom: 6% !important;
+}
+#problemSummaryLeftSB {
+  margin-bottom: 8% !important;
+}
+
 
 }
 
@@ -768,18 +848,11 @@
       text-align: left;
     }
     #solutionTitle:hover, #problemTitle:hover, #contributor:hover, 
-    #createDate:hover, #solutionSummary:hover, #problemSummary:hover,
+    #createDate:hover, #solutionSummary:hover, 
+    #problemSummary:hover, #problemSummaryLeftSB,
     #solutionDescription:hover, #problemDescription:hover,  
     #solutionReferences:hover, #xp:hover {
       color: rgba(255,255,255,1);
-    }
-    #solutionSummary:hover, #problemSummary:hover,
-    #solutionDescription:hover, #problemDescription:hover, 
-    #solutionReferences:hover {
-      /*font-size: 110%;*/
-    }
-    #problemSummary:hover {
-      /*font-size: 135%;*/
     }
     #elementLabel {
       flex: 0 1 auto;
@@ -2157,7 +2230,7 @@
       background-color: #00dcff;
       color: #0f131c;
     }
-    #createSPButtonBox {
+    #createSPButtonBox, #createSPButtonBox2 {
       margin: 6% 18% 0% 18%;
     	border: 1px solid #dddddd;
       /*border-radius: 3px;*/
@@ -2167,6 +2240,9 @@
       background-color: rgba(0,220,255,0);
       transform: scale(1);
       transition: all 0.5s ease 0s;
+    }
+    #createSPButtonBox2 {
+      display: none;
     }
     #createSPButtonBox:hover {
       transform: scale(1.02);
@@ -2642,7 +2718,7 @@
   /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
 }
 
-#problemSummary {
+#problemSummary, #problemSummaryLeftSB {
   margin: 10px 25px 0px 25px;
   line-height: 150%;
   font-size: 125%;

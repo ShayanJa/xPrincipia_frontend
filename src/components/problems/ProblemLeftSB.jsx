@@ -101,7 +101,7 @@ export default class ProblemLeftSB extends React.Component {
                   <div id="problemAdditionalInfoLabelSB">Additional Info</div>
                   <div id="followProblemLeftSB" onClick={this.submitVote}>Vote</div>
                 </div>
-                <p id="problemSummary">
+                <p id="problemSummaryLeftSB">
                   {this.state.problemInfo.Summary}
                 </p>
               </div>

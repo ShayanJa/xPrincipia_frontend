@@ -109,12 +109,12 @@ export default class ProfileContainer extends React.Component {
                 </Link>
                 {/*<Link to={`/profile/notifications`} activeClassName="activeBlue">
                     <div id="notificationsButton">Notifications</div>
-                </Link>
-                <div id="userSettingsButton">Settings (Coming Soon)</div>
+                </Link>*/}
+                {/*<div id="userSettingsButton">Settings (Coming Soon)</div>*/}
                 <Link to={`/profile/about`} activeClassName="activeBlue">
                     <div id="aboutXPButton">About XPrincipia</div>
                 </Link>
-                <Link to={`/profile/feedback`} activeClassName="activeBlue">
+                {/*<Link to={`/profile/feedback`} activeClassName="activeBlue">
                     <div id="userFeedbackButton">Feedback</div>
                 </Link>*/}
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
