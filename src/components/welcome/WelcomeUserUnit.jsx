@@ -83,7 +83,7 @@ if (problem.Title === 'Interstellar Civilization') {
                 <div id="welcomeUserProblemsHeader">
                     <div id="welcomeUserProblemsTitle">
                         {problem.Title}
-                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
+                        <div id="SPPercent">{problem.Rank}</div>
                     </div>
                     
                 </div>

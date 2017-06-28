@@ -67,6 +67,9 @@ import SuggestionDeleteForm from './components/suggestions/SuggestionDeleteForm.
 import SuggestionEditForm from './components/suggestions/SuggestionEditForm.jsx';
 import SuggestionFlagForm from './components/suggestions/SuggestionFlagForm.jsx';
 import SuggestionForm from './components/suggestions/SuggestionForm.jsx';
+import TutorialWelcomeButton from './components/tutorials/TutorialWelcomeButton.jsx';
+import TutorialWelcomeContent from './components/tutorials/TutorialWelcomeContent.jsx';
+import TutorialWelcomePage from './components/tutorials/TutorialWelcomePage.jsx';
 import VersionForm from './components/versions/VersionForm.jsx';
 import WelcomeCreateButton from './components/welcome/WelcomeCreateButton.jsx';
 import WelcomeCreateForm from './components/welcome/WelcomeCreateForm.jsx';
@@ -114,6 +117,12 @@ ReactDOM.render(
     </Route>
     <IndexRoute component={Intro}></IndexRoute>
     <Route path='/intro' component={Intro}></Route>
+    <IndexRoute component={Intro}></IndexRoute>
+    <Route path='/welcome/tutorial' component={TutorialWelcomePage}>
+      <IndexRoute component={TutorialWelcomeButton}></IndexRoute>
+      <Route path='/welcome/tutorial/hide' component={ProfileProblemsSolutions}></Route>
+      <Route path='/welcome/tutorial/show' component={TutorialWelcomeContent}></Route>
+    </Route>
     <Route path='/error' component={ErrorContainer}>
       <IndexRoute component={Redirection}></IndexRoute>
       <Route path='/404' component={Error404}></Route>

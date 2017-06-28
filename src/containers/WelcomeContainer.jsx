@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
 import Header from './Header.jsx';
+import TutorialWelcomeContent from '../components/tutorials/TutorialWelcomeContent.jsx';
 import TutorialWelcomePage from '../components/tutorials/TutorialWelcomePage.jsx';
 import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
 import WelcomeUserUnit from '../components/welcome/WelcomeUserUnit.jsx';
@@ -79,11 +80,11 @@ export default class WelcomeContainer extends React.Component {
               <WelcomeUserUnit problems={this.state.userproblems} />
           </div>
 
-          <div id="tutorialWelcomeButtonDiv">
+          {/*<div id="tutorialWelcomeButtonDiv">
             <img src={require('../assets/tutorial.svg')} id="tutorialWelcomeButton" width="50" height="50" alt="Back arrow, blue up arrow" />
-          </div>
+          </div>*/}
 
-          <TutorialWelcomePage />
+          <TutorialWelcomeContent />
         </div>
       );
    }

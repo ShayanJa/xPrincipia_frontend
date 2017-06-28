@@ -5,7 +5,7 @@ import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios';
-import TutorialProfilePage from '../components/tutorials/TutorialProfilePage.jsx';
+import TutorialProfileContent from '../components/tutorials/TutorialProfileContent.jsx';
 
 export default class ProfileContainer extends React.Component {
     constructor(){
@@ -114,9 +114,9 @@ export default class ProfileContainer extends React.Component {
                 <Link to={`/profile/about`} activeClassName="activeBlue">
                     <div id="aboutXPButton">About XPrincipia</div>
                 </Link>
-                {/*<Link to={`/profile/feedback`} activeClassName="activeBlue">
+                <Link to={`/profile/feedback`} activeClassName="activeBlue">
                     <div id="userFeedbackButton">Feedback</div>
-                </Link>*/}
+                </Link>
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>
@@ -127,11 +127,11 @@ export default class ProfileContainer extends React.Component {
         </div>
       </div>
 
-        <div id="tutorialProfileButtonDiv">
+        {/*<div id="tutorialProfileButtonDiv">
           <img src={require('../assets/tutorial.svg')} id="tutorialProfileButton" width="50" height="50" alt="Back arrow, blue up arrow" />
-        </div>
+        </div>*/}
         
-        <TutorialProfilePage />
+        <TutorialProfileContent />
     </div>
 
       );

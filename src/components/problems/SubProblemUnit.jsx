@@ -55,7 +55,7 @@ refreshPage() {
 				<li key={problem.ID} id="SPUnit">
 				<div id="SPHeader">
 					<div id="SPTitle">{problem.Title}</div>
-					<div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
+					<div id="SPPercent">{problem.PercentRank}</div>
 					{/*<div>
 						<img src={require('../assets/voteArrow.png')} id="SPVote" width="20" height="20" alt="Vote arrow, blue up arrow" />
 					</div>*/}

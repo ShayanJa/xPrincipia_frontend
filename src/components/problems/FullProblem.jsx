@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
-import TutorialProblemPage from '../tutorials/TutorialProblemPage.jsx';
+import TutorialProjectContent from '../tutorials/TutorialProjectContent.jsx';
 
 
 export default class FullProblem extends React.Component {
@@ -116,8 +116,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div id="problemPercent">{this.state.problemInfo.Rank}</div> 
-              
+              <div id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
               
                     <div id="sidebarMenu">
 
@@ -158,11 +157,11 @@ export default class FullProblem extends React.Component {
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
-        <div id="tutorialProblemButtonDiv">
+        {/*<div id="tutorialProblemButtonDiv">
           <img src={require('../../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
-        </div>
+        </div>*/}
         
-        <TutorialProblemPage />
+        <TutorialProjectContent />
         </ReactCSSTransitionGroup>
       </div>
 

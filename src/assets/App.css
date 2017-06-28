@@ -92,6 +92,9 @@
     ol, ul {
       list-style: none outside none;
     }
+    #blue {
+      color: #00dcff !important;
+    }
 
 
 /*End Global*/
@@ -366,6 +369,9 @@
 #introProse {
   /*margin: 0 auto !important;
   padding: 0 !important;*/
+}
+#projectsTitleProfile, #proposalsTitleProfile {
+  border-top-width: 1px !important;
 }
 }
 
@@ -3694,6 +3700,81 @@ input#submitNewVersion:hover {
   letter-spacing: 4px;
   margin-top: 2%;
 }*/
+
+#introPrompt {
+  color: #dddddd;
+  font-size: 180%;
+  cursor: default;
+  font-size: 200%;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+#introBanner {
+  margin: 2% 20% 1% 20%;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background-color: rgba(0,220,255, 0.05);
+}
+#introProse {
+  letter-spacing: 2px;
+  line-height: 150%;
+  padding: 10px;
+  font-size: 140%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*background-color: rgba(0,220,255, 0.05);*/
+}
+#tutorialContent {
+  width:80%;
+  border: 1px solid #00dcff;
+  border-width: 0px 1px;
+  margin: 0 auto;
+  margin-bottom: 8%;
+  margin-top: 4%;
+}
+#introSummary {
+  color: #00dcff;
+  text-align: center !important;
+  line-height: 250%;
+  font-size: 120%;
+}
+#tutorialProseDescriptions {
+  text-align: left !important;
+  /*margin-left: 10%;
+  margin-right: 20%;*/
+  letter-spacing: 1px;
+  color: #dddddd;
+}
+#introEnterButton {
+  color: #00dcff;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 150%;
+  border: 1px solid #00dcff;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+  padding: 5px;
+  letter-spacing: 4px;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0);
+  transform: scale(1);
+  transition: all 0.5s ease 0s;
+}
+#introEnterButton:hover {
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+  background-color: rgba(0,220,255,0.05);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/*End of new tutorial css, everything beneath is old*/
+
 #tutorialIntroButton {
   padding: 3px;
   vertical-align: middle;
@@ -3706,8 +3787,10 @@ input#submitNewVersion:hover {
   text-align: center;
   width: 100%;
   margin-bottom: 5px;
+  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  transition: all 0.5s ease 0s;
 
-  display: none;
+  /*display: none;*/
 }
 
 #tutorialProblemButtonDiv:hover, #tutorialWelcomeButtonDiv:hover,
@@ -3825,7 +3908,7 @@ input#submitNewVersion:hover {
   border: 1px solid #00ffdc;
   /*width: 30%;*/
   margin-bottom: 3%;
-  margin-top: 2%;
+  margin-top: 6%;
   font-size: 140%;
   letter-spacing: 8px;
   background-color: rgba(0,255,220,0.05)
