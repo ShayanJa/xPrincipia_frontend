@@ -20,8 +20,8 @@ if (problem.Title === 'Interstellar Civilization') {
 
       return (
       
-        <li  id="welcomeProblemsUnit">
-            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li  key={problem.ID} id="welcomeProblemsUnit">
+            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
@@ -36,8 +36,8 @@ if (problem.Title === 'Interstellar Civilization') {
 
 } else if (problem.Title === 'Evolving Humanity') {
       return (
-        <li  id="welcomeProblemsUnit">
-          <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li  key={problem.ID} id="welcomeProblemsUnit">
+          <Link  to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
             <div id="welcomeProblemsHeaderInvisible">
                 <div id="welcomeProblemsTitle">
                     {problem.Title}
@@ -50,8 +50,8 @@ if (problem.Title === 'Interstellar Civilization') {
       );
 } else if (problem.Title === 'Theoretical Knowledge') {
       return (
-        <li  id="welcomeProblemsUnit">
-            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li key={problem.ID} id="welcomeProblemsUnit">
+            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
@@ -64,8 +64,8 @@ if (problem.Title === 'Interstellar Civilization') {
       );
 } else if (problem.Title === 'Technology Development') {
       return (
-        <li  id="welcomeProblemsUnit">
-            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li key={problem.ID} id="welcomeProblemsUnit">
+            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
                 <div id="welcomeProblemsHeaderInvisible">
                     <div id="welcomeProblemsTitle">
                         {problem.Title}
@@ -78,8 +78,8 @@ if (problem.Title === 'Interstellar Civilization') {
       );
 } else 
       return (
-        <li  id="welcomeUserProblemsUnit">
-            <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <li key={problem.ID} id="welcomeUserProblemsUnit">
+            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
                 <div id="welcomeUserProblemsHeader">
                     <div id="welcomeUserProblemsTitle">
                         {problem.Title}
