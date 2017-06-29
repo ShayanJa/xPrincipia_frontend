@@ -12,48 +12,25 @@ export default class LearnResourcesDeleteForm extends React.Component {
     resource: '',
   }
 
-    this.postResource = this.postResource.bind(this);
+    this.deleteResource = this.deleteResource.bind(this);
   };
 
-postResource() {
-  //Read field items into component state
-  this.state.resource = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-  if(this.props.solutionID){
-    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
-    type:'1',
-    typeID: this.props.solutionID,
-    username: cookie.load('userName'),
-    description : this.state.resource,
-  })
-    .then(function (result) {
-      document.location = window.location.pathname 
-    })
-    .catch(function (error) {
-      alert("I'm sorry there was a problem with your request")
-      });
-    } 
-
-    //else post to problem
-    //probID will be used
-    else {
-      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.resource,
-    })
+deleteResource() {
+//Delete question
+      var self = this
+      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/delete?id='+this.props.params.resourceID, {
+        params: {
+          id: this.props.params.resourceID,
+          username: cookie.load('userName')
+        }
+      })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/problem/'+ self.props.params.probID + '/learn/resources'
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
       });
     }
-
-  }
   
 
 
@@ -66,7 +43,7 @@ postResource() {
                     <legend>Delete Resource</legend>
                          <div>Are you sure you would like to delete this resource?</div>
                          <br />
-                         <div onClick={this.postResource} id="deleteButton">Delete</div>
+                         <div onClick={this.deleteResource} id="deleteButton">Delete</div>
                          <Link to='/problem/${resource.TypeID}/resources'>
                             <div id="returnButton">Return</div>
                          </Link>
