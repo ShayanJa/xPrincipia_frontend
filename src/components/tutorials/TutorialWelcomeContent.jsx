@@ -25,11 +25,11 @@ export default class TutorialWelcomeContent extends React.Component {
                  Contribute to scientific progress
               </div>*/}
               <div id="tutorialProseDescriptions">
-                 Here it is your task to divide <span id="blue">four of the largest 
+                 Here it is your task to <span id="blue"> divide four of the largest 
                  cutting edge projects of humanity</span> into sub projects or create your own project. 
                  <br />
                  <br />
-                 Vote to<span id="blue"> determine the structure</span> of each overall project. 
+                 Vote to<span id="blue"> determine the rank</span> of each sub project. 
                  <br />
                  <br />
                  You may then <span id="blue">submit proposals towards completing the project </span>

@@ -44,7 +44,7 @@ postFreeForm() {
                     <legend>FreeForm Discussion</legend>
                          <textarea name="questionText" required="required" id="freeFormTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Ask" onClick={this.postFreeForm} id="askQuestion"/>
+                         <input type="button" value="Add" onClick={this.postFreeForm} id="askQuestion"/>
                 </fieldset>
             </form>
       </div>

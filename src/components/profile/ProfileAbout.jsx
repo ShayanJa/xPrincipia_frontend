@@ -12,7 +12,7 @@ export default class TutorialProblemPage extends React.Component {
                  Contribute to scientific progress
               </div>*/}
               <div id="aboutProseDescriptions">
-                 XPrincipia is a website allowing everyone to contribute to scientific progress.
+                 XPrincipia is a website that <span id="blue">allows everyone to contribute to scientific progress. </span>
                  <br />
                  <br />
                  <span id="aboutBlue">
@@ -20,11 +20,11 @@ export default class TutorialProblemPage extends React.Component {
                  </span>
                  <br />
                  <div id="aboutList">
-                 1. Complete major projects for humanity's future
+                 <span id="blue">1. </span>Complete major projects for humanity's future
                  <br />
-                 2. Determine the best proposals towards their achievement 
+                 <span id="blue">2. </span>Determine the best proposals towards their achievement 
                  <br />
-                 3. Learn deeply about the subjects required
+                 <span id="blue">3. </span>Learn deeply about the subjects required
                  </div>
               </div>
               {/*<div id="introSummary">
