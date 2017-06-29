@@ -33,15 +33,13 @@ export default class LearnResourcesEditForm extends React.Component {
   }
 
 updateResource() {
-  //Read field items into component state
   this.state.resource = document.getElementById('questionEditTextArea').value
-  console.log(this.state.resource)
-  var self = this
-  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/update', {
+
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/update?id='+this.props.params.resourceID, {
       type:'0',
-      typeID: self.props.probID,
+      typeID: this.props.probID,
       username: cookie.load('userName'),
-      description : self.state.resource,
+      description : this.state.resource,
     })
       .then(function (result) {
         document.location = window.location.pathname 

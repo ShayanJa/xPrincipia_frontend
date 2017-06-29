@@ -12,17 +12,17 @@ export default class LearnContentEditForm extends React.Component {
     learnItem: '',
   }
 
-    this.postLearnItem = this.postLearnItem.bind(this);
+    this.updateLearnItem = this.updateLearnItem.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/ID?id='+this.props.params.learnItemID).then(function (response) {
           self.setState({
-              learnItems: response.data
+              learnItem: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.learnItem.description;
+          document.getElementById('questionEditTextArea').value = self.state.learnItem.Description;
 
     })
     .catch(function (error) {
@@ -32,15 +32,16 @@ export default class LearnContentEditForm extends React.Component {
     });   
   }
 
-postLearnItem() {
+updateLearnItem() {
   //Read field items into component state
-  this.state.learnItem = document.getElementById('questionTextArea').value
-
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/create', {
+  this.state.learnItem = document.getElementById('questionEditTextArea').value
+  console.log(this.state.learnItem)
+  var self = this
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/update?id='+this.props.params.learnItemID, {
       type:'0',
-      typeID: this.props.probID,
+      typeID: self.props.probID,
       username: cookie.load('userName'),
-      description : this.state.learnItem,
+      description : self.state.learnItem,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -63,7 +64,7 @@ postLearnItem() {
                     <legend id="redLegend">Edit Learn Content</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postLearnItem} id="editButton">Edit</div>
+                         <div onClick={this.updateLearnItem} id="editButton">Edit</div>
                          <Link to='/problem/${learnItem.TypeID}/learnItems'>
                           <div id="returnButton">Return</div>
                          </Link>
