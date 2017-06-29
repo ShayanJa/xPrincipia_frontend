@@ -28,7 +28,7 @@ export default class TutorialProfileContent extends React.Component {
                  Here the <span id="blue">projects and proposals</span> you have <span id="blue">voted on or created</span> are displayed.
                  <br />
                  <br />
-                 You are also able to provide feedback of how 
+                 Provide feedback of how 
                  <span id="blue"> you think XPrincipia should be improved.</span>
                  <br />
                  <br />
