@@ -18,6 +18,7 @@ export default class QuestionDeleteForm extends React.Component {
 deleteQuestion() {
   
 //Delete question
+      var self = this
       axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/delete?id='+this.props.params.questID, {
         params: {
           id: this.props.params.questID,
@@ -25,7 +26,7 @@ deleteQuestion() {
         }
       })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/problem/'+ self.props.params.probID + '/questions'
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
@@ -39,8 +40,8 @@ deleteQuestion() {
                     <legend>Delete Question</legend>
                          <div>Are you sure you would like to delete this question?</div>
                          <br />
-                         <div onClick={this.deleteQuestion} id="deleteButton">Delete</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
+                          <div onClick={this.deleteQuestion} id="deleteButton">Delete</div>
+                         <Link to={`/problem/${this.props.params.probID}/questions`}>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
