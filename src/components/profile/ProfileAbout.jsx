@@ -7,30 +7,42 @@ export default class TutorialProblemPage extends React.Component {
         <div id="profileAbout">
           <div id="profileAboutBanner">
               <div id="profileAboutTitle">XPrincipia</div>
-              <div id="profileAboutSummary">
-                 I. Break down and solve problems
-              </div>
-          </div>
-          <div id="profileAboutProse">
-                Problems are broken down into sub problem trees
+          <div id="introProse">
+              {/*<div id="introSummary">
+                 Contribute to scientific progress
+              </div>*/}
+              <div id="aboutProseDescriptions">
+                 XPrincipia is a website allowing everyone to contribute to scientific progress.
                  <br />
-                 At each level solutions are created
-              <div id="profileAboutSummary">
-                II. Discuss the problem: 
+                 <br />
+                 <span id="aboutBlue">
+                   Work together to:
+                 </span>
+                 <br />
+                 <div id="aboutList">
+                 1. Complete major projects for humanity's future
+                 <br />
+                 2. Determine the best proposals towards their achievement 
+                 <br />
+                 3. Learn deeply about the subjects required
+                 </div>
               </div>
-                Ask or answer questions
-                <br />
-                Suggest new ideas 
-                <br />
-                Engage in freeform discussion
-              <div id="profileAboutSummary">
-                III. Discuss the problem: 
+              {/*<div id="introSummary">
+                Win competitions
               </div>
+                  <div id="introProseDescriptions">
+                    Compete for best proposal on a featured project
+                    <br />
+                    Win prizes
+                    <br /> 
+                    <br />
+                  </div>*/}
           </div>
             <div id="profileAboutReturn">
                 info@xprincipia.com
             </div>
         </div>
+      </div>
       );
    }
 }

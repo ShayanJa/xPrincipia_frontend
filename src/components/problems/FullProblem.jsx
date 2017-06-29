@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
-import TutorialProblemPage from '../tutorials/TutorialProblemPage.jsx';
+import TutorialProjectContent from '../tutorials/TutorialProjectContent.jsx';
 
 
 export default class FullProblem extends React.Component {
@@ -92,6 +92,12 @@ export default class FullProblem extends React.Component {
           <Link to={`/problem/${this.state.parentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
+
+          {/*Used for mobile*/}
+          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" align="middle" alt="Back arrow, blue up arrow" />
+          </Link>
+
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
           </div>
@@ -110,8 +116,7 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div id="problemPercent">{this.state.problemInfo.Rank}</div> 
-              
+              <div id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
               
                     <div id="sidebarMenu">
 
@@ -134,6 +139,12 @@ export default class FullProblem extends React.Component {
                       </Link> */}
 
                     </div>
+                    {/*Used for mobile*/}
+                    <div id="createSPButtonBox2">
+                      <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                        <h1 id="createSPButton">Create a Sub Project</h1>
+                      </Link>
+                    </div>
               
             {/*</div>*/}
             {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
@@ -146,11 +157,11 @@ export default class FullProblem extends React.Component {
           {React.cloneElement(this.props.children, {probID: this.state.probID})}
         </div>
 
-        <div id="tutorialProblemButtonDiv">
+        {/*<div id="tutorialProblemButtonDiv">
           <img src={require('../../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
-        </div>
+        </div>*/}
         
-        <TutorialProblemPage />
+        <TutorialProjectContent />
         </ReactCSSTransitionGroup>
       </div>
 
