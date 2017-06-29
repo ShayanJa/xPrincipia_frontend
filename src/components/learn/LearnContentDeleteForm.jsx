@@ -12,48 +12,27 @@ export default class LearnContentDeleteForm extends React.Component {
     learnItem: '',
   }
 
-    this.postLearnItem = this.postLearnItem.bind(this);
+    this.deleteLearnItem = this.deleteLearnItem.bind(this);
   };
 
-postLearnItem() {
-  //Read field items into component state
-  this.state.learnItem = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-  if(this.props.solutionID){
-    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/create', {
-    type:'1',
-    typeID: this.props.solutionID,
-    username: cookie.load('userName'),
-    description : this.state.learnItem,
-  })
-    .then(function (result) {
-      document.location = window.location.pathname 
-    })
-    .catch(function (error) {
-      alert("I'm sorry there was a problem with your request")
-      });
-    } 
-
-    //else post to problem
-    //probID will be used
-    else {
-      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.learnItem,
-    })
+deleteLearnItem() {
+//Delete question
+      var self = this
+      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/delete?id='+this.props.params.resourceID, {
+        params: {
+          id: this.props.params.learnItemID,
+          username: cookie.load('userName')
+        }
+      })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/problem/'+ self.props.params.probID + '/learn/resources'
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
       });
     }
+  
 
-  }
   
 
 
@@ -66,7 +45,7 @@ postLearnItem() {
                     <legend>Delete Learn Content</legend>
                          <div>Are you sure you would like to delete this learning content?</div>
                          <br />
-                         <div onClick={this.postLearnItem} id="deleteButton">Delete</div>
+                         <div onClick={this.deleteLearnItem} id="deleteButton">Delete</div>
                          <Link to='/problem/${learnItem.TypeID}/learnItems'>
                             <div id="returnButton">Return</div>
                          </Link>
