@@ -7,7 +7,6 @@ import cookie from 'react-cookie';
 export default class LearnResourcesUnit1 extends React.Component {
     constructor(props){
         super(props);
-
         
         this.renderItem = this.renderItem.bind(this)
     };

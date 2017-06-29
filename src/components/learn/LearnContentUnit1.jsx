@@ -13,27 +13,27 @@ export default class LearnContentUnit1 extends React.Component {
     render() {
 		return (
             <div>
-                <ul> {this.props.items.map(this.renderItem)} </ul>
+                <ul> {this.props.learnItems.map(this.renderItem)} </ul>
                     
             </div>
 		);
 	}
     renderItem(learnItem) {
 
-//        function  submitVote() {
-//        axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
-//            Type: 3,
-//            TypeID: learnItem.ID,
-//            username : cookie.load("userName"),
+       function  submitVote() {
+       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+           Type: 3,
+           TypeID: learnItem.ID,
+           username : cookie.load("userName"),
            
-//         })
-//         .then(function (result) {
-//             document.location = window.location.pathname;
-//         })
-//         .catch(function (error) {
-//             alert("I'm sorry, you've already voted on a comment.");
-//         })
-//   }
+        })
+        .then(function (result) {
+            document.location = window.location.pathname;
+        })
+        .catch(function (error) {
+            alert("I'm sorry, you've already voted on a comment.");
+        })
+  }
 
        if (learnItem.Username === cookie.load('userName')) {
            return (
