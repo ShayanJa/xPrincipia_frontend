@@ -12,35 +12,36 @@ export default class LearnResourcesEditForm extends React.Component {
     resource: '',
   }
 
-    this.postResource = this.postResource.bind(this);
+    this.updateResource = this.updateResource.bind(this);
   };
 
   componentWillMount(){
-      var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+      var self = this; ///TODO Change Resouces to resources when backend Changes
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resouces/ID?id='+this.props.params.resourceID).then(function (response) {
           self.setState({
-              resources: response.data
+              resource: response.data
           })
-          
-          document.getElementById('questionEditTextArea').value = self.state.resource.description;
+        
+        document.getElementById('questionEditTextArea').value = self.state.resource.Description;
 
     })
     .catch(function (error) {
-        if(error.response.status === 401 || error.response.status === 403){
-            document.location = "/login"
-        }
+        // if(error.response.status === 401 || error.response.status === 403){
+        //     document.location = "/login"
+        // }
     });   
   }
 
-postResource() {
+updateResource() {
   //Read field items into component state
-  this.state.resource = document.getElementById('questionTextArea').value
-
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/create', {
+  this.state.resource = document.getElementById('questionEditTextArea').value
+  console.log(this.state.resource)
+  var self = this
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/update', {
       type:'0',
-      typeID: this.props.probID,
+      typeID: self.props.probID,
       username: cookie.load('userName'),
-      description : this.state.resource,
+      description : self.state.resource,
     })
       .then(function (result) {
         document.location = window.location.pathname 
@@ -63,8 +64,8 @@ postResource() {
                     <legend id="redLegend">Edit Resource</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postResource} id="editButton">Edit</div>
-                         <Link to='/problem/${resource.TypeID}/resources'>
+                         <div onClick={this.updateResource} id="editButton">Edit</div>
+                         <Link to={`/problem/${this.state.resource.TypeID}/resources`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
