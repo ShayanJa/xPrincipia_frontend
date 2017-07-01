@@ -95,6 +95,9 @@
     #blue {
       color: #00dcff !important;
     }
+    #nodisplay {
+      display: none;
+    }
 
 
 /*End Global*/
@@ -168,17 +171,10 @@
   #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
-    display: flex;
-    flex-direction: column;
-    /*border: 2px solid #00dcff;*/
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
     width: 30em !important;
     height: auto !important;
-    word-wrap: break-word; 
-    align-items: center; 
-    justify-content: center;
-    background-color: rgba(0,220,255,0.05);
     margin-bottom: 5% !important;
     background-size: cover !important;
   }
@@ -1835,14 +1831,6 @@
     #submitExplore {
     	display: none;
     }
-    #welcomeUnitsContainer {
-    	/*margin: 0% 5% 3% 5%;*/
-      /*margin: 0% 0% 3% 0%;*/
-    	padding: 2px;
-    }
-    #welcomeUnitsContainer ul li {
-      display: inline;
-    }
     #createWelcomeButtonBox {
       margin: 0% 18% 0% 18%;
     	border: 1px solid #dddddd;
@@ -1915,28 +1903,36 @@
       text-align:center;
       margin-bottom: 40px;
     }
-    #welcomeProblemsUnitList {
-      /*text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
+    #welcomeUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      width: 80%;
       margin: 0 auto;
-      text-align: center;*/
-
+    }
+    #welcomeUserUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      margin: 0 auto;
+    }
+    #welcomeProblemsUnitList {
       /*text-align: center;*/
       display: flex;
       /*align-items: center;*/
-      justify-content: center;
+      justify-content: space-between;
       width: 100%;
       margin: 0 auto;
       }
     #welcomeProblemsUnitList li {
-      display: inline-block;
-      /*display: inline;*/
-      margin-left: 5%;
-      margin-right: 5%;
+      /*display: block;*/
+      /*margin-left: 5%;
+      margin-right: 5%;*/
       list-style-type: none;
+    }
+    #welcomeProblemsUnit {
+      /*margin-left: 30px;
+      margin-right: 30px;*/
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
@@ -1990,7 +1986,7 @@
       transition: all 0.5s ease 0s;
       transform: scale(1);
 
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -2003,6 +1999,8 @@
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       transition: all 0.5s ease 0s;
       transform: scale(1);
+
+      /*margin-right: 10% !important;*/
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
@@ -2030,13 +2028,13 @@
       font-size: 130%;
       transition: all 0.5s ease 0s;*/
 
-        margin: 0 auto;
-  padding: 5px 10px 5px 10px;
-  font-size: 130%;
-  color: #dddddd;
-  word-wrap: break-word; 
-  text-align: center;
-  transition: all 0.5s ease 0s;
+      margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      color: #dddddd;
+      word-wrap: break-word; 
+      text-align: center;
+      transition: all 0.5s ease 0s;
   }
   #welcomeProblemsHeaderInvisible {
     display: none;

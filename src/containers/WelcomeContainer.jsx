@@ -76,7 +76,7 @@ export default class WelcomeContainer extends React.Component {
                  {/*<input type="submit" value="Go" id="submitExplore" />*/}
             </form>
          </div>
-          <div id="welcomeUnitsContainer">
+          <div id="welcomeUserUnitsContainer">
               <WelcomeUserUnit problems={this.state.userproblems} />
           </div>
 
