@@ -57,7 +57,8 @@ constructor(props){
                                 <input type="radio" id="option-three" />
                                     <label>Hard</label>
                              </div>*/}
-                            <textarea name="suggestionText" required="required" id="learnContentTextArea" autoFocus ></textarea>
+                            <textarea name="suggestionText" required="required" id="learnContentTextArea" 
+                            placeholder="Create new learning content to help others more deelpy understand the project." autoFocus ></textarea>
                             <br />
                             <input type="button" value="Create" onClick={this.postLearnItem} id="addSuggestion"/>
                     </fieldset>

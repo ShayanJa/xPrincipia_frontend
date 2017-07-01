@@ -95,6 +95,9 @@
     #blue {
       color: #00dcff !important;
     }
+    #nodisplay {
+      display: none;
+    }
 
 
 /*End Global*/
@@ -160,7 +163,6 @@
   }
 /*Welcome*/
   #welcomeProblemsUnit {
-    display: inline-block;
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
@@ -169,17 +171,10 @@
   #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
-    display: flex;
-    flex-direction: column;
-    /*border: 2px solid #00dcff;*/
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
     width: 30em !important;
     height: auto !important;
-    word-wrap: break-word; 
-    align-items: center; 
-    justify-content: center;
-    background-color: rgba(0,220,255,0.05);
     margin-bottom: 5% !important;
     background-size: cover !important;
   }
@@ -191,13 +186,7 @@
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
   }
   #welcomeProblemsUnitList {
-    text-align: center;
-    display: flex;
-    align-items: center;
     flex-direction: column !important;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
   }
   #welcomeProblemsTitle {
     padding: 10px 15px 10px 15px !important;
@@ -698,6 +687,9 @@
       margin: 0 auto;
       margin-top: 1%;
     }
+    #solutionTitleFormLabel {
+      margin-top: 4%;
+    }
     #problemTitleFormLabel {
       margin-top: 0%;
     }
@@ -714,6 +706,9 @@
     #editTitleForm, #editSummaryForm, 
     #editDescriptionForm, #editReferencesForm {
       background-color: inherit; 
+    }
+    #solutionTitleForm {
+      font-family: 'Alegreya Sans SC';
     }
  
 
@@ -1019,7 +1014,7 @@
       }
     #exploreInput {
     	color: #dddddd;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	border: 1px solid #dddddd;
     	height: 35px;
     	width: 80%;
@@ -1836,14 +1831,6 @@
     #submitExplore {
     	display: none;
     }
-    #welcomeUnitsContainer {
-    	/*margin: 0% 5% 3% 5%;*/
-      /*margin: 0% 0% 3% 0%;*/
-    	padding: 2px;
-    }
-    #welcomeUnitsContainer ul li {
-      display: inline;
-    }
     #createWelcomeButtonBox {
       margin: 0% 18% 0% 18%;
     	border: 1px solid #dddddd;
@@ -1916,30 +1903,43 @@
       text-align:center;
       margin-bottom: 40px;
     }
+    #welcomeUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    #welcomeUserUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      margin: 0 auto;
+    }
     #welcomeProblemsUnitList {
-      text-align: center;
+      /*text-align: center;*/
       display: flex;
-      align-items: center;
+      /*align-items: center;*/
       justify-content: space-between;
       width: 100%;
       margin: 0 auto;
-      /*margin-top: 4%;*/
       }
     #welcomeProblemsUnitList li {
-      /*display: inline-block;*/
-      /*margin: 2%;*/
+      /*display: block;*/
+      /*margin-left: 5%;
+      margin-right: 5%;*/
+      list-style-type: none;
     }
     #welcomeProblemsUnit {
-      display: inline-block;
-      width: 14em;
-      margin: 0% 5% 0% 5%; 
+      /*margin-left: 30px;
+      margin-right: 30px;*/
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
     	cursor: pointer;
     }
     #welcomeProblemsHeader {
-      display: inline-flex;
+      /*display: flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1949,8 +1949,25 @@
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
+      background-color: rgba(0,220,255,0.05);*/
+
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 14em;
+      height: 14em;
+      word-wrap: break-word; 
+      /*align-items: center; */
+      /*justify-content: center;*/
       background-color: rgba(0,220,255,0.05);
-    }
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+      margin-left: 5%;
+      margin-right: 5%;
+  }
     #welcomeProblemsHeader:hover, 
     #welcomeProblemsHeader1:hover,
     #welcomeProblemsHeader2:hover,
@@ -1969,7 +1986,7 @@
       transition: all 0.5s ease 0s;
       transform: scale(1);
 
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1982,6 +1999,8 @@
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       transition: all 0.5s ease 0s;
       transform: scale(1);
+
+      /*margin-right: 10% !important;*/
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
@@ -2004,9 +2023,17 @@
       transform: scale(1.02);
     }
   #welcomeProblemsTitle {
+      /*margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      transition: all 0.5s ease 0s;*/
+
       margin: 0 auto;
       padding: 5px 10px 5px 10px;
       font-size: 130%;
+      color: #dddddd;
+      word-wrap: break-word; 
+      text-align: center;
       transition: all 0.5s ease 0s;
   }
   #welcomeProblemsHeaderInvisible {
@@ -3197,7 +3224,19 @@ label + input[type=radio] + label {
   border-radius: 10px;
   overflow: hidden;
 }
-
+#learnResourcesText {
+  font-family: 'Alegreya Sans SC';
+  margin-top: 5px;
+}
+a#learnResourcesLink {
+  text-decoration: underline;
+  color: rgba(255,255,255,1);
+  transition: all 1s ease 0s;
+  font-size: 120%;
+}
+a#learnResourcesLink:hover {
+  color: rgba(0,220,255,1);
+}
 /*End Learn SB*/
 
 

@@ -48,11 +48,11 @@ export default class SolutionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset>
-              <Link to={`/problem/${this.props.params.probID}/solutions`}>
+              {/*<Link to={`/problem/${this.props.params.probID}/solutions`}>
                 <div id="backSolutionArrowDiv">
                     <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
                 </div>
-              </Link>
+              </Link>*/}
               <label htmlFor="solutionTitle" id="solutionTitleFormLabel">Title<br />
                   <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionTitleForm" autoFocus/>
                 </label><br />
