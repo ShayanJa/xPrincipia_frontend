@@ -160,7 +160,6 @@
   }
 /*Welcome*/
   #welcomeProblemsUnit {
-    display: inline-block;
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
@@ -191,13 +190,7 @@
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
   }
   #welcomeProblemsUnitList {
-    text-align: center;
-    display: flex;
-    align-items: center;
     flex-direction: column !important;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
   }
   #welcomeProblemsTitle {
     padding: 10px 15px 10px 15px !important;
@@ -717,6 +710,9 @@
     #editTitleForm, #editSummaryForm, 
     #editDescriptionForm, #editReferencesForm {
       background-color: inherit; 
+    }
+    #solutionTitleForm {
+      font-family: 'Alegreya Sans SC';
     }
  
 
@@ -1920,26 +1916,34 @@
       margin-bottom: 40px;
     }
     #welcomeProblemsUnitList {
-      text-align: center;
+      /*text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;*/
+
+      /*text-align: center;*/
       display: flex;
       /*align-items: center;*/
       justify-content: center;
       width: 100%;
       margin: 0 auto;
-      /*margin-top: 4%;*/
       }
-    #welcomeProblemsUnit {
+    #welcomeProblemsUnitList li {
       display: inline-block;
-      width: 14em;
-      margin-left: 8.5%;
-      margin-right: 8.5%;
+      /*display: inline;*/
+      margin-left: 5%;
+      margin-right: 5%;
+      list-style-type: none;
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
     	cursor: pointer;
     }
     #welcomeProblemsHeader {
-      display: inline-flex;
+      /*display: flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1949,8 +1953,25 @@
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
+      background-color: rgba(0,220,255,0.05);*/
+
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 14em;
+      height: 14em;
+      word-wrap: break-word; 
+      /*align-items: center; */
+      /*justify-content: center;*/
       background-color: rgba(0,220,255,0.05);
-    }
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+      margin-left: 5%;
+      margin-right: 5%;
+  }
     #welcomeProblemsHeader:hover, 
     #welcomeProblemsHeader1:hover,
     #welcomeProblemsHeader2:hover,
@@ -2004,10 +2025,18 @@
       transform: scale(1.02);
     }
   #welcomeProblemsTitle {
-      margin: 0 auto;
+      /*margin: 0 auto;
       padding: 5px 10px 5px 10px;
       font-size: 130%;
-      transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s;*/
+
+        margin: 0 auto;
+  padding: 5px 10px 5px 10px;
+  font-size: 130%;
+  color: #dddddd;
+  word-wrap: break-word; 
+  text-align: center;
+  transition: all 0.5s ease 0s;
   }
   #welcomeProblemsHeaderInvisible {
     display: none;
