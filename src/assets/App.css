@@ -698,6 +698,9 @@
       margin: 0 auto;
       margin-top: 1%;
     }
+    #solutionTitleFormLabel {
+      margin-top: 4%;
+    }
     #problemTitleFormLabel {
       margin-top: 0%;
     }
@@ -1920,19 +1923,16 @@
       text-align: center;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
       margin: 0 auto;
       /*margin-top: 4%;*/
       }
-    #welcomeProblemsUnitList li {
-      /*display: inline-block;*/
-      /*margin: 2%;*/
-    }
     #welcomeProblemsUnit {
       display: inline-block;
       width: 14em;
-      margin: 0% 5% 0% 5%; 
+      margin-left: 8.5%;
+      margin-right: 8.5%;
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
@@ -3197,7 +3197,19 @@ label + input[type=radio] + label {
   border-radius: 10px;
   overflow: hidden;
 }
-
+#learnResourcesText {
+  font-family: 'Alegreya Sans SC';
+  margin-top: 5px;
+}
+a#learnResourcesLink {
+  text-decoration: underline;
+  color: rgba(255,255,255,1);
+  transition: all 1s ease 0s;
+  font-size: 120%;
+}
+a#learnResourcesLink:hover {
+  color: rgba(0,220,255,1);
+}
 /*End Learn SB*/
 
 

@@ -115,9 +115,9 @@ export default class ProblemLeftSB extends React.Component {
           </div>
         </div>
 
-          <div id="tutorialSolutionButtonDiv">
+          {/*<div id="tutorialSolutionButtonDiv">
             <img src={require('../../assets/tutorial.svg')} id="tutorialSolutionButton" width="50" height="50" alt="Back arrow, blue up arrow" />
-          </div>
+          </div>*/}
           
           <TutorialSolutionPage />
           </ReactCSSTransitionGroup>

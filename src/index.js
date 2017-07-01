@@ -159,9 +159,9 @@ ReactDOM.render(
         <Route path='/problem/:probID/sb' component={ProblemLeftSB}>
           <IndexRoute component={ProblemSolutionsMenu}></IndexRoute>
           <Route path='/problem/:probID/solutions' component={ProblemSolutionsMenu}>
-            <IndexRoute component={ProblemTopSolutions}></IndexRoute>
-            <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
+            <IndexRoute component={SolutionForm}></IndexRoute>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
+            <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
             <Route path='/fullsolution/:probID/:solutionID/container' component={FullSolutionContainer}>
               <IndexRoute component={FullSolution}></IndexRoute>
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
