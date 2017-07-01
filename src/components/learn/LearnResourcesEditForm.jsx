@@ -63,7 +63,7 @@ updateResource() {
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
                          <div onClick={this.updateResource} id="editButton">Edit</div>
-                         <Link to={`/problem/${this.state.resource.TypeID}/resources`}>
+                         <Link to={`/problem/${this.state.resource.TypeID}/learn/resources`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

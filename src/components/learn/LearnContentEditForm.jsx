@@ -39,7 +39,7 @@ updateLearnItem() {
   var self = this
   axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/update?id='+this.props.params.learnItemID, {
       type:'0',
-      typeID: self.props.probID,
+      typeID: this.props.params.probID,
       username: cookie.load('userName'),
       description : self.state.learnItem,
     })
@@ -65,7 +65,7 @@ updateLearnItem() {
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
                          <div onClick={this.updateLearnItem} id="editButton">Edit</div>
-                         <Link to='/problem/${learnItem.TypeID}/learnItems'>
+                          <Link to={`/problem/${this.state.learnItem.TypeID}/learn/content`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
