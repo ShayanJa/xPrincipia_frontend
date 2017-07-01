@@ -17,7 +17,7 @@ export default class FreeFormEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/ID?id='+this.props.params.freeID).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/ID?id='+this.props.params.freeFormID).then(function (response) {
           self.setState({
               freeForm: response.data
           })
@@ -36,7 +36,7 @@ updateFreeForm() {
   //Read field items into component state
   this.state.freeForm = document.getElementById('freeFormEditTextArea').value
 
-  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/update?id='+this.props.params.freeID, {
+  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/update?id='+this.props.params.freeFormID, {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

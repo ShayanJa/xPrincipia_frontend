@@ -18,14 +18,14 @@ export default class LearnContentDeleteForm extends React.Component {
 deleteLearnItem() {
 //Delete question
       var self = this
-      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/delete?id='+this.props.params.resourceID, {
+      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/delete?', {
         params: {
           id: this.props.params.learnItemID,
           username: cookie.load('userName')
         }
       })
       .then(function (result) {
-        document.location = '/problem/'+ self.props.params.probID + '/learn/resources'
+        document.location = '/problem/'+ self.props.params.probID + '/learn/content'
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")

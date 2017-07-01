@@ -21,7 +21,7 @@ export default class QuestionEditForm extends React.Component {
           self.setState({
               question: response.data
           })
-          console.log(self.state.question.Description)
+          
           document.getElementById('questionEditTextArea').value = self.state.question.Description;
 
     })

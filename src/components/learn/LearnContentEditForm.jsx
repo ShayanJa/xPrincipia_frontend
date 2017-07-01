@@ -44,7 +44,7 @@ updateLearnItem() {
       description : self.state.learnItem,
     })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/problem/'+ self.props.params.probID + '/learn/content'
       })
       .catch(function (error) {
         alert("I'm sorry there was a problem with your request")
