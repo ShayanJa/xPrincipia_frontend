@@ -25,22 +25,23 @@ export default class SolutionForm extends React.Component {
     this.state.summary = document.getElementById('solutionSummaryForm').value
     this.state.description = document.getElementById('solutionDescriptionForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
-
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
-      username: cookie.load('userName'),
-      problemID:this.props.params.probID,
-      title : this.state.title,
-      summary : this.state.summary,
-      description : this.state.description,
-      references: this.state.references
-    })
-    .then(function (result) {
-      document.location = window.location.pathname 
-    })
-    .catch(function (error) {
-        alert("There was an error.")
-      });
-  
+    
+    var self = this
+    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
+        username: cookie.load('userName'),
+        problemID:this.props.params.probID,
+        title : this.state.title,
+        summary : this.state.summary,
+        description : this.state.description,
+        references: this.state.references
+      })
+      .then(function (result) {
+        document.location = '/problem/' + self.props.params.probID + '/solutions/top'
+      })
+      .catch(function (error) {
+          alert("There was an error.")
+        });
+    
   }
 
   render() {
