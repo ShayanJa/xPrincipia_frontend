@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import axios from 'axios';
+import cookie from 'react-cookie';
 
 export default class RegisterUnit extends React.Component {
 
@@ -11,61 +12,57 @@ constructor(){
     email: '',
     password: '',
     fullname: '',
-    username: ''
+    username: '',
+    userToken: ''
   }
 
   this.postRegister = this.postRegister.bind(this);
 };
 
-postRegister() {
-  //Read field items into component state
-  this.state.email = document.getElementById('registerEmail').value
-  this.state.password = document.getElementById('registerPassword').value
-  this.state.fullname = document.getElementById('registerFullName').value
-  this.state.username = document.getElementById('registerUserName').value
+  componentWillMount() {
+    this.state =  { userToken: cookie.load('userToken') };
+  }
 
-// // Ajax post register request
-// $.ajax({
-//   crossDomain: 'true',
-//   type: 'POST',
-//   headers: {'Content-Type' : 'application/json'},
-//   url: 'http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login/register',
-//   processData: false,
-//   data: JSON.stringify({
-//     'email' : this.state.email,
-//     'username' : this.state.username,
-//     'password' : this.state.password,
-//     // 'fullname' : this.state.fullname,
-    
-//   }),
-//   success: function(result){
-//     console.log(result)
-//     document.location('/welcome')
-    
-//     alert('Welcome to XPrincipia.')
-//   },
-//   error: function(result){
-//     console.log(result)
+  postRegister() {
+    //Read field items into component state
+    this.state.email = document.getElementById('registerEmail').value
+    this.state.password = document.getElementById('registerPassword').value
+    this.state.fullname = document.getElementById('registerFullName').value
+    this.state.username = document.getElementById('registerUserName').value
 
-//     alert('Please try again.')
-//   },
-
-// });
-axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/register', {
-      fullName: this.state.fullname,
-      email: this.state.email,
-      username : this.state.username,
-      password: this.state.password
+    var self = this;
+    return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/register', {
+        fullName: this.state.fullname,
+        email: this.state.email,
+        username : this.state.username,
+        password: this.state.password
+      })
+      .then(function (result) {
+        return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
+          username : self.state.username,
+          password: self.state.password
+        })
+        .then(function (result) {
+          self.setState({
+            userToken: result.data.token
+          })
+          cookie.save('userToken', self.state.userToken );
+          cookie.save('userName', self.state.username)
+          
+          // Store token/Username in db table
+          return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
+            username : self.state.username,
+            token : "Bearer " + self.state.userToken
+          }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){
+            document.location = "/welcome";
+          })
+      
+      })
+      .catch(function (error) {
+        alert('Please try again.')
+      });
     })
-    .then(function (result) {
-      // {window.location.href='/intro'}
-     
-    })
-    .catch(function (error) {
-      console.log(error.response.data)
-      alert( error.response.data)
-    });
-}
+  }
 
   render() {
       return (
