@@ -49,7 +49,7 @@ export default class FullSolutionContent extends React.Component {
    var self = this
     axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/delete?id='+this.props.params.solutionID, {
         params: {
-          id: this.props.params.questID,
+          id: this.props.params.solutionID,
           username: cookie.load('userName')
         }
       })

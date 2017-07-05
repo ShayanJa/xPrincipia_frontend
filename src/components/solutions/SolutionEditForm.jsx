@@ -58,7 +58,7 @@ export default class EditSolutionForm extends React.Component {
       references: self.state.references
     })
     .then(function (result) {
-      document.location = window.location.pathname 
+      document.location = '/problem/' + self.props.params.probID + '/solutions/top'
     })
     .catch(function (error) {
         alert("I'm sorry, there was a problem with your request.")
