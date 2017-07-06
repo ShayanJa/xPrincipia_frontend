@@ -41,7 +41,6 @@ this.state.con = document.getElementById('conTextArea').value
                 <fieldset>
                     <legend>Cons</legend>
                          <textarea name="suggestionText" required="required" id="conTextArea" autoFocus ></textarea>
-                         <br />
                          <input type="button" value="Add" onClick={this.postCon} id="addProsCons"/>
                 </fieldset>
             </form>

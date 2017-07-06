@@ -76,8 +76,7 @@ export default class FullSolutionContent extends React.Component {
         })
   }
    render() {
-    //    if (solutionInfo.Username === cookie.load('userName')) {
-       if (1) {
+       if (this.state.solutionInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (
       <div> 
             <div id="voteVersionsMenu">
@@ -114,17 +113,17 @@ export default class FullSolutionContent extends React.Component {
       <div> 
             <div id="voteVersionsMenu">
                     <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
-                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
+                    {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
                         <div id="versionsButton">
                                 Versions
                         </div>
-                    </Link>
+                    </Link>*/}
               </div>
               <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
               
-              <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
+              {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
                 <img src={require('../../assets/flag.svg')} id="flagSolutionButton" width="20" height="20" alt="Edit Button" />
-              </Link>
+              </Link>*/}
 
 
               <div id="prosConsMenu">

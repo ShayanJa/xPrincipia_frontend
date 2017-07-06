@@ -3432,8 +3432,9 @@ a#learnResourcesLink:hover {
   background-color: rgba(0,255,220,0);
   border: 1px solid #00ffdc;
   border-radius: 2px;
-  margin-top: 5px;
+  margin-top: 2%;
   transition: all 0.5s ease 0s;
+  width: 40%;
 }
 #addProsCons:hover {
   color: #0f131c;
