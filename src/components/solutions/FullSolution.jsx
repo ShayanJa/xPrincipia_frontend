@@ -82,11 +82,12 @@ export default class FullSolution extends React.Component {
         <div id="fullSolution">
             <div id="solutionIntro">
                 <Link to={`/problem/${this.props.params.probID}/solutions`}>
-                <div id="backSolutionArrowDiv">
-                    <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
-                </div>
+                    <div id="backSolutionArrowDiv">
+                        <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                    </div>
                 </Link>
                 <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>
+                <div id="proposalCreator">{this.state.solutionInfo.OriginalPosterUsername}</div>
                 {/*<div id="currentVersion">v.112</div>*/}
                 <p id="solutionSummary">
                 {this.state.solutionInfo.Summary}

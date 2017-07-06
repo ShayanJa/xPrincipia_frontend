@@ -49,6 +49,7 @@ import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
 import ProfileAbout from './components/profile/ProfileAbout.jsx';
 import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
+import ProfileResume from './components/profile/ProfileResume.jsx';
 import ProsDeleteForm from './components/proscons/ProsDeleteForm.jsx';
 import ProsEditForm from './components/proscons/ProsEditForm.jsx';
 import ProsFlagForm from './components/proscons/ProsFlagForm.jsx';
@@ -133,6 +134,7 @@ ReactDOM.render(
     <Route path='/profile/container' component={ProfileContainer}>
       <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
       <Route path='/profile' component={ProfileProblemsSolutions}></Route>
+      <Route path='/profile/resume' component={ProfileResume}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
       <Route path='/profile/about' component={ProfileAbout}></Route>
@@ -159,9 +161,9 @@ ReactDOM.render(
         <Route path='/problem/:probID/sb' component={ProblemLeftSB}>
           <IndexRoute component={ProblemSolutionsMenu}></IndexRoute>
           <Route path='/problem/:probID/solutions' component={ProblemSolutionsMenu}>
-            <IndexRoute component={ProblemTopSolutions}></IndexRoute>
-            <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
+            <IndexRoute component={SolutionForm}></IndexRoute>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
+            <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
             <Route path='/fullsolution/:probID/:solutionID/container' component={FullSolutionContainer}>
               <IndexRoute component={FullSolution}></IndexRoute>
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>

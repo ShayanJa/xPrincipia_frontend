@@ -95,6 +95,9 @@
     #blue {
       color: #00dcff !important;
     }
+    #nodisplay {
+      display: none;
+    }
 
 
 /*End Global*/
@@ -160,7 +163,6 @@
   }
 /*Welcome*/
   #welcomeProblemsUnit {
-    display: inline-block;
     width: 100% !important;
     margin: 0% 5% 0% 5% !important;
   }
@@ -169,17 +171,10 @@
   #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
-    display: flex;
-    flex-direction: column;
-    /*border: 2px solid #00dcff;*/
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
     width: 30em !important;
     height: auto !important;
-    word-wrap: break-word; 
-    align-items: center; 
-    justify-content: center;
-    background-color: rgba(0,220,255,0.05);
     margin-bottom: 5% !important;
     background-size: cover !important;
   }
@@ -191,13 +186,7 @@
     box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
   }
   #welcomeProblemsUnitList {
-    text-align: center;
-    display: flex;
-    align-items: center;
     flex-direction: column !important;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
   }
   #welcomeProblemsTitle {
     padding: 10px 15px 10px 15px !important;
@@ -355,7 +344,9 @@
 #prosButton, #consButton {
   width: 10em !important;
 }
-
+#followProblemLeftSB {
+  width: 60% !important;
+}
 /*Profile*/
 #profileBox {
   border-top-width: 0px !important;
@@ -498,7 +489,7 @@
     #questionAnswers {
       flex: 1 1 auto;
       color: #00dcff;
-      background-color: #0f131c;
+      background-color: inherit;
       border: 1px solid #00dcff;
       border-radius: 2px;
       cursor: pointer;
@@ -511,12 +502,12 @@
     }
     #questionAnswers:active {
       color: #00dcff;
-      background-color: #0f131c;
+      background-color: inherit;
     }
     #questionVote {
       flex: 1 1 auto;
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
       border: 1px solid #00ffdc;
       border-radius: 2px;
       cursor: pointer;
@@ -528,7 +519,7 @@
     }
     #questionVote:active {
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
     }
     #commentSBButton, #commentSBButtonUser,
     #deleteSBButton, #editSBButton, 
@@ -589,11 +580,11 @@
     }
     #flagSBButton:active {
       color: #ff7f7f;
-      background-color: #0f131c;
+      background-color: inherit;
     }    
     #editSBButton:active, #editSBButtonAnswer:active {
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
     }
 
     #answerProblem fieldset {
@@ -628,7 +619,7 @@
     #answerVote {
       flex: 1 1 auto;
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
       border: 1px solid #00ffdc;
       border-radius: 2px;
       cursor: pointer;
@@ -641,7 +632,7 @@
     }
     #answerVote:active {
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
     }
 
 /*End Answer*/
@@ -698,6 +689,9 @@
       margin: 0 auto;
       margin-top: 1%;
     }
+    #solutionTitleFormLabel {
+      margin-top: 4%;
+    }
     #problemTitleFormLabel {
       margin-top: 0%;
     }
@@ -714,6 +708,9 @@
     #editTitleForm, #editSummaryForm, 
     #editDescriptionForm, #editReferencesForm {
       background-color: inherit; 
+    }
+    #solutionTitleForm {
+      font-family: 'Alegreya Sans SC';
     }
  
 
@@ -850,7 +847,7 @@
     	width: 30%;
     	margin-left: 35%;
     	padding-left: 1%;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 120%;
@@ -900,7 +897,7 @@
 /*EditSolution*/
 
 #editForm {
-  background-color: #0f131c;
+  background-color: inherit;
   color: #00dcff;
   width: 50%;
   height: auto;
@@ -1019,7 +1016,7 @@
       }
     #exploreInput {
     	color: #dddddd;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	border: 1px solid #dddddd;
     	height: 35px;
     	width: 80%;
@@ -1031,7 +1028,7 @@
     }
     #exploreHeaderInput {
       color: #dddddd;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	border: 1px solid #dddddd;
     	height: 35px;
     	width: 200px;
@@ -1081,6 +1078,7 @@
       border: 1px solid #00dcff;
     	border-radius: 50%;
       margin: 0 auto;
+      margin-top: 1%;
       /*vertical-align: middle;*/
       /*float: right;*/
     }
@@ -1309,7 +1307,7 @@
       border: 1px solid #00dcff;
       width: 85%;
       margin-top: 30px;
-
+      /*background-color: rgba(0,220,255,0.05);*/
     }
     #profileLeft, #profileRight {
     	color: #dddddd;
@@ -1439,7 +1437,18 @@
     	letter-spacing: 4px;
       background-color: rgba(0,220,255,0.05);
     }
-    #projectsTitleProfile {
+    #projectsTitleResume, #proposalsTitleResume {
+      flex: 1 1 auto;
+    	color: #00dcff;
+    	border: 1px solid #00dcff;
+    	border-width: 0px 0px 1px 0px;
+    	font-size: 120%;
+    	padding: 5px 5px 5px 10px;
+    	margin: 0px 0px 0px 0px;
+    	letter-spacing: 4px;
+      background-color: rgba(0,220,255,0.05);
+    }
+    #projectsTitleProfile, #projectsTitleResume {
       border-width: 0px 1px 1px 0px;
       margin: 0px 0px 0px 0px;
     }
@@ -1451,7 +1460,7 @@
     	font-size: 90%;
     	border: 1px solid #00ffdc;
     	border-width: 0px 1px 1px 1px;
-    	border-radius: 3px 3px 0px 0px;
+    	border-radius: 0px 0px 3px 3px;
     	text-align: center;
     	text-decoration: none;
     	margin: 0px 10px 0px 10px;
@@ -1461,13 +1470,18 @@
     #createdProblemsButton, #createdSolutionsButton {
       border-top: 0px;
       margin-top: 0px;
-      border-radius: 0px 0px 3px 3px;
+      border-radius: 0px 0px 0px 0px;
     }
     #followedProblemsButton:hover, #createdProblemsButton:hover,
     #votedSolutionsButton:hover, #createdSolutionsButton:hover,
     #followedProblemsButton:active, #createdProblemsButton:active,
     #votedSolutionsButton:active, #createdSolutionsButton:active {
     	background-color: rgba(0,255,220,1);
+    	color: #0f131c;
+    	cursor: pointer;
+    }
+    #projectsTitleResume:hover, #proposalsTitleResume:hover {
+      background-color: rgba(0,220,255,1);
     	color: #0f131c;
     	cursor: pointer;
     }
@@ -1489,13 +1503,20 @@
       display: block;
       margin: 0px;
       padding: 2px 5px 2px 5px;
-      font-size: 120%;
+      font-size: 140%;
       color: #00dcff !important;
-      line-height: 120%;
+      line-height: 150%;
       height: auto;
     }
+    #profileUnitSummary {
+    	font-family: 'Open Sans', sans-serif;
+    	padding: 0px 0px 10px 5px;
+    	font-size: 90%;
+    	margin: 0px;
+    	text-align: justify;
+    }
     #unitSummary {
-    	font-family: 'Open Sans', sans-serf;
+    	font-family: 'Open Sans', sans-serif;
     	padding: 0px 5px 5px 5px;
     	font-size: 80%;
     	margin: 0px;
@@ -1683,7 +1704,7 @@
 #problemVote {
   flex: 1 1 auto;
   color: #00ffdc;
-  background-color: #0f131c;
+  background-color: inherit;
   border: 1px solid #00ffdc;
   border-radius: 2px;
   cursor: pointer;
@@ -1700,7 +1721,7 @@
 }
 #problemVote:active {
   color: #00ffdc;
-  background-color: #0f131c;
+  background-color: inherit;
 }
 #subProblemSummary, #solutionUnitSummary {
   color: #dddddd;
@@ -1766,7 +1787,7 @@
       border-radius: 2px 2px 0px 0px;
       cursor: pointer;
       height: 37px;
-
+      min-width: 101.94px;
       text-align: center;
       font-size: 120%;
       padding: 0px 24px 0px 25px;;
@@ -1777,6 +1798,7 @@
     }
     #suggestionVoteNoComments {
       border-width: 1px 1px 1px 1px;
+      min-width: 103.27px;
     }
     #suggestionVote:hover, #suggestionVoteNoComments:hover {
       color: #0f131c;
@@ -1786,7 +1808,7 @@
     }
     #suggestionVote:active, #suggestionVoteNoComments:active {
       color: #00ffdc;
-      background-color: #0f131c;
+      background-color: inherit;
     }
     #suggestionVote:focus, #suggestionVoteNoComments:focus {
       box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);
@@ -1836,14 +1858,6 @@
     #submitExplore {
     	display: none;
     }
-    #welcomeUnitsContainer {
-    	/*margin: 0% 5% 3% 5%;*/
-      /*margin: 0% 0% 3% 0%;*/
-    	padding: 2px;
-    }
-    #welcomeUnitsContainer ul li {
-      display: inline;
-    }
     #createWelcomeButtonBox {
       margin: 0% 18% 0% 18%;
     	border: 1px solid #dddddd;
@@ -1878,7 +1892,7 @@
       /*border-radius: 3px;*/
       /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
       border: 2px solid #00dcff;
-      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5) !important;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       background-color: rgba(0,220,255,0.05);
       transform: scale(1.02);
       transition: all 0.5s ease 0s;
@@ -1902,6 +1916,9 @@
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
+    .activeBlueText div {
+      color: #00dcff !important;
+    }
     .activeBlue button {
       color: #0f131c !important;
       background-color: #00dcff !important;  
@@ -1916,30 +1933,43 @@
       text-align:center;
       margin-bottom: 40px;
     }
+    #welcomeUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    #welcomeUserUnitsContainer {
+    	/*margin: 0% 5% 3% 5%;*/
+      /*margin: 0% 0% 3% 0%;*/
+    	padding: 2px;
+      margin: 0 auto;
+    }
     #welcomeProblemsUnitList {
-      text-align: center;
+      /*text-align: center;*/
       display: flex;
-      align-items: center;
+      /*align-items: center;*/
       justify-content: space-between;
       width: 100%;
       margin: 0 auto;
-      /*margin-top: 4%;*/
       }
     #welcomeProblemsUnitList li {
-      /*display: inline-block;*/
-      /*margin: 2%;*/
+      /*display: block;*/
+      /*margin-left: 5%;
+      margin-right: 5%;*/
+      list-style-type: none;
     }
     #welcomeProblemsUnit {
-      display: inline-block;
-      width: 14em;
-      margin: 0% 5% 0% 5%; 
+      /*margin-left: 30px;
+      margin-right: 30px;*/
     }
     #welcomeProblemsUnit:hover * {
     	color: #ffffff;
     	cursor: pointer;
     }
     #welcomeProblemsHeader {
-      display: inline-flex;
+      /*display: flex;
     	flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1949,8 +1979,25 @@
       word-wrap: break-word; 
       align-items: center; 
       justify-content: center;
+      background-color: rgba(0,220,255,0.05);*/
+
+      display: inline-flex;
+      flex-direction: column;
+      border: 2px solid #00dcff;
+      border-radius: 100%;
+      width: 14em;
+      height: 14em;
+      word-wrap: break-word; 
+      /*align-items: center; */
+      /*justify-content: center;*/
       background-color: rgba(0,220,255,0.05);
-    }
+      margin: 0 auto;
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      transition: all 0.5s ease 0s;
+      transform: scale(1);
+      margin-left: 5%;
+      margin-right: 5%;
+  }
     #welcomeProblemsHeader:hover, 
     #welcomeProblemsHeader1:hover,
     #welcomeProblemsHeader2:hover,
@@ -1969,7 +2016,7 @@
       transition: all 0.5s ease 0s;
       transform: scale(1);
 
-      display: inline-flex;
+      display: flex;
       flex-direction: column;
       border: 2px solid #00dcff;
       border-radius: 100%;
@@ -1982,6 +2029,8 @@
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
       transition: all 0.5s ease 0s;
       transform: scale(1);
+
+      /*margin-right: 10% !important;*/
     }
     #welcomeProblemsHeader1 {
       background-image: url('./earthRise.jpg');
@@ -2004,9 +2053,17 @@
       transform: scale(1.02);
     }
   #welcomeProblemsTitle {
+      /*margin: 0 auto;
+      padding: 5px 10px 5px 10px;
+      font-size: 130%;
+      transition: all 0.5s ease 0s;*/
+
       margin: 0 auto;
       padding: 5px 10px 5px 10px;
       font-size: 130%;
+      color: #dddddd;
+      word-wrap: break-word; 
+      text-align: center;
       transition: all 0.5s ease 0s;
   }
   #welcomeProblemsHeaderInvisible {
@@ -2080,7 +2137,7 @@
     	display: block;
     	color: #00dcff;
     	border: 1px solid #00dcff;
-    	background-color: #0f131c;
+    	background-color: inherit;
     	width: 84.5%;
     	margin-left: 7.5%;
     }
@@ -2128,7 +2185,7 @@
     }
     #problem {
       border: 1px solid #00dcff;
-      background-color: #0f131c;
+      background-color: inherit;
     	border-width: 0px 2px;
     	border-radius: 23px;
       position: relative;
@@ -2401,7 +2458,7 @@
     #userOptions {
     }
     #newsFeedFieldUnit {
-    	background-color: #0f131c;
+    	background-color: inherit;
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
     	font-size: 100%;
@@ -2435,14 +2492,15 @@
     	cursor: pointer;
     }
     #profileRightElements {
-    	margin: 2px 15px 0px 5px;
+    	margin: 2px 0px 0px 5px;
     	padding: 5px;
-      width: 100%;
+      width: 96%;
     }
     #profileRightUnit {
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	padding: 2px;
+      transition: all 0.5s ease 0s;
     }
     #profileRightUnit:hover {
       color: #ffffff;
@@ -2843,7 +2901,7 @@
 }
 #SPVote:active {
   color: #00ffdc;
-  background-color: #0f131c;
+  background-color: inherit;
 }
 
 /*ProblemLeftSB Page*/
@@ -3197,7 +3255,19 @@ label + input[type=radio] + label {
   border-radius: 10px;
   overflow: hidden;
 }
-
+#learnResourcesText {
+  font-family: 'Alegreya Sans SC';
+  margin-top: 5px;
+}
+a#learnResourcesLink {
+  text-decoration: underline;
+  color: rgba(255,255,255,1);
+  transition: all 1s ease 0s;
+  font-size: 120%;
+}
+a#learnResourcesLink:hover {
+  color: rgba(0,220,255,1);
+}
 /*End Learn SB*/
 
 
@@ -3268,7 +3338,7 @@ label + input[type=radio] + label {
   padding: 0px 0px 0px 0px;
 }
 #solutionSummary {
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 0px 5px 0px 5px;
   margin-bottom: 25px;
   padding-left: 5%;
@@ -3288,7 +3358,16 @@ label + input[type=radio] + label {
   letter-spacing: 8px;
   padding: 5px;
   width: 5em;
+}
+#proposalCreator {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
   text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  width: 100%;
+  /**/
 }
 #createDate {
   flex: 1 1 auto;
@@ -3362,10 +3441,6 @@ label + input[type=radio] + label {
   border: 1px solid #00ffdc;
   cursor: pointer;
 }
-/*#currentVersion {
-  flex: 2 2 auto;
-  width: 2em;
-}*/
 
 /*End Full Solution*/
 
@@ -3512,7 +3587,7 @@ input#submitNewVersion:hover {
   font-family: 'Open Sans', sans-serif;
   padding: 10px;
   color: #ffffff;
-  background-color: #0f131c;
+  background-color: inherit;
   border: 1px solid #ffffff;
   height: 8em;
   resize: none;
@@ -3525,7 +3600,7 @@ input#submitNewVersion:hover {
 /*Arrows*/
 
 #SParrowImg {
-  background-color: #0f131c;
+  background-color: inherit;
   box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
   /*border: 1px solid #00dcff;*/
   margin: 0 auto;
@@ -3694,6 +3769,9 @@ input#submitNewVersion:hover {
   margin-right: 5%;
   /*background-color: rgba(0,220,255, 0.05);*/
 }
+#introContainer {
+  margin-top: 10%;
+}
 #tutorialContent {
   width:80%;
   border: 1px solid #00dcff;
@@ -3778,7 +3856,7 @@ input#submitNewVersion:hover {
   margin: 0 auto;
   height: 60%;
   margin-top: 4%;
-  background-color: #0f131c;
+  background-color: inherit;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
   display: none;
   }
@@ -3942,7 +4020,7 @@ input#submitNewVersion:hover {
 #deleteButton, #editButton, #flagButton, #returnButton {
   font-size: 120%;
   color: #ff7f7f;
-  background-color: #0f131c;
+  background-color: inherit;
   border: 1px solid #ff7f7f;
   border-radius: 2px;
   margin-top: 5px;
@@ -3996,7 +4074,7 @@ input#submitNewVersion:hover {
       z-index: 5;
       width: 35%;
       border: 1px solid #00dcff;
-      background-color: #0f131c;
+      background-color: inherit;
       padding: 5px;
       text-align: center;
       display: none;
@@ -4087,3 +4165,150 @@ input#submitNewVersion:hover {
   }*/
 
 /*End Animations*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*XPrincipia Day*/
+
+/*body {
+  background-color: #ffffff;
+}
+#error, #logoName, #banner, #welcomeUserProblemsUnit:hover *, 
+#questionTextArea, #answerTextArea, #suggestionTextArea, 
+#commentTextArea,#proTextArea, #conTextArea, 
+#resourcesTextArea, #learnContentTextArea, #freeFormTextArea {
+  color: #2f2f42;
+}
+#SBButton, #SBButton1, #createWelcomeButtonFormBox,
+#welcomeBox, #subProblemSummary, #solutionUnitSummary, 
+#questionTextArea, #answerTextArea, #suggestionTextArea, #commentTextArea,
+#proTextArea, #conTextArea, #resourcesTextArea, #learnContentTextArea, 
+#freeFormTextArea, #problemTitle, #solutionTitle {
+  border: 1px solid #2f2f42;
+}
+#problem {
+  border: 1px solid #00dcff;
+}
+#solutionTitle {
+  box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+  color: rgba(221,221,221,1)
+}
+p, body, #versionUnitTitle, #introPrompt, #introProseDescriptions,
+#tutorialProseDescriptions, #aboutProseDescriptions,
+#SBDiscussButton, #topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB, #contentLearnButtonRightSB, 
+#resourcesLearnButtonRightSB, #sidebar, #SPTitle, #sidebarSB,
+#problemSummary, #problemSummaryLeftSB, #problemTitle,
+#newsFeedLeft, #newsFeedRight, #createSPButton, #SBButton, #SBButton1,
+#problem, #createWelcomeButton, 
+#exploreWelcomeForm, #subProblemSummary, #solutionUnitSummary,
+#exploreForm, #profileLeft, #profileRight, #signup, #register,
+#info, #avatarFullName, #welcomePrompt, 
+#explore, #exploreFormHeader, #exploreInput, #exploreHeaderInput,
+#errorContainer, #profileLeft, #profileRight, #createWelcomeButtonForm,
+#problemSummary:hover, #problemAdditionalInfoLabel,
+#problemAdditionalInfoLabelSB
+ {
+  color: #2f2f42;
+}
+#introBanner, #SBDiscussButton, #topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB, #contentLearnButtonRightSB, 
+#resourcesLearnButtonRightSB {
+  border: 1px solid #2f2f42;
+}
+input, textarea {
+  color: #2f2f42;
+  border: 1px solid #2f2f42;
+}
+#bannerTitle {
+  border: 1px solid #2f2f42;
+  box-shadow: 0 0 2pt 2pt rgba(47,47,66, 0.5);
+  background-color: rgba(0, 220, 255, 0);
+}
+#loginEmail, #registerFullName,
+#loginPassword, #registerPassword,
+#registerUserName, #registerEmail {
+  box-shadow: 0 0 2pt 2pt rgba(47,47,66, 0.5);
+}
+#submitLogin, #submitRegister,
+#registerButton, #loginButton {
+  color: #2f2f42;
+  background-color: rgba(47,47,66, 0);
+  border: 1px solid #2f2f42;
+}
+#registerButton, #loginButton {
+  border-width: 0px 1px 1px 1px;
+  border-radius: 0px 0px 3px 3px;
+}
+#bannerSlogan {
+  border: 1px solid #2f2f42;
+  border-width: 2px 0px;
+  background-color: rgba(47,47,66, 0.05);
+  box-shadow: 0 0 1pt 1pt rgba(47,47,66, 0.5);
+}
+#problemSummary, #problemSummaryLeftSB {
+  border: 1px solid #2f2f42;
+  border-width: 1px 0px;
+  color: #2f2f42;
+}
+#SPHeader {
+  border: 2px solid #2f2f42;
+  background-color: rgba(47,47,66,0.05);
+  box-shadow: 0 0 2pt 2pt rgba(47,47,66,0.5);
+}
+#createSPButtonBox, #createSPButtonBox2 {
+  border: 1px solid #2f2f42;
+  border: 1px solid #2f2f42;
+  background-color: rgba(47,47,66, 0);
+}
+label {
+  color: #2f2f42;
+}
+#problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
+#problemDescriptionFormLabel, 
+#problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
+#solutionDescriptionFormLabel, #solutionReferenceFormLabel, #solutionSummaryFormLabel,
+#editSummaryFormLabel, #editDescriptionFormLabel, #editReferencesFormLabel     {
+  color: #2f2f42;
+}
+#SPTitleLeftSB {
+  color: #2f2f42;
+}
+#SPHeaderLeftSB {
+  border: 2px solid #2f2f42;
+  background-color: rgba(47,47,66,0.05);
+  box-shadow: 0 0 2pt 2pt rgba(47,47,66,0.5);
+}
+#solutionsTitleRightSB {
+  color: #2f2f42;
+  border: 1px solid #2f2f42;
+}
+#topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB, 
+#contentLearnButtonRightSB, 
+#resourcesLearnButtonRightSB {
+  border-width: 0px 1px 0px 1px;
+}*/

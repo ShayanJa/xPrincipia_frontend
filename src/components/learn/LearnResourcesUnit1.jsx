@@ -45,8 +45,8 @@ export default class LearnResourcesUnit1 extends React.Component {
                         <span id="discussPercent">{floatToDecimal(resource.PercentRank)}</span>
 					    {resource.Username}
                     </div>
-                    <div id="suggestionText">
-                        {resource.Description}
+                    <div id="learnResourcesText">
+                        <a href={resource.Description} target="_blank" id="learnResourcesLink">{resource.Description}</a>
                     </div>
 				</div>
                 <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/delete`}>
@@ -80,7 +80,7 @@ export default class LearnResourcesUnit1 extends React.Component {
 					    {resource.Username}
                     </div>
                     <div id="suggestionText">
-                        {resource.Description}
+                        <a href={resource.Description} target="_blank" id="learnResourcesLink">{resource.Description}</a>
                     </div>
 				</div>
                     {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/flag`}>

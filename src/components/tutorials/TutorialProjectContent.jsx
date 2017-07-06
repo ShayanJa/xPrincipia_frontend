@@ -6,11 +6,11 @@ export default class TutorialProjectContent extends React.Component {
    render() {
       return (
         <div>
-            <Link to="/tutorialwelcome">
+            {/*<Link to="/tutorialwelcome">
                 <div id="tutorialWelcomeButtonDiv">
                     <img src={require('../../assets/upArrow.svg')} id="tutorialWelcomeButton" width="50" height="50" alt="Back arrow, blue up arrow" />
                 </div>
-            </Link>
+            </Link>*/}
         <div id="introContainer">
           <div id="introBanner">
               <div id="introPrompt">Welcome to the
@@ -25,7 +25,7 @@ export default class TutorialProjectContent extends React.Component {
                  Contribute to scientific progress
               </div>*/}
               <div id="tutorialProseDescriptions">
-                 Vote for this project if you believe
+                 <span id="blue">Vote for this project</span> if you believe
                   it is the most important in its <span id="blue"> sub project level</span>.
                  <br />
                  <br />

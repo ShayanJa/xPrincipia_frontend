@@ -24,7 +24,7 @@ export default class ProfileUnit extends React.Component {
           <Link key={item.ID} to={`/fullsolution/${item.ProblemID}/${item.ID}`} >
             <li><div id="profileRightUnit">
                 <div id="profileUnitTitle">{item.Title}</div>
-             <div id="unitSummary">{item.Summary} </div>
+             <div id="profileUnitSummary">{item.Summary} </div>
             </div></li>
           </Link>
       );
@@ -34,7 +34,7 @@ export default class ProfileUnit extends React.Component {
           <Link key={item.ID} to={`/problem/${item.ID}`} >
             <li><div id="profileRightUnit">
                 <div id="profileUnitTitle">{item.Title}</div>
-             <div id="unitSummary">{item.Summary} </div>
+             <div id="profileUnitSummary">{item.Summary} </div>
             </div></li>
           </Link>
       );

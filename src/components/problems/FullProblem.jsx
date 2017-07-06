@@ -122,7 +122,7 @@ export default class FullProblem extends React.Component {
 
                       <div id="followProblem" onClick={this.submitVote}>Vote</div>
 
-                      <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
+                      <Link to={`/problem/${this.props.params.probID}/solutions/create`}>
                         <div id="SBButton">Proposals</div>
                       </Link>
 

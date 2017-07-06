@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import Header from './Header.jsx';
 import TutorialWelcomeContent from '../components/tutorials/TutorialWelcomeContent.jsx';
 import TutorialWelcomePage from '../components/tutorials/TutorialWelcomePage.jsx';
@@ -55,8 +56,14 @@ export default class WelcomeContainer extends React.Component {
    render() {
       return (
         <div>
-          <Header />
 
+          <Header />
+            {/*<ReactCSSTransitionGroup
+            transitionName="example"
+            transitionAppear={true}
+            transitionAppearTimeout={2000}
+            transitionEnter={false}
+            transitionLeave={false}>*/}
           <div id="welcomeBox">
               <Link to="/welcome">
                 <h1 id="welcomePrompt">XPrincipia Projects</h1>
@@ -76,7 +83,7 @@ export default class WelcomeContainer extends React.Component {
                  {/*<input type="submit" value="Go" id="submitExplore" />*/}
             </form>
          </div>
-          <div id="welcomeUnitsContainer">
+          <div id="welcomeUserUnitsContainer">
               <WelcomeUserUnit problems={this.state.userproblems} />
           </div>
 
@@ -85,6 +92,7 @@ export default class WelcomeContainer extends React.Component {
           </div>*/}
 
           <TutorialWelcomeContent />
+          {/*</ReactCSSTransitionGroup>*/}
         </div>
       );
    }

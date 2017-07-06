@@ -6,11 +6,11 @@ export default class TutorialWelcomeContent extends React.Component {
    render() {
       return (
         <div>
-            <Link to="/tutorialwelcome">
+            {/*<Link to="/tutorialwelcome">
                 <div id="tutorialWelcomeButtonDiv">
                     <img src={require('../../assets/upArrow.svg')} id="tutorialWelcomeButton" width="50" height="50" alt="Back arrow, blue up arrow" />
                 </div>
-            </Link>
+            </Link>*/}
         <div id="introContainer">
           <div id="introBanner">
               <div id="introPrompt">Welcome to

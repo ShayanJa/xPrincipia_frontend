@@ -6,11 +6,11 @@ export default class TutorialProfileContent extends React.Component {
    render() {
       return (
         <div>
-            <Link to="/tutorialwelcome">
+            {/*<Link to="/tutorialwelcome">
                 <div id="tutorialWelcomeButtonDiv">
                     <img src={require('../../assets/upArrow.svg')} id="tutorialWelcomeButton" width="50" height="50" alt="Back arrow, blue up arrow" />
                 </div>
-            </Link>
+            </Link>*/}
         <div id="introContainer">
           <div id="introBanner">
               <div id="introPrompt">Welcome to your
@@ -25,14 +25,17 @@ export default class TutorialProfileContent extends React.Component {
                  Contribute to scientific progress
               </div>*/}
               <div id="tutorialProseDescriptions">
-                 Here the <span id="blue">projects and proposals</span> you have <span id="blue">voted on or created</span> are displayed.
+                 <span id="blue">Access the projects and proposals</span> you have created or voted on.
                  <br />
                  <br />
-                 Provide feedback of how 
-                 <span id="blue"> you think XPrincipia should be improved.</span>
+                {/*<span id="blue">View your resume </span>of original contributions.
+                 <br />
+                 <br />*/}
+                 Tell us
+                 <span id="blue"> how to improve XPrincipia.</span>
                  <br />
                  <br />
-                 Learn about XPrincipia and <span id="blue">contact us</span> for any additional information. 
+                 Learn about XPrincipia and <span id="blue">contact us</span> for additional information. 
                  <br />
                  <br />
               </div>

@@ -58,7 +58,7 @@ constructor(props){
                                 <input type="radio" />
                                     <label>Hard</label>
                              </div>*/}
-                            <textarea name="suggestionText" required="required" id="resourcesTextArea" autoFocus ></textarea>
+                            <textarea name="suggestionText" required="required" id="resourcesTextArea" placeholder="Please enter the URL of a learning resource for this project." autoFocus ></textarea>
                             <br />
                             <input type="button" value="Add" onClick={this.postResource} id="addSuggestion"/>
                     </fieldset>
