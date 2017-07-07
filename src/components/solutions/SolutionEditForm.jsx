@@ -59,6 +59,7 @@ export default class EditSolutionForm extends React.Component {
     })
     .then(function (result) {
       document.location = window.location.pathname 
+      document.location = '/fullsolution/'+ self.props.params.probID + '/' + self.props.params.solutionID + '/full'
     })
     .catch(function (error) {
         alert("I'm sorry, there was a problem with your request.")
@@ -88,7 +89,7 @@ export default class EditSolutionForm extends React.Component {
                       <label htmlFor="solutionReferences" id="editReferencesFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionEditReferencesForm">
                           </textarea></label><br />
-                        <div onClick={this.deleteQuestion} id="editButton">Edit</div>
+                        <div onClick={this.updateSolution} id="editButton">Edit</div>
                       <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/full`}>
                         <div id="returnButton">Return</div>
                       </Link>
