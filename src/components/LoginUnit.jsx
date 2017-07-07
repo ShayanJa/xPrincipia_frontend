@@ -25,7 +25,7 @@ export default class LoginUnit extends React.Component {
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
 
-    axios.post('http://localhost:10000/login', {
+    return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
       username : this.state.username,
       password: this.state.password
     })
@@ -35,24 +35,33 @@ export default class LoginUnit extends React.Component {
       })
       cookie.save('userToken', result.data.token );
       cookie.save('userName', self.state.username)
-      document.location = "/welcome";
+      
+      // Store token/Username in db table
+      return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
+        username : self.state.username,
+        token : "Bearer " + self.state.userToken
+      }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){
+        document.location = "/welcome";
+      })
+   
     })
     .catch(function (error) {
       alert('Please try again.')
     });
+
+
   }
 
    render() {
       return (
 
         <div id="signup">
-            <form action="http://www.xprincipia.com/login.php" method="post" id="loginForm">
-                <div id="enter">Enter</div>
-                <input type="email" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autoFocus /> <br />
-                <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword" /> <br />
-                <Link to='/login'><input type="submit" value="Login" onClick={this.postLogin} id="submitLogin" /></Link>
+            <form>
+                <input type="email" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autoFocus />
+                <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword" />
+                <Link to='/login'><input type="submit" value="Enter" onClick={this.postLogin} id="submitLogin" /></Link>
+                <Link to='/register'><div id="registerButton">Join</div></Link>
             </form>
-            <Link to='/register'><div id="registerButton">Register</div></Link>
         </div>
 
       );

@@ -6,13 +6,13 @@ export default class Info extends React.Component {
       <div id="info">
           <div id="banner">
               <div id="bannerTitle">XPrincipia</div>
-              <div id="bannerSlogan">Open Source Science</div>
+              <div id="bannerSlogan">Open Source R&D</div>
           </div>
           <div id="learnMore">
               <div id="introduction">
                   .
-                  <br /> Submit and breakdown today's scientific problems
-                 <br />.<br />Create and vote on solutions
+                  <br /> Breakdown and solve today's scientific problems
+                 <br />.<br />Contribute to tomorrow's' technological revolutions
                   <br />.<br />.
               </div>
               <br />

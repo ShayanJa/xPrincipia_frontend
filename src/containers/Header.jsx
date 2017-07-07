@@ -23,7 +23,7 @@ export default class Header extends React.Component {
     queryProblem () {
         var self = this
         this.state.searchText = document.getElementById('exploreInput').value
-        return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/search?q='+this.state.searchText).then(function (response) {
             self.setState({
               problems: response.data
             })
@@ -43,21 +43,20 @@ export default class Header extends React.Component {
 
    render() {
       return (
-      <div id="headerSection">
         <div id="header">
-            <div id="explore">
+            {/*<div id="explore">
                 <form id="exploreFormHeader">
                     <input type="search" name="search"
-                        placeholder="Explore" id="exploreHeaderInput"  onKeyDown={this.queryProblem}/>
+                        placeholder="Explore" id="exploreHeaderInput"  
+                        onKeyDown={this.queryProblem} />
                     <input onKeyPress={this.submitSearch}  id="submitExplore" />
                 </form>
-            </div>
+            </div>*/}
             <div id="logo">
-              <Link to="/welcome"><div>XPrincipia</div></Link>
+              <Link to="/welcome"><div id="logoName">XPrincipia</div></Link>
             </div>
             <HeaderAvatar />
         </div>
-      </div>
       );
    }
 }

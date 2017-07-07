@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import WelcomeUnit from '../components/WelcomeUnit.jsx';
-import WelcomeMore from '../components/WelcomeMore.jsx';
+import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
+import WelcomeUserUnit from '../components/welcome/WelcomeUserUnit.jsx';
+import WelcomeMore from '../components/welcome/WelcomeMore.jsx';
 
 export default class WelcomeUnitsContainer extends React.Component {
     constructor(props){
@@ -20,7 +21,7 @@ export default class WelcomeUnitsContainer extends React.Component {
         this.state.searchText = document.getElementById('exploreInput').value
 
         var self = this
-        return axios.get('http://localhost:10000/auth/problems/search?q='+this.state.searchText).then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/search?q='+this.state.searchText).then(function (response) {
             self.setState({
               problems: response.data
             })
@@ -33,7 +34,7 @@ export default class WelcomeUnitsContainer extends React.Component {
         }
         componentWillMount(){
         var self = this;
-        return axios.get('http://localhost:10000/auth/problems/all').then(function (response) {
+        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/all').then(function (response) {
             self.setState({
                 problems: response.data
             })
@@ -47,19 +48,17 @@ export default class WelcomeUnitsContainer extends React.Component {
  
    render() {
       return (
-      <div>
-        <div id="welcomeFormComponent">
-            <form  id="exploreWelcomeForm">
-                <input type="search" name="search"
-                    placeholder="Select or search a problem" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
-                {/*<input type="submit" value="Go" id="submitExplore" />*/}
-            </form>
-        </div>
-            <div id="welcomeUnitsContainer">
-            <WelcomeUnit problems={this.state.problems} />
-            {/*<WelcomeMore />*/}
+      <div id="invisible">
+            {/*<div id="welcomeUnitsContainer">
+                <WelcomeUnit problems={this.state.problems} />
             </div>
+            <div id="welcomeUnitsContainer">
+                <WelcomeUserUnit problems={this.state.problems} />
+            </div>*/}
       </div>
       );
    }
 }
+
+
+
