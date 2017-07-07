@@ -48,12 +48,12 @@ export default class ConsUnit extends React.Component {
                         {con.Description}
                     </div>
 				</div>
-                    <Link to={`/problem/${self.props.params.probID}/${con.TypeID}/cons/${con.ID}/delete`}>
+                    <Link to={`/problem/${con.ProblemID}/${con.TypeID}/cons/${con.ID}/delete`}>
                         <div id="deleteSBButton">
                             <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                         </div>
                     </Link>
-                    <Link to={`/problem/${self.props.params.probID}/${con.TypeID}/cons/${con.ID}/edit`}>
+                    <Link to={`/problem/${con.ProblemID}/${con.TypeID}/cons/${con.ID}/edit`}>
                         <div id="editSBButtonAnswer">
                             <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                         </div>
