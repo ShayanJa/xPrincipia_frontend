@@ -712,6 +712,9 @@
     #solutionTitleForm {
       font-family: 'Alegreya Sans SC';
     }
+    #solutionEditReferencesForm {
+      margin-bottom: 3%;
+    }
  
 
 
@@ -3545,6 +3548,7 @@ a#learnResourcesLink:hover {
 }
 #editFormFieldset {
   background-color: inherit;
+  padding-bottom: 2.5%;
 }
 input#submitNewVersion {
   display: block;
@@ -4135,181 +4139,3 @@ input#submitNewVersion:hover {
 /*End Notifications*/
 
 /*End Notifications*/
-
-
-
-/*Fonts*/
-
-#problemAdditionalInfoLabel,
-#followProblem {
-  /*font-family: 'Open Sans', sans-serif;*/
-}
-
-/*End Fonts*/
-
-
-
-/*Animations*/
-
-  /*@keyframes oscillate {
-    0%   {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
-    25%  {box-shadow: 0 0 1pt 5pt rgba(0,220,255,0.5);}
-    50%  {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
-    75%  {box-shadow: 0 0 1pt 5pt rgba(0,220,255,0.5);}
-    100% {box-shadow: 0 0 5pt 1pt rgba(0,220,255,0.5);}
-  }
-
-  #empty {
-    animation-name: oscillate;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-  }*/
-
-/*End Animations*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*XPrincipia Day*/
-
-/*body {
-  background-color: #ffffff;
-}
-#error, #logoName, #banner, #welcomeUserProblemsUnit:hover *, 
-#questionTextArea, #answerTextArea, #suggestionTextArea, 
-#commentTextArea,#proTextArea, #conTextArea, 
-#resourcesTextArea, #learnContentTextArea, #freeFormTextArea {
-  color: #2f2f42;
-}
-#SBButton, #SBButton1, #createWelcomeButtonFormBox,
-#welcomeBox, #subProblemSummary, #solutionUnitSummary, 
-#questionTextArea, #answerTextArea, #suggestionTextArea, #commentTextArea,
-#proTextArea, #conTextArea, #resourcesTextArea, #learnContentTextArea, 
-#freeFormTextArea, #problemTitle, #solutionTitle {
-  border: 1px solid #2f2f42;
-}
-#problem {
-  border: 1px solid #00dcff;
-}
-#solutionTitle {
-  box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
-  color: rgba(221,221,221,1)
-}
-p, body, #versionUnitTitle, #introPrompt, #introProseDescriptions,
-#tutorialProseDescriptions, #aboutProseDescriptions,
-#SBDiscussButton, #topSolutionsButtonRightSB,
-#createSolutionsButtonRightSB, #contentLearnButtonRightSB, 
-#resourcesLearnButtonRightSB, #sidebar, #SPTitle, #sidebarSB,
-#problemSummary, #problemSummaryLeftSB, #problemTitle,
-#newsFeedLeft, #newsFeedRight, #createSPButton, #SBButton, #SBButton1,
-#problem, #createWelcomeButton, 
-#exploreWelcomeForm, #subProblemSummary, #solutionUnitSummary,
-#exploreForm, #profileLeft, #profileRight, #signup, #register,
-#info, #avatarFullName, #welcomePrompt, 
-#explore, #exploreFormHeader, #exploreInput, #exploreHeaderInput,
-#errorContainer, #profileLeft, #profileRight, #createWelcomeButtonForm,
-#problemSummary:hover, #problemAdditionalInfoLabel,
-#problemAdditionalInfoLabelSB
- {
-  color: #2f2f42;
-}
-#introBanner, #SBDiscussButton, #topSolutionsButtonRightSB,
-#createSolutionsButtonRightSB, #contentLearnButtonRightSB, 
-#resourcesLearnButtonRightSB {
-  border: 1px solid #2f2f42;
-}
-input, textarea {
-  color: #2f2f42;
-  border: 1px solid #2f2f42;
-}
-#bannerTitle {
-  border: 1px solid #2f2f42;
-  box-shadow: 0 0 2pt 2pt rgba(47,47,66, 0.5);
-  background-color: rgba(0, 220, 255, 0);
-}
-#loginEmail, #registerFullName,
-#loginPassword, #registerPassword,
-#registerUserName, #registerEmail {
-  box-shadow: 0 0 2pt 2pt rgba(47,47,66, 0.5);
-}
-#submitLogin, #submitRegister,
-#registerButton, #loginButton {
-  color: #2f2f42;
-  background-color: rgba(47,47,66, 0);
-  border: 1px solid #2f2f42;
-}
-#registerButton, #loginButton {
-  border-width: 0px 1px 1px 1px;
-  border-radius: 0px 0px 3px 3px;
-}
-#bannerSlogan {
-  border: 1px solid #2f2f42;
-  border-width: 2px 0px;
-  background-color: rgba(47,47,66, 0.05);
-  box-shadow: 0 0 1pt 1pt rgba(47,47,66, 0.5);
-}
-#problemSummary, #problemSummaryLeftSB {
-  border: 1px solid #2f2f42;
-  border-width: 1px 0px;
-  color: #2f2f42;
-}
-#SPHeader {
-  border: 2px solid #2f2f42;
-  background-color: rgba(47,47,66,0.05);
-  box-shadow: 0 0 2pt 2pt rgba(47,47,66,0.5);
-}
-#createSPButtonBox, #createSPButtonBox2 {
-  border: 1px solid #2f2f42;
-  border: 1px solid #2f2f42;
-  background-color: rgba(47,47,66, 0);
-}
-label {
-  color: #2f2f42;
-}
-#problemTitleFormLabel, #problemFieldFormLabel, #problemSummaryFormLabel,
-#problemDescriptionFormLabel, 
-#problemReferencesFormLabel, #solutionTitleFormLabel, #problemSummaryFormLabel,
-#solutionDescriptionFormLabel, #solutionReferenceFormLabel, #solutionSummaryFormLabel,
-#editSummaryFormLabel, #editDescriptionFormLabel, #editReferencesFormLabel     {
-  color: #2f2f42;
-}
-#SPTitleLeftSB {
-  color: #2f2f42;
-}
-#SPHeaderLeftSB {
-  border: 2px solid #2f2f42;
-  background-color: rgba(47,47,66,0.05);
-  box-shadow: 0 0 2pt 2pt rgba(47,47,66,0.5);
-}
-#solutionsTitleRightSB {
-  color: #2f2f42;
-  border: 1px solid #2f2f42;
-}
-#topSolutionsButtonRightSB,
-#createSolutionsButtonRightSB, 
-#contentLearnButtonRightSB, 
-#resourcesLearnButtonRightSB {
-  border-width: 0px 1px 0px 1px;
-}*/

@@ -88,8 +88,9 @@ export default class EditSolutionForm extends React.Component {
                       <label htmlFor="solutionReferences" id="editReferencesFormLabel">References<br />
                           <textarea name="solutionReferences" placeholder="Provide your references here." id="solutionEditReferencesForm">
                           </textarea></label><br />
-                      <Link to={`/problem/${this.props.params.probID}/solutions`}>
-                        <input type="submit" value="Update" onClick={this.updateSolution} id="submitNewVersion"/>
+                        <div onClick={this.deleteQuestion} id="editButton">Edit</div>
+                      <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/full`}>
+                        <div id="returnButton">Return</div>
                       </Link>
             </fieldset>
           </form>

@@ -62,6 +62,7 @@ import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
 import SideBarFullSolution from './components/solutions/SideBarFullSolution';
 import SideBarProblem from './components/problems/SideBarProblem';
+import SolutionDeleteForm from './components/solutions/SolutionDeleteForm.jsx';
 import SolutionEditForm from './components/solutions/SolutionEditForm.jsx';
 import SolutionForm from './components/solutions/SolutionForm.jsx';
 import SuggestionDeleteForm from './components/suggestions/SuggestionDeleteForm.jsx';
@@ -161,13 +162,14 @@ ReactDOM.render(
         <Route path='/problem/:probID/sb' component={ProblemLeftSB}>
           <IndexRoute component={ProblemSolutionsMenu}></IndexRoute>
           <Route path='/problem/:probID/solutions' component={ProblemSolutionsMenu}>
-            <IndexRoute component={SolutionForm}></IndexRoute>
+            <IndexRoute component={ProblemTopSolutions}></IndexRoute>
             <Route path='/problem/:probID/solutions/create' component={SolutionForm}></Route>
             <Route path='/problem/:probID/solutions/top' component={ProblemTopSolutions}></Route>
             <Route path='/fullsolution/:probID/:solutionID/container' component={FullSolutionContainer}>
               <IndexRoute component={FullSolution}></IndexRoute>
               <Route path='/fullsolution/:probID/:solutionID' component={FullSolution}>
                 <IndexRoute component={FullSolutionContent}></IndexRoute>
+                <Route path='/fullsolution/:probID/:solutionID/delete' component={SolutionDeleteForm}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/edit' component={SolutionEditForm}></Route>
                 <Route path='/fullsolution/:probID/:solutionID/full' component={FullSolutionContent}>
                   <IndexRoute component={FullSolutionDescription}></IndexRoute>
