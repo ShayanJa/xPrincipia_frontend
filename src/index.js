@@ -49,6 +49,7 @@ import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
 import ProfileAbout from './components/profile/ProfileAbout.jsx';
 import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
+import ProfileResume from './components/profile/ProfileResume.jsx';
 import ProsDeleteForm from './components/proscons/ProsDeleteForm.jsx';
 import ProsEditForm from './components/proscons/ProsEditForm.jsx';
 import ProsFlagForm from './components/proscons/ProsFlagForm.jsx';
@@ -133,6 +134,7 @@ ReactDOM.render(
     <Route path='/profile/container' component={ProfileContainer}>
       <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
       <Route path='/profile' component={ProfileProblemsSolutions}></Route>
+      <Route path='/profile/resume' component={ProfileResume}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
       <Route path='/profile/about' component={ProfileAbout}></Route>

@@ -41,7 +41,6 @@ this.state.pro = document.getElementById('proTextArea').value
                 <fieldset>
                     <legend>Pros</legend>
                          <textarea name="suggestionText" required="required" id="proTextArea" autoFocus ></textarea>
-                         <br />
                          <input type="button" value="Add" onClick={this.postPro} id="addProsCons"/>
                 </fieldset>
             </form>

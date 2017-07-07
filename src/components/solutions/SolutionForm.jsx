@@ -42,6 +42,7 @@ export default class SolutionForm extends React.Component {
           alert("There was an error.")
         });
     
+
   }
 
   render() {

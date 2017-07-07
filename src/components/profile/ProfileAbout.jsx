@@ -15,16 +15,16 @@ export default class TutorialProblemPage extends React.Component {
                  XPrincipia is a website that <span id="blue">allows everyone to contribute to scientific progress. </span>
                  <br />
                  <br />
-                 <span id="aboutBlue">
+                 {/*<span id="aboutBlue">*/}
                    Work together to:
-                 </span>
+                 {/*</span>*/}
                  <br />
                  <div id="aboutList">
-                 <span id="blue">1. </span>Complete major projects for humanity's future
+                 <span id="blue">1. Complete major projects </span>for humanity's future
                  <br />
-                 <span id="blue">2. </span>Determine the best proposals towards their achievement 
+                 <span id="blue">2. Determine the best proposals </span>towards their achievement 
                  <br />
-                 <span id="blue">3. </span>Learn deeply about the subjects required
+                 <span id="blue">3. Learn the subjects needed </span>to master each project
                  </div>
               </div>
               {/*<div id="introSummary">

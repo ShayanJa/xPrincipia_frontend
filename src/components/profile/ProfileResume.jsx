@@ -1,14 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
-import img from '../assets/dnablackinvert.png';
-import Header from '../containers/Header.jsx';
-import ProfileUnit from '../components/profile/ProfileUnit.jsx';
+import Header from '../../containers/Header.jsx';
+import ProfileUnit from '../../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
-import axios from 'axios';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
-import TutorialProfileContent from '../components/tutorials/TutorialProfileContent.jsx';
+import axios from 'axios'
 
-export default class ProfileContainer extends React.Component {
+export default class ProfileResume extends React.Component {
     constructor(){
         super();
 
@@ -95,54 +91,21 @@ export default class ProfileContainer extends React.Component {
 
    render() {
       return (
-    <div id="profileContainer">
-      <Header />
-        <ReactCSSTransitionGroup
-        transitionName="example"
-        transitionAppear={true}
-        transitionAppearTimeout={2000}
-        transitionEnter={false}
-        transitionLeave={false}>
-      <div id="profileBox">
-        <div id="profileLeft">
-            <div id="userInformation">
-                <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="180" height="180" alt="User Avatar, DNA Helix" />
-                <p id="userEmail">{cookie.load('userName')}</p>
+    <div>
+        <div id="profileSidebarMenu">
+            <div id="profileProjectsMenu">
+                <div id="projectsTitleResume" onClick={this.onCreatedProblem}>Projects</div>
             </div>
-            <div id="userOptions">
-                <Link to={`/profile`} activeClassName="activeBlue">
-                    <div id="userProblemsSolutionsButton">User Activity</div>
-                </Link>
-                {/*<Link to={`/profile/resume`} activeClassName="activeBlue">
-                    <div id="userProblemsSolutionsButton">Resume</div>
-                </Link>*/}
-                {/*<Link to={`/profile/notifications`} activeClassName="activeBlue">
-                    <div id="notificationsButton">Notifications</div>
-                </Link>*/}
-                {/*<div id="userSettingsButton">Settings (Coming Soon)</div>*/}
-                <Link to={`/profile/feedback`} activeClassName="activeBlue">
-                    <div id="userFeedbackButton">Feedback</div>
-                </Link>
-                <Link to={`/profile/about`} activeClassName="activeBlue">
-                    <div id="aboutXPButton">About XPrincipia</div>
-                </Link>
-                <div id="logOutButton" onClick={this.onLogout}>Logout</div>
-                <br />
-                <p id="xp">XP</p>
+            <div id="profileProposalsMenu">
+                <div id="proposalsTitleResume" onClick={this.onCreatedSolution}>Proposals</div>
             </div>
         </div>
-        <div id="profileRight">
-            {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        <div id="profileRightElements">
+            <ProfileUnit displayItems={this.state.currentItems} currentType={this.state.currentType}/>
         </div>
-      </div>
-
-        {/*<div id="tutorialProfileButtonDiv">
-          <img src={require('../assets/tutorial.svg')} id="tutorialProfileButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        {/*<div id="moreButtonProfile">
+            More
         </div>*/}
-        
-        <TutorialProfileContent />
-        </ReactCSSTransitionGroup>
     </div>
 
       );
