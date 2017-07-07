@@ -47,16 +47,16 @@ export default class ProsUnit extends React.Component {
                         {pro.Description}
                     </div>
 				</div>
-                    {/*<Link to={`/problem/${this.props.params.probID}/${pro.TypeID}/pros/${pro.ID}/delete`}>*/}
+                    <Link to={`/problem/${pro.ProblemID}/${pro.TypeID}/pros/${pro.ID}/delete`}>
                         <div id="deleteSBButton">
                             <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                         </div>
-                    {/*</Link>*/}
-                    {/*<Link to={`/problem/${this.props.params.probID}/${pro.TypeID}/pros/${pro.ID}/edit`}>*/}
+                    </Link>
+                    <Link to={`/problem/${pro.ProblemID}/${pro.TypeID}/pros/${pro.ID}/edit`}>
                         <div id="editSBButtonAnswer">
                             <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                         </div>
-                    {/*</Link>*/}
+                    </Link>
                 {/*<Link to={`/problem/${pro.TypeID}/pros/${pro.ID}/comments`}>
                     <div id="commentSBButtonUser">
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />

@@ -22,6 +22,7 @@ constructor(props){
                 self.setState({
                     pros: response.data
                 })
+                self.props.pros.ProblemID = self.props.params.probID
             })  
         } else {
             return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/pros/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {

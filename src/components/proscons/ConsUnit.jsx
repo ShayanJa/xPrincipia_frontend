@@ -7,7 +7,7 @@ import cookie from 'react-cookie';
 export default class ConsUnit extends React.Component {
     constructor(props){
         super(props);
-         this.renderItem = this.renderItem.bind(this)
+        this.renderItem = this.renderItem.bind(this)
     };
   
 
@@ -20,7 +20,7 @@ export default class ConsUnit extends React.Component {
 		);
 	}
 	renderItem(con) {
-
+        var self = this;
        function  submitVote() {
        axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
            Type: 3,
@@ -48,12 +48,12 @@ export default class ConsUnit extends React.Component {
                         {con.Description}
                     </div>
 				</div>
-                    <Link to={`/problem/${con.TypeID}/cons/${con.ID}/delete`}>
+                    <Link to={`/problem/${self.props.params.probID}/${con.TypeID}/cons/${con.ID}/delete`}>
                         <div id="deleteSBButton">
                             <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                         </div>
                     </Link>
-                    <Link to={`/problem/${con.TypeID}/cons/${con.ID}/edit`}>
+                    <Link to={`/problem/${self.props.params.probID}/${con.TypeID}/cons/${con.ID}/edit`}>
                         <div id="editSBButtonAnswer">
                             <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                         </div>
