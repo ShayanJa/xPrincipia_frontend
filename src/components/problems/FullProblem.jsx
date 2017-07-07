@@ -69,7 +69,7 @@ export default class FullProblem extends React.Component {
            
         })
         .then(function (result) {
-            // document.location = "/problem/" + self.state.parentID + "/subproblems";
+            alert("Thank you, your vote has been recorded.")
           return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/ID?id='+self.props.params.probID).then(function (response) {
             //if parent ID is 0 then the problem is at the root of the tree
             // return id as the parentID for routing purposes
@@ -83,7 +83,7 @@ export default class FullProblem extends React.Component {
                 problemInfo: response.data,
             })
           })
-          alert("Thank you, your vote has been recorded.")
+          
         })
         .catch(function (error) {
             alert("I'm sorry, you have already voted on a problem.");
