@@ -69,8 +69,21 @@ export default class FullProblem extends React.Component {
            
         })
         .then(function (result) {
-            document.location = "/problem/" + self.state.parentID + "/subproblems";
-            alert("Thank you, your vote has been recorded.")
+            // document.location = "/problem/" + self.state.parentID + "/subproblems";
+          return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/ID?id='+self.props.params.probID).then(function (response) {
+            //if parent ID is 0 then the problem is at the root of the tree
+            // return id as the parentID for routing purposes
+            if (response.data.ParentID === 0){
+              self.setState({
+                parentID: response.data.ID
+              })
+            }
+            //set other data
+            self.setState({
+                problemInfo: response.data,
+            })
+          })
+          alert("Thank you, your vote has been recorded.")
         })
         .catch(function (error) {
             alert("I'm sorry, you have already voted on a problem.");
@@ -116,12 +129,12 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              <div  id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
               
                     <div id="sidebarMenu">
-
-                      <div id="followProblem" onClick={this.submitVote}>Vote</div>
-
+                      <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+                        <div id="followProblem" onClick={this.submitVote}>Vote</div>
+                      </Link>
                       <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                         <div id="SBButton">Proposals</div>
                       </Link>
