@@ -92,9 +92,11 @@ export default class FullSolutionContent extends React.Component {
               <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>
                 <img src={require('../../assets/editBlue.svg')} id="editSolutionButton" width="20" height="20" alt="Edit Button" />
               </Link>
-              
-                <img src={require('../../assets/delete.svg')} id="deleteSolutionButton" width="20" height="20" alt="Edit Button" onClick={this.deleteSolution} />              
-                
+
+              <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/delete`}>
+                <img src={require('../../assets/delete.svg')} id="deleteSolutionButton" width="20" height="20" alt="Edit Button" />              
+              </Link>
+
               <div id="prosConsMenu">
                 <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
                     <div id="prosButton">Pros</div>

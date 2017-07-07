@@ -26,7 +26,7 @@ export default class TutorialWelcomeContent extends React.Component {
               </div>*/}
               <div id="tutorialProseDescriptions">
                  Here it is your task to <span id="blue"> divide four of the largest 
-                 cutting edge projects of humanity</span> into sub projects or create your own project. 
+                 cutting edge projects of humanity</span> into sub projects or <span id="blue">create your own project.</span> 
                  <br />
                  <br />
                  Vote to<span id="blue"> determine the rank</span> of each sub project. 
