@@ -4,7 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 
 
-export default class EditSolutionForm extends React.Component {
+export default class SolutionDeleteForm extends React.Component {
 
   constructor(props){
     super(props);
@@ -17,24 +17,24 @@ export default class EditSolutionForm extends React.Component {
       solutionInfo: '',
     }
 
-    this.updateSolution = this.updateSolution.bind(this);
+    this.deleteSolution = this.deleteSolution.bind(this);
   };
 
   deleteSolution() {
   
-  //Delete question
+//   Delete proposal
    var self = this
     axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/delete?id='+this.props.params.solutionID, {
         params: {
-          id: this.props.params.questID,
+          id: this.props.params.solutionID,
           username: cookie.load('userName')
         }
       })
       .then(function (result) {
-        document.location = '/problem/'+ self.props.params.probID + '/solutions/top'
-      })
+      document.location = '/problem/'+ self.props.params.probID + '/solutions/top'
+    })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request.")
       });
   }
 
@@ -47,8 +47,8 @@ export default class EditSolutionForm extends React.Component {
                     <div>Are you sure you would like to delete this proposal?</div>
                     <br />
                     <div onClick={this.deleteSolution} id="deleteButton">Delete</div>
-                    <Link to={`/problem/${this.props.params.probID}/questions`}>
-                    <div id="returnButton">Return</div>
+                    <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/full`}>
+                        <div id="returnButton">Return</div>
                     </Link>
             </fieldset>
           </form>

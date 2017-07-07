@@ -58,7 +58,6 @@ export default class EditSolutionForm extends React.Component {
       references: self.state.references
     })
     .then(function (result) {
-      document.location = window.location.pathname 
       document.location = '/fullsolution/'+ self.props.params.probID + '/' + self.props.params.solutionID + '/full'
     })
     .catch(function (error) {
