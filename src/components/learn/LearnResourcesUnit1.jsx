@@ -24,7 +24,7 @@ export default class LearnResourcesUnit1 extends React.Component {
 
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
-           Type: 3, //TODO: Change to correct type
+           Type: 8, //TODO: Change to correct type
            TypeID: resource.ID,
            username : cookie.load("userName"),
            

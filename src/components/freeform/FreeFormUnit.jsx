@@ -24,7 +24,7 @@ export default class FreeFormUnit extends React.Component {
 
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
-           Type: 3,
+           Type: 6,
            TypeID: freeForm.ID,
            username : cookie.load("userName"),
            

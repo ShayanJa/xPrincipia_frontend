@@ -23,7 +23,7 @@ export default class LearnContentUnit1 extends React.Component {
 
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
-           Type: 3,
+           Type: 7,
            TypeID: learnItem.ID,
            username : cookie.load("userName"),
            
