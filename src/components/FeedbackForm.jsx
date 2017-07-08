@@ -8,7 +8,7 @@ constructor(){
   super();
 
   this.state= {
-    suggestion: '',
+    feedback: '',
   }
 
   this.postFeedback = this.postFeedback.bind(this);
@@ -21,7 +21,7 @@ this.state.feedback = document.getElementById('addSuggestion').value
 
  axios.post( Config.API + '/auth/feedback/create', {
     username: cookie.load('userName'),
-    description : this.state.suggestion,
+    description : this.state.feedback,
   })
   .then(function (result) {
     alert("Thanks for the Feedback! We will use this info to improve your experience in the future")
