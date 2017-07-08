@@ -13,49 +13,26 @@ export default class ProsDeleteForm extends React.Component {
     pro: '',
   }
 
-    this.postPro = this.postPro.bind(this);
+    this.deletePro = this.deletePro.bind(this);
   };
 
-postPro() {
-  //Read field items into component state
-  this.state.pro = document.getElementById('questionTextArea').value
-
-  //if User is on a solution post with type 1
-  //solutionID will be available in props
-  if(this.props.solutionID){
-    axios.post( Config.API + '/auth/pros/create', {
-    type:'1',
-    typeID: this.props.solutionID,
-    username: cookie.load('userName'),
-    description : this.state.pro,
-  })
-    .then(function (result) {
-      document.location = window.location.pathname 
-    })
-    .catch(function (error) {
-      alert("I'm sorry there was a problem with your request")
-      });
-    } 
-
-    //else post to problem
-    //probID will be used
-    else {
-      axios.post( Config.API + '/auth/pros/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.pro,
-    })
+  deletePro() {
+  
+  //Delete question
+      var self = this
+      axios.delete( Config.API + '/auth/pros/delete?id='+this.props.params.proID, {
+        params: {
+          id: this.props.params.questID,
+          username: cookie.load('userName')
+        }
+      })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/fullsolution/'+ self.props.params.probID + '/' + self.props.params.solutionID + '/pros'
       })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request.")
       });
-    }
-
   }
-  
 
 
 
@@ -67,7 +44,7 @@ postPro() {
                     <legend>Delete Pro</legend>
                          <div>Are you sure you would like to delete this Pro?</div>
                          <br />
-                         <div onClick={this.postPro} id="deleteButton">Delete</div>
+                         <div onClick={this.deletePro} id="deleteButton">Delete</div>
                          <Link to='/problem/${pro.TypeID}/pros'>
                             <div id="returnButton">Return</div>
                          </Link>

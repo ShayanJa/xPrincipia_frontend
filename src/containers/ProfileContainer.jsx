@@ -113,7 +113,7 @@ export default class ProfileContainer extends React.Component {
             </div>
             <div id="userOptions">
                 <Link to={`/profile`} activeClassName="activeBlue">
-                    <div id="userProblemsSolutionsButton">User Activity</div>
+                    <div id="userProblemsSolutionsButton">Activity</div>
                 </Link>
                 {/*<Link to={`/profile/resume`} activeClassName="activeBlue">
                     <div id="userProblemsSolutionsButton">Resume</div>
