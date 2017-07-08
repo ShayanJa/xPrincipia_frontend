@@ -44,7 +44,7 @@ updateCon() {
       description : this.state.con,
     })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/fullsolution/'+ self.props.params.probID + '/' + self.props.params.solutionID + '/cons'
       })
       .catch(function (error) {
         alert("I'm sorry, there was a problem with your request.")
@@ -65,7 +65,7 @@ updateCon() {
                          <textarea name="questionText" required="required" id="conEditTextArea" autoFocus ></textarea>
                          <br />
                          <div onClick={this.updateCon} id="editButton">Edit</div>
-                         <Link to='/problem/${con.TypeID}/cons'>
+                         <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

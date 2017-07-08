@@ -37,6 +37,7 @@ updatePro() {
   //Read field items into component state
   this.state.pro = document.getElementById('proEditTextArea').value
 
+  var self = this
   axios.put( Config.API + '/auth/pros/update?id='+this.props.params.proID, {
       type:'1',
       typeID: this.props.params.solutionID,
@@ -44,7 +45,7 @@ updatePro() {
       description : this.state.pro,
     })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/fullsolution/' + self.props.params.probID + '/' + self.props.params.solutionID + '/pros'
       })
       .catch(function (error) {
         alert("I'm sorry, there was a problem with your request.")
@@ -65,7 +66,7 @@ updatePro() {
                          <textarea name="questionText" required="required" id="proEditTextArea" autoFocus ></textarea>
                          <br />
                          <div onClick={this.updatePro} id="editButton">Edit</div>
-                         <Link to='/problem/${pro.TypeID}/pros'>
+                         <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
                           <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
