@@ -23,7 +23,6 @@ constructor(props){
                 self.setState({
                     cons: response.data
                 })
-                self.props.pros.ProblemID = self.props.params.probID
             })  
         } else {
             return axios.get( Config.API + '/auth/cons/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
@@ -43,7 +42,7 @@ constructor(props){
           transitionEnter={false}
           transitionLeave={false}>*/}
           {this.props.children}
-            <ConsUnit cons={this.state.cons} />
+            <ConsUnit cons={this.state.cons} probID={this.props.params.probID}/>
             <SideBarMore />
         {/*</ReactCSSTransitionGroup>*/}
         </div>    
