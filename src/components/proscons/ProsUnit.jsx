@@ -23,7 +23,7 @@ export default class ProsUnit extends React.Component {
 
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
-           Type: 3,
+           Type: 9,
            TypeID: pro.ID,
            username : cookie.load("userName"),
            

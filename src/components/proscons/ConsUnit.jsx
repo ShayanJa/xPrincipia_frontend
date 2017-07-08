@@ -23,7 +23,7 @@ export default class ConsUnit extends React.Component {
         var self = this;
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
-           Type: 3,
+           Type: 10,
            TypeID: con.ID,
            username : cookie.load("userName"),
            
