@@ -11,43 +11,27 @@ constructor(){
     suggestion: '',
   }
 
-  this.postSuggestion = this.postSuggestion.bind(this);
+  this.postFeedback = this.postFeedback.bind(this);
 };
 
-postSuggestion() {
+postFeedback() {
   //Read field items into component state
-this.state.suggestion = document.getElementById('suggestionTextArea').value
+this.state.feedback = document.getElementById('addSuggestion').value
 
-if(this.props.solutionID){
- axios.post( Config.API + '/auth/suggestions/create', {
+
+ axios.post( Config.API + '/auth/feedback/create', {
     username: cookie.load('userName'),
-    type:'1',
-    typeID: this.props.solutionID,
     description : this.state.suggestion,
   })
   .then(function (result) {
+    alert("Thanks for the Feedback! We will use this info to improve your experience in the future")
     document.location = window.location.pathname 
   })
   .catch(function (error) {
     alert("I'm sorry there was a problem with your request")
   });
-} 
-  //else post to problem
-  //probID will be used
-    else {
-      axios.post( Config.API + '/auth/suggestions/create', {
-      type:'0',
-      typeID: this.props.probID,
-      username: cookie.load('userName'),
-      description : this.state.suggestion,
-    })
-      .then(function (result) {
-        document.location = window.location.pathname 
-      })
-      .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
-      });
-    }
+
+  
 }
 
 
@@ -63,7 +47,7 @@ if(this.props.solutionID){
                     <legend>User Feedback</legend>
                          <textarea name="feedbackText" required="required" id="feedbackTextArea" autoFocus ></textarea>
                          <br />
-                         <input type="button" value="Submit" onClick={this.postSuggestion} id="addSuggestion"/>
+                         <input type="button" value="Submit" onClick={this.postFeedback} id="addSuggestion"/>
                 </fieldset>
             </form>
       </div>
