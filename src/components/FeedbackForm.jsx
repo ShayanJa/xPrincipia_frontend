@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import {Config} from '../config.js'
 
 export default class FeedbackForm extends React.Component {
-
 constructor(){
   super();
 
@@ -19,7 +19,7 @@ postSuggestion() {
 this.state.suggestion = document.getElementById('suggestionTextArea').value
 
 if(this.props.solutionID){
- axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/create', {
+ axios.post( Config.API + '/auth/suggestions/create', {
     username: cookie.load('userName'),
     type:'1',
     typeID: this.props.solutionID,
@@ -35,7 +35,7 @@ if(this.props.solutionID){
   //else post to problem
   //probID will be used
     else {
-      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/create', {
+      axios.post( Config.API + '/auth/suggestions/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-
+import {Config} from '../../config.js'
 
 export default class VersionForm extends React.Component {
 
@@ -21,7 +21,7 @@ export default class VersionForm extends React.Component {
   };
   componentWillMount(){
       var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      return axios.get( Config.API + '/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
           //set other data
@@ -47,7 +47,7 @@ export default class VersionForm extends React.Component {
     this.state.description = document.getElementById('solutionDescriptionForm').value
     this.state.references = document.getElementById('solutionReferencesForm').value
 
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/create', {
+  axios.post( Config.API + '/auth/solutions/create', {
       username: cookie.load('userName'),
       problemID:this.props.params.probID,
       title : this.state.title,

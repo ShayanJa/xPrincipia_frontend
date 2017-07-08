@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class LearnContentEditForm extends React.Component {
 
@@ -17,7 +18,7 @@ export default class LearnContentEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/ID?id='+this.props.params.learnItemID).then(function (response) {
+        return axios.get( Config.API + '/auth/learnItems/ID?id='+this.props.params.learnItemID).then(function (response) {
           self.setState({
               learnItem: response.data
           })
@@ -37,7 +38,7 @@ updateLearnItem() {
   this.state.learnItem = document.getElementById('questionEditTextArea').value
   console.log(this.state.learnItem)
   var self = this
-  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/update?id='+this.props.params.learnItemID, {
+  axios.put( Config.API + '/auth/learnItems/update?id='+this.props.params.learnItemID, {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

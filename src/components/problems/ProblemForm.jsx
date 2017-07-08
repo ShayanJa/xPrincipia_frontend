@@ -3,7 +3,7 @@ import { Redirect, Router, Route, IndexRoute, browserHistory } from 'react-route
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
-
+import {Config} from '../../config.js'
 
 export default class ProblemForm extends React.Component {
 
@@ -28,7 +28,7 @@ export default class ProblemForm extends React.Component {
     this.state.summary = document.getElementById('problemSummaryForm').value
   
     var self = this
-    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/create', {
+    axios.post( Config.API + '/auth/problems/create', {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,

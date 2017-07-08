@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-
+import {Config} from '../../config.js'
 
 export default class LearnResourcesUnit1 extends React.Component {
     constructor(props){
@@ -23,7 +23,7 @@ export default class LearnResourcesUnit1 extends React.Component {
 	renderItem(resource) {
 
        function  submitVote() {
-       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+       axios.post( Config.API + '/auth/vote/create', {
            Type: 3, //TODO: Change to correct type
            TypeID: resource.ID,
            username : cookie.load("userName"),

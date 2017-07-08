@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class QuestionDeleteForm extends React.Component {
 
@@ -19,7 +20,7 @@ deleteQuestion() {
   
 //Delete question
       var self = this
-      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/delete?id='+this.props.params.questID, {
+      axios.delete( Config.API + '/auth/questions/delete?id='+this.props.params.questID, {
         params: {
           id: this.props.params.questID,
           username: cookie.load('userName')

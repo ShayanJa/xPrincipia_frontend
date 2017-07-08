@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import LearnContentUnit1 from '../components/learn/LearnContentUnit1.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
-
+import {Config} from '../config.js'
 
 export default class LearnContentContainer1 extends React.Component {
 constructor(props){
@@ -15,7 +15,7 @@ constructor(props){
     };
     componentWillMount(){
         var self = this;
-            return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/typeID?id='+this.props.params.probID).then(function (response) {
+            return axios.get( Config.API + '/auth/learnItems/typeID?id='+this.props.params.probID).then(function (response) {
                 self.setState({
                     learnItems: response.data
                 })

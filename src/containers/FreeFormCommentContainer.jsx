@@ -3,6 +3,7 @@ import axios from 'axios';
 import CommentUnit from '../components/comments/CommentUnit.jsx';
 import CommentForm from '../components/comments/CommentForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
+import {Config} from '../config.js'
 
 export default class FreeFormCommentContainer extends React.Component {
    constructor(props){
@@ -17,7 +18,7 @@ export default class FreeFormCommentContainer extends React.Component {
     };
         componentDidMount(){
         var self = this;
-         axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/comments/suggestionID?id='+this.props.params.suggID).then(function (response) {
+         axios.get( Config.API + '/auth/comments/suggestionID?id='+this.props.params.suggID).then(function (response) {
             self.setState({
                 comments: response.data,
             })

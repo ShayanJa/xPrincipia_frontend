@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import cookie from 'react-cookie'
 import axios from 'axios'
+import {Config} from '../config.js'
 
 export default class LoginUnit extends React.Component {
   constructor(){
@@ -25,7 +26,7 @@ export default class LoginUnit extends React.Component {
     this.state.username = document.getElementById('loginEmail').value
     this.state.password = document.getElementById('loginPassword').value
 
-    return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
+    return axios.post( Config.API + '/login', {
       username : this.state.username,
       password: this.state.password
     })
@@ -37,7 +38,7 @@ export default class LoginUnit extends React.Component {
       cookie.save('userName', self.state.username)
       
       // Store token/Username in db table
-      return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
+      return axios.post( Config.API + '/auth/saveToken',  {
         username : self.state.username,
         token : "Bearer " + self.state.userToken
       }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){

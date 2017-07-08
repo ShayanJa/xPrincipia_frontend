@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class ProsEditForm extends React.Component {
 
@@ -17,7 +18,7 @@ export default class ProsEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/pros/ID?id='+this.props.params.proID).then(function (response) {
+        return axios.get( Config.API + '/auth/pros/ID?id='+this.props.params.proID).then(function (response) {
           self.setState({
               pro: response.data
           })
@@ -36,7 +37,7 @@ updatePro() {
   //Read field items into component state
   this.state.pro = document.getElementById('proEditTextArea').value
 
-  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/pros/update?id='+this.props.params.proID, {
+  axios.put( Config.API + '/auth/pros/update?id='+this.props.params.proID, {
       type:'1',
       typeID: this.props.params.solutionID,
       username: cookie.load('userName'),

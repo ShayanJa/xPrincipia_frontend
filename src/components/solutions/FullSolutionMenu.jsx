@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import {Config} from '../../config.js'
 
 export default class FullSolutionMenu extends React.Component {
   constructor(props){
@@ -16,7 +17,7 @@ export default class FullSolutionMenu extends React.Component {
     //initialize the component with this state
     componentDidMount(){
       var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      return axios.get( Config.API + '/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           self.setState({
               solutionInfo: response.data,
           })
@@ -31,7 +32,7 @@ export default class FullSolutionMenu extends React.Component {
   //On recieving new props
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
+      return axios.get( Config.API + '/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
           self.setState({
               solutionInfo: response.data,  
           })
@@ -44,7 +45,7 @@ export default class FullSolutionMenu extends React.Component {
 
   }
   submitVote() {
-       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+       axios.post( Config.API + '/auth/vote/create', {
            Type: 1,
            TypeID: this.state.solutionInfo.ID,
            username : cookie.load("userName"),

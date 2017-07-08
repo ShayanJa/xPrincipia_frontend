@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
-
+import {Config} from '../../config.js'
 
 export default class SolutionDeleteForm extends React.Component {
 
@@ -24,7 +24,7 @@ export default class SolutionDeleteForm extends React.Component {
   
 //   Delete proposal
    var self = this
-    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/delete?id='+this.props.params.solutionID, {
+    axios.delete( Config.API + '/auth/solutions/delete?id='+this.props.params.solutionID, {
         params: {
           id: this.props.params.solutionID,
           username: cookie.load('userName')

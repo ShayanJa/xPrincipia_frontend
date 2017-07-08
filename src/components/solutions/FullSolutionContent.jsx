@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+import {Config} from '../../config.js'
 
 export default class FullSolutionContent extends React.Component {
   constructor(props){
@@ -18,7 +19,7 @@ export default class FullSolutionContent extends React.Component {
     //initialize the component with this state
     componentDidMount(){
       var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      return axios.get( Config.API + '/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           self.setState({
               solutionInfo: response.data,
           })
@@ -31,7 +32,7 @@ export default class FullSolutionContent extends React.Component {
   //On recieving new props
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
+      return axios.get( Config.API + '/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
           self.setState({
               solutionInfo: response.data,  
           })
@@ -47,7 +48,7 @@ export default class FullSolutionContent extends React.Component {
   
   //Delete question
    var self = this
-    axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/delete?id='+this.props.params.solutionID, {
+    axios.delete( Config.API + '/auth/solutions/delete?id='+this.props.params.solutionID, {
         params: {
           id: this.props.params.solutionID,
           username: cookie.load('userName')
@@ -61,7 +62,7 @@ export default class FullSolutionContent extends React.Component {
       });
   }
   submitVote() {
-       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+       axios.post( Config.API + '/auth/vote/create', {
            Type: 1,
            TypeID: this.state.solutionInfo.ID,
            username : cookie.load("userName"),

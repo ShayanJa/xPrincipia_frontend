@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class SuggestionEditForm extends React.Component {
 
@@ -17,7 +18,7 @@ export default class SuggestionEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/ID?id='+this.props.params.suggID).then(function (response) {
+        return axios.get( Config.API + '/auth/suggestions/ID?id='+this.props.params.suggID).then(function (response) {
           self.setState({
               suggestion: response.data
           })
@@ -36,7 +37,7 @@ export default class SuggestionEditForm extends React.Component {
     //Read field items into component state
     this.state.suggestion = document.getElementById('questionEditTextArea').value
 
-    axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/suggestions/update?id='+this.props.params.suggID, {
+    axios.put( Config.API + '/auth/suggestions/update?id='+this.props.params.suggID, {
         type:'0',
         typeID: this.props.params.probID,
         username: cookie.load('userName'),

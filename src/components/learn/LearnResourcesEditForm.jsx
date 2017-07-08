@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class LearnResourcesEditForm extends React.Component {
 
@@ -17,7 +18,7 @@ export default class LearnResourcesEditForm extends React.Component {
 
   componentWillMount(){
       var self = this; ///TODO Change Resouces to resources when backend Changes
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/ID?id='+this.props.params.resourceID).then(function (response) {
+        return axios.get( Config.API + '/auth/resources/ID?id='+this.props.params.resourceID).then(function (response) {
           self.setState({
               resource: response.data
           })
@@ -35,7 +36,7 @@ export default class LearnResourcesEditForm extends React.Component {
 updateResource() {
   this.state.resource = document.getElementById('questionEditTextArea').value
 
-  axios.put('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/resources/update?id='+this.props.params.resourceID, {
+  axios.put( Config.API + '/auth/resources/update?id='+this.props.params.resourceID, {
       type:'0',
       typeID: this.props.params.probID,
       username: cookie.load('userName'),

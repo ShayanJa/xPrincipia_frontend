@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import FreeFormUnit from '../components/freeform/FreeFormUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
-
+import {Config} from '../config.js'
 
 export default class FreeFormContainer extends React.Component {
 constructor(props){
@@ -15,7 +15,7 @@ constructor(props){
     };
     componentDidMount(){
         var self = this;
-            return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/typeID?id='+this.props.params.probID).then(function (response) {
+            return axios.get( Config.API + '/auth/freeForms/typeID?id='+this.props.params.probID).then(function (response) {
                 self.setState({
                     freeForms: response.data
                 })

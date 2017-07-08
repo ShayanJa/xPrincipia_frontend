@@ -4,6 +4,7 @@ import cookie from 'react-cookie'
 import './assets/App.css';
 import './assets/index.css';
 
+
 class App extends React.Component {
     constructor(props){
       super(props);

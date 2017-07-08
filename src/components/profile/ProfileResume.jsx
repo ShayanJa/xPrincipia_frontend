@@ -3,6 +3,7 @@ import Header from '../../containers/Header.jsx';
 import ProfileUnit from '../../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios'
+import {Config} from '../../config.js'
 
 export default class ProfileResume extends React.Component {
     constructor(){
@@ -29,23 +30,23 @@ export default class ProfileResume extends React.Component {
 
     componentDidMount(){
         var self = this;
-        axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
+        axios.get( Config.API + '/auth/users/followedSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 followedSolutions: response.data,
                 currentItems: response.data,
             })
         })
-        axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
+        axios.get( Config.API + '/auth/users/createdSolutions?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 createdSolutions: response.data,
             })
         })
-        axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/users/createdProblems?username='+cookie.load('userName')).then(function (response) {
+        axios.get( Config.API + '/auth/users/createdProblems?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 createdProblems: response.data,
             })
         })
-         axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/users/followedProblems?username='+cookie.load('userName')).then(function (response) {
+         axios.get( Config.API + '/auth/users/followedProblems?username='+cookie.load('userName')).then(function (response) {
             self.setState({
                 followedProblems: response.data,
             })

@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class FreeFormFlagForm extends React.Component {
 
@@ -22,7 +23,7 @@ postFreeForm() {
   //if User is on a solution post with type 1
   //solutionID will be available in props
   if(this.props.solutionID){
-    axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/create', {
+    axios.post( Config.API + '/auth/freeForms/create', {
     type:'1',
     typeID: this.props.solutionID,
     username: cookie.load('userName'),
@@ -39,7 +40,7 @@ postFreeForm() {
     //else post to problem
     //probID will be used
     else {
-      axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/freeForms/create', {
+      axios.post( Config.API + '/auth/freeForms/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

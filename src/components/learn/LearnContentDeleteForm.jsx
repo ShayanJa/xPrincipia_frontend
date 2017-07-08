@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class LearnContentDeleteForm extends React.Component {
 
@@ -18,7 +19,7 @@ export default class LearnContentDeleteForm extends React.Component {
 deleteLearnItem() {
 //Delete question
       var self = this
-      axios.delete('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/learnItems/delete?', {
+      axios.delete( Config.API + '/auth/learnItems/delete?', {
         params: {
           id: this.props.params.learnItemID,
           username: cookie.load('userName')

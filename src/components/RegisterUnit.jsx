@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import {Config} from '../config.js'
 
 export default class RegisterUnit extends React.Component {
 
@@ -31,14 +32,14 @@ constructor(){
     this.state.username = document.getElementById('registerUserName').value
 
     var self = this;
-    return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/register', {
+    return axios.post( Config.API + '/register', {
         fullName: this.state.fullname,
         email: this.state.email,
         username : this.state.username,
         password: this.state.password
       })
       .then(function (result) {
-        return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/login', {
+        return axios.post( Config.API + '/login', {
           username : self.state.username,
           password: self.state.password
         })
@@ -50,7 +51,7 @@ constructor(){
           cookie.save('userName', self.state.username)
           
           // Store token/Username in db table
-          return axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/saveToken',  {
+          return axios.post( Config.API + '/auth/saveToken',  {
             username : self.state.username,
             token : "Bearer " + self.state.userToken
           }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){

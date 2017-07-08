@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import { Link } from 'react-router';
+import {Config} from '../../config.js'
 
 export default class CommentEditForm extends React.Component {
 
@@ -17,7 +18,7 @@ export default class CommentEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get( Config.API + '/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
           self.setState({
               questions: response.data
           })
@@ -36,7 +37,7 @@ postQuestion() {
   //Read field items into component state
   this.state.question = document.getElementById('questionTextArea').value
 
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/questions/create', {
+  axios.post( Config.API + '/auth/questions/create', {
       type:'0',
       typeID: this.props.probID,
       username: cookie.load('userName'),

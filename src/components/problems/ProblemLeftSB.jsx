@@ -4,6 +4,7 @@ import axios from 'axios';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import TutorialSolutionPage from '../tutorials/TutorialSolutionPage.jsx';
+import {Config} from '../../config.js'
 
 export default class ProblemLeftSB extends React.Component {
   constructor(props){
@@ -16,7 +17,7 @@ export default class ProblemLeftSB extends React.Component {
     };
     componentWillMount(){
       var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
+      return axios.get( Config.API + '/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
           if (response.data.ParentID === 0){
@@ -39,7 +40,7 @@ export default class ProblemLeftSB extends React.Component {
   }
   componentWillReceiveProps(newProps){
     var self = this;
-      return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
+      return axios.get( Config.API + '/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
           //if parent ID is 0 then the problem is at the root of the tree
           // return id as the parentID for routing purposes
           if (response.data.ParentID === 0){
@@ -64,7 +65,7 @@ export default class ProblemLeftSB extends React.Component {
   }
   submitVote() {
       var self = this
-       axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/vote/create', {
+       axios.post( Config.API + '/auth/vote/create', {
            Type: 0,
            TypeID: this.state.problemInfo.ID,
            username : cookie.load("userName"),

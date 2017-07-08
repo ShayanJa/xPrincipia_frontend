@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios'
 import cookie from 'react-cookie';
-// import $ from 'jquery';
+import {Config} from '../../config.js'
 
 export default class WelcomeCreateForm extends React.Component {
 
@@ -28,7 +28,7 @@ export default class WelcomeCreateForm extends React.Component {
     this.state.summary = document.getElementById('problemSummaryForm').value
     // this.state.description = document.getElementById('problemDescriptionForm').value
   
-  axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/create', {
+  axios.post( Config.API + '/auth/problems/create', {
       username: cookie.load('userName'),
       parentID: this.props.params.probID,
       title : this.state.title,

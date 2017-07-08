@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
+import {Config} from '../../config.js'
 
 export default class AnswerForm extends React.Component {
 
@@ -18,7 +19,7 @@ postAnswer() {
   //Read field items into component state
   this.state.answer = document.getElementById('answerTextArea').value
 // Ajax post answer request
-axios.post('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/answers/create', {
+axios.post( Config.API + '/auth/answers/create', {
   questionID: this.props.params.questID,
   username: cookie.load('userName'),
   description : this.state.answer,

@@ -5,6 +5,7 @@ import SideBarMore from '../components/SideBarMore.jsx';
 import VersionForm from '../components/versions/VersionForm.jsx';
 import VersionsUnit from '../components/versions/VersionsUnit.jsx';
 import axios from 'axios'
+import {Config} from '../config.js'
 
 export default class VersionsContainer extends React.Component {
   constructor(props){
@@ -18,7 +19,7 @@ export default class VersionsContainer extends React.Component {
         componentDidMount(){
         var self = this;
         window.scrollTo(0,0);
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/solutions/problemID?id='+this.props.params.probID).then(function (response) {
+        return axios.get( Config.API + '/auth/solutions/problemID?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 solutions: response.data
             })

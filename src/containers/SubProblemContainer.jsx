@@ -3,6 +3,7 @@ import {Link} from 'react-router';
 import axios from 'axios';
 import SubProblemUnit from '../components/problems/SubProblemUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
+import {Config} from '../config.js'
 
 export default class SubProblemContainer extends React.Component {
   constructor(props){
@@ -16,7 +17,7 @@ export default class SubProblemContainer extends React.Component {
     componentDidMount(){
         var self = this;
         window.scrollTo(0,0);
-        return axios.get('http://ec2-13-58-239-116.us-east-2.compute.amazonaws.com/auth/problems/subproblems?id='+this.props.params.probID).then(function (response) {
+        return axios.get( Config.API + '/auth/problems/subproblems?id='+this.props.params.probID).then(function (response) {
             self.setState({
                 problems: response.data
             })
