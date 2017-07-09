@@ -113,6 +113,9 @@ export default class FullProblem extends React.Component {
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
+            <div id="proposalCreator">
+              {this.state.problemInfo.OriginalPosterUsername}
+            </div>
           </div>
         </div>
         <div id="problemRow2">
