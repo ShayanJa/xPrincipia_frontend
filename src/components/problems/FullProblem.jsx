@@ -92,7 +92,8 @@ export default class FullProblem extends React.Component {
 
    render() {
 
-      return (
+       if (this.state.problemInfo.OriginalPosterUsername === cookie.load('userName')) {
+           return (
 
       <div id="maxContainerColumn">
         <ReactCSSTransitionGroup
@@ -113,7 +114,99 @@ export default class FullProblem extends React.Component {
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
-            <div id="proposalCreator">
+            <div id="projectCreator">
+              {this.state.problemInfo.OriginalPosterUsername}
+            </div>
+            {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>*/}
+              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" align="middle" />
+            {/*</Link>*/}
+          </div>
+        </div>
+        <div id="problemRow2">
+          <div id="fullProblem">
+            <div id="problemAdditionalInfoLabel">Additional Information
+            </div>
+            <p id="problemSummary">
+              {this.state.problemInfo.Summary}
+            </p>
+            <div id="createSPButtonBox">
+              <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                <h1 id="createSPButton">Create a Sub Project</h1>
+              </Link>
+            </div>
+          </div>
+          <div id="columnContainer">
+            {/*<div id="fullProblemHeader">*/}
+              <div  id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              
+                    <div id="sidebarMenu">
+                      <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+                        <div id="followProblem" onClick={this.submitVote}>Vote</div>
+                      </Link>
+                      <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
+                        <div id="SBButton">Proposals</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/questions`}>
+                        <div id="SBButton">Discuss</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
+                        <div id="SBButton">Learn</div>
+                      </Link>
+
+                      {/*<Link to={`/problem/${this.props.probID}/theory`}>
+                        <div id="SBButton">Theory</div>
+                      </Link> */}
+
+                    </div>
+                    {/*Used for mobile*/}
+                    <div id="createSPButtonBox2">
+                      <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                        <h1 id="createSPButton">Create a Sub Project</h1>
+                      </Link>
+                    </div>
+              
+            {/*</div>*/}
+            {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
+          </div>
+      </div>
+        {/*<div id="SPLabel">
+          Sub Projects
+        </div>*/}
+        <div id="sidebarSB">
+          {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        </div>
+
+        {/*<div id="tutorialProblemButtonDiv">
+          <img src={require('../../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        </div>*/}
+        
+        <TutorialProjectContent />
+        </ReactCSSTransitionGroup>
+      </div>
+               )    } else {
+    return (
+            <div id="maxContainerColumn">
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
+        <div id="problemRow1">
+          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+          </Link>
+
+          {/*Used for mobile*/}
+          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" align="middle" alt="Back arrow, blue up arrow" />
+          </Link>
+
+          <div id="problemIntro">
+            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
+            <div id="projectCreator">
               {this.state.problemInfo.OriginalPosterUsername}
             </div>
           </div>
@@ -180,11 +273,9 @@ export default class FullProblem extends React.Component {
         <TutorialProjectContent />
         </ReactCSSTransitionGroup>
       </div>
-
-      
       );
    }
-}
+}}
 
 //convert float to Decimal
 function floatToDecimal(float) {

@@ -555,7 +555,7 @@
     }
     #commentSBButton:hover, #commentSBButtonUser:hover {
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
     }
 
     #flagSBButton, #deleteSBButton {
@@ -572,11 +572,11 @@
       /*color: #0f131c !important;
       background-color: #ff7f7f;*/
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(255,127,127,0.5);
     }
     #editSBButton:hover, #editSBButtonAnswer:hover {
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
     }
     #flagSBButton:active {
       color: #ff7f7f;
@@ -766,7 +766,7 @@
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: rgba(0,220,255,0);
-    	width: 86%;
+    	width: 50%;
     	margin: 0 auto;
       margin-top: 3%;
       margin-bottom: 2%;
@@ -2351,8 +2351,8 @@
   background-color: rgba(0,255,220,0);
   border: 1px solid #00dcff;
   border-radius: 2px;
-  /*margin-top: 5px;*/
-  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 40%;
   transition: all 0.5s ease 0s;
 }
 #addAnswer {
@@ -2554,7 +2554,7 @@
 #flagSolutionButton, #deleteSolutionButton {
   display: block;
   margin: 0 auto;
-  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);*/
   transition: all 0.5s ease 0s
 }
 #deleteSolutionButton {
@@ -2565,9 +2565,8 @@
   display: block;
   margin: 0 auto;
   padding: 3px;
-  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
   transition: all 0.5s ease 0s
-
 }
 
 #flagSolutionButton:hover, #deleteSolutionButton:hover {
@@ -2578,7 +2577,17 @@
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
-
+#editProjectButton {
+  display: block;
+  margin: 0 auto;
+  padding: 3px;
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  transition: all 0.5s ease 0s
+}
+#editProjectButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
 #backArrow {
   flex: 1 1 auto;
   padding: 4px;
@@ -3370,7 +3379,23 @@ a#learnResourcesLink:hover {
   letter-spacing: 8px;
   padding: 5px;
   width: 100%;
-  /**/
+  transition: all 0.5s ease 0s;
+}
+#proposalCreator:hover {
+  color: #ffffff;
+}
+#projectCreator {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+#projectCreator:hover {
+  color: #ffffff;
 }
 #createDate {
   flex: 1 1 auto;
@@ -4025,7 +4050,7 @@ input#submitNewVersion:hover {
 #deleteButton, #editButton, #flagButton, #returnButton {
   font-size: 120%;
   color: #ff7f7f;
-  background-color: inherit;
+  background-color: rgba(255,127,127,0);
   border: 1px solid #ff7f7f;
   border-radius: 2px;
   margin-top: 5px;
@@ -4035,6 +4060,7 @@ input#submitNewVersion:hover {
   padding: 5px;
   float: right;
   margin-right: 10%;
+  transition: all 0.5s ease 0s;
 }
 #returnButton {
   color: #00ffdc;
@@ -4046,7 +4072,7 @@ input#submitNewVersion:hover {
 #deleteButton:hover, #editButton:hover {
   cursor: pointer;
   color: #0f131c;
-  background-color: #ff7f7f;
+  background-color: rgba(255,127,127,1);
 }
 #returnButton:hover {
   cursor: pointer;

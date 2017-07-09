@@ -29,21 +29,21 @@ export default class TutorialProjectContent extends React.Component {
                   it is the most important in its <span id="blue"> sub project level</span>.
                  <br />
                  <br />
-                 View this project's <span id="blue">own sub projects</span>.
+                 View this project's <span id="blue">own sub projects </span>and<span id="blue"> create new ones.</span>
                  <br />
                  <br />
                  <span id="blue">Disscuss</span> the project by asking questions,
                   giving suggestions or engaging in freeform discussion. 
                  <br />
                  <br />
-                 <span id="blue">Learn </span>about each subject or<span id="blue"> teach</span> others. 
+                 <span id="blue">Learn </span>about each subject and<span id="blue"> teach others.</span>
                  <br />
                  <br />
-                 When you are ready, visit the proposals and
-                 <span id="blue"> vote for the best</span>.
+                 When you are ready,<span id="blue"> visit the proposals </span>and
+                <span id="blue"> vote for the best.</span>
                  <br />
                  <br />
-                 Finally, <span id="blue"> create a proposal</span> an analyze the pros and cons of others. 
+                 Finally, <span id="blue"> create your own proposal</span> and analyze the pros and cons of others. 
                  <br />
                  <br />
               </div>

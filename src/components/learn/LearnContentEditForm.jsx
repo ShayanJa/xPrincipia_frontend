@@ -62,7 +62,7 @@ updateLearnItem() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset id="redFieldset">
-                    <legend id="redLegend">Edit Learn Content</legend>
+                    <legend id="redLegend">Edit Lesson</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
                          <div onClick={this.updateLearnItem} id="editButton">Edit</div>
