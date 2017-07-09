@@ -46,6 +46,7 @@ import ProblemLearnMenu from './components/problems/ProblemLearnMenu.jsx';
 import ProblemLeftSB from './components/problems/ProblemLeftSB.jsx';
 import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
+import ProjectEditForm from './components/problems/ProjectEditForm.jsx';
 import ProfileAbout from './components/profile/ProfileAbout.jsx';
 import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
@@ -155,6 +156,7 @@ ReactDOM.render(
         <Route path='/problem/:probID/sideBar' component={SideBarProblem}>
           <IndexRoute component={SubProblemContainer}></IndexRoute>
           <Route path='/problem/:probID/create' component={ProblemForm}></Route>
+          <Route path='/problem/:probID/edit' component={ProjectEditForm}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
         </Route>
       </Route>

@@ -666,10 +666,24 @@
     	text-align: left;
     	height: 5em;
     }
+    #projectEditSummaryForm {
+      font-family: 'Open Sans';
+    	text-align: left;
+    	height: 5em;
+    }
     #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, {
       height: 10em;
     }
     #problemTitleForm {
+      font-family: 'Alegreya Sans SC', sans-serif;
+      color: #ffffff;
+      margin: 0 auto;
+      letter-spacing: 6px;
+      border: 1px solid #ffffff;
+      border-radius: 3px;
+      box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+    }
+    #projectEditTitleForm {
       font-family: 'Alegreya Sans SC', sans-serif;
       color: #ffffff;
       margin: 0 auto;

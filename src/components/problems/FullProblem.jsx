@@ -117,9 +117,9 @@ export default class FullProblem extends React.Component {
             <div id="projectCreator">
               {this.state.problemInfo.OriginalPosterUsername}
             </div>
-            {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/edit`}>*/}
+            <Link to={`/problem/${this.props.params.probID}/edit`}>
               <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" align="middle" />
-            {/*</Link>*/}
+            </Link>
           </div>
         </div>
         <div id="problemRow2">
