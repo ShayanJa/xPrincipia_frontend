@@ -108,9 +108,11 @@ export default class FullProblem extends React.Component {
           </Link>
 
           {/*Used for mobile*/}
-          <Link to={`/problem/${this.state.parentID}/subproblems`}>
-              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" align="middle" alt="Back arrow, blue up arrow" />
-          </Link>
+          <div id="SPParent2Div">
+            <Link to={`/problem/${this.state.parentID}/subproblems`}>
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+            </Link>
+          </div>
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
@@ -200,9 +202,11 @@ export default class FullProblem extends React.Component {
           </Link>
 
           {/*Used for mobile*/}
-          <Link to={`/problem/${this.state.parentID}/subproblems`}>
-              <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="70" height="70" align="middle" alt="Back arrow, blue up arrow" />
-          </Link>
+          <div id="SPParent2Div">
+            <Link to={`/problem/${this.state.parentID}/subproblems`}>
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+            </Link>
+          </div>
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>

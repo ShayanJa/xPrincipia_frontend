@@ -72,7 +72,7 @@ export default class ProblemLeftSB extends React.Component {
            
         })
         .then(function (result) {
-            document.location = "/problem/" + self.state.parentID + "/subproblems";
+            document.location = window.location.pathname;
             alert("Thank you, your vote has been recorded.")
         })
         .catch(function (error) {

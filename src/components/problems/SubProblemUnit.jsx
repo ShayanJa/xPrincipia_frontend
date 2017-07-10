@@ -51,7 +51,7 @@ refreshPage() {
   
     return (
 
-        <Link key={problem.ID} to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
+        <Link key={problem.ID} to={'/problem/'+problem.ID +'/subproblems'}>
 				<li key={problem.ID} id="SPUnit">
 				<div id="SPHeader">
 					<div id="SPTitle">{problem.Title}</div>

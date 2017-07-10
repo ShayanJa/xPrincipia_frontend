@@ -152,19 +152,21 @@
     border-radius: 3px;
     margin: 0% 15% 0% 15% !important;
   }
-  #loginEmail, #loginPassword {
+  #loginEmail, #loginPassword, #registerFullName,
+  #registerUserName, #registerEmail, #registerPassword {
     width: 80% !important;
   }
-  #submitLogin {
+  #submitLogin, #submitRegister {
     width: 50% !important;
   }
-  #registerButton {
+  #registerButton, #loginButton {
     width: 40% !important;
   }
 /*Welcome*/
   #welcomeProblemsUnit {
+  }
+  #welcomeUnitsContainer {
     width: 100% !important;
-    margin: 0% 5% 0% 5% !important;
   }
   #welcomeProblemsHeader, 
   #welcomeProblemsHeader1,
@@ -173,7 +175,7 @@
   #welcomeProblemsHeader4 {
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
-    width: 30em !important;
+    width: 18em !important;
     height: auto !important;
     margin-bottom: 5% !important;
     background-size: cover !important;
@@ -226,12 +228,19 @@
   display: none !important;
 }
 #SPParent2 {
-  display: initial !important;
+  display: block !important;
   margin: 0 auto !important;
-  height: 50px !important;
-  width: 250px !important;
+  height: 30px !important;
+  width: 150px !important;
   text-align: center !important;
-  float: center !important;
+  transition: all 0.5s ease 0s !important;
+}
+#SPParent2Div {
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-top: -2% !important;
+  margin-bottom: 2% !important;
 }
 #problemRow1, #problemRow2 {
   display: flex !important;
@@ -297,6 +306,10 @@
 #SPUnitList {
   flex-direction: column  !important;
   display: flex  !important;
+}
+#SPUnit {
+  width: 18em !important;
+  margin: 0 auto !important;
 }
 #SParrowImg {
   display: none !important;
@@ -364,6 +377,22 @@
 #projectsTitleProfile, #proposalsTitleProfile {
   border-top-width: 1px !important;
 }
+
+/*Discuss*/
+
+/*This is trying to get question text to go beneath options
+like vote and comments.*/
+
+/*#suggestionContent {
+  clear: both !important;
+}*/
+
+/*Tutorials*/
+#introBanner {
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -2661,6 +2690,9 @@
 #SPParent2 {
   display: none;
 }
+#SPParent2Div {
+  display: none;
+}
 #SPParent2:hover {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -2999,6 +3031,12 @@
   text-align: center;
   font-size: 150%;
   color: #00ffdc;
+}
+#ProposalPercentFull {
+  text-align: center;
+  font-size: 250%;
+  color: #00ffdc;
+  margin-bottom: 0.5%;
 }
 
 /*End ProblemLeftSB*/
@@ -3958,21 +3996,14 @@ input#submitNewVersion:hover {
   margin-top: 4%;
 }
 #profileAboutTitle {
-  /*font-size: 200%;
+  font-size: 250%;
+  letter-spacing: 16px;
+  border: 1px solid #00dcff;
+  border-width: 2px 0px;
   text-align: center;
-  margin-top: 5%;
-  color: #ffffff;
-  letter-spacing: 8px;
-  margin-top: 5%;
-  margin-bottom: 5%;*/
-
-      font-size: 250%;
-    	letter-spacing: 16px;
-    	border: 1px solid #00dcff;
-    	border-width: 2px 0px;
-      text-align: center;
-      margin: 0 auto;
-      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  margin: 0 auto;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  width: 90%;
 }
 #profileAboutBanner {
   margin: 0 auto;
