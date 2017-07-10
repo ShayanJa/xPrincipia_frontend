@@ -58,7 +58,7 @@ export default class EditSolutionForm extends React.Component {
       references: self.state.references
     })
     .then(function (result) {
-       //Do nothing
+     document.location = window.location.pathname
 
     })
     .catch(function (error) {
