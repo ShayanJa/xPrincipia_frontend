@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import axios from 'axios';
 import QuestionUnit from '../components/questions/QuestionUnit.jsx';
 import AnswerUnit from '../components/answers/AnswerUnit.jsx';
@@ -30,6 +31,11 @@ export default class AnswerContainer extends React.Component {
    render() {
       return (
         <div id="answerContainer">
+            <Link to={`/problem/${this.props.params.probID}/questions`}>
+                <div id="backSolutionArrowDiv">
+                    <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
+            </Link>
             {this.props.children}
             {/*<QuestionUnit questions={this.state.questions}/>*/}
             <AnswerUnit answers={this.state.answers} probID={this.props.params.probID} questID={this.props.params.questID} answerID={this.props.params.answerID} />

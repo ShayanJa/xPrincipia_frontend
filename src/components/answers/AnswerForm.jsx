@@ -42,8 +42,7 @@ axios.post( Config.API + '/auth/answers/create', {
             <fieldset>
                 <legend>Answers</legend>
                      <textarea name="answerText" required="required" id="answerTextArea"></textarea>
-                     <br />
-                     <input type="button" value="Add" onClick={this.postAnswer} id="addAnswer"/>
+                     <input type="button" value="Answer" onClick={this.postAnswer} id="addAnswer"/>
             </fieldset>
         </form>
       </div>

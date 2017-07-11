@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import axios from 'axios';
 import CommentUnit from '../components/comments/CommentUnit.jsx';
 import CommentForm from '../components/comments/CommentForm.jsx';
@@ -29,6 +30,11 @@ export default class SuggestionCommentContainer extends React.Component {
    render() {
       return (
         <div id="answerContainer">
+            <Link to={`/problem/${this.props.params.probID}/suggestions`}>
+                <div id="backSolutionArrowDiv">
+                    <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
+            </Link>
             {this.props.children}
             <CommentUnit comments={this.state.comments}/>
             <SideBarMore />

@@ -18,12 +18,12 @@ export default class AnswerEditForm extends React.Component {
 
   componentWillMount(){
       var self = this;
-        return axios.get( Config.API + '/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get( Config.API + '/auth/answers/ID?id='+this.props.params.answerID).then(function (response) {
           self.setState({
-              answers: response.data
+              answer: response.data
           })
           
-          document.getElementById('answerEditTextArea').value = self.state.question.description;
+          document.getElementById('answerEditTextArea').value = self.state.answer.Description;
 
     })
     .catch(function (error) {
@@ -35,19 +35,20 @@ export default class AnswerEditForm extends React.Component {
 
 updateAnswer() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.answer = document.getElementById('answerEditTextArea').value
 
-  axios.post( Config.API + '/auth/questions/create', {
-      type:'0',
-      typeID: this.props.questID,
+  axios.put( Config.API + '/auth/answers/update?id='+this.props.params.answerID, {
+      type:'2',
+      typeID: this.props.params.questID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.answer,
     })
       .then(function (result) {
-        document.location = window.location.pathname 
+        // document.location = '/problem/'+ self.props.params.probID + '/question/' + self.props.params.questID + '/answers'
+        // document.location = window.location.pathname 
       })
       .catch(function (error) {
-        alert("I'm sorry, there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request. ")
       });
     }
 
@@ -64,9 +65,9 @@ updateAnswer() {
                     <legend id="redLegend">Edit Answer</legend>
                          <textarea name="questionText" required="required" id="answerEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
-                          <div id="returnButton">Return</div>
+                         <div onClick={this.updateAnswer} id="editButton">Edit</div>
+                         <Link to={`/problem/${this.props.params.probID}/question/${this.props.params.questID}/answers`}>
+                            <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
             </form>
