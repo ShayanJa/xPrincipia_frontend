@@ -9,7 +9,6 @@ export default class SubProblemUnit extends React.Component {
 	  problems: []
   }
 
-    this.refreshPage = this.refreshPage.bind(this);
   };
 
     componentWillMount(){
@@ -26,10 +25,6 @@ export default class SubProblemUnit extends React.Component {
 	  self.setState({problems: newProps.problems})
 	  console.log(self.state.problems)
   }
-
-refreshPage() {
-	document.location = window.location.pathname ;
-}
 
 
 	render() {
@@ -49,9 +44,14 @@ refreshPage() {
 	}
 	renderItem(problem) {
   
+			function refreshPage() {
+				// Temporary fix for refreshing sub problems
+				document.location = '/problem/'+ self.props.params.probID +'/subproblems';
+			}
+
     return (
 
-        <Link key={problem.ID} to={'/problem/'+problem.ID +'/subproblems'}>
+        <Link key={problem.ID} to={'/problem/'+problem.ID +'/subproblems'} onClick={refreshPage} >
 				<li key={problem.ID} id="SPUnit">
 				<div id="SPHeader">
 					<div id="SPTitle">{problem.Title}</div>

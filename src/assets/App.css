@@ -2387,7 +2387,9 @@ like vote and comments.*/
   height: 4em;
   resize: none;
 }
-
+#learnContentTextArea {
+  height: 12em;
+}
 #askQuestion, #addSuggestion, #addAnswer {
   font-size: 90%;
   color: #00dcff;
@@ -3089,6 +3091,7 @@ like vote and comments.*/
   color: #dddddd;
   border: 1px solid #dddddd;
   border-width: 0px 1px 0px 1px;
+  border-bottom-color: #00dcff;
   font-size: 80%;
   /*padding: 3px 5px 3px 10px;*/
   padding: 5px;
@@ -3098,6 +3101,11 @@ like vote and comments.*/
   text-align: center;
   transition: all 0.5s ease 0s;
   background-color: rgba(0,220,255,0);
+}
+#topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB {
+  border-width: 0px 1px 1px 1px;
+  border-bottom-color: #00dcff;
 }
 
 #topSolutionsButtonRightSB:hover,
