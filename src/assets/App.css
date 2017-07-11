@@ -3115,10 +3115,15 @@ like vote and comments.*/
   cursor: pointer;
   border-color: #00dcff;
 }
-.activeWhite {
+/*.activeWhite {
   background-color: rgba(0,220,255,0.15);
   color: #00dcff !important;
   border-color: #00dcff;
+}*/
+.activeWhite div {
+  background-color: rgba(0,220,255,0.15) !important;
+  /*color: #00dcff !important;*/
+  border-color: #00dcff !important;
 }
 /*.activeWhite #topSolutionsButtonRightSB,
 .activeWhite #createSolutionsButtonRightSB {
