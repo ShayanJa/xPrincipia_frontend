@@ -20,17 +20,23 @@ export default class AnswerContainer extends React.Component {
     };
     componentDidMount(){
         var self = this;
-        axios.get( Config.API + '/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
+        return axios.get( Config.API + '/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
             self.setState({
                 answers: response.data,
             })
         })
-        return     
+        // return axios.get( Config.API + '/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
+        //     self.setState({
+        //         questions: response.data
+        //     })
+        // }) 
+             
     }
  
    render() {
       return (
         <div id="answerContainer">
+            {/*<div>x{this.state.questions.Description}</div>*/}
             <Link to={`/problem/${this.props.params.probID}/questions`}>
                 <div id="backSolutionArrowDiv">
                     <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />

@@ -18,17 +18,17 @@ export default class CommentDeleteForm extends React.Component {
 
 deleteComment() {
 
-////Delete question
+////Delete comment
       var self = this
       axios.delete( Config.API + '/auth/comments/delete?id='+this.props.params.commentID, {
         params: {
-          id: this.props.params.suggID,
+          id: this.props.params.commentID,
           username: cookie.load('userName')
         }
     })
       .then(function (result) {
         // document.location = '/problem/'+ self.props.params.probID + '/suggestion/' + self.props.params.suggID + '/comments'
-        // document.location = '/login'
+        document.location = window.location.pathname 
       })
       .catch(function (error) {
         alert("I'm sorry, there was a problem with your request. ")

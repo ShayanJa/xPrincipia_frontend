@@ -46,7 +46,7 @@ export default class LearnResourcesUnit1 extends React.Component {
 					    {resource.Username}
                     </div>
                     <div id="learnResourcesText">
-                        <a href={resource.Description} target="_blank" id="learnResourcesLink">{resource.Description}</a>
+                        <a href={url(resource.Description)} target="_blank" id="learnResourcesLink">{resource.Description}</a>
                     </div>
 				</div>
                 <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/delete`}>
@@ -106,3 +106,22 @@ export default class LearnResourcesUnit1 extends React.Component {
 function floatToDecimal(float) {
 	return Math.round(float*100)+'%';
 }
+
+function url(resourceURL){
+
+    if (resourceURL.substring(0,3) == 'www.') {
+        return ( resourceURL );
+
+    } else if (
+        (resourceURL.substring(0,3) != 'www.')  &&  (
+            (resourceURL.slice(-4) == '.com') || (resourceURL.slice(-4) == '.org') || (resourceURL.slice(-4) == '.edu') || (resourceURL.slice(-4) == '.gov') || (resourceURL.slice(-4) == '.net') )
+            ) 
+        {
+        return ( 'https://www.' + resourceURL );
+    }
+
+    else {
+        return ( 'https://www.google.com/#q=' + resourceURL );
+    }
+}
+    
