@@ -46,7 +46,8 @@ export default class SubProblemUnit extends React.Component {
   
 			function refreshPage() {
 				// Temporary fix for refreshing sub problems
-				document.location = '/problem/'+ self.props.params.probID +'/subproblems';
+				// document.location = '/problem/'+ self.props.params.probID +'/subproblems';
+					 SubProblemUnit.forceUpdate()
 			}
 
     return (
