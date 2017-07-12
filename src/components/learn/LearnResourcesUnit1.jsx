@@ -109,19 +109,22 @@ function floatToDecimal(float) {
 
 function url(resourceURL){
 
-    if (resourceURL.substring(0,3) == 'www.') {
+    if (resourceURL.substring(0,7) === 'https://') {
         return ( resourceURL );
 
-    } else if (
-        (resourceURL.substring(0,3) != 'www.')  &&  (
-            (resourceURL.slice(-4) == '.com') || (resourceURL.slice(-4) == '.org') || (resourceURL.slice(-4) == '.edu') || (resourceURL.slice(-4) == '.gov') || (resourceURL.slice(-4) == '.net') )
+    } 
+    else if (
+        // (resourceURL.substring(0,3) !== 'www.')  &&  
+        (
+            (resourceURL.slice(-4) === '.com') || (resourceURL.slice(-4) == '.org') || (resourceURL.slice(-4) === '.edu') || (resourceURL.slice(-4) === '.gov') || (resourceURL.slice(-4) === '.net') )
             ) 
         {
-        return ( 'https://www.' + resourceURL );
+        return ( 'https://' + resourceURL );
     }
 
     else {
-        return ( 'https://www.google.com/#q=' + resourceURL );
+        return ( resourceURL );
+        // return ( 'https://www.google.com/#q=' + resourceURL );
         // return ( 'https://en.wikipedia.org/wiki/' + resourceURL );
     }
 }
