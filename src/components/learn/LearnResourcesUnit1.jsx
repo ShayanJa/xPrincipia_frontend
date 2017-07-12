@@ -122,6 +122,7 @@ function url(resourceURL){
 
     else {
         return ( 'https://www.google.com/#q=' + resourceURL );
+        // return ( 'https://en.wikipedia.org/wiki/' + resourceURL );
     }
 }
     
