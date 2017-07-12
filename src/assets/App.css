@@ -671,12 +671,12 @@ like vote and comments.*/
  /*CreateProblem and Create Solution*/
 
     #createForm {
-      /*background-color: rgba(255,255,255,0.05);*/
       color: #00dcff;
       height: auto;
       padding: 0px 5px 5px 5px;
       width: 90%;
       margin: 0 auto;
+      background-color: rgba(0,220,255,0.025);
      }
     #welcomeCreateForm {
       background-color: rgba(0,220,255,0.01);
@@ -1715,6 +1715,8 @@ like vote and comments.*/
   border: 1px solid #00dcff;
   transition: all 0.5s ease 0s;
   box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  margin-bottom: 2%;
+  background-color: rgba(0,220,255,0.05);
 }
 #solutionUnitContainer {
   padding: 0px;
