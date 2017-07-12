@@ -76,7 +76,7 @@ export default class ProblemLeftSB extends React.Component {
             alert("Thank you, your vote has been recorded.")
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a problem.");
+            alert("You may only vote on a project once. ");
         })
   }
 

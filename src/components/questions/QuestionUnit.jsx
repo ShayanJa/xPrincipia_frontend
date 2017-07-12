@@ -33,7 +33,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may vote for only one question per problem.")
+            alert("You may only vote on a question once.")
         })
     }
   

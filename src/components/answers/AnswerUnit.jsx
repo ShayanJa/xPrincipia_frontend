@@ -34,7 +34,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may only vote for one answer per question.")
+            alert("You may only vote on an answer once.")
         })
     }
     if (answer.Username === cookie.load('userName')) {

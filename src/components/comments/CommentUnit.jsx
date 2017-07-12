@@ -35,35 +35,35 @@ export default class CommentUnit extends React.Component {
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may only vote for one comment per suggestion.")
+            alert("You may only vote on a comment once.")
         })
   }
        if (comment.Username === cookie.load('userName')) {
            return (
-        <li key={comment.ID} id="answerUnit">
-				<div id="answerContent">
-					<div id="discussHeaderGreen">
-                        <span id="discussPercent">{floatToDecimal(comment.PercentRank)}</span>
-					    {comment.Username}
+            <li key={comment.ID} id="answerUnit">
+                    <div id="answerContent">
+                        <div id="discussHeaderGreen">
+                            <span id="discussPercent">{floatToDecimal(comment.PercentRank)}</span>
+                            {comment.Username}
+                        </div>
+                        <div id="suggestionText">
+                            {comment.Description}
+                        </div>
                     </div>
-                    <div id="suggestionText">
-                        {comment.Description}
+                <Link to={`/problem/${this.props.probID}/suggestion/${this.props.suggID}/comment/${comment.ID}/delete`}>
+                    <div id="deleteSBButton">
+                        <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                     </div>
-				</div>
-            <Link to={`/problem/${this.props.probID}/suggestion/${this.props.commentID}/comments/${comment.ID}/delete`}>
-                <div id="deleteSBButton">
-                    <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
-                </div>
-            </Link>
-            <Link to={`/problem/${this.props.probID}/suggestion/${this.props.commentID}/comments/${comment.ID}/edit`}>
-                <div id="editSBButtonAnswer">
-                    <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
-                </div>
-            </Link>
-            <button type="button" onClick={submitVote} id="suggestionVote">
-                Vote
-            </button>
-        </li>);
+                </Link>
+                <Link to={`/problem/${this.props.probID}/suggestion/${this.props.suggID}/comment/${comment.ID}/edit`}>
+                    <div id="editSBButtonAnswer">
+                        <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
+                    </div>
+                </Link>
+                <button type="button" onClick={submitVote} id="suggestionVote">
+                    Vote
+                </button>
+            </li>);
             } else {
     return (
         <li key={comment.ID} id="answerUnit">

@@ -32,7 +32,7 @@ export default class SuggestionUnit extends React.Component {
             document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a suggestion.");
+            alert("You may only vote on a suggestion once.");
         })
   }
   

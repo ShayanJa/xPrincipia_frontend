@@ -44,7 +44,6 @@ axios.post( Config.API + '/auth/comments/create', {
             <fieldset>
                 <legend>Comments</legend>
                      <textarea name="answerText" required="required" id="commentTextArea"></textarea>
-                     <br />
                      <input type="button" value="Add" onClick={this.postComment} id="addAnswer"/>
             </fieldset>
         </form>

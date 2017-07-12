@@ -44,8 +44,8 @@ updateAnswer() {
       description : this.state.answer,
     })
       .then(function (result) {
-        // document.location = '/problem/'+ self.props.params.probID + '/question/' + self.props.params.questID + '/answers'
-        // document.location = window.location.pathname 
+        // document.location = '/problem/' + self.props.params.probID + '/question/' + self.props.params.questID + '/answers'
+        document.location = window.location.pathname 
       })
       .catch(function (error) {
         alert("I'm sorry, there was a problem with your request. ")

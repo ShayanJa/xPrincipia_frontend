@@ -73,7 +73,7 @@ export default class FullSolutionContent extends React.Component {
             alert("Thank you, your vote has been recorded.");
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a solution.");
+            alert("You may only vote on a proposal once. ");
         })
   }
    render() {

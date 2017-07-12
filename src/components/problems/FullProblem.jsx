@@ -86,7 +86,7 @@ export default class FullProblem extends React.Component {
           
         })
         .catch(function (error) {
-            alert("I'm sorry, you have already voted on a problem.");
+            alert("You may only vote on a project once. ");
         })
   }
 
