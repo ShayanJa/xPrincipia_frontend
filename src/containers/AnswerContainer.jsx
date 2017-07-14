@@ -51,32 +51,32 @@ export default class AnswerContainer extends React.Component {
    render() {
       return (
         <div id="answerContainer">
-            <Link to={`/problem/${this.props.params.probID}/questions`}>
-                <div id="backSolutionArrowDiv">
-                    <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
-                </div>
-            </Link>
         {/*Question being answered*/}
-        {/*<li id="questionUnit"> 
-				<div id="suggestionContent">
+        <div id="questionUnit"> 
+                <Link to={`/problem/${this.props.params.probID}/questions`}>
+                    <div id="backSolutionArrowDiv">
+                        <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                    </div>
+                </Link>
+                <div id="suggestionContent">
 					<div id="discussHeader">
-                        <span id="discussPercent">{floatToDecimal(question.PercentRank)}</span>
-					    {question.Username}
+                        <span id="discussPercent">
+                            XX%
+                            {/*{floatToDecimal(question.PercentRank)}*/}
+                        </span>
+					    Test Username
+                        {/*{question.Username}*/}
                     </div>
                     <div id="suggestionText">
-                        {question.Description}
+                        Test Description
+                        {/*{question.Description}*/}
                     </div>
 				</div>
-                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
-                    <div id="commentSBButtonUser">
-                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
-                    </div>                
-                </Link>
-                <button type="button" id="suggestionVote" onClick={submitVote}>
+                {/*<button type="button" id="suggestionVote" onClick={submitVote}>
                     Vote
-                </button>
+                </button>*/}
                 <br/><br/> 
-        </li>*/}
+        </div>
 
             {this.props.children}
             {/*<QuestionUnit questions={this.state.questions}/>*/}

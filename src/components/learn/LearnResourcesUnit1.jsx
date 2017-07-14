@@ -52,13 +52,13 @@ export default class LearnResourcesUnit1 extends React.Component {
 					    {resource.Username}
                     </div>
                     <div id="learnResourcesLink">
-                        <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
+                        {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
                             {resource.Description}
-                        </Link>
-                        {/*<a href={url(resource.Description)} target="_blank">
-                            {resource.Description}*/}
+                        </Link>*/}
+                        <a href={url(resource.Description)} target="_blank">
+                            {resource.Description}
                             {/*{url2(resource.Description)}*/}
-                        {/*</a>*/}
+                        </a>
                     </div>
 				</div>
                 <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/delete`}>
@@ -130,7 +130,7 @@ function floatToDecimal(float) {
 
 function url(resourceURL){
 
-    if (resourceURL.substring(0,7) === 'https://') {
+    if (resourceURL.substring(0,7) === 'https://' || resourceURL.substring(0,6) === 'http://') {
         return ( resourceURL );
 
     } 
@@ -144,8 +144,8 @@ function url(resourceURL){
     }
 
     else {
-        return ( resourceURL );
-        // return ( 'https://www.google.com/#q=' + resourceURL );
+        // return ( resourceURL );
+        return ( 'https://www.google.com/#q=' + resourceURL );
         // return ( 'https://en.wikipedia.org/wiki/' + resourceURL );
     }
 }
@@ -153,6 +153,7 @@ function url(resourceURL){
 
 //Goal of this function is to open a wikipedia link in an embedded window.
 // Not sure how to do it yet, maybe with jQuery
+// An interesting idea is returning the entire div, either the Link to embed or the ahref for new tab
 function url2(resourceURL){
      
     var wikiIndex = resourceURL.indexOf('wiki');
