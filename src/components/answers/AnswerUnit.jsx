@@ -14,10 +14,6 @@ constructor(props){
 
     };
 
-    componentDidMount() {
-
-    }
-
     componentWillReceiveProps (props) {
         var self = this
         self.setState({
