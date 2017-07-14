@@ -19,14 +19,8 @@ export default class FullProblem extends React.Component {
     componentWillMount(){
       var self = this;
       return axios.get( Config.API + '/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
-          //if parent ID is 0 then the problem is at the root of the tree
-          // return id as the parentID for routing purposes
-          if (response.data.ParentID === 0){
-            self.setState({
-              parentID: response.data.ID
-            })
-          }
-          //set other data
+
+          //set Problem Data
           self.setState({
               problemInfo: response.data
           })
@@ -40,18 +34,11 @@ export default class FullProblem extends React.Component {
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get( Config.API + '/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
-          //if parent ID is 0 then the problem is at the root of the tree
-          // return id as the parentID for routing purposes
-          if (response.data.ParentID === 0){
-            self.setState({
-              parentID: response.data.ID
-            })
-          }
-          //set other data
-          self.setState({
-              problemInfo: response.data,
-              probID: response.data.ID
-          })
+        //set problem data
+        self.setState({
+            problemInfo: response.data,
+            probID: response.data.ID
+        })
     })
     .catch(function (error) {
         if(error.response.status === 401 || error.response.status === 403){
@@ -71,17 +58,12 @@ export default class FullProblem extends React.Component {
         .then(function (result) {
             alert("Thank you, your vote has been recorded.")
           return axios.get( Config.API + '/auth/problems/ID?id='+self.props.params.probID).then(function (response) {
-            //if parent ID is 0 then the problem is at the root of the tree
-            // return id as the parentID for routing purposes
-            if (response.data.ParentID === 0){
-              self.setState({
-                parentID: response.data.ID
-              })
-            }
-            //set other data
+          
+            //set problem data
             self.setState({
                 problemInfo: response.data,
             })
+
           })
           
         })
@@ -103,13 +85,13 @@ export default class FullProblem extends React.Component {
           transitionEnter={false}
           transitionLeave={false}>
         <div id="problemRow1">
-          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
 
           {/*Used for mobile*/}
           <div id="SPParent2Div">
-            <Link to={`/problem/${this.state.parentID}/subproblems`}>
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
                 <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
@@ -186,9 +168,9 @@ export default class FullProblem extends React.Component {
         
         <TutorialProjectContent />
         </ReactCSSTransitionGroup>
-      </div>
-               )    } else {
-    return (
+      </div>)
+    } else {
+      return (
             <div id="maxContainerColumn">
         <ReactCSSTransitionGroup
           transitionName="example"
@@ -197,13 +179,13 @@ export default class FullProblem extends React.Component {
           transitionEnter={false}
           transitionLeave={false}>
         <div id="problemRow1">
-          <Link to={`/problem/${this.state.parentID}/subproblems`}>
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
 
           {/*Used for mobile*/}
           <div id="SPParent2Div">
-            <Link to={`/problem/${this.state.parentID}/subproblems`}>
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
                 <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
