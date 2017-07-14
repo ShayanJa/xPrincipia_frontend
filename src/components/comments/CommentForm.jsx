@@ -43,7 +43,7 @@ axios.post( Config.API + '/auth/comments/create', {
         <form id="answerForm">
             <fieldset>
                 <legend>Comments</legend>
-                     <textarea name="answerText" required="required" id="commentTextArea"></textarea>
+                     <textarea name="answerText" required="required" id="commentTextArea" placeholder="Discuss this suggestion or view the current discussion of your peers. " autoFocus ></textarea>
                      <input type="button" value="Add" onClick={this.postComment} id="addAnswer"/>
             </fieldset>
         </form>

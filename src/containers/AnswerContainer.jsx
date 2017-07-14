@@ -25,13 +25,28 @@ export default class AnswerContainer extends React.Component {
                 answers: response.data,
             })
         })
-        // return axios.get( Config.API + '/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
-        //     self.setState({
-        //         questions: response.data
-        //     })
-        // }) 
+        return axios.get( Config.API + '/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
+            self.setState({
+                questions: response.data
+            })
+        }) 
              
     }
+    // Alternative strategy for setting state
+//   componentWillReceiveProps(newProps){
+//     var self = this;
+//       return axios.get( Config.API + '/auth/questions/ID?id='+newProps.params.questID).then(function (response) {
+//           self.setState({
+//               questions: response.data
+//           })
+//     }).then( function(response){
+//     })
+//     .catch(function (error) {
+//     }); 
+
+//   }
+
+// Commented out until works
 //       submitVote() {
 //       var self = this
 //        axios.post( Config.API + '/auth/vote/create', {
@@ -65,11 +80,11 @@ export default class AnswerContainer extends React.Component {
                             {/*{floatToDecimal(question.PercentRank)}*/}
                         </span>
 					    Test Username
-                        {/*{question.Username}*/}
+                        {/*{this.state.questions.Username}*/}
                     </div>
                     <div id="suggestionText">
-                        Test Description
-                        {/*{question.Description}*/}
+                        {/*Test Description*/}
+                        {this.state.questions.Description}
                     </div>
 				</div>
                 {/*<button type="button" id="suggestionVote" onClick={submitVote}>

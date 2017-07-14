@@ -46,7 +46,7 @@ postQuestion() {
             <form id="questionForm">
                 <fieldset>
                     <legend>Questions</legend>
-                         <textarea name="questionText" required="required" id="questionTextArea" autoFocus ></textarea>
+                         <textarea name="questionText" required="required" id="questionTextArea" placeholder="Ask a question you have about this project or view those asked by your peers. " autoFocus ></textarea>
                          <input type="button" value="Ask" onClick={this.postQuestion} id="askQuestion"/>
                 </fieldset>
             </form>

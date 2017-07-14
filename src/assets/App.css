@@ -180,12 +180,22 @@
   #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
+
+    background-size: cover !important;
+    border: 1px solid #00dcff !important;
+    border-width: 1px 1px 1px 1px !important;
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
-    width: 18em !important;
+    width: 94.5% !important;
     height: auto !important;
+    word-wrap: break-word !important; 
+    align-items: center !important; 
+    justify-content: center !important;
     margin-bottom: 5% !important;
-    background-size: cover !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    margin-top: 2% !important;
+    transition: all 0.2s ease 0s !important;
   }
   #welcomeProblemsHeader:hover, 
   #welcomeProblemsHeader1:hover,
@@ -217,7 +227,6 @@
 #welcomeProblemsHeader1, #welcomeProblemsHeader2,
 #welcomeProblemsHeader3, #welcomeProblemsHeader4 {
   margin-bottom: 0 !important;
-  border-width: 0px 1px 1px 1px !important;
 }
 #exploreWelcomeForm {
   width: 100% !important;
@@ -592,21 +601,20 @@ like vote and comments.*/
     #commentSBButton:hover, #commentSBButtonUser:hover {
       cursor: pointer;
       box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      /*Interesting thing to try to get images to switch on hover*/
+      /*content: url("http://i.imgur.com/uKnMvyp.jpg");*/
     }
 
     #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
       border-radius: 0px 0px 0px 2px;
-      /*OR #fc5353*/
     }
     #flagSBButton:active, #deleteSBButton:active {
       color: #0f131c !important;
       background-color: #ff7f7f;
     }
     #flagSBButton:hover, #deleteSBButton:hover {
-      /*color: #0f131c !important;
-      background-color: #ff7f7f;*/
       cursor: pointer;
       box-shadow: 0 0 2pt 2pt rgba(255,127,127,0.5);
     }
@@ -1978,6 +1986,10 @@ like vote and comments.*/
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
+    /*Doesn't work since it highlights the entire box*/
+    /*.activeGlow {
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+    }*/
     /*#createWelcomeButton:active {
       background-color: #00dcff;
       color: #0f131c;
@@ -2743,6 +2755,9 @@ like vote and comments.*/
 }
 #problemPercent:hover {
   transform: scale(1.1);
+}
+#bigPercent {
+  font-size: 120%;
 }
 #problemTitle {
   color: #dddddd;

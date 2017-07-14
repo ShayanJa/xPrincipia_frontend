@@ -74,6 +74,12 @@ export default class FullProblem extends React.Component {
 
    render() {
 
+			function refreshPage() {
+				// Temporary fix for refreshing sub problems
+				// document.location = '/problem/'+ self.props.params.probID +'/subproblems';
+					 FullProblem.forceUpdate()
+			}
+
        if (this.state.problemInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (
 
@@ -85,13 +91,14 @@ export default class FullProblem extends React.Component {
           transitionEnter={false}
           transitionLeave={false}>
         <div id="problemRow1">
-          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
+
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
 
-          {/*Used for mobile*/}
+          {/*Used for mobile, not shown otherwise*/}
           <div id="SPParent2Div">
-            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
                 <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
@@ -121,7 +128,9 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div  id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              <div  id="problemPercent">
+                <span id="bigPercentInactive">{floatToDecimal(this.state.problemInfo.PercentRank)}</span>%
+              </div> 
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
@@ -179,13 +188,13 @@ export default class FullProblem extends React.Component {
           transitionEnter={false}
           transitionLeave={false}>
         <div id="problemRow1">
-          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
 
           {/*Used for mobile*/}
           <div id="SPParent2Div">
-            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`}>
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
                 <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
@@ -211,7 +220,9 @@ export default class FullProblem extends React.Component {
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}
-              <div  id="problemPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</div> 
+              <div  id="problemPercent">
+                <span id="bigPercentInactive">{floatToDecimal(this.state.problemInfo.PercentRank)}</span>%
+              </div> 
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
@@ -265,7 +276,7 @@ export default class FullProblem extends React.Component {
 
 //convert float to Decimal
 function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
+	return Math.round(float*100);
 }
  
  
