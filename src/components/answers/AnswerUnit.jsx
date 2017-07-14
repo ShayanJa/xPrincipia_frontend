@@ -53,19 +53,6 @@ constructor(props){
             alert("You may vote for only one answer per question.")
         })
     }
-
-    function isVotedOn (typeID, username) {
-        var self = this
-        axios.get( Config.API + "/auth/vote/isVotedOn?type=4&typeID=1&username=Shyshawn")
-            .then( function (response){
-                // console.log(response.data)
-                return response.data
-            })
-        }
-    
-
-
-
     
     if (this.state.voteArray[answer.ID-1] === true && answer.Username === cookie.load('userName')) {
         return (
