@@ -14,19 +14,26 @@ constructor(props){
 
     };
 
+    componentDidMount() {
+
+    }
+
     componentWillReceiveProps (props) {
         var self = this
         self.setState({
-            voteArray : []
+            voteHash : {},
         })
-        for (var i=0; i < props.answers.length; i++){
-            axios.get( Config.API + "/auth/vote/isVotedOn?type=4&typeID=" + props.answers[i].ID + "&username=" + cookie.load("userName"))
-            .then( function (response){
+        props.answers.forEach( function (answer){
+            axios.get( Config.API + "/auth/vote/isVotedOn?type=4&typeID=" + answer.ID + "&username=" + cookie.load("userName"))
+            .then( function (response) {  
+                const voteHash = self.state.voteHash;
+
+                voteHash[answer.ID] = response.data
                 self.setState({
-                voteArray : self.state.voteArray.concat(response.data)
+                    voteHash,
                 })
-            })
-        }
+            })  
+        })
     }
     
 	render() {
@@ -53,8 +60,12 @@ constructor(props){
             alert("You may vote for only one answer per question.")
         })
     }
+
+
+
+
     
-    if (this.state.voteArray[answer.ID-1] === true && answer.Username === cookie.load('userName')) {
+    if (this.state.voteHash[answer.ID] === true && answer.Username === cookie.load('userName')) {
         return (
         <li key={answer.ID} id="answerUnit">
 				<div id="answerContent">
