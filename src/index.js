@@ -40,6 +40,7 @@ import LearnContentForm from './components/learn/LearnContentForm.jsx';
 import LearnContentMenu from './components/learn/LearnContentMenu.jsx';
 import LearnResourcesDeleteForm from './components/learn/LearnResourcesDeleteForm.jsx';
 import LearnResourcesEditForm from './components/learn/LearnResourcesEditForm.jsx';
+import LearnResourcesEmbed from './components/learn/LearnResourcesEmbed.jsx';
 import LearnResourcesFlagForm from './components/learn/LearnResourcesFlagForm.jsx';
 import LearnResourcesForm from './components/learn/LearnResourcesForm.jsx';
 import LearnResourcesMenu from './components/learn/LearnResourcesMenu.jsx';
@@ -257,7 +258,8 @@ ReactDOM.render(
                 <Route path='/problem/:probID/learn/resources' component={LearnResourcesForm}></Route>
                 <Route path='/problem/:probID/learn/resources/:resourceID/edit' component={LearnResourcesEditForm}></Route>
                 <Route path='/problem/:probID/learn/resources/:resourceID/flag' component={LearnResourcesFlagForm}></Route>
-                <Route path='/problem/:probID/learn/resources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>              
+                <Route path='/problem/:probID/learn/resources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>  
+                <Route path='/problem/:probID/learn/resources/:resourceID/embed' component={LearnResourcesEmbed}></Route>            
               </Route>
             </Route>
           </Route>

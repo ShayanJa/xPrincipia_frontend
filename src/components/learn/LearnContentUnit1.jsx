@@ -44,7 +44,7 @@ export default class LearnContentUnit1 extends React.Component {
                         <span id="discussPercent">{floatToDecimal(learnItem.PercentRank)}</span>
 					    {learnItem.Username}
                     </div>
-                    <div id="suggestionText">
+                    <div id="learnContentText">
                         {learnItem.Description}
                     </div>
 				</div>

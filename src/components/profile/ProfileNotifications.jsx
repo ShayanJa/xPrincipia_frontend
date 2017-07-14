@@ -23,8 +23,14 @@ export default class ProfileNotifications extends React.Component {
         return (
           <Link key={item.ID} to={`/fullsolution/${item.ProblemID}/${item.ID}/solutions`} >
             <li><div id="profileRightUnit">
-                <div id="profileUnitTitle">{item.Title}</div>
-             <div id="unitSummary">{item.Summary} </div>
+                <div id="profileUnitTitle">
+                    Test Title
+                    {/*{item.Title}*/}
+                </div>
+                <div id="unitSummary">
+                    Test Summary
+                    {/*{item.Summary}*/}
+                </div>
             </div></li>
           </Link>
       );
@@ -33,8 +39,14 @@ export default class ProfileNotifications extends React.Component {
         return (
           <Link key={item.ID} to={`/problem/${item.ID}/solutions`} >
             <li><div id="profileRightUnit">
-                <div id="profileUnitTitle">{item.Title}</div>
-             <div id="unitSummary">{item.Summary} </div>
+                <div id="profileUnitTitle">
+                    Test Title
+                    {/*{item.Title}*/}
+                </div>
+                <div id="unitSummary">
+                    Test Summary
+                    {/*{item.Summary} */}
+                </div>
             </div></li>
           </Link>
       );

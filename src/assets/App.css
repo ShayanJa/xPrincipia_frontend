@@ -98,6 +98,13 @@
     #nodisplay {
       display: none;
     }
+    #embedLink {
+      width: 800px;
+      height: 600px;
+      overflow: auto;
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 3pt 3pt rgba(0,220,255,0.5)
+    }
 
 
 /*End Global*/
@@ -2975,6 +2982,7 @@ like vote and comments.*/
   margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
   width: 100%;
+  max-width: 100%;
   padding: 0px 10px 20px 10px;
   flex: 1 1 auto;
   float: right;
@@ -3334,18 +3342,28 @@ label + input[type=radio] + label {
   border-radius: 10px;
   overflow: hidden;
 }
+#learnContentText {
+  font-family: 'Open Sans';
+  margin-top: 5px;
+  max-width: 584.31px;
+}
 #learnResourcesText {
-  font-family: 'Alegreya Sans SC';
+  font-family: 'Open Sans';
   margin-top: 5px;
 }
-a#learnResourcesLink {
+#learnResourcesLink {
   text-decoration: underline;
   color: rgba(255,255,255,1);
   transition: all 1s ease 0s;
   font-size: 120%;
+  transform: scale(1);
+  font-family: 'Open Sans';
+  margin-top: 5px;
+  max-width: 584.31px;
 }
-a#learnResourcesLink:hover {
+#learnResourcesLink:hover {
   color: rgba(0,220,255,1);
+  transform: scale(1.02);
 }
 /*End Learn SB*/
 

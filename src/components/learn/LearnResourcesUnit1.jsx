@@ -22,6 +22,12 @@ export default class LearnResourcesUnit1 extends React.Component {
 	}
 	renderItem(resource) {
 
+        function refreshPage() {
+            // Temporary fix for refreshing sub problems
+            // document.location = '/problem/'+ self.props.params.probID +'/subproblems';
+                    LearnResourcesUnit1.forceUpdate()
+        }
+
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
            Type: 8, //TODO: Change to correct type
@@ -33,7 +39,7 @@ export default class LearnResourcesUnit1 extends React.Component {
             document.location = window.location.pathname;
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a learning resource.");
+            alert("You may only vote on a resource once. ");
         })
   }
   
@@ -45,8 +51,18 @@ export default class LearnResourcesUnit1 extends React.Component {
                         <span id="discussPercent">{floatToDecimal(resource.PercentRank)}</span>
 					    {resource.Username}
                     </div>
-                    <div id="learnResourcesText">
-                        <a href={url(resource.Description)} target="_blank" id="learnResourcesLink">{resource.Description}</a>
+                    <div id="learnResourcesLink">
+                        {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
+                            {resource.Description}
+                        </Link>*/}
+                        <a href={url(resource.Description)} target="_blank">
+                            {resource.Description}
+                            {/*{url2(resource.Description)}*/}
+                        </a>
+                        {/*<div>
+                            <object type="text/html" data={url(resource.Description)} id="embedLink">
+                            </object>
+                        </div>*/}
                     </div>
 				</div>
                 <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/delete`}>
@@ -79,8 +95,15 @@ export default class LearnResourcesUnit1 extends React.Component {
                         <span id="discussPercent">{floatToDecimal(resource.PercentRank)}</span>
 					    {resource.Username}
                     </div>
-                    <div id="suggestionText">
-                        <a href={resource.Description} target="_blank" id="learnResourcesLink">{resource.Description}</a>
+                    <div id="learnResourcesLink">
+                        {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
+                            {resource.Description}
+                        </Link>*/}
+                        <a href={url(resource.Description)} target="_blank">{resource.Description}</a>
+                        {/*<div>
+                            <object type="text/html" data={url(resource.Description)} id="embedLink">
+                            </object>
+                        </div>*/}
                     </div>
 				</div>
                     {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/flag`}>
@@ -114,7 +137,7 @@ function url(resourceURL){
 
     } 
     else if (
-        // (resourceURL.substring(0,3) !== 'www.')  &&  
+        (resourceURL.substring(0,3) !== 'www.')  &&  
         (
             (resourceURL.slice(-4) === '.com') || (resourceURL.slice(-4) == '.org') || (resourceURL.slice(-4) === '.edu') || (resourceURL.slice(-4) === '.gov') || (resourceURL.slice(-4) === '.net') )
             ) 
@@ -128,4 +151,17 @@ function url(resourceURL){
         // return ( 'https://en.wikipedia.org/wiki/' + resourceURL );
     }
 }
-    
+
+
+//Goal of this function is to open a wikipedia link in an embedded window.
+// Not sure how to do it yet, maybe with jQuery
+function url2(resourceURL){
+     
+    var wikiIndex = resourceURL.indexOf('wiki');
+    if (
+        resourceURL.substring(wikiIndex,(wikiIndex +3)) == 'wiki'
+    ); {
+    return (2);
+}
+
+}
