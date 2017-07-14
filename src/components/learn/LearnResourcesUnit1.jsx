@@ -52,17 +52,13 @@ export default class LearnResourcesUnit1 extends React.Component {
 					    {resource.Username}
                     </div>
                     <div id="learnResourcesLink">
-                        {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
+                        <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
                             {resource.Description}
-                        </Link>*/}
-                        <a href={url(resource.Description)} target="_blank">
-                            {resource.Description}
+                        </Link>
+                        {/*<a href={url(resource.Description)} target="_blank">
+                            {resource.Description}*/}
                             {/*{url2(resource.Description)}*/}
-                        </a>
-                        {/*<div>
-                            <object type="text/html" data={url(resource.Description)} id="embedLink">
-                            </object>
-                        </div>*/}
+                        {/*</a>*/}
                     </div>
 				</div>
                 <Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/delete`}>
@@ -99,7 +95,9 @@ export default class LearnResourcesUnit1 extends React.Component {
                         {/*<Link to={`/problem/${resource.TypeID}/learn/resources/${resource.ID}/embed`} onClick={refreshPage}>
                             {resource.Description}
                         </Link>*/}
-                        <a href={url(resource.Description)} target="_blank">{resource.Description}</a>
+                        <a href={url(resource.Description)} target="_blank">
+                            {resource.Description}
+                        </a>
                         {/*<div>
                             <object type="text/html" data={url(resource.Description)} id="embedLink">
                             </object>

@@ -211,27 +211,27 @@ ReactDOM.render(
               <Route path='/problem/:probID/question/:questID/edit' component={QuestionEditForm}></Route>
               <Route path='/problem/:probID/question/:questID/flag' component={QuestionFlagForm}></Route>
               <Route path='/problem/:probID/question/:questID/delete' component={QuestionDeleteForm}></Route>
+              <Route path='/problem/:probID/question/:questID/answers/container' component={AnswerContainer}>
+                <IndexRoute component={AnswerForm}></IndexRoute>
+                <Route path='/problem/:probID/question/:questID/answers' component={AnswerForm}></Route>
+                <Route path='/problem/:probID/question/:questID/answer/:answerID/edit' component={AnswerEditForm}></Route>
+                <Route path='/problem/:probID/question/:questID/answer/:answerID/flag' component={AnswerFlagForm}></Route>
+                <Route path='/problem/:probID/question/:questID/answer/:answerID/delete' component={AnswerDeleteForm}></Route>
+              </Route>
             </Route> 
-            <Route path='/problem/:probID/question/:questID/answers/container' component={AnswerContainer}>
-              <IndexRoute component={AnswerForm}></IndexRoute>
-              <Route path='/problem/:probID/question/:questID/answers' component={AnswerForm}></Route>
-              <Route path='/problem/:probID/question/:questID/answer/:answerID/edit' component={AnswerEditForm}></Route>
-              <Route path='/problem/:probID/question/:questID/answer/:answerID/flag' component={AnswerFlagForm}></Route>
-              <Route path='/problem/:probID/question/:questID/answer/:answerID/delete' component={AnswerDeleteForm}></Route>
-            </Route>
             <Route path='/problem/:probID/suggestions/container' component={SuggestionContainer}>
               <IndexRoute component={SuggestionForm}></IndexRoute>
               <Route path='/problem/:probID/suggestions' component={SuggestionForm}></Route>
               <Route path='/problem/:probID/suggestion/:suggID/edit' component={SuggestionEditForm}></Route>
               <Route path='/problem/:probID/suggestion/:suggID/flag' component={SuggestionFlagForm}></Route>
               <Route path='/problem/:probID/suggestion/:suggID/delete' component={SuggestionDeleteForm}></Route>
-            </Route>
-            <Route path='/problem/:probID/suggestion/:suggID/container' component={SuggestionCommentContainer}>
+              <Route path='/problem/:probID/suggestion/:suggID/container' component={SuggestionCommentContainer}>
               <IndexRoute component={CommentForm}></IndexRoute>
-              <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentForm}></Route>
-              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/edit' component={CommentEditForm}></Route>
-              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/flag' component={CommentFlagForm}></Route>
-              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/delete' component={CommentDeleteForm}></Route>
+                <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentForm}></Route>
+                <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/edit' component={CommentEditForm}></Route>
+                <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/flag' component={CommentFlagForm}></Route>
+                <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/delete' component={CommentDeleteForm}></Route>
+              </Route>
             </Route>
             <Route path='/problem/:probID/freeforms/container' component={FreeFormContainer}>
               <IndexRoute component={FreeFormForm}></IndexRoute>

@@ -91,7 +91,8 @@ constructor(props){
                 <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
                     <div id="commentSBButtonUser">
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
-                    </div>                </Link>
+                    </div>                
+                </Link>
                 <button type="button" id="suggestionVote" onClick={submitVote}>
                     Vote
                 </button>

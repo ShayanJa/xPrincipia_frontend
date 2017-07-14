@@ -13,10 +13,10 @@ export default class AnswerContainer extends React.Component {
 
         this.state = {
             questions: [],
-            answers: [],
-           
+            answers: [], 
         }
         
+        // this.submitVote = this.submitVote.bind(this)
     };
     componentDidMount(){
         var self = this;
@@ -32,16 +32,52 @@ export default class AnswerContainer extends React.Component {
         // }) 
              
     }
+//       submitVote() {
+//       var self = this
+//        axios.post( Config.API + '/auth/vote/create', {
+//            Type: 2,
+//            TypeID: this.state.question.ID,
+//            username : cookie.load("userName"),
+           
+//         })
+//         .then(function (result) {
+//             document.location = window.location.pathname;
+//         })
+//         .catch(function (error) {
+//             alert("You may only vote on a resource once. ");
+//         })
+//   }
  
    render() {
       return (
         <div id="answerContainer">
-            {/*<div>x{this.state.questions.Description}</div>*/}
             <Link to={`/problem/${this.props.params.probID}/questions`}>
                 <div id="backSolutionArrowDiv">
                     <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
                 </div>
             </Link>
+        {/*Question being answered*/}
+        {/*<li id="questionUnit"> 
+				<div id="suggestionContent">
+					<div id="discussHeader">
+                        <span id="discussPercent">{floatToDecimal(question.PercentRank)}</span>
+					    {question.Username}
+                    </div>
+                    <div id="suggestionText">
+                        {question.Description}
+                    </div>
+				</div>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                    <div id="commentSBButtonUser">
+                            <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
+                    </div>                
+                </Link>
+                <button type="button" id="suggestionVote" onClick={submitVote}>
+                    Vote
+                </button>
+                <br/><br/> 
+        </li>*/}
+
             {this.props.children}
             {/*<QuestionUnit questions={this.state.questions}/>*/}
             <AnswerUnit answers={this.state.answers} probID={this.props.params.probID} questID={this.props.params.questID} answerID={this.props.params.answerID} />
