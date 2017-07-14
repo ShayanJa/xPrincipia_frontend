@@ -14,14 +14,8 @@ constructor(props){
 
     };
 
-    componentDidMount() {
-
-    }
-
     componentWillReceiveProps (props) {
         var self = this
-        console.log('hey')
-        console.log(props.answers[1].ID)
         self.setState({
             voteArray : []
         })
@@ -30,13 +24,9 @@ constructor(props){
             .then( function (response){
                 self.setState({
                 voteArray : self.state.voteArray.concat(response.data)
+                })
             })
-            
-            
-        })
         }
-      
-    
     }
     
 	render() {
@@ -77,7 +67,7 @@ constructor(props){
 
 
     
-    if (this.state.voteArray[answer.ID] === true && answer.Username === cookie.load('userName')) {
+    if (this.state.voteArray[answer.ID-1] === true && answer.Username === cookie.load('userName')) {
         return (
         <li key={answer.ID} id="answerUnit">
 				<div id="answerContent">
