@@ -116,8 +116,25 @@ constructor(props){
             </button>
         </li>);
 
-    } 
-    else {
+    } else if (this.state.voteHash[answer.ID] === true) {
+        return (
+        <li key={answer.ID} id="answerUnit">
+				<div id="answerContent">
+					<div id="discussHeaderGreen">
+                        <span id="discussPercent">{floatToDecimal(answer.PercentRank)}</span>
+					    {answer.Username}
+                        
+                    </div>
+                    <div id="suggestionText">
+                        {answer.Description}
+                    </div>
+				</div>
+            <button type="button" onClick={submitVote} id="suggestionVote">
+                UnVote
+            </button>
+        </li>);
+
+    } else {
     return (
         <li key={answer.ID} id="answerUnit">
 				<div id="answerContent">
