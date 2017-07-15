@@ -73,10 +73,6 @@ constructor(props){
         
     }
 
-
-
-
-    
     if (this.state.voteHash[answer.ID] === true && answer.Username === cookie.load('userName')) {
         return (
         <li key={answer.ID} id="answerUnit">
