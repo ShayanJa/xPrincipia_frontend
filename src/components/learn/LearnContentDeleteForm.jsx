@@ -47,7 +47,7 @@ deleteLearnItem() {
                          <div>Are you sure you would like to delete this lesson?</div>
                          <br />
                          <div onClick={this.deleteLearnItem} id="deleteButton">Delete</div>
-                          <Link to={`/problem/${this.state.learnItem.TypeID}/learn/content`}>
+                          <Link to={`/problem/${this.props.params.probID}/learn/content`}>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
