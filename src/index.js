@@ -9,6 +9,10 @@ import AnswerDeleteForm from './components/answers/AnswerDeleteForm.jsx';
 import AnswerEditForm from './components/answers/AnswerEditForm.jsx';
 import AnswerFlagForm from './components/answers/AnswerFlagForm.jsx';
 import AnswerForm from './components/answers/AnswerForm.jsx';
+import CommentDeleteForm from './components/comments/CommentDeleteForm.jsx';
+import CommentEditForm from './components/comments/CommentEditForm.jsx';
+import CommentFlagForm from './components/comments/CommentFlagForm.jsx';
+import CommentForm from './components/comments/CommentForm.jsx';
 import ConsDeleteForm from './components/proscons/ConsDeleteForm.jsx';
 import ConsEditForm from './components/proscons/ConsEditForm.jsx';
 import ConsFlagForm from './components/proscons/ConsFlagForm.jsx';
@@ -36,6 +40,7 @@ import LearnContentForm from './components/learn/LearnContentForm.jsx';
 import LearnContentMenu from './components/learn/LearnContentMenu.jsx';
 import LearnResourcesDeleteForm from './components/learn/LearnResourcesDeleteForm.jsx';
 import LearnResourcesEditForm from './components/learn/LearnResourcesEditForm.jsx';
+import LearnResourcesEmbed from './components/learn/LearnResourcesEmbed.jsx';
 import LearnResourcesFlagForm from './components/learn/LearnResourcesFlagForm.jsx';
 import LearnResourcesForm from './components/learn/LearnResourcesForm.jsx';
 import LearnResourcesMenu from './components/learn/LearnResourcesMenu.jsx';
@@ -46,6 +51,7 @@ import ProblemLearnMenu from './components/problems/ProblemLearnMenu.jsx';
 import ProblemLeftSB from './components/problems/ProblemLeftSB.jsx';
 import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx';
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
+import ProjectEditForm from './components/problems/ProjectEditForm.jsx';
 import ProfileAbout from './components/profile/ProfileAbout.jsx';
 import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
@@ -155,6 +161,7 @@ ReactDOM.render(
         <Route path='/problem/:probID/sideBar' component={SideBarProblem}>
           <IndexRoute component={SubProblemContainer}></IndexRoute>
           <Route path='/problem/:probID/create' component={ProblemForm}></Route>
+          <Route path='/problem/:probID/edit' component={ProjectEditForm}></Route>
           <Route path='/problem/:probID/subproblems' component={SubProblemContainer}></Route>
         </Route>
       </Route>
@@ -219,7 +226,13 @@ ReactDOM.render(
               <Route path='/problem/:probID/suggestion/:suggID/flag' component={SuggestionFlagForm}></Route>
               <Route path='/problem/:probID/suggestion/:suggID/delete' component={SuggestionDeleteForm}></Route>
             </Route>
-            <Route path='/problem/:probID/suggestion/:suggID/comments' component={SuggestionCommentContainer}></Route>
+            <Route path='/problem/:probID/suggestion/:suggID/container' component={SuggestionCommentContainer}>
+            <IndexRoute component={CommentForm}></IndexRoute>
+              <Route path='/problem/:probID/suggestion/:suggID/comments' component={CommentForm}></Route>
+              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/edit' component={CommentEditForm}></Route>
+              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/flag' component={CommentFlagForm}></Route>
+              <Route path='/problem/:probID/suggestion/:suggID/comment/:commentID/delete' component={CommentDeleteForm}></Route>
+            </Route>
             <Route path='/problem/:probID/freeforms/container' component={FreeFormContainer}>
               <IndexRoute component={FreeFormForm}></IndexRoute>
               <Route path='/problem/:probID/freeforms' component={FreeFormForm}></Route>
@@ -245,7 +258,8 @@ ReactDOM.render(
                 <Route path='/problem/:probID/learn/resources' component={LearnResourcesForm}></Route>
                 <Route path='/problem/:probID/learn/resources/:resourceID/edit' component={LearnResourcesEditForm}></Route>
                 <Route path='/problem/:probID/learn/resources/:resourceID/flag' component={LearnResourcesFlagForm}></Route>
-                <Route path='/problem/:probID/learn/resources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>              
+                <Route path='/problem/:probID/learn/resources/:resourceID/delete' component={LearnResourcesDeleteForm}></Route>  
+                <Route path='/problem/:probID/learn/resources/:resourceID/embed' component={LearnResourcesEmbed}></Route>            
               </Route>
             </Route>
           </Route>

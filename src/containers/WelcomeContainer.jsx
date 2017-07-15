@@ -80,7 +80,7 @@ export default class WelcomeContainer extends React.Component {
          <div id="welcomeFormComponent">
                <form  id="exploreWelcomeForm">
                  <input type="search" name="search"
-                    placeholder="Search user projects" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
+                    placeholder="Search projects" id="exploreInput"  onKeyDown={this.queryProblem} autoFocus/>
                  {/*<input type="submit" value="Go" id="submitExplore" />*/}
             </form>
          </div>

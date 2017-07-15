@@ -1,9 +1,11 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 import Header from '../containers/Header.jsx';
 
 export default class Error404 extends React.Component {
    render() {
-       setTimeout(function(){window.location.href='/profile'},4000)
+       setTimeout(function(){
+           browserHistory.goBack()},1500)
       return (
       <div>
         <Header />

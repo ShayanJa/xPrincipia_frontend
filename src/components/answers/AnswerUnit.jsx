@@ -53,7 +53,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may vote for only one answer per question.")
+            alert("You may only vote on an answer once.")
         })
     }
     function unVote() {
@@ -89,7 +89,7 @@ constructor(props){
                         {answer.Description}
                     </div>
 				</div>
-                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.TypeID}/delete`}>
+                <Link to={`/problem/${this.props.probID}/question/${this.props.questID}/answer/${answer.ID}/delete`}>
                     <div id="deleteSBButton">
                         <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                     </div>

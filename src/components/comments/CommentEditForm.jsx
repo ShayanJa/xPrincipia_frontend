@@ -10,20 +10,20 @@ export default class CommentEditForm extends React.Component {
   super();
 
   this.state= {
-    question: '',
+    comment: '',
   }
 
-    this.postQuestion = this.postQuestion.bind(this);
+    this.updateComment = this.updateComment.bind(this);
   };
 
   componentWillMount(){
       var self = this;
-        return axios.get( Config.API + '/auth/questions/typeID?id='+this.props.params.probID+'&dataType=0').then(function (response) {
+        return axios.get( Config.API + '/auth/comments/ID?id='+this.props.params.commentID).then(function (response) {
           self.setState({
-              questions: response.data
+              comment: response.data
           })
           
-          document.getElementById('questionEditTextArea').value = self.state.question.description;
+          document.getElementById('commentEditTextArea').value = self.state.comment.Description;
 
     })
     .catch(function (error) {
@@ -33,21 +33,22 @@ export default class CommentEditForm extends React.Component {
     });   
   }
 
-postQuestion() {
+updateComment() {
   //Read field items into component state
-  this.state.question = document.getElementById('questionTextArea').value
+  this.state.comment = document.getElementById('commentEditTextArea').value
 
-  axios.post( Config.API + '/auth/questions/create', {
-      type:'0',
-      typeID: this.props.probID,
+  axios.put( Config.API + '/auth/comments/update?id='+this.props.params.commentID, {
+      type:'3',
+      typeID: this.props.params.suggID,
       username: cookie.load('userName'),
-      description : this.state.question,
+      description : this.state.comment,
     })
       .then(function (result) {
-        document.location = window.location.pathname 
+        document.location = '/problem/' + self.props.params.probID + '/suggestion/' + self.props.params.suggID + '/comments'
+        // document.location = window.location.pathname 
       })
       .catch(function (error) {
-        alert("I'm sorry there was a problem with your request")
+        alert("I'm sorry, there was a problem with your request. ")
       });
     }
 
@@ -61,12 +62,12 @@ postQuestion() {
       <div id="questionFormComponent">
             <form id="questionForm">
                 <fieldset id="redFieldset">
-                    <legend id="redLegend">Edit Question</legend>
-                         <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
+                    <legend id="redLegend">Edit Comment</legend>
+                         <textarea name="questionText" required="required" id="commentEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.postQuestion} id="editButton">Edit</div>
-                         <Link to='/problem/${question.TypeID}/questions'>
-                          <div id="returnButton">Return</div>
+                         <div onClick={this.updateComment} id="editButton">Edit</div>
+                         <Link to={`/problem/${this.props.params.probID}/suggestion/${this.props.params.suggID}/comments`}>
+                            <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>
             </form>

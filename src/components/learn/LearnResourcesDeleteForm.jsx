@@ -45,7 +45,7 @@ deleteResource() {
                          <div>Are you sure you would like to delete this resource?</div>
                          <br />
                          <div onClick={this.deleteResource} id="deleteButton">Delete</div>
-                         <Link to='/problem/${resource.TypeID}/resources'>
+                         <Link to={`/problem/${this.state.resource.TypeID}/learn/resources`}>
                             <div id="returnButton">Return</div>
                          </Link>
                 </fieldset>

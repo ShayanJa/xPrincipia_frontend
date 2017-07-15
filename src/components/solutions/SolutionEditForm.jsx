@@ -58,7 +58,7 @@ export default class EditSolutionForm extends React.Component {
       references: self.state.references
     })
     .then(function (result) {
-       //Do nothing
+     document.location = window.location.pathname
 
     })
     .catch(function (error) {
@@ -72,7 +72,7 @@ export default class EditSolutionForm extends React.Component {
       <div id="createSolutionBox">
           <form id="createForm">
             <fieldset id="editFormFieldset">
-                <legend>Edit</legend>
+                <legend>Edit Proposal</legend>
                       
                       <label htmlFor="solutionTitle" id="editTitleFormLabel">Title<br />
                          <input type="text" name="solutionTitle" required="required" maxLength="140" id="solutionEditTitleForm" autoFocus/>

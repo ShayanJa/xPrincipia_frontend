@@ -33,7 +33,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may vote for only one question per problem.")
+            alert("You may only vote on a question once.")
         })
     }
   
@@ -49,7 +49,7 @@ constructor(props){
                         {question.Description}
                     </div>
 				</div>
-                <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`}>
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/delete`} >
                    <div id="deleteSBButton">
                         <img src={require('../../assets/delete.svg')} id="editLogo" width="18" height="18" alt="Delete Button" />
                     </div>
@@ -59,7 +59,7 @@ constructor(props){
                         <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                     </div>
                 </Link>
-                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeGlow">
                     <div id="commentSBButtonUser">
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
                     </div>                
@@ -68,6 +68,7 @@ constructor(props){
                     Vote
                 </button>
                 <br/><br/> 
+                {this.props.children}
         </li>);
 
     } else {
@@ -88,10 +89,11 @@ constructor(props){
                             Flag
                         </div>
                     </Link>*/}
-                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeBlue">
+                <Link to={`/problem/${question.TypeID}/question/${question.ID}/answers`} activeClassName="activeGlow">
                     <div id="commentSBButtonUser">
                             <img src={require('../../assets/comments.svg')} id="commentLogo" width="24" height="24" alt="Comments Button" />
-                    </div>                </Link>
+                    </div>                
+                </Link>
                 <button type="button" id="suggestionVote" onClick={submitVote}>
                     Vote
                 </button>

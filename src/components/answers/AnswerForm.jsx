@@ -39,11 +39,10 @@ axios.post( Config.API + '/auth/answers/create', {
 
       <div id="answerFormComponent">
         <form id="answerForm">
-            <fieldset>
+            <fieldset id="greenBorder">
                 <legend>Answers</legend>
-                     <textarea name="answerText" required="required" id="answerTextArea"></textarea>
-                     <br />
-                     <input type="button" value="Add" onClick={this.postAnswer} id="addAnswer"/>
+                     <textarea name="answerText" required="required" id="answerTextArea" placeholder="Answer this question or view the answers of your peers. " autoFocus ></textarea>
+                     <input type="button" value="Answer" onClick={this.postAnswer} id="addAnswerGreen" />
             </fieldset>
         </form>
       </div>

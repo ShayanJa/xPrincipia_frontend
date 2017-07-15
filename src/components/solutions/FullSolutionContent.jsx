@@ -73,13 +73,16 @@ export default class FullSolutionContent extends React.Component {
             alert("Thank you, your vote has been recorded.");
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a solution.");
+            alert("You may only vote on a proposal once. ");
         })
   }
    render() {
        if (this.state.solutionInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (
       <div> 
+            <div id="ProposalPercentFull">
+                {this.state.solutionInfo.Rank}
+            </div>
             <div id="voteVersionsMenu">
                     <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
                     {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
@@ -114,6 +117,9 @@ export default class FullSolutionContent extends React.Component {
                )    } else {
     return (
       <div> 
+            <div id="ProposalPercentFull">
+                {this.state.solutionInfo.Rank}
+            </div>
             <div id="voteVersionsMenu">
                     <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
                     {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>

@@ -72,11 +72,11 @@ export default class ProblemLeftSB extends React.Component {
            
         })
         .then(function (result) {
-            document.location = "/problem/" + self.state.parentID + "/subproblems";
+            document.location = window.location.pathname;
             alert("Thank you, your vote has been recorded.")
         })
         .catch(function (error) {
-            alert("I'm sorry, you've already voted on a problem.");
+            alert("You may only vote on a project once. ");
         })
   }
 
@@ -100,7 +100,9 @@ export default class ProblemLeftSB extends React.Component {
             <div id="problemLeftSBIntro">
               <div id="SPHeaderLeftSB">
                 <div id="SPTitleLeftSB">{this.state.problemInfo.Title}</div>
-                <div id="SPPercentLeftSB">{floatToDecimal(this.state.problemInfo.PercentRank)}</div>
+                <div id="SPPercentLeftSB">
+                  <span id="bigPercent">{floatToDecimal(this.state.problemInfo.PercentRank)}</span>%
+                </div>
               </div> 
                 <div id="fullProblemHeaderSB">
                   <div id="problemAdditionalInfoLabelSB">Additional Info</div>
@@ -130,5 +132,5 @@ export default class ProblemLeftSB extends React.Component {
 
 //convert float to Decimal
 function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
+	return Math.round(float*100);
 }

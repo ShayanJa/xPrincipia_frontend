@@ -98,6 +98,13 @@
     #nodisplay {
       display: none;
     }
+    #embedLink {
+      width: 800px;
+      height: 600px;
+      overflow: auto;
+      border: 2px solid #00dcff;
+      box-shadow: 0 0 3pt 3pt rgba(0,220,255,0.5)
+    }
 
 
 /*End Global*/
@@ -152,31 +159,43 @@
     border-radius: 3px;
     margin: 0% 15% 0% 15% !important;
   }
-  #loginEmail, #loginPassword {
+  #loginEmail, #loginPassword, #registerFullName,
+  #registerUserName, #registerEmail, #registerPassword {
     width: 80% !important;
   }
-  #submitLogin {
+  #submitLogin, #submitRegister {
     width: 50% !important;
   }
-  #registerButton {
+  #registerButton, #loginButton {
     width: 40% !important;
   }
 /*Welcome*/
   #welcomeProblemsUnit {
+  }
+  #welcomeUnitsContainer {
     width: 100% !important;
-    margin: 0% 5% 0% 5% !important;
   }
   #welcomeProblemsHeader, 
   #welcomeProblemsHeader1,
   #welcomeProblemsHeader2,
   #welcomeProblemsHeader3,
   #welcomeProblemsHeader4 {
+
+    background-size: cover !important;
+    border: 1px solid #00dcff !important;
+    border-width: 1px 1px 1px 1px !important;
     border-radius: 0% !important;
     box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
-    width: 30em !important;
+    width: 94.5% !important;
     height: auto !important;
+    word-wrap: break-word !important; 
+    align-items: center !important; 
+    justify-content: center !important;
     margin-bottom: 5% !important;
-    background-size: cover !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    margin-top: 2% !important;
+    transition: all 0.2s ease 0s !important;
   }
   #welcomeProblemsHeader:hover, 
   #welcomeProblemsHeader1:hover,
@@ -208,7 +227,6 @@
 #welcomeProblemsHeader1, #welcomeProblemsHeader2,
 #welcomeProblemsHeader3, #welcomeProblemsHeader4 {
   margin-bottom: 0 !important;
-  border-width: 0px 1px 1px 1px !important;
 }
 #exploreWelcomeForm {
   width: 100% !important;
@@ -226,12 +244,19 @@
   display: none !important;
 }
 #SPParent2 {
-  display: initial !important;
+  display: block !important;
   margin: 0 auto !important;
-  height: 50px !important;
-  width: 250px !important;
+  height: 30px !important;
+  width: 150px !important;
   text-align: center !important;
-  float: center !important;
+  transition: all 0.5s ease 0s !important;
+}
+#SPParent2Div {
+  display: block !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  margin-top: -2% !important;
+  margin-bottom: 2% !important;
 }
 #problemRow1, #problemRow2 {
   display: flex !important;
@@ -297,6 +322,10 @@
 #SPUnitList {
   flex-direction: column  !important;
   display: flex  !important;
+}
+#SPUnit {
+  width: 18em !important;
+  margin: 0 auto !important;
 }
 #SParrowImg {
   display: none !important;
@@ -364,6 +393,22 @@
 #projectsTitleProfile, #proposalsTitleProfile {
   border-top-width: 1px !important;
 }
+
+/*Discuss*/
+
+/*This is trying to get question text to go beneath options
+like vote and comments.*/
+
+/*#suggestionContent {
+  clear: both !important;
+}*/
+
+/*Tutorials*/
+#introBanner {
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -444,6 +489,30 @@
 
 /*Answer and Question*/
 
+    #answerQuestionHeader {
+      display: flex;
+    	flex-direction: row;
+    }
+    #answerQuestionLabel {
+      font-size: 150%;
+      color: #00dcff;
+      width: 100%;
+      padding-left: 3%;
+      letter-spacing: 8px;
+      /*text-align: center;*/
+      /*border: 1px solid #00dcff;
+      border-width: 0px 0px 1px 0px;*/
+    }
+    #answerQuestionContent {
+      flex: 3 3 auto;
+      font-family: 'Open Sans';
+      width: 80%;
+      padding: 0px 10px 10px 15px;
+    }
+    #greenBorder {
+      border-color: #00ffdc;
+      padding-top: 15px;
+    }
     #sidebarElements {
       border: 1px solid #00dcff;
       border-width: 0px 1px;
@@ -458,17 +527,6 @@
     	border: 1px solid #00dcff;
     	font-size: 90%;
     	text-align: justify;
-    }
-    #questionUnit {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
-    	display: flex;
-    	flex-direction: row;
-    	font-family: 'Open Sans';
-    	padding-top: 10px;
-    	width: 100%;
     }
     #questionContent {
     	flex: 3 3 auto;
@@ -555,28 +613,27 @@
     }
     #commentSBButton:hover, #commentSBButtonUser:hover {
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+      /*Interesting thing to try to get images to switch on hover*/
+      /*content: url("http://i.imgur.com/uKnMvyp.jpg");*/
     }
 
     #flagSBButton, #deleteSBButton {
       color: #ff7f7f;
       border: 1px solid #ff7f7f;
       border-radius: 0px 0px 0px 2px;
-      /*OR #fc5353*/
     }
     #flagSBButton:active, #deleteSBButton:active {
       color: #0f131c !important;
       background-color: #ff7f7f;
     }
     #flagSBButton:hover, #deleteSBButton:hover {
-      /*color: #0f131c !important;
-      background-color: #ff7f7f;*/
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(255,127,127,0.5);
     }
     #editSBButton:hover, #editSBButtonAnswer:hover {
       cursor: pointer;
-      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
     }
     #flagSBButton:active {
       color: #ff7f7f;
@@ -642,12 +699,12 @@
  /*CreateProblem and Create Solution*/
 
     #createForm {
-      /*background-color: rgba(255,255,255,0.05);*/
       color: #00dcff;
       height: auto;
       padding: 0px 5px 5px 5px;
       width: 90%;
       margin: 0 auto;
+      background-color: rgba(0,220,255,0.025);
      }
     #welcomeCreateForm {
       background-color: rgba(0,220,255,0.01);
@@ -666,10 +723,24 @@
     	text-align: left;
     	height: 5em;
     }
+    #projectEditSummaryForm {
+      font-family: 'Open Sans';
+    	text-align: left;
+    	height: 5em;
+    }
     #problemDescriptionForm, #problemRequirementsForm, #solutionDescriptionForm, {
       height: 10em;
     }
     #problemTitleForm {
+      font-family: 'Alegreya Sans SC', sans-serif;
+      color: #ffffff;
+      margin: 0 auto;
+      letter-spacing: 6px;
+      border: 1px solid #ffffff;
+      border-radius: 3px;
+      box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
+    }
+    #projectEditTitleForm {
       font-family: 'Alegreya Sans SC', sans-serif;
       color: #ffffff;
       margin: 0 auto;
@@ -766,7 +837,7 @@
     	color: #00dcff;
     	border: 1px solid #00dcff;
     	background-color: rgba(0,220,255,0);
-    	width: 86%;
+    	width: 50%;
     	margin: 0 auto;
       margin-top: 3%;
       margin-bottom: 2%;
@@ -1483,6 +1554,11 @@
     	color: #0f131c;
     	cursor: pointer;
     }
+    #followedProblemsButtonActive, #createdProblemsButtonActive, 
+    #votedSolutionsButtonActive, #createdSolutionsButtonActive {
+      background-color: #00ffdc;
+      color: #0f131c;
+    }
     #projectsTitleResume:hover, #proposalsTitleResume:hover {
       background-color: rgba(0,220,255,1);
     	color: #0f131c;
@@ -1672,6 +1748,8 @@
   border: 1px solid #00dcff;
   transition: all 0.5s ease 0s;
   box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
+  margin-bottom: 2%;
+  background-color: rgba(0,220,255,0.05);
 }
 #solutionUnitContainer {
   padding: 0px;
@@ -1926,6 +2004,10 @@
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
+    /*Doesn't work since it highlights the entire box*/
+    /*.activeGlow {
+      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+    }*/
     /*#createWelcomeButton:active {
       background-color: #00dcff;
       color: #0f131c;
@@ -2344,20 +2426,34 @@
   height: 4em;
   resize: none;
 }
-
+#learnContentTextArea {
+  height: 12em;
+}
 #askQuestion, #addSuggestion, #addAnswer {
   font-size: 90%;
   color: #00dcff;
   background-color: rgba(0,255,220,0);
   border: 1px solid #00dcff;
   border-radius: 2px;
-  /*margin-top: 5px;*/
-  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 40%;
   transition: all 0.5s ease 0s;
 }
 #addAnswer {
   color: #00dcff;
   border: 1px solid #00dcff;
+}
+#addAnswerGreen {
+  font-size: 90%;
+  color: #00dcff;
+  background-color: rgba(0,255,220,0);
+  border: 1px solid #00dcff;
+  border-radius: 2px;
+  margin-top: 2%;
+  width: 40%;
+  transition: all 0.5s ease 0s;
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
 }
 #askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;
@@ -2554,7 +2650,7 @@
 #flagSolutionButton, #deleteSolutionButton {
   display: block;
   margin: 0 auto;
-  box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(255,127,127,0.5);*/
   transition: all 0.5s ease 0s
 }
 #deleteSolutionButton {
@@ -2565,9 +2661,8 @@
   display: block;
   margin: 0 auto;
   padding: 3px;
-  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
   transition: all 0.5s ease 0s
-
 }
 
 #flagSolutionButton:hover, #deleteSolutionButton:hover {
@@ -2578,7 +2673,17 @@
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
-
+#editProjectButton {
+  display: block;
+  margin: 0 auto;
+  padding: 3px;
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  transition: all 0.5s ease 0s
+}
+#editProjectButton:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
 #backArrow {
   flex: 1 1 auto;
   padding: 4px;
@@ -2638,6 +2743,9 @@
 #SPParent2 {
   display: none;
 }
+#SPParent2Div {
+  display: none;
+}
 #SPParent2:hover {
   cursor: pointer;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
@@ -2677,6 +2785,9 @@
 }
 #problemPercent:hover {
   transform: scale(1.1);
+}
+#bigPercent {
+  font-size: 120%;
 }
 #problemTitle {
   color: #dddddd;
@@ -2916,6 +3027,7 @@
   margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
   width: 100%;
+  max-width: 100%;
   padding: 0px 10px 20px 10px;
   flex: 1 1 auto;
   float: right;
@@ -2977,6 +3089,12 @@
   font-size: 150%;
   color: #00ffdc;
 }
+#ProposalPercentFull {
+  text-align: center;
+  font-size: 250%;
+  color: #00ffdc;
+  margin-bottom: 0.5%;
+}
 
 /*End ProblemLeftSB*/
 
@@ -3028,6 +3146,7 @@
   color: #dddddd;
   border: 1px solid #dddddd;
   border-width: 0px 1px 0px 1px;
+  border-bottom-color: #00dcff;
   font-size: 80%;
   /*padding: 3px 5px 3px 10px;*/
   padding: 5px;
@@ -3038,6 +3157,11 @@
   transition: all 0.5s ease 0s;
   background-color: rgba(0,220,255,0);
 }
+#topSolutionsButtonRightSB,
+#createSolutionsButtonRightSB {
+  border-width: 0px 1px 1px 1px;
+  border-bottom-color: #00dcff;
+}
 
 #topSolutionsButtonRightSB:hover,
 #createSolutionsButtonRightSB:hover {
@@ -3046,10 +3170,15 @@
   cursor: pointer;
   border-color: #00dcff;
 }
-.activeWhite {
+/*.activeWhite {
   background-color: rgba(0,220,255,0.15);
   color: #00dcff !important;
   border-color: #00dcff;
+}*/
+.activeWhite div {
+  background-color: rgba(0,220,255,0.15) !important;
+  /*color: #00dcff !important;*/
+  border-color: #00dcff !important;
 }
 /*.activeWhite #topSolutionsButtonRightSB,
 .activeWhite #createSolutionsButtonRightSB {
@@ -3258,18 +3387,28 @@ label + input[type=radio] + label {
   border-radius: 10px;
   overflow: hidden;
 }
+#learnContentText {
+  font-family: 'Open Sans';
+  margin-top: 5px;
+  max-width: 584.31px;
+}
 #learnResourcesText {
-  font-family: 'Alegreya Sans SC';
+  font-family: 'Open Sans';
   margin-top: 5px;
 }
-a#learnResourcesLink {
+#learnResourcesLink {
   text-decoration: underline;
   color: rgba(255,255,255,1);
   transition: all 1s ease 0s;
   font-size: 120%;
+  transform: scale(1);
+  font-family: 'Open Sans';
+  margin-top: 5px;
+  max-width: 584.31px;
 }
-a#learnResourcesLink:hover {
+#learnResourcesLink:hover {
   color: rgba(0,220,255,1);
+  transform: scale(1.02);
 }
 /*End Learn SB*/
 
@@ -3370,7 +3509,23 @@ a#learnResourcesLink:hover {
   letter-spacing: 8px;
   padding: 5px;
   width: 100%;
-  /**/
+  transition: all 0.5s ease 0s;
+}
+#proposalCreator:hover {
+  color: #ffffff;
+}
+#projectCreator {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  font-size: 80%;
+  text-align: center;
+  letter-spacing: 8px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+}
+#projectCreator:hover {
+  color: #ffffff;
 }
 #createDate {
   flex: 1 1 auto;
@@ -3919,21 +4074,14 @@ input#submitNewVersion:hover {
   margin-top: 4%;
 }
 #profileAboutTitle {
-  /*font-size: 200%;
+  font-size: 250%;
+  letter-spacing: 16px;
+  border: 1px solid #00dcff;
+  border-width: 2px 0px;
   text-align: center;
-  margin-top: 5%;
-  color: #ffffff;
-  letter-spacing: 8px;
-  margin-top: 5%;
-  margin-bottom: 5%;*/
-
-      font-size: 250%;
-    	letter-spacing: 16px;
-    	border: 1px solid #00dcff;
-    	border-width: 2px 0px;
-      text-align: center;
-      margin: 0 auto;
-      box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  margin: 0 auto;
+  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+  width: 90%;
 }
 #profileAboutBanner {
   margin: 0 auto;
@@ -4012,9 +4160,9 @@ input#submitNewVersion:hover {
   color: #ff7f7f;
 }*/
 
-#redFieldset {
-  /*border-color: #ff7f7f;*/
-}
+/*#redFieldset {
+  border-color: #ff7f7f;
+}*/
 #freeFormEditTextArea {
   border-color: #ff7f7f;
 }
@@ -4025,7 +4173,7 @@ input#submitNewVersion:hover {
 #deleteButton, #editButton, #flagButton, #returnButton {
   font-size: 120%;
   color: #ff7f7f;
-  background-color: inherit;
+  background-color: rgba(255,127,127,0);
   border: 1px solid #ff7f7f;
   border-radius: 2px;
   margin-top: 5px;
@@ -4035,6 +4183,7 @@ input#submitNewVersion:hover {
   padding: 5px;
   float: right;
   margin-right: 10%;
+  transition: all 0.5s ease 0s;
 }
 #returnButton {
   color: #00ffdc;
@@ -4046,7 +4195,7 @@ input#submitNewVersion:hover {
 #deleteButton:hover, #editButton:hover {
   cursor: pointer;
   color: #0f131c;
-  background-color: #ff7f7f;
+  background-color: rgba(255,127,127,1);
 }
 #returnButton:hover {
   cursor: pointer;

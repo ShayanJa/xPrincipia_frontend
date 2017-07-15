@@ -49,7 +49,7 @@ export default class ProblemForm extends React.Component {
         <div id="createProblemBox">
             <form id="createForm">
               <fieldset>
-                  <legend>Create:Sub Project</legend>
+                  <legend>Create a Sub Project</legend>
                         <Link to={`/problem/${this.props.params.probID}/subproblems`}>
                           <div id="backSolutionArrowDiv">
                               <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
@@ -60,14 +60,15 @@ export default class ProblemForm extends React.Component {
                           </label><br />
 
                         <label htmlFor="problemSummaryForm" id="problemSummaryFormLabel">Additional Information<br />
-                            <textarea name="problemSummary" required="required" maxLength="250" 
-                            placeholder="Please provide any additional information you'd like. (250 character max.)" id="problemSummaryForm">
+                            <textarea name="problemSummary" required="required" maxLength="350" 
+                            placeholder="Please provide any additional information you'd like. (250 character max)" id="problemSummaryForm">
                             </textarea></label><br />
 
                         <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>
               </fieldset>
             </form>
         </div>
+
       );
    }
 }
