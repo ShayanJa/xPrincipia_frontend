@@ -68,6 +68,7 @@ constructor(props){
                     Vote
                 </button>
                 <br/><br/> 
+                {this.props.children}
         </li>);
 
     } else {

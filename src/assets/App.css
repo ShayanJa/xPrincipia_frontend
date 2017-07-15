@@ -489,6 +489,30 @@ like vote and comments.*/
 
 /*Answer and Question*/
 
+    #answerQuestionHeader {
+      display: flex;
+    	flex-direction: row;
+    }
+    #answerQuestionLabel {
+      font-size: 150%;
+      color: #00dcff;
+      width: 100%;
+      padding-left: 3%;
+      letter-spacing: 8px;
+      /*text-align: center;*/
+      /*border: 1px solid #00dcff;
+      border-width: 0px 0px 1px 0px;*/
+    }
+    #answerQuestionContent {
+      flex: 3 3 auto;
+      font-family: 'Open Sans';
+      width: 80%;
+      padding: 0px 10px 10px 15px;
+    }
+    #greenBorder {
+      border-color: #00ffdc;
+      padding-top: 15px;
+    }
     #sidebarElements {
       border: 1px solid #00dcff;
       border-width: 0px 1px;
@@ -503,17 +527,6 @@ like vote and comments.*/
     	border: 1px solid #00dcff;
     	font-size: 90%;
     	text-align: justify;
-    }
-    #questionUnit {
-    	display: -webkit-box;
-    	display: -moz-box;
-    	display: -ms-flexbox;
-    	display: -webkit-flex;
-    	display: flex;
-    	flex-direction: row;
-    	font-family: 'Open Sans';
-    	padding-top: 10px;
-    	width: 100%;
     }
     #questionContent {
     	flex: 3 3 auto;
@@ -1541,6 +1554,11 @@ like vote and comments.*/
     	color: #0f131c;
     	cursor: pointer;
     }
+    #followedProblemsButtonActive, #createdProblemsButtonActive, 
+    #votedSolutionsButtonActive, #createdSolutionsButtonActive {
+      background-color: #00ffdc;
+      color: #0f131c;
+    }
     #projectsTitleResume:hover, #proposalsTitleResume:hover {
       background-color: rgba(0,220,255,1);
     	color: #0f131c;
@@ -2424,6 +2442,18 @@ like vote and comments.*/
 #addAnswer {
   color: #00dcff;
   border: 1px solid #00dcff;
+}
+#addAnswerGreen {
+  font-size: 90%;
+  color: #00dcff;
+  background-color: rgba(0,255,220,0);
+  border: 1px solid #00dcff;
+  border-radius: 2px;
+  margin-top: 2%;
+  width: 40%;
+  transition: all 0.5s ease 0s;
+  color: #00ffdc;
+  border: 1px solid #00ffdc;
 }
 #askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;

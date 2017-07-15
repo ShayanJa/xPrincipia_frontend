@@ -13,6 +13,7 @@ constructor(props){
         // this.submitVote = this.submitVote.bind(this)
 
     };
+    
 	render() {
 		return (
 	    <div>

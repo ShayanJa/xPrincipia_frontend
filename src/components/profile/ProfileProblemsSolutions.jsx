@@ -97,8 +97,8 @@ export default class ProfileProblemsSolutions extends React.Component {
     <div>
         <div id="profileSidebarMenu">
             <div id="profileProjectsMenu">
-                <div id="projectsTitleProfile">Projects!</div>
-                <div id="createdProblemsButton" onClick={this.onCreatedProblem}>Created</div>
+                <div id="projectsTitleProfile">Projects</div>
+                <div id="createdProblemsButtonActive" onClick={this.onCreatedProblem}>Created</div>
                 <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Voted</div>
             </div>
             <div id="profileProposalsMenu">
@@ -119,7 +119,7 @@ export default class ProfileProblemsSolutions extends React.Component {
     <div>
         <div id="profileSidebarMenu">
             <div id="profileProjectsMenu">
-                <div id="projectsTitleProfile">Projects!</div>
+                <div id="projectsTitleProfile">Projects</div>
                 <div id="createdProblemsButton" onClick={this.onCreatedProblem}>Created</div>
                 <div id="followedProblemsButton" onClick={this.onFollowedProblem}>Voted</div>
             </div>

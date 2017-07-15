@@ -12,7 +12,7 @@ export default class AnswerContainer extends React.Component {
         super(props);
 
         this.state = {
-            questions: [],
+            question: [],
             answers: [], 
         }
         
@@ -20,31 +20,37 @@ export default class AnswerContainer extends React.Component {
     };
     componentDidMount(){
         var self = this;
-        return axios.get( Config.API + '/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
+        axios.get( Config.API + '/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
             self.setState({
                 answers: response.data,
             })
         })
-        return axios.get( Config.API + '/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
+        axios.get( Config.API + '/auth/questions/ID?id='+this.props.params.questID).then(function (response) {
             self.setState({
-                questions: response.data
+                question: response.data
             })
         }) 
              
     }
-    // Alternative strategy for setting state
-//   componentWillReceiveProps(newProps){
-//     var self = this;
-//       return axios.get( Config.API + '/auth/questions/ID?id='+newProps.params.questID).then(function (response) {
-//           self.setState({
-//               questions: response.data
-//           })
-//     }).then( function(response){
-//     })
-//     .catch(function (error) {
-//     }); 
+    // Strategy for updating state
+  componentWillReceiveProps(newProps){
+    var self = this;
+      axios.get( Config.API + '/auth/questions/ID?id='+newProps.params.questID).then(function (response) {
+          self.setState({
+              question: response.data
+          })
+          
+        })
+        .catch(function (error) {
 
-//   }
+        }); 
+    axios.get( Config.API + '/auth/answers/questionID?id='+this.props.params.questID).then(function (response) {
+        self.setState({
+            answers: response.data,
+        })
+    })        
+
+  }
 
 // Commented out until works
 //       submitVote() {
@@ -59,32 +65,36 @@ export default class AnswerContainer extends React.Component {
 //             document.location = window.location.pathname;
 //         })
 //         .catch(function (error) {
-//             alert("You may only vote on a resource once. ");
+//             alert("You may only vote on an answer once. ");
 //         })
 //   }
  
    render() {
       return (
         <div id="answerContainer">
+       
         {/*Question being answered*/}
+        <div id="answerQuestionHeader">
+            <Link to={`/problem/${this.props.params.probID}/questions`}>
+                <div id="backSolutionArrowDiv">
+                    <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
+            </Link>
+            <div id="answerQuestionLabel">Answers</div>
+        </div>
         <div id="questionUnit"> 
-                <Link to={`/problem/${this.props.params.probID}/questions`}>
-                    <div id="backSolutionArrowDiv">
-                        <img src={require('../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
-                    </div>
-                </Link>
-                <div id="suggestionContent">
+                <div id="answerQuestionContent">
 					<div id="discussHeader">
                         <span id="discussPercent">
-                            XX%
-                            {/*{floatToDecimal(question.PercentRank)}*/}
+                           
+                            {floatToDecimal(this.state.question.PercentRank)}
                         </span>
-					    Test Username
-                        {/*{this.state.questions.Username}*/}
+					    {/*Test Username*/}
+                        {this.state.question.Username}
                     </div>
                     <div id="suggestionText">
                         {/*Test Description*/}
-                        {this.state.questions.Description}
+                        {this.state.question.Description}
                     </div>
 				</div>
                 {/*<button type="button" id="suggestionVote" onClick={submitVote}>
@@ -101,3 +111,7 @@ export default class AnswerContainer extends React.Component {
       );
    }
 }
+//convert float to Decimal
+function floatToDecimal(float) {
+	return Math.round(float*100)+'%';
+};
