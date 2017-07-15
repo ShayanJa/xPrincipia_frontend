@@ -38,7 +38,7 @@ updateAnswer() {
   this.state.answer = document.getElementById('answerEditTextArea').value
 
   axios.put( Config.API + '/auth/answers/update?id='+this.props.params.answerID, {
-      type:'2',
+      type:'4',
       typeID: this.props.params.questID,
       username: cookie.load('userName'),
       description : this.state.answer,
