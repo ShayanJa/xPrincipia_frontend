@@ -37,11 +37,12 @@ updateComment() {
   //Read field items into component state
   this.state.comment = document.getElementById('commentEditTextArea').value
 
+  var self = this
   axios.put( Config.API + '/auth/comments/update?id='+this.props.params.commentID, {
-      type:'3',
-      typeID: this.props.params.suggID,
+      type:'5',
+      typeID: self.props.params.commentID,
       username: cookie.load('userName'),
-      description : this.state.comment,
+      description : self.state.comment,
     })
       .then(function (result) {
         document.location = '/problem/' + self.props.params.probID + '/suggestion/' + self.props.params.suggID + '/comments'

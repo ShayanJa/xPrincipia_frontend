@@ -22,7 +22,7 @@ deleteComment() {
       var self = this
       axios.delete( Config.API + '/auth/comments/delete?id='+this.props.params.commentID, {
         params: {
-          
+          id: this.props.params.commentID,
           username: cookie.load('userName')
         }
     })
