@@ -56,6 +56,22 @@ constructor(props){
             alert("You may vote for only one answer per question.")
         })
     }
+    function unVote() {
+      axios.delete( Config.API + '/auth/vote/delete' ,{
+        params: {
+          type: 4,
+          typeID: answer.ID,
+          username: cookie.load('userName')
+        }
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("You may vote for only one answer per question.")
+        })
+        
+    }
 
 
 
@@ -83,7 +99,7 @@ constructor(props){
                         <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                     </div>
                 </Link>
-            <button type="button" onClick={submitVote} id="suggestionVote">
+            <button type="button" onClick={unVote} id="suggestionVote">
                 UnVote
             </button>
         </li>);
