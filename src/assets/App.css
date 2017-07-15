@@ -1881,6 +1881,28 @@ like vote and comments.*/
       border-width: 1px 1px 1px 1px;
       min-width: 103.27px;
     }
+    #suggestionVoted, #suggestionVotedNoComments {
+      flex: 1 1 auto;
+      color: #0f131c;
+      background-color: #00ffdc;
+      border: 1px solid #00ffdc;
+      border-width: 1px 1px 1px 0px;
+      border-radius: 2px 2px 0px 0px;
+      cursor: pointer;
+      height: 37px;
+      min-width: 101.94px;
+      text-align: center;
+      font-size: 120%;
+      padding: 0px 12px 0px 13px;;
+      letter-spacing: 4px;
+      margin: 0 auto;
+      transition: all 0.5s ease 0s;
+      box-shadow: 0 0 0pt 0pt rgba(255,127,127,0.5);
+    }
+    #suggestionVotedNoComments {
+      border-width: 1px 1px 1px 1px;
+      min-width: 103.27px;
+    }
     #suggestionVote:hover, #suggestionVoteNoComments:hover {
       color: #0f131c;
       background-color: #00ffdc;
@@ -2454,6 +2476,11 @@ like vote and comments.*/
   transition: all 0.5s ease 0s;
   color: #00ffdc;
   border: 1px solid #00ffdc;
+}
+#addAnswerGreen:hover, #addAnswerGreen:active {
+  color: #0f131c;
+  background-color: rgba(0,255,220,1);
+  cursor: pointer;
 }
 #askQuestion:hover, #addAnswer:hover, #addSuggestion:hover, #askquestion:active, #addAnswer:active, #addSuggestion:active  {
   color: #0f131c;

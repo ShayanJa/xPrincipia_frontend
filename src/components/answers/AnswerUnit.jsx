@@ -68,7 +68,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("Sorry there was a problem")
+            alert("I'm sorry, there was a problem with your request. ")
         })
         
     }
@@ -99,8 +99,8 @@ constructor(props){
                         <img src={require('../../assets/editBlue.svg')} id="editLogo" width="18" height="18" alt="Edit Button" />
                     </div>
                 </Link>
-            <button type="button" onClick={unVote} id="suggestionVote">
-                UnVote
+            <button type="button" onClick={unVote} id="suggestionVoted">
+                Voted
             </button>
         </li>);
 
@@ -145,8 +145,8 @@ constructor(props){
                         {answer.Description}
                     </div>
 				</div>
-            <button type="button" onClick={unVote} id="suggestionVote">
-                UnVote
+            <button type="button" onClick={unVote} id="suggestionVoted">
+                Voted
             </button>
         </li>);
 
