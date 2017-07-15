@@ -120,11 +120,11 @@ export default class FullProblem extends React.Component {
             <p id="problemSummary">
               {this.state.problemInfo.Summary}
             </p>
-            <div id="createSPButtonBox">
-              <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+            <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+              <div id="createSPButtonBox">
                 <h1 id="createSPButton">Create a Sub Project</h1>
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
           <div id="columnContainer">
             {/*<div id="fullProblemHeader">*/}

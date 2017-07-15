@@ -2435,6 +2435,7 @@ like vote and comments.*/
       transform: scale(1.02);
       cursor: pointer;
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+      color: #00dcff;
     }
     #createSPButton {
       color: #dddddd;
