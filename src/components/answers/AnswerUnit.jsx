@@ -68,7 +68,7 @@ constructor(props){
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("You may vote for only one answer per question.")
+            alert("Sorry there was a problem")
         })
         
     }
@@ -145,7 +145,7 @@ constructor(props){
                         {answer.Description}
                     </div>
 				</div>
-            <button type="button" onClick={submitVote} id="suggestionVote">
+            <button type="button" onClick={unVote} id="suggestionVote">
                 UnVote
             </button>
         </li>);
