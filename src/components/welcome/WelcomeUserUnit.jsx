@@ -20,60 +20,28 @@ if (problem.Title === 'Interstellar Civilization') {
 
       return (
       
-        <li  key={problem.ID} id="welcomeProblemsUnit">
-            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-                <div id="welcomeProblemsHeaderInvisible">
-                    <div id="welcomeProblemsTitle">
-                        {problem.Title}
-                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
-                    </div>
-                </div>
-            </Link>
-        </li>
+        <div id="nodisplay">
+          </div>
       
       
       );
 
 } else if (problem.Title === 'Evolving Humanity') {
       return (
-        <li  key={problem.ID} id="welcomeProblemsUnit">
-          <Link  to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-            <div id="welcomeProblemsHeaderInvisible">
-                <div id="welcomeProblemsTitle">
-                    {problem.Title}
-                    <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
-                </div>
-            </div>
-          </Link>
-        </li>
+        <div id="nodisplay">
+          </div>
       
       );
 } else if (problem.Title === 'Theoretical Knowledge') {
       return (
-        <li key={problem.ID} id="welcomeProblemsUnit">
-            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-                <div id="welcomeProblemsHeaderInvisible">
-                    <div id="welcomeProblemsTitle">
-                        {problem.Title}
-                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
-                    </div>
-                </div>
-            </Link>
-        </li>
+        <div id="nodisplay">
+          </div>
       
       );
 } else if (problem.Title === 'Technology Development') {
       return (
-        <li key={problem.ID} id="welcomeProblemsUnit">
-            <Link to={{pathname: '/problem/'+problem.ID +'/subproblems'}}>
-                <div id="welcomeProblemsHeaderInvisible">
-                    <div id="welcomeProblemsTitle">
-                        {problem.Title}
-                        <div id="SPPercent">{floatToDecimal(problem.PercentRank)}</div>
-                    </div>
-                </div>
-            </Link>
-        </li>
+        <div id="nodisplay">
+          </div>
       
       );
 } else 

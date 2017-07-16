@@ -60,6 +60,27 @@ export default class FullSolutionDescription extends React.Component {
         })
   }
    render() {
+      
+      if (this.state.solutionInfo.References === "" ) {
+          return (
+      <div> 
+            <div>
+              <br />
+              <div id="solutionFormLabel">Description</div>
+              <p id="solutionDescription">
+                  {this.state.solutionInfo.Description}
+              </p>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p id="xp">XP</p>
+            <br />
+      </div>
+          )
+      } else {
       return (
       <div> 
             <div>
@@ -85,7 +106,7 @@ export default class FullSolutionDescription extends React.Component {
       </div>
       );
    }
-}
+}}
 
 
  

@@ -40,6 +40,7 @@ constructor(props){
 	}
 	renderItem(question) {
        function submitVote() {
+       var self = this
        axios.post( Config.API + '/auth/vote/create', {
            Type: 2,
            TypeID: question.ID,
@@ -47,7 +48,15 @@ constructor(props){
            
         })
         .then(function (result) {
-            document.location = window.location.pathname 
+          return axios.get( Config.API + '/auth/questions/ID?id='+self.props.params.questID).then(function (response) {
+          
+            //set problem data
+            self.setState({
+                question: response.data,
+            })
+
+          })
+          
         })
         .catch(function (error) {
             alert("You may only vote on a question once.")

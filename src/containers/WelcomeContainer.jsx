@@ -95,7 +95,7 @@ export default class WelcomeContainer extends React.Component {
 
           <TutorialWelcomeContent />
           {/*</ReactCSSTransitionGroup>*/}
-          <FooterWelcome />
+          {/*<FooterWelcome />*/}
         </div>
       );
    }

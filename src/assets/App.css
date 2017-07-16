@@ -1256,7 +1256,7 @@ like vote and comments.*/
   text-align: center;
   font-size: 150%;
   letter-spacing: 16px;
-  color: #00dcff;
+  color: #dddddd;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   border: 1px solid #00dcff;
@@ -1268,6 +1268,7 @@ like vote and comments.*/
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 500;
 }
 #footerWelcome {
   width: 99%;
@@ -1282,6 +1283,7 @@ like vote and comments.*/
   margin: 0 auto;
   margin-top: 5%;
   transition: all 0.5s ease 0s;
+  z-index: 500;
 }
 #footer:hover, #footerWelcome:hover {
   cursor: pointer;
@@ -1434,9 +1436,11 @@ like vote and comments.*/
       margin-top: 0.5%;
       width: 15%;
     }
-    #submitLogin:hover, #submitRegister:hover {
-    	color: #0f131c;
-    	background-color: rgba(0,220, 255, 1);
+    #submitLogin:hover, #submitRegister:hover,
+    #submitLogin:focus, #submitLogin:active, 
+    #submitRegister:focus, #submitLogin:active {
+    	color: #0f131c !important;
+    	background-color: rgba(0,220, 255, 1) !important;
     	cursor: pointer;
     }
     #registerButton, #loginButton {
@@ -1450,9 +1454,11 @@ like vote and comments.*/
     #registerButton, #loginButton {
       margin-top: 0%;
     }
-    #registerButton:hover, #loginButton:hover {
-    	color: #0f131c;
-    	background-color: rgba(0,255, 220, 1);
+    #registerButton:hover, #loginButton:hover,
+    #registerButton:focus, #registerButton:active,
+    #loginButton:focus, #loginButton:active {
+    	color: #0f131c !important;
+    	background-color: rgba(0,255, 220, 1) !important;
     	cursor: pointer;
     }
 
