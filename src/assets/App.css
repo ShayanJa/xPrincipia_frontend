@@ -2980,7 +2980,9 @@ like vote and comments.*/
   position: relative;
   color: #dddddd;
   padding: 0px 0px 20px 0px;
-  margin: 5px 0px 10px 0px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
   flex: 1 1 auto;
   width: 100%;
 }
@@ -3014,11 +3016,12 @@ like vote and comments.*/
   width: 100%;
   margin: 0 auto;
   margin-top: 2%;
+  overflow-x: scroll;
 }
 #SPUnitList li {
   display: inline-block;
   /*display: inline;*/
-  margin: 0% 1% 2% 1%;
+  margin: 2% 1% 2% 1%;
   list-style-type: none;
 }
 #SPUnit {
@@ -3835,6 +3838,7 @@ input#submitNewVersion:hover {
   vertical-align: middle;
   padding: 5px;
   transition: all 0.5s ease 0s;
+  visibility: hidden;
  }
 #SParrowImg:hover {
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
