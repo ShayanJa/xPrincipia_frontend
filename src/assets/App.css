@@ -113,34 +113,43 @@
       box-shadow: 0 0 3pt 3pt rgba(0,220,255,0.5)
     }
 
-  /*Scrollbar*/
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-::-webkit-scrollbar-button {
-  display: none;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0); 
-    box-shadow: inset 0 0 6px rgba(0,220,255,0); 
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background: rgba(0,220,255,0.01); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
-    box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
-}
-::-webkit-scrollbar-corner {
-  display: none;
-}
-::-webkit-resizer {
-  display: none;
-}
+      /*Scrollbar*/
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+    ::-webkit-scrollbar-button {
+      display: none;
+    }
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0); 
+        box-shadow: inset 0 0 6px rgba(0,220,255,0); 
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background: rgba(0,220,255,0.01); 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
+        box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
+    }
+    ::-webkit-scrollbar-corner {
+      display: none;
+    }
+    ::-webkit-resizer {
+      display: none;
+    }
+
+    /*Fixing autofill problem*/
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px white inset !important;
+      box-shadow: 0 0 0 30px #00dcff inset !important ;
+      background-color: inherit !important;
+      color: #ffffff !important;
+    }
+
 
 /*End Global*/
 
