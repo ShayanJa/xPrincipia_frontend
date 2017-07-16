@@ -46,7 +46,7 @@ deleteResource() {
                          <br />
                          <div onClick={this.deleteResource} id="deleteButton">Delete</div>
                          <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

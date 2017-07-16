@@ -63,9 +63,9 @@ updateResource() {
                     <legend id="redLegend">Edit Resource</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.updateResource} id="editButton">Edit</div>
+                         <div onClick={this.updateResource} id="editButton">Submit</div>
                          <Link to={`/problem/${this.state.resource.TypeID}/learn/resources`}>
-                          <div id="returnButton">Return</div>
+                          <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

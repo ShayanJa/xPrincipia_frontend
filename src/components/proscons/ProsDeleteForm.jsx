@@ -46,7 +46,7 @@ export default class ProsDeleteForm extends React.Component {
                          <br />
                          <div onClick={this.deletePro} id="deleteButton">Delete</div>
                          <Link to='/problem/${pro.TypeID}/pros'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

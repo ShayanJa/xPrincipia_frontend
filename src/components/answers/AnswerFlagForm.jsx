@@ -69,7 +69,7 @@ postQuestion() {
                          <br />
                          <div onClick={this.postQuestion} id="flagButton">Submit</div>
                          <Link to='/problem/${question.TypeID}/questions'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

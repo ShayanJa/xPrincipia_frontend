@@ -44,7 +44,7 @@ deleteComment() {
                          <br />
                          <div onClick={this.deleteComment} id="deleteButton">Delete</div>
                          <Link to={`/problem/${this.props.params.probID}/suggestion/${this.props.params.suggID}/comments`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

@@ -65,9 +65,9 @@ updateAnswer() {
                     <legend id="redLegend">Edit Answer</legend>
                          <textarea name="questionText" required="required" id="answerEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.updateAnswer} id="editButton">Edit</div>
+                         <div onClick={this.updateAnswer} id="editButton">Submit</div>
                          <Link to={`/problem/${this.props.params.probID}/question/${this.props.params.questID}/answers`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

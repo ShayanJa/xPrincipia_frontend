@@ -46,7 +46,7 @@ deleteSuggestion() {
                          <br />
                           <div onClick={this.deleteSuggestion} id="deleteButton">Delete</div>
                          <Link to={`/problem/${this.props.params.probID}/suggestions`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

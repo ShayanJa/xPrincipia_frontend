@@ -65,10 +65,10 @@ export default class SuggestionEditForm extends React.Component {
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
                          <Link to={`/problem/${this.state.suggestion.TypeID}/suggestions`}>
-                          <div onClick={this.updateSuggestion} id="editButton">Edit</div>
+                          <div onClick={this.updateSuggestion} id="editButton">Submit</div>
                          </Link>
                          <Link to={`/problem/${this.state.suggestion.TypeID}/suggestions`}>
-                          <div id="returnButton">Return</div>
+                          <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

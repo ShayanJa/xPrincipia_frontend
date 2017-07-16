@@ -45,7 +45,7 @@ export default class ConsDeleteForm extends React.Component {
                          <br />
                          <div onClick={this.deleteCon} id="deleteButton">Delete</div>
                          <Link to={`/fullsolution/${this.props.params.probID}/${this.props.solutionID}/cons`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

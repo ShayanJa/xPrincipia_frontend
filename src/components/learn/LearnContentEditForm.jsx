@@ -65,9 +65,9 @@ updateLearnItem() {
                     <legend id="redLegend">Edit Lesson</legend>
                          <textarea name="questionText" required="required" id="questionEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.updateLearnItem} id="editButton">Edit</div>
+                         <div onClick={this.updateLearnItem} id="editButton">Submit</div>
                           <Link to={`/problem/${this.state.learnItem.TypeID}/learn/content`}>
-                          <div id="returnButton">Return</div>
+                          <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

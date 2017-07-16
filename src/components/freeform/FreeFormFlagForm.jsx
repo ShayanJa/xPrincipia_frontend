@@ -69,7 +69,7 @@ postFreeForm() {
                          <br />
                          <div onClick={this.postFreeForm} id="flagButton">Submit</div>
                          <Link to='/problem/${freeForm.TypeID}/freeform'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

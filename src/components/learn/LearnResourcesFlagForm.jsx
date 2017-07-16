@@ -69,7 +69,7 @@ postResource() {
                          <br />
                          <div onClick={this.postResource} id="flagButton">Submit</div>
                          <Link to='/problem/${resource.TypeID}/resources'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

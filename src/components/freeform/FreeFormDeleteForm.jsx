@@ -48,7 +48,7 @@ deleteFreeform() {
                          <br />
                          <div onClick={this.deleteFreeform} id="deleteButton">Delete</div>
                          <Link to={`/problem/${this.state.freeForm.TypeID}/freeForms`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

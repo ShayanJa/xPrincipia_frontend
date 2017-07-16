@@ -65,10 +65,10 @@ updateFreeForm() {
                          <textarea name="questionText" required="required" id="freeFormEditTextArea" autoFocus ></textarea>
                          <br />
                          <Link to={`/problem/${this.state.resources.TypeID}/freeForms`}>
-                            <div onClick={this.updateFreeForm} id="editButton">Edit</div>
+                            <div onClick={this.updateFreeForm} id="editButton">Submit</div>
                          </Link>
                          <Link to={`/problem/${this.state.resources.TypeID}/freeForms`}>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

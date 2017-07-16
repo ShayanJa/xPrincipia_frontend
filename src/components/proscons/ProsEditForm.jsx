@@ -65,9 +65,9 @@ updatePro() {
                     <legend id="redLegend">Edit Pro</legend>
                          <textarea name="questionText" required="required" id="proEditTextArea" autoFocus ></textarea>
                          <br />
-                         <div onClick={this.updatePro} id="editButton">Edit</div>
+                         <div onClick={this.updatePro} id="editButton">Submit</div>
                          <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
-                          <div id="returnButton">Return</div>
+                          <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

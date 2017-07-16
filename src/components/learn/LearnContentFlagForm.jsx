@@ -69,7 +69,7 @@ postLearnItem() {
                          <br />
                          <div onClick={this.postLearnItem} id="flagButton">Submit</div>
                          <Link to='/problem/${learnItem.TypeID}/learnItems'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

@@ -69,7 +69,7 @@ postPro() {
                          <br />
                          <div onClick={this.postPro} id="flagButton">Submit</div>
                          <Link to='/problem/${pro.TypeID}/pros'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

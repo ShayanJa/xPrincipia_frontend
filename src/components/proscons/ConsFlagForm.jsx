@@ -69,7 +69,7 @@ postCon() {
                          <br />
                          <div onClick={this.postCon} id="flagButton">Submit</div>
                          <Link to='/problem/${con.TypeID}/cons'>
-                            <div id="returnButton">Return</div>
+                            <div id="returnButton">Exit</div>
                          </Link>
                 </fieldset>
             </form>

@@ -94,7 +94,7 @@ export default class EditSolutionForm extends React.Component {
                         <div onClick={this.updateSolution} id="editButton">Edit</div>
                       </Link>
                       <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/full`}>
-                        <div id="returnButton">Return</div>
+                        <div id="returnButton">Exit</div>
                       </Link>
             </fieldset>
           </form>
