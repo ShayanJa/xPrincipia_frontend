@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
-import Footer from './Footer.jsx';
+import FooterWelcome from './FooterWelcome.jsx';
 import Header from './Header.jsx';
 import TutorialWelcomeContent from '../components/tutorials/TutorialWelcomeContent.jsx';
 import TutorialWelcomePage from '../components/tutorials/TutorialWelcomePage.jsx';
@@ -95,7 +95,7 @@ export default class WelcomeContainer extends React.Component {
 
           <TutorialWelcomeContent />
           {/*</ReactCSSTransitionGroup>*/}
-          {/*<Footer />*/}
+          <FooterWelcome />
         </div>
       );
    }

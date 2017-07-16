@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
+import Footer from '../../containers/Footer.jsx';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';

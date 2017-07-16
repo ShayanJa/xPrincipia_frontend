@@ -1203,7 +1203,6 @@ like vote and comments.*/
 /*Footer*/
 #footer {
   width: 99%;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
   background-color: rgba(0,220,255,0.05);
   text-align: center;
   font-size: 150%;
@@ -1214,6 +1213,31 @@ like vote and comments.*/
   border: 1px solid #00dcff;
   margin: 0 auto;
   margin-top: 5%;
+  transition: all 0.5s ease 0s;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#footerWelcome {
+  width: 99%;
+  background-color: rgba(0,220,255,0.05);
+  text-align: center;
+  font-size: 150%;
+  letter-spacing: 16px;
+  color: #dddddd;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  border: 1px solid #00dcff;
+  margin: 0 auto;
+  margin-top: 5%;
+  transition: all 0.5s ease 0s;
+}
+#footer:hover, #footerWelcome:hover {
+  cursor: pointer;
+  color: #00dcff;
+  background-color: rgba(0,220,255,0.07);
 }
 
 /*End Footer*/
@@ -1469,7 +1493,6 @@ like vote and comments.*/
     	font-weight: 100;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px;
-    	border-radius: 3px;
     	text-align: center;
     	text-decoration: none;
     	margin: 5px 0px;
@@ -2188,7 +2211,7 @@ like vote and comments.*/
       background-image: url('./einstein.jpg');
     }
     #welcomeProblemsHeader4 {
-      background-image: url('./lhc.jpg');
+      background-image: url('./turingMachine.jpg');
     }
     #welcomeProblemsHeader1:hover,
     #welcomeProblemsHeader2:hover,
