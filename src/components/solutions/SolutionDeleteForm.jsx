@@ -41,7 +41,7 @@ export default class SolutionDeleteForm extends React.Component {
   render() {
       return (
       <div id="createSolutionBox">
-          <form id="createForm">
+          <form id="solutionDeleteForm">
             <fieldset id="editFormFieldset">
                 <legend id="redLegend">Delete</legend>
                     <div>Are you sure you would like to delete this proposal?</div>

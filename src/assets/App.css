@@ -744,6 +744,15 @@ like vote and comments.*/
       margin: 0 auto;
       background-color: rgba(0,220,255,0.025);
      }
+    #solutionDeleteForm, #solutionEditForm {
+      color: #00dcff;
+      height: auto;
+      padding: 0px 5px 5px 5px;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 5%;
+      background-color: rgba(0,220,255,0.025);
+     }
     #welcomeCreateForm {
       background-color: rgba(0,220,255,0.01);
       color: #00dcff;

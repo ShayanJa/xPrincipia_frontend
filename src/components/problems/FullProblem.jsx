@@ -16,6 +16,7 @@ export default class FullProblem extends React.Component {
             problemInfo: [],
         }
         this.submitVote = this.submitVote.bind(this)
+        this.unVote = this.unVote.bind(this)
     };
     componentWillMount(){
       var self = this;
@@ -72,6 +73,22 @@ export default class FullProblem extends React.Component {
             alert("You may only vote on a project once. ");
         })
   }
+unVote() {
+      axios.delete( Config.API + '/auth/vote/delete' ,{
+        params: {
+          type: 0,
+          typeID: this.state.problemInfo.ID,
+          username: cookie.load('userName')
+        }
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("I'm sorry, there was a problem with your request. ")
+        })
+        
+    }
 
    render() {
 

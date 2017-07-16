@@ -14,6 +14,7 @@ export default class FullSolutionContent extends React.Component {
         }
 
         this.submitVote = this.submitVote.bind(this)
+        this.unVote = this.unVote.bind(this)
         this.deleteSolution = this.deleteSolution.bind(this)
     };
     //initialize the component with this state
@@ -76,6 +77,22 @@ export default class FullSolutionContent extends React.Component {
             alert("You may only vote on a proposal once. ");
         })
   }
+unVote() {
+      axios.delete( Config.API + '/auth/vote/delete' ,{
+        params: {
+          type: 1,
+          typeID: this.state.solutionInfo.ID,
+          username: cookie.load('userName')
+        }
+        })
+        .then(function (result) {
+            document.location = window.location.pathname 
+        })
+        .catch(function (error) {
+            alert("I'm sorry, there was a problem with your request. ")
+        })
+        
+    }
    render() {
        if (this.state.solutionInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (

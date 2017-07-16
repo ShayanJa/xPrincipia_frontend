@@ -70,7 +70,7 @@ export default class EditSolutionForm extends React.Component {
   render() {
       return (
       <div id="createSolutionBox">
-          <form id="createForm">
+          <form id="solutionEditForm">
             <fieldset id="editFormFieldset">
                 <legend>Edit Proposal</legend>
                       

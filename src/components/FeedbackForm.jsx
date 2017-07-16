@@ -24,7 +24,7 @@ this.state.feedback = document.getElementById('addSuggestion').value
     description : this.state.feedback,
   })
   .then(function (result) {
-    alert("Thank you for your feedback. We will use this to improve your experience in the future. ")
+    // alert("Thank you for your feedback. We will use this to improve your experience in the future. ")
     document.location = window.location.pathname 
   })
   .catch(function (error) {
@@ -45,7 +45,7 @@ this.state.feedback = document.getElementById('addSuggestion').value
             <form id="suggestionForm">
                 <fieldset id="feedbackFieldset">
                     <legend>User Feedback</legend>
-                         <textarea name="feedbackText" required="required" id="feedbackTextArea" autoFocus ></textarea>
+                         <textarea name="feedbackText" required="required" id="feedbackTextArea" placeholder="Please provide feedback on how we can improve the XPrincipia experience in the future. " autoFocus ></textarea>
                          <input type="button" value="Submit" onClick={this.postFeedback} id="addSuggestion"/>
                 </fieldset>
             </form>

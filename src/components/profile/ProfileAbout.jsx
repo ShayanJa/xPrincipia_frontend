@@ -24,7 +24,7 @@ export default class TutorialProblemPage extends React.Component {
                  {/*</span>*/}
                  <br />
                  <div id="aboutList">
-                 <span id="blue">1. Breakdown major scientific projects </span>into <span id="blue">levels of sub projects</span>. 
+                 <span id="blue">1. </span>Breakdown <span id="blue"> major scientific projects </span>into <span id="blue">levels of sub projects</span>. 
                  <br />
                  <span id="blue">2. Create proposals </span>for lower-level sub projects and solve each major project <span id="blue">bottom-up</span>. 
                  <br />
