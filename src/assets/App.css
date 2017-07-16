@@ -1580,6 +1580,16 @@ like vote and comments.*/
     }
     #followedProblemsButtonActive, #createdProblemsButtonActive, 
     #votedSolutionsButtonActive, #createdSolutionsButtonActive {
+      flex: 1 1 auto;
+    	font-size: 90%;
+    	border: 1px solid #00ffdc;
+    	border-width: 0px 1px 1px 1px;
+    	border-radius: 0px 0px 3px 3px;
+    	text-align: center;
+    	text-decoration: none;
+    	margin: 0px 10px 0px 10px;
+      transition: all 0.5s ease 0s;
+      padding: 3px;
       background-color: #00ffdc;
       color: #0f131c;
     }
@@ -2045,10 +2055,14 @@ like vote and comments.*/
     }
     .activeBlueText div {
       color: #00dcff !important;
+      transform: scale(1.02) !important;
     }
     .activeBlue button {
       color: #0f131c !important;
       background-color: #00dcff !important;  
+    }
+    .activeBlueText div h1 {
+      color: #00dcff !important;
     }
     /*Doesn't work since it highlights the entire box*/
     /*.activeGlow {
@@ -2435,6 +2449,8 @@ like vote and comments.*/
       transform: scale(1.02);
       cursor: pointer;
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5) !important;
+    }
+    #createSPButtonBox:hover * {
       color: #00dcff;
     }
     #createSPButton {

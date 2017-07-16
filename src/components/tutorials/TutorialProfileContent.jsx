@@ -35,7 +35,7 @@ export default class TutorialProfileContent extends React.Component {
                  <span id="blue"> how to improve XPrincipia.</span>
                  <br />
                  <br />
-                 Learn about XPrincipia and <span id="blue">contact us</span> for additional information. 
+                 <span id="blue">Learn about XPrincipia</span> and <span id="blue">contact us</span> for additional information. 
                  <br />
                  <br />
               </div>
