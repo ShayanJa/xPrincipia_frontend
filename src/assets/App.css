@@ -99,6 +99,9 @@
     #blue {
       color: #00dcff !important;
     }
+    #green {
+      color: #00ffdc !important;
+    }
     #nodisplay {
       display: none;
     }
@@ -110,6 +113,37 @@
       box-shadow: 0 0 3pt 3pt rgba(0,220,255,0.5)
     }
 
+  /*Scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0); 
+    box-shadow: inset 0 0 6px rgba(0,220,255,0); 
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: rgba(0,220,255,0.01); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
+    box-shadow: inset 0 0 6px rgba(0,220,255,0.1); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	  /*display: none;*/
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-resizer {
+  display: none;
+}
 
 /*End Global*/
 
@@ -3044,7 +3078,7 @@ like vote and comments.*/
 #SPUnitList li {
   display: inline-block;
   /*display: inline;*/
-  margin: 2% 1% 2% 1%;
+  margin: 2% 1% 5% 1%;
   list-style-type: none;
 }
 #SPUnit {
@@ -4206,6 +4240,36 @@ input#submitNewVersion:hover {
   font-size: 140%;
   letter-spacing: 8px;
   background-color: rgba(0,255,220,0.05)
+}
+#profileAboutContact {
+  margin: 0 auto;
+  color: #00ffdc;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #00ffdc;
+  border-width: 1px 0px;
+  /*width: 30%;*/
+  margin-bottom: 4%;
+  margin-top: 3%;
+  font-size: 140%;
+  letter-spacing: 8px;
+  background-color: rgba(0,255,220,0.05)
+}
+#profileAboutQuote {
+  margin: 0 auto;
+  color: #515151;
+  padding: 5px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+  /*border: 1px solid #00ffdc;*/
+  /*width: 30%;*/
+  margin-bottom: 3%;
+  margin-top: 3%;
+  font-size: 140%;
+  font-style: italic;
+  /*letter-spacing: 8px;*/
+  /*background-color: rgba(0,255,220,0.05)*/
 }
 #aboutProseDescriptions {
   text-align: left;
