@@ -101,7 +101,11 @@ unVote() {
                 {this.state.solutionInfo.Rank}
             </div>
             <div id="voteVersionsMenu">
-                    <Link><div id="voteSolution" onClick={this.submitVote}>Vote</div></Link>
+                    <Link>
+                      <div id="voteSolution" onClick={this.submitVote}>
+                        Vote
+                      </div>
+                    </Link>
                     {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
                         <div id="versionsButton">
                                 Versions
