@@ -20,28 +20,28 @@ if (problem.Title === 'Interstellar Civilization') {
 
       return (
       
-        <div id="nodisplay">
-          </div>
+        <li key={problem.ID} id="nodisplay">
+        </li>
       
       
       );
 
 } else if (problem.Title === 'Evolving Humanity') {
       return (
-        <div id="nodisplay">
-          </div>
+        <li key={problem.ID} id="nodisplay">
+        </li>
       
       );
 } else if (problem.Title === 'Theoretical Knowledge') {
       return (
-        <div id="nodisplay">
-          </div>
+        <li key={problem.ID} id="nodisplay">
+        </li>
       
       );
 } else if (problem.Title === 'Technology Development') {
       return (
-        <div id="nodisplay">
-          </div>
+        <li key={problem.ID} id="nodisplay">
+        </li>
       
       );
 } else 

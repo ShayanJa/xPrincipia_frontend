@@ -73,8 +73,8 @@ if (problem.Title === 'Interstellar Civilization') {
       );
 } else 
       return (
-          <div id="nodisplay">
-          </div>
+          <li key={problem.ID} id="nodisplay">
+          </li>
 
       );
    }

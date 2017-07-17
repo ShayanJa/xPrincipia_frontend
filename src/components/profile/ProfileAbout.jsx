@@ -31,7 +31,7 @@ export default class TutorialProblemPage extends React.Component {
                  <span id="blue">3. Learn and teach</span> the subjects needed to master each project.
                  </div>
                  <br />
-                 Over time <span id="blue">new parts of the site will open</span>, with the goal of becoming the <span id="blue">online center for scientific progress</span>. 
+                 Over time <span id="blue">new areas of the site will open</span>, with the goal of becoming the <span id="blue">online center for scientific progress</span>. 
                  <br />
                  <br />
                  <span id="blue">XPrincipia Crowdfunding </span> will open in <span id="blue">2018</span>, 

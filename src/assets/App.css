@@ -1213,7 +1213,8 @@ like vote and comments.*/
       border: 1px solid #00dcff;
     	border-radius: 50%;
       margin: 0 auto;
-      margin-top: 1%;
+      margin-top: 0.8%;
+      margin-left: 1%;
       /*vertical-align: middle;*/
       /*float: right;*/
     }
@@ -1692,27 +1693,32 @@ like vote and comments.*/
     #profileRightUnit {
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
-    	padding: 2px;
+    	padding: 7px;
     }
     #profileRightUnit:hover {
       color: #ffffff;
       cursor: pointer;
+      background-color: rgba(0,220,255,0.05);
     }
     #profileUnitTitle {
       display: block;
-      margin: 0px;
+      margin: 5px 0px 0px 0px;
       padding: 2px 5px 2px 5px;
-      font-size: 140%;
+      font-size: 160%;
       color: #00dcff !important;
-      line-height: 150%;
+      line-height: 120%;
       height: auto;
+      word-break: break-all;
+      overflow: auto;
     }
     #profileUnitSummary {
     	font-family: 'Open Sans', sans-serif;
-    	padding: 0px 0px 10px 5px;
+    	padding: 0px 0px 10px 10px;
     	font-size: 90%;
     	margin: 0px;
     	text-align: justify;
+      word-break: break-all;
+      overflow: auto;
     }
     #unitSummary {
     	font-family: 'Open Sans', sans-serif;
@@ -1901,6 +1907,8 @@ like vote and comments.*/
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 120%;
   width: 100%;
+  word-wrap: break-word; 
+  overflow: auto;
 }
 #problemVote {
   flex: 1 1 auto;
@@ -2139,7 +2147,7 @@ like vote and comments.*/
       color: #0f131c !important;
       background-color: #00dcff !important;  
     }
-    .activeBlueText div {
+    .activeBlueTextHeader div {
       color: #00dcff !important;
       transform: scale(1.02) !important;
     }
@@ -2158,6 +2166,10 @@ like vote and comments.*/
       background-color: #00dcff;
       color: #0f131c;
     }*/
+    #whiteHeader {
+      transform: scale(1);
+      transition: all 0.5s ease 0s;
+    }
     #SPListDiv {
       width: 100%;
       margin:0 auto;
@@ -3148,6 +3160,8 @@ like vote and comments.*/
   font-size: 120%;
   color: #dddddd;
   word-wrap: break-word; 
+  word-break: break-word;
+  overflow: auto;
   text-align: center;
   transition: all 0.5s ease 0s;
 }
@@ -3184,10 +3198,10 @@ like vote and comments.*/
   margin: 5px 5px 10px 5px;
   flex: 1 1 auto;
   width: 100%;
-  max-width: 100%;
   padding: 0px 10px 20px 10px;
   flex: 1 1 auto;
   float: right;
+  max-width: 62.6vw;
 }
 
 #fullProblemLeft {
@@ -3197,6 +3211,7 @@ like vote and comments.*/
   display: flex;
   flex-direction: column;
   word-wrap: break-word; 
+  min-width: 464.25px;
   /*justify-content: flex-start;*/
 }
 #problemLeftSBHeader {
@@ -3560,6 +3575,8 @@ label + input[type=radio] + label {
   font-size: 120%;
   transform: scale(1);
   font-family: 'Open Sans';
+  overflow: auto;
+  word-break: break-all;
   margin-top: 5px;
   max-width: 584.31px;
 }
@@ -3625,7 +3642,8 @@ label + input[type=radio] + label {
   margin-bottom: 0px;
   margin-top: 5px;
   transition: all 0.25s ease 0s;
-  color: rgba(221,221,221,1)
+  color: rgba(221,221,221,1);
+  word-wrap: break-word; 
   /*font-family: 'Open Sans', sans-serif;*/
 }
 
@@ -4235,11 +4253,12 @@ input#submitNewVersion:hover {
   font-size: 250%;
   letter-spacing: 16px;
   border: 1px solid #00dcff;
-  border-width: 2px 0px;
+  border-width: 0px 0px;
   text-align: center;
   margin: 0 auto;
-  box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
-  width: 90%;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  width: 100%;
+  background-color: rgba(0,220,255,0.05);
 }
 #profileAboutBanner {
   margin: 0 auto;
@@ -4476,3 +4495,7 @@ input#submitNewVersion:hover {
 /*End Notifications*/
 
 /*End Notifications*/
+
+
+/*Test 3D rotation*/
+/*transform: rotate3d(0,1,1,5deg) !important;*/
