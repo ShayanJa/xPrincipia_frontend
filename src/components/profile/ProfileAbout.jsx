@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link  } from 'react-router';
 
-export default class TutorialProblemPage extends React.Component {
+export default class ProfileAbout extends React.Component {
    render() {
       return (
-        <div id="profileAbout">
-          <div id="profileAboutBanner">
-              <div id="profileAboutTitle">XPrincipia</div>
-          <div id="introProse">
-              {/*<div id="introSummary">
-                 Contribute to scientific progress
-              </div>*/}
+        <div>
               <div id="aboutProseDescriptions">
                  <span id="blue">XPrincipia</span> is an <span id="blue">open source research and development </span>web app allowing anyone to contribute to scientific progress.
                  <br />
@@ -18,10 +12,8 @@ export default class TutorialProblemPage extends React.Component {
                  Our mission is to <span id="blue">advance humanity to the best possible future. </span>
                  <br />
                  <br />
-                 {/*<span id="aboutBlue">*/}
                  
                  Together we aim to:
-                 {/*</span>*/}
                  <br />
                  <div id="aboutList">
                  <span id="blue">1. </span>Breakdown <span id="blue"> major scientific projects </span>into <span id="blue">levels of sub projects</span>. 
@@ -32,6 +24,10 @@ export default class TutorialProblemPage extends React.Component {
                  </div>
                  <br />
                  Over time <span id="blue">new areas of the site will open</span>, with the goal of becoming the <span id="blue">online center for scientific progress</span>. 
+                 <br />
+                 <br />
+                 <span id="blue">XPrincipia Competitions </span> will open on <span id="blue">Labor Day 2017</span>, 
+                 allowing users to develop <span id="blue">specific projects </span> with the incentive of <span id="blue">themed prizes</span>.
                  <br />
                  <br />
                  <span id="blue">XPrincipia Crowdfunding </span> will open in <span id="blue">2018</span>, 
@@ -45,17 +41,6 @@ export default class TutorialProblemPage extends React.Component {
                  <br />
                  <span id="blue">Contact us</span> for more information:
               </div>
-              {/*<div id="introSummary">
-                Win competitions
-              </div>
-                  <div id="introProseDescriptions">
-                    Compete for best proposal on a featured project
-                    <br />
-                    Win prizes
-                    <br /> 
-                    <br />
-                  </div>*/}
-          </div>
             <div id="profileAboutContact">
                 info@xprincipia.com
             </div>
@@ -66,7 +51,6 @@ export default class TutorialProblemPage extends React.Component {
                 <br />
                 - A.N. Whitehead
             </div>
-        </div>
       </div>
       );
    }

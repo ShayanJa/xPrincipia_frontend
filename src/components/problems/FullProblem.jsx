@@ -111,13 +111,13 @@ unVote() {
         <div id="problemRow1">
 
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Parent button, blue connection symbol" />
           </Link>
 
           {/*Used for mobile, not shown otherwise*/}
           <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" alt="Parent button, blue connection symbol" />
             </Link>
           </div>
 
@@ -127,7 +127,7 @@ unVote() {
               {this.state.problemInfo.OriginalPosterUsername}
             </div>
             <Link to={`/problem/${this.props.params.probID}/edit`}>
-              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" align="middle" />
+              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" />
             </Link>
           </div>
         </div>
@@ -207,13 +207,13 @@ unVote() {
           transitionLeave={false}>
         <div id="problemRow1">
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Parent button, blue connection symbol" />
           </Link>
 
           {/*Used for mobile*/}
           <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" alt="Parent button, blue connection symbol" />
             </Link>
           </div>
 

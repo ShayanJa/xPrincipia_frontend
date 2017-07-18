@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Redirect, Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './App';
 
 //Load Components
@@ -27,9 +27,7 @@ import FullProblem from './components/problems/FullProblem.jsx';
 import FullSolution from './components/solutions/FullSolution.jsx';
 import FullSolutionContent from './components/solutions/FullSolutionContent.jsx';
 import FullSolutionDescription from './components/solutions/FullSolutionDescription.jsx';
-import FullSolutionMenu from './components/solutions/FullSolutionMenu.jsx';
 import FullVersion from './components/versions/FullVersion.jsx';
-import Info from './components/Info.jsx';
 import Instructions from './components/tutorials/Instructions.jsx';
 import Intro from './components/tutorials/Intro.jsx';
 import Layout from './components/Layout.jsx';
@@ -37,7 +35,6 @@ import LearnContentDeleteForm from './components/learn/LearnContentDeleteForm.js
 import LearnContentEditForm from './components/learn/LearnContentEditForm.jsx';
 import LearnContentFlagForm from './components/learn/LearnContentFlagForm.jsx';
 import LearnContentForm from './components/learn/LearnContentForm.jsx';
-import LearnContentMenu from './components/learn/LearnContentMenu.jsx';
 import LearnResourcesDeleteForm from './components/learn/LearnResourcesDeleteForm.jsx';
 import LearnResourcesEditForm from './components/learn/LearnResourcesEditForm.jsx';
 import LearnResourcesEmbed from './components/learn/LearnResourcesEmbed.jsx';
@@ -53,6 +50,8 @@ import ProblemSolutionsMenu from './components/problems/ProblemSolutionsMenu.jsx
 import ProblemTopSolutions from './components/problems/ProblemTopSolutions.jsx';
 import ProjectEditForm from './components/problems/ProjectEditForm.jsx';
 import ProfileAbout from './components/profile/ProfileAbout.jsx';
+import ProfileCareers from './components/profile/ProfileCareers.jsx';
+import ProfileDisclaimer from './components/profile/ProfileDisclaimer.jsx';
 import ProfileNotifications from './components/profile/ProfileNotifications.jsx';
 import ProfileProblemsSolutions from './components/profile/ProfileProblemsSolutions.jsx';
 import ProfileResume from './components/profile/ProfileResume.jsx';
@@ -66,7 +65,6 @@ import QuestionFlagForm from './components/questions/QuestionFlagForm.jsx';
 import QuestionForm from './components/questions/QuestionForm.jsx';
 import Redirection from './components/Redirection.jsx';
 import RegisterUnit from './components/RegisterUnit.jsx';
-import SideBarFullSolution from './components/solutions/SideBarFullSolution';
 import SideBarProblem from './components/problems/SideBarProblem';
 import SolutionDeleteForm from './components/solutions/SolutionDeleteForm.jsx';
 import SolutionEditForm from './components/solutions/SolutionEditForm.jsx';
@@ -91,19 +89,14 @@ import FreeFormContainer from './containers/FreeFormContainer.jsx';
 import FreeFormCommentContainer from './containers/FreeFormCommentContainer.jsx';
 import FullSolutionContainer from './containers/FullSolutionContainer.jsx';
 import LearnContentContainer1 from './containers/LearnContentContainer1.jsx';
-import LearnContentContainer2 from './containers/LearnContentContainer2.jsx';
-import LearnContentContainer3 from './containers/LearnContentContainer3.jsx';
 import LearnResourcesContainer1 from './containers/LearnResourcesContainer1.jsx';
-import LearnResourcesContainer2 from './containers/LearnResourcesContainer2.jsx';
-import LearnResourcesContainer3 from './containers/LearnResourcesContainer3.jsx';
 import LoginContainer from './containers/LoginContainer.jsx';
 import NewsFeedContainer from './containers/NewsFeedContainer.jsx';
+import ProfileAboutContainer from './containers/ProfileAboutContainer.jsx';
 import ProfileContainer from './containers/ProfileContainer.jsx';
 import ProsContainer from './containers/ProsContainer.jsx';
-import ProsConsCommentContainer from './containers/ProsConsCommentContainer.jsx';
 import QuestionContainer from './containers/QuestionContainer.jsx';
 import SearchContainer from './containers/SearchContainer.jsx';
-import SolutionContainer from './containers/SolutionContainer.jsx';
 import SubProblemContainer from './containers/SubProblemContainer.jsx';
 import SuggestionCommentContainer from './containers/SuggestionCommentContainer.jsx';
 import SuggestionContainer from './containers/SuggestionContainer.jsx';
@@ -144,7 +137,12 @@ ReactDOM.render(
       <Route path='/profile/resume' component={ProfileResume}></Route>
       <Route path='/profile/feedback' component={FeedbackForm}></Route>
       <Route path='/profile/notifications' component={ProfileNotifications}></Route>
-      <Route path='/profile/about' component={ProfileAbout}></Route>
+      <Route path='/profile/about/container' component={ProfileAboutContainer}>
+        <IndexRoute component={ProfileAbout}></IndexRoute>
+        <Route path='/profile/about' component={ProfileAbout}></Route>
+        <Route path='/profile/careers' component={ProfileCareers}></Route>
+      </Route>
+      <Route path='/profile/disclaimer' component={ProfileDisclaimer}></Route>
     </Route>
     <Route path='/newsfeed' component={NewsFeedContainer}></Route>
     <Route path='/instructions' component={Instructions}></Route>

@@ -128,6 +128,9 @@ export default class ProfileContainer extends React.Component {
                 <Link to={`/profile/about`} activeClassName="activeBlue">
                     <div id="aboutXPButton">About XPrincipia</div>
                 </Link>
+                <Link to={`/profile/disclaimer`} activeClassName="activeBlue">
+                    <div id="aboutXPButton">Disclaimer</div>
+                </Link>
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
                 <br />
                 <p id="xp">XP</p>
