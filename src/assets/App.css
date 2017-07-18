@@ -1538,6 +1538,7 @@ like vote and comments.*/
     	color: #dddddd;
     	padding: 0px 0px 0px 0px;
     	overflow-y: scroll !important;
+      overflow-x: hidden !important;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
     	width: 65%;
@@ -1740,6 +1741,10 @@ like vote and comments.*/
     	border: 1px solid #00dcff;
     	border-width: 1px 0px 0px 0px;
     	padding: 7px;
+
+      /*Exploring the look of gradients as background colors, 
+      so far I haven't found anything I like*/
+      /*background: linear-gradient(rgba(0,220,255,0.0), rgba(0,220,255,0.02), rgba(0,220,255,0.0))*/
     }
     #profileRightUnit:hover {
       color: #ffffff;
