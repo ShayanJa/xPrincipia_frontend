@@ -18,11 +18,11 @@ export default class Header extends React.Component {
 
       return (
         <div id="footer">
-            <div id="footerAbout" onClick={goToAbout}>
-                About
-            </div>
             <div id="footerCareers" onClick={goToCareers}>
                 Careers
+            </div>
+            <div id="footerAbout" onClick={goToAbout}>
+                About/Contact
             </div>
             <div id="creativeCommons">
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">

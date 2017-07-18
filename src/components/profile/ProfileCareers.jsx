@@ -26,11 +26,11 @@ export default class ProfileAbout extends React.Component {
                 careers@xprincipia.com
             </div>
             <div id="profileAboutQuote">
-                It is the business of the future to be dangerous … The major advances in civilization are processes 
-                that all but wreck the societies in which they occur.
+                All our science, measured against reality, is primitive and childlike &ndash; and yet 
+                it is the most precious thing we have.
                 <br />
                 <br />
-                - A.N. Whitehead
+                - Albert Einstein
             </div>
         </div>
       );

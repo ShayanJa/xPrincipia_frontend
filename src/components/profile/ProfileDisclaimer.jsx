@@ -64,14 +64,18 @@ export default class ProfileDisclaimer extends React.Component {
                  <span id="blue">Thank you</span>. Contact us for more information at:
                  <br />
               </div>
-          </div>
+          
             <div id="profileAboutContact">
                 info@xprincipia.com
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
+            <div id="profileAboutQuote">
+                Who could deny that man could somehow also make the heavens, 
+                could he only obtain the instruments and the heavenly material?
+                <br />
+                <br />
+                - Marsilio Ficino
+            </div>
+          </div>
         </div>
       </div>
       );

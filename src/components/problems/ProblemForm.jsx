@@ -52,7 +52,7 @@ export default class ProblemForm extends React.Component {
                   <legend>Create a Sub Project</legend>
                         <Link to={`/problem/${this.props.params.probID}/subproblems`}>
                           <div id="backSolutionArrowDiv">
-                              <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                              <img src={require('../../assets/upArrow.svg')} id="backSubProjectArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
                           </div>
                         </Link>
                         <label htmlFor="problemTitleForm" id="problemTitleFormLabel">Title<br />

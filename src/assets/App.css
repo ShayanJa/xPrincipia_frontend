@@ -5,9 +5,9 @@
     	font-weight: 100;
     }
     /*Theoretically should make page fill height*/
-    /*html, body {
-      height: 100%;
-    }*/
+    html, body {
+      height: 100vh;
+    }
     body {
     	color: #dddddd;
     	font-family: 'Alegreya Sans SC', sans-serif;
@@ -197,6 +197,11 @@
     padding-left: 10px !important;
   }
   #bannerSlogan {
+    letter-spacing: 10px !important;
+    font-size: 70% !important;
+    width: 90% !important;
+  }
+  #bannerLoginSlogan {
     letter-spacing: 10px !important;
     font-size: 70% !important;
     width: 90% !important;
@@ -771,7 +776,7 @@ like vote and comments.*/
       width: 90%;
       margin: 0 auto;
       margin-bottom: 5%;
-      background-color: rgba(0,220,255,0.025);
+      /*background-color: rgba(0,220,255,0.025);*/
      }
     #welcomeCreateForm {
       background-color: rgba(0,220,255,0.01);
@@ -1115,7 +1120,7 @@ like vote and comments.*/
 
     #header {
     	border: 1px solid #00dcff;
-    	border-width: 0px 0px 1px 0px;
+    	border-width: 1px 0px 1px 0px;
     	overflow: hidden;
     	width: 100%;
     	display: inline-flex;
@@ -1128,6 +1133,11 @@ like vote and comments.*/
       font-size: 110%;
       /*transition: all 0.5s ease 0s;
       transform: scale(1);*/
+
+      /*Testing out a gray header background, to match the footer */
+      /*Currently, I can't tell if I like it or not*/
+      /*background-color: rgba(255,255,255,0.05);
+      border-color: #dddddd;*/
     }
     /*#header:hover {
       transform: scale(1.02);
@@ -1286,7 +1296,7 @@ like vote and comments.*/
   align-items: stretch;
   flex-direction: row;
 
-  position: absolute;
+  /*position: absolute;*/
   right: 0;
   bottom: 0;
   left: 0;
@@ -1405,6 +1415,18 @@ like vote and comments.*/
       background-color: rgba(0, 220, 255, 0.05);
       box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
       width: 60%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    #bannerLoginSlogan {
+      padding: 3px;
+      border: 1px solid #00dcff;
+    	border-width: 2px 0px;
+      letter-spacing: 12px;
+      /*color: #00dcff;*/
+      background-color: rgba(0, 220, 255, 0.05);
+      box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+      width: 33%;
       margin: 0 auto;
       margin-top: 12px;
     }
@@ -2390,6 +2412,10 @@ like vote and comments.*/
     margin: 0 auto;
     margin-top: 2%;
     transition: all 0.2s ease 0s;
+
+
+    /*Added gradient for testing 3D hologram look*/
+    /*background: radial-gradient(rgba(0,220,255,0.05), rgba(0,220,255,0.05), rgba(0,220,255,0.035), rgba(0,220,255,0.05));*/
   }
   #welcomeUserProblemsHeader:hover {
     box-shadow: 0 0 1.5pt 1.5pt rgba(0,220,255,0.5);
@@ -3200,6 +3226,11 @@ like vote and comments.*/
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
   transition: all 0.5s ease 0s;
   transform: scale(1);
+
+  /*Testing out a gradient here for 3D holograp effect*/
+  /*Currently I like it*/
+  /*I also am adding it to the welcome user units for now*/
+  /*background: radial-gradient(rgba(0,220,255,0.05), rgba(0,220,255,0.05), rgba(0,220,255,0.035), rgba(0,220,255,0.05));*/
 }
 #SPHeader:hover {
   box-shadow: 0 0 1pt 3pt rgba(0,220,255,0.5);
@@ -3327,12 +3358,24 @@ like vote and comments.*/
 #backSolutionArrowDiv {
   text-align: center;
   transition: all 0.5s ease 0s;
-  width: 15%;
+  width: 5%;
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
   left: 0;
   margin-bottom: 1%;
 }
 #backSolutionArrowDiv:hover {
+  background-color: rgba(0,220,255,0.15);
+  cursor: pointer;
+}
+#backProposalArrowDiv {
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  width: 7%;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  /*left: 0;*/
+  margin-bottom: 1%;
+}
+#backProposalArrowDiv:hover {
   background-color: rgba(0,220,255,0.15);
   cursor: pointer;
 }
@@ -3366,6 +3409,21 @@ like vote and comments.*/
 #backSolutionArrow:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#backSubProjectArrow {
+  flex: 1 1 auto;
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  transition: all 0.5s ease 0s;
+
+  /*display: block;*/
+}
+#backSubProjectArrow:hover {
+  cursor: pointer;
+  /*background-color: rgba(0,220,255,0.05);*/
+  /*box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);*/
 }
 #backArrowBlueHover {
   color: #00ffdc;
