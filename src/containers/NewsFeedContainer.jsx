@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../assets/dnablackinvert.png';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie'
@@ -18,7 +17,7 @@ export default class NewsFeedContainer extends React.Component {
         <div id="newsFeedLeft">
             <div id="userInformation">
                 <p id="userName">Fields</p>
-                {/*<img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />*/}
+                {/*<img src={require('../assets/dnaAvatar.svg')} id="avatarImageProfile" width="150" height="150" alt="User Avatar, DNA Helix" />*/}
                 {/*<p id="userEmail">{cookie.load('userName')}</p>*/}
             </div>
             <div id="userOptions">

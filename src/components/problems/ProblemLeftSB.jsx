@@ -111,7 +111,9 @@ export default class ProblemLeftSB extends React.Component {
           <div id="fullProblemLeft">
             <div id="problemLeftSBHeader">
               <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                <img src={require('../../assets/leftArrow.svg')} id="backArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                <div id="backProjectArrowDiv">
+                  <img src={require('../../assets/leftArrow.svg')} id="backArrowBlueHover" width="50" height="30" alt="Back arrow, blue up arrow" />
+                </div>
               </Link>
             </div>
             <div id="problemLeftSBIntro">

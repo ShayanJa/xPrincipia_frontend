@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import img from '../assets/dnablackinvert.png';
-import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios';
@@ -97,7 +95,6 @@ export default class ProfileContainer extends React.Component {
    render() {
       return (
     <div id="profileContainer">
-      <Header />
         <ReactCSSTransitionGroup
         transitionName="example"
         transitionAppear={true}
@@ -108,7 +105,7 @@ export default class ProfileContainer extends React.Component {
         <div id="profileLeft">
             <div id="userInformation">
                 <p id="userName">{cookie.load('userName')}</p>
-                <img src={require('../assets/dnablackinvert.png')} id="avatarImageProfile" width="180" height="180" alt="User Avatar, DNA Helix" />
+                <img src={require('../assets/dnaAvatar.svg')} id="avatarImageProfile" width="160" height="160" alt="User Avatar, DNA Helix" />
                 <p id="userEmail">{cookie.load('userName')}</p>
             </div>
             <div id="userOptions">
@@ -132,8 +129,8 @@ export default class ProfileContainer extends React.Component {
                     <div id="aboutXPButton">Disclaimer</div>
                 </Link>
                 <div id="logOutButton" onClick={this.onLogout}>Logout</div>
-                <br />
-                <p id="xp">XP</p>
+                {/*<br />
+                <p id="xp">XP</p>*/}
             </div>
         </div>
         <div id="profileRight">

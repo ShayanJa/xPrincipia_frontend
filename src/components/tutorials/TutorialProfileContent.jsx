@@ -24,17 +24,16 @@ export default class TutorialProfileContent extends React.Component {
                  Contribute to scientific progress
               </div>*/}
               <div id="tutorialProseDescriptions">
-                 <span id="blue">Access the projects and proposals</span> you have created or voted on.
+                 <span id="blue">Access </span>the <span id="blue">projects and proposals</span> you have <span id="blue">created</span> or <span id="blue">voted</span> on.
                  <br />
                  <br />
                 {/*<span id="blue">View your resume </span>of original contributions.
                  <br />
                  <br />*/}
-                 Tell us
-                 <span id="blue"> how to improve XPrincipia.</span>
+                 <span id="blue">Tell us </span>how to <span id="blue">improve XPrincipia</span>.
                  <br />
                  <br />
-                 <span id="blue">Learn about XPrincipia</span> and <span id="blue">contact us</span> for additional information. 
+                 <span id="blue">Learn about XPrincipia</span> or <span id="blue">contact us</span> for additional information. 
                  <br />
                  <br />
               </div>

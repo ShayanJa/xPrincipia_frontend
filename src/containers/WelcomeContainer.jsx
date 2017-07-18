@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import FooterWelcome from './FooterWelcome.jsx';
-import Header from './Header.jsx';
 import TutorialWelcomeContent from '../components/tutorials/TutorialWelcomeContent.jsx';
 import TutorialWelcomePage from '../components/tutorials/TutorialWelcomePage.jsx';
 import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
@@ -58,8 +57,6 @@ export default class WelcomeContainer extends React.Component {
    render() {
       return (
         <div>
-
-          <Header />
             {/*<ReactCSSTransitionGroup
             transitionName="example"
             transitionAppear={true}

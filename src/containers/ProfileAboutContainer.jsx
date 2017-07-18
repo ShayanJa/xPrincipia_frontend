@@ -8,14 +8,14 @@ export default class ProfileAboutContainer extends React.Component {
           <div id="profileAboutBanner">
               <div id="profileAboutTitle">XPrincipia</div>        
               <div id="aboutMenu">
-                <Link to={`/profile/about`} activeClassName="activeWhite">
+                <Link to={`/profile/about`} activeClassName="activeDimWhite">
                     <div id="aboutButton">About</div>
                 </Link>
-                <Link to={`/profile/careers`} activeClassName="activeWhite">
+                <Link to={`/profile/careers`} activeClassName="activeDimWhite">
                     <div id="careersButton">Careers</div>
                 </Link>
               </div>
-              <div id="introProse">
+              <div id="aboutIntroProse">
                 {this.props.children}
               </div>
         </div>

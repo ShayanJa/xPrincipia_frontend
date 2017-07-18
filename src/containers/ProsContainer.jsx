@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import ProsForm from '../components/proscons/ProsForm.jsx';
 import ProsUnit from '../components/proscons/ProsUnit.jsx';
@@ -34,6 +35,11 @@ constructor(props){
    render() {
            return (
         <div id="suggestionContainer">
+              <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/description`}>
+                 <div id="solutionDescriptionReturn">
+                     <img src={require('../assets/upArrow.svg')} id="backArrowBlueHover" width="50" height="30" alt="Back arrow, blue up arrow" />
+                 </div>
+              </Link>
         {/*<ReactCSSTransitionGroup
           transitionName="example"
           transitionAppear={true}

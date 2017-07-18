@@ -111,11 +111,6 @@ import './assets/index.css';
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-    <Route path='/welcomecontainer' component={WelcomeContainer}>
-      <IndexRoute component={WelcomeCreateButton}></IndexRoute>
-      <Route path='/welcome' component={WelcomeCreateButton}></Route>
-      <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
-    </Route>
     <IndexRoute component={Intro}></IndexRoute>
     <Route path='/intro' component={Intro}></Route>
     <IndexRoute component={Intro}></IndexRoute>
@@ -131,19 +126,6 @@ ReactDOM.render(
     </Route>
     <Route path='/search' component={SearchContainer}></Route>
     <Route path='/intro' component={Intro}></Route>
-    <Route path='/profile/container' component={ProfileContainer}>
-      <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
-      <Route path='/profile' component={ProfileProblemsSolutions}></Route>
-      <Route path='/profile/resume' component={ProfileResume}></Route>
-      <Route path='/profile/feedback' component={FeedbackForm}></Route>
-      <Route path='/profile/notifications' component={ProfileNotifications}></Route>
-      <Route path='/profile/about/container' component={ProfileAboutContainer}>
-        <IndexRoute component={ProfileAbout}></IndexRoute>
-        <Route path='/profile/about' component={ProfileAbout}></Route>
-        <Route path='/profile/careers' component={ProfileCareers}></Route>
-      </Route>
-      <Route path='/profile/disclaimer' component={ProfileDisclaimer}></Route>
-    </Route>
     <Route path='/newsfeed' component={NewsFeedContainer}></Route>
     <Route path='/instructions' component={Instructions}></Route>
     <Route path='/logincontainer' component={LoginContainer}>
@@ -154,6 +136,24 @@ ReactDOM.render(
     <IndexRoute component={Layout}></IndexRoute>
     <Route path='/home' component={Layout}>
       <IndexRoute component={FullProblem}></IndexRoute>
+      <Route path='/welcomecontainer' component={WelcomeContainer}>
+        <IndexRoute component={WelcomeCreateButton}></IndexRoute>
+        <Route path='/welcome' component={WelcomeCreateButton}></Route>
+        <Route path='/welcome/create' component={WelcomeCreateForm}></Route>
+      </Route>
+      <Route path='/profile/container' component={ProfileContainer}>
+        <IndexRoute component={ProfileProblemsSolutions}></IndexRoute>
+        <Route path='/profile' component={ProfileProblemsSolutions}></Route>
+        <Route path='/profile/resume' component={ProfileResume}></Route>
+        <Route path='/profile/feedback' component={FeedbackForm}></Route>
+        <Route path='/profile/notifications' component={ProfileNotifications}></Route>
+        <Route path='/profile/about/container' component={ProfileAboutContainer}>
+          <IndexRoute component={ProfileAbout}></IndexRoute>
+          <Route path='/profile/about' component={ProfileAbout}></Route>
+          <Route path='/profile/careers' component={ProfileCareers}></Route>
+        </Route>
+        <Route path='/profile/disclaimer' component={ProfileDisclaimer}></Route>
+      </Route>
       <Route path='/problem/:probID' component={FullProblem}>
         <IndexRoute component={SideBarProblem}></IndexRoute>
         <Route path='/problem/:probID/sideBar' component={SideBarProblem}>

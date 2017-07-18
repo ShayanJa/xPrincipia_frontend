@@ -84,7 +84,7 @@ export default class FullSolution extends React.Component {
             <div id="solutionIntro">
                 <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                     <div id="backSolutionArrowDiv">
-                        <img src={require('../../assets/upArrow.svg')} id="backSolutionArrow" width="50" height="30" alt="Back arrow, blue up arrow" />
+                        <img src={require('../../assets/upArrow.svg')} id="backArrowBlueHover" width="50" height="30" alt="Back arrow, blue up arrow" />
                     </div>
                 </Link>
                 <h1 id="solutionTitle">{this.state.solutionInfo.Title}</h1>

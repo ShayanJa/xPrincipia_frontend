@@ -1,6 +1,5 @@
 import React from 'react';
 import {  Link  } from 'react-router';
-import img from '../assets/dnablackinvert.png';
 import cookie from 'react-cookie';
 import axios from 'axios';
 import HeaderAvatar from '../components/HeaderAvatar.jsx';

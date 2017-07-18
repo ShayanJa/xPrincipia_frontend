@@ -111,13 +111,17 @@ unVote() {
         <div id="problemRow1">
 
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Parent button, blue connection symbol" />
+            <div id="SPParent">
+              <img src={require('../../assets/parent3.svg')} width="70" height="70" alt="Parent button, blue connection symbol" />
+            </div>
           </Link>
 
           {/*Used for mobile, not shown otherwise*/}
           <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" alt="Parent button, blue connection symbol" />
+              <div id="SPParent2">
+                <img src={require('../../assets/upArrow.svg')} width="250" height="50" alt="Parent button, blue connection symbol" />
+              </div>
             </Link>
           </div>
 
@@ -207,13 +211,17 @@ unVote() {
           transitionLeave={false}>
         <div id="problemRow1">
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Parent button, blue connection symbol" />
+            <div id="SPParent">
+              <img src={require('../../assets/parent3.svg')} width="70" height="70" alt="Parent button, blue connection symbol" />
+            </div>
           </Link>
 
           {/*Used for mobile*/}
           <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" alt="Parent button, blue connection symbol" />
+              <div id="SPParent2">
+                <img src={require('../../assets/upArrow.svg')} width="250" height="50" alt="Parent button, blue connection symbol" />
+              </div>
             </Link>
           </div>
 

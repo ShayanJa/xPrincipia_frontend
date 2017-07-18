@@ -527,7 +527,6 @@ like vote and comments.*/
 #profileLeft, #profileRight {
   color: #dddddd;
   padding: 0px 0px 0px 0px !important;
-  /*overflow: scroll !important;*/
   margin: 0px 0px 0px 0px !important;
   flex: 1 1 auto;
   width: 100% !important;
@@ -1222,6 +1221,7 @@ like vote and comments.*/
       margin: 0 auto;
       margin-top: 0.8%;
       margin-left: 1%;
+      padding: 2px;
       /*vertical-align: middle;*/
       /*float: right;*/
     }
@@ -1266,45 +1266,62 @@ like vote and comments.*/
 
 
 /*Footer*/
-#footer {
+#footer, #footerWelcome {
   width: 99%;
-  background-color: rgba(0,220,255,0.05);
+  background-color: rgba(255,255,255,0.05);
   text-align: center;
   font-size: 150%;
   letter-spacing: 16px;
   color: #dddddd;
   padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  border: 1px solid #00dcff;
+  padding-bottom: 0%;
+  border: 1px solid #dddddd;
+  border-width: 1px 0px;
   margin: 0 auto;
   margin-top: 5%;
   transition: all 0.5s ease 0s;
+  z-index: 500;
 
+  display: inline-flex;
+  align-items: stretch;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+}
+#footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 500;
 }
-#footerWelcome {
-  width: 99%;
-  background-color: rgba(0,220,255,0.05);
-  text-align: center;
-  font-size: 150%;
-  letter-spacing: 16px;
-  color: #dddddd;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  border: 1px solid #00dcff;
-  margin: 0 auto;
-  margin-top: 5%;
+
+#footerAbout, #footerCareers, #creativeCommons {
+  flex: 1 1 auto;
   transition: all 0.5s ease 0s;
-  z-index: 500;
+  margin: 0 auto;
+  width: 33.3vw;
 }
-#footer:hover, #footerWelcome:hover {
+#footerAbout {
+}
+#footerCareers {
+  margin: 0 auto;
+}
+#footerAbout:hover, #footerCareers:hover,
+#footerAbout:active, #footerCareers:active  {
   cursor: pointer;
   color: #00dcff;
-  background-color: rgba(0,220,255,0.07);
+}
+#creativeCommons {
+  text-align: center;
+}
+#creativeCommonsLogo {
+  /*padding: 0px 5px 5px 5px;*/
+  /*height: 30.5px;*/
+}
+#creativeCommonsLogo:hover {
+  background-color: rgba(15,19,28,0.999);
+  background-blend-mode: overlay;
+  cursor: pointer;
 }
 
 /*End Footer*/
@@ -1498,24 +1515,30 @@ like vote and comments.*/
 
       /*Box profile styles*/
       border: 1px solid #00dcff;
-      width: 85%;
-      margin-top: 30px;
-      max-height: 80vh;
-      /*background-color: rgba(0,220,255,0.05);*/
+      border-width: 1px 1px 1px 0px;
+      border-radius: 0px 0px 50px 0px;
+      width: 92%;
+      margin-top: 2%;
+      height: 81vh;
+      margin-left: 0;
+      background-color: rgba(0,220,255,0.03);
     }
     #profileLeft, #profileRight {
     	color: #dddddd;
     	padding: 0px 0px 0px 0px;
-    	overflow: scroll !important;
+    	overflow-y: scroll !important;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
-    	width: 60%;
+    	width: 65%;
     	margin: 0;
     }
     #profileLeft {
-    	width: 40%;
+    	width: 35%;
     	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 0px;
+    }
+    #profileRight {
+      
     }
     #avatar {
     	padding: 10px;
@@ -1531,6 +1554,7 @@ like vote and comments.*/
       margin: 0 auto;
       transition: all 0.5s ease 0s;
       transform: scale(1);
+      padding: 10px;
     }
     #avatarImageProfile:hover {
       transform: scale(1.05);
@@ -1561,15 +1585,18 @@ like vote and comments.*/
     	background-color: rgba(0,220,255,0);
     	color: #00dcff;
     	font-family: 'Alegreya Sans SC', sans-serif;
-    	font-size: 135%;
+    	font-size: 150%;
     	font-weight: 100;
     	border: 1px solid #00dcff;
-    	border-width: 1px 1px;
+    	border-width: 1px 1px 1px 0px;
+      border-radius: 0px 0px 10px 0px;
     	text-align: center;
     	text-decoration: none;
-    	margin: 5px 0px;
+    	margin: 10px 0px;
     	letter-spacing: 1px;
       transition: all 0.5s ease 0s;
+      width: 90%;
+      left: 0;
     }
     #userProblemsSolutionsButton:hover, #notificationsButton:hover,
     #userSettingsButton:hover, #aboutXPButton:hover, 
@@ -2897,7 +2924,7 @@ like vote and comments.*/
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
 }
-#SPParent {
+#SPParent img {
   flex: 1 1 auto;
   color: #00ffdc;
   text-align: center;
@@ -2907,11 +2934,11 @@ like vote and comments.*/
   margin-left: 50%;
   padding-top: 0px;
   margin-top: 10px;
-  box-shadow: 0 0 0pt 0pt rgba(0,220,255,0.5);
   transition: all 0.5s ease 0s;
 }
-#SPParent:hover {
+#SPParent:hover img {
   cursor: pointer;
+  background-color: rgba(0,220,255,0.15);
   box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
 }
 #SPParent2 {
@@ -2922,7 +2949,7 @@ like vote and comments.*/
 }
 #SPParent2:hover {
   cursor: pointer;
-  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
 }
 
 
@@ -3282,7 +3309,33 @@ like vote and comments.*/
 
 /*Right Solutions SB*/
 #backSolutionArrowDiv {
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  width: 15%;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+  left: 0;
+  margin-bottom: 1%;
+}
+#backSolutionArrowDiv:hover {
+  background-color: rgba(0,220,255,0.15);
+  cursor: pointer;
+}
+#backProjectArrowDiv {
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
   width: 100%;
+  margin-left: 30%;
+  padding: 3px;
+}
+#backProjectArrowDiv:hover {
+  background-color: rgba(0,220,255,0.15);
+  cursor: pointer;
+}
+
+#solutionDescriptionReturn:hover {
+  background-color: rgba(0,220,255,0.15);
+  cursor: pointer;
 }
 #backSolutionArrow {
   flex: 1 1 auto;
@@ -3297,6 +3350,13 @@ like vote and comments.*/
 #backSolutionArrow:hover {
   cursor: pointer;
   box-shadow: 0 0 2pt 2pt rgba(0,220,255,0.5);
+}
+#backArrowBlueHover {
+  color: #00ffdc;
+  text-align: center;
+  margin: 0 auto;
+  /*box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);*/
+  transition: all 0.5s ease 0s;
 }
 #solutionsHeader {
   flex: 1 1 auto;
@@ -3370,6 +3430,10 @@ like vote and comments.*/
 .activeWhite #topSolutionsButtonRightSB:hover,
 .activeWhite #createSolutionsButtonRightSB:hover {
   background-color: none;
+}
+.activeDimWhite div {
+  background-color: rgba(0,220,255,0.1) !important;
+  /*color: #00dcff !important;*/
 }
 #solutionsTitleRightSB {
   flex: 1 1 auto;
@@ -3757,6 +3821,19 @@ label + input[type=radio] + label {
   color: #00dcff;
   border-color: #00dcff;
 }
+#solutionDescriptionReturn {
+  color: #00dcff;
+  font-size: 100%;
+  text-align: center;
+  transition: all 0.5s ease 0s;
+  width: 20%;
+  margin: 0 auto;
+  box-shadow: 0 0 1pt 1pt rgba(0,220,255,0.5);
+}
+#solutionDescriptionReturn:hover {
+  background-color: rgba(0,220,255,0.15);
+  cursor: pointer;
+}
 #proTextArea, #conTextArea {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
@@ -3928,7 +4005,7 @@ input#submitNewVersion:hover {
 #feedbackTextArea {
   text-align: left;
   font-family: 'Open Sans', sans-serif;
-  padding: 10px;
+  padding: 20px;
   color: #ffffff;
   background-color: inherit;
   border: 1px solid #ffffff;
@@ -4027,6 +4104,16 @@ input#submitNewVersion:hover {
   font-size: 140%;
   margin-left: 5%;
   margin-right: 5%;
+  /*background-color: rgba(0,220,255, 0.05);*/
+}
+#aboutIntroProse {
+  letter-spacing: 2px;
+  line-height: 150%;
+  padding: 10px;
+  padding-top: 10px;
+  font-size: 140%;
+  margin-left: 7%;
+  margin-right: 7%;
   /*background-color: rgba(0,220,255, 0.05);*/
 }
 #introContent {
@@ -4250,7 +4337,7 @@ input#submitNewVersion:hover {
 /*End Tutorials*/
 
 
-
+/*d*/
 /*Profile About*/
 #profileAbout {
   width: 100%;
@@ -4270,7 +4357,7 @@ input#submitNewVersion:hover {
 }
 #profileAboutBanner {
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 7%;
 }
 #profileAboutSummary {
   font-size: 140%;
@@ -4318,14 +4405,12 @@ input#submitNewVersion:hover {
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
-  /*border: 1px solid #00ffdc;*/
-  /*width: 30%;*/
   margin-bottom: 3%;
   margin-top: 3%;
-  font-size: 140%;
+  font-size: 100%;
   font-style: italic;
-  /*letter-spacing: 8px;*/
-  /*background-color: rgba(0,255,220,0.05)*/
+  line-height: 120%;
+
 }
 #aboutProseDescriptions {
   text-align: left;
@@ -4349,8 +4434,6 @@ input#submitNewVersion:hover {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  border: 1px solid #00dcff;
-  border-width: 1px 0px;
   margin-top: 10px;
 }
 #aboutButton, #careersButton {
@@ -4364,17 +4447,20 @@ input#submitNewVersion:hover {
   text-align: center;
   transition: all 0.5s ease 0s;
   background-color: rgba(0,220,255,0);
+  border: 1px solid #dddddd;
+  border-width: 0px 0px 0px 1px;
+}
+#aboutButton {
+  border: 1px solid #dddddd;
+  border-width: 0px 1px 0px 0px;
 }
 #aboutButton:hover, #careersButton:hover {
-  background-color: rgba(0,220,255,0.15);
-  color: #00dcff;
+  background-color: rgba(0,220,255,0.1);
   cursor: pointer;
-  border-color: #00dcff;
 }
 #aboutButton:active, #careersButton:active {
   background-color: rgba(0,220,255,0.15);
   color: #00dcff;
-  border-color: #00dcff;
 }
 /*#profileAboutReturn:hover {
   cursor: pointer;

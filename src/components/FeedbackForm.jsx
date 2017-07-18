@@ -45,7 +45,7 @@ this.state.feedback = document.getElementById('addSuggestion').value
             <form id="suggestionForm">
                 <fieldset id="feedbackFieldset">
                     <legend>User Feedback</legend>
-                         <textarea name="feedbackText" required="required" id="feedbackTextArea" placeholder="Please provide feedback on how we can improve the XPrincipia experience in the future. " autoFocus ></textarea>
+                         <textarea name="feedbackText" required="required" id="feedbackTextArea" placeholder="Please provide feedback on how we can improve your XPrincipia experience. " autoFocus ></textarea>
                          <input type="button" value="Submit" onClick={this.postFeedback} id="addSuggestion"/>
                 </fieldset>
             </form>

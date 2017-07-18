@@ -6,7 +6,7 @@ export default class ProfileAbout extends React.Component {
       return (
         <div>
               <div id="aboutProseDescriptions">
-                 <span id="blue">XPrincipia</span> is an <span id="blue">open source research and development </span>web app allowing anyone to contribute to scientific progress.
+                 <span id="blue">XPrincipia</span> is an <span id="blue">open content research and development </span>web app allowing anyone to access and contribute to scientific progress.
                  <br />
                  <br />
                  Our mission is to <span id="blue">advance humanity to the best possible future. </span>
@@ -16,11 +16,11 @@ export default class ProfileAbout extends React.Component {
                  Together we aim to:
                  <br />
                  <div id="aboutList">
-                 <span id="blue">1. </span>Breakdown <span id="blue"> major scientific projects </span>into <span id="blue">levels of sub projects</span>. 
+                 1. <span id="blue">Breakdown</span>  major <span id="blue">scientific projects </span>into <span id="blue">levels of sub projects</span>. 
                  <br />
-                 <span id="blue">2. Create proposals </span>for lower-level sub projects and solve each major project <span id="blue">bottom-up</span>. 
+                 2. <span id="blue">Create proposals</span> for lower-level sub projects and <span id="blue">solve </span>each major project <span id="blue">bottom-up</span>. 
                  <br />
-                 <span id="blue">3. Learn and teach</span> the subjects needed to master each project.
+                 3. <span id="blue">Learn and teach</span> the subjects needed to <span id="blue">master</span> each project.
                  </div>
                  <br />
                  Over time <span id="blue">new areas of the site will open</span>, with the goal of becoming the <span id="blue">online center for scientific progress</span>. 

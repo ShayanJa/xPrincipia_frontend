@@ -123,10 +123,10 @@ unVote() {
               </Link>
 
               <div id="prosConsMenu">
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`} activeClassName="activeWhite">
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`} activeClassName="activeWhiteBlueText">
                     <div id="prosButton">Pros</div>
                 </Link>
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`} activeClassName="activeWhite">
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`} activeClassName="activeWhiteBlueText">
                     <div id="consButton">Cons</div>
                 </Link>
               </div>
@@ -157,10 +157,10 @@ unVote() {
 
 
               <div id="prosConsMenu">
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`}>
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/pros`} activeClassName="activeWhite">
                     <div id="prosButton">Pros</div>
                 </Link>
-                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`}>
+                <Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/cons`} activeClassName="activeWhite">
                     <div id="consButton">Cons</div>
                 </Link>
               </div>

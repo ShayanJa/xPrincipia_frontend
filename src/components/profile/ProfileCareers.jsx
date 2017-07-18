@@ -6,21 +6,21 @@ export default class ProfileAbout extends React.Component {
       return (
         <div>
               <div id="aboutProseDescriptions">
-                 <span id="blue">XPrincipia</span> is a startup looking for <span id="blue">high level team members</span>. 
+                 <span id="blue">XPrincipia</span> is a startup looking for <span id="blue">high-level team members</span>. 
                  <br />
-                 Expertise is needed in one or more of the following:
                  <br />
+                 <span id="blue">Expertise</span> is needed in <span id="blue">one or more</span> of the following areas:
                  <br />
                  <div id="aboutList">
                  1. <span id="blue">Backend</span> or <span id="blue">Frontend Programming</span>
                  <br />
-                 2. <span id="blue">Sales </span> and <span id="blue">Growth</span> 
+                 2. <span id="blue">Sales </span> or <span id="blue">Business Development</span> 
                  <br />
-                 3. <span id="blue">Scientific</span> and Technology Consultation
+                 3. <span id="blue">Science</span> or <span id='blue'>Technology Consultation</span>
                  </div>
                  <br />
 
-                 If you believe in our cause, contact us:
+                 If <span id="blue"> you believe </span> in <span id="blue">our cause</span>, contact us:
               </div>
             <div id="profileAboutContact">
                 careers@xprincipia.com
