@@ -27,7 +27,7 @@ export default class ProfileAbout extends React.Component {
                  <br />
                  <br />
                  <span id="blue">XPrincipia Competitions </span> will open on <span id="blue">Labor Day 2017</span>, 
-                 allowing users to develop <span id="blue">specific projects </span> with the incentive of <span id="blue">themed prizes</span>.
+                 focusing users towards developing <span id="blue">specific projects</span>, where <span id="blue">themed prizes</span> are earned by the <span id="blue">top competitors</span>.
                  <br />
                  <br />
                  <span id="blue">XPrincipia Crowdfunding </span> will open in <span id="blue">2018</span>, 
