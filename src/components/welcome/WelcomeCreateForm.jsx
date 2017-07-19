@@ -28,23 +28,23 @@ export default class WelcomeCreateForm extends React.Component {
     this.state.summary = document.getElementById('problemSummaryForm').value
     // this.state.description = document.getElementById('problemDescriptionForm').value
   
-  axios.post( Config.API + '/auth/problems/create', {
-      username: cookie.load('userName'),
-      parentID: this.props.params.probID,
-      title : this.state.title,
-      // field: this.state.field,
-      summary : this.state.summary,
-      // description : this.state.description,
+    return axios.post( Config.API + '/auth/problems/create', {
+        username: cookie.load('userName'),
+        parentID: this.props.params.probID,
+        title : this.state.title,
+        // field: this.state.field,
+        summary : this.state.summary,
+        // description : this.state.description,
 
-    })
-    .then(function (result) {
-      document.location = '/welcome' 
-    })
-    .catch(function (error) {
-      console.log(error.response.data)
-      alert( error.response.data)
-    });
-  };
+      })
+      .then(function (result) {
+        document.location = '/welcome' 
+      })
+      .catch(function (error) {
+        console.log(error.response.data)
+        alert( error.response.data)
+      });
+    };
 
 // toggle() {
 //   $(document).ready(function(){
