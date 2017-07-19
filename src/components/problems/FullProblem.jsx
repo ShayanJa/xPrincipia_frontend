@@ -18,9 +18,9 @@ export default class FullProblem extends React.Component {
         this.submitVote = this.submitVote.bind(this)
         this.unVote = this.unVote.bind(this)
     };
-    componentWillMount(){
+    componentDidMount(){
       var self = this;
-      return axios.get( Config.API + '/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
+      axios.get( Config.API + '/auth/problems/ID?id='+this.props.params.probID).then(function (response) {
 
           //set Problem Data
           self.setState({
@@ -31,7 +31,16 @@ export default class FullProblem extends React.Component {
         if(error.response.status === 401 || error.response.status === 403){
             document.location = "/login"
         }
-    });   
+    });
+          
+    axios.get( Config.API + "/auth/vote/isVotedOn?type=0&typeID=" + this.props.params.probID + "&username=" + cookie.load("userName"))
+          .then( function (response){
+            console.log(response.data)
+            self.setState({
+              vote: response.data
+            })
+      })     
+    
   }
   componentWillReceiveProps(newProps){
     var self = this;
@@ -58,14 +67,15 @@ export default class FullProblem extends React.Component {
            
         })
         .then(function (result) {
-            alert("Thank you, your vote has been recorded.")
+            // alert("Thank you, your vote has been recorded.")
           return axios.get( Config.API + '/auth/problems/ID?id='+self.props.params.probID).then(function (response) {
           
             //set problem data
             self.setState({
                 problemInfo: response.data,
+                // vote: true,
             })
-
+            document.location = window.location.pathname 
           })
           
         })
@@ -74,18 +84,23 @@ export default class FullProblem extends React.Component {
         })
   }
 unVote() {
-      axios.delete( Config.API + '/auth/vote/delete' ,{
+      return axios.delete( Config.API + '/auth/vote/delete' ,{
         params: {
           type: 0,
-          typeID: this.state.problemInfo.ID,
+          typeID: this.props.params.probID,
           username: cookie.load('userName')
         }
         })
         .then(function (result) {
+            //set problem data
+            // self.setState({
+                
+            //     vote: false,
+            // })
             document.location = window.location.pathname 
         })
         .catch(function (error) {
-            alert("I'm sorry, there was a problem with your request. ")
+            alert("unvote I'm sorry, there was a problem with your request. ")
         })
         
     }
@@ -98,7 +113,105 @@ unVote() {
 					 FullProblem.forceUpdate()
 			}
 
-       if (this.state.problemInfo.OriginalPosterUsername === cookie.load('userName')) {
+       if (this.state.vote ===true && this.state.problemInfo.OriginalPosterUsername === cookie.load('userName')) {
+           return (
+
+      <div id="maxContainerColumn">
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
+        <div id="problemRow1">
+
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
+            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+          </Link>
+
+          {/*Used for mobile, not shown otherwise*/}
+          <div id="SPParent2Div">
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+            </Link>
+          </div>
+
+          <div id="problemIntro">
+            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
+            <div id="projectCreator">
+              {this.state.problemInfo.OriginalPosterUsername}
+            </div>
+            <Link to={`/problem/${this.props.params.probID}/edit`}>
+              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" align="middle" />
+            </Link>
+          </div>
+        </div>
+        <div id="problemRow2">
+          <div id="fullProblem">
+            <div id="problemAdditionalInfoLabel">Additional Information
+            </div>
+            <p id="problemSummary">
+              {this.state.problemInfo.Summary}
+            </p>
+            <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlueText">
+              <div id="createSPButtonBox">
+                <h1 id="createSPButton">Create a Sub Project</h1>
+              </div>
+            </Link>
+          </div>
+          <div id="columnContainer">
+            {/*<div id="fullProblemHeader">*/}
+              <div  id="problemPercent">
+                <span id="bigPercentInactive">{floatToDecimal(this.state.problemInfo.PercentRank)}</span>%
+              </div> 
+              
+                    <div id="sidebarMenu">
+                      <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                      </Link>
+                      <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
+                        <div id="SBButton">Proposals</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/questions`}>
+                        <div id="SBButton">Discuss</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
+                        <div id="SBButton">Learn</div>
+                      </Link>
+
+                      {/*<Link to={`/problem/${this.props.probID}/theory`}>
+                        <div id="SBButton">Theory</div>
+                      </Link> */}
+
+                    </div>
+                    {/*Used for mobile*/}
+                    <div id="createSPButtonBox2">
+                      <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                        <h1 id="createSPButton">Create a Sub Project</h1>
+                      </Link>
+                    </div>
+              
+            {/*</div>*/}
+            {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
+          </div>
+      </div>
+        {/*<div id="SPLabel">
+          Sub Projects
+        </div>*/}
+        <div id="sidebarSB">
+          {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        </div>
+
+        {/*<div id="tutorialProblemButtonDiv">
+          <img src={require('../../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        </div>*/}
+        
+        <TutorialProjectContent />
+        </ReactCSSTransitionGroup>
+      </div>)
+       } else if(this.state.problemInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (
 
       <div id="maxContainerColumn">
@@ -200,7 +313,103 @@ unVote() {
         <TutorialProjectContent />
         </ReactCSSTransitionGroup>
       </div>)
-    } else {
+       } else if(this.state.vote === true) {
+         return (
+          <div id="maxContainerColumn">
+        <ReactCSSTransitionGroup
+          transitionName="example"
+          transitionAppear={true}
+          transitionAppearTimeout={2000}
+          transitionEnter={false}
+          transitionLeave={false}>
+        <div id="problemRow1">
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
+            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+          </Link>
+
+          {/*Used for mobile*/}
+          <div id="SPParent2Div">
+            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+            </Link>
+          </div>
+
+          <div id="problemIntro">
+            <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
+            <div id="projectCreator">
+              {this.state.problemInfo.OriginalPosterUsername}
+            </div>
+          </div>
+        </div>
+        <div id="problemRow2">
+          <div id="fullProblem">
+            <div id="problemAdditionalInfoLabel">Additional Information</div>
+            <p id="problemSummary">
+              {this.state.problemInfo.Summary}
+            </p>
+            <div id="createSPButtonBox">
+              <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                <h1 id="createSPButton">Create a Sub Project</h1>
+              </Link>
+            </div>
+          </div>
+          <div id="columnContainer">
+            {/*<div id="fullProblemHeader">*/}
+              <div  id="problemPercent">
+                <span id="bigPercentInactive">{floatToDecimal(this.state.problemInfo.PercentRank)}</span>%
+              </div> 
+              
+                    <div id="sidebarMenu">
+                      <Link to={`/problem/${this.props.params.probID}/subproblems`}>
+                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                      </Link>
+                      <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
+                        <div id="SBButton">Proposals</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/questions`}>
+                        <div id="SBButton">Discuss</div>
+                      </Link>
+
+                      <Link to={`/problem/${this.props.params.probID}/learn/resources`}>
+                        <div id="SBButton">Learn</div>
+                      </Link>
+
+                      {/*<Link to={`/problem/${this.props.probID}/theory`}>
+                        <div id="SBButton">Theory</div>
+                      </Link> */}
+
+                    </div>
+                    {/*Used for mobile*/}
+                    <div id="createSPButtonBox2">
+                      <Link to={`/problem/${this.props.params.probID}/create`} activeClassName="activeBlue">
+                        <h1 id="createSPButton">Create a Sub Project</h1>
+                      </Link>
+                    </div>
+              
+            {/*</div>*/}
+            {/*<SideBarProblemMenu probID={this.props.params.probID} />*/}
+          </div>
+      </div>
+        {/*<div id="SPLabel">
+          Sub Projects
+        </div>*/}
+        <div id="sidebarSB">
+          {React.cloneElement(this.props.children, {probID: this.state.probID})}
+        </div>
+
+        {/*<div id="tutorialProblemButtonDiv">
+          <img src={require('../../assets/tutorial.svg')} id="tutorialProblemButton" width="50" height="50" alt="Back arrow, blue up arrow" />
+        </div>*/}
+        
+        <TutorialProjectContent />
+        </ReactCSSTransitionGroup>
+      </div>
+      );
+
+       }
+
+    else {
       return (
             <div id="maxContainerColumn">
         <ReactCSSTransitionGroup

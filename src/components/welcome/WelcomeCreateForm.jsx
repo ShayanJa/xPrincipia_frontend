@@ -34,7 +34,7 @@ export default class WelcomeCreateForm extends React.Component {
         title : this.state.title,
         // field: this.state.field,
         summary : this.state.summary,
-        // description : this.state.description,
+        // description : this.state.descri  ption,
 
       })
       .then(function (result) {

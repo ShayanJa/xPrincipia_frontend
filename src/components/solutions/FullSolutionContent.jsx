@@ -11,6 +11,7 @@ export default class FullSolutionContent extends React.Component {
 
         this.state = {
             solutionInfo: [],
+            vote : true,
         }
 
         this.submitVote = this.submitVote.bind(this)
@@ -20,31 +21,26 @@ export default class FullSolutionContent extends React.Component {
     //initialize the component with this state
     componentDidMount(){
       var self = this;
-      return axios.get( Config.API + '/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
+      axios.get( Config.API + '/auth/solutions/ID?id='+this.props.params.solutionID).then(function (response) {
           self.setState({
               solutionInfo: response.data,
+              rank: response.data.Rank
           })
     })
     .catch(function (error) {
        
-    });   
+    });
+    
+    axios.get( Config.API + "/auth/vote/isVotedOn?type=1&typeID=" + this.props.params.solutionID + "&username=" + cookie.load("userName"))
+          .then( function (response){
+            console.log(response.data)
+            self.setState({
+              vote: response.data
+            })
+      })     
     }
 
-  //On recieving new props
-  componentWillReceiveProps(newProps){
-    var self = this;
-      return axios.get( Config.API + '/auth/solutions/ID?id='+newProps.params.solutionID).then(function (response) {
-          self.setState({
-              solutionInfo: response.data,  
-          })
-    })
-    .catch(function (error) {
-        // if(error.response.status === 401 || error.response.status === 403){
-        //     document.location = "/login"
-        // }
-    }); 
 
-  }
   deleteSolution() {
   
   //Delete question
@@ -78,6 +74,7 @@ export default class FullSolutionContent extends React.Component {
         })
   }
 unVote() {
+    var self = this
       axios.delete( Config.API + '/auth/vote/delete' ,{
         params: {
           type: 1,
@@ -86,6 +83,10 @@ unVote() {
         }
         })
         .then(function (result) {
+            self.setState({
+                vote: false
+
+            })
             document.location = window.location.pathname 
         })
         .catch(function (error) {
@@ -94,23 +95,19 @@ unVote() {
         
     }
    render() {
-       if (this.state.solutionInfo.OriginalPosterUsername === cookie.load('userName')) {
+       if (this.state.vote === true && this.state.solutionInfo.OriginalPosterUsername === cookie.load('userName')) {
            return (
       <div> 
             <div id="ProposalPercentFull">
                 {this.state.solutionInfo.Rank}
             </div>
             <div id="voteVersionsMenu">
-                    <Link>
-                      <div id="voteSolution" onClick={this.submitVote}>
-                        Vote
-                      </div>
-                    </Link>
-                    {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
-                        <div id="versionsButton">
-                                Versions
-                        </div>
-                    </Link>*/}
+                <Link><div id="voteSolution" onClick={this.unVote}>unVote</div></Link>
+                {/*<Link to={`/fullsolution/${this.props.params.probID}/${this.props.params.solutionID}/versions`}>
+                    <div id="versionsButton">
+                            Versions
+                    </div>
+                </Link>*/}
               </div>
               <div id="createDate">{dateTime(this.state.solutionInfo.CreatedAt)}</div>
               
