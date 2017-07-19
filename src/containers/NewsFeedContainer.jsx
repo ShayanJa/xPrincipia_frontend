@@ -1,13 +1,8 @@
 import React from 'react';
 import Header from '../containers/Header.jsx';
 import ProfileUnit from '../components/profile/ProfileUnit.jsx';
-import cookie from 'react-cookie'
 
-export default class NewsFeedContainer extends React.Component {
-    constructor(){
-        super();
-    
-    }   
+export default class NewsFeedContainer extends React.Component {  
 
    render() {
       return (

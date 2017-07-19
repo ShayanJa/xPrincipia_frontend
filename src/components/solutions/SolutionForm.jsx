@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import {Config} from '../../config.js'

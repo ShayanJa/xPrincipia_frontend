@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
-import ConsForm from '../components/proscons/ConsForm.jsx';
 import ConsUnit from '../components/proscons/ConsUnit.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 import {Config} from '../config.js'

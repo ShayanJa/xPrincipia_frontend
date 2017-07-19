@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import { Link, browserHistory} from 'react-router';
+import { Link } from 'react-router';
 import {Config} from '../../config.js'
 
 export default class SuggestionDeleteForm extends React.Component {

@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import cookie from 'react-cookie';
-import LearnResourcesUnit1 from './LearnResourcesUnit1.jsx';
-import SideBarMore from '../SideBarMore.jsx';
 import {Config} from '../../config.js'
 
 export default class LearnResourcesForm extends React.Component {

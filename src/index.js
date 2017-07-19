@@ -40,7 +40,6 @@ import LearnResourcesEditForm from './components/learn/LearnResourcesEditForm.js
 import LearnResourcesEmbed from './components/learn/LearnResourcesEmbed.jsx';
 import LearnResourcesFlagForm from './components/learn/LearnResourcesFlagForm.jsx';
 import LearnResourcesForm from './components/learn/LearnResourcesForm.jsx';
-import LearnResourcesMenu from './components/learn/LearnResourcesMenu.jsx';
 import LoginUnit from './components/LoginUnit.jsx';
 import ProblemForm from './components/problems/ProblemForm.jsx';
 import ProblemDiscussMenu from './components/problems/ProblemDiscussMenu.jsx';

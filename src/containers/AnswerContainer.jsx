@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import axios from 'axios';
-import QuestionUnit from '../components/questions/QuestionUnit.jsx';
 import AnswerUnit from '../components/answers/AnswerUnit.jsx';
-import AnswerForm from '../components/answers/AnswerForm.jsx';
 import SideBarMore from '../components/SideBarMore.jsx';
 import {Config} from '../config.js'
 

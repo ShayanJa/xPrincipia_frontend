@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import {Config} from '../../config.js'
@@ -53,7 +52,8 @@ export default class LearnResourcesEmbed extends React.Component {
 
   }
   submitVote() {
-      var self = this
+    // Warning console says self is not used
+    //   var self = this
        axios.post( Config.API + '/auth/vote/create', {
            Type: 8,
            TypeID: this.state.resource.ID,
@@ -98,7 +98,8 @@ function floatToDecimal(float) {
 }
 
 function url(resourceURL) {
-var self = this
+// Warning console says self is not used
+// var self = this
     if (resourceURL.substring(0,7) === 'https://') {
         return ( resourceURL );
 
