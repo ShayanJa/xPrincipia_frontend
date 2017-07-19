@@ -27,17 +27,16 @@ export default class WelcomeCreateForm extends React.Component {
     // this.state.field = document.getElementById('problemFieldForm').value
     this.state.summary = document.getElementById('problemSummaryForm').value
     // this.state.description = document.getElementById('problemDescriptionForm').value
-  
+    var self = this
     return axios.post( Config.API + '/auth/problems/create', {
         username: cookie.load('userName'),
         parentID: this.props.params.probID,
         title : this.state.title,
-        // field: this.state.field,
         summary : this.state.summary,
-        // description : this.state.descri  ption,
+        
 
       })
-      .then(function (result) {
+      .then(function (response) {
         document.location = '/welcome' 
       })
       .catch(function (error) {
@@ -80,7 +79,7 @@ export default class WelcomeCreateForm extends React.Component {
                             <textarea name="problemField" required="required" maxLength="250" placeholder="Please provide any additional information you'd like. (250 character max.)" id="problemSummaryForm"/>
                           </label><br />
 
-                        <input type="submit" value="Create" onClick={this.postProblem} id="submitProblem"/>
+                        <input type="button" value="Create" onClick={this.postProblem} id="submitProblem"/>
               </fieldset>
             </form>
             {/*<Link to='/welcome'><div id="welcomeMore">Back</div></Link>*/}
