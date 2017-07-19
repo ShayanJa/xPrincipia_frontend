@@ -1,12 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
-import axios from 'axios'
 
 export default class ProblemLearnMenu extends React.Component {
-  constructor(props){
-        super(props);
-
-    };
         
 
    render() {

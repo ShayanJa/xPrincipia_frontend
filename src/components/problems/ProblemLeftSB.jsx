@@ -65,7 +65,8 @@ export default class ProblemLeftSB extends React.Component {
 
   }
   submitVote() {
-      var self = this
+      // Warning on console says self is not necessary here, commenting it out to be safe
+      // var self = this
        axios.post( Config.API + '/auth/vote/create', {
            Type: 0,
            TypeID: this.state.problemInfo.ID,

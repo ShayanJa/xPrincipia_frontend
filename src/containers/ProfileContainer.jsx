@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import ProfileUnit from '../components/profile/ProfileUnit.jsx';
 import cookie from 'react-cookie';
 import axios from 'axios';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6

@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../../containers/Header.jsx';
-import { Link } from 'react-router';
 
 export default class TutorialWelcomeContent extends React.Component {
    render() {
