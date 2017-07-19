@@ -3127,7 +3127,29 @@ like vote and comments.*/
   cursor: pointer; 
   /*box-shadow: 0 0 2pt 2pt rgba(0,255,220,0.5);*/
 }
-
+#votedProblem {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 255, 220, 1);
+  color: #0f131c;
+  border: 1px solid #00ffdc;
+  border-width: 1px 1px;
+  border-radius: 3px;
+  text-align: center;
+  /*letter-spacing: 8px;*/
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 170%;
+  height: auto;
+  width: 70%;
+  text-decoration: none;
+  transition: all 0.5s ease 0s;
+}
+#votedProblem:hover {
+  background-color: rgba(0, 255, 220, 0);
+  color: #00ffdc;
+  cursor: pointer; 
+}
 #problemSummary, #problemSummaryLeftSB {
   margin: 10px 25px 0px 25px;
   line-height: 150%;

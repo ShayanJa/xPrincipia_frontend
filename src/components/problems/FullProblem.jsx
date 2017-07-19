@@ -125,6 +125,7 @@ unVote() {
           transitionLeave={false}>
         <div id="problemRow1">
 
+          {/*Used for standard site*/}
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
             <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
           </Link>
@@ -167,7 +168,7 @@ unVote() {
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                        <div id="votedProblem" onClick={this.unVote}>Voted</div>
                       </Link>
                       <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                         <div id="SBButton">Proposals</div>
@@ -361,7 +362,7 @@ unVote() {
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                        <div id="votedProblem" onClick={this.unVote}>Voted</div>
                       </Link>
                       <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                         <div id="SBButton">Proposals</div>
