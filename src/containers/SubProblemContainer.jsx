@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router';
 import axios from 'axios';
 import SubProblemUnit from '../components/problems/SubProblemUnit.jsx';
-import SideBarMore from '../components/SideBarMore.jsx';
 import {Config} from '../config.js'
 
 export default class SubProblemContainer extends React.Component {

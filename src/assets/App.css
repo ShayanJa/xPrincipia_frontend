@@ -1229,7 +1229,7 @@ like vote and comments.*/
       border: 1px solid #00dcff;
     	border-radius: 50%;
       margin: 0 auto;
-      margin-top: 0.8%;
+      margin-top: 0.4%;
       margin-left: 1%;
       padding: 2px;
       /*vertical-align: middle;*/
@@ -1323,10 +1323,13 @@ like vote and comments.*/
   text-align: center;
 }
 #creativeCommonsLogo {
+  /*box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);*/
+  transition: all 0.2s ease 0s;
 }
 #creativeCommonsLogo:hover {
   background-color: rgba(15,19,28,0.999);
   background-blend-mode: overlay;
+  box-shadow: 0 0 1pt 1pt rgba(255,255,255,0.5);
   cursor: pointer;
 }
 /*Found in disclaimer*/

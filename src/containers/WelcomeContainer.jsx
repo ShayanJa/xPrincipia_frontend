@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+// Currently unused, may use later. Loading only loads part of page, currently looks weird
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import TutorialWelcomeContent from '../components/tutorials/TutorialWelcomeContent.jsx';
-import TutorialWelcomePage from '../components/tutorials/TutorialWelcomePage.jsx';
 import WelcomeUnit from '../components/welcome/WelcomeUnit.jsx';
 import WelcomeUserUnit from '../components/welcome/WelcomeUserUnit.jsx';
 import {Config} from '../config.js'

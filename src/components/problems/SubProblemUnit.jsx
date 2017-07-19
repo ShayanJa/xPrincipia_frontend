@@ -69,6 +69,6 @@ export default class SubProblemUnit extends React.Component {
 }
 
 //convert float to Decimal
-function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
-}
+// function floatToDecimal(float) {
+// 	return Math.round(float*100)+'%';
+// }

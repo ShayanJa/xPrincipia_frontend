@@ -60,6 +60,6 @@ if (problem.Title === 'Interstellar Civilization') {
    }
 }
 
-function floatToDecimal(float) {
-	return Math.round(float*100)+'%';
-}
+// function floatToDecimal(float) {
+// 	return Math.round(float*100)+'%';
+// }

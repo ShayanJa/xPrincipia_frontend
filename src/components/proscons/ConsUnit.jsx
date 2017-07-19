@@ -37,7 +37,8 @@ export default class ConsUnit extends React.Component {
 		);
 	}
 	renderItem(con) {
-        var self = this;
+        // Warning on console says this var self is not needed, so I'm commenting it out
+        // var self = this;
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
            Type: 10,

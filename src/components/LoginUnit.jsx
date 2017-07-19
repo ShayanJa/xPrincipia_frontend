@@ -48,7 +48,7 @@ export default class LoginUnit extends React.Component {
     })
     .catch(function (error) {
       alert('Please try again.')
-    });
+  });
 
 
   }
@@ -58,9 +58,9 @@ export default class LoginUnit extends React.Component {
 
         <div id="signup">
             <form>
-                <input type="email" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autoFocus />
+                <input type="text" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autoFocus />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword" />
-                <input type="submit" value="Enter" onClick={this.postLogin} id="submitLogin" />
+                <Link to='/login'><input type="submit" value="Enter" onClick={this.postLogin} id="submitLogin" /></Link>
                 <Link to='/register'><div id="registerButton">Join</div></Link>
             </form>
         </div>

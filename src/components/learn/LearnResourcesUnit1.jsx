@@ -39,11 +39,12 @@ export default class LearnResourcesUnit1 extends React.Component {
 	}
 	renderItem(resource) {
 
-        function refreshPage() {
+        // refreshPage currently not used so I am commenting it out
+        // function refreshPage() {
             // Temporary fix for refreshing sub problems
             // document.location = '/problem/'+ self.props.params.probID +'/subproblems';
-                    LearnResourcesUnit1.forceUpdate()
-        }
+        //             LearnResourcesUnit1.forceUpdate()
+        // }
 
        function  submitVote() {
        axios.post( Config.API + '/auth/vote/create', {
@@ -243,7 +244,7 @@ function url(resourceURL){
     else if (
         (resourceURL.substring(0,3) !== 'www.')  &&  
         (
-            (resourceURL.slice(-4) === '.com') || (resourceURL.slice(-4) == '.org') || (resourceURL.slice(-4) === '.edu') || (resourceURL.slice(-4) === '.gov') || (resourceURL.slice(-4) === '.net') )
+            (resourceURL.slice(-4) === '.com') || (resourceURL.slice(-4) === '.org') || (resourceURL.slice(-4) === '.edu') || (resourceURL.slice(-4) === '.gov') || (resourceURL.slice(-4) === '.net') )
             ) 
         {
         return ( 'https://' + resourceURL );
@@ -260,13 +261,14 @@ function url(resourceURL){
 //Goal of this function is to open a wikipedia link in an embedded window.
 // Not sure how to do it yet, maybe with jQuery
 // An interesting idea is returning the entire div, either the Link to embed or the ahref for new tab
-function url2(resourceURL){
+// Commenting it out for now until it is functional
+// function url2(resourceURL){
      
-    var wikiIndex = resourceURL.indexOf('wiki');
-    if (
-        resourceURL.substring(wikiIndex,(wikiIndex +3)) == 'wiki'
-    ); {
-    return (2);
-}
+//     var wikiIndex = resourceURL.indexOf('wiki');
+//     if (
+//         resourceURL.substring(wikiIndex,(wikiIndex +3)) == 'wiki'
+//     ); {
+//     return (2);
+// }
 
-}
+// }

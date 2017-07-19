@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 export default class TutorialProfileContent extends React.Component {
    render() {
       return (
         <div>
+            {/*This link is here to try to make it toggle visibility w/o jQuery*/}
             {/*<Link to="/tutorialwelcome">
                 <div id="tutorialWelcomeButtonDiv">
                     <img src={require('../../assets/upArrow.svg')} id="tutorialWelcomeButton" width="50" height="50" alt="Back arrow, blue up arrow" />

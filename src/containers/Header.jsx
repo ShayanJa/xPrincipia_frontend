@@ -1,10 +1,10 @@
 import React from 'react';
 import {  Link  } from 'react-router';
-import cookie from 'react-cookie';
 import axios from 'axios';
 import HeaderAvatar from '../components/HeaderAvatar.jsx';
-import NotificationSuccess from '../components/NotificationSuccess.jsx';
-import NotificationFailure from '../components/NotificationFailure.jsx';
+// Notifications currently unused, may be used for notifications in future
+// import NotificationSuccess from '../components/NotificationSuccess.jsx';
+// import NotificationFailure from '../components/NotificationFailure.jsx';
 import {Config} from '../config.js'
 
 export default class Header extends React.Component {
