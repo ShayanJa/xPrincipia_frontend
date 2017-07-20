@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
-import Footer from '../../containers/Footer.jsx';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
@@ -14,6 +13,7 @@ export default class FullProblem extends React.Component {
 
         this.state = {
             problemInfo: [],
+            parentInfo: [],
         }
         this.submitVote = this.submitVote.bind(this)
         this.unVote = this.unVote.bind(this)
@@ -39,9 +39,10 @@ export default class FullProblem extends React.Component {
             self.setState({
               vote: response.data
             })
-      })     
-    
+      })       
   }
+
+
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get( Config.API + '/auth/problems/ID?id='+newProps.params.probID).then(function (response) {

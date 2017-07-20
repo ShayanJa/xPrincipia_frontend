@@ -18,6 +18,7 @@ constructor(){
   }
 
   this.postRegister = this.postRegister.bind(this);
+  this.postRegisterReturn = this.postRegisterReturn.bind(this);
 };
 
   componentWillMount() {
@@ -65,6 +66,49 @@ constructor(){
     })
   }
 
+postRegisterReturn(e) {
+
+if (e.keyCode === 13) {  
+//Read field items into component state
+this.state.email = document.getElementById('registerEmail').value
+this.state.password = document.getElementById('registerPassword').value
+this.state.fullname = document.getElementById('registerFullName').value
+this.state.username = document.getElementById('registerUserName').value
+
+var self = this;
+return axios.post( Config.API + '/register', {
+    fullName: this.state.fullname,
+    email: this.state.email,
+    username : this.state.username,
+    password: this.state.password
+  })
+  .then(function (result) {
+    return axios.post( Config.API + '/login', {
+      username : self.state.username,
+      password: self.state.password
+    })
+    .then(function (result) {
+      self.setState({
+        userToken: result.data.token
+      })
+      cookie.save('userToken', self.state.userToken );
+      cookie.save('userName', self.state.username)
+      
+      // Store token/Username in db table
+      return axios.post( Config.API + '/auth/saveToken',  {
+        username : self.state.username,
+        token : "Bearer " + self.state.userToken
+      }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){
+        document.location = "/welcome";
+      })
+  
+  })
+  .catch(function (error) {
+    alert('Please try again.')
+  });
+})
+}}
+
   render() {
       return (
 
@@ -74,7 +118,7 @@ constructor(){
                 <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/>
-                <input type="button" value="Register" onClick={this.postRegister} id="submitRegister"/>
+                <input type="button" value="Register" onClick={this.postRegister} onKeyDown={this.postRegisterReturn} id="submitRegister"/>
                 <Link to='/login'><div id="loginButton">Login</div></Link>
             </form>
         </div>
