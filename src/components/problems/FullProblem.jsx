@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link  } from 'react-router';
 import axios from 'axios';
-import Footer from '../../containers/Footer.jsx';
 import cookie from 'react-cookie';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
 import SideBarProblemMenu from './SideBarProblemMenu.jsx';
@@ -14,6 +13,7 @@ export default class FullProblem extends React.Component {
 
         this.state = {
             problemInfo: [],
+            parentInfo: [],
         }
         this.submitVote = this.submitVote.bind(this)
         this.unVote = this.unVote.bind(this)
@@ -39,9 +39,10 @@ export default class FullProblem extends React.Component {
             self.setState({
               vote: response.data
             })
-      })     
-    
+      })       
   }
+
+
   componentWillReceiveProps(newProps){
     var self = this;
       return axios.get( Config.API + '/auth/problems/ID?id='+newProps.params.probID).then(function (response) {
@@ -125,16 +126,21 @@ unVote() {
           transitionLeave={false}>
         <div id="problemRow1">
 
+          {/*Used for standard site*/}
           <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-            <img src={require('../../assets/parent3.svg')} id="SPParent" width="70" height="70" alt="Back arrow, blue up arrow" />
+            <div id="SPParent">
+              <img src={require('../../assets/parent3.svg')} width="70" height="70" alt="Parent button, blue connection symbol" />
+            </div>
           </Link>
 
           {/*Used for mobile, not shown otherwise*/}
-          <div id="SPParent2Div">
-            <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
-            </Link>
-          </div>
+          {/*<div id="SPParent2Div">*/}
+          <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
+            <div id="SPParent2">
+                <img src={require('../../assets/upArrow.svg')} width="250" height="50" alt="Back arrow, blue up arrow" />
+            </div>
+          </Link>
+          {/*</div>*/}
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
@@ -142,7 +148,7 @@ unVote() {
               {this.state.problemInfo.OriginalPosterUsername}
             </div>
             <Link to={`/problem/${this.props.params.probID}/edit`}>
-              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" align="middle" />
+              <img src={require('../../assets/editBlue.svg')} id="editProjectButton" width="20" height="20" alt="Edit Button" />
             </Link>
           </div>
         </div>
@@ -167,7 +173,7 @@ unVote() {
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                        <div id="votedProblem" onClick={this.unVote}>Voted</div>
                       </Link>
                       <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                         <div id="SBButton">Proposals</div>
@@ -230,13 +236,11 @@ unVote() {
           </Link>
 
           {/*Used for mobile, not shown otherwise*/}
-          <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
               <div id="SPParent2">
                 <img src={require('../../assets/upArrow.svg')} width="250" height="50" alt="Parent button, blue connection symbol" />
               </div>
             </Link>
-          </div>
 
           <div id="problemIntro">
             <h1 id="problemTitle">{this.state.problemInfo.Title}</h1>
@@ -330,7 +334,7 @@ unVote() {
           {/*Used for mobile*/}
           <div id="SPParent2Div">
             <Link to={`/problem/${this.state.problemInfo.ParentID}/subproblems`} onClick={refreshPage}>
-                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" align="middle" alt="Back arrow, blue up arrow" />
+                <img src={require('../../assets/upArrow.svg')} id="SPParent2" width="250" height="50" alt="Back arrow, blue up arrow" />
             </Link>
           </div>
 
@@ -361,7 +365,7 @@ unVote() {
               
                     <div id="sidebarMenu">
                       <Link to={`/problem/${this.props.params.probID}/subproblems`}>
-                        <div id="followProblem" onClick={this.unVote}>UnVote</div>
+                        <div id="votedProblem" onClick={this.unVote}>Voted</div>
                       </Link>
                       <Link to={`/problem/${this.props.params.probID}/solutions/top`}>
                         <div id="SBButton">Proposals</div>

@@ -5,7 +5,8 @@ export default class ProfileAbout extends React.Component {
       return (
         <div>
               <div id="aboutProseDescriptions">
-                 <span id="blue">XPrincipia</span> is an <span id="blue">open content research and development </span>web app allowing anyone to access and contribute to scientific progress.
+                 <span id="blue">XPrincipia</span> is an <span id="blue">open content research and development </span>
+                 web app allowing anyone to access and contribute to <span id="blue">scientific progress</span>.
                  <br />
                  <br />
                  Our mission is to <span id="blue">advance humanity to the best possible future. </span>
