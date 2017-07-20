@@ -315,11 +315,15 @@
   text-align: center !important;
   transition: all 0.5s ease 0s !important;
 }
-#SPParent2Div {
+#SPParent2 img {
   display: block !important;
-  margin: 0 auto !important;
+
+  flex: 1 1 auto !important;
   text-align: center !important;
-  /*margin-top: -2% !important;*/
+  margin: 0 auto !important;
+  vertical-align: middle !important;
+  padding: 5px !important;
+  transition: all 0.5s ease 0s !important;
   margin-bottom: 2% !important;
 }
 #problemRow1, #problemRow2 {
@@ -444,6 +448,9 @@
 #profileBox {
   border-top-width: 0px !important;
 }
+#profileLeft, #profileRight {
+  overflow: auto !important;
+}
 #profileAboutTitle {
   letter-spacing: 2px !important;
 }
@@ -467,6 +474,32 @@ like vote and comments.*/
   clear: both !important;
 }*/
 
+/*Header*/
+#logoName {
+  font-size: 110% !important;
+  letter-spacing: 12px !important;
+  flex: 1 6 auto !important;
+  width: 80% !important;
+}
+
+/*Footer*/
+
+#footer {
+  flex-direction: column !important;
+  width: 100% !important;
+}
+#footerAbout, #footerCareers, #creativeCommons {
+  flex: 1 1 auto;
+  transition: all 0.5s ease 0s;
+  margin: 0 auto;
+  width: 100% !important;
+  text-align: center !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-size: 100% !important;
+  letter-spacing: 2px !important;
+}
+
 /*Tutorials*/
 #introBanner {
   width: 90% !important;
@@ -486,7 +519,7 @@ like vote and comments.*/
 }
 #logo {
   font-size: 150% !important;
-  letter-spacing: 16px;
+  letter-spacing: 16px !important;
   flex: 1 6 auto !important;
   width: 80% !important;
 }
@@ -1277,7 +1310,7 @@ like vote and comments.*/
 
 /*Footer*/
 #footer {
-  width: 99%;
+  width: 100%;
   background-color: rgba(255,255,255,0.05);
   text-align: center;
   font-size: 150%;
@@ -1288,7 +1321,7 @@ like vote and comments.*/
   border: 1px solid #dddddd;
   border-width: 1px 0px;
   margin: 0 auto;
-  margin-top: 5%;
+  /*margin-top: 5%;*/
   transition: all 0.5s ease 0s;
   z-index: 500;
 
@@ -1308,11 +1341,6 @@ like vote and comments.*/
   transition: all 0.5s ease 0s;
   margin: 0 auto;
   width: 33.3vw;
-}
-#footerAbout {
-}
-#footerCareers {
-  margin: 0 auto;
 }
 #footerAbout:hover, #footerCareers:hover,
 #footerAbout:active, #footerCareers:active  {
@@ -1566,11 +1594,11 @@ like vote and comments.*/
       overflow-x: hidden !important;
     	margin: 5px 5px 10px 5px;
     	flex: 1 1 auto;
-    	width: 65%;
+    	width: 60%;
     	margin: 0;
     }
     #profileLeft {
-    	width: 35%;
+    	width: 40%;
     	border: 1px solid #00dcff;
     	border-width: 0px 1px 0px 0px;
     }
@@ -1626,14 +1654,19 @@ like vote and comments.*/
     	font-weight: 100;
     	border: 1px solid #00dcff;
     	border-width: 1px 1px 1px 0px;
-      border-radius: 0px 0px 10px 0px;
+      border-radius: 0px 0px 15px 0px;
     	text-align: center;
     	text-decoration: none;
     	margin: 10px 0px;
     	letter-spacing: 1px;
       transition: all 0.5s ease 0s;
-      width: 90%;
+      /*width: 90%;*/
       left: 0;
+
+      /*Testing out profile buttons based off shayans feedback*/
+      /*Also changed profile left to being 40% width instead of previously 35%*/
+      width: 80%;
+      padding-left: 10%;
     }
     #userProblemsSolutionsButton:hover, #notificationsButton:hover,
     #userSettingsButton:hover, #aboutXPButton:hover, 
@@ -2416,9 +2449,12 @@ like vote and comments.*/
     margin-top: 2%;
     transition: all 0.2s ease 0s;
 
+    /*Test to draw eye more to user projects*/
+    /*border-radius: 0px 0px 15px 0px;
+    background-color: rgba(255,255,255,0.05);*/
 
     /*Added gradient for testing 3D hologram look*/
-    /*background: radial-gradient(rgba(0,220,255,0.05), rgba(0,220,255,0.05), rgba(0,220,255,0.035), rgba(0,220,255,0.05));*/
+    /*background: radial-gradient(rgba(0,220,255,0.05), rgba(0,220,255,0.035), rgba(0,220,255,0.05));*/
   }
   #welcomeUserProblemsHeader:hover {
     box-shadow: 0 0 1.5pt 1.5pt rgba(0,220,255,0.5);
@@ -2435,6 +2471,12 @@ like vote and comments.*/
     border: 1px solid #00dcff;
     border-width: 0px 1px 1px 1px;
     padding-bottom: 2%;
+
+    /*Testing new style with user projects*/
+    /*So far haven't found what I'm looking for*/
+    /*width: 70%;
+    border: 1px solid #dddddd;*/
+    /*background-color: rgba(255,255,255,0.05);*/
   }
   #welcomeUserProblemsUnitList a {
     /*display: block;*/
@@ -2445,11 +2487,9 @@ like vote and comments.*/
     margin: 0 auto;
     padding: 10px 15px 10px 15px !important;
     font-size: 140%;
-    /*color: #00dcff;*/
     word-wrap: break-word; 
     text-align: center;
     background-color: rgba(0,220,255,0.05);
-    /*position: relative;*/
   }
     /*#welcomeProblemsSummary {
     	font-family: 'Open Sans', sans-serf;
@@ -3146,8 +3186,6 @@ like vote and comments.*/
   transition: all 0.5s ease 0s;
 }
 #votedProblem:hover {
-  background-color: rgba(0, 255, 220, 0);
-  color: #00ffdc;
   cursor: pointer; 
 }
 #problemSummary, #problemSummaryLeftSB {

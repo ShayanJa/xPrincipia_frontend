@@ -47,7 +47,7 @@ export default class LoginUnit extends React.Component {
    
     })
     .catch(function (error) {
-      alert('Please try again.')
+      alert("I'm sorry, your username and password was not recognized. ")
   });
 
 
@@ -60,8 +60,8 @@ export default class LoginUnit extends React.Component {
             <form>
                 <input type="text" name="email" required="required" maxLength="30" placeholder="Username" id="loginEmail" autoFocus />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="loginPassword" />
-                <Link to='/login'><input type="submit" value="Enter" onClick={this.postLogin} id="submitLogin" /></Link>
-                <Link to='/register'><div id="registerButton">Join</div></Link>
+                <Link to='/login'><input type="submit" value="Login" onClick={this.postLogin} id="submitLogin" /></Link>
+                <Link to='/register'><div id="registerButton">Register</div></Link>
             </form>
         </div>
 
