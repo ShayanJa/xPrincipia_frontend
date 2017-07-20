@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {Link, bros} from 'react-router';
 import axios from 'axios';
 import cookie from 'react-cookie';
 import {Config} from '../config.js'
@@ -39,6 +39,7 @@ constructor(){
         password: this.state.password
       })
       .then(function (result) {
+        
         return axios.post( Config.API + '/login', {
           username : self.state.username,
           password: self.state.password
@@ -55,13 +56,16 @@ constructor(){
             username : self.state.username,
             token : "Bearer " + self.state.userToken
           }, {headers: { Authorization: "Bearer " + self.state.userToken }}).then (function (response){
+            
             document.location = "/welcome";
+
           })
-      
+          
       })
       .catch(function (error) {
         alert('Please try again.')
       });
+      
     })
   }
 
@@ -69,12 +73,12 @@ constructor(){
       return (
 
         <div id="register">
-            <form>
+            <form >
                 <input type="text" name="fullname" required="required" maxLength="30" placeholder="Full Name" id="registerFullName" autoFocus />
                 <input type="text" name="username" required="required" maxLength="30" placeholder="Username" id="registerUserName" />
                 <input type="email" name="email" required="required" maxLength="30" placeholder="Email" id="registerEmail" />
                 <input type="password" name="password" required="required" maxLength="30" placeholder="Password" id="registerPassword"/>
-                <input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/>
+                <Link to="/register"><input type="submit" value="Register" onClick={this.postRegister} id="submitRegister"/></Link>
                 <Link to='/login'><div id="loginButton">Login</div></Link>
             </form>
         </div>
