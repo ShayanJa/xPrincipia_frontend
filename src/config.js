@@ -4,4 +4,3 @@ export class Config {
     //LocalHostAPI
     // static API = 'http://localhost:10000'
 }
-
