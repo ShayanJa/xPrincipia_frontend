@@ -85,15 +85,15 @@ return axios.post( Config.API + '/register', {
     username : this.state.username,
     password: this.state.password
   })
+  .catch(function (error) {
+        alert( error.response.data)
+        return
+    })
   .then(function (result) {
     return axios.post( Config.API + '/login', {
       username : self.state.username,
       password: self.state.password
     })  
-    .catch(function (error) {
-        alert( error.response.data)
-        return
-    })
     .then(function (result) {
       self.setState({
         userToken: result.data.token
