@@ -3166,6 +3166,29 @@ like vote and comments.*/
   transition: all 0.5s ease 0s;
   /*box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);*/
 }
+#votedProjectLeftSB {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  margin-right: 25px;
+  padding: 5px;
+  padding-left: 1%;
+  color: #0f131c;
+  font-size: 120%;
+  border: 1px solid #00ffdc;
+  border-width: 1px 1px;
+  /*border-radius: 3px;*/
+  text-align: center;
+  letter-spacing: 8px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  height: auto;
+  width: 10%;
+  background-color: rgba(0, 255, 220, 1);
+  transition: all 0.5s ease 0s;
+  /*box-shadow: 0 0 0pt 0pt rgba(0,255,220,0.5);*/
+}
+#votedProjectLeftSB:hover {
+  cursor: pointer;
+}
 #followProblem {
   flex: 1 1 auto;
   margin: 0 auto;
